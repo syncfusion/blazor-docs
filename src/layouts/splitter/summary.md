@@ -1,0 +1,8 @@
+* [Getting Started](splitter/getting-started.md)
+* [Pane Sizing](splitter/pane-sizing.md)
+* [Pane Content](splitter/pane-content.md)
+* [Split Panes](splitter/split-panes.md)
+* [Expand and Collapse](splitter/expand-and-collapse.md)
+* [Resize](splitter/resizing.md)
+* [Different Layouts](splitter/different-layouts.md)
+* [CSS Structure](splitter/style.md)

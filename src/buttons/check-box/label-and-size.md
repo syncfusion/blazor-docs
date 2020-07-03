@@ -1,0 +1,52 @@
+---
+title: "Checkbox Label and Size"
+component: "Checkbox"
+description: "Checkbox control supports different sizes and label."
+---
+
+# Label and Size
+
+This section explains the different sizes and labels.
+
+## Label
+
+The Checkbox caption can be defined by using the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfCheckBox~Label.html) property.
+This reduces the manual addition of label for Checkbox. You can customize the label position before or after the Checkbox through the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfCheckBox~LabelPosition.html) property.
+
+```csharp
+@using Syncfusion.Blazor.Buttons
+
+<SfCheckBox Label="Left Side Label" LabelPosition="LabelPosition.Before" Checked="true"></SfCheckBox><br />
+<SfCheckBox Label="Right Side Label" LabelPosition="LabelPosition.After" Checked="true"></SfCheckBox>
+
+```
+
+Output be like
+
+![Button Sample](./images/cb-label.png)
+
+## Size
+
+The different Checkbox sizes available are default and small. To reduce the size of default Checkbox to small, set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfCheckBox~CssClass.html) property to `e-small`.
+
+```csharp
+@using Syncfusion.Blazor.Buttons
+
+<SfCheckBox Label="Small" CssClass="e-small"></SfCheckBox><br />
+<SfCheckBox Label="Default"></SfCheckBox>
+
+<style>
+    .e-checkbox-wrapper {
+        margin-top: 18px;
+    }
+</style>
+
+```
+
+Output be like
+
+![Button Sample](./images/cb-size.png)
+
+## See Also
+
+* [Checkbox customization](./how-to/customized-checkbox)

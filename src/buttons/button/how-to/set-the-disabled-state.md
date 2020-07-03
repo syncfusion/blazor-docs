@@ -1,0 +1,23 @@
+---
+title: "Set the disabled state"
+component: "Button"
+description: "Button how to section, block button, repeat button, tooltip for Button, customization of button appearance, input and anchor elements."
+---
+
+# Set the disabled state
+
+Button component can be enabled/disabled by giving [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfButton~Disabled.html)
+property. To disable Button component, the `Disabled` property can be set as `true`.
+
+The following example demonstrates Button in `Disabled` state.
+
+```csharp
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Disabled="true">Disabled</SfButton>
+
+```
+
+  Output be like
+
+![Button Sample](./../images/button-disabled.png)

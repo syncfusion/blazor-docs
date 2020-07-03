@@ -71,16 +71,6 @@ namespace BlazorApplication
 
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by  `AddSyncfusionBlazor(true)` and load the scripts in the `<head>` element of the **~/Pages/_Host.cshtml** page.
-
-```html
-
-<head>
-    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
-</head>
-
-```
-
 ## Add Splitter component
 
 To initialize the Splitter component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
@@ -89,10 +79,10 @@ The following code explains how to initialize a simple horizontal Splitter in th
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
-<div id="pane-heading">Horizontal Splitter</div>
+<div>Horizontal Splitter</div>
+
 <SfSplitter Height="240px" Width="100%">
     <SplitterPanes>
         <SplitterPane>
@@ -102,12 +92,12 @@ The following code explains how to initialize a simple horizontal Splitter in th
         </SplitterPane>
         <SplitterPane>
             <ContentTemplate>
-                <div> Middle Pane</div>
+                <div> Middle Pane </div>
             </ContentTemplate>
         </SplitterPane>
         <SplitterPane>
             <ContentTemplate>
-                <div> Right Pane</div>
+                <div> Right Pane </div>
             </ContentTemplate>
         </SplitterPane>
     </SplitterPanes>

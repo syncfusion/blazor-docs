@@ -14,7 +14,6 @@ The following code shows how to enable collapsible behavior.
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="200px" Width="600px" SeparatorSize=2>
@@ -70,7 +69,6 @@ The Splitter provides public method to control the expand and collapse behavior 
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Buttons
 
@@ -108,10 +106,12 @@ The Splitter provides public method to control the expand and collapse behavior 
         </SplitterPane>
     </SplitterPanes>
 </SfSplitter>
+
 <div id="button-container">
-    <SfButton @onclick="@ExpandClick"> Expand </SfButton>
-    <SfButton @onclick="@CollapseClick"> Collapse </SfButton>
+    <SfButton @onclick="@Expand"> Expand </SfButton>
+    <SfButton @onclick="@Collapse"> Collapse </SfButton>
 </div>
+
 <style>
     .content {
         padding: 10px;
@@ -125,16 +125,15 @@ The Splitter provides public method to control the expand and collapse behavior 
 @code {
     SfSplitter SplitterObj;
 
-    private void ExpandClick(Object args)
+    private async Task Expand()
     {
-        this.SplitterObj.Expand(0);
+        await this.SplitterObj.Expand(0);
     }
 
-    private void CollapseClick(Object args)
+    private async Task Collapse()
     {
-        this.SplitterObj.Collapse(0);
+        await this.SplitterObj.Collapse(0);
     }
-
 }
 
 ```
@@ -149,7 +148,6 @@ You can render specific panes with collapsed state on page load. Specify a Boole
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="200px" Width="600px" SeparatorSize=2>

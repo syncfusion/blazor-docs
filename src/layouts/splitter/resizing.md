@@ -19,7 +19,6 @@ Splitter allows you to set the minimum and maximum sizes for each pane. Resizing
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="200px" Width="600px" SeparatorSize=4>
@@ -77,7 +76,6 @@ You can disable the resizing for the pane by setting `false` to the `Resizable` 
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="200px" Width="600px" SeparatorSize=4>
@@ -137,10 +135,9 @@ You can customize the resize gripper icon and cursor in css level.
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
-<SfSplitter CssClass="splitter-resize" Height="200px" Width="600px" SeparatorSize=3>
+<SfSplitter Height="200px" Width="600px" SeparatorSize=3>
     <SplitterPanes>
         <SplitterPane Size="200px" Min="20%" Max="40%">
             <ContentTemplate>
@@ -179,7 +176,7 @@ You can customize the resize gripper icon and cursor in css level.
     .content {
         padding: 10px;
     }
-    .splitter-resize.e-splitter .e-split-bar .e-resize-handler:before {
+    .e-splitter .e-split-bar .e-resize-handler:before {
       content: "\e934";
       font-family: 'e-icons';
       font-size: 11px;

@@ -20,12 +20,9 @@ Create the element with two child to render the outer splitter.
         <SplitterPane Size="53%" Min="30%">
             <SfSplitter Height="220px" Width="100%">
                 <SplitterPanes>
-                    <SplitterPane Size="29%" Min="23%">
-                    </SplitterPane>
-                    <SplitterPane Size="20%" Min="15%">
-                    </SplitterPane>
-                    <SplitterPane Size="35%" Min="35%">
-                    </SplitterPane>
+                    <SplitterPane Size="29%" Min="23%"></SplitterPane>
+                    <SplitterPane Size="20%" Min="15%"></SplitterPane>
+                    <SplitterPane Size="35%" Min="35%"></SplitterPane>
                 </SplitterPanes>
             </SfSplitter>
         </SplitterPane>
@@ -50,7 +47,6 @@ Render the first pane of vertical splitter as a horizontal splitter.
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="400px" Orientation="Orientation.Vertical">
@@ -110,7 +106,7 @@ Render the first pane of vertical splitter as a horizontal splitter.
                 <div class="code-editor-content">
                     <h3 class="h3">Preview of sample</h3>
                     <div class="splitter-image">
-                        <img class="img1" src="https://blazor.syncfusion.com/demos/images/Splitter/albert.png" style="width: 20%;margin: 0 auto;">
+                        <img class="img" src="https://blazor.syncfusion.com/demos/images/Splitter/albert.png" style="width: 20%;margin: 0 auto;" />
                     </div>
                 </div>
             </ContentTemplate>
@@ -123,23 +119,42 @@ Render the first pane of vertical splitter as a horizontal splitter.
 ```bash
 
 <style>
+    #code-text {
+        margin-left: 5px;
+    }
+
+    #target {
+        margin: 20px auto;
+        max-width: 600px;
+    }
+
     .code-preview {
         margin-top: 15px;
         font-size: 12px;
+        padding: 6px;
     }
-    .content {
+
+    .control-section {
+        min-height: 370px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    .h3 {
+        font-size: 14px;
+        margin: 4px;
+        padding: 5px;
+    }
+
+    .code-editor-content {
         padding: 12px;
     }
+
     .splitter-image {
         margin: 0 auto;
         display: flex;
         height: 115px;
         margin-top: 10px;
-    }
-    .h3 {
-        font-size: 14px;
-        margin: 4px;
-        padding: 5px;
     }
 </style>
 
@@ -155,78 +170,106 @@ Create the element with three panes and place the elements within the pane to re
 
 ```csharp
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Lists
-@using Syncfusion.Blazor.Navigations
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Layouts
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.RichTextEditor
 
-<SfSplitter Height="493px" Width="100%" CssClass="splitter-layout">
-    <SplitterEvents OnResizeStop="resizeStop"></SplitterEvents>
-        <SplitterPanes>
+<SfSplitter Height="493px" Width="100%" CssClass="outlook-splitter">
+    <SplitterEvents OnResizeStop="@ResizeStop"></SplitterEvents>
+    <SplitterPanes>
         <SplitterPane Size="28%" Min="27%">
             <ContentTemplate>
-                <div class="outlook-layout-content">
-                    <SfTreeView ModelType="@ModelType" TValue="TreeData">
-                        <TreeViewFieldsSettings Id="Id" TValue="TreeData" Text="Name" ParentID="Pid" HasChildren="HasChild" Selected="Selected" Expanded="Expanded" DataSource="@localData"></TreeViewFieldsSettings>
-                    </SfTreeView>
+                <div>
+                    <div class="outlook-layout-content">
+                        <SfTreeView TValue="TreeData">
+                            <TreeViewFieldsSettings Id="Id" Text="Name" ParentID="Pid" HasChildren="HasChild" Selected="Selected" Expanded="Expanded" DataSource="@localData" />
+                            <TreeViewTemplates>
+                                <NodeTemplate>
+                                    <div>
+                                        <div class="treeviewdiv">
+                                            <div style="float:left">
+                                                <span class="treeName">@((context as TreeData).Name)</span>
+                                            </div>
+                                            @{
+                                                @if (((context as TreeData).Count) != 0)
+                                                {
+                                                    <div style="margin-right: 5px; float:right">
+                                                        <span class="treeCount e-badge e-badge-primary">
+                                                            @((context as TreeData).Count)
+                                                        </span>
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                                </NodeTemplate>
+                            </TreeViewTemplates>
+                        </SfTreeView>
+                    </div>
                 </div>
             </ContentTemplate>
         </SplitterPane>
         <SplitterPane Size="33%" Min="23%">
             <ContentTemplate>
-                <div class="outlook-layout-content">
-                    <SfListView CssClass="grouped-list" DataSource="@dataSource" ModelType="@model" CssClass="e-list-template">
-                        <ListViewFieldSettings Text="Name" GroupBy="Order"></ListViewFieldSettings>
-                        <ListViewTemplates>
-                            <Template>
-                                @{
-                                    DataModel ContextData = context as DataModel;
-                                    <div class="settings e-list-wrapper e-list-multi-line e-list-avatar">
-                                        <span class="e-list-item-header">@ContextData.Name</span>
-                                        <div class="e-list-content">
-                                            <div class="status">@ContextData.Content1</div><div id="list-message">@ContextData.Content2</div>
+                <div>
+                    <div class="outlook-layout-content">
+                        <SfListView DataSource="@dataSource" CssClass="e-list-template">
+                            <ListViewFieldSettings Text="Name" GroupBy="Order" />
+                            <ListViewTemplates TValue="DataModel">
+                                <Template>
+                                    @{
+                                        <div class="settings e-list-wrapper e-list-multi-line e-list-avatar">
+                                            <span class="e-list-item-header">@context.Name</span>
+                                            <div class="e-list-content">
+                                                <div class="status">@context.Content1</div>
+                                                <div id="list-message">@context.Content2</div>
+                                            </div>
                                         </div>
+                                    }
+                                </Template>
+                                <GroupTemplate>
+                                    <div class="e-list-wrapper">
+                                        <span class="e-list-item-content"></span>
                                     </div>
-                                }
-                            </Template>
-                            <GroupTemplate>
-                                <div class="e-list-wrapper"><span class="e-list-item-content"></span></div>
-                            </GroupTemplate>
-                        </ListViewTemplates>
-                    </SfListView>
+                                </GroupTemplate>
+                            </ListViewTemplates>
+                        </SfListView>
+                    </div>
                 </div>
             </ContentTemplate>
         </SplitterPane>
         <SplitterPane Size="37%" Min="30%">
             <ContentTemplate>
-                <div class="outlook-layout-content">
-                    <div style="width: 100%; padding: 15px;">
-                        <table>
-                            <tr>
-                                <td><button class="e-btn e-flat e-outline">To...</button></td>
-                                <td><SfTextBox></SfTextBox></td>
-                            </tr>
-                            <tr>
-                                <td><button class="e-btn e-flat e-outline">Cc...</button></td>
-                                <td><SfTextBox></SfTextBox></td>
-                            </tr>
-                            <tr>
-                                <td><div id="subject-text">Subject</div></td>
-                                <td><SfTextBox></SfTextBox></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="forum">
-                        <div id="createpostholder">
-                            <SfRichTextEditor @ref="RichTextEditorObj" Height="262px">
-                                <RichTextEditorEvents Created="Created"></RichTextEditorEvents>
-                            </SfRichTextEditor>
-                            <div id="buttonSection">
-                                <SfButton IsPrimary="true">Send</SfButton>
-                                <SfButton>Discard</SfButton>
+                <div>
+                    <div class="outlook-layout-content">
+                        <div style="width: 100%; padding: 15px;">
+                            <table>
+                                <tr>
+                                    <td><button class="e-btn e-flat e-outline">To...</button></td>
+                                    <td><SfTextBox /></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="e-btn e-flat e-outline">Cc...</button></td>
+                                    <td><SfTextBox /></td>
+                                </tr>
+                                <tr>
+                                    <td><div id="subject-text">Subject</div></td>
+                                    <td><SfTextBox /></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="forum">
+                            <div id="createpostholder">
+                                <SfRichTextEditor @ref="RichTextEditorObj" Height="262px">
+                                    <RichTextEditorEvents Created="Created" />
+                                </SfRichTextEditor>
+                                <div id="buttonSection">
+                                    <SfButton IsPrimary="true">Send</SfButton>
+                                    <SfButton>Discard</SfButton>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -255,7 +298,9 @@ Place the `TreeViewTemplates` inside the `SfTreeView` to render the treeview tem
                     @if (((context as TreeData).Count) != 0)
                     {
                         <div style="margin-right: 5px; float:right">
-                            <span class="treeCount e-badge e-badge-primary">@((context as TreeData).Count)</span>
+                            <span class="treeCount e-badge e-badge-primary">
+                                @((context as TreeData).Count)
+                            </span>
                         </div>
                     }
                 }
@@ -274,7 +319,29 @@ Define the components DataSource in `@code` section.
 
 @code {
     private SfRichTextEditor RichTextEditorObj;
-    private List<TreeData> localData = new List<TreeData>() {
+
+    public class DataModel
+    {
+        public string Name { get; set; }
+        public string Content1 { get; set; }
+        public string Content2 { get; set; }
+        public string Id { get; set; }
+        public int Order { get; set; }
+    }
+
+    public class TreeData
+    {
+        public int Id { get; set; }
+        public int? Pid { get; set; }
+        public string Name { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+        public int Count { get; set; }
+        public bool Selected { get; set; }
+    }
+
+    private List<TreeData> localData = new List<TreeData>()
+    {
         new TreeData { Id = 1, Name = "Favorites",  HasChild = true, },
         new TreeData { Id = 2, Pid = 1,  Name = "Sales Reports",  Count = 4 },
         new TreeData { Id = 3, Pid = 1, Name = "Sent Items" },
@@ -291,44 +358,24 @@ Define the components DataSource in `@code` section.
         new TreeData { Id = 14, Pid = 5, Name = "RSS Feed" },
         new TreeData { Id = 15, Pid = 5, Name = "Trash" }
     };
-    public TreeData ModelType = new TreeData();
 
     private List<DataModel> dataSource = new List<DataModel>()
     {
-         new DataModel { Name= "Selma Tally", Content1="Apology marketing email", Content2="Hello Ananya Singleton", Id = "1", Order = 0},
+        new DataModel { Name= "Selma Tally", Content1="Apology marketing email", Content2="Hello Ananya Singleton", Id = "1", Order = 0},
         new DataModel { Name= "Illa Russo", Content1="Annual conference", Content2="Hi jeani Moresa", Id = "4", Order = 0},
         new DataModel { Name= "Camden Macmellon", Content1="Reference request- Camden hester", Content2="Hello Kerry Best", Id = "3", Order = 0},
         new DataModel { Name= "Garth Owen", Content1="Application for job Title", Content2="Hello Illa Russo", Id = "2", Order = 0},
         new DataModel { Name= "Ursula Patterson", Content1="Programmaer Position Applicant", Content2="Hello Kerry best", Id = "5", Order = 0},
     };
 
-    private DataModel model = new DataModel();
+    private async Task Created()
+    {
+        await this.RichTextEditorObj.RefreshUI();
+    }
 
-    public class DataModel
+    private async Task ResizeStop()
     {
-        public string Name { get; set; }
-        public string Content1 { get; set; }
-        public string Content2 { get; set; }
-        public string Id { get; set; }
-        public int Order { get; set; }
-    }
-    public class TreeData
-    {
-        public int Id { get; set; }
-        public int? Pid { get; set; }
-        public string Name { get; set; }
-        public bool HasChild { get; set; }
-        public bool Expanded { get; set; }
-        public int Count { get; set; }
-        public bool Selected { get; set; }
-    }
-    public void resizeStop()
-    {
-        this.RichTextEditorObj.Refresh();
-    }
-    public void Created()
-    {
-        this.RichTextEditorObj.Refresh();
+        await this.RichTextEditorObj.RefreshUI();
     }
 }
 
@@ -337,21 +384,45 @@ Define the components DataSource in `@code` section.
 ```bash
 
 <style>
-    #target {
-        margin: 20px auto;
-        max-width: 820px;
+    #discard {
+        margin-left: 7px;
     }
-    .e-treeview .e-list-text {
+
+    .outlook-layout-content table {
         width: 100%;
     }
-    .grouped-list.e-listview .e-list-group-item {
+
+    .outlook-layout-content td {
+        padding: 2px;
+    }
+
+    .control-section {
+        min-height: 370px;
+    }
+
+    .outlook-layout-content .e-treeview .e-list-text {
+        width: 100%;
+    }
+
+    #groupedList.e-listview .e-list-group-item {
         height: 0;
     }
-    .splitter-layout .settings.e-list-wrapper.e-list-multi-line.e-list-avatar {
+
+    .outlook-splitter .settings.e-list-wrapper.e-list-multi-line.e-list-avatar {
         padding: 15px;
     }
+
     #buttonSection {
         padding: 7px;
+    }
+
+    .outlook-layout-content #createpostholder {
+        padding-right: 4px;
+        padding-left: 3px;
+    }
+
+    .outlook-splitter #tree ul.e-list-parent.e-ul {
+        padding: 0 0 0 16px;
     }
 </style>
 

@@ -14,8 +14,7 @@ The splitter's panes are adjusted automatically during resizing if the size is n
 
 ```csharp
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Layouts
+using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="200px" Width="600px">
     <SplitterPanes>
@@ -70,7 +69,6 @@ You can render the split panes with fixed size in both `Horizontal` and `Vertica
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="200px" Width="600px">
@@ -111,7 +109,6 @@ Splitter pane Size in `Percentage`.
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="200px" Width="600px">

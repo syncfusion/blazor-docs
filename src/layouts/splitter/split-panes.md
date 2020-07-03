@@ -14,7 +14,6 @@ By default, splitter will be rendered in horizontal orientation. Splitter contai
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="200px" Width="600px">
@@ -70,7 +69,6 @@ By setting value to `Orientation` API as `Vertical`, splitter will be rendered i
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="305px" Width="600px" Orientation="Orientation.Vertical">
@@ -131,7 +129,6 @@ By default, pane separator will be render with `1px` width/height. You can custo
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="250px" Width="600px" SeparatorSize="5">
@@ -189,7 +186,6 @@ Splitter provides support to render the nested pane to achieve the complex layou
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="316px" Width="600px">
@@ -216,7 +212,7 @@ Splitter provides support to render the nested pane to achieve the complex layou
         </SplitterPane>
         <SplitterPane Size="200px">
             <div>
-                <SfSplitter CssClass="inner-splitter" Orientation="Orientation.Vertical">
+                <SfSplitter ID="innerSplitter" Orientation="Orientation.Vertical">
                     <SplitterPanes>
                         <SplitterPane Size="150px" Min="20%">
                             <ContentTemplate>
@@ -249,10 +245,9 @@ Splitter provides support to render the nested pane to achieve the complex layou
     .content {
         padding: 10px;
     }
-    .inner-splitter {
+    #innerSplitter {
         border: none;
     }
-
 </style>
 
 ```
@@ -271,7 +266,6 @@ You can add the panes dynamically in the splitter by passing `PaneProperties` al
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Buttons
 
@@ -298,13 +292,13 @@ You can add the panes dynamically in the splitter by passing `PaneProperties` al
     </SplitterPanes>
 </SfSplitter>
 
-<SfButton CssClass="default-btn" Content="Add Pane" @onclick="@BtnClicked"></SfButton>
+<SfButton Content="Add Pane" @onclick="@Add"></SfButton>
 
 <style>
     .content {
       padding: 9px;
     }
-    .default-btn {
+    #defaultBtn {
       margin-top: 15px;
     }
 </style>
@@ -312,14 +306,14 @@ You can add the panes dynamically in the splitter by passing `PaneProperties` al
 @code  {
     SfSplitter SplitterObj;
 
-    public PanePropertiesModel AddingPane = new PanePropertiesModel() {
+    private SplitterPane AddingPane = new SplitterPane() {
         Size = "190px",
         Content = "New Pane",
         Min = "30px",
         Max = "250px"
     };
 
-    private void BtnClicked()
+    private void Add()
     {
         this.SplitterObj.AddPane(AddingPane, 1);
     }
@@ -333,7 +327,6 @@ You can remove the split panes dynamically by passing the pane index to `RemoveP
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Buttons
 
@@ -369,13 +362,13 @@ You can remove the split panes dynamically by passing the pane index to `RemoveP
     </SplitterPanes>
 </SfSplitter>
 
-<SfButton CssClass="default-btn" Content="Remove Pane" @onclick="@BtnClicked"></SfButton>
+<SfButton Content="Remove Pane" @onclick="@Remove"></SfButton>
 
 <style>
     .content {
       padding: 9px;
     }
-    .default-btn {
+    #defaultBtn {
       margin-top: 15px;
     }
 </style>
@@ -383,7 +376,7 @@ You can remove the split panes dynamically by passing the pane index to `RemoveP
 @code  {
     SfSplitter SplitterObj;
 
-    private void BtnClicked()
+    private void Remove()
     {
         this.SplitterObj.RemovePane(1);
     }

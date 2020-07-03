@@ -38,14 +38,16 @@ For adding header to the Card, Title Property.
 
 Card header has an option for adding images in the header. It is aligned with either before or after the header based on the HTML element positioned in the header structure.
 
-* The header image can be added by `ImageSrc` component  which can be placed before or after the header caption wrapper element.
+* The header image can be added by `ImageUrl` component  which can be placed before or after the header caption wrapper element.
+
+**Note:** Property `ImageSrc` is deprecated as `ImageUrl`.
 
 ```csharp
         <SfCard ID="HugeImage">
-                <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageSrc="images/cards/football.png" />
+                <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
             </SfCard>
             <SfCard ID="SecondCard">
-                <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageSrc="images/cards/football.png" />
+                <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
             </SfCard>
 }
 ```
@@ -59,7 +61,7 @@ Content in Card holds texts, images, links and all possible HTML elements. Its a
 
 ```csharp
         <SfCard ID="HugeImage">
-                <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageSrc="images/cards/football.png" />
+                <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
             </SfCard>
             <SfCard ID="SecondCard">
            <CardContent Content="Laura received a BA in psychology from the University of Washington. She has also completed a course in business French. She reads and writes French.

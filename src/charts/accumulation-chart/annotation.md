@@ -3,7 +3,7 @@ title: " Accumulation Chart Annotation | ASP.NET Core Blazor "
 
 component: "Accumulation Chart"
 
-description: "The annotations are used to mark the specific area of interest in the chart area with texts, shapes or images"
+description: "The annotations are used to mark the specific area of interest in the chart area with texts, shapes or images."
 ---
 
 # Annotation

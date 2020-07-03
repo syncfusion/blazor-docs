@@ -1,0 +1,47 @@
+---
+title: "Adding Custom Headers"
+component: "Data Manager"
+description: "Documentation on how to add custom headers in the Blazor Data Manager"
+---
+
+<!-- markdownlint-disable MD024 -->
+
+# Adding Custom Headers
+
+Custom headers can be added to the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) request using its [`Headers`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.DataManager~Headers.html) property.
+
+The following sample code demonstrates adding custom headers to the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) request which is bound with the DataGrid component,
+
+```csharp
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+
+<SfGrid TValue="Order" AllowPaging="true">
+    <GridPageSettings PageSize="10"></GridPageSettings>
+    <SfDataManager Headers=@HeaderData Url="https://ej2services.syncfusion.com/production/web-services/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public class Data
+    {
+        public string Grid;
+    };
+
+    private Data[] HeaderData = new Data[] { new Data { IsEnabled = "true" } };
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```

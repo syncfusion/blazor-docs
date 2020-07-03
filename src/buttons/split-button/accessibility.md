@@ -1,7 +1,7 @@
 ---
-title: "SplitButton Accessibility"
-component: "SplitButton"
-description: "SplitButton control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
+title: "Split Button Accessibility"
+component: "Split Button"
+description: "Split Button control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
 ---
 
 # Accessibility
@@ -9,9 +9,9 @@ description: "SplitButton control has accessibility support to help access the f
 ## ARIA attributes
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.
-SplitButton provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-expanded`, `aria-owns` and `aria-haspopup` applied for action item in
-SplitButton. It helps the people with disabilities by providing information about the widget for assistive
-technology in the screen readers. SplitButton component contains the  `menuItem` role.
+Split Button provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-expanded`, `aria-owns` and `aria-haspopup` applied for action item in
+Split Button. It helps the people with disabilities by providing information about the widget for assistive
+technology in the screen readers. Split Button component contains the  `MenuItem` role.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
@@ -58,74 +58,18 @@ Opens the popup.</td></tr>
 Closes the popup.</td></tr>
 </table>
 
-`Index.razor`
-
 ```csharp
+@using Syncfusion.Blazor.SplitButtons
 
-<EjsSplitButton ID="element" Content="Paste" Items="@items" IconCss="e-sb-icons e-paste"></EjsSplitButton>
+<SfSplitButton Content="Paste">
+    <SplitButtonItems>
+        <SplitButtonItem Text="Cut" ></SplitButtonItem>
+        <SplitButtonItem Text="Copy" ></SplitButtonItem>
+        <SplitButtonItem Text="Paste"></SplitButtonItem>
+    </SplitButtonItems>
+</SfSplitButton>
 
-@functions {
+```
 
-    public List<object> items { get; set; } = new List<object>
-{
-        new { text = "Cut", iconCss = "e-sb-icons e-cut" },
-        new { text = "Copy", iconCss = "e-icons e-copy" },
-        new { text = "Paste", iconCss = "e-sb-icons e-paste" }
-    };
-}
-
-  ```
-
- `_Host.cshtml`
-
-   ```html
-<style>
-    .e-split-btn-wrapper {
-        margin: 20px 20px 5px 5px;
-    }
-
-    /* csslint ignore:start */
-    @@font-face {
-        font-family: "ddb-icons";
-        src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAAKAIAAAwAgT1MvMj0gSRkAAAEoAAAAVmNtYXDnE+dkAAABlAAAADxnbHlmlh33NQAAAdwAAAJMaGVhZBKOK9sAAADQAAAANmhoZWEHeANwAAAArAAAACRobXR4E6AAAAAAAYAAAAAUbG9jYQGOAegAAAHQAAAADG1heHABEwBlAAABCAAAACBuYW1l1LBM9QAABCgAAAI9cG9zdMJntbUAAAZoAAAAUAABAAADUv9qAFoEAAAAAAADygABAAAAAAAAAAAAAAAAAAAABQABAAAAAQAAojXaQl8PPPUACwPoAAAAANfSc4gAAAAA19JziAAA//oDygPsAAAACAACAAAAAAAAAAEAAAAFAFkABAAAAAAAAgAAAAoACgAAAP8AAAAAAAAAAQPtAZAABQAAAnoCvAAAAIwCegK8AAAB4AAxAQIAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA5wDnAwNS/2oAWgPsAJYAAAABAAAAAAAABAAAAAPoAAAD6AAAA+gAAAPoAAAAAAACAAAAAwAAABQAAwABAAAAFAAEACgAAAAEAAQAAQAA5wP//wAA5wD//wAAAAEABAAAAAEAAgADAAQAAAAAAI4AwgEAASYAAwAA//oDNQPsAA4AHQBYAAAlHgEOAScmJy4BNz4BMzIFFgYHBgcGLgE2NzYzMhYBHgEXDgEHDgEHDgIWFxYXFjY3NjQ3PgE3HgEXFhQXHgE3PgE3PgEuAScuAScuASc+ATc+AQcLASYWAVEfFxo6IBkNCQIHCy8bCQG9BwIJDRkgOhoXHwoKGi/+TR1RDyEOIxo+ExckFAQMFikwVhcMBwYlFRYkBwcMF1YwFCALDAQUIxcUPhojDiAOUR4cAQvEwwsB6gtDTycJCBsSKxYhJ0gWKxIaCQknUEILAycCf2TPI0w2HBUmDg0sOzsaKQ4ONzcniyYXNBgYNBcmiyc3OA8GHRQaOzssDQ4mFRw2TiLOZGdBA/5vAZEDQQAEAAAAAAOqA+kABQANABcAHwAAARUzFSERAyERIzUjNSEBIREhESMVITUjMyMVITUjNSMC733+iT8B9D4+/oj+igE4AXc//c4++j8BOT+7AbZ8+gF2/ksBdz4//ksB9AF2fHw+Pj8AAAIAAAAAA7cD6QACACQAAAEhEwMOAQcVITUmJyY1ND8BIRcWFxYVFAcGKwEVITUmJyYnASMCKP8AguQrOy0BGkIRHREkASstEgEEDhQxEQGaJxUcLP7PDAFNAVL+PHBHCBsbBgsUKR8wX3owBg4NFgsQGxsDFx1zAyMAAAACAAAAAAPKA+oAAgATAAABFxEBDgEHHgEXETMRMxEzETM1IQL+zP1abpADA5t0f2F+XP41AfbMAZgBJwmYcHSbA/48A2r8lgNqfgAAAAASAN4AAQAAAAAAAAABAAAAAQAAAAAAAQAJAAEAAQAAAAAAAgAHAAoAAQAAAAAAAwAJABEAAQAAAAAABAAJABoAAQAAAAAABQALACMAAQAAAAAABgAJAC4AAQAAAAAACgAsADcAAQAAAAAACwASAGMAAwABBAkAAAACAHUAAwABBAkAAQASAHcAAwABBAkAAgAOAIkAAwABBAkAAwASAJcAAwABBAkABAASAKkAAwABBAkABQAWALsAAwABBAkABgASANEAAwABBAkACgBYAOMAAwABBAkACwAkATsgZGRiLWljb25zUmVndWxhcmRkYi1pY29uc2RkYi1pY29uc1ZlcnNpb24gMS4wZGRiLWljb25zRm9udCBnZW5lcmF0ZWQgdXNpbmcgU3luY2Z1c2lvbiBNZXRybyBTdHVkaW93d3cuc3luY2Z1c2lvbi5jb20AIABkAGQAYgAtAGkAYwBvAG4AcwBSAGUAZwB1AGwAYQByAGQAZABiAC0AaQBjAG8AbgBzAGQAZABiAC0AaQBjAG8AbgBzAFYAZQByAHMAaQBvAG4AIAAxAC4AMABkAGQAYgAtAGkAYwBvAG4AcwBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIAB1AHMAaQBuAGcAIABTAHkAbgBjAGYAdQBzAGkAbwBuACAATQBlAHQAcgBvACAAUwB0AHUAZABpAG8AdwB3AHcALgBzAHkAbgBjAGYAdQBzAGkAbwBuAC4AYwBvAG0AAAAAAgAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAQIBAwEEAQUBBgADY3V0CHBhc3RlXzAxBGZvbnQOcGFyYS1tYXJrLS0tMDMAAA==) format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }
-    /* csslint ignore:stop */
-
-    .e-sb-icons {
-        font-family: 'ddb-icons' !important;
-        speak: none;
-        font-size: 55px;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    .e-cut::before {
-        content: '\e700';
-    }
-
-    .e-copy::before {
-        content: '\e70a';
-    }
-
-    .e-paste::before {
-        content: '\e701';
-    }
-
-    .e-font::before {
-        content: '\e702';
-    }
-
-    .e-paragraph::before {
-        content: '\e703';
-    }
-</style>
-
-     ```
-
+Output be like
+![Splitbutton Sample](./images/split-button.png)

@@ -15,19 +15,19 @@ The Chip control has the following predefined styles that can be defined using t
 | e-danger | Represents a negative chip. |
 
 ```csharp
-
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList>
+@using Syncfusion.Blazor.Buttons
+<SfChipList>
     <ChipCollection>
+
                 <ChipListChip Text="Default"></ChipListChip>
                 <ChipListChip Text="Primary" CssClass="e-primary"></ChipListChip>
                 <ChipListChip Text="Success" CssClass="e-success"></ChipListChip>
                 <ChipListChip Text="Info" CssClass="e-info"></ChipListChip>
                 <ChipListChip Text="Warning" CssClass="e-warning"></ChipListChip>
                 <ChipListChip Text="Danger" CssClass="e-danger"></ChipListChip>
+
     </ChipCollection>
-</EjsChipList>
+</SfChipList>
 
 ```
 
@@ -40,29 +40,32 @@ Output be like the below.
 You can add and customize the leading icon of chip using the `LeadingIconCss` property.
 
 ```csharp
-
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList EnableDelete="true" CssClass="chip-avatar">
+@using Syncfusion.Blazor.Buttons
+<SfChipList ID="chip-avatar" EnableDelete="true">
     <ChipCollection>
+
         <ChipListChip Text="Anne" LeadingIconCss="anne"></ChipListChip>
         <ChipListChip Text="Janet" LeadingIconCss="janet"></ChipListChip>
         <ChipListChip Text="Laura" LeadingIconCss="laura"></ChipListChip>
         <ChipListChip Text="Margaret" LeadingIconCss="margaret"></ChipListChip>
+
     </ChipCollection>
-</EjsChipList>
+</SfChipList>
 
 <style>
-    .chip-avatar .anne {
+    #chip-avatar .anne {
         background-image: url('./anne.png')
     }
-    .chip-avatar .margaret {
+
+    #chip-avatar .margaret {
         background-image: url('./margaret.png')
     }
-    .chip-avatar .laura {
+
+    #chip-avatar .laura {
         background-image: url('./laura.png')
     }
-    .chip-avatar .janet {
+
+    #chip-avatar .janet {
         background-image: url('./janet.png')
     }
 </style>
@@ -78,29 +81,32 @@ Output be like the below.
 You can add and customize the avatar of chip using the `AvatarIconCss` property.
 
 ```csharp
-
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList EnableDelete="true" CssClass="chip-avatar">
+@using Syncfusion.Blazor.Buttons
+<SfChipList ID="chip-avatar" EnableDelete="true">
     <ChipCollection>
+
         <ChipListChip Text="Andrew" AvatarIconCss="andrew"></ChipListChip>
         <ChipListChip Text="Janet" AvatarIconCss="janet"></ChipListChip>
         <ChipListChip Text="Laura" AvatarIconCss="laura"></ChipListChip>
         <ChipListChip Text="Margaret" AvatarIconCss="margaret"></ChipListChip>
+
     </ChipCollection>
-</EjsChipList>
+</SfChipList>
 
 <style>
-    .chip-avatar .andrew {
+    #chip-avatar .andrew {
         background-image: url('./andrew.png')
     }
-    .chip-avatar .margaret {
+
+    #chip-avatar .margaret {
         background-image: url('./margaret.png')
     }
-    .chip-avatar .laura {
+
+    #chip-avatar .laura {
         background-image: url('./laura.png')
     }
-    .chip-avatar .janet {
+
+    #chip-avatar .janet {
         background-image: url('./janet.png')
     }
 </style>
@@ -116,17 +122,17 @@ Output be like the below.
 You can add and customize the avatar content of chip using the `AvatarText` property.
 
 ```csharp
-
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList EnableDelete="true">
+@using Syncfusion.Blazor.Buttons
+<SfChipList EnableDelete="true">
     <ChipCollection>
+
         <ChipListChip Text="Andrew" AvatarText="A"></ChipListChip>
         <ChipListChip Text="Janet" AvatarText="J"></ChipListChip>
         <ChipListChip Text="Laura" AvatarText="L"></ChipListChip>
         <ChipListChip Text="Margaret" AvatarText="M"></ChipListChip>
+
     </ChipCollection>
-</EjsChipList>
+</SfChipList>
 
 ```
 
@@ -139,17 +145,17 @@ Output be like the below.
 You can add and customize the trailing icon of chip using the `TrailingIconCss` property.
 
 ```csharp
-
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList>
+@using Syncfusion.Blazor.Buttons
+<SfChipList>
     <ChipCollection>
+
         <ChipListChip Text="Andrew" TrailingIconCss="e-dlt-btn"></ChipListChip>
         <ChipListChip Text="Janet" TrailingIconCss="e-dlt-btn"></ChipListChip>
         <ChipListChip Text="Laura" TrailingIconCss="e-dlt-btn"></ChipListChip>
         <ChipListChip Text="Margaret" TrailingIconCss="e-dlt-btn"></ChipListChip>
+
     </ChipCollection>
-</EjsChipList>
+</SfChipList>
 
 ```
 
@@ -162,17 +168,17 @@ Output be like the below.
 Outline chip has the border with the background transparent. It can be set using the `CssClass` property.
 
 ```csharp
-
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList EnableDelete="true" CssClass="e-outline">
+@using Syncfusion.Blazor.Buttons
+<SfChipList EnableDelete="true" CssClass="e-outline">
     <ChipCollection>
+
         <ChipListChip Text="Andrew"></ChipListChip>
         <ChipListChip Text="Janet"></ChipListChip>
         <ChipListChip Text="Laura"></ChipListChip>
         <ChipListChip Text="Margaret"></ChipListChip>
+
     </ChipCollection>
-</EjsChipList>
+</SfChipList>
 
 ```
 

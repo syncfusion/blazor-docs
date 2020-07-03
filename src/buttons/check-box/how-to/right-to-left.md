@@ -1,19 +1,22 @@
 ---
 title: "Right-To-Left"
-component: "CheckBox"
-description: "CheckBox how to section, name and value in form submit, and customization of CheckBox appearance, frame & check icon."
+component: "Checkbox"
+description: "Checkbox how to section, name and value in form submit, and customization of Checkbox appearance, frame & check icon."
 ---
 
 # Right-To-Left
 
-CheckBox component has RTL support. This can be achieved by setting [`enableRtl`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Buttons.CheckBox~EnableRtl.html) as `true`.
+Checkbox component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfCheckBox~EnableRtl.html) as `true`.
 
-The following example illustrates how to enable right-to-left support in CheckBox component.
-
-`Index.razor`
+The following example illustrates how to enable right-to-left support in Checkbox component.
 
 ```csharp
+@using Syncfusion.Blazor.Buttons
 
-<EjsCheckBox ID="cbox2" Label="Default" Checked="true" EnableRtl="true"></EjsCheckBox>
+<SfCheckBox Label="Default" Checked="true" EnableRtl="true"></SfCheckBox>
 
-  ```
+```
+
+Output be like
+
+![Button Sample](./../images/cb-rtl.png)

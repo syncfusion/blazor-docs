@@ -1,14 +1,14 @@
 ---
-title: "CheckBox Accessibility"
-component: "CheckBox"
-description: "CheckBox control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
+title: "Checkbox Accessibility"
+component: "Checkbox"
+description: "Checkbox control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
 ---
 
 # Accessibility
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.
-CheckBox provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-checked` and `aria-disabled`. It helps the people with disabilities by providing information about the widget for assistive
-technology in the screen readers. CheckBox component contains the `checkbox` role.
+Checkbox provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-checked` and `aria-disabled`. It helps the people with disabilities by providing information about the widget for assistive
+technology in the screen readers. Checkbox component contains the `checkbox` role.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
@@ -27,39 +27,17 @@ technology in the screen readers. CheckBox component contains the `checkbox` rol
 <tr>
 <td>
 <kbd>Space</kbd></td><td>
-When the checkbox has focus, pressing the Space key changes the state of the checkbox.</td></tr>
+When the Checkbox has focus, pressing the Space key changes the state of the Checkbox.</td></tr>
 </table>
 
-`Index.razor`
-
 ```csharp
+@using Syncfusion.Blazor.Buttons
 
-<ul>
-    <li>
-        <EjsCheckBox ID="checked" Checked="true" Label="Checked State"></EjsCheckBox>
-    </li>
-    <li>
-        <EjsCheckBox ID="unchecked" Label="Unchecked State"></EjsCheckBox>
-    </li>
-    <li>
-        <EjsCheckBox ID="indeterminate" Indeterminate="true" Label="Intermediate State"></EjsCheckBox>
-    </li>
-</ul>
+<SfCheckBox Checked="true" Label="Checked State"></SfCheckBox><br />
+<SfCheckBox Label="Unchecked State"></SfCheckBox><br />
+<SfCheckBox Indeterminate="true" Label="Intermediate State"></SfCheckBox>
 
-  ```
+```
 
-  `_Host.cshtml`
-
-   ```html
-
-     <style >
-        .e-checkbox-wrapper {
-            margin-top: 18px;
-        }
-
-        li {
-            list-style: none;
-        }
-    </style>
-
-  ```  
+Output be like
+![ProgressButton Sample](./images/cb-accessibility.png)

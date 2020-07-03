@@ -1,17 +1,20 @@
 ---
 title: "Hide spinner"
-component: "ProgressButton"
-description: "ProgressButton how to section, change text content and styles, hide spinner, customize progress."
+component: "Progress Button"
+description: "Progress Button how to section, change text content and styles, hide spinner, customize progress."
 ---
 
 # Hide spinner
 
-You can hide spinner in the ProgressButton by setting the `e-hide-spinner` property to [`cssClass`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsProgressButton~CssClass.html).
-
-`Index.razor`
+You can hide spinner in the Progress Button by setting the `e-hide-spinner` property to [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~CssClass.html).
 
 ```csharp
+@using Syncfusion.Blazor.SplitButtons
 
-<EjsProgressButton ID="progress" Content="Progress" EnableProgress="true" CssClass="e-hide-spinner"></EjsProgressButton>
+<SfProgressButton EnableProgress="true" CssClass="e-hide-spinner" Content="Progress"></SfProgressButton>
 
-  ```
+```
+
+Output be like
+
+![Progress Button Sample](./../images/pb-hide.png)

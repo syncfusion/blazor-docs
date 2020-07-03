@@ -6,15 +6,18 @@ description: "Button how to section, block button, repeat button, tooltip for Bu
 
 # Set the disabled state
 
-Button component can be enabled/disabled by giving [`disabled`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.Buttons.EjsButton~Disabled.html)
-property. To disable Button component, the `disabled` property can be set as `true`.
+Button component can be enabled/disabled by giving [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfButton~Disabled.html)
+property. To disable Button component, the `Disabled` property can be set as `true`.
 
-The following example demonstrates Button in `disabled` state.
-
-`Index.razor`
+The following example demonstrates Button in `Disabled` state.
 
 ```csharp
+@using Syncfusion.Blazor.Buttons
 
-   <EjsButton ID="disabled" Disabled="true" Content="Disabled"></EjsButton>
+<SfButton Disabled="true">Disabled</SfButton>
 
-  ```
+```
+
+  Output be like
+
+![Button Sample](./../images/button-disabled.png)

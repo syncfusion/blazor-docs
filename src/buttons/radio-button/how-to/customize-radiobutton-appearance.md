@@ -1,54 +1,26 @@
 ---
-title: "Customize RadioButton Appearance"
-component: "RadioButton"
-description: "RadioButton how to section, name and value in form submit, customize RadioButton appearance."
+title: "Customize Radio Button Appearance"
+component: "Radio Button"
+description: "Radio Button how to section, name and value in form submit, customize Radio Button appearance."
 ---
 
-# Customize RadioButton Appearance
+# Customize Radio Button Appearance
 
-You can customize the appearance of the RadioButton component by using the CSS rules.
-Define own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.Buttons.EjsRadioButton~CssClass.html) property.
+You can customize the appearance of the Radio Button component by using the CSS rules.
+Define own CSS rules according to your requirement and assign the class name to the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfRadioButton~CssClass.html) property.
 
-The background and border color of the RadioButton is customized through the custom classes to create the primary, success, info, warning, and danger type of RadioButton.
-
-`Index.razor`
+The background and border color of the Radio Button is customized through the custom classes to create the primary, success, info, warning, and danger type of Radio Button.
 
 ```csharp
+@using Syncfusion.Blazor.Buttons
 
-<ul>
-    <li>
-        <EjsRadioButton ID="radio1" Label="Primary" Name="custom" CssClass="e-primary"></EjsRadioButton>
-    </li>
-    <li>
-        <EjsRadioButton ID="radio2" Label="Success" Name="custom" CssClass="e-success"></EjsRadioButton>
-    </li>
-    <li>
-        <EjsRadioButton ID="radio3" Label="Info" Name="custom" checked="true" CssClass="e-info"></EjsRadioButton>
-    </li>
-    <li>
-        <EjsRadioButton ID="radio4" Label="Warning" Name="custom" CssClass="e-warning"></EjsRadioButton>
-    </li>
-    <li>
-        <EjsRadioButton ID="radio5" Label="Danger" Name="custom" CssClass="e-danger"></EjsRadioButton>
-    </li>
-</ul>
+<SfRadioButton Label="Primary" Name="custom" CssClass="e-primary"></SfRadioButton><br />
+<SfRadioButton Label="Success" Name="custom" CssClass="e-success"></SfRadioButton><br />
+<SfRadioButton Label="Info" Name="custom" CssClass="e-info"></SfRadioButton><br />
+<SfRadioButton Label="Warning" Name="custom" CssClass="e-warning"></SfRadioButton><br />
+<SfRadioButton Label="Danger" Name="custom" Checked="true" CssClass="e-danger"></SfRadioButton>
 
-  ```
-
-  `_Host.cshtml`
-
-   ```html
-
-   style>
-
-    .e-radio-wrapper {
-        margin-top: 18px;
-    }
-
-    li {
-        list-style: none;
-    }
-
+<style>
     .e-radio:checked + .e-success::after { /* csslint allow: adjoining-classes */
         background-color: #689f38;
     }
@@ -130,4 +102,8 @@ The background and border color of the RadioButton is customized through the cus
     }
 </style>
 
-  ```
+```
+
+Output be like
+
+![Radio Button Sample](./../images/rb-custom.png)

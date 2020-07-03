@@ -1,21 +1,21 @@
 ---
-title: "ProgressButton Accessibility"
-component: "ProgressButton"
-description: "ProgressButton control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
+title: "Progress Button Accessibility"
+component: "Progress Button"
+description: "Progress Button control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
 ---
 
 # Accessibility
 
 ## ARIA attributes
 
-The web accessibility makes web content and web applications more accessible for people with disabilities. Mostly, it helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies. The ProgressButton provides a built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the `aria-label`, `aria-valuemin`, `aria-valuemax`, and `aria-valuenow` attributes in the ProgressButton. It helps by providing information about the widget for assistive technology in the screen readers.
+The web accessibility makes web content and web applications more accessible for people with disabilities. Mostly, it helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies. The Progress Button provides a built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the `aria-label`, `aria-valuemin`, `aria-valuemax`, and `aria-valuenow` attributes in the Progress Button. It helps by providing information about the widget for assistive technology in the screen readers.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
-| aria-label | Indicates the text content of the ProgressButton. |
-| aria-valuemin | Indicates the minimum value for the ProgressButton. |
-| aria-valuemax | Indicates the maximum value for the ProgressButton. |
-| aria-valuenow | Indicates the current value for the ProgressButton. |
+| aria-label | Indicates the text content of the Progress Button. |
+| aria-valuemin | Indicates the minimum value for the Progress Button. |
+| aria-valuemax | Indicates the maximum value for the Progress Button. |
+| aria-valuenow | Indicates the current value for the Progress Button. |
 
 ## Keyboard interaction
 
@@ -31,9 +31,11 @@ The web accessibility makes web content and web applications more accessible for
 Starts the progress</td></tr>
 </table>
 
-`Index.razor`
-
 ```csharp
+@using Syncfusion.Blazor.SplitButtons
 
-<EjsProgressButton ID="slideleft" Content="Slide Left" EnableProgress="true"></EjsProgressButton>
-  ```
+<SfProgressButton EnableProgress="true" Content="Slide Right">Slide Right</SfProgressButton>
+```
+
+Output be like
+![ProgressButton Sample](./images/pb-animation.png)

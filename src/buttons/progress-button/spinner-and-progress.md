@@ -1,7 +1,7 @@
 ---
-title: "ProgressButton Spinner and Progress"
-component: "ProgressButton"
-description: "ProgressButton allows the user to change size & position of the spinner, customize spinner using template and to change the progress."
+title: "Progress Button Spinner and Progress"
+component: "Progress Button"
+description: "Progress Button allows the user to change size & position of the spinner, customize spinner using template and to change the progress."
 ---
 
 <!-- markdownlint-disable MD002 MD022 -->
@@ -9,36 +9,24 @@ description: "ProgressButton allows the user to change size & position of the sp
 
 ### Change spinner position
 
-Spinner position can be changed by modifying the `position` property of [`spinSettings`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsProgressButton~SpinSettings.html). By default, the spinner is positioned at the left of the ProgressButton. You can position it at the `left`, `right`, `top`, `bottom`, or `center` of the text content.
+Spinner position can be changed by modifying the `Position` property of [`SpinSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~SpinSettings.html). By default, the spinner is positioned at the left of the Progress Button. You can position it at the `left`, `right`, `top`, `bottom`, or `center` of the text content.
 
 ### Change spinner size
 
-Spinner size can be changed by modifying the `width` property of [`spinSettings`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsProgressButton~SpinSettings.html). In this demo, the `width` is set to `20` to change the spinner size.
+Spinner size can be changed by modifying the `Width` property of [`SpinSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~SpinSettings.html). In this demo, the `Width` is set to `20` to change the spinner size.
 
 ### Spinner template
 
-You can use custom spinner by specifying the `template` property of [`spinSettings`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsProgressButton~SpinSettings.html) with custom styles.
+You can use custom spinner by specifying the `Template` property of [`SpinSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~SpinSettings.html) with custom styles.
 
 The following sample demonstrates the above functionalities of the spinner.
 
-`Index.razor`
-
 ```csharp
+@using Syncfusion.Blazor.SplitButtons
 
-<h2>Button</h2>
-
-<EjsProgressButton ID="submit" Content="Submit" SpinSettings="@spinSettings"></EjsProgressButton>
-
-@functions {
-
-      ProgressButtonSpinSettings spinSettings = new ProgressButtonSpinSettings() { Position = SpinPosition.Right, Width = "20", Template = "<div class='template'></div>" };
-}
-
-  ```
-
-  `_Host.cshtml`
-
-   ```html
+<SfProgressButton Content="Submit">
+    <ProgressButtonSpinSettings Position="SpinPosition.Right" Width="20" Template = "<div class='template'></div>"></ProgressButtonSpinSettings>
+</SfProgressButton>
 
 <style>
     @@keyframes custom-rolling {
@@ -69,126 +57,182 @@ The following sample demonstrates the above functionalities of the spinner.
     }
 </style>
 
-  ```
+```
 
-<!-- markdownlint-disable MD025 MD022 -->
+Output be like
+
+![Button Sample](./images/pb-spinner.png)
+
 ## Progress
 
 ### Content animation
 
-The [`content`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsProgressButton~Content.html) of the ProgressButton can be animated during progress using the `effect` property
-of [`animationSettings`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsProgressButton~AnimationSettings.html). You can also set custom duration and timing function using the `duration` and `easing` properties. The possible `effect` values are `None`, `SlideLeft`, `SlideRight`, `SlideUp`, `SlideDown`, `ZoomIn`, and `ZoomOut`.
+The [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~Content.html) of the Progress Button can be animated during progress using the `Effect` property
+of [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~AnimationSettings.html). You can also set custom duration and timing function using the `Duration` and `Easing` properties. The possible `Effect` values are `None`, `SlideLeft`, `SlideRight`, `SlideUp`, `SlideDown`, `ZoomIn`, and `ZoomOut`.
 
-`Index.razor`
+```csharp
+@using Syncfusion.Blazor.SplitButtons
+
+<SfProgressButton Content="Slide Right">
+    <ProgressButtonSpinSettings Position="SpinPosition.Left"></ProgressButtonSpinSettings>
+    <ProgressButtonAnimationSettings Effect="AnimationEffect.SlideRight" Duration= "400" Easing="Linear"></ProgressButtonAnimationSettings>
+</SfProgressButton>
+
+```
+
+Output be like
+![ProgressButton Sample](./images/pb-animation.png)
+
+### Change step of the Progress Button
+
+The progress can be visualized at the specified interval by changing the [`Step`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.ProgressEventArgs~Step.html) property in the [`OnBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~OnBegin.html) event of the Progress Button. In this demo, the `step` property is set to `20` to show progress at every 20% increment.
 
 ```csharp
 
-<EjsProgressButton ID="slideleft" Content="Slide Left" EnableProgress="true" AnimationSettings="@animationSettings" SpinSettings="@spinSettings"></EjsProgressButton>
+@using Syncfusion.Blazor.SplitButtons
 
-@functions {
+<SfProgressButton EnableProgress="true" Content="Progress Step" CssClass="e-hide-spinner">
+    <ProgressButtonEvents OnBegin="begin"></ProgressButtonEvents>
+</SfProgressButton>
 
-      ProgressButtonSpinSettings spinSettings = new ProgressButtonSpinSettings() { Position = SpinPosition.Left };
-     ProgressButtonAnimationSettings animationSettings = new ProgressButtonAnimationSettings()
-            {
-                Effect = AnimationEffect.SlideRight,
-                Duration = 500,
-                Easing = "linear",
-            };
-
+@code{
+    private void begin(ProgressEventArgs args)
+    {
+        args.Step = 20;
+    }
 }
-  ```
 
-### Start and stop methods
+```
 
-You can pause and resume the progress using the `stop` and `start` methods, respectively. In this demo, clicking the ProgressButton will pause and resume the progress.
+Output be like
+![ProgressButton Sample](./images/pb-step.png)
 
-`Index.razor`
+> The class `e-hide-spinner` hides the spinner in the Progress Button, For more information, see [hide spinner](./how-to/hide-spinner) section.
+
+### Change Progress state dynamically
+
+The progress state can be changed dynamically by modifying the `Percent` property in the [`Progressing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.ProgressButtonEvents~Progressing.html) events. In this example, on 40% completion of progress, the Percent property is set to `90` to show dynamic change of the progress state. The progress state can be changed dynamically by modifying the Percent property in the [`Progress`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.ProgressButtonEvents~Progressing.html) events.
 
 ```csharp
 
-<EjsProgressButton ID="download" ref="progressBtn" Content="Download" EnableProgress="true" IconCss="e-btn-sb-icon e-download" Duration="4000" End="@end" CssClass="e-hide-spinner" onclick="@clickHandler"></EjsProgressButton>
+@using Syncfusion.Blazor.SplitButtons
 
-@functions {
+<SfProgressButton EnableProgress="true" Content="@Content" Duration="15000" CssClass="e-hide-spinner">
+    <ProgressButtonEvents OnBegin="Begin" Progressing="Progressing" OnEnd="End"></ProgressButtonEvents>
+</SfProgressButton>
 
-    EjsProgressButton progressBtn;
-    public string content = "Pause";
-    public string iconCss = "e-btn-sb-icon e-pause";
-    private void clickHandler(UIMouseEventArgs args)
+@code {
+    public string Content = "Progress";
+    public void Begin(ProgressEventArgs args)
     {
-        if (progressBtn.Content == "Download") {
-            progressBtn.Content = this.content;
-            progressBtn.IconCss = this.iconCss;
-            progressBtn.DataBind();
-        }
-        // clicking on ProgressButton will stop the progress when the text Content is "Pause"
-        else if (progressBtn.Content == "Pause") {
-            progressBtn.Content = "Resume";
-            progressBtn.IconCss = "e-btn-sb-icon e-play";
-            progressBtn.DataBind();
-            progressBtn.Stop();
-        }
-        // clicking on ProgressButton will start the progress when the text Content is "Resume"
-        else if (progressBtn.Content == "Resume") {
-            progressBtn.Content = "Pause";
-            progressBtn.IconCss = "e-btn-sb-icon e-pause";
-            progressBtn.DataBind();
-            progressBtn.Start();
-        }
-
+        this.Content = "Progress " + args.Percent + '%';
     }
-
-    private void end(ProgressEventArgs args)
+    public void Progressing(ProgressEventArgs args)
     {
-        progressBtn.Content = "Download";
-        progressBtn.IconCss = "e-icons e-download";
-        progressBtn.DataBind();
+        this.Content = "Progressing " + args.Percent + '%';
+        if (args.Percent == 40)
+        {
+            args.Percent = 90;
+        }
     }
-
+    public void End(ProgressEventArgs args)
+    {
+        this.Content = "Progress" + args.Percent + '%';
+    }
 }
 
-  ```
+```
 
-  `_Host.cshtml`
+Output be like
+![ProgressButton Sample](./images/pb-dynamic.png)
 
-   ```html
+### Start and Stop Methods
+
+You can pause and resume the progress using the [`Stop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~Stop.html) and [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~Start.html) methods, respectively. In this example, clicking the Progress Button will pause and resume the progress.
+
+```csharp
+
+@using Syncfusion.Blazor.SplitButtons
+
+<SfProgressButton Content="@Content" EnableProgress="true" CssClass="@CssClass" IconCss="@IconCss" @onclick="Click" @ref="ProgressBtn">
+<ProgressButtonEvents OnEnd="End"></ProgressButtonEvents>
+</SfProgressButton>
+
+@code {
+    SfProgressButton ProgressBtn;
+    public string Content = "Download";
+    public string CssClass = "e-hide-spinner";
+    public string IconCss = "e-icons e-download";
+
+    public void Click()
+    {
+        if(Content == "Download")
+        {
+            this.Content = "Pause";
+            this.IconCss = "e-icons e-pause";
+        }
+        else if (this.Content == "Pause")
+        {
+            this.Content = "Resume";
+            this.IconCss = "e-icons e-play";
+            ProgressBtn.Stop();
+        }
+        else if (this.Content == "Resume")
+        {
+            this.Content = "Pause";
+            this.IconCss = "e-icons e-pause";
+            ProgressBtn.Start();
+        }
+    }
+
+    public void End(ProgressEventArgs args)
+    {
+        this.Content = "Download";
+        this.IconCss = "e-icons e-download";
+    }
+}
 
 <style>
-    @@font-face {
-        font-family: 'btn-icon';
-        src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    .e-btn-sb-icon {
-        font-family: 'btn-icon' !important;
-        speak: none;
-        font-size: 55px;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
     .e-download::before {
-        content: '\e706';
+       content: '\ea91';
     }
 
     .e-play::before {
-        content: '\e700';
+        content: '\e324';
     }
 
     .e-pause::before {
-        content: '\e701';
+        content: '\e326';
     }
 </style>
 
-  ```
+```
 
-## See Also
+Output be like
+![ProgressButton Sample](./images/pb-start-stop.png)
 
-* [How to hide spinner](./how-to/hide-spinner)
-* [Customize ProgressButton using cssClass](how-to/customize-progress-using-cssclass)
+### ProgressComplete Method
+
+You can complete the progress by using ['ProgressComplete'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~ProgressComplete.html) method and it will also hides the spinner. In this example, I have added another button to complete the current progress of the progress button.
+
+```csharp
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SplitButtons
+
+<SfProgressButton Content="Progress Button" EnableProgress="true" @ref="ProgressBtnObj">
+    <ProgressButtonSpinSettings Position="SpinPosition.Left"></ProgressButtonSpinSettings>
+    <ProgressButtonAnimationSettings Effect="AnimationEffect.SlideRight" Duration="400" Easing="Linear"></ProgressButtonAnimationSettings>
+</SfProgressButton>
+<SfButton @onclick="OnCompleteClick">Complete</SfButton>
+
+@code
+{
+    SfProgressButton ProgressBtnObj;
+    private void OnCompleteClick()
+    {
+    ProgressBtnObj.ProgressComplete();
+    }
+}
+
+```

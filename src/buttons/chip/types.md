@@ -12,27 +12,30 @@ The ChipList control has the following types.
 Input Chip holds information in compact form. It converts user input into chips.
 
 ```csharp
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList>
+@using Syncfusion.Blazor.Buttons
+<SfChipList>
     <ChipCollection>
+
         <ChipListChip Text="Anne" LeadingIconCss="anne"></ChipListChip>
         <ChipListChip Text="Janet" LeadingIconCss="janet"></ChipListChip>
         <ChipListChip Text="Laura" LeadingIconCss="laura"></ChipListChip>
         <ChipListChip Text="Margaret" LeadingIconCss="margaret"></ChipListChip>
-    </ChipCollection>
-</EjsChipList>
 
+    </ChipCollection>
+</SfChipList>
 <style>
     .anne {
         background-image: url('./anne.png');
     }
+
     .janet {
         background-image: url('./janet.png');
     }
+
     .laura {
         background-image: url('./laura.png');
     }
+
     .margaret {
         background-image: url('./margaret.png');
     }
@@ -49,17 +52,17 @@ Output be like the below.
 Choice Chip allows you to select a single chip from the set of ChipList/ChipCollection. It can be enabled by setting the `Selection` property to `Single`.
 
 ```csharp
-
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList Selection="Selection.Single">
+@using Syncfusion.Blazor.Buttons
+<SfChipList Selection="Selection.Single">
     <ChipCollection>
+
         <ChipListChip Text="Small"></ChipListChip>
         <ChipListChip Text="Medium"></ChipListChip>
         <ChipListChip Text="Large"></ChipListChip>
         <ChipListChip Text="Extra Large"></ChipListChip>
+
     </ChipCollection>
-</EjsChipList>
+</SfChipList>
 
 ```
 
@@ -72,17 +75,17 @@ Output be like the below.
 Filter Chip allows you to select a multiple chip from the set of ChipList/ChipCollection. It can be enabled by setting the `Selection` property to `Multiple`.
 
 ```csharp
-
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList Selection="Selection.Multiple">
+@using Syncfusion.Blazor.Buttons
+<SfChipList Selection="Selection.Multiple">
     <ChipCollection>
+
       <ChipListChip Text="Chai"></ChipListChip>
       <ChipListChip Text="Chang"></ChipListChip>
       <ChipListChip Text="Aniseed Syrup"></ChipListChip>
       <ChipListChip Text="Ikura"></ChipListChip>
+
     </ChipCollection>
-</EjsChipList>
+</SfChipList>
 
 ```
 
@@ -95,18 +98,19 @@ Output be like the below.
 The Action Chip triggers the event like click or delete, which helps doing action based on the event.
 
 ```csharp
-
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList>
+@using Syncfusion.Blazor.Buttons
+<SfChipList>
     <ChipListEvents OnClick="@OnClick"></ChipListEvents>
     <ChipCollection>
+
         <ChipListChip Text="Sent a text"></ChipListChip>
         <ChipListChip Text="Set a remainder"></ChipListChip>
         <ChipListChip Text="Read my emails"></ChipListChip>
         <ChipListChip Text="Set alarm"></ChipListChip>
+
     </ChipCollection>
-</EjsChipList>
+</SfChipList>
+
 <div>@ChipText</div>
 
 @code
@@ -130,17 +134,17 @@ Output be like the below.
 Deletable Chip allows you to delete a chip from ChipList/ChipCollection. It can be enabled by setting the `EnableDelete` property to `true`.
 
 ```csharp
-
-@using Syncfusion.EJ2.Blazor.Buttons
-
-<EjsChipList EnableDelete="true">
+@using Syncfusion.Blazor.Buttons
+<SfChipList EnableDelete="true">
     <ChipCollection>
+
         <ChipListChip Text="Sent a text"></ChipListChip>
         <ChipListChip Text="Set a remainder"></ChipListChip>
         <ChipListChip Text="Read my emails"></ChipListChip>
         <ChipListChip Text="Set alarm"></ChipListChip>
+
     </ChipCollection>
-</EjsChipList>
+</SfChipList>
 
 ```
 

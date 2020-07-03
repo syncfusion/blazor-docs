@@ -1,6 +1,6 @@
 # Overview
 
-The **ProgressButton** visualizes the progression of an operation to indicate the user that a process is happening in the background with visual representation.
+The **Progress Button** visualizes the progression of an operation to indicate the user that a process is happening in the background with visual representation.
 
 ## Key Features
 

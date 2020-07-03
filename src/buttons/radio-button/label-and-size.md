@@ -1,7 +1,7 @@
 ---
-title: "RadioButton Label and Size"
-component: "RadioButton"
-description: "RadioButton control supports different sizes and label."
+title: "Radio Button Label and Size"
+component: "Radio Button"
+description: "Radio Button control supports different sizes and label."
 ---
 
 # Label and Size
@@ -10,77 +10,39 @@ This section explains the different sizes and labels.
 
 ## Label
 
-RadioButton caption can be defined by using the [`label`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.Buttons.EjsRadioButton~Label.html) property.
-This reduces the manual addition of label for RadioButton. You can customize the label position before or after the
-RadioButton through the [`labelPosition`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.Buttons.EjsRadioButton~LabelPosition.html) property.
-
-`Index.razor`
+Radio Button caption can be defined by using the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfRadioButton~Label.html) property.
+This reduces the manual addition of label for Radio Button. You can customize the label position before or after the
+Radio Button through the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfRadioButton~LabelPosition.html) property.
 
 ```csharp
+@using Syncfusion.Blazor.Buttons
 
-<ul>
-    <li>
-        <EjsRadioButton ID="radio1" Label="Left SIDe Label" Name="position" LabelPosition="@Syncfusion.EJ2.RazorComponents.Buttons.RadioLabelPosition.Before"></EjsRadioButton>
-    </li>
-    <li>
-        <EjsRadioButton ID="radio2" Label="Right SIDe Label" Name="position" LabelPosition="@Syncfusion.EJ2.RazorComponents.Buttons.RadioLabelPosition.After"></EjsRadioButton>
-    </li>
-</ul>
+<SfRadioButton Label="Left Side Label" Name="position" LabelPosition="RadioLabelPosition.Before"></SfRadioButton><br />
+<SfRadioButton Label="Right Side Label" Checked="true" Name="position" LabelPosition="RadioLabelPosition.After"></SfRadioButton>
 
-  ```
+```
 
-  `_Host.cshtml`
+Output be like
 
-   ```html
-
-    <style>
-    .e-radio-wrapper {
-        margin-top: 18px;
-    }
-
-    li {
-        list-style: none;
-    }
-   </style>
-
-  ```
+![Radio Button Sample](./images/rb-label.png)
 
 ## Size
 
-The different RadioButton sizes available are default and small. To reduce the size of the default RadioButton to small,
-set the [`cssClass`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.Buttons.EjsRadioButton~CssClass.html) property to `e-small`.
-
-`Index.razor`
+The different Radio Button sizes available are default and small. To reduce the size of the default Radio Button to small,
+set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfRadioButton~CssClass.html) property to `e-small`.
 
 ```csharp
+@using Syncfusion.Blazor.Buttons
 
-<ul>
-    <li>
-        <EjsRadioButton ID="radio11" Label="Small" Name="size" checked="true" CssClass="e-small"></EjsRadioButton>
-    </li>
-    <li>
-        <EjsRadioButton ID="radio22" Label="Default" Name="size"></EjsRadioButton>
-    </li>
-</ul>
+<SfRadioButton Label="Small" Name="size" checked="true" CssClass="e-small"></SfRadioButton><br />
+<SfRadioButton Label="Default" Name="size"></SfRadioButton>
 
-  ```
+```
 
-  `_Host.cshtml`
+Output be like
 
-   ```html
-
-    <style>
-    .e-radio-wrapper {
-        margin-top: 18px;
-    }
-
-    li {
-        list-style: none;
-    }
-</style>
-
-  ```
+![Radio Button Sample](./images/rb-size.png)
 
 ## See Also
 
-* [How to customize the RadioButton appearance](./how-to/customize-radiobutton-appearance)
+* [How to customize the Radio Button appearance](./how-to/customize-radiobutton-appearance)

@@ -1,62 +1,112 @@
 ---
 title: "Getting Started"
 component: "Button"
-description: "This section helps to learn how to create the button in ASP.NET Core Razor application with its basic features in step-by-step procedure."
+description: "This section helps you to learn how to create a EJ2 button in Blazor application with its basic features in step-by-step procedure."
 ---
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Essential JS 2 for ASP.NET Core Razor Buttonss Component in Visual Studio 2019
+# Getting Started with Blazor Button Component
 
-This article provides a step-by-step introduction to configure Essential JS 2 setup, build and publish a simple .NET Core Razor Button Component web application using the [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/).
+This section briefly explains about how to include Button Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/) page for the introduction and configuring the common specifications.
 
-## Prerequisites
+To get start quickly with Button Component using Blazor, you can check on this video:
 
-The official prerequisites to create and run an ASP.NET Core Razor Components on Windows environment are described in the [.NET Core Razor components documentation website](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa/blazor/get-started?view=aspnetcore-3.0&tabs=visual-studio).
+`youtube:qkHqP_CymrI`
 
-* [Visual Studio 2019 Preview](https://visualstudio.microsoft.com/vs/preview/) with the ASP.NET and web development workload
-* [.NET Core SDK 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+## Importing Syncfusion Blazor component in the application
 
-## Create a Razor Component application from VS 2019
+1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
-1. Choose **File > New > Project...** in the Visual Studio menu bar.
+2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.chtml` page.
 
-    ![new project in aspnetcore razor](images/new-project.png)
+> Please ensure to check the **Include prerelease** option.
 
-2. Make sure **.NET Core** and **ASP.NET Core 3.0** are selected at the top.
+```csharp
+<head>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+</head>
+```
 
-    ![select framework](images/razor-components-template.png)
+For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-3. Choose the **Razor Components** template and change the application name, and then click **OK**.
+```csharp
+<head>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+</head>
+```
 
-## Importing Essential JS 2 Razor components in the application
+## Adding component package to the application
 
-1. Now, add the **Syncfusion.EJ2.AspNet.Core.RazorComponents** NuGet package to the new application by using the NuGet Package Manager. Right-click the project and select Manage NuGet Packages.
+Open `/_Imports.razor file` and import the **Syncfusion.Blazor.Buttons** package.
 
-    ![nuget explorer](images/nuget-explorer.png)
+```csharp
 
-2. Search the **Syncfusion.EJ2.AspNet.Core.RazorComponents** keyword in the Browse tab and install **Syncfusion.EJ2.AspNet.Core.RazorComponents** NuGet package in the application.
+@using Syncfusion.Blazor.Buttons
 
-    ![select nuget](images/select-nuget.png)
+```
 
-3. The Essential JS 2 package will be included in the project, after the installation process is completed.
+## Add SyncfusionBlazor service in Startup.cs
 
-4. Open **~/_ViewImports.cshtml** file and import the `Syncfusion.EJ2.RazorComponents`.
+Open the **Startup.cs** file and add services required by Syncfusion components.
+Add **services.AddSyncfusionBlazor()** method in the ConfigureServices function as follows.
 
-    ```cshtml
-    @addTagHelper *, Syncfusion.EJ2.RazorComponents
-    ```
+```csharp
+namespace BlazorApplication
+{
+    public class Startup
+    {
+        ....
+        ....
+        public void ConfigureServices(IServiceCollection services)
+        {
+            ....
+            ....
+            services.AddSyncfusionBlazor();
+        }
+    }
+}
+```
 
-5. Add the client-side resources through CDN or local npm package in the `<head>` element of the **~/wwwroot/index.html** page.
+> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
-    ![import cdn](images/import-cdn.png)
+```csharp
+<head>
+    <environment include="Development">
+        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js">
+        </script>
+    </environment>
+</head>
+```
 
-6. Now, add the Syncfusion Essential JS 2 Button component in any web page (cshtml) in the `Pages` folder. For example, the Button component is added in the **~/Pages/Index.cshtml** page.
+## Adding component package to the application
 
-    ```cshtml
-    <EjsButton ID="element">Button</EjsButton>
-    ```
+Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages otherwise import these packages in the individual `razor` pages.
 
-7. Run the application. The Essential JS 2 Button component will render in the web browser.
+```csharp
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Buttons
+```
 
-    ![Button Sample](./images/button.png)
+## Adding Button component to the application
+
+Now, add the Syncfusion Blazor Button component in `razor` page in the `Pages` folder. For example the Button component is added in the `~/Pages/Index.razor` page.
+
+```csharp
+<SfButton>Button</SfButton>
+
+```
+
+## Run the application
+
+After successful compilation of your application, simply press F5 to run the application. The Blazor Button component will render in the web browser as shown below
+
+![Button Sample](./images/button.png)
+
+## See Also
+
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor-dotnet-cli/)

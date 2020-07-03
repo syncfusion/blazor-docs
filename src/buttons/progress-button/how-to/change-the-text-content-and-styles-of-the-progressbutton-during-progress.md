@@ -1,44 +1,39 @@
 ---
-title: "Change the text content and styles of the ProgressButton during progress"
-component: "ProgressButton"
-description: "ProgressButton how to section, change text content and styles, hide spinner, customize progress."
+title: "Change the text content and styles of the Progress Button during progress"
+component: "Progress Button"
+description: "Progress Button how to section, change text content and styles, hide spinner, customize progress."
 ---
 
-# Change the text content and styles of the ProgressButton during progress
+# Change the text content and styles of the Progress Button during progress
 
-You can change the text content and styles of the ProgressButton during progress state by changing the text content and the [`cssClass`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsProgressButton~CssClass.html) property at
-the [`begin`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsProgressButton~Begin.html) and [`end`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsProgressButton~End.html) events.
-
-`Index.razor`
+You can change the text content and styles of the Progress Button during progress state by changing the text content and the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~CssClass.html) property at
+the [`OnBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.ProgressButtonEvents~OnBegin.html) and [`OnEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.ProgressButtonEvents~OnEnd.html) events.
 
 ```csharp
 
-<EjsProgressButton Id="upload" ref="progressBtn" Content="Upload" EnableProgress="true" CssClass="e-hide-spinner" Duration="4000" Begin="@begin" End="@end"></EjsProgressButton>
+@using Syncfusion.Blazor.SplitButtons
 
-@functions {
+<SfProgressButton Content="@Content" EnableProgress="true" CssClass="@CssClass" Duration="4000">
+    <ProgressButtonEvents OnBegin="Begin" OnEnd="End"></ProgressButtonEvents>
+</SfProgressButton>
 
-    EjsProgressButton progressBtn;
-
-
-    private void begin(Syncfusion.EJ2.RazorComponents.SplitButtons.ProgressEventArgs args)
+@code {
+    public string Content = "Upload";
+    public string CssClass = "e-hide-spinner";
+    public void Begin(ProgressEventArgs args)
     {
-        progressBtn.Content = "Uploading...";
-        progressBtn.CssClass = "e-hide-spinner e-info";
-        progressBtn.DataBind();
-
+        this.Content = "Uploading...";
+        this.CssClass = "e-hide-spinner e-info";
     }
-
-    private void end(Syncfusion.EJ2.RazorComponents.SplitButtons.ProgressEventArgs args)
+    public void End(ProgressEventArgs args)
     {
-        progressBtn.Content = "Success";
-        progressBtn.CssClass = "e-hide-spinner e-success";
-        progressBtn.DataBind();
-        Thread.Sleep(500);
-        progressBtn.Content = "Upload";
-        progressBtn.CssClass = "e-hide-spinner";
-        progressBtn.DataBind();
-
+        this.Content = "Success";
+        this.CssClass = "e-hide-spinner e-success";
     }
 }
 
-  ```
+```
+
+Output be like
+
+![Progress Button Sample](./../images/pb-text.png)

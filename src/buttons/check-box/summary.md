@@ -2,6 +2,6 @@
 * [Native Events](check-box/native-event.md)  
 * [Label and Size](check-box/label-and-size.md)
 * [Accessibility](check-box/accessibility.md)
-* [Customized CheckBox](check-box/how-to/customized-checkbox.md)
-* [Name and Value in form submit](check-box/how-to/name-and-value-in-form-submit.md)
+* [Customized Checkbox](check-box/how-to/customized-checkbox.md)
+* [CheckboxFor and Model Binding](check-box/how-to/checkboxfor.md)
 * [Right-To-Left](check-box/how-to/right-to-left.md)

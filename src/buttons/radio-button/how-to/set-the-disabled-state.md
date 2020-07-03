@@ -1,48 +1,23 @@
 ---
-title: "RadioButton How To sections"
-component: "RadioButton"
-description: "RadioButton how to section, name and value in form submit, customize RadioButton appearance."
+title: "Radio Button How To sections"
+component: "Radio Button"
+description: "Radio Button how to section, name and value in form submit, customize Radio Button appearance."
 ---
 
 # Set the disabled state
 
-RadioButton component can be enabled/disabled by giving [`disabled`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.Buttons.EjsRadioButton~Disabled.html) property. To disable RadioButton component,
-the `disabled` property can be set as `true`.
-
-`Index.razor`
+Radio Button component can be enabled/disabled by giving [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfRadioButton~Disabled.html) property. To disable Radio Button component,
+the `Disabled` property can be set as `true`.
 
 ```csharp
+@using Syncfusion.Blazor.Buttons
 
-<ul>
-        <li>
-            <EjsRadioButton ID="radio1" Label="Option 1" Name="default" Checked="true"></EjsRadioButton>
-        </li>
-        <li>
-            <EjsRadioButton ID="radio2" Label="Option 2" Name="default" Disabled="true"></EjsRadioButton>
-        </li>
-        <li>
-            <EjsRadioButton ID="radio3" Label="Option 3" Name="default"></EjsRadioButton>
-        </li>
-    </ul>
+<SfRadioButton Label="Option 1" Name="default" Checked="true"></SfRadioButton><br />
+<SfRadioButton Label="Option 2" Name="default" Disabled="true"></SfRadioButton><br />
+<SfRadioButton Label="Option 3" Name="default"></SfRadioButton>
 
-  ```
+```
 
-  `_Host.cshtml`
+Output be like
 
-   ```html
-
-<style>
-    .e-radio-wrapper {
-        margin-top: 18px;
-    }
-
-    button {
-        margin: 20px 0 0 5px;
-    }
-
-    li {
-        list-style: none;
-    }
-</style>
-
-  ```
+![Radio Button Sample](./../images/rb-disabled.png)

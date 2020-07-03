@@ -8,6 +8,6 @@ The Syncfusion Blazor provides the following support in Visual Studio Code:
 
 [Project-Template](./visual-studio-code-extensions/create-project):  Creates Syncfusion Blazor applications by adding the required Syncfusion Blazor components.
 
-[Convert project:](./visual-studio-code-extensions/convert-project):  Converts an existing Blazor Web Application into a Syncfusion Blazor Web Application by adding the required Syncfusion NuGet packages and resource files.
+[Convert project](./visual-studio-code-extensions/convert-project):  Converts an existing Blazor Web Application into a Syncfusion Blazor Web Application by adding the required Syncfusion NuGet packages and resource files.
 
 [Upgrade project](./visual-studio-code-extensions/upgrade-project):  Upgrades the existing Syncfusion Blazor Web Application from one Essential Studio version to another version.

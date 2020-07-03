@@ -20,11 +20,11 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons,
     <span class="e-icons e-search"></span>
     ```
 
-4. You can add client-side resource through CDN or local npm package in the `<head>` element of the `~/wwwroot/index.html` page.
+4. You can add client-side resources through CDN in the `<head>` element of the `~/wwwroot/index.html` in Blazor WebAssembly app or `~/Pages/_Host.cshtml` in Blazor server app.
 
     ```html
     <head>
-        <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet" />
+        <link href="https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 
@@ -53,7 +53,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons,
 
 ## Customization
 
-The Syncfusion Blazor icon library can be customize its color, size by overriding the `e-icons` class.
+The Syncfusion Blazor icon library can customize its color, size by overriding the `e-icons` class.
 
 ```csharp
     <style>
@@ -82,9 +82,17 @@ The Syncfusion Blazor icon library can be customize its color, size by overridin
 
 ## Available Icons
 
-The complete pack of Syncfusion Blazor icons are listed in the below table. The corresponding icon content can be referred in the content section.
+The complete pack of Syncfusion Blazor icons is listed in the below table. The corresponding icon content can be referred to in the content section.
 
 <!-- markdownlint-disable MD033 -->
+
+### Bootstrap 4
+
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap4/demo.html" style="height:1000px;"></iframe>
+
+### Bootstrap
+
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap/demo.html" style="height:1000px;"></iframe>
 
 ### Material
 
@@ -93,14 +101,6 @@ The complete pack of Syncfusion Blazor icons are listed in the below table. The 
 ### Fabric
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fabric/demo.html" style="height:1000px;"></iframe>
-
-### Bootstrap
-
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap/demo.html" style="height:1000px;"></iframe>
-
-### Bootstrap 4
-
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap4/demo.html" style="height:1000px;"></iframe>
 
 ### High Contrast
 

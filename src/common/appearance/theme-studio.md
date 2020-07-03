@@ -1,6 +1,6 @@
 # Overview
 
-Theme Studio for Syncfusion Blazor can be used to customize a new theme from an existing theme. It does not support with data visualization controls such as Chart, Diagram, Gauge, Range Navigator, and Maps.
+Theme Studio for Syncfusion Blazor can be used to customize a new theme from an existing theme. It does not support data visualization controls such as Chart, Diagram, Gauge, Range Navigator, and Maps.
 
 ## Customizing theme color from theme studio
 
@@ -16,7 +16,7 @@ The Syncfusion Blazor themes are developed under the SCSS environment. Each them
 
 ![Theme Studio colpr-picker](images/colorpicker.png)
 
-**Step 4:** The Syncfusion Blazor components will be rendered with the newly selected colors in the preview section after selecting a custom color form pickers.
+**Step 4:** The Syncfusion Blazor components will be rendered with the newly selected colors in the preview section after selecting a custom color form picker.
 
 ![Theme Studio customized](images/customized.png)
 
@@ -56,9 +56,9 @@ You can download the custom styles after customizing the theme colors.
 
 You can directly use the customized CSS file in the web application.
 
-**Step 1:** Copy and paste the customized CSS file from the download folder into any folder, e.g., `styles\{file-name}.css`.
+**Step 1:** Copy and paste the customized CSS file from the download folder into any folder, e.g., `~/wwwroot/styles/{file-name}.css`.
 
-**Step 2:** Refer the customized CSS file reference in the `index.html` or `shared/_layout.cshtml` main page head section.
+**Step 2:** Refer the customized CSS file reference in the `~/wwwroot/index.html` or `~/Pages/_Host.cshtml` main page head section.
 
 ```html
     <head>
@@ -68,13 +68,13 @@ You can directly use the customized CSS file in the web application.
 
 ## Import previously changed settings into theme studio
 
-If you need to change your application theme and UI design in future, do not customize the Syncfusion Blazor components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the Theme Studio application.
+If you need to change your application theme and UI design in the future, do not customize the Syncfusion Blazor components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the Theme Studio application.
 
 **Step 1:** Click the Import icon at the top-right corner.
 
 ![Theme Studio import-icon](images/import-icon.png)
 
-**Step 2:** The Import Theme dialog will open. Click the Browse button and select `settings.json` file you exported previously.
+**Step 2:** The Import Theme dialog will open. Click the Browse button and select the `settings.json` file you exported previously.
 
 ![theme studio import-dialog](images/import-dialog.png)
 

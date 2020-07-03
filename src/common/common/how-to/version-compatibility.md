@@ -1,9 +1,31 @@
 # Version Compatibility
 
-The following table describes the version compatibility of .NET Core SDK and Syncfusion.EJ2.Blazor NuGet package.
+The following table describes the version compatibility of .NET Core SDK and Syncfusion.Blazor NuGet package.
 
-| .NET Core SDK Version | Syncfusion.EJ2.Blazor NuGet version |
+| .NET Core SDK Version | Syncfusion.Blazor NuGet version |
 | ------------- | ------------- |
+| [.NET Core 5.0](https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-6/) | 18.2.0.44  |
+| [.NET Core 3.2.0](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/) | 18.1.0.59  |
+| [.NET Core 3.2.0](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/) | 18.1.0.58  |
+| [.NET Core 3.2.0](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/) | 18.1.0.57  |
+| [.NET Core 3.2.0](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/) | 18.1.0.56  |
+| [.NET Core 3.2.0](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/) | 18.1.0.55  |
+| [.NET Core 3.2.0](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/) | 18.1.0.54  |
+| [.NET Core 3.2.0](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-release-candidate-now-available/) | 18.1.0.53  |
+| [.NET Core 3.2.0](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-release-candidate-now-available/) | 18.1.0.52  |
+| [.NET Core 3.2.0](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-release-candidate-now-available/) | 18.1.0.48  |
+| [.NET Core 3.1.3](https://devblogs.microsoft.com/dotnet/net-core-march-2020/) | 18.1.0.46  |
+| [.NET Core 3.1.3](https://devblogs.microsoft.com/dotnet/net-core-march-2020/) | 18.1.0.45  |
+| [.NET Core 3.1.3](https://devblogs.microsoft.com/dotnet/net-core-march-2020/) | 18.1.0.44  |
+| [.NET Core 3.1.3](https://devblogs.microsoft.com/dotnet/net-core-march-2020/) | 18.1.0.43  |
+| [.NET Core 3.1.2](https://devblogs.microsoft.com/dotnet/net-core-february-2020/) | 18.1.0.42  |
+| [.NET Core 3.1.2](https://devblogs.microsoft.com/dotnet/net-core-february-2020/) | 18.1.0.36  |
+| [.NET Core 3.1.2](https://devblogs.microsoft.com/dotnet/net-core-february-2020/) | 17.4.0.55  |
+| [.NET Core 3.1.2](https://devblogs.microsoft.com/dotnet/net-core-february-2020/) | 17.4.0.54  |
+| [.NET Core 3.1.2](https://devblogs.microsoft.com/dotnet/net-core-february-2020/) | 17.4.0.53  |
+| [.NET Core 3.1.1](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-1-release-now-available/) | 17.4.0.51  |
+| [.NET Core 3.1.1](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-1-release-now-available/) | 17.4.0.50  |
+| [.NET Core 3.1.1](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-1-release-now-available/) | 17.4.0.49  |
 | [.NET Core 3.1.1](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-1-release-now-available/) | 17.4.0.47  |
 | [.NET Core 3.1.1](https://devblogs.microsoft.com/dotnet/net-core-january-2020/) | 17.4.0.46  |
 | [.NET Core 3.1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1/) | 17.4.0.44  |

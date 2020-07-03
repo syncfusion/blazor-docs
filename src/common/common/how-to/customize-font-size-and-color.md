@@ -1,12 +1,12 @@
 # How to customize the font size and color in Syncfusion Blazor components
 
-## Install Webcompiler
+## Install Web Compiler
 
-Install the Webcompiler to compile the `scss` files in the Blazor Applications.
+Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
-## Steps to install the Webcompiler in Visual Studio 2019**
+## Steps to install the Web Compiler in Visual Studio 2019**
 
-1. Open the Visual Studio 2019 and click the **Exensions** in the visual studio toolbar.
+1. Open the Visual Studio 2019 and click the **Extensions** in the visual studio toolbar.
 
     ![Extension](../images/extensions.png)
 
@@ -16,7 +16,7 @@ Install the Webcompiler to compile the `scss` files in the Blazor Applications.
 
 ## Create a Blazor Server Application in Visual Studio 2019
 
-1. Create a Blazor server application by referring [Blazor Server](../../getting-started/vs-blazor-server) documentation.
+1. Create a Blazor server application by referring [Blazor Server](../../getting-started/server-side-blazor) documentation.
 
 2. Install the Syncfusion `node_modules` in this application using this command.
 
@@ -26,7 +26,7 @@ Install the Webcompiler to compile the `scss` files in the Blazor Applications.
 
     ```
 
-3. Create a `scss` file in root folder and provide the variables to override as shown below.
+3. Create a `SCSS` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
 
     ``` scss
 
@@ -40,25 +40,25 @@ Install the Webcompiler to compile the `scss` files in the Blazor Applications.
 
     ```
 
-4. Right click the `scss` file and click the Web Compiler to compile the file.
+4. Right-click the `SCSS` file and click the Web Compiler to compile the file.
 
     ![compile](../images/compile.png)
 
-5. The **compilerconfig.json** file is created. Then provide the location of the compiled css file and include path like the following code snippet.
+5. The **compilerconfig.json** file is created. Then provide the location of the compiled CSS file and include path like the following code snippet.
 
     ```json
-        {
-            "outputFile": "wwwroot/Custom.css",
-            "inputFile": "styles/Custom.scss"
-        }
-
-        {
-            "sass": {
-            "autoPrefix": "",
-            "includePath": "./@syncfusion",
+        [
+            {
+                "outputFile": "wwwroot/styles/custom.css",
+                "inputFile": "wwwroot/styles/custom.scss",
+                "options": {
+                    "includePath": "node_modules/@syncfusion"
+                }
+            }
+        ]
     ```
 
-6. The `Scss` file has been compiled to the css file. Then, add this css file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
+6. The `SCSS` file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -66,14 +66,12 @@ Install the Webcompiler to compile the `scss` files in the Blazor Applications.
     .....
     .....
 
-    <link href="~/Custom.min.css" rel="stylesheet" />
-    <script src="https://cdn.syncfusion.com/ej2/{:version:}/dist/ej2.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/{:version:}/dist/ejs.interop.min.js"></script>
+    <link href="~/styles/custom.css" rel="stylesheet" />
     <head>
 
     ```
 
-    > **Note:** For production purpose and minimal requirement, Syncfusion provides an option to generate scripts and styles of selective control by using the Custom Resource Generator (CRG) web tool. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
+    > **Note:** For production purposes and minimal requirement, Syncfusion provides an option to generate scripts and styles of selective control by using the Custom Resource Generator (CRG) web tool. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
 
 7. Run the application. The styles are applied in our Blazor component.
 

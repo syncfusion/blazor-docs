@@ -1,6 +1,7 @@
 * [Overview](visual-studio-integration/overview.md)
 * [Download and Installation](visual-studio-integration/visual-studio-extensions/download-and-installation.md)
-* [Create Project](visual-studio-integration/visual-studio-extensions/create-project.md)
+* [Template Studio](visual-studio-integration/visual-studio-extensions/template-studio.md)
 * [Convert Project](visual-studio-integration/visual-studio-extensions/convert-project.md)
 * [Upgrade Project](visual-studio-integration/visual-studio-extensions/upgrade-project.md)
 * [Scaffolding](visual-studio-integration/visual-studio-extensions/scaffolding.md)
+* [Create Project](visual-studio-integration/visual-studio-extensions/create-project.md)

@@ -1,12 +1,12 @@
 # State Persistence
 
-Syncfusion Blazor platform supports for persisting a component's state across page refreshes or navigation. To enable this feature, set the `EnablePersistence` property to true to the required component. This will store the component's state in browser’s `localStorage` object on page `unload` event. For example, persistence has been enabled to grid component in the following code.
+Syncfusion Blazor platform supports for persisting a component's state across page refreshes or navigation. To enable this feature, set the `EnablePersistence` property to true to the required component. This will store the component's state in the browser’s `localStorage` object on-page `unload` event. For example, persistence has been enabled to grid component in the following code.
 
 ```csharp
 
-@using Syncfusion.EJ2.Blazor.Grids
+@using Syncfusion.Blazor.Grids
 
-<EjsGrid DataSource="@Orders" ID="grid" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" EnablePersistence="true">
+<SfGrid DataSource="@Orders" ID="grid" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" EnablePersistence="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
@@ -14,10 +14,10 @@ Syncfusion Blazor platform supports for persisting a component's state across pa
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
-</EjsGrid>
+</SfGrid>
 
 @code {
-  
+    
     public List<Order> Orders { get; set; }
 
     protected override async Task OnInitializedAsync()
@@ -44,4 +44,4 @@ Syncfusion Blazor platform supports for persisting a component's state across pa
 
 ```
 
-> **Note:** The state of the component is retained during navigation or refreshment based on ID. Make sure to set ID for the component to store the component's state in browser.
+> **Note:** The state of the component is retained during navigation or refreshment based on ID. Make sure to set an ID for the component to store the component's state in the browser.

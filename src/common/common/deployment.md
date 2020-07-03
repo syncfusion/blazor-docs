@@ -4,13 +4,15 @@ This section provides information about deploying applications with the Syncfusi
 
 You can get more information about deploying Blazor applications [Here](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/).
 
+> **Note:** We highly recommend to load the Syncfusion Blazor interop script in the application end for the production environment. Refer to [this](https://blazor.syncfusion.com/documentation/common/how-to/configure-syncfusion-blazor-client-resources-in-production/) documentation for more details.
+
 ## Publish Blazor Application with Visual Studio 2019
 
-* Create the blazor Application with [Syncfusion components](https://ej2.syncfusion.com/blazor/documentation/introduction/).
+* Create the Blazor server Application with [Syncfusion Blazor Components](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/).
 
-> Note: Need to change the base path of the application. Refer to the [MSDN](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio#app-base-path) for this.
+> **Note:** You have to change the base path of the application. Refer to the [MSDN](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio#app-base-path) for more details.
 
-* Right click the project name in `Solution Explorer` and select `Publish`.
+* Right-click on the project in the `Solution Explorer` and select `Publish`.
 
 ![Solution Explorer](./images/publish.png)
 
@@ -22,7 +24,7 @@ You can get more information about deploying Blazor applications [Here](https://
 
 ![Release Configuration](./images/config.png)
 
->Note : For `Blazor Server Application`, Deployment Mode is set to
+>Note: For `Blazor Server Application`, Deployment Mode is set to
 `Self-Contained`.
 ![Deploy Mode](./images/deploy.png)
 Because some dependencies are not loaded properly when we host the published folder.
@@ -46,8 +48,7 @@ For Blazor Server CLI deployment,
 ```bash
     dotnet publish -c Release --self-contained true -r win-x86
 ````
-
-Refer to the dotnet publish\'s [optional arguments](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21#arguments).
+Refer to the dotnet publish\'s [optional arguments](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21#arguments). 
 
 ### Output location
 
@@ -56,14 +57,13 @@ Use the following command to specify the path for the output directory.
 ```bash
     dotnet publish -c Release -o <output directory>
 ```
-
 > If the output directory not specified, it defaults to `./bin/[configuration]/[framework]/publish/` for a **framework-dependent deployment** or `./bin/[configuration]/[framework]/[runtime]/publish/` for a **self-contained deployment**.
 
 If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.
 
-Also refer to the MSDN reference [here](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps/?view=aspnetcore-3.1&tabs=netcore-cli#deploy-the-app-self-contained).
+Also, refer to the MSDN reference [here](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps/?view=aspnetcore-3.1&tabs=netcore-cli#deploy-the-app-self-contained).
 
-Now, you can host the published folder by using IIS or Azure app service.
+Now, you can host the published folder by using the IIS or Azure app service.
 
 ## See Also
 

@@ -1,6 +1,6 @@
-# Browsers Support
+# Browser Support
 
-Syncfusion Essential JS 2 for Blazor support all modern web browsers.
+Syncfusion UI components for Blazor supports all modern web browsers.
 
 ## Blazor WebAssembly
 
@@ -8,7 +8,7 @@ Syncfusion Essential JS 2 for Blazor support all modern web browsers.
 |--------------|---------------|--------------|------------|------------|--------------|-----------|-----------|
 |    Latest    |    Latest     |    Latest    |    Latest    |    Latest       |    Latest    |    Latest      |    Not Supported†    |
 
-> †Microsoft Internet Explorer doesn't support `WebAssembly`. So, Blazor WebAssembly doesn't support with Internet Explorer.
+> †Microsoft Internet Explorer doesn't support `WebAssembly`. So, Blazor WebAssembly doesn't support Internet Explorer.
 
 ## Blazor Server
 

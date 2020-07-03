@@ -1,74 +1,113 @@
 # Custom Resource Generator
 
-Syncfusion provides an option to generate a selective control script (JavaScript ES5) and styles using the [`Custom Resource Generator`](https://crg.syncfusion.com/) (CRG) web tool.
+Syncfusion provides an option to generate a selective component's interop script and styles using the [`Custom Resource Generator`](https://blazor.syncfusion.com/crg) (CRG) web tool.
 
-![ej2 Custom resource generator preview](images/custom-resource-generator-preview.png)
+![Custom resource generator preview for Blazor](images/custom-resource-generator-preview.png)
 
-## Search and select the control list
+## Search and select the component list
 
-Search and select the required Syncfusion controls from CRG to generate specific set of control resources.
+Search and select the required Syncfusion Blazor UI components from the CRG to generate a specific set of component resources.
 
-The Syncfusion Blazor UI controls can be categorized based on the following characteristics:
+Refer to the following steps to search and select the components in CRG:
 
-* Injectable module supported controls
-* Injectable module non-supported controls
+1. Navigate to the Custom Resource Generator (CRG) application at [`CRG`](https://blazor.syncfusion.com/crg).
 
-The `Injectable module supported controls` are rendered as tree view with check box format, and the `Injectable module non-supported controls` are rendered as normal check box format in CRG application.
+2. Type the required component name in the search bar and select the checkbox. The dependency of the selected component is resolved in the application itself, so you do not need to choose each dependent component manually.
 
-![ej2 Control categorization](images/controls-categorization.png)
+![Search and select Syncfusion Blazor UI components](images/search-non-injectable.png)
 
-Refer to the following steps to search and select the controls in CRG:
+3. Click the expand icon and select the required features for the specific set of components.
 
-1. Navigate to the Custom Resource Generator (CRG) application at [`CRG`](https://crg.syncfusion.com/).
+![Select feature-based script in the supported components](images/select-injectable-module.png)
 
-2. Type the required control name in the search bar and select the check box. The dependency of the selected control is resolved in the application itself, so you do not need to choose each dependent control manually.
+4. If the entire features of the component are needed, then click the specific component's checkbox to select all features.
 
-   ![ej2 Search and select non-injectable module controls](images/search- non-injectable.png)
-
-3. Click the expand icon and select the required features for the injectable module supported controls.
-
-   ![ej2 Select injectable module supported controls](images/select-injectable-module.png)
-
-4. If the entire modules of the controls are needed, then click the specific control's check box to select all injectable modules.
-
-   ![ej2 Select all injectable modules](images/select-all-injectable.png)
+![Select all features in the component](images/select-all-injectable.png)
 
 5. Select the required built-in themes from the **Select Themes** option. This provides an option to select more than one theme.
 
-   ![ej2 Select the built-in themes](images/select-inbuilt-themes.png)
+![Select the built-in themes](images/select-inbuilt-themes.png)
 
-## Download the selected control resources
+## Download the selected component resources
 
-After selecting the required control resources, download the custom script and styles from CRG.
+After selecting the required component resources, download the custom interop script and styles from CRG.
 
 Refer to the following steps to download the custom resources in CRG:
 
 1. Click the **DOWNLOAD** button at the bottom of the page. Select the **Minified** option to generate the minified file output for production.
 
-   ![ej2 Download option](images/download-option.png)
+![Download option](images/download-option.png)
 
 2. Change the file name as needed, and click **GENERATE** button in the pop-up.
 
-   ![ej2 Export popup for generation custom resources](images/export-popup.png)
+![Export popup for generation custom resources](images/export-popup.png)
 
-3. Now, the bundling process for the selected controls will be started, and the output will be downloaded as a zip file.
+3. Now, the bundling process for the selected components will be started, and the output will be downloaded as a zip file.
 
-   ![ej2 Bundle custom resources](images/bundling-custom-resources.png)
+![blazor Bundle custom resources](images/bundling-custom-resources.png)
 
-4. The final output contains the script and styles for the selected controls and a **settings.json** file, which stores the current settings.
+4. The final output contains the custom interop script and styles for the selected components and an **import.json** file, which stores the current settings.
 
-   ![ej2 Final output of customized resources](images/customized-resources.png)
+![Final output of customized resources](images/customized-resources.png)
+
+## How to use custom resources in the Blazor application
+
+1. Copy/paste the downloaded custom resources in the Blazor application `~/wwwroot` folder.
+
+2. Set `DisableScriptManager` as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
+
+    **Blazor Server App (~/Startup.cs)**
+    ```csharp
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddRazorPages();
+        services.AddServerSideBlazor();
+
+        // Set DisableScriptManager as true to load custom  scripts
+        services.AddSyncfusionBlazor(true);
+
+        services.AddSingleton<WeatherForecastService>();
+    }
+    ```
+
+    **Blazor WebAssembly App (~/Program.cs)**
+    ```csharp
+    public static async Task Main(string[] args)
+    {
+        var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;
+        ....
+        ....
+
+        // Set DisableScriptManager as true to load custom  scripts
+        builder.Services.AddSyncfusionBlazor(true);
+
+        await builder.Build().RunAsync();
+    }
+    ```
+
+3. Now, manually add the custom interop script and styles in the `~/Pages/_Host.cshtml` for Blazor Server app or `~/wwwroot/index.html` for Blazor WebAssembly app.
+
+    ```html
+    <head>
+        ....
+        ....
+        <link href="material.css" rel="stylesheet" />
+        <script src="syncfusion-blazor.min.js" type="text/javascript"></script>
+    </head>
+    ```
+
+4. Run the application and it will load the resources with application required components.
 
 ## Import previously generated settings into CRG
 
-To add more controls or upgrade the latest Syncfusion Blazor library resources, it is not necessary to generate it from the scratch in the CRG. Just import the old **settings.json** file, make the changes, and then download it again from the CRG application.
+To add more components or upgrade the latest Syncfusion Blazor library resources, it is not necessary to generate from the scratch in the CRG. Just import the old **import.json** file, make the changes, and then download it again from the CRG application.
 
 Refer to the following steps to import previous settings in CRG:
 
 1. Click the **IMPORT SETTINGS** button at the bottom of the page.
 
-   ![ej2 Import option in CRG](images/import-option.png)
+![Import option in CRG](images/import-option.png)
 
-2. Upload the **settings.json** file, so that the previously stored data will be restored in the CRG application. Now, add more controls and export the resources again.
+2. Upload the **import.json** file, so that the previously stored data will be restored in the CRG application. Now, add more components and export the resources again.
 
-   ![ej2 Previous chages restored](images/previous-changes-restored.png)
+![blazor Previous changes restored](images/previous-changes-restored.png)

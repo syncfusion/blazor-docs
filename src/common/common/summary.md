@@ -13,7 +13,3 @@
 * [Configure Syncfusion Blazor Client Resources in Production Environment](common/how-to/configure-syncfusion-blazor-client-resources-in-production.md)
 * [Upgrade Syncfusion Components to Latest Version](common/how-to/upgrade-syncfusion-components-to-latest-version.md)
 * [Upgrade Syncfusion Components to 18.1.0.36 Version](common/how-to/upgrade-syncfusion-components-to-18.1.0.36-version.md)
-
-
-
-

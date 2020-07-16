@@ -79,13 +79,13 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     <head>
         ....
         ....
-        
+
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 
     > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
-    > 
+    >
     > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Startup.cs** file by using true parameter as mentioned below.
     > ```csharp
     > using Syncfusion.Blazor;

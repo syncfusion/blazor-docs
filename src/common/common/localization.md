@@ -30,7 +30,7 @@ The culture can be set using one of the following approaches:
 
 ## Enable Localization in Blazor Server application
 
-1. Add the Localization service configuration in the `~/Startup.cs` file. 
+1. Add the Localization service configuration in the `~/Startup.cs` file.
 
     > **Note:** The Syncfusion locale service should be added after the Syncfusion default service. so that the application level Syncfusion locale service injection will override the default Syncfusion locale service. Map the folder path to the `ResourcesPath` in the default localization service.
 
@@ -115,7 +115,7 @@ The culture can be set using one of the following approaches:
 
         // To access the resource file and get the exact value for locale key
 
-        public System.Resources.ResourceManager ResourceManager { 
+        public System.Resources.ResourceManager ResourceManager {
             get
             {
                 // Replace the ApplicationNamespace with your application name.
@@ -127,7 +127,7 @@ The culture can be set using one of the following approaches:
 
 3. Add the resource files in the `~/Resources` folder. The locale resource files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale) repository. You can get any culture resource file from there and utilize it in your application.
 
-    ![Syncfusion Blazor resource files](./images/resource.png) 
+    ![Syncfusion Blazor resource files](./images/resource.png)
 
     After adding the resource file in the application we need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
 
@@ -142,7 +142,7 @@ The culture can be set using one of the following approaches:
         </EmbeddedResource>
     </ItemGroup>
     ```
-    
+
 4. Create `~/Pages/_Host.cshtml.cs` file and use cookies to store the user-selected culture.
 
     ```csharp
@@ -150,7 +150,7 @@ The culture can be set using one of the following approaches:
     using Microsoft.AspNetCore.Localization;
     using Microsoft.AspNetCore.Mvc.RazorPages;
     using System.Globalization;
-   
+
     public class HostModel : PageModel
     {
         public void OnGet()
@@ -184,7 +184,7 @@ The culture can be set using one of the following approaches:
                     CookieRequestCultureProvider.MakeCookieValue(
                         new RequestCulture(culture)));
             }
-    
+
             return LocalRedirect(redirectUri);
         }
     }
@@ -216,7 +216,7 @@ The culture can be set using one of the following approaches:
         }
     }
     ```
-    
+
 7. Add `CultureSwitcher` component to `~/Shared/MainLayout.razor` file to enable the culture switcher in all pages.
 
     ```csharp
@@ -240,7 +240,7 @@ The culture can be set using one of the following approaches:
 
 ## Enable Localization in Blazor WebAssembly application
 
-1. Add the Localization service configuration in the `~/Program.cs` file. 
+1. Add the Localization service configuration in the `~/Program.cs` file.
 
     ```csharp
     using Syncfusion.Blazor;
@@ -257,7 +257,7 @@ The culture can be set using one of the following approaches:
             .....
 
             builder.Services.AddSyncfusionBlazor();
-            
+
             #region Localization
             // Register the Syncfusion locale service to customize the  SyncfusionBlazor component locale culture
             builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
@@ -303,7 +303,7 @@ The culture can be set using one of the following approaches:
 
         // To access the resource file and get the exact value for locale key
 
-        public System.Resources.ResourceManager Manager { 
+        public System.Resources.ResourceManager Manager {
             get
             {
                 // Replace the ApplicationNamespace with your application name.
@@ -315,7 +315,7 @@ The culture can be set using one of the following approaches:
 
 3. Add the resource files in the `~/Resources` folder. The locale resource files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale) repository. You can get any culture resource file from there and utilize it in your application.
 
-    ![Syncfusion Blazor resource files](./images/resource.png) 
+    ![Syncfusion Blazor resource files](./images/resource.png)
 
     After adding the resource file in the application we need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
 

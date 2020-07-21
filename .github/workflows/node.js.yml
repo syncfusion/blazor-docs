@@ -7,7 +7,6 @@ on:
   pull_request:
     branches: [ master ]
     types: [opened, closed, edited, synchronize]
-#     types: [opened, edited, closed, reopened]
 
 jobs:
   build:
@@ -31,10 +30,8 @@ jobs:
     - name: set environment variables
       uses: allenevans/set-env@v1.0.0
       with:
-          MY_ENV_VAR: 'my value'
           GIT_USER: ${{ secrets.USER }}
           GIT_TOKEN: ${{ secrets.TOKEN }}
-          GIT_MAIL: ${{ secrets.USER_MAIL }}
           IS_TEMP: github.event.pull_request.merged
             
     - name: Install
@@ -51,5 +48,4 @@ jobs:
       env:
          GIT_USER: ${{ secrets.USER }}
          GIT_TOKEN: ${{ secrets.TOKEN }}
-         check: 'hello'
       if: github.event.pull_request.merged == true

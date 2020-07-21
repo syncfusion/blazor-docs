@@ -9,7 +9,7 @@ var compPaths = glob.sync(`./src/**/`, { silent: true, ignore: [`./src/base/`, `
 var branch = 'master';
 var user = process.env.GIT_USER;
 var token = process.env.GIT_TOKEN;
-var user_mail = process.env.GIT_MAIL;
+var user_mail = user + '@syncfusion.com';
 var is_temp = process.env.IS_TEMP;
 /**
  * Source shipping to gitlap
@@ -32,10 +32,7 @@ gulp.task('ship-to-gitlap', function (done) {
     var cloneRepos = [];
     for (var i = 0; i < changedFileNames.length; i++) {
         var curentRootRepo = changedFileNames[i].split('/')[1];
-//         if(curentRootRepo !='workflows'){
-//             return
-//            }
-        if (curentRootRepo != undefined && curentRootRepo !='workflows') {
+        if (curentRootRepo != undefined && curentRootRepo != 'workflows' && cloneRepos.indexOf(curentRootRepo) == -1) {
             cloneRepos.push(curentRootRepo);
         }
     }

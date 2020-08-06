@@ -51,5 +51,6 @@ jobs:
       env:
          GIT_USER: ${{ secrets.USER }}
          GIT_TOKEN: ${{ secrets.TOKEN }}
+         GIT_MAIL: ${{ secrets.USER_MAIL }}
          check: 'hello'
       if: github.event.pull_request.merged == true

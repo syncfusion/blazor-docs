@@ -34,9 +34,10 @@ gulp.task('ship-to-gitlap', function (done) {
         console.log('--gitPath----' + gitPath);
         console.log('Clone has been started...!');
         var clone = shelljs.exec('git clone ' + gitPath + ' -b ' + branch + ' ' + `./gitlapRepo/ej2-${cloneRepos[j]}-razor-docs`, {
-            silent: true
+            silent: false
         });
         if (clone.code !== 0) { 
+            console.log(clone.stderr);
             done();
             return;
         } else {

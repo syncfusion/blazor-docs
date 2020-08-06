@@ -40,7 +40,7 @@ jobs:
     - name: Install
       run: npm i
       
-#     - run: npm run test
+    - run: npm run test
     
     - name: Get changed files
       run: |

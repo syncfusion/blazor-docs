@@ -46,9 +46,10 @@ gulp.task('ship-to-gitlap', function (done) {
         var gitPath = 'https://' + user + ':' + token + `@gitlab.syncfusion.com/essential-studio/ej2-${cloneRepos[j]}-razor-docs`;
         console.log('Clone has been started...!');
         var clone = shelljs.exec('git clone ' + gitPath + ' -b ' + branch + ' ' + `./gitlapRepo/ej2-${cloneRepos[j]}-razor-docs`, {
-            silent: true
+            silent: false
         });
-        if (clone.code !== 0) { 
+        if (clone.code !== 0) {
+            console.log(clone.stderr);
             done();
             return;
         } else {

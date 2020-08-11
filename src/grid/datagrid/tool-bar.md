@@ -129,15 +129,15 @@ Custom toolbar items can be achieved by using Expand all and Collapse all functi
          public double? Freight { get; set; }
      }
 
-     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
      {
          if (args.Item.Text == "Expand all")
          {
-             this.Grid.GroupExpandAll();
+            await this.Grid.GroupExpandAll();
          }
          if (args.Item.Text == "Collapse all")
          {
-             this.Grid.GroupCollapseAll();
+            await this.Grid.GroupCollapseAll();
          }
      }
  }
@@ -154,19 +154,17 @@ DataGrid have an option to use both built-in and custom tool bar items at same t
 In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in toolbar items and `Click` is custom toolbar item.
 
 ```csharp
-
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="200" Toolbar="Toolbaritems">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" ValidationRules="@(new { required=true, number=true})" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new { required=true})" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" ValidationRules="new ValidationRules() { Required = true }" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="new ValidationRules() { Required = true }" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" ValidationRules="@(new { required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" ValidationRules="new ValidationRules() { Required = true }" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 <style>
@@ -177,7 +175,7 @@ In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in t
 
 @code{
 
-    public List<Order>Orders{ get; set; }
+    public List<Order> Orders { get; set; }
     private List<Object> Toolbaritems = new List<Object>() { "Add", "Edit", "Delete", "Update", "Cancel", new ItemModel() { Text = "Click", TooltipText = "Click", PrefixIcon = "e-click", Id = "Click" } };
     protected override void OnInitialized()
     {
@@ -207,8 +205,6 @@ In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in t
         }
     }
 }
-
-
 ```
 
 The following screenshots represent a datagrid with Built-in and custom items in toolbar,
@@ -220,17 +216,16 @@ Custom tool bar items can be added by defining the [`Toolbar Template`](https://
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 
-<SfGrid  DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid" AllowGrouping="true">
+<SfGrid DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid" AllowGrouping="true">
     <GridTemplates>
         <ToolbarTemplate>
             <SfToolbar>
                 <ToolbarEvents Clicked="ToolbarClickHandler"></ToolbarEvents>
                 <ToolbarItems>
-                    <ToolbarItem Type="@ItemType.Button" prefixIcon="e-collapse" id="collapseall" TooltipText="Collapse"></ToolbarItem>
+                    <ToolbarItem Type="@ItemType.Button" PrefixIcon="e-collapse" Id="collapseall" TooltipText="Collapse"></ToolbarItem>
                 </ToolbarItems>
             </SfToolbar>
         </ToolbarTemplate>
@@ -255,7 +250,7 @@ Custom tool bar items can be added by defining the [`Toolbar Template`](https://
 @code{
     SfGrid<Order> Grid;
 
-    public List<Order>Orders{ get; set; }
+    public List<Order> Orders { get; set; }
 
     private string[] Tool = (new string[] { "OrderID" });
 
@@ -278,9 +273,9 @@ Custom tool bar items can be added by defining the [`Toolbar Template`](https://
         public double? Freight { get; set; }
     }
 
-    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        this.Grid.GroupCollapseAll();
+       await this.Grid.GroupCollapseAll();
     }
 }
 
@@ -298,13 +293,12 @@ Drop down list can be added by using dropdownlist in the tool bar section.
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
 
 
-<SfGrid  DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid">
+<SfGrid DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid">
     <GridEvents TValue="Order"></GridEvents>
     <SfToolbar>
         <ToolbarItems>
@@ -335,8 +329,8 @@ Drop down list can be added by using dropdownlist in the tool bar section.
     {
         public string text { get; set; }
     }
-     List<Select> LocalData = new List<Select>
-    {
+    List<Select> LocalData = new List<Select>
+{
             new Select() { text = "0"},
             new Select() { text = "1"},
             new Select() { text = "2"},
@@ -358,9 +352,9 @@ Drop down list can be added by using dropdownlist in the tool bar section.
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-    public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public async Task OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
     {
-        this.Grid.SelectRow(int.Parse(args.Value));
+        await this.Grid.SelectRow(int.Parse(args.Value));
     }
 
     public class Order
@@ -384,9 +378,7 @@ You can enable / disable tool bar items by using the [`EnableToolbarItems method
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div>
@@ -403,14 +395,14 @@ You can enable / disable tool bar items by using the [`EnableToolbarItems method
 }
 <SfGrid id="Grid" DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid" AllowGrouping="true" Toolbar=@Tool>
 
-   <GridGroupSettings Columns=@GroupCol></GridGroupSettings>
-   <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
-   <GridColumns>
-       <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-       <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-       <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-       <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+    <GridGroupSettings Columns=@GroupCol></GridGroupSettings>
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
 <style>
@@ -426,16 +418,16 @@ You can enable / disable tool bar items by using the [`EnableToolbarItems method
 @code{
 
     SfGrid<Order> Grid;
-    public List<Order>Orders{ get; set; }
+    public List<Order> Orders { get; set; }
     private string[] GroupCol = (new string[] { "OrderID" });
-    public void enable()
+    public async Task enable()
     {
-        this.Grid.EnableToolbarItems(new List<string>() { "Grid_Expand", "Grid_Collapse" }, true);
+        await this.Grid.EnableToolbarItems(new List<string>() { "Grid_Expand", "Grid_Collapse" }, true);
     }
 
-    public void disable()
+    public async Task disable()
     {
-        this.Grid.EnableToolbarItems(new List<string>() { "Grid_Expand", "Grid_Collapse" }, false);
+        await this.Grid.EnableToolbarItems(new List<string>() { "Grid_Expand", "Grid_Collapse" }, false);
     }
 
     protected override void OnInitialized()
@@ -458,15 +450,15 @@ You can enable / disable tool bar items by using the [`EnableToolbarItems method
         public double? Freight { get; set; }
     }
 
-    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Text == "Expand")
         {
-            this.Grid.GroupExpandAll();
+            await this.Grid.GroupExpandAll();
         }
         if (args.Item.Text == "Collapse")
         {
-            this.Grid.GroupCollapseAll();
+            await this.Grid.GroupCollapseAll();
         }
     }
 }

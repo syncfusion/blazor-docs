@@ -20,7 +20,7 @@ This is demonstrated in the below sample code,
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" EditType="EditType.DropDownEdit" Edit="@CustomerIDEditParams" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" EditType="EditType.DropDownEdit" EditorSettings="@CustomerIDEditParams" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type=ColumnType.Date Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
@@ -39,27 +39,27 @@ This is demonstrated in the below sample code,
             Freight = 2.5 * x,
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
-        }
-        public object CustomerIDEditParams = new
-        {
-            @@params = new SfDropDownList<string, Country>() { DataSource = @LocalData, AllowFiltering = true, Query = new Query(), Fields = new DropDownListFieldSettings() { Text = "ShipCountry", Value = "ShipCountry" } }
-        };
-        public class Order
-        {
-            public int? OrderID { get; set; }
-            public string CustomerID { get; set; }
-            public DateTime? OrderDate { get; set; }
-            public double? Freight { get; set; }
-        }
-        public class Country
-        {
-            public string ShipCountry { get; set; }
-            public int? CountryId { get; set; }
-        }
-        public static List<Country> LocalData = new List<Country> {
-                new Country() { ShipCountry= "United States", CountryId= 1 },
-                new Country() { ShipCountry= "Australia", CountryId= 2 },
-                new Country() { ShipCountry= "India", CountryId= 3 }
-        };
     }
+    public IEditorSettings CustomerIDEditParams = new DropDownEditCellParams
+    {
+        Params = new DropDownListModel<object, object>() { DataSource = LocalData, AllowFiltering = true }
+    };
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public class Country
+    {
+        public string CustomerID { get; set; }
+        public int? CountryId { get; set; }
+    }
+    public static List<Order> LocalData = new List<Order> {
+                new Order() { CustomerID= "United States" },
+                new Order() { CustomerID= "Australia" },
+                new Order() { CustomerID= "India" }
+        };
+}
 ```

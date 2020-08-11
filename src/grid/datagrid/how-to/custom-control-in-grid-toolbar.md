@@ -22,7 +22,7 @@ This is demonstrated in the below sample code where Autocomplete component is re
         <ToolbarItems>
             <ToolbarItem Type="ItemType.Input">
                 <Template>
-                    <SfAutoComplete Placeholder="Search"  TValue="@CustomerDetails" DataSource="@Customers">
+                    <SfAutoComplete Placeholder="Search Customer Name" TItem="CustomerDetails" TValue="@CustomerDetails" DataSource="@Customers">
                         <AutoCompleteEvents ValueChange="OnSearch" TValue="string"></AutoCompleteEvents>
                         <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
                     </SfAutoComplete>

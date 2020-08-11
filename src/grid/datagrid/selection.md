@@ -356,7 +356,7 @@ You can get the selected row indexes by using [`RowSelected`](https://help.syncf
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" ValidationRules="@(new { required=true})"  Format="C2" TextAlign="TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="140"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -379,7 +379,7 @@ You can get the selected row indexes by using [`RowSelected`](https://help.syncf
         }).ToList();
     }
 
-    public async void GetSelectedRecords(RowSelectEventArgs<Order> args)
+    public async Task GetSelectedRecords(RowSelectEventArgs<Order> args)
     {
         SelectedRowIndexes = await this.Grid.GetSelectedRowIndexes();
         TotalValue = SelectedRowIndexes.ToArray();
@@ -418,10 +418,9 @@ The following screenshot represents a datagrid touch selection in the device.
 
 ## Multiple selection based on condition
 
-You can select multiple rows at the initial rendering of the datagrid by using [`SelectRows`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~SelectRows.html). The initial selection is based on the condition which we given. Here the initial selection is based on the row which is having the **CustomerID** as **ALFKI**
+You can select multiple rows at the initial rendering of the datagrid by using [`SelectRows`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~SelectRows.html). The initial selection is based on the condition which we given. Here the initial selection is based on the row which is having the **CustomerID** as **ALFKI**. We have used [`GetCurrentViewRecords`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~GetCurrentViewRecords.html) method to get current page records and applied the condition.
 
 ```csharp
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="@Grid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -439,7 +438,7 @@ You can select multiple rows at the initial rendering of the datagrid by using [
 
     SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
-    List<int> Index = new List<int>();
+    List<double> SelectIndex { get; set; }
 
     protected override void OnInitialized()
     {
@@ -452,19 +451,20 @@ You can select multiple rows at the initial rendering of the datagrid by using [
         }).ToList();
     }
 
-    public void Data(object args)
+    public async Task Data(object args)
     {
-        var Source = this.Grid.DataSource;
+        var Source = await Grid.GetCurrentViewRecords();
         var IndexNum = 0;
-        foreach (var Data in Source)
+        SelectIndex = new List<double>();
+        foreach (var record in Source)
         {
-            if (Data.CustomerID == "ALFKI")
+            if (record.CustomerID == "ALFKI")
             {
-                Index.Add(IndexNum);
+                SelectIndex.Add(IndexNum);
             }
             IndexNum++;
         }
-        Grid.SelectRows(Index);
+        await Grid.SelectRows(SelectIndex.ToArray());
     }
 
     public class Order
@@ -473,7 +473,6 @@ You can select multiple rows at the initial rendering of the datagrid by using [
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
-
     }
 }
 ```

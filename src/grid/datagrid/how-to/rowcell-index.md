@@ -47,7 +47,7 @@ This is demonstrated in the below sample code where the [`GetSelectedRowCellInde
 
     public async Task SelectedRowCellIndex()
     {
-         await this.DefaultGrid.GetSelectedRowCellIndexes();
+      var value = await this.DefaultGrid.GetSelectedRowCellIndexes();
     }
 
 

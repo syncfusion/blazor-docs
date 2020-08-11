@@ -6,97 +6,101 @@ description: "Learn how to create an Blazor DataGrid component and enable featur
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Essential JS 2 for Blazor server-side in .NET Core CLI
+# Getting started with Syncfusion Blazor - Server App in .NET Core CLI
 
-This article provides a step-by-step introduction to configure Essential JS 2 setup, build and run a simple Blazor server-side web application using the [.Net Core CLI](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor Server application using the [`.NET Core CLI`](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+
+> **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [`help topic`](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
 ## Prerequisites
 
-* [.NET Core SDK 3.0.100-preview6-012264](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+* [`.NET Core SDK 3.1.3`](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-## Create a Blazor server-side project using .NET Core CLI
+## Create a Blazor Server project using .NET Core CLI
 
-**Step 1:** Install the Blazor project templates by using below command line in the command prompt:
+1. Run the following command line to create a new Blazor Server application.
 
-```csharp
-   dotnet new -i Microsoft.AspNetCore.Blazor.Templates::3.0.0-preview6.19307.2
-```
+    ```bash
+        dotnet new blazorserver -o WebApplication1
+        cd WebApplication1
+    ```
 
-**Step 2:** Once project templates installed, run the following command line to create a new Blazor server-side application
+## Importing Syncfusion Blazor component in the application
 
-```csharp
-  dotnet new blazorserverside -o WebApplication1
+1. Now, add **Syncfusion.Blazor** NuGet package to the new application using the below command line.
 
-  cd WebApplication1
-```
+    ```bash
+        dotnet add package Syncfusion.Blazor -v '{:nuget-version:}'
+        dotnet restore
+    ```
 
-## Adding Syncfusion Packages
+2. The Syncfusion Blazor package will be included in the newly created project after the installation process is completed.
 
-**Step 1:** Now, add Syncfusion.Blazor NuGet package to the new application using below command line.
+3. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
 
-```csharp
-  dotnet add package Syncfusion.Blazor
+    ```csharp
+    @using Syncfusion.Blazor
+    @using Syncfusion.Blazor.Grids
+    ```
 
-  dotnet restore
-```  
+4. Open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
-**Step 2:** The Syncfusion Blazor package will be included in the newly created project after the installation process is completed.
+    ```csharp
+    using Syncfusion.Blazor;
 
-**Step 3:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
-
-```csharp
-  @using Syncfusion.Blazor
-
-  @using Syncfusion.Blazor.Grids
-```  
-
-## Add SyncfusionBlazor service in Startup.cs
-
-Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
-
-```csharp
-using Syncfusion.Blazor;
-
-namespace BlazorApplication
-{
-    public class Startup
+    namespace WebApplication1
     {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
+        public class Startup
         {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
+            public void ConfigureServices(IServiceCollection services)
+            {
+                ....
+                ....
+                services.AddSyncfusionBlazor();
+            }
         }
     }
-}
-```
+    ```
 
-## Adding Scripts and CSS reference
+5. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
-You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
-
-```html
+    ```html
     <head>
-        <environment include="Development">
         ....
         ....
-            <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-            <!---CDN--->
-            @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/fabric.css" rel="stylesheet" />*@
-       </environment>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
-```
+    ```
 
+> **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
+> To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Startup.cs** file by using true parameter as mentioned below.
+
+```csharp
+    using Syncfusion.Blazor;
+
+    namespace WebApplication1
+     {
+         public class Startup
+         {
+             public void ConfigureServices(IServiceCollection services)
+             {
+                ....
+                ....
+                services.AddSyncfusionBlazor(true);
+             }
+         }
+     }
+    ```
 ## Add DataGrid Component
 
 To initialize the DataGrid component add the below code to your **Index.razor** view page which is present under **~/Pages** folder. For example, the DataGrid component is added in the **~/Pages/Index.razor** page.
 
 ```csharp
-<SfGrid >
+
+<SfGrid>
 
 </SfGrid>
+
 ```
 
 ## Defining Row Data
@@ -104,6 +108,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 To bind data for the DataGrid component, you can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataSource.html) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the **OnInitialized** lifecycle of the page.
 
 ```csharp
+
 <SfGrid DataSource="@gridData">
 
 </SfGrid>
@@ -115,6 +120,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
         gridData = OrdersDetails.GetAllRecords();
     }
 }
+
 ```
 
 ## Defining Columns
@@ -124,12 +130,14 @@ The columns are automatically generated when columns declaration is empty or und
 The DataGrid has an option to define columns using [`GridColumns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
 
 Let’s check the properties used here:
+
 * We have added [`Field`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) to map with a property name an array of JavaScript objects.
 * We have added [`HeaderText`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~HeaderText.html) to change the title of columns.
 * We have used [`TextAlign`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~TextAlign.html) to change the alignment of columns. By default, columns will be left aligned. To change columns to right align, we need to define `TextAlign` as `Right`.
 * Also, we have used another useful property, [`Format`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Format.html). Using this, we can format number and date values to standard or custom formats.
 
 ```csharp
+
 <SfGrid DataSource="@gridData">
     <GridColumns>
         <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -147,6 +155,7 @@ Let’s check the properties used here:
         gridData = OrdersDetails.GetAllRecords();
     }
 }
+
 ```
 
 ## Enable Paging
@@ -154,6 +163,7 @@ Let’s check the properties used here:
 The paging feature enables users to view the datagrid record in a paged view. It can be enabled by setting the [`AllowPaging`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~AllowPaging.html) property to true. Pager can be customized using the [`GridPageSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~PageSettings.html) component.
 
 ```csharp
+
 <SfGrid DataSource="@gridData" AllowPaging="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
    <GridColumns>
@@ -172,6 +182,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
         gridData = OrdersDetails.GetAllRecords();
     }
 }
+
 ```
 
 ## Enable Sorting
@@ -179,6 +190,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
 The sorting feature enables you to order the records. It can be enabled by setting the [`AllowSorting`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~AllowSorting.html) property as true. Sorting feature can be customized using the [`GridSortSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~SortSettings.html) component.
 
 ```csharp
+
 <SfGrid DataSource="@gridData" AllowPaging="true" AllowSorting="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
    <GridColumns>
@@ -197,6 +209,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
         gridData = OrdersDetails.GetAllRecords();
     }
 }
+
 ```
 
 ## Enable Filtering
@@ -204,6 +217,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [`AllowFiltering`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~AllowFiltering.html) property as true. Filtering feature can be customized using the [`GridFilterSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~FilterSettings.html) component.
 
 ```csharp
+
 <SfGrid DataSource="@gridData" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
    <GridColumns>
@@ -222,6 +236,7 @@ The filtering feature enables you to view reduced amount of records based on fil
         gridData = OrdersDetails.GetAllRecords();
     }
 }
+
 ```
 
 ## Enable Grouping
@@ -229,6 +244,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 The grouping feature enables you to view the datagrid record in a grouped view. It can be enabled by setting the [`AllowGrouping`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~AllowGrouping.html) property as true. Grouping feature can be customized using the [`GridGroupSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~GroupSettings.html) component.
 
 ```csharp
+
 <SfGrid DataSource="@gridData" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
    <GridColumns>
@@ -247,6 +263,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
         gridData = OrdersDetails.GetAllRecords();
     }
 }
+
 ```
 
 Output be like the below.

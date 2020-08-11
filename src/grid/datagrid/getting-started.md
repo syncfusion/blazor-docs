@@ -74,7 +74,7 @@ namespace BlazorApplication
 }
 ```
 
-**Note**: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by  `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+**Note**: To enable custom client side resource loading from CRG or CDN, you need to disable resource loading by  `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
     <head>
@@ -339,6 +339,58 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 The following image represents datagrid with paging, sorting, filtering and grouping.
 ![Grid Features](images/getting-started.gif)
+
+## Handling exceptions
+
+Exceptions occurred during grid actions can be handled without stopping application. These error messages or exception details can be acquired using the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEvents%601~OnActionFailure.html) event.
+
+The argument passed to the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEvents%601~OnActionFailure.html) event contains the error details returned from the server.
+
+> We recommend you to bind **OnActionFailure** event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
+
+The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
+
+```csharp
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+
+<span class="error">@ErrorDetails</span>
+<SfGrid TValue="Order" AllowPaging="true">
+    <GridEvents TValue="Order" OnActionFailure="@ActionFailure"></GridEvents>
+    <GridPageSettings PageSize="10"></GridPageSettings>
+    <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+@code{
+    public string ErrorDetails = "";
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public void ActionFailure(FailureEventArgs args)
+    {
+        this.ErrorDetails = "Server exception: 404 Not found";
+        StateHasChanged();
+    }
+}
+```
 
 ## See Also
 

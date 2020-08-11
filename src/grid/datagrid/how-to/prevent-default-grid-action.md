@@ -13,12 +13,12 @@ This is demonstrated in the below sample code where the `Add` operation is preve
 ```csharp
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Delete", "Edit", "Cancel" })" AllowPaging="true">
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Update", "Cancel" })" AllowPaging="true">
     <GridEvents OnActionBegin="OnActionBegin" TValue="Order"></GridEvents>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type=ColumnType.Date TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -46,8 +46,9 @@ This is demonstrated in the below sample code where the `Add` operation is preve
         public double? Freight { get; set; }
     }
 
-    public void OnActionBegin(ActionEventArgs<Order> args) {
-        if (args.RequestType.ToString() == "Add")
+    public void OnActionBegin(ActionEventArgs<Order> args)
+    {
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Add)
         {
             args.Cancel = true;
         }

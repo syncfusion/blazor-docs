@@ -6,65 +6,98 @@ description: "Learn how to create an Blazor DataGrid component and enable featur
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Essential JS 2 for Blazor client-side in .NET Core CLI
+# Getting started with Syncfusion Blazor - WebAssembly App in .NET Core CLI
 
-This article provides a step-by-step introduction to configure Essential JS 2 for Blazor setup, build and run a simple Blazor client-side web application using [.Net Core CLI](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor WebAssembly application using [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+
+> **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
 ## Prerequisites
 
-* [.NET Core SDK 3.0.100-preview6-012264](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-## Create a Blazor client-side project using .NET Core CLI
+## Create a Blazor WebAssembly project using .NET Core CLI
 
-**Step 1:** Install the Blazor project templates by using below command line in the command prompt:
+1. Install the Blazor project templates by using below command line in the command prompt:
 
-```csharp
-  dotnet new -i Microsoft.AspNetCore.Blazor.Templates::3.0.0-preview6.19307.2
-```
+    ```bash
+    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    ````
 
-**Step 2:** Once project templates installed, run the following command line to create a new Blazor client-side application.
+2. Once project templates installed, run the following command line to create a new Blazor WebAssembly application.
 
-```csharp
-  dotnet new blazor -o WebApplication1
+    ```bash
+        dotnet new blazorwasm -o WebApplication1
+        cd WebApplication1
+    ```
 
-  cd WebApplication1
-```
+## Importing Syncfusion Blazor component in the application
 
-## Adding Syncfusion Packages
+1. Now, add **Syncfusion.Blazor** NuGet package to the new application using the below command line.
 
-**Step 1:** Now, add Syncfusion.Blazor NuGet package to the new application using below command line.
+    ```bash
+        dotnet add package Syncfusion.Blazor -v '{:nuget-version:}'
+        dotnet restore
+    ```
 
-```csharp
-  dotnet add package Syncfusion.Blazor
+2. The Syncfusion Blazor package will be included in the newly created project after the installation process is completed.
 
-  dotnet restore
-```  
+3. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
 
-**Step 2:** The Syncfusion Blazor package will be included in the newly created project after the installation process is completed
+    ```csharp
+    @using Syncfusion.Blazor
+    @using Syncfusion.Blazor.Grids
+    ```
 
-**Step 3:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
+4. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-```csharp
-  @using Syncfusion.Blazor
-  
-  @using Syncfusion.Blazor.Grids
-```
+    ```csharp
+    using Syncfusion.Blazor;
 
-## Adding Scripts and CSS reference
+    namespace WebApplication1
+    {
+        public class Program
+        {
+            public static async Task Main(string[] args)
+            {
+                ....
+                ....
+                builder.Services.AddSyncfusionBlazor();
+                await builder.Build().RunAsync();
+            }
+        }
+    }
+    ```
 
-You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/index.html** page.
+5. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
 
-```html
+    ```html
     <head>
-        <environment include="Development">
         ....
         ....
-            <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-            <!---CDN--->
-            @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/fabric.css" rel="stylesheet" />*@
-       </environment>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
-```
+    ```
+
+> **Note:** The same theme file can be referred through the CDN version by using [`https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css`](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
+> To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
+
+  ```csharp
+     using Syncfusion.Blazor;
+     namespace WebApplication1
+     {
+        public class Program
+       {
+             public static async Task Main(string[] args)
+             {
+                ....
+                ....
+                builder.Services.AddSyncfusionBlazor(true);
+                await builder.Build.RunAsync();
+             }
+         }
+     }
+  ```
 
 ## Add DataGrid Component
 
@@ -78,7 +111,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 
 ## Defining Row Data
 
-To bind data for the DataGrid component, you can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataSource.html) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the **OnInitialized** lifecycle of the page.
+To bind data for the DataGrid component, you can assign a IEnumerable object to the [`dataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataSource.html) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the **OnInitialized** lifecycle of the page.
 
 ```csharp
 <SfGrid DataSource="@gridData">
@@ -101,6 +134,7 @@ The columns are automatically generated when columns declaration is empty or und
 The DataGrid has an option to define columns using [`GridColumns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
 
 Let’s check the properties used here:
+
 * We have added [`Field`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) to map with a property name an array of JavaScript objects.
 * We have added [`HeaderText`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~HeaderText.html) to change the title of columns.
 * We have used [`TextAlign`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~TextAlign.html) to change the alignment of columns. By default, columns will be left aligned. To change columns to right align, we need to define `TextAlign` as `Right`.

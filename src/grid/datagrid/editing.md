@@ -8,7 +8,8 @@ description: "Learn how to perform CRUD operations in various edit modes, use di
 
 The DataGrid component has options to dynamically insert, delete and update records.
 Editing feature requires a primary key column for CRUD operations.
-To define the primary key, set [`Columns.IsPrimaryKey`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~IsPrimaryKey.html) to **true** in particular column.
+
+To define the primary key, set [`IsPrimaryKey`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~IsPrimaryKey.html) to **true** in particular column whose value is unique.
 
 You can start the edit action either by double clicking the particular row or by selecting the required row and click on **Edit** button in the toolbar. Similarly, you can add a new record to datagrid either by clicking on **Add** button in the toolbar or on an external button which is bound to invoke the [`AddRecord`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~AddRecord.html) method of the datagrid, **Save** and **Cancel** while in edit mode is possible using respective toolbar icon in datagrid.
 
@@ -54,9 +55,12 @@ Deletion of the record is possible by selecting the required row and click on **
 The following screenshot represents Editing with Default Mode.
 ![Edit Action](./images/edit-action.png)
 
-> * If [`Columns.IsIdentity`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~IsIdentity.html) is enabled, then it will be considered as a read-only column when editing and adding a record.
+> * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it is must to have parameterless constructor defined for the model class.
+> * If [`IsIdentity`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~IsIdentity.html) is enabled, then it will be considered as a read-only column when editing and adding a record.
 > * You can disable editing for a particular column, by specifying
-[`Columns.AllowEditing`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~AllowEditing.html) to **false**.
+[`AllowEditing`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~AllowEditing.html) to **false**.
+>* You can disable adding for a particular column, by specifying
+[`AllowAdding`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~AllowAdding.html) to **false**.
 
 ## Toolbar with edit option
 
@@ -129,11 +133,11 @@ To enable Normal edit, set the [`EditSettings.Mode`](https://help.syncfusion.com
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new { required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new { required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country"  EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -152,7 +156,8 @@ To enable Normal edit, set the [`EditSettings.Mode`](https://help.syncfusion.com
         }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
@@ -179,11 +184,11 @@ To enable Dialog edit, set the [`EditSettings.Mode`](https://help.syncfusion.com
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new { required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new { required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country"  EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -202,7 +207,8 @@ To enable Dialog edit, set the [`EditSettings.Mode`](https://help.syncfusion.com
         }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
@@ -228,11 +234,11 @@ To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new { required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new { required=true})" Width="120" ></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" ValidationRules="@(new ValidationRules { Required = true })" Type="ColumnType.Number" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country"  EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -251,7 +257,8 @@ To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/
         }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
@@ -264,73 +271,70 @@ To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/
 The following screenshot represents Editing in Batch mode.
 ![Batch Editing](./images/batch-editing.png)
 
-## Cell edit type and its params
+## Cell edit type
 
-The [`EditType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~EditType.html) property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn.html) component is used for defining the editor component for any particular column. You can set the [`EditType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~EditType.html) based on data type of the column. The available edit types are,
+The [`EditType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~EditType.html) property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn.html) component is used for defining the editor component for any particular column. You can set the [`EditType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~EditType.html) based on data type of the column.
 
-* [`NumericTextBox`](https://blazor.syncfusion.com/blazor/documentation/numerictextbox/getting-started) component for integers, double, and decimal data types.
+The available default edit types are,
 
-* [`TextBox`](https://blazor.syncfusion.com/blazor/documentation/textbox/getting-started/) component for string data type.
+* [`NumericEdit`](https://blazor.syncfusion.com/blazor/documentation/numerictextbox/getting-started) component for integers, double, and decimal data types.
 
-* [`DropDownList`](https://blazor.syncfusion.com/blazor/documentation/dropdownlist/getting-started/) component to show all unique values related to that field.
+* [`DefaultEdit`](https://blazor.syncfusion.com/blazor/documentation/textbox/getting-started/) component for string data type.
 
-* [`CheckBox`](https://blazor.syncfusion.com/blazor/documentation/check-box/getting-started/) component for boolean data type.
+* [`DropDownEdit`](https://blazor.syncfusion.com/blazor/documentation/dropdownlist/getting-started/) component to show all unique values related to that field.
 
-* [`DatePicker`](https://blazor.syncfusion.com/blazor/documentation/datepicker/getting-started/) component for date data type.
+* [`BooleanEdit`](https://blazor.syncfusion.com/blazor/documentation/check-box/getting-started/) component for boolean data type.
 
-* [`DateTimePicker`](https://blazor.syncfusion.com/blazor/documentation/datetimepicker/getting-started/) component for date time data type.
+* [`DatePickerEdit`](https://blazor.syncfusion.com/blazor/documentation/datepicker/getting-started/) component for date data type.
 
-Also, you can customize the behavior of the editor component through the [`Edit`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Edit.html) params of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn.html) component.
+* [`DateTimePickerEdit`](https://blazor.syncfusion.com/blazor/documentation/datetimepicker/getting-started/) component for date time data type.
 
-The following table describes editor component and their example edit params of the column.
+## Customizing the default editor controls
 
-| Component | Example |
-|----------------|---------|
-| [`NumericTextBox`](https://blazor.syncfusion.com/blazor/documentation/numerictextbox/getting-started) | params: { decimals: 2, value: 5 }|
-| [`DropDownList`](https://blazor.syncfusion.com/blazor/documentation/dropdownlist/getting-started/) | params: { value: ‘Germany’ }|
-| [`CheckBox`](https://blazor.syncfusion.com/blazor/documentation/check-box/getting-started/) | params: { checked: true} |
-| [`DatePicker`](https://blazor.syncfusion.com/blazor/documentation/datepicker/getting-started/) | params: { format:‘dd.MM.yyyy’ } |
-| [`DateTimePicker`](https://blazor.syncfusion.com/blazor/documentation/datetimepicker/) | params: { value: new Date() } |
+You can customize the behavior of the editor component through the [`EditorSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~EditorSettings.html) property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn.html) component.
 
-The following sample code demonstrates different edit types and edit params set for the DataGrid columns,
+> We have limited the properties of editor components that can be customized using [`EditorSettings`] in Grid default editor components. Kindly find the list of properties that can be customized from below topics.
+> If you want to customize other properties, refer our [`EditTemplate`](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
+
+### DefaultEdit
+
+[`StringEditCellParams`] class helps us to customize the default TextBox component in Grid EditForm. The following table describes properties of TextBox control than can be customized using [`EditorSettings`] of GridColumn editor component.
+
+| Component | Description |
+|--------|----------------|
+| CssClass | Specifies the CSS class value that is appended to wrapper of Textbox. |
+| EnableRtl | Enable or disable rendering component in right to left direction.  |
+| ReadOnly | Specifies the boolean value whether the TextBox allows user to change the text.   |
+| ShowClearButton | Specifies a Boolean value that indicates whether the clear button is displayed in Textbox.   |
+| Multiline | Specifies a boolean value that enable or disable the multiline on the TextBox. The TextBox changes from single line to multiline when enable this multiline mode.   |
+
+The following sample code demonstrates the customization applied to TextBox component set for the DataGrid columns,
 
 ```csharp
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@OrderData" Toolbar=@ToolbarItems>
     <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" Edit="@FreightEditParams" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" EditType="EditType.DropDownEdit" Edit="@ShipNameEditParams" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120" Edit="@VerifiedEditParams"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" EditType="EditType.DefaultEdit" EditorSettings="@CustomerEditParams" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" EditType="EditType.DropDownEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code{
     public string[] ToolbarItems = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
 
-    public object FreightEditParams = new
+    public IEditorSettings CustomerEditParams = new StringEditCellParams
     {
-        @@params = new SfNumericTextBox<int>() { Decimals = 3, Value = 4 }
-    };
-
-    public object VerifiedEditParams = new
-    {
-        @@params = new SfCheckBox() { Checked = true }
-    };
-
-    public object ShipNameEditParams = new
-    {
-        @@params = new SfDropDownList<string, Order>() { Value = "Hanari Carnes" }
+        Params = new TextBoxModel() { EnableRtl = true, ShowClearButton = false, Multiline = true }
     };
 
     List<Order> OrderData = new List<Order>
-    {
+{
         new Order() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipName = "Vins et alcools Chevalier", Verified = true },
         new Order() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipName = "Toms Spezialitäten", Verified = false },
         new Order() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipName = "Hanari Carnes", Verified = true },
@@ -354,23 +358,288 @@ The following sample code demonstrates different edit types and edit params set 
 }
 ```
 
+### NumericEdit
+
+[`NumericEditCellParams`] class helps us to customize the default NumericTextBox component in Grid EditForm. The following table describes properties of NumericTextBox control than can be customized using [`EditorSettings`] of GridColumn editor component.
+
+| Component | Description |
+|--------|----------------|
+| CssClass | Gets or Sets the CSS classes to root element of the NumericTextBox which helps to customize the complete UI styles for the NumericTextBox component. |
+| Decimals | Specifies the number precision applied to the textbox value when the NumericTextBox is focused.|
+| EnableRtl | Enable or disable rendering component in right to left direction.|
+| Format | Specifies the number format that indicates the display format for the value of the NumericTextBox |
+| PlaceHolder | Gets or sets the string shown as a hint/placeholder when the NumericTextBox is empty. It acts as a label and floats above the NumericTextBox |
+| ShowClearButton | Specifies whether to show or hide the clear icon. |
+| ShowSpinButton | Specifies whether the up and down spin buttons should be displayed in NumericTextBox. |
+| ValidateDecimalOnType | Specifies whether the decimals length should be restricted during typing. |
+
+The following sample code demonstrates the customization applied to NumericTextBox component set for the DataGrid columns,
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid DataSource="@OrderData" Toolbar=@ToolbarItems>
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" EditorSettings="@FreightEditParams" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" EditType="EditType.DropDownEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public string[] ToolbarItems = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
+
+    public IEditorSettings FreightEditParams = new NumericEditCellParams
+    {
+        Params = new NumericTextBoxModel<object>() { ShowClearButton= true, ShowSpinButton = false }
+    };
+
+    List<Order> OrderData = new List<Order>
+{
+        new Order() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipName = "Vins et alcools Chevalier", Verified = true },
+        new Order() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipName = "Toms Spezialitäten", Verified = false },
+        new Order() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipName = "Hanari Carnes", Verified = true },
+        new Order() { OrderID = 10251, CustomerID = "VICTE", Freight = 41.34, ShipName = "Victuailles en stock", Verified = false },
+        new Order() { OrderID = 10252, CustomerID = "SUPRD", Freight = 51.3, ShipName = "Suprêmes délices", Verified = false },
+        new Order() { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, ShipName = "Hanari Carnes", Verified = false },
+        new Order() { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, ShipName = "Chop-suey Chinese", Verified = true },
+        new Order() { OrderID = 10255, CustomerID = "RICSU", Freight = 148.33, ShipName = "Richter Supermarket", Verified = true },
+        new Order() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipName = "Wellington Importadora", Verified = false },
+        new Order() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipName = "HILARION-Abastos", Verified = true }
+    };
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+        public string ShipName { get; set; }
+        public bool Verified { get; set; }
+    }
+}
+```
+
+### DropDownEdit
+
+[`DropDownEditCellParams`] class helps us to customize the default DropDownList component in Grid EditForm. The following table describes properties of DropDownList control than can be customized using [`EditorSettings`] of GridColumn editor component.
+
+| Component | Example |
+|--------|----------------|
+| Enabled | Specifies a value that indicates whether the component is enabled or not |
+| CssClass | Sets CSS classes to the root element of the component that allows customization of appearance.  |
+| FilterBarPlaceholder | Accepts the value to be displayed as a watermark text on the filter bar.   |
+| AllowFiltering | When allowFiltering is set to true, show the filter bar (search box) of the component. |
+| FooterTemplate | Accepts the template design and assigns it to the footer container of the popup list. |
+| HeaderTemplate | Accepts the template design and assigns it to the header container of the popup list. |
+| PopupHeight | Specifies the height of the popup list |
+| PopupWidth | Specifies the width of the popup list. By default, the popup width sets based on the width of the component |
+| ReadOnly | When set to true, the user interactions on the component are disabled.   |
+| ShowClearButton | Specifies whether to show or hide the clear button. When the clear button is clicked, `Value`, `text`, and `index` properties are reset to null.   |
+| ValueTemplate | Accepts the template design and assigns it to the selected list item in the input element of the component.  |
+| ActionFailureTemplate | Accepts the template and assigns it to the popup list content of the component when the data fetch request from the remote server fails |
+| DataSource | Accepts the list items either through local or remote service and binds it to the component. It can be an array of JSON Objects or an instance of `DataManager`. |
+
+The following sample code demonstrates the customization applied to DropDownList component set for the DataGrid columns,
+
+```csharp
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" Toolbar=@ToolbarItems>
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" EditType="EditType.DropDownEdit" EditorSettings="@ShipNameEditParams" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public string[] ToolbarItems = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
+
+    public IEditorSettings ShipNameEditParams = new DropDownEditCellParams
+    {
+        Params = new DropDownListModel<object, object>() { AllowFiltering = true, ShowClearButton = true }
+    };
+
+    List<Order> OrderData = new List<Order>
+{
+        new Order() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipName = "Vins et alcools Chevalier", Verified = true },
+        new Order() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipName = "Toms Spezialitäten", Verified = false },
+        new Order() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipName = "Hanari Carnes", Verified = true },
+        new Order() { OrderID = 10251, CustomerID = "VICTE", Freight = 41.34, ShipName = "Victuailles en stock", Verified = false },
+        new Order() { OrderID = 10252, CustomerID = "SUPRD", Freight = 51.3, ShipName = "Suprêmes délices", Verified = false },
+        new Order() { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, ShipName = "Hanari Carnes", Verified = false },
+        new Order() { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, ShipName = "Chop-suey Chinese", Verified = true },
+        new Order() { OrderID = 10255, CustomerID = "RICSU", Freight = 148.33, ShipName = "Richter Supermarket", Verified = true },
+        new Order() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipName = "Wellington Importadora", Verified = false },
+        new Order() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipName = "HILARION-Abastos", Verified = true }
+    };
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+        public string ShipName { get; set; }
+        public bool Verified { get; set; }
+    }
+}
+```
+
+### BooleanEdit
+
+[`BooleanEditCellParams`] class helps us to customize the default Checkbox component in Grid EditForm. The following table describes properties of CheckBox control than can be customized using [`EditorSettings`] of GridColumn editor component.
+
+| Component | Description |
+|--------|----------------|
+| CssClass | Defines class/multiple classes separated by a space in the CheckBox element. You can add custom styles to the CheckBox by using this property. |
+| Label | Defines the caption for the CheckBox, that describes the purpose of the CheckBox.  |
+| EnableRtl | Enable or disable rendering component in right to left direction.  |
+| LabelPosition | Positions label `Before`/`after` the CheckBox. The possible values are: Before - The label is positioned to left of the CheckBox. After - The label is positioned to right of the CheckBox.   |
+| Indeterminate | Specifies a value that indicates whether the CheckBox is in `Indeterminate` state or not. When set to `true`, the CheckBox will be in `indeterminate` state.   |
+| Disabled | Specifies a value that indicates whether the CheckBox is `Disabled` or not. When set to `true`, the CheckBox will be in `disabled` state. |
+
+The following sample code demonstrates the customization applied to Checkbox component set for the DataGrid columns,
+
+```csharp
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" Toolbar=@ToolbarItems>
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" EditType="EditType.DropDownEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120" EditorSettings="@VerifiedEditParams"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public string[] ToolbarItems = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
+
+    public IEditorSettings VerifiedEditParams = new BooleanEditCellParams
+    {
+        Params = new CheckBoxModel<bool>() { Label = "Checked", Disabled = true, LabelPosition = LabelPosition.Before  }
+    };
+
+    List<Order> OrderData = new List<Order>
+{
+        new Order() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipName = "Vins et alcools Chevalier", Verified = true },
+        new Order() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipName = "Toms Spezialitäten", Verified = false },
+        new Order() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipName = "Hanari Carnes", Verified = true },
+        new Order() { OrderID = 10251, CustomerID = "VICTE", Freight = 41.34, ShipName = "Victuailles en stock", Verified = false },
+        new Order() { OrderID = 10252, CustomerID = "SUPRD", Freight = 51.3, ShipName = "Suprêmes délices", Verified = false },
+        new Order() { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, ShipName = "Hanari Carnes", Verified = false },
+        new Order() { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, ShipName = "Chop-suey Chinese", Verified = true },
+        new Order() { OrderID = 10255, CustomerID = "RICSU", Freight = 148.33, ShipName = "Richter Supermarket", Verified = true },
+        new Order() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipName = "Wellington Importadora", Verified = false },
+        new Order() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipName = "HILARION-Abastos", Verified = true }
+    };
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+        public string ShipName { get; set; }
+        public bool Verified { get; set; }
+    }
+}
+```
+
+### DatePickerEdit
+
+[`DateEditCellParams`] class helps us to customize the default DatePicker and DateTimePicker component in Grid EditForm. The following table describes properties of DatePicker control than can be customized using [`EditorSettings`] of GridColumn editor component.
+
+| Component | Example |
+|--------|----------------|
+| CssClass | Specifies the root CSS class of the DatePicker that allows to customize the appearance by overriding the styles.   |
+| EnableRtl | Enable or disable rendering component in right to left direction.    |
+| ReadOnly | Specifies the component in readonly state. When the Component is readonly it does not allow user input.     |
+| ShowClearButton | Specifies whether to show or hide the clear icon in textbox. |
+
+The following sample code demonstrates the customization applied to DatePicker component set for the DataGrid columns,
+
+```csharp
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" Toolbar=@ToolbarItems>
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="OrderDate" Format="d" EditType="EditType.DatePickerEdit" EditorSettings="@DateEditParams" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" EditType="EditType.DropDownEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public string[] ToolbarItems = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
+
+    public IEditorSettings DateEditParams = new DateEditCellParams
+    {
+        Params = new DatePickerModel() { EnableRtl = true, ShowClearButton = false }
+    };
+
+    List<Order> OrderData = new List<Order>
+{
+        new Order() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipName = "Vins et alcools Chevalier", Verified = true },
+        new Order() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipName = "Toms Spezialitäten", Verified = false },
+        new Order() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipName = "Hanari Carnes", Verified = true },
+        new Order() { OrderID = 10251, CustomerID = "VICTE", Freight = 41.34, ShipName = "Victuailles en stock", Verified = false },
+        new Order() { OrderID = 10252, CustomerID = "SUPRD", Freight = 51.3, ShipName = "Suprêmes délices", Verified = false },
+        new Order() { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, ShipName = "Hanari Carnes", Verified = false },
+        new Order() { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, ShipName = "Chop-suey Chinese", Verified = true },
+        new Order() { OrderID = 10255, CustomerID = "RICSU", Freight = 148.33, ShipName = "Richter Supermarket", Verified = true },
+        new Order() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipName = "Wellington Importadora", Verified = false },
+        new Order() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipName = "HILARION-Abastos", Verified = true }
+    };
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+        public DateTime OrderDate { get; set; } = DateTime.Now;
+        public string ShipName { get; set; }
+        public bool Verified { get; set; }
+    }
+}
+```
+
+> Similar way customization can be applied to default DateTimePicker Component using same [`DateEditCellParams`]
+
 ## Cell Edit Template
 
 > Before adding edit template to the datagrid, we strongly recommend you to go through the [`template`](./templates/#templates) section topic to configure the template.
 
 The cell edit template is used to add a custom component for a particular column. You can use the **EditTemplate** of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn.html) component to add the custom component. You can access the parameters passed to the templates using implicit parameter named **context**.
 
+> Custom components inside the EditTemplate must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
+
 ```csharp
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Grids
 
-<SfGrid  AllowPaging="true" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+<SfGrid AllowPaging="true" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150">
             <EditTemplate>
-                <SfAutoComplete ID="CustomerID" Value="@((context as Order).CustomerID)" DataSource="@Orders">
+                <SfAutoComplete ID="CustomerID" TItem="Order" TValue="string" @bind-Value="@((context as Order).CustomerID)" DataSource="@Orders">
                     <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
                 </SfAutoComplete>
             </EditTemplate>
@@ -534,7 +803,7 @@ The following image represents the custom command added in the **Manage Records*
 
 Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data.
 DataGrid uses **Form Validator** library for column validation.
-You can set validation rules by defining the [`Columns.ValidationRules`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~ValidationRules.html).
+You can set validation rules by defining the [`ValidationRules`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~ValidationRules.html).
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -542,8 +811,8 @@ You can set validation rules by defining the [`Columns.ValidationRules`](https:/
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new { required= true })" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120" ValidationRules="@(new { required= true, minLength= 3 })"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required= true })" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
@@ -563,14 +832,14 @@ You can set validation rules by defining the [`Columns.ValidationRules`](https:/
         }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
 }
-
 ```
 
 The following screenshot represents the Column Validation in Normal Editing.
@@ -751,6 +1020,7 @@ namespace WebApplication1.Server.Controllers
 ## Performing CRUD operations programmatically
 
 You can perform CRUD operations like **Add** , **Update** , **Delete** by using the [`AddRecord`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~AddRecord.html) , [`UpdateRow`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~UpdateRow.html) , [`DeleteRow`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~DeleteRow.html)  methods.
+
 * **AddRecord** - Add a new record into the datagrid
 * **UpdateRow** - Update a existing record in a datagrid.
 * **DeleteRow** - Delete a selected row in the datagrid
@@ -766,8 +1036,8 @@ You can perform CRUD operations like **Add** , **Update** , **Delete** by using 
 <SfGrid DataSource="@Orders" AllowPaging="true" @ref="Grid" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new { required = true })" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new { required = true })" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required = true })" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required = true })" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
@@ -777,22 +1047,27 @@ You can perform CRUD operations like **Add** , **Update** , **Delete** by using 
     public List<Order> Orders { get; set; }
     SfGrid<Order> Grid;
 
-    public void Add()
+    public async Task Add()
     {
-        Order adddata = new Order() { OrderID = 1000, CustomerID = "MJDGX", ShipCountry = "LONDON",
-        Freight = 3.01 };
-        this.Grid.AddRecord(adddata);
+        Order adddata = new Order()
+        {
+            OrderID = 1000,
+            CustomerID = "MJDGX",
+            ShipCountry = "LONDON",
+            Freight = 3.01
+        };
+        await this.Grid.AddRecord(adddata);
     }
 
-    public void Update()
+    public async Task Update()
     {
-        Order data = new Order () { OrderID = 1001, CustomerID = "ABCDE", ShipCountry = "LONDON", Freight = 2.91 };
-        this.Grid.UpdateRow(1, data);
+        Order data = new Order() { OrderID = 1001, CustomerID = "ABCDE", ShipCountry = "LONDON", Freight = 2.91 };
+        await this.Grid.UpdateRow(1, data);
     }
 
-    public void Delete()
+    public async Task Delete()
     {
-        this.Grid.DeleteRecord();
+        await this.Grid.DeleteRecord();
     }
 
     protected override void OnInitialized()
@@ -833,50 +1108,50 @@ You can perform the edit operation of datagrid in a Custom external form. The ed
 @using Syncfusion.Blazor.Inputs
 
 <div class="row">
-     <div class="col-md-6">
-         <div>
-             <div class="form-row">
-                 <div class="form-group col-md-12">
-                     <label for="orderedit">OrderID</label>
-                     <input class="form-control" @bind="@(SelectedProduct.OrderID)" type="number" disabled />
-                 </div>
-             </div>
-             <div class="form-row">
-                 <div class="form-group col-md-12">
-                     <label for="customeredit">CustomerID</label>
-                     <SfTextBox ID="CustomerID" @bind-Value="@(SelectedProduct.CustomerID)"></SfTextBox>
-                 </div>
-             </div>
-             <div class="form-row">
-                 <div class="form-group col-md-12">
-                     <label for="freightedit">Frieght</label>
-                     <SfNumericTextBox ID="Freight" TValue="double?" @bind-Value="@SelectedProduct.Freight"></SfNumericTextBox>
-                 </div>
-             </div>
-             <div class="form-row">
-                 <div class="form-group col-md-12">
-                     <label for="countryedit">ShipCountry</label>
-                     <SfDropDownList ID="ShipCountry" @bind-Value="@SelectedProduct.ShipCountry" TItem="Country" TValue="string" DataSource="@Dropdown">
-                         <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
-                     </SfDropDownList>
-                 </div>
-             </div>
-         </div>
-     <SfButton @onclick="Save">Save</SfButton>
-     </div>
-     <div class="col-md-6">
-         <SfGrid DataSource="@Orders" AllowPaging="true" @ref="Grid" Height=315>
-             <GridEditSettings AllowEditing="true"></GridEditSettings>
-             <GridEvents RowSelected="RowSelectHandler" TValue="Order"></GridEvents>
-             <GridColumns>
-                 <GridColumn Field=@nameof(Order.OrderID) HeaderText="OrderID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-                 <GridColumn Field=@nameof(Order.CustomerID) HeaderText="CustomerID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-                 <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="120"></GridColumn>
-                 <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-             </GridColumns>
-         </SfGrid>
-     </div>
- </div>
+    <div class="col-md-6">
+        <div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="orderedit">OrderID</label>
+                    <input class="form-control" @bind="@(SelectedProduct.OrderID)" type="number" disabled />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="customeredit">CustomerID</label>
+                    <SfTextBox ID="CustomerID" @bind-Value="@(SelectedProduct.CustomerID)"></SfTextBox>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="freightedit">Frieght</label>
+                    <SfNumericTextBox ID="Freight" TValue="double?" @bind-Value="@SelectedProduct.Freight"></SfNumericTextBox>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="countryedit">ShipCountry</label>
+                    <SfDropDownList ID="ShipCountry" @bind-Value="@SelectedProduct.ShipCountry" TItem="Country" TValue="string" DataSource="@Dropdown">
+                        <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
+                    </SfDropDownList>
+                </div>
+            </div>
+        </div>
+        <SfButton @onclick="Save">Save</SfButton>
+    </div>
+    <div class="col-md-6">
+        <SfGrid DataSource="@Orders" AllowPaging="true" @ref="Grid" Height=315>
+            <GridEditSettings AllowEditing="true"></GridEditSettings>
+            <GridEvents RowSelected="RowSelectHandler" TValue="Order"></GridEvents>
+            <GridColumns>
+                <GridColumn Field=@nameof(Order.OrderID) HeaderText="OrderID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+                <GridColumn Field=@nameof(Order.CustomerID) HeaderText="CustomerID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+                <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="120"></GridColumn>
+                <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            </GridColumns>
+        </SfGrid>
+    </div>
+</div>
 
 @code{
     public List<Order> Orders { get; set; }
@@ -887,7 +1162,7 @@ You can perform the edit operation of datagrid in a Custom external form. The ed
         public string ShipCountry { get; set; }
     }
     List<Country> Dropdown = new List<Country>
-    {
+{
           new Country() { ShipCountry= "USA" },
           new Country() { ShipCountry= "UK" },
           new Country() { ShipCountry= "RUSSIA" },
@@ -895,9 +1170,9 @@ You can perform the edit operation of datagrid in a Custom external form. The ed
           new Country() { ShipCountry= "CHINA" },
     };
 
-    void Save()
+    async Task Save()
     {
-        this.Grid.UpdateRow(1, SelectedProduct);
+        await this.Grid.UpdateRow(1, SelectedProduct);
     }
 
     protected override void OnInitialized()
@@ -920,7 +1195,7 @@ You can perform the edit operation of datagrid in a Custom external form. The ed
 
     public void RowSelectHandler(RowSelectEventArgs<Order> args)
     {
-        SelectedProduct = args.Data ;
+        SelectedProduct = args.Data;
     }
 
 }
@@ -936,6 +1211,8 @@ The following GIF represent the datagrid with Custom External form editing,
 
 The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your own editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEditSettings~Mode.html) property as **Dialog** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEditSettings~Template.html) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEditSettings.html).
 
+> Custom components inside the Dialog Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
+
 In some cases, you would need to add new field editors in the dialog which are not present in the column model. In that case, the dialog template will help you to customize the default edit dialog.
 
 The following sample code demonstrates DataGrid enabled with dialog template editing,
@@ -946,7 +1223,7 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
 
-<SfGrid  DataSource="@GridData" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
+<SfGrid DataSource="@GridData" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Dialog">
         <Template>
             @{
@@ -955,11 +1232,11 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Order ID</label>
-                            <SfTextBox ID="OrderID" Value="@(Order.OrderID.ToString())" Enabled="false"></SfTextBox>
+                            <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@((Order.OrderID == null) ? true : false)"></SfNumericTextBox>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Customer Name</label>
-                            <SfAutoComplete ID="customerID" FloatLabelType="FloatLabelType.Auto" Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
+                            <SfAutoComplete ID="customerID" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
                                 <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
                             </SfAutoComplete>
                         </div>
@@ -967,23 +1244,23 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Freight</label>
-                            <SfNumericTextBox ID="Freight" Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
+                            <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Order Date</label>
-                            <SfDatePicker ID="OrderDate" Value="@(Order.OrderDate)"></SfDatePicker>
+                            <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Ship Country</label>
-                            <SfDropDownList ID="ShipCountry" Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
+                            <SfDropDownList ID="ShipCountry" @bind-Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
                                 <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
                             </SfDropDownList>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Ship City</label>
-                            <SfDropDownList ID="ShipCity" Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
+                            <SfDropDownList ID="ShipCity" @bind-Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
                                 <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
                             </SfDropDownList>
                         </div>
@@ -991,7 +1268,7 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label class="e-float-text e-label-top">Ship Address</label>
-                            <SfTextBox ID="ShipAddress" Value="@(Order.ShipAddress)"></SfTextBox>
+                            <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
                         </div>
                     </div>
                 </div>
@@ -1009,7 +1286,7 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
 
 @code{
     public List<OrdersDetails> GridData = new List<OrdersDetails>
-    {
+{
         new OrdersDetails() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipCity = "Berlin", OrderDate = DateTime.Now.AddDays(-2), ShipName = "Vins et alcools Chevalier", ShipCountry = "Denmark", ShipAddress = "Kirchgasse 6" },
         new OrdersDetails() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipCity = "Madrid", OrderDate = DateTime.Now.AddDays(-5), ShipName = "Toms Spezialitäten", ShipCountry = "Brazil", ShipAddress = "Avda. Azteca 123" },
         new OrdersDetails() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipCity = "Cholchester", OrderDate = DateTime.Now.AddDays(-12), ShipName = "Hanari Carnes", ShipCountry = "Germany", ShipAddress = "Carrera 52 con Ave. Bolívar #65-98 Llano Largo" },
@@ -1022,7 +1299,8 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
         new OrdersDetails() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipCity = "Cholchester", OrderDate = DateTime.Now.AddDays(-48), ShipName = "HILARION-Abastos", ShipCountry = "Germany", ShipAddress = "Carrera 52 con Ave. Bolívar #65-98 Llano Largo" }
     };
 
-    public class OrdersDetails {
+    public class OrdersDetails
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public double? Freight { get; set; }
@@ -1064,7 +1342,7 @@ This is demonstrated in the below sample code where if the `RequestType` argumen
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
 
-<SfGrid  DataSource="@GridData" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
+<SfGrid DataSource="@GridData" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
     <GridEvents OnActionBegin="ActionBeginHandler" TValue="OrdersDetails"></GridEvents>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Dialog">
         <Template>
@@ -1074,11 +1352,11 @@ This is demonstrated in the below sample code where if the `RequestType` argumen
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Order ID</label>
-                            <SfTextBox ID="OrderID" Value="@(Order.OrderID.ToString())" Enabled="@Enabled"></SfTextBox>
+                            <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@Enabled"></SfNumericTextBox>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Customer Name</label>
-                            <SfAutoComplete ID="customerID" FloatLabelType="FloatLabelType.Auto" Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
+                            <SfAutoComplete ID="CustomerID" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
                                 <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
                             </SfAutoComplete>
                         </div>
@@ -1086,23 +1364,23 @@ This is demonstrated in the below sample code where if the `RequestType` argumen
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Freight</label>
-                            <SfNumericTextBox ID="Freight" Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
+                            <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double"></SfNumericTextBox>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Order Date</label>
-                            <SfDatePicker ID="OrderDate" Value="@(Order.OrderDate)"></SfDatePicker>
+                            <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Ship Country</label>
-                            <SfDropDownList ID="ShipCountry" Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
+                            <SfDropDownList ID="ShipCountry" @bind-Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
                                 <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
                             </SfDropDownList>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Ship City</label>
-                            <SfDropDownList ID="ShipCity" Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
+                            <SfDropDownList ID="ShipCity" @bind-Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
                                 <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
                             </SfDropDownList>
                         </div>
@@ -1110,7 +1388,7 @@ This is demonstrated in the below sample code where if the `RequestType` argumen
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label class="e-float-text e-label-top">Ship Address</label>
-                            <SfTextBox ID="ShipAddress" Value="@(Order.ShipAddress)"></SfTextBox>
+                            <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
                         </div>
                     </div>
                 </div>
@@ -1192,103 +1470,7 @@ By default, the first input element in the dialog will be focused while opening 
 This is demonstrated in the below sample code where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [`FocusIn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfAutoComplete%601~FocusIn.html) method in the AutoComplete's [`DataBound`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.AutoCompleteEvents%601~DataBound.html) event.
 
 ```csharp
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Calendars
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Inputs
-
-<SfGrid  DataSource="@GridData" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Dialog">
-        <Template>
-            @{
-                var Order = (context as OrdersDetails);
-                <div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Order ID</label>
-                            <SfTextBox ID="OrderID" Value="@(Order.OrderID.ToString())" Enabled="false"></SfTextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Customer Name</label>
-                            <SfAutoComplete ID="customerID" @ref="AutoComplete" FloatLabelType="FloatLabelType.Auto" Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
-                                <AutoCompleteEvents DataBound="OnDataBound" TValue="OrdersDetails"></AutoCompleteEvents>
-                                <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-                            </SfAutoComplete>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Freight</label>
-                            <SfNumericTextBox ID="Freight" Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Order Date</label>
-                            <SfDatePicker ID="OrderDate" Value="@(Order.OrderDate)"></SfDatePicker>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Ship Country</label>
-                            <SfDropDownList ID="ShipCountry" Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
-                                <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
-                            </SfDropDownList>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Ship City</label>
-                            <SfDropDownList ID="ShipCity" Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
-                                <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
-                            </SfDropDownList>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label class="e-float-text e-label-top">Ship Address</label>
-                            <SfTextBox ID="ShipAddress" Value="@(Order.ShipAddress)"></SfTextBox>
-                        </div>
-                    </div>
-                </div>
-            }
-        </Template>
-    </GridEditSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" HeaderTextAlign="@TextAlign.Center" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.Freight) HeaderText="Freight" Format="C2" Width="140" TextAlign="@TextAlign.Right" HeaderTextAlign="@TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="160"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    private SfAutoComplete<string> AutoComplete;
-    public List<OrdersDetails> GridData = new List<OrdersDetails>
-    {
-        new OrdersDetails() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipCity = "Berlin", OrderDate = DateTime.Now.AddDays(-2), ShipName = "Vins et alcools Chevalier", ShipCountry = "Denmark", ShipAddress = "Kirchgasse 6" },
-        new OrdersDetails() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipCity = "Madrid", OrderDate = DateTime.Now.AddDays(-5), ShipName = "Toms Spezialitäten", ShipCountry = "Brazil", ShipAddress = "Avda. Azteca 123" },
-        new OrdersDetails() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipCity = "Cholchester", OrderDate = DateTime.Now.AddDays(-12), ShipName = "Hanari Carnes", ShipCountry = "Germany", ShipAddress = "Carrera 52 con Ave. Bolívar #65-98 Llano Largo" },
-        new OrdersDetails() { OrderID = 10251, CustomerID = "VICTE", Freight = 41.34, ShipCity = "Marseille", OrderDate = DateTime.Now.AddDays(-18), ShipName = "Victuailles en stock", ShipCountry = "Austria", ShipAddress = "Magazinweg 7" },
-        new OrdersDetails() { OrderID = 10252, CustomerID = "SUPRD", Freight = 51.3, ShipCity = "Tsawassen", OrderDate = DateTime.Now.AddDays(-22), ShipName = "Suprêmes délices", ShipCountry = "Switzerland", ShipAddress = "1029 - 12th Ave. S." },
-        new OrdersDetails() { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, ShipCity = "Tsawassen", OrderDate = DateTime.Now.AddDays(-26), ShipName = "Hanari Carnes", ShipCountry = "Switzerland", ShipAddress = "1029 - 12th Ave. S." },
-        new OrdersDetails() { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, ShipCity = "Berlin", OrderDate = DateTime.Now.AddDays(-34), ShipName = "Chop-suey Chinese", ShipCountry = "Denmark", ShipAddress = "Kirchgasse 6" },
-        new OrdersDetails() { OrderID = 10255, CustomerID = "RICSU", Freight = 148.33, ShipCity = "Madrid", OrderDate = DateTime.Now.AddDays(-39), ShipName = "Richter Supermarket", ShipCountry = "Brazil", ShipAddress = "Avda. Azteca 123" },
-        new OrdersDetails() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipCity = "Madrid", OrderDate = DateTime.Now.AddDays(-43), ShipName = "Wellington Importadora", ShipCountry = "Brazil", ShipAddress = "Avda. Azteca 123" },
-        new OrdersDetails() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipCity = "Cholchester", OrderDate = DateTime.Now.AddDays(-48), ShipName = "HILARION-Abastos", ShipCountry = "Germany", ShipAddress = "Carrera 52 con Ave. Bolívar #65-98 Llano Largo" }
-    };
-
-    public class OrdersDetails {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCity { get; set; }
-        public DateTime OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public string ShipAddress { get; set; }
-    }
-
-    public void OnDataBound()
-    {
-        this.AutoComplete.FocusIn();
+ await this.AutoComplete.FocusIn();
     }
 }
 
@@ -1314,6 +1496,8 @@ The following image represents the AutoComplete component in focused state insid
 
 The Inline template editing provides an option to customize the default behavior of Inline editing. Using the Inline template, you can render your own editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEditSettings~Mode.html) property as **Normal** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEditSettings~Template.html) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEditSettings.html).
 
+> Custom components inside the Inline Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
+
 In some cases, you would need to add new field editors in the Inline editing which are not present in the column model. In that case, the Inline template editing will help you to customize the default editing.
 
 The following sample code demonstrates DataGrid enabled with Inline template editing,
@@ -1333,11 +1517,11 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Order ID</label>
-                            <SfTextBox ID="OrderID" Value="@(Order.OrderID.ToString())" Enabled="false"></SfTextBox>
+                            <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" ShowSpinButton="false" Enabled="@((Order.OrderID == null)? true: false)"></SfNumericTextBox>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Customer Name</label>
-                            <SfAutoComplete ID="customerID" FloatLabelType="FloatLabelType.Auto" Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
+                            <SfAutoComplete ID="CustomerID" TItem="OrdersDetails" FloatLabelType="FloatLabelType.Auto" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
                                 <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
                             </SfAutoComplete>
                         </div>
@@ -1345,23 +1529,23 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Freight</label>
-                            <SfNumericTextBox ID="Freight" Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
+                            <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Order Date</label>
-                            <SfDatePicker ID="OrderDate" Value="@(Order.OrderDate)"></SfDatePicker>
+                            <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Ship Country</label>
-                            <SfDropDownList ID="ShipCountry" TItem="OrdersDetails" Value="@(Order.ShipCountry)" TValue="string" DataSource="@GridData">
+                            <SfDropDownList ID="ShipCountry" TItem="OrdersDetails" @bind-Value="@(Order.ShipCountry)" TValue="string" DataSource="@GridData">
                                 <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
                             </SfDropDownList>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Ship City</label>
-                            <SfDropDownList ID="ShipCity" TItem="OrdersDetails" Value="@(Order.ShipCity)" TValue="string" DataSource="@GridData">
+                            <SfDropDownList ID="ShipCity" TItem="OrdersDetails" @bind-Value="@(Order.ShipCity)" TValue="string" DataSource="@GridData">
                                 <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
                             </SfDropDownList>
                         </div>
@@ -1369,7 +1553,7 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label class="e-float-text e-label-top">Ship Address</label>
-                            <SfTextBox ID="ShipAddress" Value="@(Order.ShipAddress)"></SfTextBox>
+                            <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
                         </div>
                     </div>
                 </div>
@@ -1387,7 +1571,7 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
 
 @code{
     public List<OrdersDetails> GridData = new List<OrdersDetails>
-    {
+{
         new OrdersDetails() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipCity = "Berlin", OrderDate = DateTime.Now.AddDays(-2), ShipName = "Vins et alcools Chevalier", ShipCountry = "Denmark", ShipAddress = "Kirchgasse 6" },
         new OrdersDetails() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipCity = "Madrid", OrderDate = DateTime.Now.AddDays(-5), ShipName = "Toms Spezialitäten", ShipCountry = "Brazil", ShipAddress = "Avda. Azteca 123" },
         new OrdersDetails() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipCity = "Cholchester", OrderDate = DateTime.Now.AddDays(-12), ShipName = "Hanari Carnes", ShipCountry = "Germany", ShipAddress = "Carrera 52 con Ave. Bolívar #65-98 Llano Largo" },
@@ -1399,7 +1583,6 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
         new OrdersDetails() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipCity = "Madrid", OrderDate = DateTime.Now.AddDays(-43), ShipName = "Wellington Importadora", ShipCountry = "Brazil", ShipAddress = "Avda. Azteca 123" },
         new OrdersDetails() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipCity = "Cholchester", OrderDate = DateTime.Now.AddDays(-48), ShipName = "HILARION-Abastos", ShipCountry = "Germany", ShipAddress = "Carrera 52 con Ave. Bolívar #65-98 Llano Largo" }
     };
-
     public class OrdersDetails
     {
         public int? OrderID { get; set; }
@@ -1586,7 +1769,7 @@ The following sample code demonstrates setting default value as **ANTON** to the
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120" DefaultValue="@("ANTON")"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -1632,7 +1815,7 @@ The following sample code demonstrates editing disabled for the **CustomerID** c
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120" AllowEditing="false"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -1662,6 +1845,8 @@ The following sample code demonstrates editing disabled for the **CustomerID** c
     }
 }
 ```
+
+> Similarly [`AllowAdding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~AllowAdding.html) property at the column level helps us to disable the particular column from inserting value to it.
 
 The following screenshot represents the editing disabled for the **CustomerID** column in DataGrid,
 ![Editing Disabled](./images/editing-disabled.png)
@@ -1698,7 +1883,7 @@ The following sample code demonstrates the different **RequestType** parameters 
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridEvents OnActionBegin="ActionBegin" OnActionComplete="ActionComplete" TValue="Order"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -1801,8 +1986,8 @@ In the below example we have changed the dialog's header text and footer button 
         </FooterTemplate>
     </GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new { required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new { required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules { Required = true })" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required = true })" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>

@@ -268,7 +268,7 @@ The following image represents the Group and Caption template with aggregates.
 
 > The aggregate values must be accessed inside the template using their corresponding [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridAggregateColumn~Type.html) name.
 
-## Reactive aggregate update
+<!-- Reactive aggregate update
 
 When using batch editing, the aggregate values will be refreshed on every cell save. The footer, group footer, and group caption aggregate values will be refreshed.
 
@@ -314,6 +314,6 @@ When using batch editing, the aggregate values will be refreshed on every cell s
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
-}
+} 
 
-```
+```-->

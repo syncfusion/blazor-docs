@@ -48,8 +48,8 @@ The excel export allows exporting DataGrid data to Excel document. You need to u
         public double? Freight { get; set; }
     }
 
-    public void ExcelExport(){
-        this.DefaultGrid.ExcelExport();
+    public async Task ExcelExport(){
+       await this.DefaultGrid.ExcelExport();
     }
 }
 ```
@@ -100,10 +100,10 @@ The excel export provides an option to export the current page into excel. To ex
         public double? Freight { get; set; }
     }
 
-    public void ExcelExport() {
+    public async Task ExcelExport() {
         ExcelExportProperties ExportProperties = new ExcelExportProperties();
         ExportProperties.ExportType = ExportType.CurrentPage;
-        this.DefaultGrid.ExcelExport(ExportProperties);
+        await this.DefaultGrid.ExcelExport(ExportProperties);
     }
 }
 ```
@@ -149,10 +149,10 @@ The excel export provides an option to export hidden columns of datagrid by defi
         public double? Freight { get; set; }
     }
 
-    public void ExcelExport() {
+    public async Task void ExcelExport() {
         ExcelExportProperties ExportProperties = new ExcelExportProperties();
         ExportProperties.IncludeHiddenColumn = true;
-        this.DefaultGrid.ExcelExport(ExportProperties);
+        await this.DefaultGrid.ExcelExport(ExportProperties);
     }
 }
 ```
@@ -262,7 +262,7 @@ To apply theme in exported Excel, define the **theme** in export properties.
         public double? Freight { get; set; }
     }
 
-    public void ExcelExport() {
+    public async Task ExcelExport() {
         ExcelExportProperties ExcelProperties = new ExcelExportProperties();
         ExcelTheme Theme = new ExcelTheme();
 
@@ -277,7 +277,7 @@ To apply theme in exported Excel, define the **theme** in export properties.
         Theme.Record = ThemeStyle;
         Theme.Caption = ThemeStyle;
         ExcelProperties.Theme = Theme;
-        this.DefaultGrid.ExcelExport(ExcelProperties);
+        await this.DefaultGrid.ExcelExport(ExcelProperties);
     }
 }
 ```
@@ -483,10 +483,10 @@ You can assign the file name for the exported document by defining **fileName** 
         public double? Freight { get; set; }
     }
 
-    public void ExcelExport() {
+    public async Task ExcelExport() {
         ExcelExportProperties ExcelProperties = new ExcelExportProperties();
         ExcelProperties.FileName = "new.xlsx";
-        this.DefaultGrid.ExcelExport(ExcelProperties);
+        await this.DefaultGrid.ExcelExport(ExcelProperties);
     }
 }
 ```
@@ -534,8 +534,8 @@ In datagrid, we have provided the outline option for the exported document when 
         public double? Freight { get; set; }
     }
 
-    public void ExcelExport() {
-        this.DefaultGrid.ExcelExport();
+    public async Task ExcelExport() {
+        await this.DefaultGrid.ExcelExport();
     }
 }
 ```
@@ -548,7 +548,7 @@ Microsoft Excel permits up to seven nested levels in outlines. So that in the da
 
 The excel export provides option to export multiple datagrid data in the same excel file.
 
-### Same sheet
+Same sheet
 
 The excel export provides support to export multiple grids in the same sheet. To export in same sheet, set the [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.MultipleExport~Type.html) value of [`MultipleExport`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.ExcelExportProperties~MultipleExport.html) property as **AppendToSheet** in the [`ExcelExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.ExcelExportProperties.html) class. It is possible to provide blank rows between the grids. The blank rows count can be set by defining the value in  [`BlankRows`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.MultipleExport~BlankRows.html) of [`MultipleExport`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.ExcelExportProperties~MultipleExport.html) property.
 
@@ -757,11 +757,11 @@ The following sample code demonstrates dynamically modifying the data source bef
         public double? Freight { get; set; }
     }
 
-    public void ExcelExport()
+    public async Task ExcelExport()
     {
         ExcelExportProperties ExcelProperties = new ExcelExportProperties();
         ExcelProperties.DataSource = Orders;
-        this.DefaultGrid.ExcelExport(ExcelProperties);
+        await this.DefaultGrid.ExcelExport(ExcelProperties);
     }
 }
 ```

@@ -231,6 +231,7 @@ triggers before the group action starts and the [`OnActionComplete`](https://hel
             CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
             Freight = 2.1 * x,
             OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)],
         }).ToList();
     }
 
@@ -239,6 +240,7 @@ triggers before the group action starts and the [`OnActionComplete`](https://hel
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
     }
     public void GroupActionHandler(ActionEventArgs<Order> args){
         // You can get args.RequestType and other details.

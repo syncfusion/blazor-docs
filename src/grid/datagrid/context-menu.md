@@ -82,7 +82,6 @@ The following sample code demonstrates defining custom context menu item and its
 
 ```csharp
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
     <GridEvents ContextMenuItemClicked="OnContextMenuClick" TValue="Order"></GridEvents>
@@ -119,7 +118,7 @@ The following sample code demonstrates defining custom context menu item and its
         public double? Freight { get; set; }
     }
 
-    public void OnContextMenuClick(MenuEventArgs args)
+    public void OnContextMenuClick(ContextMenuClickEventArgs<Order> args)
     {
         if (args.Item.Id == "copywithheader")
         {
@@ -131,3 +130,57 @@ The following sample code demonstrates defining custom context menu item and its
 
 The following image represents the DataGrid enabled with custom context menu item,
 ![Grid with custom context menu item](images/custom-context-menu.png)
+
+## Disable the Context menu for specific columns in DataGrid
+
+Context Menu can be prevented for specific columns using [`ContextMenuOpen`](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of DataGrid. This is event will be triggered before opening the ContextMenu. We can prevent the context menu from opening by defining the **Cancel** arguments of [`ContextMenuOpen`](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) to **false**.
+
+The following sample code demonstrates the disabling the context for specific column using event arguments of [`ContextMenuOpen`](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
+    <GridEvents ContextMenuOpen="OnContextMenuOpen" TValue="Order"></GridEvents>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    private SfGrid<Order> DefaultGrid;
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public void OnContextMenuOpen(ContextMenuOpenEventArgs<Order> Args)
+    {
+        if (Args.Column.Field == "OrderDate")
+        {
+            Args.Cancel = true; // to prevent the context  menu from opening
+        }
+    }
+}
+```

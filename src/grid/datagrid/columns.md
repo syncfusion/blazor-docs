@@ -143,13 +143,11 @@ The following image represents complex data binding
 
 ## Foreign key column
 
-Foreign key column can be enabled by using [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~DataSource.html), [`ForeignKeyField`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~ForeignKeyField.html) and [`ForeignKeyValue`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~ForeignKeyValue.html) properties of **GridColumn** directive.
+Foreign key column can be enabled by using [`ForeignDataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~DataSource.html), [`ForeignKeyField`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~ForeignKeyField.html) and [`ForeignKeyValue`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~ForeignKeyValue.html) properties of **GridForeignColumn** directive.
 
-* [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~DataSource.html) - Defines the foreign data.
+* [`ForeignDataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~DataSource.html) - Defines the foreign data.
 * [`ForeignKeyField`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~ForeignKeyField.html) - Defines the mapping column name to the foreign data.
 * [`ForeignKeyValue`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~ForeignKeyValue.html) - Defines the display field from the foreign data.
-
-> To bind remote data to the foreign key column then you need to define the column properties inside the **GridForeignColumn** directive.
 
 ### Foreign key column - Local Data
 
@@ -161,7 +159,7 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" DataSource="@Employees" Width="150"></GridColumn>
+        <GridForeignColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
@@ -691,6 +689,13 @@ DataGrid column supports the following types:
 
 > If the [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Type.html) is not defined, it will be determined from the first record of the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~DataSource.html). Incase if the first record of the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~DataSource.html) is null/blank value for a column then it is necessary to define the [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Type.html) for that column.
 
+### Difference between Boolean type and CheckBox type column
+
+* Use GridColumn [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Type.html) as Boolean if you want to bind boolean values from your datasource and/or edit Boolean property value from your Type.
+* Use CheckBox as GridColumn [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Type.html) for the purpose of selection/deselection of the whole row.
+
+>See also section [`Render boolean values as checkbox`](https://blazor.syncfusion.com/documentation/datagrid/columns/#render-boolean-values-as-checkbox) to render boolean values as checkbox in GridColumn.
+
 ## Column chooser
 
 The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [`ShowColumnChooser`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridModel~ShowColumnChooser.html) as true.
@@ -745,6 +750,8 @@ The following GIF represents the column chooser functionality in DataGrid
 ### Open column chooser by external button
 
 The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [`ShowColumnChooser`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridModel~ShowColumnChooser.html) as true.
+
+In this below example, we have opened column chooser using external button click.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -952,8 +959,6 @@ In the  following Image **Autofit** Property is set to true for CustomerName and
 ### Autofit columns by method
 
 The **AutoFitColumns** method resizes the column to fit the widest cell's content without wrapping. You can autofit a specific column at initial rendering by invoking the **AutoFitColumns** method in [`DataBound`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataBound.html) event.
-
-To use the **AutoFitColumns** method, inject the **Resize** module in the datagrid.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -1966,7 +1971,7 @@ The following GIF shows the datagrid actions for different columns,
 
 You can show or hide datagrid columns dynamically using external buttons by invoking the [`ShowColumns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~ShowColumns.html) or [`HideColumns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~HideColumns.html) method.
 
-The following sample code demonstrates showing and hiding of columns using their header texts **("Order ID", "Freight")** on button click,
+The following sample code demonstrates showing and hiding of columns using their header texts **("Order Date", "Freight")** on button click,
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -2222,6 +2227,12 @@ The following sample code demonstrates [`DisplayAsCheckBox`](https://help.syncfu
         public bool Verified { get; set; }
     }
 }
+```
+
+> Need to define [`EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.ColumnModel~EditType.html) as **EditType.BooleanEdit** to GridColumn to render checkbox while editing a boolean value.
+
+```csharp
+<GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" Type="ColumnType.Boolean" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120"></GridColumn>
 ```
 
 The following image represents the DisplayAsCheckBox enabled for a DataGrid column,

@@ -34,7 +34,7 @@ The following sample code demonstrates adding custom headers to the [`SfDataMana
         public string Grid;
     };
 
-    private Data[] HeaderData = new Data[] { new Data { IsEnabled = "true" } };
+    private IDictionary<string, string> HeaderData = new Dictionary<string, string>();
 
     public class Order
     {

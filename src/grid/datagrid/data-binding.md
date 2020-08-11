@@ -55,6 +55,112 @@ To bind list binding to the datagrid, you can assign a IEnumerable object to the
 
 > By default, [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
+### ExpandoObject binding
+
+Grid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the grid as list of  **ExpandoObject**.
+
+**ExpandoObject** can be bound to datagrid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataSource.html) property. Grid can also perform all kind of supported data operations and editing in ExpandoObject.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using System.Dynamic
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@ToolbarItems">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+        <GridColumn Field="Verified" HeaderText="Active" DisplayAsCheckBox="true" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
+    private List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" };
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select((x) =>
+        {
+            dynamic d = new ExpandoObject();
+            d.OrderID = 1000 + x;
+            d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+            d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
+            d.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];
+            d.Verified = (new bool[] { true, false })[new Random().Next(2)];
+
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+
+    }
+}
+```
+
+### DynamicObject binding
+
+Grid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the grid as list of  **DynamicObject**.
+
+**DynamicObject** can be bound to datagrid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataSource.html) property. Grid can also perform all kind of supported data operations and editing in DynamicObject.
+
+> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using System.Dynamic
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@ToolbarItems">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" EditType="EditType.DatePickerEdit" Width="130"></GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private List<string> ToolbarItems = new List<string>(){ "Add","Edit","Delete","Update","Cancel"};
+    public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 1075).Select((x) =>
+        {
+            dynamic d = new DynamicDictionary();
+            d.OrderID = 1000 + x;
+            d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+            d.OrderDate = DateTime.Now.AddDays(-x);
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+
+    }
+}
+```
+
 ## Remote data
 
 To bind remote data to datagrid component, assign service data as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) to the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataSource.html) property or by using[`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source,  provide the endpoint **Url**.
@@ -742,6 +848,7 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 @code{
 
     public ObservableCollection<OrdersDetailsObserveData> GridData { get; set; }
+    public int Count = 32341;
 
     protected override void OnInitialized()
     {
@@ -750,7 +857,7 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 
     public void AddRecords()
     {
-        GridData.Add(new OrdersDetailsObserveData(32341, "ALFKI", 4343, 2.3 * 43, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
+        GridData.Add(new OrdersDetailsObserveData(Count++, "ALFKI", 4343, 2.3 * 43, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
     }
 
     public void DelRecords()
@@ -855,5 +962,57 @@ public void ConfigureServices(IServiceCollection services)
   {
     options.SerializerSettings.ContractResolver = new DefaultContractResolver();
   });
+}
+```
+
+## Handling exceptions
+
+Exceptions occurred during grid actions can be handled without stopping application. These error messages or exception details can be acquired using the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEvents%601~OnActionFailure.html) event.
+
+The argument passed to the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEvents%601~OnActionFailure.html) event contains the error details returned from the server.
+
+> We recommend you to bind **OnActionFailure** event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
+
+The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
+
+```csharp
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+
+<span class="error">@ErrorDetails</span>
+<SfGrid TValue="Order" AllowPaging="true">
+    <GridEvents TValue="Order" OnActionFailure="@ActionFailure"></GridEvents>
+    <GridPageSettings PageSize="10"></GridPageSettings>
+    <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+@code{
+    public string ErrorDetails = "";
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public void ActionFailure(FailureEventArgs args)
+    {
+        this.ErrorDetails = "Server exception: 404 Not found";
+        StateHasChanged();
+    }
 }
 ```

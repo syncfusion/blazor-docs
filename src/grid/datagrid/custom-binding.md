@@ -152,18 +152,23 @@ The following image shows the custom bound data displayed in the DataGrid compon
 
 > If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
 
-Custom Adaptor using `AdaptorInstance` property, will support dependency injection by constructor injection alone. You cannot perform property injection here. Ensure to register your service in **Startup.cs** file.
+## Inject service into Custom Adaptor
+
+If you want to inject some of your service into Custom Adaptor and use the service, then you can achieve your requirement by using below way.
+
+Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
 ```csharp
     public void ConfigureServices(IServiceCollection services)
     {
         ...
+        services.AddSingleton<OrderDataAccessLayer>();
         services.AddScoped<CustomAdaptor>();
         services.AddScoped<ServiceClass>();
     }
 ```
 
-The following sample code demonstrates implementing Custom Adaptor with Dependency Injection,
+The following sample code demonstrates injecting service into Custom Adaptor,
 
 ```csharp
 @using Syncfusion.Blazor.Data
@@ -181,44 +186,16 @@ The following sample code demonstrates implementing Custom Adaptor with Dependen
 </SfGrid>
 
 @code{
-    public static List<Order> Orders { get; set; }
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-        }).ToList();
-    }
-    public class ServiceClass
-    {
-        public void ServiceMethod()
-        {
-            Console.WriteLine("1");
-        }
-    }
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double Freight { get; set; }
-    }
+
     public class CustomAdaptor : DataAdaptor
     {
-        public ServiceClass ServiceLocator;
-        //Provide parameter for constructor
-        public CustomAdaptor(ServiceClass prop)
-        {
-            this.ServiceLocator = prop;
-            ServiceLocator.ServiceMethod();
-        }
+        //here you can inject your service
+        [Inject]
+        public OrderDataAccessLayer context { get; set; } = new OrderDataAccessLayer();
         // Performs data Read operation
         public override object Read(DataManagerRequest dm, string key = null)
         {
-            //Access the class's member
-            ServiceLocator.ServiceMethod();
-            IEnumerable<Order> DataSource = Orders;
+            IEnumerable<Order> DataSource = context.GetAllOrders();
             if (dm.Search != null && dm.Search.Count > 0)
             {
                 // Searching

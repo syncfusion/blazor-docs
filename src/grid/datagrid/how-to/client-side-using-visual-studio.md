@@ -4,74 +4,118 @@ component: "DataGrid"
 description: "Learn how to create an Blazor DataGrid component and enable features like paging, filtering, sorting, and grouping in Blazor Client side using Visual Studio."
 ---
 
-<!-- markdownlint-disable MD024 -->
+ <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Essential JS 2 for Blazor client-side in Visual Studio 2019
+# Getting started with Syncfusion Blazor - WebAssembly App in Visual Studio 2019
 
-This article provides a step-by-step introduction to create Blazor application and add Syncfusion Blazor DataGrid component to the application. It also include initializing Blazor DataGrid component and usage of features such as paging, sorting, filtering and grouping using the [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/).
+This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+
+> **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
 ## Prerequisites
 
-The official prerequisites to create and run an ASP.NET Core Blazor Components on Windows environment are described in the [.NET Core Blazor components documentation website](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa/blazor/get-started?view=aspnetcore-3.0&tabs=visual-studio).
+* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
+* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/) with the ASP.NET and web development workload
-* [.NET Core SDK 3.0.100-preview6-012264](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-* [Blazor VS Extension](https://marketplace.visualstudio.com/items?itemName=aspnet.blazor)
+> **Note:** .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
+>
+> Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
 
-## Create Blazor Application
+## Create a Blazor WebAssembly project in Visual Studio 2019
 
-**Step 1:** Install the [Blazor VS Extension](https://marketplace.visualstudio.com/items?itemName=aspnet.blazor) for getting the essential project templates in the Visual Studio 2019 .
+1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
 
-**Step 2:** Choose **File > New > Project...** in the Visual Studio menu bar.
+    ```bash
+    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    ````
 
- ![new project in aspnetcore blazor](../images/new-project.png)
+2. Choose **Create a new project** from the Visual Studio dashboard.
 
-**Step 3:** Configure your new project in ASP.NET Core WebApplication and give your **Project name**.
+    ![new project in aspnetcore blazor](images/new-project.png)
 
- ![configure project](../images/config-project.png)
+3. Select **Blazor App** from the template and click **Next** button.
 
-**Step 4:** Make sure **.NET Core** and **ASP.NET Core 3.0** are selected at the top.
+    ![blazor template](images/blazor-template.png)
 
- ![select framework in top](../images/framework-top.png)
+4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
 
-**Step 5:** Choose the Blazor components template and then click **Create**.
+    ![asp.net core project configuration](images/project-configuration.png)
 
- ![select framework](../images/framework-client.png)
+5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
 
-## Adding Syncfusion packages
+    ![select framework](images/blazor-client-template.png)
 
-**Step 1:** Now, add the **Syncfusion.Blazor** NuGet package to the new application by using the NuGet Package Manager. Right-click the project and select Manage NuGet Packages.
+    > **Note:** ASP.NET Core 3.1 available in Visual Studio 2019 version.
+  
+## Importing Syncfusion Blazor component in the application
 
- ![nuget explorer](../images/nuget-explorer.png)
+1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the **NuGet Package Manager**. Right-click the project and select Manage NuGet Packages.
 
-**Step 2:** Search the **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
+    ![nuget explorer](images/nuget-explorer.png)
 
- ![select nuget](../images/select-nuget.png)
+2. Search **Syncfusion.Blazor** keyword in the Browser tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-**Step 3:** The Essential JS 2 package will be included in the project, after the installation process is completed.
+    ![select nuget](images/select-nuget.png)
 
-**Step 4:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
+3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
 
-```csharp
-        @using Syncfusion.Blazor
-        @using Syncfusion.Blazor.Grids
-```
+4. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
 
-## Adding Scripts and CSS reference
+    ```csharp
+    @using Syncfusion.Blazor
+    @using Syncfusion.Blazor.Grids.
+    ```
 
-You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+5. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-```html
+    ```csharp
+    using Syncfusion.Blazor;
+
+    namespace WebApplication1
+    {
+        public class Program
+        {
+            public static async Task Main(string[] args)
+            {
+                ....
+                ....
+                builder.Services.AddSyncfusionBlazor();
+                await builder.Build().RunAsync();
+            }
+        }
+    }
+    ```
+
+6. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
+
+    ```html
     <head>
-        <environment include="Development">
         ....
         ....
-            <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-            <!---CDN--->
-            @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/fabric.css" rel="stylesheet" />*@
-       </environment>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
-```
+    ```
+
+    > **Note:** The same theme file can be referred through the CDN version by using [`https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css`](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
+    > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
+
+     ```csharp
+    using Syncfusion.Blazor;
+
+     namespace WebApplication1
+     {
+         public class Program
+       {
+             public static async Task Main(string[] args)
+             {
+                ....
+                ....
+                builder.Services.AddSyncfusionBlazor(true);
+                await builder.Build.RunAsync();
+             }
+         }
+     }
+     ```
 
 ## Add DataGrid Component
 
@@ -85,7 +129,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 
 ## Defining Row Data
 
-To bind data for the DataGrid component, you can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataSource.html) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the **OnInitialized** lifecycle of the page.
+To bind data for the DataGrid component, you can assign a IEnumerable object to the [`dataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataSource.html) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the **OnInitialized** lifecycle of the page.
 
 ```csharp
 <SfGrid DataSource="@gridData">
@@ -108,6 +152,7 @@ The columns are automatically generated when columns declaration is empty or und
 The DataGrid has an option to define columns using [`GridColumns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
 
 Let’s check the properties used here:
+
 * We have added [`Field`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) to map with a property name an array of JavaScript objects.
 * We have added [`HeaderText`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~HeaderText.html) to change the title of columns.
 * We have used [`TextAlign`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~TextAlign.html) to change the alignment of columns. By default, columns will be left aligned. To change columns to right align, we need to define `TextAlign` as `Right`.

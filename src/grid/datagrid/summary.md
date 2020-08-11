@@ -17,6 +17,7 @@
 * [Selection](datagrid/selection.md)
 * [Aggregates](datagrid/aggregates.md)
 * [Print](datagrid/print.md)
+* [State Management](datagrid/state-management.md)
 * [Globalization](datagrid/global-local.md)
 * [Toolbar](datagrid/tool-bar.md)
 * [Pdf Export](datagrid/pdf-export.md)
@@ -49,3 +50,5 @@
 * [Cascading DropDownList with DataGrid editing](datagrid/how-to/cascading-dropdownlist-with-grid-editing.md)
 * [Editing with template column](datagrid/how-to/editing-with-template-column.md)
 * [Hide DataGrid Header](datagrid/how-to/hide-grid-header.md)
+* [Display Custom Tooltip in DataGrid cell](datagrid/how-to/display-custom-tool-tip-in-grid-cell.md)
+* [Styling and appearance](datagrid/how-to/grid-styling.md)

@@ -20,31 +20,31 @@ In the below example, we have rendered the datagrid columns [`OrderDate`] as hid
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog">
         <Template>
             @{
-               var Order = (context as Order);
-               <div>
-                   <div class="form-row">
-                       <div class="form-group col-md-6">
-                           <label>Order ID</label>
-                           <SfTextBox ID="OrderID" Value="@(Order.OrderID.ToString())" Enabled="@Data"></SfTextBox>
-                       </div>
-                       <div class="form-group col-md-6">
-                           <label>Customer Name</label>
-                           <SfAutoComplete ID="customerID" FloatLabelType="FloatLabelType.Auto" Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
-                               <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-                           </SfAutoComplete>
-                       </div>
-                       <div class="form-group col-md-6">
-                           <label>Order Date</label>
-                           <SfDatePicker ID="OrderDate" Value="@(Order.OrderDate)"></SfDatePicker>
-                       </div>
-                   </div>
-               </div>
+                var Order = (context as Order);
+                <div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Order ID</label>
+                            <SfNumericTextBox TValue="int?" FloatLabelType="FloatLabelType.Always" @bind-Value="@(Order.OrderID)" Enabled="@Data"></SfNumericTextBox>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Customer Name</label>
+                            <SfAutoComplete ID="customerID" FloatLabelType="FloatLabelType.Always" TItem="Order" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
+                                <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
+                            </SfAutoComplete>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Order Date</label>
+                            <SfDatePicker ID="OrderDate" FloatLabelType="FloatLabelType.Always" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
+                        </div>
+                    </div>
+                </div>
             }
         </Template>
     </GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new { required=true})" TextAlign="TextAlign.Center"  Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="120" ></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new { required=true})" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Visible="false" Format="d" TextAlign="TextAlign.Center" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
@@ -56,7 +56,7 @@ In the below example, we have rendered the datagrid columns [`OrderDate`] as hid
     public bool Enabled = true;
     public bool Data = false;
     public List<Order> GridData = new List<Order>
-    {
+{
         new Order() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, OrderDate = DateTime.Now.AddDays(-2) },
         new Order() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, OrderDate = DateTime.Now.AddDays(-5) },
         new Order() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, OrderDate = DateTime.Now.AddDays(-12) },
@@ -68,7 +68,7 @@ In the below example, we have rendered the datagrid columns [`OrderDate`] as hid
 
     public void ActionBeginHandler(ActionEventArgs<Order> args)
     {
-        if(args.RequestType == Syncfusion.Blazor.Grids.Action.Add)
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Add)
         {
             Data = true;
         }

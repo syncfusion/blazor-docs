@@ -263,22 +263,16 @@ The following screenshot shows filtering using custom component
 
 ### Change default filter operator
 
-You can change the default filter operator by extending [`Filter property`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.ColumnModel~Filter.html) in the column.
+You can change the default filter operator by extending `FilterSettings` property in the column.
 In the following sample, we have changed the default operator for CustomerID column as **contains** from **startswith**
 
 ```csharp
 @using Syncfusion.Blazor
 
-@{
-    var Filtering = new
-    {@@operator = "contains"
-};
-}
-
 <SfGrid @ref="@Grid" ID="Egrid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="150" Filter="@Filtering"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="150" FilterSettings="@(new FilterSettings{ Operator = Operator.Contains })"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
     </GridColumns>
@@ -365,7 +359,7 @@ The following screenshot represents Menu filter
 
 You can use **Menu** type filter in the datagrid. To do so, set the [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridFilterSettings~Type.html) as **Menu** in the **GridFilterSettings**.
 In the following sample the [`FilterTemplate`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~FilterTemplate.html) property is used to add custom components to a particular column.
-To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as PredicateModel to get filter values inside template.
+To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -376,7 +370,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120">
             <FilterTemplate>
-                <SfDropDownList Placeholder="OrderID" ID="OrderID" Value="@((int?)(context as PredicateModel).Value)" TItem="Order" TValue="int?" DataSource="@(Orders)">
+                <SfDropDownList Placeholder="OrderID" ID="OrderID" @bind-Value="@((context as PredicateModel<int?>).Value)" TItem="Order" TValue="int?" DataSource="@(Orders)">
                     <DropDownListFieldSettings Value="OrderID" Text="OrderID"></DropDownListFieldSettings>
                 </SfDropDownList>
             </FilterTemplate>
@@ -429,7 +423,7 @@ In the following sample menu filter is enabled by default and checkbox filter is
   <GridFilterSettings Type ="Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
    <GridColumns>
      <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Filter="@(new{ type= "Menu" })" Width="150"></GridColumn>
+     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" FilterSettings="@(new FilterSettings{Type = Syncfusion.Blazor.Grids.FilterType.Menu })" Width="150"></GridColumn>
      <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
      <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
    </GridColumns>

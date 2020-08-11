@@ -25,6 +25,7 @@
 * [Clipboard](datagrid/clipboard.md)
 * [Context Menu](datagrid/context-menu.md)
 * [Accessibility](datagrid/accessibility.md)
+* [WebAssembly Performance](datagrid/webassembly-performance.md)
 * [Events](datagrid/events.md)
 * [Getting Started-Client side using CLI](datagrid/how-to/client-side-using-cli.md)
 * [Getting Started-Server side using CLI](datagrid/how-to/server-side-using-cli.md)

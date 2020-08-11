@@ -256,9 +256,9 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 @using Syncfusion.Blazor.Data
 <SfTreeView TValue="RemoteData">
     <TreeViewFieldsSettings TValue="RemoteData" Query="new sf.data.Query().from('Employees').select('EmployeeID,FirstName,Title').take(5)" Id="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
-        <SfDataManager url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         <TreeViewFieldChild TValue="RemoteData" Query="new sf.data.Query().from('Orders').select('OrderID,EmployeeID,ShipName').take(5)" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
-            <SfDataManager url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </TreeViewFieldChild>
     </TreeViewFieldsSettings>
 </SfTreeView>
@@ -532,8 +532,8 @@ Now, you can configure the TreeView using the **‘SfDataManager’** to interac
             <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
         </TreeViewFieldsSettings>
         <TreeViewEvents TValue="Employee" NodeClicked="nodeClicked"></TreeViewEvents>
-        <SfContextMenu @ref="menu" Target="#treeview" Items="@MenuItems">
-            <ContextMenuEvents ItemSelected="MenuSelect"></ContextMenuEvents>
+        <SfContextMenu TValue="MenuItem" @ref="menu" Target="#treeview" Items="@MenuItems">
+            <ContextMenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></ContextMenuEvents>
         </SfContextMenu>
     </SfTreeView>
 </div>
@@ -542,7 +542,7 @@ Now, you can configure the TreeView using the **‘SfDataManager’** to interac
 
     SfTreeView<Employee> tree;
 
-    SfContextMenu menu;
+    SfContextMenu<MenuItem> menu;
 
     string selectedId;
     int index;
@@ -616,7 +616,7 @@ Now, you can configure the TreeView using the **‘SfDataManager’** to interac
     }
 
     // Triggers when context menu is selected
-    public void MenuSelect(MenuEventArgs args)
+    public void MenuSelect(MenuEventArgs<MenuItem> args)
     {
         string selectedText = args.Item.Text;
         if (selectedText == "Edit")

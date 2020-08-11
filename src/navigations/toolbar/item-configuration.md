@@ -121,13 +121,14 @@ The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioB
         <ToolbarItem></ToolbarItem>
         <ToolbarItem Type="ItemType.Input">
             <Template>
-                <SfRadioButton Label="Radio" Name="default" Checked="true"></SfRadioButton>
+                <SfRadioButton Label="Radio" Name="default" Value="Radio" @bind-Checked="CheckedValue"></SfRadioButton>
             </Template>
         </ToolbarItem>
     </ToolbarItems>
 </SfToolbar>
 
 @code {
+    private string CheckedValue = "Radio";
     public class Games
     {
         public string Id { get; set; }
@@ -138,7 +139,7 @@ The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioB
     new Games() { Id= "Game4", Text= "Cricket" },
     new Games() { Id= "Game5", Text= "Football" },
     new Games() { Id= "Game6", Text= "Golf" },
-    new Games() { Id= "Game10", Text= "Tennis"}s
+    new Games() { Id= "Game10", Text= "Tennis"}
   };
 }
 ```

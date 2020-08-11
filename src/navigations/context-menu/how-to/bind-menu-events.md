@@ -14,11 +14,11 @@ To bind the menu event in the context menu [`ItemSelected`](https://help.syncfus
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
 <SfContextMenu Target="#target" Items="@MenuItems">
-    <ContextMenuEvents ItemSelected="@select"></ContextMenuEvents>
+    <ContextMenuEvents TValue="MenuItem" ItemSelected="@select"></ContextMenuEvents>
 </SfContextMenu>
 
 @code {
-    public MenuItemModel SelectedItem;
+    public MenuItem SelectedItem;
     public List<MenuItem> MenuItems = new List <MenuItem>
     {
         new MenuItem{ Text = "Cut" },
@@ -26,7 +26,7 @@ To bind the menu event in the context menu [`ItemSelected`](https://help.syncfus
         new MenuItem{ Text = "Paste" }
     };
 
-    private void select(MenuEventArgs args) {
+    private void select(MenuEventArgs<MenuItem> args) {
     this.SelectedItem = args.Item; // Triggers when item is selected
 }
 }

@@ -8,6 +8,10 @@ description: "Rendering Tab using Blazor."
 
 This section briefly explains about how to include a `Tabs` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/server-side-blazor/) page for the introduction and configuring the common specifications.
 
+To get start quickly with Blazor Tabs, you can check on this video:
+
+`youtube:8OgywAA_XHg`
+
 ## Importing Syncfusion Blazor component in the application
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
@@ -18,7 +22,7 @@ This section briefly explains about how to include a `Tabs` in your Blazor serve
     <head>
         ...
             <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-            @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
+            @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
         ...
     </head>
 ```
@@ -28,7 +32,7 @@ This section briefly explains about how to include a `Tabs` in your Blazor serve
  ```html
     <head>
         ...
-            <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />
+            <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
             <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
         ...
     </head>
@@ -70,7 +74,7 @@ namespace BlazorApplication
  ```html
     <head>
         ...
-            <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />
+            <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
             <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
         ...
     </head>
@@ -103,10 +107,6 @@ Now, add the Syncfusion Blazor Tabs component in any web page (razor) in the `Pa
     </TabItems>
 </SfTab>
 ```
-
-To get start quickly with Blazor Tabs, you can also check on this video:
-
-`youtube:8OgywAA_XHg`
 
 ## Run the application
 
@@ -173,7 +173,7 @@ The property `SelectedItem` supports two way property binding, in the following 
 @using Syncfusion.Blazor.Navigations
 
 Selected Tab
-<SfNumericTextBox TValue="double" @bind-Value="@SelectedTab" Min="0" Max="4" Width="200px"></SfNumericTextBox>
+<SfNumericTextBox TValue="int" @bind-Value="@SelectedTab" Min="0" Max="4" Width="200px"></SfNumericTextBox>
 
 <SfTab @bind-SelectedItem="SelectedTab">
     <TabItems>
@@ -206,7 +206,7 @@ Selected Tab
 </SfTab>
 
 @code {
-    private double SelectedTab = 0;
+    private int SelectedTab = 0;
 }
 ```
 

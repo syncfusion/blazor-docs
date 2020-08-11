@@ -14,24 +14,26 @@ The items visible in the Context Menu can be changed dynamically based on the ta
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
 <SfContextMenu Target="#target" Items="MenuItems" @ref="ContextMenuObj">
-    <ContextMenuEvents OnOpen="Open"></ContextMenuEvents>
+    <ContextMenuEvents TValue="ContextMenuItem" OnOpen="Open"></ContextMenuEvents>
 </SfContextMenu>
 
 @code {
-    SfContextMenu ContextMenuObj;
-    public List<MenuItem> MenuItems = new List<MenuItem>
+    SfContextMenu<ContextMenuItem> ContextMenuObj;
+    public List<ContextMenuItem> MenuItems = new List<ContextMenuItem>
     {
-        new MenuItem{ Text = "Cut" },
-        new MenuItem{ Text = "Copy" },
-        new MenuItem{ Text = "Paste" },
-        new MenuItem{ Text = "Add" },
-        new MenuItem{ Text = "Edit" },
-        new MenuItem{ Text = "Delete" }
+        new ContextMenuItem{ Text = "Cut" },
+        new ContextMenuItem{ Text = "Copy" },
+        new ContextMenuItem{ Text = "Paste" },
+        new ContextMenuItem{ Text = "Add" },
+        new ContextMenuItem{ Text = "Edit" },
+        new ContextMenuItem{ Text = "Delete" }
     };
 
-    public void Open(BeforeOpenCloseMenuEventArgs args)
+    public List<string> HideItems = new List<string>() { "Cut", "Copy", "Paste"};
+
+    public void Open(BeforeOpenCloseMenuEventArgs<ContextMenuItem> args)
     {
-        this.MenuObj.HideItems(new string[] { "Cut", "Copy", "Paste" });
+        this.ContextMenuObj.HideItems(this.HideItems);
     }
 }
 

@@ -16,28 +16,28 @@ In the following example, the **Display Settings** in parent items and **Medium 
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
 <SfContextMenu Target="#target" Items="@MenuItems" @ref="ContextMenuObj">
-    <ContextMenuEvents Created="create" OnOpen="open"></ContextMenuEvents>
+    <ContextMenuEvents TValue="ContextMenuItem" Created="create" OnOpen="open"></ContextMenuEvents>
 </SfContextMenu>
 
 @code {
-    SfContextMenu ContextMenuObj;
-    public List<MenuItem> MenuItems = new List<MenuItem>
+    SfContextMenu<ContextMenuItem> ContextMenuObj;
+    public List<ContextMenuItem> MenuItems = new List<ContextMenuItem>
     {
-        new MenuItem{ Text="View", Items= new List<MenuItem>{
-            new MenuItem { Text="Large Icons"},
-            new MenuItem { Text="Medium Icons"},
-            new MenuItem { Text="Small Icons"} } },
-        new MenuItem{ Text="Sort By" },
-        new MenuItem{ Text="Refresh" },
-        new MenuItem{ Separator=true },
-        new MenuItem{ Text="New" },
-        new MenuItem{ Separator=true},
-        new MenuItem{ Text="Display Settings"},
-        new MenuItem{ Text="Personalize"}
+        new ContextMenuItem{ Text="View", Items= new List<ContextMenuItem>{
+            new ContextMenuItem { Text="Large Icons"},
+            new ContextMenuItem { Text="Medium Icons"},
+            new ContextMenuItem { Text="Small Icons"} } },
+        new ContextMenuItem{ Text="Sort By" },
+        new ContextMenuItem{ Text="Refresh" },
+        new ContextMenuItem{ Separator=true },
+        new ContextMenuItem{ Text="New" },
+        new ContextMenuItem{ Separator=true},
+        new ContextMenuItem{ Text="Display Settings"},
+        new ContextMenuItem{ Text="Personalize"}
     };
-        public string[] SubMenuItem = new string[] { "Medium Icons" };
-        public string[] MenuItem = new string[] { "Display Settings" };
-        private void open(Syncfusion.Blazor.Navigations.BeforeOpenCloseMenuEventArgs args)
+        public List<string> SubMenuItem = new List<string> { "Medium Icons" };
+        public List<string> MenuItem = new List<string> { "Display Settings" };
+        private void open(Syncfusion.Blazor.Navigations.BeforeOpenCloseMenuEventArgs<ContextMenuItem> args)
         {
             ContextMenuObj.EnableItems(this.SubMenuItem, false);
         }

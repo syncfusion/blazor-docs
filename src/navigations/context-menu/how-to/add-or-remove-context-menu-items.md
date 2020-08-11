@@ -16,11 +16,11 @@ In the following example, the **Display Settings** menu items are added before t
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
 <SfContextMenu Target="#target" Items="@MenuItems" @ref="ContextMenuObj">
-    <ContextMenuEvents Created="create"></ContextMenuEvents>
+    <ContextMenuEvents TValue="MenuItem" Created="create"></ContextMenuEvents>
 </SfContextMenu>
 
 @code {
-    SfContextMenu ContextMenuObj;
+    SfContextMenu<MenuItem> ContextMenuObj;
     public List<MenuItem> MenuItems = new List<MenuItem>
     {
         new MenuItem{ Text="View", Items= new List<MenuItem>{
@@ -34,7 +34,7 @@ In the following example, the **Display Settings** menu items are added before t
         new MenuItem{ Separator=true},
         new MenuItem{ Text="Personalize"}
     };
-    public string[] RemoveItem = new string[] { "Paste" };
+    public List<string> RemoveItem = new List<string>() { "Paste" };
     public List<MenuItem> InsertAfterItem = new List<MenuItem>
     {
         new MenuItem{Text = "Sort By"}

@@ -41,9 +41,9 @@ Default [ExpandMode](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion
 
 @using Syncfusion.Blazor.Navigations
 
-<SfAccordion ExpandMode="ExpandMode.Multiple">
+<SfAccordion ExpandMode="ExpandMode.Multiple" ExpandedIndices="new double[] { 0, 2 }">
     <AccordionItems>
-        <AccordionItem Expanded="true" Header="ASP.NET" Content="Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services."></AccordionItem>
+        <AccordionItem Header="ASP.NET" Content="Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services."></AccordionItem>
         <AccordionItem Header="ASP.NET MVC" Content="The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller."></AccordionItem>
         <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."></AccordionItem>
     </AccordionItems>
@@ -54,3 +54,65 @@ Default [ExpandMode](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion
 Output be like the below.
 
 ![Accordion Control with expand mode of multiple type](./images/acrdnMultiple.png)
+
+## Expanding the items
+
+By default, accordion items were in collapsed state on initial load. To expand particular item(s) on initial load, you can use either `ExpandedIndices` property or `Expanded` option within `AccordionItem` tag helper. In the following code example, `ExpandedIndices` is used to expand the second and third item.
+
+```csharp
+@using Syncfusion.Blazor.Navigations
+
+<SfAccordion DataSource="@AccordionItems" ExpandedIndices="new int[] { 1, 2 }">
+    <AccordionTemplates>
+        <HeaderTemplate>
+            <div>@((context as AccordionData).EmployeeName)</div>
+        </HeaderTemplate>
+        <ItemTemplate>
+            @{
+                AccordionData ContextData = context as AccordionData;
+                <div>
+                    <div><b>Employee ID: </b>@ContextData.EmployeeId</div>
+                    <div><b>Designation: </b>@ContextData.Designation</div>
+                </div>
+            }
+        </ItemTemplate>
+    </AccordionTemplates>
+</SfAccordion>
+
+@code{
+    List<AccordionData> AccordionItems = new List<AccordionData>()
+    {
+        new AccordionData
+        {
+        EmployeeId = 1,
+        EmployeeName = "Laura Callahan",
+        Designation = "Product Manager",
+        },
+        new AccordionData
+        {
+        EmployeeId = 3,
+        EmployeeName = "Andrew Fuller",
+        Designation = "Team Lead",
+        },
+        new AccordionData
+        {
+        EmployeeId = 4,
+        EmployeeName = "Anne Dodsworth",
+        Designation = "Developer"
+        },
+        new AccordionData
+        {
+        EmployeeId = 5,
+        EmployeeName = "Nancy Davolio",
+        Designation = "Product Manager"
+        }
+    };
+
+    public class AccordionData
+    {
+        public string EmployeeName { get; set; }
+        public int EmployeeId { get; set; }
+        public string Designation { get; set; }
+    }
+}
+```

@@ -8,7 +8,7 @@ description: "This section helps to learn how to create the Menu Bar in Blazor a
 
 This section briefly explains about how to include Menu Bar Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/) page for the introduction and configuring the common specifications.
 
-To get start quickly with ListBox Component using Blazor, you can check on this video:
+To get start quickly with Menu Bar Component using Blazor, you can check on this video:
 
 `youtube:TBoUetqLnps`
 

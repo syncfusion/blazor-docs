@@ -35,16 +35,17 @@ The Context Menu item have an icon/image in it to provide visual representation 
         color: gray;
         user-select: none;
     }
+
     .e-cut::before {
-        content: '\e279';
+        content: '\e73f';
     }
 
     .e-copy::before {
-        content: '\e280';
+        content: '\e77b';
     }
 
     .e-paste::before {
-        content: '\e601';
+        content: '\e739';
     }
 </style>
 

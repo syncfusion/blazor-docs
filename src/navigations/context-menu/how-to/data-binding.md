@@ -11,7 +11,6 @@ To bind local data source to the Context Menu, menu items are populated from dat
 ```csharp
 
 @using Syncfusion.Blazor.Navigations
-@using BlazorApp.MenuItems
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
 <SfContextMenu Target="#target" Items="@CustomItems.GetItems()"></SfContextMenu>
@@ -34,6 +33,7 @@ To bind local data source to the Context Menu, menu items are populated from dat
 
 ```csharp
 
+using System.Collections.Generic;
 public class CustomItems
     {
         public CustomItems()
@@ -41,21 +41,21 @@ public class CustomItems
 
         }
 
-        public CustomItems(string Text, int Id)
+        public CustomItems(string Text, string Id)
         {
             this.Text = Text;
             this.Id = Id;
         }
 
         public string Text { get; set; }
-        public int Id { get; set; }
+        public string Id { get; set; }
         public static List<CustomItems> GetItems()
         {
             List<CustomItems> Items = new List<CustomItems>();
-            Items.Add(new CustomItems { Text = "Cut", Id = 1 });
-            Items.Add(new CustomItems { Text = "Copy", Id = 2 });
-            Items.Add(new CustomItems { Text = "Paste", Id = 3 });
-            Items.Add(new CustomItems { Text = "New", Id = 4 });
+            Items.Add(new CustomItems { Text = "Cut", Id = "1" });
+            Items.Add(new CustomItems { Text = "Copy", Id = "2" });
+            Items.Add(new CustomItems { Text = "Paste", Id = "3" });
+            Items.Add(new CustomItems { Text = "New", Id = "4" });
             return Items;
         }
     }

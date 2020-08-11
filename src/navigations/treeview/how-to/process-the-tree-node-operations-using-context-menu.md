@@ -13,8 +13,8 @@ Following is an example which demonstrates the above cases which are used to man
         <SfTreeView TValue="EmployeeData" @ref="tree" AllowDragAndDrop="true" SelectedNodes="@selectedNodes">
             <TreeViewFieldsSettings Id="Id" ParentID="Pid" DataSource="@ListData" Text="Name" HasChildren="HasChild" Expanded="Expanded"></TreeViewFieldsSettings>
             <TreeViewEvents TValue="EmployeeData" NodeSelected="OnSelect" NodeClicked="nodeClicked"></TreeViewEvents>
-            <SfContextMenu @ref="menu" Target="#treeview" Items="@MenuItems">
-                <ContextMenuEvents ItemSelected="MenuSelect"></ContextMenuEvents>
+            <SfContextMenu TValue="MenuItem" @ref="menu" Target="#treeview" Items="@MenuItems">
+                <ContextMenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></ContextMenuEvents>
             </SfContextMenu>
         </SfTreeView>
     </div>
@@ -25,7 +25,7 @@ Following is an example which demonstrates the above cases which are used to man
     SfTreeView<EmployeeData> tree;
 
     // Reference for context menu
-    SfContextMenu menu;
+    SfContextMenu<MenuItem> menu;
 
     string selectedId;
     string[] selectedNodes = new string[] { };
@@ -96,7 +96,7 @@ Following is an example which demonstrates the above cases which are used to man
     }
 
     // Triggers when context menu is selected
-    public void MenuSelect(MenuEventArgs args)
+    public void MenuSelect(MenuEventArgs<MenuItem> args)
     {
         string selectedText;
         selectedText = args.Item.Text;

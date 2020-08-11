@@ -8,6 +8,10 @@ description: "Rendering Toolbar using Blazor."
 
 This section briefly explains about how to include a `Toolbar` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/server-side-blazor/) page for the introduction and configuring the common specifications.
 
+To get start quickly with Blazor Toolbar, you can check on this video:
+
+`youtube:3brT3ztZErE`
+
 ## Importing Syncfusion Blazor component in the application
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
@@ -18,7 +22,7 @@ This section briefly explains about how to include a `Toolbar` in your Blazor se
     <head>
         ...
             <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-            @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css " rel="stylesheet" />*@
+            @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css " rel="stylesheet" />*@
         ...
     </head>
 ```
@@ -28,7 +32,7 @@ This section briefly explains about how to include a `Toolbar` in your Blazor se
  ```html
     <head>
         ...
-            <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />
+            <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
             <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
         ...
     </head>
@@ -70,7 +74,7 @@ namespace BlazorApplication
  ```html
     <head>
         ...
-            <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />
+            <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
             <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
         ...
     </head>
@@ -98,15 +102,11 @@ Now, add the Syncfusion Blazor Toolbar component in any web page (razor) in the 
 </SfToolbar>
 ```
 
-To get start quickly with Blazor Toolbar, you can also check on this video:
-
-`youtube:3brT3ztZErE`
-
 ## Run the application
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-![Dfeault Toolbar](./images/browser-output.png)
+![Default Toolbar](./images/browser-output.png)
 
 ## See Also
 

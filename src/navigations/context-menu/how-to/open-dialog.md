@@ -17,11 +17,13 @@ In the following sample, Dialog will open while clicking `Save As...` item.
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
 <SfContextMenu Target="#target" Items="@MenuItems">
-    <ContextMenuEvents ItemSelected="select"></ContextMenuEvents>
+    <ContextMenuEvents TValue="MenuItem" ItemSelected="select"></ContextMenuEvents>
 </SfContextMenu>
 <SfDialog Content="@Value" Visible="false" Target="#target" Width="200px" Height="110px" @ref="DialogObj">
     <DialogButtons>
-        <DialogButton ButtonModel="@Button" OnClick="clicked"></DialogButton>
+        <DialogButton OnClick="@clicked">
+            <DialogButtonModel Content="SUBMIT" IsPrimary="true"></DialogButtonModel>
+        </DialogButton>
     </DialogButtons>
 </SfDialog>
 
@@ -43,14 +45,8 @@ In the following sample, Dialog will open while clicking `Save As...` item.
     {
         DialogObj.Hide();
     }
-    public class ButtonModel
-    {
-        public string Content { get; set; }
-        public bool IsPrimary { get; set; }
-    }
-    public ButtonModel Button = new ButtonModel { Content = "Submit", IsPrimary = true };
 
-    private void select(MenuEventArgs args)
+    private void select(MenuEventArgs<MenuItem> args)
     {
         if (args.Item.Text == "Save As...")
         {

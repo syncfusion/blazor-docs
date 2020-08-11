@@ -13,6 +13,7 @@ Default animation is given as `SlideLeftIn` for previous tab animation and `Slid
 The sample demonstrates some types of animation that suits our Tabs. You can check all the animation effects here.
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
 
@@ -21,9 +22,9 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
         <label> Previous Animation </label>
     </div>
     <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-        <SfDropDownList TValue="string" DataSource="@AnimationData" Index="0" TItem="AnimationEffect">
-            <DropDownListEvents ValueChange="PreviousChange" TValue="string"></DropDownListEvents>
-            <DropDownListFieldSettings Value="Text"></DropDownListFieldSettings>
+        <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" Index="0" TItem="Effect">
+            <DropDownListEvents ValueChange="PreviousChange" TValue="AnimationEffect"></DropDownListEvents>
+            <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
         </SfDropDownList>
     </div>
 </div>
@@ -32,9 +33,9 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
         <label> Next Animation </label>
     </div>
     <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-        <SfDropDownList TValue="string" DataSource="@AnimationData" Index="1" TItem="AnimationEffect">
-            <DropDownListEvents ValueChange="NextChange" TValue="string"></DropDownListEvents>
-            <DropDownListFieldSettings Value="Text"></DropDownListFieldSettings>
+        <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" Index="1" TItem="Effect">
+            <DropDownListEvents ValueChange="NextChange" TValue="AnimationEffect"></DropDownListEvents>
+            <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
         </SfDropDownList>
     </div>
 </div>
@@ -54,7 +55,8 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
         <TabItem Content="@Content2">
             <ChildContent>
                 <TabHeader Text="Facebook"></TabHeader>
-            </ChildContent></TabItem>
+            </ChildContent>
+        </TabItem>
         <TabItem Content="@Content3">
             <ChildContent>
                 <TabHeader Text="WhatsApp"></TabHeader>
@@ -64,8 +66,8 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
 </SfTab>
 
 @code{
-    public string PreviousEffect { get; set; }
-    public string NextEffect { get; set; }
+    public AnimationEffect PreviousEffect { get; set; }
+    public AnimationEffect NextEffect { get; set; }
 
     public string Content1 = "Twitter is an online social networking service that enables users to send and read short 140-character " +
             "messages called 'tweets'. Registered users can read and post tweets, but those who are unregistered can only read " +
@@ -85,28 +87,28 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
             "base of up to one billion,[10] making it the most globally popular messaging application. WhatsApp Inc., based in " +
             "Mountain View, California, was acquired by Facebook Inc. on February 19, 2014, for approximately US$19.3 billion.";
 
-    List<AnimationEffect> AnimationData = new List<AnimationEffect> {
-        new AnimationEffect() { ID= "SlidLeftIn", Text= "SlidLeftIn" },
-        new AnimationEffect() { ID= "SlideRightIn", Text= "SlideRightIn" },
-        new AnimationEffect() { ID= "FadeIn", Text= "FadeIn" },
-        new AnimationEffect() { ID= "FadeOut", Text= "FadeOut" },
-        new AnimationEffect() { ID= "FadeZoomIn", Text= "FadeZoomIn" },
-        new AnimationEffect() { ID= "FadeZoomOut", Text= "FadeZoomOut" },
-        new AnimationEffect() { ID= "ZoomIn", Text= "ZoomIn" },
-        new AnimationEffect() { ID= "ZoomOut", Text= "ZoomOut" },
-        new AnimationEffect() { ID= "None", Text= "None" }
+    List<Effect> AnimationData = new List<Effect> {
+        new Effect() { ID= AnimationEffect.SlideLeftIn, Text= "SlidLeftIn" },
+        new Effect() { ID= AnimationEffect.SlideRightIn, Text= "SlideRightIn" },
+        new Effect() { ID= AnimationEffect.FadeIn, Text= "FadeIn" },
+        new Effect() { ID= AnimationEffect.FadeOut, Text= "FadeOut" },
+        new Effect() { ID= AnimationEffect.FadeZoomIn, Text= "FadeZoomIn" },
+        new Effect() { ID= AnimationEffect.FadeZoomOut, Text= "FadeZoomOut" },
+        new Effect() { ID= AnimationEffect.ZoomIn, Text= "ZoomIn" },
+        new Effect() { ID= AnimationEffect.ZoomOut, Text= "ZoomOut" },
+        new Effect() { ID= AnimationEffect.None, Text= "None" }
     };
-    public void PreviousChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public void PreviousChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<AnimationEffect> args)
     {
-        this.PreviousEffect = args.Value as string;
+        this.PreviousEffect = args.Value;
     }
-    public void NextChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public void NextChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<AnimationEffect> args)
     {
-        this.NextEffect = args.Value as string;
+        this.NextEffect = args.Value;
     }
-    public class AnimationEffect
+    public class Effect
     {
-        public string ID { get; set; }
+        public AnimationEffect ID { get; set; }
         public string Text { get; set; }
     }
 }

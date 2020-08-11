@@ -23,7 +23,7 @@ In the following code example, there are two tabs. The first tab have a login pa
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Grids
 
-<SfTab LoadOn="ContentLoad.Dynamic" SelectedItem="@SelectedTab">
+<SfTab LoadOn="ContentLoad.Dynamic" @bind-SelectedItem="@SelectedTab">
     <TabItems>
         <TabItem Disabled="@Disabled">
             <HeaderTemplate>Login</HeaderTemplate>
@@ -181,7 +181,7 @@ In the following code example, Calendar and Scheduler have been rendered in firs
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 
-<SfTab LoadOn="ContentLoad.Init" SelectedItem="@SelectedTab">
+<SfTab LoadOn="ContentLoad.Init" @bind-SelectedItem="@SelectedTab">
     <TabItems>
         <TabItem>
             <HeaderTemplate>Sign in</HeaderTemplate>
@@ -193,7 +193,7 @@ In the following code example, Calendar and Scheduler have been rendered in firs
                                 <SfTextBox Placeholder="Enetr name" @bind-Value="UserName"></SfTextBox>
                             </div>
                             <div class="e-float-input">
-                                <SfTextBox Placeholder="Email" @bind-Value="MailAddress" Type="email"></SfTextBox>
+                                <SfTextBox Placeholder="Email" @bind-Value="MailAddress" Type="InputType.Email"></SfTextBox>
                             </div>
                         </div>
                     </form>
@@ -226,7 +226,7 @@ In the following code example, Calendar and Scheduler have been rendered in firs
                                 <SfTextBox Placeholder="Enetr name" @bind-Value="UserName"></SfTextBox>
                             </div>
                             <div class="e-float-input">
-                                <SfTextBox @bind-Value="MailAddress" Placeholder="Email" Type="email"></SfTextBox>
+                                <SfTextBox @bind-Value="MailAddress" Placeholder="Email" Type="InputType.Email"></SfTextBox>
                             </div>
                             <div class="e-float-input">
                                 <SfTextBox @bind-Value="Comments" Placeholder="Share your comments"></SfTextBox>

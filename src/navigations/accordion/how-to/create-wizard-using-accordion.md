@@ -31,7 +31,7 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
                                 <SfTextBox @ref="@EmailTextbox" Placeholder="Email"></SfTextBox>
                             </div>
                             <div class="e-float-input">
-                                <SfTextBox @ref="@PasswordTextbox" Placeholder="Password" Type="password"></SfTextBox>
+                                <SfTextBox @ref="@PasswordTextbox" Placeholder="Password" Type="InputType.Password"></SfTextBox>
                             </div>
                         </div>
                     </form>
@@ -121,7 +121,8 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
         <Content><div>Your payment successfully processed</div></Content>
     </DialogTemplates>
     <DialogButtons>
-        <DialogButton ButtonModel="@OkBtn" OnClick="@OnSubmit" />
+        <DialogButton OnClick="@OnSubmit" >
+        <DialogButtonModel Content="OK" IsPrimary="true" ></DialogButtonModel>
     </DialogButtons>
 </SfDialog>
 
@@ -137,7 +138,7 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
     public SfNumericTextBox<int> MobileNumberTextbox { get; set; }
     public SfNumericTextBox<int> CvvTextbox { get; set; }
     public Boolean EmptyField { get; set; } = false;
-    public Syncfusion.Blazor.Buttons.ButtonModel OkBtn = new Syncfusion.Blazor.Buttons.ButtonModel { Content = "OK", IsPrimary = true };
+
     public void OnCreate()
     {
         Accordion.EnableItem(1, false);

@@ -15,11 +15,11 @@ and to close Context Menu [`Close`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 <div id="target">
     <SfContextMenu Target="#target" Items="@MenuItems" @ref="ContextMenuObj"></SfContextMenu>
-    <SfButton CssClass="e-btn" Onclick="open">Open ContextMenu</SfButton>
+    <SfButton CssClass="e-btn" OnClick="open">Open ContextMenu</SfButton>
 </div>
 
 @code {
-    SfContextMenu ContextMenuObj;
+    SfContextMenu<MenuItem> ContextMenuObj;
     public List<MenuItem> MenuItems = new List<MenuItem>{
         new MenuItem { Text = "Cut" },
         new MenuItem { Text = "Copy" },
@@ -27,7 +27,7 @@ and to close Context Menu [`Close`](https://help.syncfusion.com/cr/blazor/Syncfu
     };
     private void open()
     {
-        ContextMenuObj.Open(40, 20);
+        ContextMenuObj.Open(280, 110);
     }
 }
 

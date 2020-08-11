@@ -2,6 +2,7 @@
 * [Sidebar for specific content](sidebar/custom-context.md)
 * [Responsive Sidebar](sidebar/auto-close.md)
 * [Dock](sidebar/docking-sidebar.md)
+* [CSS Structure](sidebar/style.md)
 * [Initialize the Sidebar with ListView](sidebar/how-to/sidebar-with-list-view.md)
 * [Open and close the Sidebar](sidebar/how-to/open-and-close-the-sidebar.md)
 * [Multiple Sidebar](sidebar/how-to/multiple-sidebar.md)

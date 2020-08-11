@@ -242,7 +242,8 @@ You can go back on each tab using buttons available in it and tabs are disabled 
                 <Content><div>Your payment successfully processed</div></Content>
             </DialogTemplates>
             <DialogButtons>
-                <DialogButton ButtonModel="@OkBtn" OnClick="@OnSubmit" />
+                    <DialogButton OnClick="@OnSubmit">
+                    <DialogButtonModel Content="OK" IsPrimary="true"></DialogButtonModel>
             </DialogButtons>
         </SfDialog>
     </div>
@@ -274,7 +275,7 @@ You can go back on each tab using buttons available in it and tabs are disabled 
     public SfDropDownList<string, DropdownFields> ThirdPassengerBerth;
     public bool EmptyField { get; set; } = false;
     public bool SameField { get; set; } = false;
-    public Syncfusion.Blazor.Buttons.ButtonModel OkBtn = new Syncfusion.Blazor.Buttons.ButtonModel { Content = "OK", IsPrimary = true };
+
     public List<PassengerFields> PassengerData;
     public class CitiesFields
     {

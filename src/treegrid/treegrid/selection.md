@@ -15,7 +15,7 @@ The tree grid supports two types of selection that can be set by using the [`Typ
 * **Multiple**: Allows you to select multiple rows or cells.
 To perform the multi-selection, press and hold CTRL key and click the desired rows or cells. To select range of rows or cells, press and hold the SHIFT key and click the rows or cells.
 
-{% aspTab template="treegrid/selection/select", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/selection/select", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -28,7 +28,7 @@ the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.
 * **Cell**: Allows you to select only cells.
 * **Both**: Allows you to select rows and cells at the same time.
 
-{% aspTab template="treegrid/selection/selectmode", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/selection/selectmode", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -46,7 +46,7 @@ the [`CellSelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 * **Flow**: The Flow value is set by default. The range of cells are selected between the start index and end index that includes in between cells of rows.
 * **Box**: Range of cells are selected from the start and end column indexes that includes in between cells of rows within the range.
 
-{% aspTab template="treegrid/selection/cellselection", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/selection/cellselection", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -63,7 +63,7 @@ Checkbox selection provides an option to select multiple tree grid records with 
 
 To render the checkbox in each tree grid row, you need to use checkbox column with type as **checkbox** using the column [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Type.html) property.
 
-{% aspTab template="treegrid/selection/checkbox", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/selection/checkbox", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -85,7 +85,7 @@ In checkbox selection, selection can also be done by clicking on rows. This sele
 * **ResetOnRowClick**: In ResetOnRowClick mode, when user clicks on a row it will reset previously selected row. Also you can perform multiple-selection in this mode by press
 and hold CTRL key and click the desired rows. To select range of rows, press and hold the SHIFT key and click the rows.
 
-{% aspTab template="treegrid/selection/checkbox-mode", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/selection/checkbox-mode", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -93,11 +93,25 @@ The following output is displayed as a result of the above code example.
 
 ![Initial Select](images/checkbox-mode.gif)
 
+## Toggle Selection
+
+The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [`EnableToggle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~EnableToggle.html) property of TreeGridSelectionSettings as true. If you click on the selected row or cell then it will be unselected and vice versa.
+
+{% aspTab template="tree-grid/selection/Toggleselection", sourceFiles="index.razor,treegriddata.cs" %}
+
+{% endaspTab %}
+
+The following output is displayed as a result of the above code example.
+
+![Toggle Select](images/Toggleselect.gif)
+
+>If multi selection is enabled, then first click on any selected row (without pressing Ctrl key), it will clear the multi selection and in second click on the same row, it will be unselected.
+
 ## Select row at initial rendering
 
 To select a row at initial rendering, set the [SelectedRowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~SelectedRowIndex.html) value.
 
-{% aspTab template="treegrid/selection/initialselect", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/selection/initialselect", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -109,7 +123,7 @@ The following output is displayed as a result of the above code example.
 
 You can get the selected row indexes by using the GetSelectedRowIndexes method.
 
-{% aspTab template="treegrid/selection/selectrowindex", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/selection/selectrowindex", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

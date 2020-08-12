@@ -206,7 +206,7 @@ Pager_TotalItemsInfo |({0} Artikel)
 
 * Finally, Specify the culture for Tree Grid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Locale.html) property.
 
-{% aspTab template="treegrid/global/locale-server", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/global/locale-server", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -317,7 +317,7 @@ All | All
 
 The following example demonstrates the Tree Grid in **Deutsch** culture. Here we use **LoadLocaleData** method to load the **locale.json** file and **SetCulture** method to set the culture of the Tree Grid.
 
-{% aspTab template="treegrid/global/locale", sourceFiles="index.razor,treegriddata.cs,locale.json" %}
+{% aspTab template="tree-grid/global/locale", sourceFiles="index.razor,treegriddata.cs,locale.json" %}
 
 {% endaspTab %}
 
@@ -329,7 +329,7 @@ The following output is displayed as a result of the above code example.
 
 The **Internationalization** library is used to globalize number, date, and time values in Tree Grid component using format strings in the **Format**. In the below sample we set the culture and currency using the **SetCulture** and **SetCurrencyCode** methods.
 
-{% aspTab template="treegrid/global/international", sourceFiles="index.razor,treegriddata.cs,locale.json,numbers.json,currencies.json" %}
+{% aspTab template="tree-grid/global/international", sourceFiles="index.razor,treegriddata.cs,locale.json,numbers.json,currencies.json" %}
 
 {% endaspTab %}
 
@@ -344,7 +344,7 @@ The following output is displayed as a result of the above code example.
 
 RTL provides an option to switch the text direction and layout of the Tree Grid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the Below sample **EnableRtl** method is used to enable RTL in the Tree Grid.
 
-{% aspTab template="treegrid/global/rtl", sourceFiles="index.razor,treegriddata.cs,locale.json" %}
+{% aspTab template="tree-grid/global/rtl", sourceFiles="index.razor,treegriddata.cs,locale.json" %}
 
 {% endaspTab %}
 

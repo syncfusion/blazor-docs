@@ -18,7 +18,7 @@ The [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusio
 
 To specify the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Height.html) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Width.html) of the scroller in the pixel, set the pixel value to a number.
 
-{% aspTab template="treegrid/scrolling/setheight", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/scrolling/setheight", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -31,7 +31,7 @@ The following output is displayed as a result of the above code example.
 Specify the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Height.html) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Width.html) as **100%** to make the tree grid element fill its parent container.
 Setting the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Height.html) to **100%** requires the tree grid parent element to have explicit height.
 
-{% aspTab template="treegrid/scrolling/container", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/scrolling/container", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -79,7 +79,7 @@ Frozen rows and columns provides an option to make rows and columns always visib
 In this demo, the [`FrozenColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~FrozenColumns.html) is set as **2** and the [`FrozenRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~FrozenRows.html)
 is set as **3**. Hence, the left two columns and top three rows are frozen.
 
-{% aspTab template="treegrid/scrolling/frozencolumn", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/scrolling/frozencolumn", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -94,7 +94,7 @@ To freeze particular column in the tree grid, the [`IsFrozen`](https://help.sync
 In this demo, the columns with field name **TaskName** and **Duration** is frozen using
 the [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~IsFrozen.html) property.
 
-{% aspTab template="treegrid/scrolling/isfreezecol", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/scrolling/isfreezecol", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

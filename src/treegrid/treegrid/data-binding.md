@@ -83,7 +83,7 @@ The following code example shows you how to bind the hierarchical list data into
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Data;
 
-<SfTreeGrid ChildMapping="Children"  TreeColumnIndex="1" DataSource="@JsonData" >
+<SfTreeGrid ChildMapping="Children" TreeColumnIndex="1" DataSource="@TreeData" TValue="BusinessObject" >
     <TreeGridColumns>
         <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
@@ -103,7 +103,6 @@ The following code example shows you how to bind the hierarchical list data into
         public string Priority { get; set; }
         public List<BusinessObject> Children { get; set; }
     }
-    public BusinessObject[] JsonData{ get; set; }
     public List<BusinessObject> TreeData = new List<BusinessObject>();
     protected override void OnInitialized()
     {
@@ -125,13 +124,14 @@ The following code example shows you how to bind the hierarchical list data into
         Record2.Add(Child4);
         Record2.Add(Child5);
         TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Design", Duration = 3, Progress = 86, Children = Record2, Priority = "High" });
-        this.JsonData= TreeData.Cast<BusinessObject>().ToArray();
     }
 }
 
 ```
 
-> Hierarchy data source can be bound using only **JsonAdaptor** or **RemoteSaveAdaptor** of the **SfDataManager**.
+> ExpandCollapse State maintenance is not supported for Hierarchy Data.
+> Batch Editing is not supported for Hierarchy Data.
+> `PageSizeMode` --> `All` is not supported for Hierarchy Data.
 
 ## Remote Service binding
 
@@ -171,11 +171,15 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
     {
         public int TaskID { get; set; }
         public string TaskName { get; set; }
-        public int Duration { get; set; }
-        public int Progress { get; set; }
-        public string Priority { get; set; }
-        public int ParentItem { get; set; }
-        public bool isParent { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public String Progress { get; set; }
+        public String Priority { get; set; }
+        public double? Duration { get; set; }
+        public int? ParentID { get; set; }
+        public bool? isParent { get; set; }
+        public bool? Approved { get; set; }
+        public int? ParentItem { get; set; }
     }
 }
 
@@ -194,7 +198,7 @@ On remote data binding, all tree grid actions such as paging, loading child on-d
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Data;
 
-<SfTreeGrid IdMapping="TaskID" ParentIdMapping="ParentItem" HasChildMapping="isParent" AllowPaging="true" TreeColumnIndex="1">
+<SfTreeGrid IdMapping="TaskID" TValue="BusinessObject" ParentIdMapping="ParentItem" HasChildMapping="isParent" AllowPaging="true" TreeColumnIndex="1">
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData" Offline="true" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
@@ -211,7 +215,7 @@ On remote data binding, all tree grid actions such as paging, loading child on-d
 
 You can create your own adaptor by extending the built-in adaptors. The following demonstrates custom adaptor approach and how to add a serial number for the records by overriding the built-in response processing using the **processResponse** method of the **ODataAdaptor**.
 
-{% aspTab template="treegrid/data-binding-mvc/customadaptor", sourceFiles="customadaptor.cs" %}
+{% aspTab template="tree-grid/data-binding-mvc/customadaptor", sourceFiles="customadaptor.cs" %}
 
 {% endaspTab %}
 -->
@@ -225,7 +229,7 @@ To add a custom parameter to the data request, use the **addParams** method of *
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Data;
 
-<SfTreeGrid IdMapping="TaskID" ParentIdMapping="ParentItem" HasChildMapping="isParent" Query="new ej.data.Query().addParams('ej2treegrid', 'true')" AllowPaging="true" TreeColumnIndex="1">
+<SfTreeGrid IdMapping="TaskID" TValue="BusinessObject" ParentIdMapping="ParentItem" HasChildMapping="isParent" Query=@TreeGridQuery AllowPaging="true" TreeColumnIndex="1">
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
@@ -243,6 +247,20 @@ To add a custom parameter to the data request, use the **addParams** method of *
     {
         TreeGridQuery = new Query().AddParams("ej2treegrid", ParamValue);
     }
+     public class BusinessObject
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public String Progress { get; set; }
+        public String Priority { get; set; }
+        public double? Duration { get; set; }
+        public int? ParentID { get; set; }
+        public bool? isParent { get; set; }
+        public bool? Approved { get; set; }
+        public int? ParentItem { get; set; }
+    }
 }
 
 ```
@@ -254,7 +272,7 @@ in client-side using the [`ActionFailure`](https://help.syncfusion.com/cr/cref_f
 
 The argument passed to the [`ActionFailure`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridBuilder~ActionFailure.html) event contains the error details returned from the server.
 
-{% aspTab template="treegrid/data-binding-mvc/http-error", sourceFiles="http-error.cs" %}
+{% aspTab template="tree-grid/data-binding-mvc/http-error", sourceFiles="http-error.cs" %}
 
 {% endaspTab %}
 

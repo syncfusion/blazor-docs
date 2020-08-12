@@ -8,7 +8,7 @@ description: "Learn how to search Tree Grid content, change search operators, pe
 
 You can search records in a Tree Grid, by using the [`Search`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Search.html) method with search key as a parameter. This also provides an option to integrate search text box in tree grid's toolbar by adding **Search** item to the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html).
 
-{% aspTab template="treegrid/searching/search", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/searching/search", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -20,7 +20,7 @@ The following output is displayed as a result of the above code example.
 
 To apply search at initial rendering, set the Fields, Operator, Key, and IgnoreCase in the [`TreeGridSearchSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html).
 
-{% aspTab template="treegrid/searching/initialsearch", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/searching/initialsearch", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -50,7 +50,7 @@ notEqual |Checks for values not equal to the specified value.
 
 To search tree grid records from an external button, invoke the [`Search`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Search.html) method.
 
-{% aspTab template="treegrid/searching/searchbutton", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/searching/searchbutton", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -58,6 +58,6 @@ To search tree grid records from an external button, invoke the [`Search`](https
 
 By default, tree grid searches all visible columns. You can search specific columns by defining the specific column's field names in the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings~Fields.html) property of [`TreeGridSearchSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings_members.html).
 
-{% aspTab template="treegrid/searching/searchspec", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/searching/searchspec", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}

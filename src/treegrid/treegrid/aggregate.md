@@ -33,7 +33,7 @@ with an array of aggregate types.
 
 Footer aggregate value is calculated for all the rows, and it is displayed in the footer cells. Use the [`FooterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn~FooterTemplate.html) to render the aggregate value in footer cells.
 
-{% aspTab template="treegrid/aggregate/footeraggregate", sourceFiles="index.razor,TreeGriddata.cs" %}
+{% aspTab template="tree-grid/aggregate/footeraggregate", sourceFiles="index.razor,TreeGriddata.cs" %}
 
 {% endaspTab %}
 
@@ -47,7 +47,7 @@ The following output is displayed as a result of the above code example.
 
 You can format the aggregate value result by using the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn~Format.html) property.
 
-{% aspTab template="treegrid/aggregate/formataggregate", sourceFiles="index.razor,TreeGriddata.cs" %}
+{% aspTab template="tree-grid/aggregate/formataggregate", sourceFiles="index.razor,TreeGriddata.cs" %}
 
 {% endaspTab %}
 

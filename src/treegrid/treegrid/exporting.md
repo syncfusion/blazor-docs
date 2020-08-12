@@ -9,7 +9,7 @@ description: "Documentation on exporting Tree Grid content to PDF format and cus
 PDF export allows exporting Tree Grid data to PDF document. You need to use the
  **PdfExport** method for exporting. To enable PDF export in the Tree Grid, set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.EjsGrid~AllowPdfExport.html) as true.
 
-{% aspTab template="treegrid/pdf-export/export", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/pdf-export/export", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -21,7 +21,7 @@ PDF export provides an option to customize mapping of Tree Grid to exported PDF 
 
 You can assign the file name for the exported document by defining **fileName** property in **PdfExportProperties**.
 
-{% aspTab template="treegrid/pdf-export/filename", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/pdf-export/filename", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -29,7 +29,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 Page orientation can be changed Landscape(Default Portrait) for the exported document using the export properties.
 
-{% aspTab template="treegrid/pdf-export/orientation", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/pdf-export/orientation", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -67,7 +67,7 @@ Supported page sizes are:
 * Letter11x17
 * Ledger
 
-{% aspTab template="treegrid/pdf-export/pagesize", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/pdf-export/pagesize", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -75,7 +75,7 @@ Supported page sizes are:
 
 PDF export provides an option to export the current page into PDF. To export current page, define the **exportType** to **CurrentPage**.
 
-{% aspTab template="treegrid/pdf-export/currentpage", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/pdf-export/currentpage", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -83,7 +83,7 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 PDF export provides an option to export hidden columns of Tree Grid by defining the **includeHiddenColumn** as **true**.
 
-{% aspTab template="treegrid/pdf-export/hiddencolumns", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/pdf-export/hiddencolumns", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -93,7 +93,7 @@ PDF export provides an option to include theme for exported PDF document.
 
 To apply theme in exported PDF, define the **theme** in export properties.
 
-{% aspTab template="treegrid/pdf-export/theme", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/pdf-export/theme", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

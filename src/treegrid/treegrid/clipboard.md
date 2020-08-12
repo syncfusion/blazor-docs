@@ -15,7 +15,7 @@ Interaction keys |Description
 <kbd>Ctrl + C</kbd> |Copy selected rows or cells data into clipboard.
 <kbd>Ctrl + Shift + H</kbd> |Copy selected rows or cells data with header into clipboard.
 
-{% aspTab template="treegrid/clip-board/copy", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/clip-board/copy", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -23,7 +23,7 @@ Interaction keys |Description
 
 To copy selected rows or cells data into the clipboard with help of external buttons, you need to invoke the `copy` method.
 
-{% aspTab template="treegrid/clip-board/copyButtons", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/clip-board/copyButtons", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -40,15 +40,15 @@ The below are the type of filter mode available in Tree Grid.
 
 * **None** : Only the Selected records will be in clipboard.
 
-{% aspTab template="treegrid/clip-board/hierarchy", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/clip-board/hierarchy", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
-## AutoFill
+<!--## AutoFill
 
 AutoFill Feature allows you to copy the data of selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to required cells. This feature is enabled by defining `EnableAutoFill` property as true.
 
-{% aspTab template="treegrid/clip-board/autofill", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/clip-board/autofill", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -59,12 +59,13 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
 * Since the string values are not parsed to number and date type, so when the selected string type cells are dragged to number type cells then it will display as **NaN**. For date type cells, when the selected string type cells are dragged to date type cells then it will display as an **empty cell**.
 * Linear series and the sequential data generations are not supported in this autofill feature.
+-->
 
 ## Paste
 
 You can able to copy the content of a cell or a group of cells by selecting the cells and pressing <kbd>Ctrl + C</kbd> shortcut key and paste it to another set of cells by selecting the cells and pressing <kbd>Ctrl + V</kbd> shortcut key.
 
-{% aspTab template="treegrid/clip-board/paste", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/clip-board/paste", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

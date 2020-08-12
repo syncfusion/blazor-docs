@@ -19,7 +19,7 @@ The available template options in tree grid are as follows,
 
 To use templates, the tree grid must be bound with named model. This can be done by specifying the model type using the `ModelType` property of the tree grid component as follows.
 
-{% aspTab template="treegrid/temp/temptype", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/temp/temptype", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -33,7 +33,7 @@ Most of the templates used by tree grid are of type `RenderFragment<T>` and they
 
 For example, you can access the data of the column template using `context` as follows.
 
-{% aspTab template="treegrid/temp/tempcontext", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/temp/tempcontext", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -47,7 +47,7 @@ If a component contains any `RenderFragment` type property then it does not allo
 
 This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendent of Tree Grid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
 
-{% aspTab template="treegrid/temp/tempcomponent", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/temp/tempcomponent", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

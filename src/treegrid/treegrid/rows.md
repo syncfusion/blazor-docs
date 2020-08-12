@@ -13,7 +13,7 @@ The row represents record details fetched from data source.
 You can customize the appearance of a row by using the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event.
 The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event triggers for every row. In the event handler, you can get the **args** which contains details of the row.
 
-{% aspTab template="treegrid/rows/customrows", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/rows/customrows", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -33,7 +33,7 @@ The following output is displayed as a result of the above code example.
 
 Please refer to the following example.
 
-{% aspTab template="treegrid/rows/styaltrows", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/rows/styaltrows", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -47,7 +47,7 @@ You can customize the row height of tree grid rows through the [`RowHeight`](htt
 
 In the below example, the **RowHeight** is set as *60px*.
 
-{% aspTab template="treegrid/rows/rowheight", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/rows/rowheight", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -60,7 +60,7 @@ The following output is displayed as a result of the above code example.
 The **RowTemplate** has an option to customise the look and behavior of the tree grid rows. The [`RowTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowTemplate.html) property accepts either
 the **template** string or HTML elements.
 
-{% aspTab template="treegrid/rows/rowtemp", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/rows/rowtemp", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -72,7 +72,7 @@ The following output is displayed as a result of the above code example.
 
 If [`RowTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowTemplate.html) is used, the value cannot be  formatted  inside the template using the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Format.html) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
 
-{% aspTab template="treegrid/rows/rowtempform", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/rows/rowtempform", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -97,7 +97,7 @@ Row template feature is not compatible with all the features which are available
 
 The detail template provides additional information about a particular row. By expanding the parent row the child rows are expanded along with their detail template. The [`DetailTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~DetailTemplate.html) property accepts either the template string or HTML elements.
 
-{% aspTab template="treegrid/rows/dettemp", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/rows/dettemp", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

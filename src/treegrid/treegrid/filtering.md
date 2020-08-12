@@ -8,7 +8,7 @@ description: "Learn how to filter rows in the Tree Grid using the filter bar, an
 
 Filtering allows you to view specific or related records based on filter criteria. To enable filtering in the Tree Grid, set the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowFiltering.html) to true. Filtering options can be configured through [`FilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~FilterSettings.html).
 
-{% aspTab template="treegrid/filtering/filter", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/filtering/filter", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -38,7 +38,7 @@ The below are the type of filter mode available in Tree Grid.
 To apply the filter at initial rendering, set the filter **PredicateModel** in
 [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings~Columns.html) property of [`FilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings_members.html).
 
-{% aspTab template="treegrid/filtering/initialfilter", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/filtering/initialfilter", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -87,7 +87,7 @@ Expression |Example |Description |Column Type
 N/A |N/A | **Equal** operator will always be used for date filter. |Date
 N/A |N/A |**Equal** operator will always be used for Boolean filter. |Boolean
 
-{% aspTab template="treegrid/filtering/filterbar", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/filtering/filterbar", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -97,7 +97,7 @@ The [`FilterBarTemplate`](https://help.syncfusion.com/cr/cref_files/aspnetcore-j
 
 In the following sample, the dropdown is used as a custom component in the Duration column.
 
-{% aspTab template="treegrid/filtering/filter-template", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/filtering/filter-template", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -110,7 +110,7 @@ The following output is displayed as a result of the above code example.
 You can enable filter menu by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings~Type.html) of [`FilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) as **Menu**. The filter menu UI will be rendered based on its column type, which allows you to filter data.
 You can filter the records with different operators.
 
-{% aspTab template="treegrid/filtering/filtermenu", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/filtering/filtermenu", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -127,7 +127,7 @@ The `FilterTemplate` property of [`Column`](https://help.syncfusion.com/cr/cref_
 
 In the following sample, dropdown is used as custom component in the duration column.
 
-{% aspTab template="treegrid/filtering/filter-ui", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/filtering/filter-ui", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -142,7 +142,7 @@ type as **Menu** or **Excel** using [`Filter`](https://help.syncfusion.com/cr/bl
 
 In the following sample menu filter is enabled by default and excel filter is enabled for the Task Name column using the  [`Filter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Filter.html)  property of [`TreeGridColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html).
 
-{% aspTab template="treegrid/filtering/difffilter", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/filtering/difffilter", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -151,7 +151,7 @@ In the following sample menu filter is enabled by default and excel filter is en
 You can enable Excel like filter by defining.
 [`Type`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridFilterSettings~Type.html) of [`FilterSettings`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridFilterSettings.html) as **Excel**.The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
-{% aspTab template="treegrid/filtering/excelfilter", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/filtering/excelfilter", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

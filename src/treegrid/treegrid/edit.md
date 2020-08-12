@@ -10,7 +10,7 @@ The Tree Grid component has options to dynamically insert, delete and update rec
 Editing feature is enabled by using [`TreeGridEditSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) property and it requires a primary key column for CRUD operations.
 To define the primary key, set [`TreeGridColumn.IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) to **true** in particular column.
 
-{% aspTab template="treegrid/editing/edit", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/edit", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -36,7 +36,7 @@ You can disable editing for a particular column, by specifying
 The tree grid toolbar has the built-in items to execute Editing actions.
 You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGrid~Toolbar.html) property.
 
-{% aspTab template="treegrid/editing/toolbaredit", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/toolbaredit", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -74,7 +74,7 @@ Component |Example
 [`DateTimePicker`](../datetimepicker/getting-started) | @(new { @params = new { strictMode = true} })
 [`Checkbox`](../check-box/getting-started) | @(new { @params = new { checked = true} })
 
-{% aspTab template="treegrid/editing/celledittype", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/celledittype", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -90,7 +90,7 @@ The cell edit template is used to add a custom component for a particular column
 
 The following code example describes, how to define the Edit template for a particular column.
 
-{% aspTab template="treegrid/editing/edit-template", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/edit-template", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -112,7 +112,7 @@ In Cell edit mode, when you double click on a cell, it is changed to edit state.
 You can change the cell value and save to the data source.
 To enable Cell edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Cell**.
 
-{% aspTab template="treegrid/editing/cellmode", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/cellmode", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -128,7 +128,7 @@ In Row edit mode, when you start editing the currently selected record, the enti
 You can change the cell values of the row and save edited data to the data source.
 To enable Row edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Row**.
 
-{% aspTab template="treegrid/editing/rowmode", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/rowmode", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -142,7 +142,7 @@ In Dialog edit mode, when you start editing the currently selected row, data wil
 You can change the cell values and save edited data to the data source.
 To enable Dialog edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Dialog**.
 
-{% aspTab template="treegrid/editing/dialogmode", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/dialogmode", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -156,7 +156,7 @@ In Batch edit mode, when you double-click on the tree grid cell, the target cell
 You can bulk save (added, changed and deleted data in the single request) to data source by clicking on the toolbar's **Update** button or by externally invoking the `BatchSave` method.
 To enable Batch edit, set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) property of `TreeGridEditSettings` as **Batch**.
 
-{% aspTab template="treegrid/editing/batch-edit", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/batch-edit", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -168,7 +168,7 @@ In some cases, you need to add the new field editors in the dialog which are not
 
 In the following sample, tree grid enabled with dialog template editing.
 
-{% aspTab template="treegrid/editing/dialog-template", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/dialog-template", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -232,7 +232,7 @@ If you have used additional fields that are not present in the column model, the
 
 The Tree Grid control provides the support to add the new row in the top, bottom, above selected row, below selected row and child position of tree grid content using [`TreeGridEditSettings.NewRowPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~NewRowPosition.html) property. By default, a new row will be added at the top of the tree grid.
 
-{% aspTab template="treegrid/editing/rowposition", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/rowposition", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -251,7 +251,7 @@ The available built-in command buttons are:
 | Save | Update the edited row.|
 | Cancel | Cancel the edited state. |
 
-{% aspTab template="treegrid/editing/commandcolumn", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/commandcolumn", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -259,45 +259,74 @@ The following output is displayed as a result of the above code example.
 
 ![Command Column](images/commandcolumn.png)
 
-<!--Custom command
+### Custom command
 
- The custom command buttons can be added in a column by using the [`TreeGridColumn.Commands`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Commands.html) property and
-the action for the custom buttons can be defined in the `ButtonOption.Click` event.
+The custom command buttons can be added in a column by using the [`Commands`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Commands.html) property of the [`TreeGridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component and the action for the custom buttons can be defined in the [`CommandClicked`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridEvents%601~CommandClicked.html) event.
+
+The following sample code demonstrates adding custom command in the **Manage Records** column and the `CommandClicked` event which triggers when the command is clicked,
 
 ```csharp
-
-@using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <TreeGridEvents CommandClicked="OnCommandClicked" TValue="TreeData.BusinessObject"></TreeGridEvents>
     <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Row" />
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn HeaderText="Manage Records" Width="150" Commands="@commands"></TreeGridColumn>
+        <TreeGridColumn HeaderText="Manage Records" Width="150">
+            <TreeGridCommandColumns>
+                <TreeGridCommandColumn ButtonOption="@(new CommandButtonOptions() { Content = "Details", CssClass = "e-flat" })"></TreeGridCommandColumn>
+            </TreeGridCommandColumns>
+        </TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
 
 @code{
+    public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set; }
+            public string TaskName { get; set; }
+            public int? Duration { get; set; }
+            public int? Progress { get; set; }
+            public int? ParentId { get; set; }
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Progress = 80, ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Progress = 77, ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, ParentId = 5 });
+            return BusinessObjectCollection;
+        }
+    }
+
     public List<TreeData.BusinessObject> TreeGridData { get; set; }
-    public  List<object> commands { get; set; }
     protected override void OnInitialized()
     {
-        this.commands = new List<object>();
-        commands.Add(new { type = "taskstatus", buttonOption = new { content = "Details", cssClass = "e-flat e-details", click = @onClick } }); // custom
-
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
-    private void onClick()
+    public void OnCommandClicked(CommandClickEventArgs<TreeData.BusinessObject> args)
     {
-
+        // Perform required operations here
     }
 }
-
 ```
--->
+
+The following image represents the custom command added in the **Manage Records** column of the Tree Grid component,
+![Custom Command](./images/custom-command.png)
 
 ## Confirmation messages
 
@@ -305,7 +334,7 @@ the action for the custom buttons can be defined in the `ButtonOption.Click` eve
 
 The delete confirm dialog can be shown when deleting a record by defining the [`ShowDeleteConfirmDialog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~ShowDeleteConfirmDialog.html) as **true**
 
-{% aspTab template="treegrid/editing/delconfirm", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/delconfirm", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -321,7 +350,7 @@ Column validation allows you to validate the edited or added row data and it dis
 Tree Grid uses **Form Validator** component for column validation.
 You can set validation rules by defining the [`TreeGridColumn.ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ValidationRules.html).
 
-{% aspTab template="treegrid/editing/colvalidation", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/colvalidation", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -609,7 +638,7 @@ namespace TreeGridWebApiEFSample.Controllers
 The tree grid provides an option to set the default value for the columns when adding a new record in it.
 To set a default value for the particular column by defining the [`TreeGridColumn.DefaultValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~DefaultValue.html).
 
-{% aspTab template="treegrid/editing/defaultcolvalue", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/defaultcolvalue", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -619,7 +648,7 @@ You can disable editing for particular columns by using the [`TreeGridColumn.All
 
 In the following demo, editing is disabled for the **Duration** column.
 
-{% aspTab template="treegrid/editing/disableedit", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/editing/disableedit", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

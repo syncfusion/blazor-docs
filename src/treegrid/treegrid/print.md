@@ -8,7 +8,7 @@ description: "Learn how to print Tree Grid content, set up pages for printing, p
 
 To print the Tree Grid, use the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method from tree grid instance. The print option can be displayed on the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) by adding the **Print** toolbar item.
 
-{% aspTab template="treegrid/print/printing", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/print/printing", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -29,7 +29,7 @@ Some of the print options cannot be configured through JavaScript code. So, you 
 
 To print the tree grid from an external button, invoke the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method.
 
-{% aspTab template="treegrid/print/printbutton", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/print/printbutton", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -41,7 +41,7 @@ The following output is displayed as a result of the above code example.
 
 By default, the tree grid prints all the pages. To print the current page alone, set the [`PrintMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~PrintMode.html) to **CurrentPage**.
 
-{% aspTab template="treegrid/print/visiblepage", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/print/visiblepage", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

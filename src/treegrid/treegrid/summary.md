@@ -1,5 +1,6 @@
 * [Getting Started](treegrid/getting-started.md)
 * [Data Binding](treegrid/data-binding.md)
+* [Custom Binding](treegrid/custom-binding.md)
 * [Columns](treegrid/columns.md)
 * [Rows](treegrid/rows.md)
 * [Templates](treegrid/templates.md)
@@ -19,3 +20,6 @@
 * [Print](treegrid/print.md)
 * [Clipboard](treegrid/clipboard.md)
 * [Accessibility](treegrid/accessibility.md)
+* [Context Menu](treegrid/context-menu.md)
+* [Styling and Appearance](treegrid/how-to/custom-style.md)
+* [Events](treegrid/events.md)

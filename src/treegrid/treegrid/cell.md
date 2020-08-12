@@ -10,7 +10,7 @@ description: "Learn how to customize the Tree Grid cells with styling, text wrap
 
 The HTML tags can be displayed in the Tree Grid header and content by enabling the [`DisableHtmlEncode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~DisableHtmlEncode.html) property.
 
-{% aspTab template="treegrid/cell/disphtml", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/cell/disphtml", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -23,7 +23,7 @@ The following output is displayed as a result of the above code example.
 The appearance of cells can be customized by using the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~QueryCellInfo.html) event.
 The [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~QueryCellInfo.html) event triggers for every cell. In that event handler, you can get **QueryCellInfoEventArgs** that contains the details of the cell.
 
-{% aspTab template="treegrid/cell/cellstyling", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/cell/cellstyling", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -47,7 +47,7 @@ In the following example, the `textWrapSettings.wrapMode` is set to `Content`.
 -->
 Note: When a column width is not specified, then auto wrap of columns will be adjusted with respect to the tree grid's width.
 
-{% aspTab template="treegrid/cell/autowrap", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/cell/autowrap", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -120,7 +120,7 @@ The available modes of grid lines are:
 | Vertical | Displays the vertical grid lines only.|
 | Default | Displays grid lines based on the theme.|
 
-{% aspTab template="treegrid/cell/gridlines", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/cell/gridlines", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -140,7 +140,7 @@ There are three types of [`ClipMode`](https://help.syncfusion.com/cr/blazor/Sync
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
 * **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied.
 
-{% aspTab template="treegrid/cell/clipmode", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/cell/clipmode", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

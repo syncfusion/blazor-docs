@@ -18,7 +18,7 @@ is necessary to map the data source values in Tree Grid columns.
 
 You can customize the header element by using the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~HeaderTemplate.html) property.
 
-{% aspTab template="treegrid/column/headertemplate", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/headertemplate", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -32,7 +32,7 @@ The following output is displayed as a result of the above code example.
 
 By default, column header title is displayed from column [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html) value. To override the default header title, you have to define the [`HeaderText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~HeaderText.html) value.
 
-{% aspTab template="treegrid/column/headertext", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/headertext", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -47,7 +47,7 @@ are not defined in the column, the column renders with **empty** header text.
 
 To format cell values based on specific culture, use the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Format.html) property of [`TreeGridColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) tag helper. The Tree Grid uses **Internalization** library to format the number values.
 
-{% aspTab template="treegrid/column/format", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/format", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -72,7 +72,7 @@ You can format date values using built-in date format string.
 For built-in date format you can specify [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Format.html) property as string   (Example: *d*).
 <!-- Please refer to the link to know more about [`Date formatting`](../../common/internationalization/#manipulating-datetime). -->
 
-{% aspTab template="treegrid/column/dateformat", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/dateformat", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -84,7 +84,7 @@ The following output is displayed as a result of the above code example.
 
 The **AutoFitColumns** method resizes the column to fit the widest cell's content without wrapping. You can autofit a specific column at initial rendering by invoking the [`AutoFitColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AutoFitColumns.html) method in [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~DataBound.html) event.
 
-{% aspTab template="treegrid/column/autofitcolumns", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/autofitcolumns", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -98,7 +98,7 @@ The following output is displayed as a result of the above code example.
 
 Reordering can be done by drag and drop of a particular column header from one index to another index within the treegrid. To enable reordering, set the [`AllowReordering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowReordering.html) to true.
 
-{% aspTab template="treegrid/column/reorder", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/reorder", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -108,7 +108,7 @@ Reordering can be done by drag and drop of a particular column header from one i
 
 Multiple columns can be reordered at a time by using the **ReorderColumns** method.
 
-{% aspTab template="treegrid/column/reordermul", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/reordermul", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -118,7 +118,7 @@ You can lock columns by using [`LockColumn`](https://help.syncfusion.com/cr/blaz
 
 In the below example, Duration column is locked and its reordering functionality is disabled.
 
-{% aspTab template="treegrid/column/lockcolumn", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/lockcolumn", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -130,7 +130,7 @@ The following output is displayed as a result of the above code example.
 
 Column width can be resized by clicking and dragging the right edge of the column header. While dragging, the width of the respective column will be resized immediately. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To enable column resize, set the [`AllowResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowResizing.html) property to true.
 
-{% aspTab template="treegrid/column/colresize", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/colresize", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -143,7 +143,7 @@ Column resize can be restricted between minimum and maximum width by defining th
 
 In the following sample, minimum and maximum width are defined for **Duration**, and **Task Name** columns.
 
-{% aspTab template="treegrid/column/minmax", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/minmax", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -151,7 +151,7 @@ In the following sample, minimum and maximum width are defined for **Duration**,
 
 Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. You can disable resize for particular stacked column by setting [`AllowResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowResizing.html) as **false** to its columns.
 
-{% aspTab template="treegrid/column/resizecol", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/resizecol", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -169,7 +169,7 @@ The following screenshot represents the column resizing in touch device.
 
 The column [`Template`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridColumn~Template.html) has options to display custom element instead of a field value in the column.
 
-{% aspTab template="treegrid/column/columntemp", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/columntemp", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -187,7 +187,7 @@ You can render the template elements based on condition.
 
 In the following code, checkbox is rendered based on **Duration** field value.
 
-{% aspTab template="treegrid/column/concoltemp", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/concoltemp", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -208,6 +208,36 @@ Tree Grid column supports the following types:
 
 > If the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Type.html) is not defined, it will be determined from the first record of the [`DataSource`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridBuilder~DataSource.html).
 
+## Column Chooser
+
+The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [`ShowColumnChooser`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowColumnChooser.html) as true.
+
+{% aspTab template="tree-grid/column/columnchooser", sourceFiles="index.razor,treegriddata.cs" %}
+
+{% endaspTab %}
+
+The following output is displayed as a result of the above code example.
+
+![Column Chooser](images/columnchooser.png)
+
+> You can hide the column names in column chooser by defining the [`ShowInColumnChooser`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) property as false.
+
+### Open column chooser by external button
+
+The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [`ShowInColumnChooser`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) as true.
+
+In this below example, we have opened column chooser using external button click.
+
+{% aspTab template="tree-grid/column/opencolumnchooser", sourceFiles="index.razor,treegriddata.cs" %}
+
+{% endaspTab %}
+
+The following output is displayed as a result of the above code example.
+
+![Open Column Chooser](images/opencolumnchooser.png)
+
+> You can hide the column names in column chooser by defining the [`ShowInColumnChooser`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) property as false.
+
 ## Column menu
 
 The column menu has options to integrate features like sorting, filtering, and autofit. It will show a menu with the integrated feature when users click on multiple icon of the column. To enable column menu, you need to define the [`ShowColumnMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowColumnMenu.html) property as true.
@@ -222,7 +252,7 @@ The default items are displayed in following table.
 | **AutoFitAll** | Auto fit all columns. |
 | **Filter** | Show the filter option as given in **FilterSettings.Type** |
 
-{% aspTab template="treegrid/column/columnmenu", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/columnmenu", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -238,7 +268,7 @@ To render checkboxes in existing column, you need to set [`ShowCheckbox`](https:
 
 It is also possible to select the rows hierarchically using checkboxes in Tree Grid by enabling [`AutoCheckHierarchy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AutoCheckHierarchy.html) property. When we check on any parent record checkbox then the child record checkboxes will get checked.
 
-{% aspTab template="treegrid/column/checkboxcolumn", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/checkboxcolumn", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -253,7 +283,7 @@ at the [`HideAtMedia`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~S
 The [`HideAtMedia`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~HideAtMedia.html) accepts valid
 [Media Queries]( http://cssmediaqueries.com/what-are-css-media-queries.html).
 
-{% aspTab template="treegrid/column/responsivecolumn", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/responsivecolumn", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -265,7 +295,7 @@ The following output is displayed as a result of the above code example.
 
 You can enable or disable tree grid action for a particular column by setting the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowFiltering.html), and [`AllowSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowSorting.html) properties of [`TreeGridColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper.
 
-{% aspTab template="treegrid/column/treegridaction", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/treegridaction", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -273,7 +303,7 @@ You can enable or disable tree grid action for a particular column by setting th
 
 You can show or hide tree grid columns dynamically using external buttons by invoking the [`ShowColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowColumns.html) or [`HideColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~HideColumns.html) method.
 
-{% aspTab template="treegrid/column/showhide", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/showhide", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -281,7 +311,7 @@ You can show or hide tree grid columns dynamically using external buttons by inv
 
 To render boolean values as checkbox in columns, you need to set [`DisplayAsCheckBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~DisplayAsCheckBox.html) property as **true**.
 
-{% aspTab template="treegrid/column/boolcheckbox", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/column/boolcheckbox", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

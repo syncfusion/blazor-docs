@@ -13,7 +13,7 @@ To sort multiple columns, press and hold the CTRL key and click the column heade
 
 To enable sorting in the Tree Grid, set the [`AllowSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowSorting.html) to true. Sorting options can be configured through the [`TreeGridSortSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~SortSettings.html).
 
-{% aspTab template="treegrid/sorting/sort", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/sorting/sort", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -25,7 +25,7 @@ To enable sorting in the Tree Grid, set the [`AllowSorting`](https://help.syncfu
 
 To sort at initial rendering, set the **Field** and **Direction** in the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSortSettings~Columns.html) property of [`SortSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~SortSettings.html).
 
-{% aspTab template="treegrid/sorting/initialsort", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/sorting/initialsort", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -37,7 +37,7 @@ The following output is displayed as a result of the above code example.
 
 During the sort action, the tree grid component triggers two events. The [`ActionBegin`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGrid~ActionBegin.html) event triggers before the sort action starts, and the [`ActionComplete`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGrid~ActionComplete.html) event triggers after the sort action is completed. Using these events you can perform the needed actions.
 
-{% aspTab template="treegrid/sorting/sort-events", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/sorting/sort-events", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

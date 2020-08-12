@@ -9,7 +9,7 @@ description: "Documentation on exporting DataGrid content to Excel and customizi
 The excel export allows exporting Tree Grid data to Excel document. You need to use the
  **ExcelExport** method for exporting. To enable Excel export in the Tree Grid, set the [`AllowExcelExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~AllowExcelExport.html) property as true.
 
-{% aspTab template="treegrid/excel-export/export", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/excel-export/export", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -21,7 +21,7 @@ The excel export provides an option to customize mapping of the Tree Grid to exc
 
 The excel export provides an option to export the current page into excel. To export current page, define **exportType** to **CurrentPage**.
 
-{% aspTab template="treegrid/excel-export/currentpage", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/excel-export/currentpage", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -29,7 +29,7 @@ The excel export provides an option to export the current page into excel. To ex
 
 The excel export provides an option to export hidden columns of Tree Grid by defining **includeHiddenColumn** as **true**.
 
-{% aspTab template="treegrid/excel-export/hiddencolumns", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/excel-export/hiddencolumns", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -39,7 +39,7 @@ The excel export provides an option to include theme for exported excel document
 
 To apply theme in exported Excel, define the **theme** in export properties.
 
-{% aspTab template="treegrid/excel-export/theme", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/excel-export/theme", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 
@@ -49,7 +49,7 @@ To apply theme in exported Excel, define the **theme** in export properties.
 
 You can assign the file name for the exported document by defining **fileName** property in excel export properties.
 
-{% aspTab template="treegrid/excel-export/filename", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/excel-export/filename", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

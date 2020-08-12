@@ -17,7 +17,7 @@ The number of records displayed in the Tree Grid is determined implicitly by hei
 
 Expand and Collapse state of any child record will be persisted.
 
-{% aspTab template="treegrid/virtualization", sourceFiles="index.razor,treegriddata.cs" %}
+{% aspTab template="tree-grid/virtualization", sourceFiles="index.razor,treegriddata.cs" %}
 
 {% endaspTab %}
 

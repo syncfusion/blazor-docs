@@ -1,0 +1,6 @@
+* [Getting Started](file-upload/getting-started.md)
+* [Asynchronous Upload](file-upload/async.md)
+* [Chunk Upload](file-upload/chunk-upload.md)
+* [Localization](file-upload/localization.md)
+* [File Source](file-upload/file-source.md)
+* [validation](file-upload/validation.md)

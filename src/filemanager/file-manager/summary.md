@@ -1,0 +1,8 @@
+* [Getting Started](file-manager/getting-started.md)
+* [User Interface](file-manager/user-interface.md)
+* [File Operations](file-manager/file-operations.md)
+* [Multiple File Selection](file-manager/multiple-file-selection.md)
+* [File System Providers](file-manager/file-system-provider.md)
+* [Accessibility](file-manager/accessibility.md)
+* [Adding Custom Item To Context Menu](file-manager/how-to/adding-custom-item-to-context-menu.md)
+* [Adding Custom Item To Toolbar](file-manager/how-to/add-custom-tool-bar.md)

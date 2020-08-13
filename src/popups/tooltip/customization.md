@@ -17,14 +17,14 @@ Styling the tip pointer's size, background, and border color's can be done using
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-    <SfTooltip Target="#target" CssClass="customtip">
-        <TooltipTemplates>
-            <Content>
-                Tooltip arrow customized
-            </Content>
-        </TooltipTemplates>
-        <SfButton ID="target" Content="Show Tooltip"></SfButton>
-    </SfTooltip>
+<SfTooltip Target="#target" CssClass="customtip" Content="@Content">
+    <SfButton ID="target" Content="Show Tooltip"></SfButton>
+</SfTooltip>
+
+@code
+{
+    string Content = "Tooltip arrow customized";
+}
 
 <style>
     #target {
@@ -102,14 +102,14 @@ The complete look and feel of the Tooltip can be customized by changing it's bac
 @using Syncfusion.Blazor.Buttons
 
 
-<SfTooltip Target="#target" CssClass="customtooltip">
-    <TooltipTemplates>
-        <Content>
-            Tooltip Content
-        </Content>
-    </TooltipTemplates>
+<SfTooltip Target="#target" CssClass="customtooltip" Content="@Content">
     <SfButton ID="target" Content="Show Tooltip"></SfButton>
 </SfTooltip>
+
+@code
+{
+    string Content="Tooltip customized";
+}
 
 <style>
     #target {

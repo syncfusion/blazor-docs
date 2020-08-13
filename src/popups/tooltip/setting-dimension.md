@@ -18,14 +18,14 @@ The following sample explains how to set dimensions for the Tooltip.
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<SfTooltip ID="Tooltip" Height="50px" Width="200px" Target="#btn">
-    <TooltipTemplates>
-        <Content>
-            Lets go green & Save Earth !!
-        </Content>
-    </TooltipTemplates>
+<SfTooltip ID="Tooltip" Height="50px" Width="200px" Target="#btn" Content="@Content">
     <SfButton ID="btn" Content="Show Tooltip"></SfButton>
 </SfTooltip>
+
+@code
+{
+    string Content="Lets go green & Save Earth !!";
+}
 ```
 
 Output be like the below.
@@ -39,12 +39,7 @@ When `Height` is specified with a certain pixel value and the Tooltip content ov
 ```csharp
 @using Syncfusion.Blazor.Popups
 
-<SfTooltip ID="tooltip" Height="60px" Width="200px" IsSticky="true" Target="#target">
-    <TooltipTemplates>
-        <Content>
-            <div><b>Environmentally friendly</b> or environment-friendly, (also referred to as eco-friendly, nature-friendly, and green) are marketing and sustainability terms referring to goods and services, laws, guidelines and policies that inflict reduced, minimal, or no harm upon ecosystems or the environment.</div>
-        </Content>
-    </TooltipTemplates>
+<SfTooltip ID="tooltip" Height="60px" Width="200px" IsSticky="true" Target="#target" Content="@Content">
     <div id='container'>
         <p>
             A green home is a type of house designed to be
@@ -55,6 +50,11 @@ When `Height` is specified with a certain pixel value and the Tooltip content ov
         </p>
     </div>
 </SfTooltip>
+
+@code
+{
+    string Content = "<div><b>Environmentally friendly</b> or environment-friendly, (also referred to as eco-friendly, nature-friendly, and green) are marketing and sustainability terms referring to goods and services, laws, guidelines and policies that inflict reduced, minimal, or no harm upon ecosystems or the environment.</div>";
+}
 ```
 
 Output be like the below.

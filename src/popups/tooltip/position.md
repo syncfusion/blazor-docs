@@ -28,15 +28,14 @@ On initializing the Tooltip, you can set the position property with any one of
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<SfTooltip Target="#target" Position="Position.RightCenter">
-    <TooltipTemplates>
-        <Content>
-            Tooltip Content
-        </Content>
-    </TooltipTemplates>
+<SfTooltip Target="#target" Content="@Content" Position="Position.RightCenter">
     <SfButton ID="target" Content="Show Tooltip"></SfButton>
 </SfTooltip>
 
+@code
+{
+    string Content = "Tooltip Content";
+}
 ```
 
 Output be like the below.
@@ -51,14 +50,14 @@ Tooltips can be positioned relative to the mouse pointer. This behavior can be e
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-    <SfTooltip MouseTrail=true Target="#target">
-        <TooltipTemplates>
-            <Content>
-                Tooltip Content
-            </Content>
-        </TooltipTemplates>
-        <SfButton ID="target" Content="Show Tooltip"></SfButton>
-    </SfTooltip>
+<SfTooltip MouseTrail=true Content="@Content" Target="#target">
+    <SfButton ID="target" Content="Show Tooltip"></SfButton>
+</SfTooltip>
+
+@code
+{
+    string Content="Tooltip Content";
+}
 
 <style>
     #target {
@@ -92,14 +91,14 @@ The following code example illustrates how to set offset values.
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-    <SfTooltip Target="#target" ShowTipPointer="false" MouseTrail="true" OffsetX="30" OffsetY="30">
-        <TooltipTemplates>
-            <Content>
-                Tooltip Content
-            </Content>
-        </TooltipTemplates>
-        <SfButton ID="target" Content="Show Tooltip"></SfButton>
-    </SfTooltip>
+<SfTooltip Target="#target" ShowTipPointer="false" MouseTrail="true" Content="@Content" OffsetX="30" OffsetY="30">
+    <SfButton ID="target" Content="Show Tooltip"></SfButton>
+</SfTooltip>
+
+@code
+{
+    string Content="Tooltip Content";
+}
 
 <style>
     #target {

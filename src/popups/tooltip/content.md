@@ -20,12 +20,7 @@ Refer to the following code example to add formatted HTML content to the Tooltip
 ```csharp
 @using Syncfusion.Blazor.Popups
 
-<SfTooltip ID="tooltip" IsSticky="true" Target="#target">
-    <TooltipTemplates>
-        <Content>
-            <div><b>Environmentally friendly</b> or environment-friendly, (also referred to as eco-friendly, nature-friendly, and green) are marketing and sustainability terms referring to goods and services, laws, guidelines and policies that inflict reduced, minimal, or no harm upon ecosystems or the environment.</div>
-        </Content>
-    </TooltipTemplates>
+<SfTooltip ID="tooltip" IsSticky="true" Target="#target" Content="@Content">
     <div id='container'>
         <p>
             A green home is a type of house designed to be
@@ -36,6 +31,11 @@ Refer to the following code example to add formatted HTML content to the Tooltip
         </p>
     </div>
 </SfTooltip>
+
+@code
+{
+    string Content = "<div><b>Environmentally friendly</b> or environment-friendly, (also referred to as eco-friendly, nature-friendly, and green) are marketing and sustainability terms referring to goods and services, laws, guidelines and policies that inflict reduced, minimal, or no harm upon ecosystems or the environment.</div>";
+}
 ```
 
 Output be like the below.

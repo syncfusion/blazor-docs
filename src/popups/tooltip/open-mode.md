@@ -34,24 +34,20 @@ The following code example shows how to set the open mode for Tooltips.
 ```csharp
 @using Syncfusion.Blazor.Popups
 
-<SfTooltip ID="tooltiphover" Target=".blocks" OpensOn="Click">
-    <TooltipTemplates>
-        <Content>Tooltip content</Content>
-    </TooltipTemplates>
+<SfTooltip ID="tooltiphover" Target=".blocks" Content="@Content" OpensOn="Click">
     <div class="blocks"><span>Click Me !</span></div>
 </SfTooltip>
-<SfTooltip ID="tooltipclick" Target=".blocks" OpensOn="Hover">
-    <TooltipTemplates>
-        <Content>Tooltip content</Content>
-    </TooltipTemplates>
+<SfTooltip ID="tooltipclick" Target=".blocks" Content="@Content" OpensOn="Hover">
     <div class="blocks"><span>Hover Me !(Default)</span></div>
 </SfTooltip>
-<SfTooltip ID="tooltipfocus" Target=".e-info" OpensOn="Focus">
-    <TooltipTemplates>
-        <Content>Tooltip content</Content>
-    </TooltipTemplates>
+<SfTooltip ID="tooltipfocus" Target=".e-info" Content="@Content" OpensOn="Focus">
     <div class="blocks"><span><input class="e-info" type="text" placeholder="Focus and blur" /></span></div>
 </SfTooltip>
+
+@code
+{
+    string Content="Tooltip content";
+}
 
 <style>
     #tooltiphover {
@@ -109,14 +105,14 @@ With this mode set to `true`, Tooltips can be made to show up on the screen as l
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-    <SfTooltip Target="#target" IsSticky="true">
-        <TooltipTemplates>
-            <Content>
-                Click close icon to close me
-            </Content>
-        </TooltipTemplates>
-        <SfButton ID="target" Content="Show Tooltip"></SfButton>
-    </SfTooltip>
+<SfTooltip Target="#target" Content="@Content" IsSticky="true">
+    <SfButton ID="target" Content="Show Tooltip"></SfButton>
+</SfTooltip>
+
+@code
+{
+    string Content="Click close icon to close me";
+}
 
 <style>
     #target {
@@ -143,14 +139,14 @@ The Tooltips can be opened or closed after some delay by using the `OpenDelay` a
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-    <SfTooltip Target="#target" OpenDelay="1000" CloseDelay="1000">
-        <TooltipTemplates>
-            <Content>
-                Tooltip with delay
-            </Content>
-        </TooltipTemplates>
-        <SfButton ID="target" Content="Show Tooltip"></SfButton>
-    </SfTooltip>
+<SfTooltip Target="#target" Content="@Content" OpenDelay="1000" CloseDelay="1000">
+    <SfButton ID="target" Content="Show Tooltip"></SfButton>
+</SfTooltip>
+
+@code
+{
+    string Content="Tooltip with delay";
+}
 
 <style>
     #target {

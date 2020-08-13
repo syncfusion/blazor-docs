@@ -4,4 +4,4 @@
 * [Position](tooltip/position.md)
 * [Open Mode](tooltip/open-mode.md)
 * [Customization](tooltip/customization.md)
-* [CSS Structure](tooltip/style.md)
+* [Template](tooltip/template.md)

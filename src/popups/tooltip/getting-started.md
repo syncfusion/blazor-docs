@@ -115,8 +115,14 @@ Now, add the Syncfusion Blazor Tooltip component in any web page `razor` in the 
             Lets go green & Save Earth !!
         </Content>
     </TooltipTemplates>
+<SfTooltip ID="Tooltip" Target="#btn" Content="@Content">
     <SfButton ID="btn" Content="Show Tooltip"></SfButton>
 </SfTooltip>
+
+@code
+{
+    string Content = "Lets go green & Save Earth !!";
+}
 ```
 
 ## Run the application

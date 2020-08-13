@@ -115,21 +115,25 @@ In the following sample, the dialog is closed when you enter the username value 
         if (UserName == "" && Password == "")
         {
             args.Cancel = true;
+            this.IsVisible = true;
             this.ErrorMessage = "Enter the Username and Password";
         }
         else if (UserName == "")
         {
             args.Cancel = true;
+            this.IsVisible = true;
             this.ErrorMessage = "Enter the username";
         }
         else if (Password == "")
         {
             args.Cancel = true;
+            this.IsVisible = true;
             this.ErrorMessage = "Enter the password";
         }
         else if (UserName.Length < 4)
         {
             args.Cancel = true;
+            this.IsVisible = true;
             this.ErrorMessage = "Username must be minimum 4 characters";
         }
         else

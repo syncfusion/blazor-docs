@@ -17,10 +17,10 @@ In the following code, dialog is closed when clicking outside the dialog area us
 @using Syncfusion.Blazor.Buttons
 
 <SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
-<SfButton @onclick="@CloseDialog">Close Dialog</SfButton>
 
 <div id="target">
-    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" CloseOnEscape="false" @bind-Visible="@IsVisible">
+    <SfDialog Target="#target" Width="300px" IsModal="true" ShowCloseIcon="true" CloseOnEscape="false" @bind-Visible="@IsVisible">
+        <DialogEvents OnOverlayClick="@OverlayClick"></DialogEvents>
         <DialogTemplates>
             <Header> Delete Multiple Items</Header>
             <Content> Are you sure you want to permanently delete all of these items? </Content>
@@ -47,7 +47,7 @@ In the following code, dialog is closed when clicking outside the dialog area us
         this.IsVisible = true;
     }
 
-    private void CloseDialog()
+    private void OverlayClick(MouseEventArgs args)
     {
         this.IsVisible = false;
     }

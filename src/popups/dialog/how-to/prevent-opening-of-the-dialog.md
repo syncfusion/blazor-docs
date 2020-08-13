@@ -126,21 +126,25 @@ In the following sample, the success dialog is opened when you enter the usernam
         if (this.UserName == "" && this.Password == "")
         {
             args.Cancel = true;
+            this.Visibility = false;
             this.ErrorMessage = "Enter the Username and Password";
         }
         else if (this.UserName == "")
         {
             args.Cancel = true;
+            this.Visibility = false;
             this.ErrorMessage = "Enter the username";
         }
         else if (this.Password == "")
         {
             args.Cancel = true;
+            this.Visibility = false;
             this.ErrorMessage = "Enter the password";
         }
         else if (this.UserName.Length < 4)
         {
             args.Cancel = true;
+            this.Visibility = false;
             this.ErrorMessage = "Username must be minimum 4 characters";
         }
         else

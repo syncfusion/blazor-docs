@@ -59,6 +59,10 @@ To bind list binding to the datagrid, you can assign a IEnumerable object to the
 
 Grid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the grid as list of  **ExpandoObject**.
 
+To know about **ExpandoObject** data binding in Blazor DataGrid component, you can check on this video.
+
+`youtube:Xhaw3DdHmJk`
+
 **ExpandoObject** can be bound to datagrid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataSource.html) property. Grid can also perform all kind of supported data operations and editing in ExpandoObject.
 
 ```csharp
@@ -103,6 +107,10 @@ Grid is a generic component which is strongly bound to a model type. There are c
 ### DynamicObject binding
 
 Grid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the grid as list of  **DynamicObject**.
+
+To know about **DynamicObject** data binding in Blazor DataGrid component, you can check on this video.
+
+`youtube:Xhaw3DdHmJk`
 
 **DynamicObject** can be bound to datagrid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataSource.html) property. Grid can also perform all kind of supported data operations and editing in DynamicObject.
 

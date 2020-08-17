@@ -45,5 +45,3 @@ jobs:
          GIT_USER: ${{ secrets.WEB_GITLAB_USER }}
          GIT_TOKEN: ${{ secrets.WEB_GITLAB_TOKEN }}
          GIT_MAIL: ${{ secrets.USER_MAIL }}
-         check: 'hello'
-      if: github.event.pull_request.merged == true

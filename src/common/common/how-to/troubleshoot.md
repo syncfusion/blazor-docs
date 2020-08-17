@@ -131,3 +131,17 @@
     Open the browser dev tool by pressing the `F12` key and navigate to the `Console` tab.
 
     Check the console error with the following topics to resolve the issue or report us the console error through our [support ticket](http://syncfusion.com/support).
+
+* **Unhandled exception rendering component: Could not find 'loadScripts' in 'window.sfBlazor'.**
+
+    You may see the below exception in the web browser dev tool console.
+
+    > Error: Could not find 'loadScripts' in 'window.sfBlazor'.
+
+    **Cause:**
+
+    This script error may throws because of browser cache or outdated script reference in the application.
+
+    **Solution:**
+
+    We recommend you to clear the browser cache to resolve the above script error in v18.2.0.44 or later.

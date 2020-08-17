@@ -17,7 +17,7 @@ Syncfusion Blazor platform supports for persisting a component's state across pa
 </SfGrid>
 
 @code {
-
+    
     public List<Order> Orders { get; set; }
 
     protected override async Task OnInitializedAsync()

@@ -48,8 +48,7 @@ For Blazor Server CLI deployment,
 ```bash
     dotnet publish -c Release --self-contained true -r win-x86
 ````
-
-Refer to the dotnet publish\'s [optional arguments](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21#arguments).
+Refer to the dotnet publish\'s [optional arguments](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21#arguments). 
 
 ### Output location
 
@@ -57,8 +56,7 @@ Use the following command to specify the path for the output directory.
 
 ```bash
     dotnet publish -c Release -o <output directory>
-````
-
+```
 > If the output directory not specified, it defaults to `./bin/[configuration]/[framework]/publish/` for a **framework-dependent deployment** or `./bin/[configuration]/[framework]/[runtime]/publish/` for a **self-contained deployment**.
 
 If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.

@@ -405,4 +405,111 @@ The [`Duration`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Bla
 
 ![Circular gauge with pointer animation](./images/pointr-animation.gif)
 
+## Gradient Color
+
+Gradient support allows to add multiple colors in the ranges and pointers of the circular gauge. The following gradient types are supported in the circular gauge.
+
+* Linear Gradient
+* Radial Gradient
+
+### Linear Gradient
+
+Using linear gradient, colors will be applied in a linear progression. The start value of the linear gradient can be set using the [`StartValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient~StartValue.html) property. The end value of the linear gradient will be set using the [`EndValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient~EndValue.html) property. The color stop values such as color, opacity and offset are set using [`ColorStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient~ColorStop.html) property.
+
+The linear gradient can be applied to all pointer types like marker, range bar and needle. To do so, follow the below code sample.
+
+```csharp
+@using Syncfusion.Blazor.CircularGauge
+
+ <SfCircularGauge Height="250px" CenterY="40%">
+    <CircularGaugeAxes>
+    <CircularGaugeAxis StartAngle="270" EndAngle="90" Radius="90%" Minimum="0" Maximum="100">
+       <CircularGaugeAxisLineStyle Width="3" Color="#E63B86"/>
+            <CircularGaugeAxisLabelStyle>
+            <CircularGaugeAxisLabelFont Size="0px"/>
+             </CircularGaugeAxisLabelStyle>
+                <CircularGaugeAxisMajorTicks Height="0.01"/>
+                <CircularGaugeAxisMinorTicks Height="0.01"/>
+                <CircularGaugePointers>
+                <CircularGaugePointer Value="80" Radius="80%" PointerWidth="10" LinearGradient="@PointerLinearModel">
+                <CircularGaugeCap Radius="8" Color="White">
+                <CircularGaugeCapBorder Color="#E63B86" Width="1"/>
+                </CircularGaugeCap>
+                <CircularGaugeNeedleTail Length="20%" LinearGradient="@PointerLinearModel"/>
+                <CircularGaugePointerAnimation Enable="true" Duration="1000"/>
+                </CircularGaugePointer>
+                <CircularGaugePointer Value="40" Radius="60%" MarkerWidth="5" MarkerHeight="5" LinearGradient="@PointerLinearModel" PointerWidth="10">
+                <CircularGaugeCap Radius="8" Color="White">
+                <CircularGaugeCapBorder Color="#E63B86" Width="1"/>
+                </CircularGaugeCap>
+                <CircularGaugeNeedleTail Length="20%" LinearGradient="@PointerLinearModel"/>
+                <CircularGaugePointerAnimation Enable="true" Duration="1000"/>
+                </CircularGaugePointer>
+                </CircularGaugePointers>
+    </CircularGaugeAxis>
+    </CircularGaugeAxes>
+</SfCircularGauge>
+@code {
+    public static LinearGradient PointerLinearModel = new LinearGradient() {
+        StartValue = "1%",
+        EndValue = "99%",
+        ColorStop = new List<ColorStop>() {
+            new ColorStop { Opacity=1, Color= "#fef3f9", Offset="1%" },
+            new ColorStop { Opacity=1, Color= "#f54ea2", Offset="100%" }
+        }
+    };
+}
+```
+
+### Radial Gradient
+
+Using radial gradient, colors will be applied in circular progression. The inner circle position of the radial gradient will be set using the [`InnerPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient~InnerPosition.html) property. The outer circle position of the radial gradient can be set using the [`OuterPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient~OuterPosition.html) property. The color stop values such as color, opacity and offset are set using [`ColorStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient~ColorStop.html) property.
+
+The radial gradient can be applied to all pointer types like marker, range bar and needle. To do so, follow the below code sample.
+
+```csharp
+@using Syncfusion.Blazor.CircularGauge
+
+ <SfCircularGauge Height="250px" CenterY="40%">
+    <CircularGaugeAxes>
+    <CircularGaugeAxis StartAngle="270" EndAngle="90" Radius="90%" Minimum="0" Maximum="100">
+       <CircularGaugeAxisLineStyle Width="3" Color="#E63B86"/>
+            <CircularGaugeAxisLabelStyle>
+            <CircularGaugeAxisLabelFont Size="0px"/>
+             </CircularGaugeAxisLabelStyle>
+                <CircularGaugeAxisMajorTicks Height="0.01"/>
+                <CircularGaugeAxisMinorTicks Height="0.01"/>
+                <CircularGaugePointers>
+                <CircularGaugePointer Value="80" Radius="80%" PointerWidth="10" RadialGradient="@PointerRadialModel">
+                <CircularGaugeCap Radius="8" Color="White">
+                <CircularGaugeCapBorder Color="#E63B86" Width="1"/>
+                </CircularGaugeCap>
+                <CircularGaugeNeedleTail Length="20%" RadialGradient="@PointerRadialModel"/>
+                <CircularGaugePointerAnimation Enable="true" Duration="1000"/>
+                </CircularGaugePointer>
+                <CircularGaugePointer Value="40" Radius="60%" MarkerWidth="5" MarkerHeight="5" RadialGradient="@PointerRadialModel" PointerWidth="10">
+                <CircularGaugeCap Radius="8" Color="White">
+                <CircularGaugeCapBorder Color="#E63B86" Width="1"/>
+                </CircularGaugeCap>
+                <CircularGaugeNeedleTail Length="20%" RadialGradient="@PointerRadialModel"/>
+                <CircularGaugePointerAnimation Enable="true" Duration="1000"/>
+                </CircularGaugePointer>
+                </CircularGaugePointers>
+    </CircularGaugeAxis>
+    </CircularGaugeAxes>
+</SfCircularGauge>
+@code {
+    public static RadialGradient PointerRadialModel = new RadialGradient()
+    {
+        Radius = "60%",
+        OuterPosition = new OuterPosition() { X="50%", Y="50%" },
+        InnerPosition = new InnerPosition() { X="50%", Y="50%" },
+        ColorStop = new List<ColorStop>() {
+            new ColorStop { Opacity=0.9, Color= "#fff5f5", Offset="1%" },
+            new ColorStop { Opacity=0.8, Color= "#f54ea2", Offset="99%" }
+        }
+    };
+}
+```
+
 <!-- markdownlint-disable MD010 -->

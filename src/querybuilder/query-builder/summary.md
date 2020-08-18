@@ -1,0 +1,14 @@
+# Summary
+
+* [Getting Started](query-builder/getting-started.md)
+* [Columns Binding](query-builder/columns-binding.md)
+* [Data Binding](query-builder/data-binding.md)
+* [Filtering](query-builder/filtering.md)
+* [Importing and Exporting](query-builder/import-export.md)
+* [Localization](query-builder/localization.md)
+* [Change Display Mode](query-builder/how-to/change-display-mode.md)
+* [Maintain the State Persistence](query-builder/how-to/maintain-state-persistence.md)
+* [Right to Left](query-builder/how-to/right-to-left.md)
+* [Restrict the Groups](query-builder/how-to/restrict-group.md)
+* [Sort the Columns](query-builder/how-to/sort-the-columns.md)
+* [Summary View](query-builder/how-to/summary-view.md)

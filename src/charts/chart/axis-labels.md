@@ -56,23 +56,53 @@ Any number of levels of labels can be added to an axis using the [`MultiLevelLab
 
 Using the categories, you can configure the `Start`, `End`, `Text`, and `MaximumTextWidth` of multilevel labels.
 
+{% aspTab template="chart/axis/multiple/multi-category", sourceFiles="categorys.razor" %}
+
+{% endaspTab %}
+
+![Axis Labels Positioning](images/axis-labels/categories.png)
+
 ### Overflow
 
 Using the `Overflow` property, you can `Trim` or `Wrap` the multilevel labels.
 
+{% aspTab template="chart/axis/multiple/multi-overflow", sourceFiles="overflows.razor" %}
+
+{% endaspTab %}
+
+![Axis Labels Positioning](images/axis-labels/overflow.png)
+
 ### Alignment
 
 The `Alignment` property provides option to position the multilevel labels at `Far`, `Center`, or `Near`.
+
+{% aspTab template="chart/axis/multiple/multi-alignment", sourceFiles="alignments.razor" %}
+
+{% endaspTab %}
+
+![Axis Labels Positioning](images/axis-labels/alignment.png)
 
 ### Text customization
 
 The `TextStyle` property of multilevel labels provides options to customize the `Size`, `Color`, `FontFamily`,
 `FontWeight`, `FontStyle`, `Opacity`, `TextAlignment` and `TextOverflow`.
 
+{% aspTab template="chart/axis/multiple/multi-textcustom", sourceFiles="text-customs.razor" %}
+
+{% endaspTab %}
+
+![Axis Labels Positioning](images/axis-labels/textcustom.png)
+
 ### Border customization
 
 Using the `Border` property, you can customize the `Width`, `Color`, and `Type`. The `Type` of border
 are `Rectangle`, `Brace`, `WithoutBorder`, `WithoutTopBorder`, `WithoutTopandBottomBorder` and `CurlyBrace`.
+
+{% aspTab template="chart/axis/multiple/multi-bordercustom", sourceFiles="border-customs.razor" %}
+
+{% endaspTab %}
+
+![Axis Labels Positioning](images/axis-labels/border-custom.png)
 
 ## Edge Label Placement
 

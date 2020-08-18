@@ -10,6 +10,9 @@ description: "This section briefly explains how to create the Card component and
 
 This section briefly explains about how to include a `Card` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly/) page for the introduction and configuring the common specifications.
 
+To get start quickly with Blazor Card component, you can check on this video.
+`youtube:k8KSZIf5VPs`
+
 ## Importing Syncfusion Blazor component in the application
 
 1. Install Syncfusion.Blazor NuGet package to the application by using the NuGet Package Manager. Please ensure to check the **Include prerelease** option.

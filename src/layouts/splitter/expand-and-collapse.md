@@ -162,7 +162,7 @@ You can render specific panes with collapsed state on page load. Specify a Boole
                 </div>
             </ContentTemplate>
         </SplitterPane>
-        <SplitterPane Collapsible="true" Collapsed="true">
+        <SplitterPane Collapsible="true" @bind-Collapsed="@collapsed">
             <ContentTemplate>
                 <div>
                     <div class="content">
@@ -190,6 +190,12 @@ You can render specific panes with collapsed state on page load. Specify a Boole
         padding: 10px;
     }
 </style>
+
+@code  {
+
+    private bool collapsed { get; set; } = true;
+
+}
 
 ```
 

@@ -287,8 +287,8 @@ In the following sample, when the data fetch request fails, the ComboBox display
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfComboBox TValue="string" ModelType="@Data" Placeholder="Select a customer" Query="@Query">
-    <ComboBoxTemplates>
+<SfComboBox TValue="string" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
+    <ComboBoxTemplates TItem="EmployeeData">
         <ActionFailureTemplate>
             <span class='norecord'>Data fetch get fails </span>
         </ActionFailureTemplate>
@@ -303,7 +303,7 @@ In the following sample, when the data fetch request fails, the ComboBox display
         public string FirstName { get; set; }
     }
     public EmployeeData Data = new EmployeeData();
-    public string Query = "new sf.data.Query().select(['FirstName', 'Country']).take(6).requiresCount()";
+    public Query Query = new Query().Select(new List<string> {"FirstName", "Country"}).Take(6).RequiresCount();
 }
 ```
 

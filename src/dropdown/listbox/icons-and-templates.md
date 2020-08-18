@@ -41,23 +41,23 @@ In the following sample, icon classes are mapped with `IconCss` field.
     }
 
     .e-list-print:before {
-        content: "\e813";
+        content: "\e743";
     }
 
     .e-list-save:before {
-        content: "\e703";
+        content: "\e74d";
     }
 
     .e-list-saveas:before {
-        content: "\e704";
+        content: "\e72b";
     }
 
     .e-list-delete:before {
-        content: "\e707";
+        content: "\e773";
     }
 
     .e-list-undo:before {
-        content: "\ec14";
+        content: "\e752";
     }
 
 </style>

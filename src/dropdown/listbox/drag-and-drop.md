@@ -67,7 +67,7 @@ The following sample illustrates how to drag and drop an item between two listbo
 
 <div id="listbox1">
   <h4>Group A</h4>
-<SfListBox TValue="string[]" DataSource="@GroupA"  AllowDragAndDrop="true" Scope="combined-list" height="290px" TItem="CountryCode"
+<SfListBox TValue="string[]" DataSource="@GroupA"  AllowDragAndDrop="true" Scope="combined-list" height="290px" TItem="CountryCode">
 <ListBoxFieldSettings Text="Name" Value="Code" />
 </SfListBox>
 </div>

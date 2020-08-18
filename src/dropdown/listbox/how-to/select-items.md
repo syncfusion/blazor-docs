@@ -17,7 +17,7 @@ In the following example, `Bugatti Chiron` is selected using [`SelectItems`](htt
 </SfListBox>
 
 @code {
-    SfListBox<string[]> ListBoxObj;
+    SfListBox<string[],VehicleData> ListBoxObj;
     public List<VehicleData> Vehicles = new List<VehicleData> {
         new VehicleData { Text = "Hennessey Venom", Id = "Vehicle-01" },
         new VehicleData { Text = "Bugatti Chiron", Id = "Vehicle-02" },

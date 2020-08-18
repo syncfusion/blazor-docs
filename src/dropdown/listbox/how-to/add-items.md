@@ -18,7 +18,7 @@ To add an item or multiple items, [`AddItems`](https://help.syncfusion.com/cr/bl
 <SfButton @onclick="addData">ADD ITEMS</SfButton>
 
 @code {
-      SfListBox<string[]> ListBoxObj;
+      SfListBox<string[],VehicleData> ListBoxObj;
       public List<VehicleData> Vehicles = new List<VehicleData> {
         new VehicleData { Text = "Hennessey Venom", Id = "Vehicle-01" },
         new VehicleData { Text = "Bugatti Chiron", Id = "Vehicle-02" },
@@ -58,13 +58,13 @@ To remove an item or multiple items, [`RemoveItems`](https://help.syncfusion.com
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Buttons
 
-<SfListBox TValue="string[]" DataSource="@Vehicles" @ref="ListBoxObj">
+<SfListBox TValue="string[]" TItem="VehicleData" DataSource="@Vehicles" @ref="ListBoxObj">
   <ListBoxFieldSettings Text="Text" Value="Id" />
 </SfListBox>
 <SfButton @onclick="removeData">REMOVE ITEMS</SfButton>
 
 @code {
-      SfListBox<string[]> ListBoxObj;
+      SfListBox<string[],VehicleData> ListBoxObj;
       public List<VehicleData> Vehicles = new List<VehicleData> {
         new VehicleData { Text = "Hennessey Venom", Id = "Vehicle-01" },
         new VehicleData { Text = "Bugatti Chiron", Id = "Vehicle-02" },

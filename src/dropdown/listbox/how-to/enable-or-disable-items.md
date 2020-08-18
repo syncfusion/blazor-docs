@@ -19,7 +19,7 @@ To enable or disable items in the listbox, [`EnableItems`](https://help.syncfusi
 <SfButton @onclick="enableData" Content="Enable Items"></SfButton>
 
 @code {
-    SfListBox<string[]> ListBoxObj;
+    SfListBox<string[],VehicleData> ListBoxObj;
     public List<VehicleData> Vehicles = new List<VehicleData> {
         new VehicleData { Text = "Hennessey Venom", Id = "Vehicle-01" },
         new VehicleData { Text = "Bugatti Chiron", Id = "Vehicle-02" },

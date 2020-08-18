@@ -6,7 +6,7 @@ description: "This section explains how to create a simple Syncfusion ASP.NET C
 
 # Getting Started
 
-This section briefly explains how to include a **DropDownList** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/vs-blazor/) page for introduction and configure the common specifications.
+This section briefly explains how to include a **DropDownList** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly/) page for introduction and configure the common specifications.
 
 To get start quickly with Blazor DropDownList component, you can check on this video.
 

@@ -6,7 +6,7 @@ var shelljs = require('shelljs');
 var components;
 var compPaths = glob.sync(`./src/**/`, { silent: true, ignore: [`./src/base/`, `./src/`, './src/common/', './src/getting-started/'] });
 
-var branch = 'master';
+var branch = 'hotfix/18.2.0.44_Vol2';
 var user = process.env.GIT_USER;
 var token = process.env.GIT_TOKEN;
 var user_mail = process.env.GIT_MAIL;

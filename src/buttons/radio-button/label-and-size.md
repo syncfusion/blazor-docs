@@ -17,8 +17,12 @@ Radio Button through the [`LabelPosition`](https://help.syncfusion.com/cr/blazor
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfRadioButton Label="Left Side Label" Name="position" LabelPosition="RadioLabelPosition.Before"></SfRadioButton><br />
-<SfRadioButton Label="Right Side Label" Checked="true" Name="position" LabelPosition="RadioLabelPosition.After"></SfRadioButton>
+<SfRadioButton Label="Left Side Label" Name="position" LabelPosition="RadioLabelPosition.Before" Value="Left"  @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Right Side Label" Name="position" LabelPosition="RadioLabelPosition.After" Value="Right" @bind-Checked="stringChecked"></SfRadioButton>
+
+@code {
+    private string stringChecked ="Right";
+}
 
 ```
 
@@ -34,8 +38,12 @@ set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syn
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfRadioButton Label="Small" Name="size" checked="true" CssClass="e-small"></SfRadioButton><br />
-<SfRadioButton Label="Default" Name="size"></SfRadioButton>
+<SfRadioButton Label="Small" Name="size" CssClass="e-small" Value="Small" @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Default" Name="size" Value="Default" @bind-Checked="stringChecked"></SfRadioButton>
+
+@code {
+    private string stringChecked ="Default";
+}
 
 ```
 

@@ -62,11 +62,11 @@ Closes the popup.</td></tr>
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste">
-    <SplitButtonItems>
-        <SplitButtonItem Text="Cut" ></SplitButtonItem>
-        <SplitButtonItem Text="Copy" ></SplitButtonItem>
-        <SplitButtonItem Text="Paste"></SplitButtonItem>
-    </SplitButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfSplitButton>
 
 ```

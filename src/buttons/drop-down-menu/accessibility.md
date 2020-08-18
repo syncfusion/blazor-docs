@@ -63,11 +63,11 @@ Opens the popup</td></tr>
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Content="Edit">
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Cut"></DropDownButtonItem>
-        <DropDownButtonItem Text="Copy"></DropDownButtonItem>
-        <DropDownButtonItem Text="Paste"></DropDownButtonItem>
-    </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut"></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 
 ```

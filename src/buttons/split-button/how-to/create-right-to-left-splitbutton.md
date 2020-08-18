@@ -14,24 +14,24 @@ The following example illustrates how to enable right-to-left support in Split B
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" IconCss="e-icons e-paste" EnableRtl="true">
-    <SplitButtonItems>
-        <SplitButtonItem Text="Cut" ></SplitButtonItem>
-        <SplitButtonItem Text="Copy" ></SplitButtonItem>
-        <SplitButtonItem Text="Paste"></SplitButtonItem>
-    </SplitButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem IconCss="e-icons e-cut" Text="Cut"></DropDownMenuItem>
+        <DropDownMenuItem IconCss="e-icons e-copy" Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem IconCss="e-icons e-paste" Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfSplitButton>
 
 <style>
     .e-paste::before {
-        content: '\e501';
+        content: '\e739';
     }
 
     .e-cut::before {
-        content: '\e604';
+        content: '\e73f';
     }
 
     .e-copy::before {
-        content: '\e60d';
+        content: '\e77b';
     }
 </style>
   

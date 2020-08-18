@@ -13,7 +13,11 @@ The following example illustrates how to enable right-to-left support in Toggle 
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfSwitch EnableRtl="true"></SfSwitch>
+<SfSwitch EnableRtl="true" @bind-Checked="isCheked"></SfSwitch>
+
+@code {
+  private bool isChecked = false;
+}
 
 ```
 

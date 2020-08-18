@@ -86,7 +86,11 @@ namespace BlazorApplication
 Now, add the Syncfusion Blazor Toggle Switch Button component in `razor` page in the `Pages` folder. For example the Toggle Switch Button component is added in the `~/Pages/Index.razor` page.
 
 ```csharp
-<SfSwitch Checked="true"></SfSwitch>
+<SfSwitch @bind-Checked="isChecked"></SfSwitch>
+
+@code {
+    private bool isChecked = true;
+}
 ```
 
 ## Run the application

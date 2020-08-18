@@ -12,9 +12,13 @@ the `Disabled` property can be set as `true`.
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfRadioButton Label="Option 1" Name="default" Checked="true"></SfRadioButton><br />
-<SfRadioButton Label="Option 2" Name="default" Disabled="true"></SfRadioButton><br />
-<SfRadioButton Label="Option 3" Name="default"></SfRadioButton>
+<SfRadioButton Label="Option 1" Name="default" Value="Checked" @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Option 2" Name="default" Value="Disable" @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Option 3" Name="default" Value="None" @bind-Checked="stringChecked" Disabled="true"  ></SfRadioButton>
+
+@code {
+    private string stringChecked = "Checked";
+}
 
 ```
 

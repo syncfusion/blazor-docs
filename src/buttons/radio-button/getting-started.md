@@ -86,8 +86,12 @@ namespace BlazorApplication
 Now, add the Syncfusion Blazor Radio Button component in `razor` page in the `Pages` folder. For example, the Radio Button component is added in the `~/Pages/Index.razor` page.
 
 ```csharp
-<SfRadioButton Label="Option 1" Name="options" Value="1"></SfRadioButton>
-<SfRadioButton Label="Option 2" Name="options" Value="2" Checked="true"></SfRadioButton>
+<SfRadioButton Label="Option 1" Name="options" Value="card" @bind-Checked="stringChecked"></SfRadioButton>
+<SfRadioButton Label="Option 2" Name="options" Value="cash" @bind-Checked="stringChecked"></SfRadioButton>
+
+@code {
+    private string stringChecked = "cash";
+}
 ```
 
 ## Run the application

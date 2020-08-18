@@ -10,11 +10,11 @@ In the following example, the `Top` position of the popup element is changed in 
 
 <SfDropDownButton Content="EDIT">
     <DropDownButtonEvents OnOpen="Open"></DropDownButtonEvents>
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Cut"></DropDownButtonItem>
-        <DropDownButtonItem Text="Copy"></DropDownButtonItem>
-        <DropDownButtonItem Text="Paste"></DropDownButtonItem>
-    </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut"></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 
 @code {

@@ -31,7 +31,11 @@ The `onfocus` attribute is used to bind the focus event for Toggle Switch Button
 @using Syncfusion.Blazor.Buttons
 
 <label>onfocus</label>
-<SfSwitch @onfocus="onFocus"></SfSwitch>
+<SfSwitch @onfocus="onFocus" @bind-Checked="isChecked"></SfSwitch>
+
+@code {
+    private bool isChecked = true;
+}
 
 @code {
 

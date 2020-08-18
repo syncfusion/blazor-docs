@@ -14,11 +14,11 @@ The following example illustrates how to set the disable state in Split Button c
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" Disabled="true">
-    <SplitButtonItems>
-        <SplitButtonItem Text="Cut" ></SplitButtonItem>
-        <SplitButtonItem Text="Copy" ></SplitButtonItem>
-        <SplitButtonItem Text="Paste"></SplitButtonItem>
-    </SplitButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfSplitButton>
   
 ```

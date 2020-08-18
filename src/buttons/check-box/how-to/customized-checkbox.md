@@ -17,11 +17,19 @@ The background and border color of the Checkbox is customized through the custom
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfCheckBox Checked="true" Label="Primary" CssClass="e-primary"></SfCheckBox><br />
-<SfCheckBox Checked="true" Label="Success" CssClass="e-success"></SfCheckBox><br />
-<SfCheckBox Checked="true" Label="Info" CssClass="e-info"></SfCheckBox><br />
-<SfCheckBox Checked="true" Label="Warning" CssClass="e-warning"></SfCheckBox><br />
-<SfCheckBox Checked="true" Label="Danger" CssClass="e-danger"></SfCheckBox
+<SfCheckBox @bind-Checked="isPrimaryChecked" Label="Primary" CssClass="e-primary"></SfCheckBox><br />
+<SfCheckBox @bind-Checked="isSuccessChecked" Label="Success" CssClass="e-success"></SfCheckBox><br />
+<SfCheckBox @bind-Checked="isInfoChecked" Label="Info" CssClass="e-info"></SfCheckBox><br />
+<SfCheckBox @bind-Checked="isWarningChecked" Label="Warning" CssClass="e-warning"></SfCheckBox><br />
+<SfCheckBox @bind-Checked="isDangerChecked" Label="Danger" CssClass="e-danger"></SfCheckBox>
+
+@code {
+    private bool isPrimaryChecked = true;
+    private bool isSuccessChecked = true;
+    private bool isInfoChecked = true;
+    private bool isWarningChecked = true;
+    private bool isDangerChecked = true;
+}
 
 <style>
     .e-checkbox-wrapper.e-primary:hover .e-frame.e-check { /* csslint allow: adjoining-classes */
@@ -80,7 +88,11 @@ The following section explains about how to customize the height and width of th
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfCheckBox CssClass="e-customsize" Label="Default" Checked="true"></SfCheckBox>
+<SfCheckBox CssClass="e-customsize" Label="Default" @bind-Checked="isChecked"></SfCheckBox>
+
+@code {
+    private bool isChecked = true;
+}
 
 <style>
         .e-customsize.e-checkbox-wrapper .e-frame {
@@ -120,10 +132,17 @@ In the following example, to-do list is displayed with round checkbox by changin
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfCheckBox Label="Buy Groceries" Checked="true" CssClass="e-custom"></SfCheckBox><br />
-<SfCheckBox Label="Pay Rent" Checked="true" CssClass="e-custom"></SfCheckBox><br />
-<SfCheckBox Label="Make Dinner" CssClass="e-custom"></SfCheckBox><br />
-<SfCheckBox Label="Finish To-do List Article" CssClass="e-custom"></SfCheckBox>
+<SfCheckBox Label="Buy Groceries" @bind-Checked="isChecked" CssClass="e-custom"></SfCheckBox><br />
+<SfCheckBox Label="Pay Rent" @bind-Checked="isRentChecked" CssClass="e-custom"></SfCheckBox><br />
+<SfCheckBox Label="Make Dinner" @bind-Checked="isDinnerChecked" CssClass="e-custom"></SfCheckBox><br />
+<SfCheckBox Label="Finish To-do List Article" @bind-Checked="isArticleChecked" CssClass="e-custom"></SfCheckBox>
+
+@code {
+    private bool isChecked = true;
+    private bool isRentChecked = true;
+    private bool isDinnerChecked = false;
+    private bool isArticleChecked = false;
+}
 
 <style>
         .e-custom .e-frame {
@@ -174,10 +193,17 @@ border color in focus and hovered states by adding `e-checkicon` class.
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfCheckBox Label="Buy Groceries" Checked="true" CssClass="e-checkicon"></SfCheckBox><br />
-<SfCheckBox Label="Pay Rent" Checked="true" CssClass="e-checkicon"></SfCheckBox><br />
-<SfCheckBox Label="Make Dinner" Checked="true" CssClass="e-checkicon"></SfCheckBox><br />
-<SfCheckBox Label="Finish To-do List Article" CssClass="e-checkicon"></SfCheckBox>
+<SfCheckBox Label="Buy Groceries" @bind-Checked="isChecked" CssClass="e-checkicon"></SfCheckBox><br />
+<SfCheckBox Label="Pay Rent"  @bind-Checked="isRentChecked" CssClass="e-checkicon"></SfCheckBox><br />
+<SfCheckBox Label="Make Dinner" @bind-Checked="isDinnerChecked" CssClass="e-checkicon"></SfCheckBox><br />
+<SfCheckBox Label="Finish To-do List Article" @bind-Checked="isArticleChecked" CssClass="e-checkicon"></SfCheckBox>
+
+@code {
+    private bool isChecked = true;
+    private bool isRentChecked = true;
+    private bool isDinnerChecked = true;
+    private bool isArticleChecked = false;
+}
 
 <style>
     .e-checkicon.e-checkbox-wrapper .e-frame.e-check::before {

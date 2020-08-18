@@ -31,10 +31,11 @@ The `onclick` attribute is used to bind the click event for Radio Button. Here, 
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfRadioButton Label="Credit/Debit Card" Name="payment" Value="credit/debit" @onclick="onClick"></SfRadioButton><br />
-<SfRadioButton Label="Net Banking" Name="payment" Value="netbanking" @onclick="onClick"></SfRadioButton>
+<SfRadioButton Label="Credit/Debit Card" Name="payment" Value="credit/debit" @onclick="onClick" @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Net Banking" Name="payment" Value="netbanking" @onclick="onClick" @bind-Checked="stringChecked"></SfRadioButton>
 
 @code {
+    private string stringChecked = "netbanking";
     private void onClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args){
         //onclick Event triggered
     }

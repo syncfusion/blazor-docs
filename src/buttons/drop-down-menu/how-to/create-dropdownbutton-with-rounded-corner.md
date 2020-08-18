@@ -16,11 +16,11 @@ property and added that class to button element using
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton CssClass="e-round-corner" Content="Clipboard">
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Edit"></DropDownButtonItem>
-        <DropDownButtonItem Text="Copy"></DropDownButtonItem>
-        <DropDownButtonItem Text="Paste"></DropDownButtonItem>
-    </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Edit"></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 
 <style>

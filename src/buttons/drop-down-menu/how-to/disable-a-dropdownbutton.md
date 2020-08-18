@@ -13,12 +13,12 @@ To disable Dropdown Menu component, the disabled property can be set as `true`.
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Disabled="true" Content="Message">
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Edit"></DropDownButtonItem>
-        <DropDownButtonItem Text="Delete"></DropDownButtonItem>
-        <DropDownButtonItem Text="Mark as Read"></DropDownButtonItem>
-        <DropDownButtonItem Text="Like Message"></DropDownButtonItem>
-    </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Edit"></DropDownMenuItem>
+        <DropDownMenuItem Text="Delete"></DropDownMenuItem>
+        <DropDownMenuItem Text="Mark as Read"></DropDownMenuItem>
+        <DropDownMenuItem Text="Like Message"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 ```
 

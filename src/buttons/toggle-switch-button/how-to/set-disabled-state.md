@@ -13,7 +13,11 @@ The following example illustrates how to disable support in Toggle Switch Button
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfSwitch Disabled="true"></SfSwitch>
+<SfSwitch Disabled="true" @bind-Checked="isChecked"></SfSwitch>
+
+@code {
+    private bool isChecked = false;
+}
 
 ```
 

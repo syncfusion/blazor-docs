@@ -31,9 +31,10 @@ The `onchange` attribute is used to bind the onchange event for Checkbox. Here, 
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfCheckBox Label="Change" @onchange="onChange"></SfCheckBox>
+<SfCheckBox @bind-Checked="isChecked" Label="Change" @onchange="onChange"></SfCheckBox>
 
 @code {
+    private bool isChecked = true;
     private void onChange(Microsoft.AspNetCore.Components.ChangeEventArgs args)
     {
        //onChange Event triggered

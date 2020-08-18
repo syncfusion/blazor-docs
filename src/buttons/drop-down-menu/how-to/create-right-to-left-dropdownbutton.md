@@ -13,25 +13,25 @@ The following example illustrates how to enable right-to-left support in Dropdow
 ```csharp
 @using Syncfusion.Blazor.SplitButtons
 
-<SfDropDownButton IconCss="e-icons e-message" EnableRtl="true">Message
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Edit"></DropDownButtonItem>
-        <DropDownButtonItem Text="Copy"></DropDownButtonItem>
-        <DropDownButtonItem Text="Paste"></DropDownButtonItem>
-    </DropDownButtonItems>
+<SfDropDownButton Content="Message" IconCss="e-icons e-message" EnableRtl="true">
+    <DropDownMenuItems>
+        <DropDownMenuItem IconCss="e-icons e-edit" Text="Edit"></DropDownMenuItem>
+        <DropDownMenuItem IconCss="e-icons e-delete" Text="Delete"></DropDownMenuItem>
+        <DropDownMenuItem IconCss="e-icons e-like" Text="Like"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 
 <style>
     .e-message::before {
-        content: '\e30d';
+        content: '\e7cb';
     }
 
     .e-edit::before {
-        content: '\e81e';
+        content: '\e78f';
     }
 
     .e-delete::before {
-        content: '\e84e';
+        content: '\e773';
     }
 
     .e-like::before {

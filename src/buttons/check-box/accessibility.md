@@ -33,9 +33,15 @@ When the Checkbox has focus, pressing the Space key changes the state of the Che
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfCheckBox Checked="true" Label="Checked State"></SfCheckBox><br />
-<SfCheckBox Label="Unchecked State"></SfCheckBox><br />
-<SfCheckBox Indeterminate="true" Label="Intermediate State"></SfCheckBox>
+<SfCheckBox @bind-Checked="isChecked" Label="Checked State"></SfCheckBox><br />
+<SfCheckBox @bind-Checked="isUnChecked" Label="Unchecked State"></SfCheckBox><br />
+<SfCheckBox @bind-Checked="isMediateChecked" Indeterminate="true" Label="Intermediate State"></SfCheckBox>
+
+@code {
+    private bool isChecked = true;
+    private bool isUnChecked = false;
+    private bool isMediateChecked = false;
+}
 
 ```
 

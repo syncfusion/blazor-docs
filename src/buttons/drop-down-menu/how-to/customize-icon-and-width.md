@@ -14,17 +14,17 @@ The following UI can be achieved by setting [`IconPosition`](https://help.syncfu
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton IconCss="e-icons e-search" CssClass="e-custom" IconPosition ="SplitButtonIconPosition.Top" Content="Search">
-  <DropDownButtonItems>
-      <DropDownButtonItem Text="Find"></DropDownButtonItem>
-      <DropDownButtonItem Text="Replace"></DropDownButtonItem>
-      <DropDownButtonItem Text="Go To"></DropDownButtonItem>
-  </DropDownButtonItems>
+  <DropDownMenuItems>
+      <DropDownMenuItem Text="Find"></DropDownMenuItem>
+      <DropDownMenuItem Text="Replace"></DropDownMenuItem>
+      <DropDownMenuItem Text="Go To"></DropDownMenuItem>
+  </DropDownMenuItems>
 </SfDropDownButton>
 
 <style>
 
 .e-search::before {
-  content: '\ec0d';
+  content: '\e724';
 }
 
 .e-dropdown-btn.e-custom {

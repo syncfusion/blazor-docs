@@ -19,18 +19,18 @@ In the following example, the Dropdown Menu with default iconPosition and iconPo
 <SfDropDownButton Items="@DropItems" IconCss="e-icons e-message" IconPosition="SplitButtonIconPosition.Top" Content="Message"></SfDropDownButton>
 
 @code {
-    public List<DropDownButtonItem> DropItems { get; set; } = new List<DropDownButtonItem>
+    public List<DropDownMenuItem> DropItems { get; set; } = new List<DropDownMenuItem>
     {
-        new DropDownButtonItem { Text = "Edit" },
-        new DropDownButtonItem { Text = "Delete" },
-        new DropDownButtonItem { Text = "Mark as Read" },
-        new DropDownButtonItem { Text = "Like Message" }
+        new DropDownMenuItem { Text = "Edit" },
+        new DropDownMenuItem { Text = "Delete" },
+        new DropDownMenuItem { Text = "Mark as Read" },
+        new DropDownMenuItem { Text = "Like Message" }
     };
 }
 
 <style>
     .e-message::before {
-        content: '\e30d';
+        content: '\e7cb';
     }
 </style>
 
@@ -50,16 +50,16 @@ Vertical button in Dropdown Menu can be achieved by adding `e-vertical` class us
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton IconCss="e-icons e-message" CssClass="e-vertical" Content="Message">
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Cut"></DropDownButtonItem>
-        <DropDownButtonItem Text="Copy"></DropDownButtonItem>
-        <DropDownButtonItem Text="Paste"></DropDownButtonItem>
-    </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut"></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 
 <style>
     .e-message::before {
-        content: '\e30d';
+        content: '\e7cb';
     }
 </style>
 

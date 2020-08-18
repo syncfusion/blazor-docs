@@ -13,9 +13,14 @@ set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syn
 @using Syncfusion.Blazor.Buttons
 
 <label for='switch1'>Checked</label>
-<SfSwitch ID='switch1' CssClass="e-small" Checked="true"></SfSwitch>
+<SfSwitch CssClass="e-small" @bind-Checked="isSmallChecked"></SfSwitch>
 <label for='switch2'>Unchecked</label>
-<SfSwitch ID='switch2'></SfSwitch>
+<SfSwitch @bind-Checked="isChecked"></SfSwitch>
+
+@code {
+    private bool isSmallChecked = true;
+    private bool isChecked = false;
+}
 
 ```
 

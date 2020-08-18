@@ -34,12 +34,12 @@ The `onclick` attribute is used to bind the click event for Dropdown Menu. Here,
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton @onclick="onClick" Content="Profile">
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Dashboard"></DropDownButtonItem>
-        <DropDownButtonItem Text="Notifications"></DropDownButtonItem>
-        <DropDownButtonItem Text="User Settings"></DropDownButtonItem>
-        <DropDownButtonItem Text="Log Out"></DropDownButtonItem>
-     </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Dashboard"></DropDownMenuItem>
+        <DropDownMenuItem Text="Notifications"></DropDownMenuItem>
+        <DropDownMenuItem Text="User Settings"></DropDownMenuItem>
+        <DropDownMenuItem Text="Log Out"></DropDownMenuItem>
+     </DropDownMenuItems>
 </SfDropDownButton>
 
 @code {

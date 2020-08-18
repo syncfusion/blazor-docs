@@ -13,7 +13,11 @@ The following example illustrates how to enable right-to-left support in Checkbo
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfCheckBox Label="Default" Checked="true" EnableRtl="true"></SfCheckBox>
+<SfCheckBox Label="Default" @bind-Checked="isChecked" EnableRtl="true"></SfCheckBox>
+
+@code {
+    private bool isChecked = true;
+}
 
 ```
 

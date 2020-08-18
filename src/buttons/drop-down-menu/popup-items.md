@@ -17,25 +17,25 @@ added using the `IconCss` property.
 ```csharp
 @using Syncfusion.Blazor.SplitButtons
 
-<SfDropDownButton IconCss="e-icons e-message" Content="Message">
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Cut"></DropDownButtonItem>
-        <DropDownButtonItem Text="Copy"></DropDownButtonItem>
-        <DropDownButtonItem Text="Paste"></DropDownButtonItem>
-    </DropDownButtonItems>
+<SfDropDownButton Content="Message" IconCss="e-icons e-message">
+    <DropDownMenuItems>
+        <DropDownMenuItem IconCss="e-icons e-edit" Text="Edit"></DropDownMenuItem>
+        <DropDownMenuItem IconCss="e-icons e-delete" Text="Delete"></DropDownMenuItem>
+        <DropDownMenuItem IconCss="e-icons e-like" Text="Like"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 
 <style>
     .e-message::before {
-        content: '\e30d';
+        content: '\e7cb';
     }
 
     .e-edit::before {
-        content: '\e81e';
+        content: '\e78f';
     }
 
     .e-delete::before {
-        content: '\e84e';
+        content: '\e773';
     }
 
     .e-like::before {
@@ -62,14 +62,14 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Content="Clipboard">
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Cut"></DropDownButtonItem>
-        <DropDownButtonItem Text="Copy"></DropDownButtonItem>
-        <DropDownButtonItem Text="Paste"></DropDownButtonItem>
-        <DropDownButtonItem Separator=true></DropDownButtonItem>
-        <DropDownButtonItem Text="Font"></DropDownButtonItem>
-        <DropDownButtonItem Text="Paragraph"></DropDownButtonItem>
-    </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut"></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+        <DropDownMenuItem Separator=true></DropDownMenuItem>
+        <DropDownMenuItem Text="Font"></DropDownMenuItem>
+        <DropDownMenuItem Text="Paragraph"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 
 ```
@@ -89,17 +89,17 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton IconCss="e-icons e-shopping" Content="Shop By">
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Flipkart" Url="https://www.google.co.in/search?q=flipkart"></DropDownButtonItem>
-        <DropDownButtonItem Text="Amazon" Url="https://www.google.co.in/search?q=amazon"></DropDownButtonItem>
-        <DropDownButtonItem Text="Snapdeal" Url="https://www.google.co.in/search?q=snapdeal"></DropDownButtonItem>
-    </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Flipkart" Url="https://www.google.co.in/search?q=flipkart"></DropDownMenuItem>
+        <DropDownMenuItem Text="Amazon" Url="https://www.google.co.in/search?q=amazon"></DropDownMenuItem>
+        <DropDownMenuItem Text="Snapdeal" Url="https://www.google.co.in/search?q=snapdeal"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 
 <style>
 
 .e-shopping::before {
-    content: '\e30c';
+    content: '\e7d0';
 }
 
 </style>
@@ -122,11 +122,11 @@ Popup items can be customized using the [`OnItemRender`](https://help.syncfusion
 
 <SfDropDownButton Content="Edit">
     <DropDownButtonEvents OnItemRender="Render"></DropDownButtonEvents>
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Cut"></DropDownButtonItem>
-        <DropDownButtonItem Text="Copy"></DropDownButtonItem>
-        <DropDownButtonItem Text="Paste"></DropDownButtonItem>
-    </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut"></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 
 @code {

@@ -13,7 +13,11 @@ The following example illustrates how to enable right-to-left support in Radio B
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfRadioButton Label="Default" EnableRtl="true"></SfRadioButton>
+<SfRadioButton Label="Default" EnableRtl="true" Value="Default" @bind-Checked="stringChecked"></SfRadioButton>
+
+@code {
+    private string stringChecked = "Default";
+}
 
 ```
 

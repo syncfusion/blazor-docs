@@ -40,7 +40,7 @@ by [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusio
 
 <style>
     .e-down::before {
-    content: '\e969';
+    content: '\e744';
 }
 </style>
 

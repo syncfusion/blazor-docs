@@ -12,13 +12,14 @@ This section explains about how to toggle between the Toggle Switch Button state
 
 @using Syncfusion.Blazor.Buttons
 
-<SfSwitch OffLabel="OFF" OnLabel="ON" Created="create" @ref="SwitchObj"></SfSwitch>
+<SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" Created="create" @ref="SwitchObj" TChecked="bool"></SfSwitch>
 
 @code{
-    SfSwitch SwitchObj;
+    private bool isChecked = false;
+    SfSwitch<bool> SwitchObj;
     private void create(object obj)
     {
-        SwitchObj.Toggle();
+        //SwitchObj.Toggle();
     }
 }
 

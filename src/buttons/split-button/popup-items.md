@@ -17,23 +17,26 @@ In the following sample, the icons for Cut, Copy, Paste menu items are added usi
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" IconCss="e-icons e-paste">
-    <SplitButtonItems>
-        <SplitButtonItem Text="Cut" ></SplitButtonItem>
-        <SplitButtonItem Text="Copy" ></SplitButtonItem>
-        <SplitButtonItem Text="Paste"></SplitButtonItem>
-    </SplitButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem IconCss="e-icons e-cut" Text="Cut"></DropDownMenuItem>
+        <DropDownMenuItem IconCss="e-icons e-copy" Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem IconCss="e-icons e-paste" Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfSplitButton>
 
 <style>
     .e-paste::before {
-        content: '\e501';
+        content: '\e739';
     }
+
     .e-cut::before {
-        content: '\e604';
+        content: '\e73f';
     }
+
     .e-copy::before {
-        content: '\e60d';
+        content: '\e77b';
     }
+
 </style>
 
 ```
@@ -54,11 +57,11 @@ Popup items can be customized by using the [`OnItemRender`](https://help.syncfus
 
 <SfSplitButton Content="Edit">
     <SplitButtonEvents OnItemRender="Render"></SplitButtonEvents>
-    <SplitButtonItems>
-        <SplitButtonItem Text="Cut" ></SplitButtonItem>
-        <SplitButtonItem Text="Copy" ></SplitButtonItem>
-        <SplitButtonItem Text="Paste"></SplitButtonItem>
-    </SplitButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfSplitButton>
 
 @code {

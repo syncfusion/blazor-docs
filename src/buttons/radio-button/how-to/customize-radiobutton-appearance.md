@@ -14,11 +14,15 @@ The background and border color of the Radio Button is customized through the cu
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfRadioButton Label="Primary" Name="custom" CssClass="e-primary"></SfRadioButton><br />
-<SfRadioButton Label="Success" Name="custom" CssClass="e-success"></SfRadioButton><br />
-<SfRadioButton Label="Info" Name="custom" CssClass="e-info"></SfRadioButton><br />
-<SfRadioButton Label="Warning" Name="custom" CssClass="e-warning"></SfRadioButton><br />
-<SfRadioButton Label="Danger" Name="custom" Checked="true" CssClass="e-danger"></SfRadioButton>
+<SfRadioButton Label="Primary" Name="custom" CssClass="e-primary" Value="Primary" @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Success" Name="custom" CssClass="e-success" Value="Success" @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Info" Name="custom" CssClass="e-info" Value="Info" @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Warning" Name="custom" CssClass="e-warning" Value="Warning" @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Danger" Name="custom" CssClass="e-danger" Value="Danger" @bind-Checked="stringChecked"></SfRadioButton>
+
+@code {
+    private string stringChecked = "Danger";
+}
 
 <style>
     .e-radio:checked + .e-success::after { /* csslint allow: adjoining-classes */

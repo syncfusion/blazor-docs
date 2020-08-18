@@ -17,9 +17,15 @@ Toggle Switch Button bar and handle can be customized as per requirement using C
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfSwitch CssClass="square" Checked="true"></SfSwitch><br />
-<SfSwitch CssClass="custom-switch"></SfSwitch><br />
-<SfSwitch CssClass="handle-text"></SfSwitch>
+<SfSwitch CssClass="square" @bind-Checked="isSquareChecked"></SfSwitch><br />
+<SfSwitch CssClass="custom-switch" @bind-Checked="isCustomChecked"></SfSwitch><br />
+<SfSwitch CssClass="handle-text" @bind-Checked="isHandleChecked"></SfSwitch>
+
+@code {
+    private bool isSquareChecked = true;
+    private bool isCustomChecked = false;
+    private bool isHandleChecked = false;
+}
 
 <style>
 /* Square Switch */
@@ -132,10 +138,16 @@ Toggle Switch Button colors can be customized as per the requirement using CSS r
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfSwitch CssClass="bar-color"></SfSwitch><br />
-<SfSwitch CssClass="handle-color" Checked="true"></SfSwitch><br />
-<SfSwitch CssClass="custom-iOS" Checked="true"></SfSwitch>
+<SfSwitch CssClass="bar-color"  @bind-Checked="isBarCheked"></SfSwitch><br />
+<SfSwitch CssClass="handle-color"  @bind-Checked="isHandleChecked"></SfSwitch><br />
+<SfSwitch CssClass="custom-iOS"  @bind-Checked="isCustomChecked"></SfSwitch>
 
+@code {
+  private bool isBarCheked = false;
+  private bool isHandleChecked = true;
+  private bool isCustomChecked = true;
+
+}
 <style>
 /* Custom color Switch */
 .e-switch-wrapper.bar-color .e-switch-inner.e-switch-active,

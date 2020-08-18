@@ -19,17 +19,21 @@ In the following example, Dialog will open while selecting `Other Folder...` ite
 
 <SfDropDownButton Content="Settings" IconCss="e-icons e-setting-icon" CssClass="e-vertical" IconPosition="SplitButtonIconPosition.Top">
     <DropDownButtonEvents ItemSelected="select"></DropDownButtonEvents>
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Help"></DropDownButtonItem>
-        <DropDownButtonItem Text="About"></DropDownButtonItem>
-        <DropDownButtonItem Text="Update"></DropDownButtonItem>
-    </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Help"></DropDownMenuItem>
+        <DropDownMenuItem Text="About"></DropDownMenuItem>
+        <DropDownMenuItem Text="Update"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 <SfDialog Content="@Content" Header="@Header" Width="250px" Height="150px" Visible="false" @ref="DialogObj" >
     <DialogPositionData X="300" Y="200"></DialogPositionData>
     <DialogButtons>
-        <DialogButton ButtonModel="@OkBtn" OnClick="click"></DialogButton>
-        <DialogButton ButtonModel="@CancelBtn" OnClick="click"></DialogButton>
+       <DialogButton OnClick="@click">
+            <DialogButtonModel Content="OK" IsPrimary="true"></DialogButtonModel>
+        </DialogButton>
+        <DialogButton OnClick="@click">
+            <DialogButtonModel Content="Cancel"></DialogButtonModel>
+        </DialogButton>
     </DialogButtons>
 </SfDialog>
 
@@ -37,9 +41,6 @@ In the following example, Dialog will open while selecting `Other Folder...` ite
     SfDialog DialogObj;
     public string Content = "Are you sure want to update?";
     public string Header = "Software Update";
-
-    public ButtonModel OkBtn = new ButtonModel { Content = "Ok", IsPrimary = true, CssClass = "e-flat" };
-    public ButtonModel CancelBtn = new ButtonModel { Content = "Cancel", IsPrimary = true, CssClass = "e-flat" };
 
     private void click(object args)
     {

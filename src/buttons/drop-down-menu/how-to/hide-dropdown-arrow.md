@@ -14,12 +14,12 @@ property.
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton CssClass="e-caret-hide" Content="Message">
-    <DropDownButtonItems>
-        <DropDownButtonItem Text="Edit"></DropDownButtonItem>
-        <DropDownButtonItem Text="Delete"></DropDownButtonItem>
-        <DropDownButtonItem Text="Mark as Read"></DropDownButtonItem>
-        <DropDownButtonItem Text="Like Message"></DropDownButtonItem>
-    </DropDownButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Edit"></DropDownMenuItem>
+        <DropDownMenuItem Text="Delete"></DropDownMenuItem>
+        <DropDownMenuItem Text="Mark as Read"></DropDownMenuItem>
+        <DropDownMenuItem Text="Like Message"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfDropDownButton>
 
 ```

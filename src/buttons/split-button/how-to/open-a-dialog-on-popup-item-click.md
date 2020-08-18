@@ -15,21 +15,24 @@ In the following example, Dialog will open while selecting `Update` item.
 
 @using Syncfusion.Blazor.SplitButtons
 @using Syncfusion.Blazor.Popups
-@using Syncfusion.Blazor.Buttons
 
 <SfSplitButton Content="Settings">
     <SplitButtonEvents ItemSelected="select"></SplitButtonEvents>
-    <SplitButtonItems>
-        <SplitButtonItem Text="Cut" ></SplitButtonItem>
-        <SplitButtonItem Text="Copy" ></SplitButtonItem>
-        <SplitButtonItem Text="Paste"></SplitButtonItem>
-    </SplitButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Help"></DropDownMenuItem>
+        <DropDownMenuItem Text="About"></DropDownMenuItem>
+        <DropDownMenuItem Text="Update"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfSplitButton>
 <SfDialog Content="@Content" Header="@Header" Width="250px" Height="150px" Visible="false" @ref="DialogObj">
     <DialogPositionData X="300" Y="200"></DialogPositionData>
     <DialogButtons>
-        <DialogButton ButtonModel="@OkBtn" OnClick="click"></DialogButton>
-        <DialogButton ButtonModel="@CancelBtn" OnClick="click"></DialogButton>
+        <DialogButton OnClick="@click">
+            <DialogButtonModel Content="OK" IsPrimary="true"></DialogButtonModel>
+        </DialogButton>
+        <DialogButton OnClick="@click">
+            <DialogButtonModel Content="Cancel"></DialogButtonModel>
+        </DialogButton>
     </DialogButtons>
 </SfDialog>
 
@@ -38,9 +41,6 @@ In the following example, Dialog will open while selecting `Update` item.
     public string Content = "Are you sure want to update?";
     public string Header = "Software Update";
 
-    public ButtonModel OkBtn = new ButtonModel { Content = "OK", IsPrimary = true, CssClass = "e-flat" };
-    public ButtonModel CancelBtn = new ButtonModel { Content = "Cancel", IsPrimary = true, CssClass = "e-flat" };
-
     private void click(object args)
     {
         DialogObj.Hide();
@@ -48,11 +48,18 @@ In the following example, Dialog will open while selecting `Update` item.
 
     private void select(MenuEventArgs args)
     {
-        if (args.Item.Text == "Update"){
-        DialogObj.Show();
-    }
+        if (args.Item.Text == "Update")
+        {
+            DialogObj.Show();
+        }
     }
 }
+
+<style>
+    .e-setting-icon::before {
+        content: '\e679';
+    }
+</style>
 
 ```
 

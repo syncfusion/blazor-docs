@@ -20,17 +20,17 @@ The following example illustrates how to place icon in Split Button component.
 <SfSplitButton Items="@SplitbtnItems" Content="Paste" IconCss="e-icons e-paste" IconPosition="SplitButtonIconPosition.Top"></SfSplitButton>
 
 @code{
-    public List<SplitButtonItem> SplitbtnItems = new List<SplitButtonItem>
+    public List<DropDownMenuItem> SplitbtnItems = new List<DropDownMenuItem>
     {
-        new SplitButtonItem{ Text="Cut" },
-        new SplitButtonItem{ Text="Copy" },
-        new SplitButtonItem{ Text="Paste" }
+        new DropDownMenuItem{ Text="Cut" },
+        new DropDownMenuItem{ Text="Copy" },
+        new DropDownMenuItem{ Text="Paste" }
     };
 }
 
 <style>
     .e-paste::before {
-        content: '\e501';
+        content: '\e739';
     }
 </style>
 
@@ -52,16 +52,16 @@ The following example illustrates how to vertical support in Split Button compon
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" IconCss="e-icons e-paste" CssClass="e-vertical">
-    <SplitButtonItems>
-        <SplitButtonItem Text="Cut" ></SplitButtonItem>
-        <SplitButtonItem Text="Copy" ></SplitButtonItem>
-        <SplitButtonItem Text="Paste"></SplitButtonItem>
-    </SplitButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfSplitButton>
 
 <style>
     .e-paste::before {
-        content: '\e501';
+        content: '\e739';
     }
 </style>
 
@@ -81,16 +81,16 @@ The following example illustrates how to enable [`Separator`](https://help.syncf
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" IconCss="e-icons e-paste" CssClass="e-vertical">
-    <SplitButtonItems>
-        <SplitButtonItem Text="Cut" ></SplitButtonItem>
-        <SplitButtonItem Text="Copy" ></SplitButtonItem>
-        <SplitButtonItem Text="Paste"></SplitButtonItem>
-    </SplitButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfSplitButton>
 
 <style>
     .e-paste::before {
-        content: '\e501';
+        content: '\e739';
     }
 </style>
 

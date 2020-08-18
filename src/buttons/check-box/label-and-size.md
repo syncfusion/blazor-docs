@@ -16,8 +16,13 @@ This reduces the manual addition of label for Checkbox. You can customize the la
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfCheckBox Label="Left Side Label" LabelPosition="LabelPosition.Before" Checked="true"></SfCheckBox><br />
-<SfCheckBox Label="Right Side Label" LabelPosition="LabelPosition.After" Checked="true"></SfCheckBox>
+<SfCheckBox Label="Left Side Label" LabelPosition="LabelPosition.Before" @bind-Checked="isLeftChecked"></SfCheckBox><br />
+<SfCheckBox Label="Right Side Label" LabelPosition="LabelPosition.After" @bind-Checked="isRightChecked"></SfCheckBox>
+
+@code {
+    private bool isLeftChecked = true;
+    private bool isRightChecked = true;
+}
 
 ```
 
@@ -32,8 +37,13 @@ The different Checkbox sizes available are default and small. To reduce the size
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<SfCheckBox Label="Small" CssClass="e-small"></SfCheckBox><br />
-<SfCheckBox Label="Default"></SfCheckBox>
+<SfCheckBox @bind-Checked="isSmallChecked" Label="Small" CssClass="e-small"></SfCheckBox><br />
+<SfCheckBox @bind-Checked="isDefaultChecked" Label="Default"></SfCheckBox>
+
+@code {
+    private bool isSmallChecked = true;
+     private bool isDefaultChecked = true;
+}
 
 <style>
     .e-checkbox-wrapper {

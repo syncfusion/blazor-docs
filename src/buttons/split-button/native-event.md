@@ -34,11 +34,11 @@ The `onclick` attribute is used to bind the click event for Split Button. Here, 
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Profile" @onclick="onClick">
-    <SplitButtonItems>
-        <SplitButtonItem Text="Cut" ></SplitButtonItem>
-        <SplitButtonItem Text="Copy" ></SplitButtonItem>
-        <SplitButtonItem Text="Paste"></SplitButtonItem>
-    </SplitButtonItems>
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
 </SfSplitButton>
 
 @code {

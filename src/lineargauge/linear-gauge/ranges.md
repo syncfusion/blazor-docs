@@ -91,3 +91,99 @@ You can add multiple ranges to an axis as demonstrated in the following code sam
 ```
 
 ![Linear Gauge with Multiple ranges Sample](images/multiple-range.png)
+
+## Gradient Color
+
+Gradient support allows to add multiple colors in the range and pointer of the linear gauge. The following gradient types are supported in the linear gauge.
+
+* Linear Gradient
+* Radial Gradient
+
+### Linear Gradient
+
+Using linear gradient, colors will be applied in a linear progression. The start value of the linear gradient can be set using the [`StartValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeLinearGradient~StartValue.html) property. The end value of the linear gradient will be set using the [`EndValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeLinearGradient~EndValue.html) property. The color stop values such as color, opacity and offset are set using [`ColorStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeLinearGradient~ColorStop.html) property.
+
+To apply linear gradient to the range, follow the below code sample.
+
+```csharp
+@using Syncfusion.Blazor.LinearGauge
+
+<SfLinearGauge Orientation="Orientation.Horizontal">
+<LinearGaugeContainer Width="30" Offset="30">
+    <LinearGaugeAxes>
+        <LinearGaugeAxis>
+            <LinearGaugeAxisLabelStyle Offset="55">
+               <LinearGaugeAxisLabelFont Color="#424242"/>
+            </LinearGaugeAxisLabelStyle>
+            <LinearGaugeLine Width="0"/>
+            <LinearGaugeMajorTicks Height="0" Interval="25"/>
+            <LinearGaugeMinorTicks Height="0"/>
+            <LinearGaugePointers>
+                <LinearGaugePointer Value="80" Height="25" Width="35"  Offset="-40" Color="#f54ea2"               MarkerType="MarkerType.Triangle"
+                        Placement="Syncfusion.Blazor.LinearGauge.Placement.Near">
+                </LinearGaugePointer>
+            </LinearGaugePointers>
+            <LinearGaugeRanges>
+                <LinearGaugeRange Start="0" End="80" StartWidth="30" EndWidth="30" Offset="30" LinearGradient="@RangeLinearModel">
+                </LinearGaugeRange>
+            </LinearGaugeRanges>
+        </LinearGaugeAxis>
+    </LinearGaugeAxes>
+    </LinearGaugeContainer>
+</SfLinearGauge>
+@code {
+    public static LinearGradient RangeLinearModel = new LinearGradient() {
+        StartValue = "1%",
+        EndValue = "99%",
+        ColorStop = new List<ColorStop>() {
+            new ColorStop { Opacity=1, Color= "#fef3f9", Offset="1%" },
+            new ColorStop { Opacity=1, Color= "#f54ea2", Offset="100%" }
+        }
+    };
+}
+```
+
+### Radial Gradient
+
+Using radial gradient, colors will be applied in circular progression. The inner circle position of the radial gradient will be set using the [`InnerPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRadialGradient~InnerPosition.html) property. The outer circle position of the radial gradient can be set using the [`OuterPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRadialGradient~OuterPosition.html) property. The color stop values such as color, opacity and offset are set using [`ColorStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRadialGradient~ColorStop.html) property.
+
+To apply radial gradient to the range, follow the below code sample.
+
+```csharp
+@using Syncfusion.Blazor.LinearGauge
+
+<SfLinearGauge Orientation="Orientation.Horizontal">
+<LinearGaugeContainer Width="30" Offset="30">
+    <LinearGaugeAxes>
+        <LinearGaugeAxis>
+            <LinearGaugeAxisLabelStyle Offset="55">
+               <LinearGaugeAxisLabelFont Color="#424242"/>
+            </LinearGaugeAxisLabelStyle>
+            <LinearGaugeLine Width="0"/>
+            <LinearGaugeMajorTicks Height="0" Interval="25"/>
+            <LinearGaugeMinorTicks Height="0"/>
+            <LinearGaugePointers>
+                <LinearGaugePointer Value="80" Height="25" Width="35"  Offset="-40" Color="#f54ea2"               MarkerType="MarkerType.Triangle"
+                    Placement="Syncfusion.Blazor.LinearGauge.Placement.Near">
+                </LinearGaugePointer>
+            </LinearGaugePointers>
+            <LinearGaugeRanges>
+                <LinearGaugeRange Start="0" End="80" StartWidth="30" EndWidth="30" Offset="30" RadialGradient="@RangeRadialModel">
+                </LinearGaugeRange>
+            </LinearGaugeRanges>
+        </LinearGaugeAxis>
+    </LinearGaugeAxes>
+    </LinearGaugeContainer>
+</SfLinearGauge>
+@code {
+    public static RadialGradient RangeRadialModel = new RadialGradient() {
+        Radius="65%",
+        OuterPosition = new OuterPosition(){ X="50%", Y="70%"},
+        InnerPosition = new InnerPosition() { X="60%", Y="60%" },
+        ColorStop = new List<ColorStop>() {
+            new ColorStop { Opacity=0.9, Color= "#fff5f5", Offset="5%" },
+            new ColorStop { Opacity=1, Color= "#f54ea2", Offset="99%" }
+        }
+    };
+}
+```

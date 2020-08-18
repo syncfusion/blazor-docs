@@ -10,7 +10,6 @@ The Toast component supports to change its content dynamically while displaying 
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
@@ -20,7 +19,7 @@ The Toast component supports to change its content dynamically while displaying 
 
 <div class="col-lg-12 col-sm-12 col-md-12 center">
     <div style="margin: auto; text-align: center">
-        <SfButton @onclick="@ShowOnClick"> Show Toast </SfButton>
+        <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
     </div>
 </div>
 
@@ -38,11 +37,12 @@ The Toast component supports to change its content dynamically while displaying 
         "Password changed"
     };
 
-    private async void ShowOnClick()
+    private async Task ShowToast()
     {
         this.ToastContent = this.Contents[this.ToastFlag];
+        // Delay mandatory to update the dynamically changed Toast properties
         await Task.Delay(100);
-        this.ToastObj.Show();
+        await this.ToastObj.Show();
         this.ToastFlag = ((this.ToastFlag != 5) ? (this.ToastFlag + 1) : 0);
     }
 }

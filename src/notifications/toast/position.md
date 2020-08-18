@@ -30,22 +30,23 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
 
 ```csharp
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Notifications
-@using Syncfusion.Blazor.DropDowns
+
 @using Syncfusion.Blazor.Inputs
-@using System.Threading
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Notifications
 
 <SfToast @ref="ToastObj" Target="@ToastTarget" Title="Matt sent you a friend request" Height="@Height" Width="@Width" Content="@ToastContent">
     <ToastPosition X="@PositionX" Y="@PositionY"></ToastPosition>
 </SfToast>
+
 <div class="col-lg-12 col-sm-12 col-md-12 center">
     <div id="toastBtnDefault" style="margin: auto; text-align: center">
-        <SfButton @onclick="ShowOnClick"> Show Toast </SfButton>
-        <SfButton @onclick="HideOnClick"> Hide All </SfButton>
+        <SfButton @onclick="ShowToast"> Show Toast </SfButton>
+        <SfButton @onclick="HideToast"> Hide All </SfButton>
     </div>
 </div>
+
 <div class='row' style="padding-top: 20px" id="toast_pos_target">
     <div id="toast_pos"> </div>
     <div id="toast_pos_property">
@@ -53,26 +54,25 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
             <tr>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Label="Position" Name="toastPos" Value="Position" Checked="true" ValueChange="CheckboxChange2"></SfRadioButton>
+                        <SfRadioButton Label="Position" Name="toastPos" Value="Position" @bind-Checked="@Checked2" ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
                     </div>
                 </td>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Label="Custom" Name="toastPos" Value="Custom" ValueChange="CheckboxChange3"></SfRadioButton>
+                        <SfRadioButton Label="Custom" Name="toastPos" Value="Custom" @bind-Checked="@checkedCustom" ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
                     </div>
                 </td>
             </tr>
             <tr>
-                <td id="dropdownChoose" colspan="2" style="display:@DispVal2;">
-                    <SfDropDownList @ref="ListObj" Index="5" Placeholder="Select a position" PopupHeight="200PX" DataSource="@DdlData" TValue="string">
-                        <DropDownListEvents ValueChange="DDLvalueChange" TValue="string"></DropDownListEvents>
-                        <DropDownListFieldSettings text="id" value="text"></DropDownListFieldSettings>
+                <td id="dropdownChoose" colspan="2" style="display:@DropDownDisplay;">
+                    <SfDropDownList @ref="ListObj" Index="5" Placeholder="Select a position" PopupHeight="200PX" DataSource="@DropDownData" TValue="string" TItem="DropDownfields">
+                        <DropDownListFieldSettings Text="id" Value="text"></DropDownListFieldSettings>
+                        <DropDownListEvents ValueChange="@DropDownChange" TValue="string"></DropDownListEvents>
                     </SfDropDownList>
                 </td>
             </tr>
-
             <tr>
-                <td colspan="2" id="customChoose" style="display:@DispVal1">
+                <td colspan="2" id="customChoose" style="display:@TextBoxDisplay;">
                     <form id="formId" class="form-horizontal">
                         <div class='e-row'>
                             <SfTextBox @ref="TextXpos" Value="50" Placeholder="X Position" FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
@@ -86,12 +86,12 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
             <tr>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Label="Target" Name="toast" Value="Target" ValueChange="@CheckboxChange"></SfRadioButton>
+                        <SfRadioButton id="radio1" Label="Target" Name="toast" Value="Target" @bind-Checked="@targetChecked" ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
                     </div>
                 </td>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Label="Global" Name="toast" Value="Global" Checked="true" ValueChange="@CheckboxChange1"></SfRadioButton>
+                        <SfRadioButton id="radio2" Label="Global" Name="toast" Value="Global" @bind-Checked="@Checked" ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
                     </div>
                 </td>
             </tr>
@@ -109,9 +109,9 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
         width: 250px;
     }
 
-    #toast_pos_property td {
-        width: 50%;
-    }
+        #toast_pos_property td {
+            width: 50%;
+        }
 
     #toast_pos_target {
         margin: 50px 200px;
@@ -120,47 +120,72 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
 
 @code {
     SfToast ToastObj;
-    SfDropDownList<string> ListObj;
     SfTextBox TextXpos;
     SfTextBox TextYpos;
+    SfDropDownList<string, DropDownfields> ListObj;
 
-    public class DDLfields
+    private bool CustomFlag;
+    private string Width = "300";
+    private string Height = "auto";
+    private string ToastTarget = null;
+    private string PositionX = "Center";
+    private string PositionY = "Bottom";
+    private string Checked2 { get; set; } = "Position";
+    private string Checked { get; set; } = "Global";
+    private string checkedCustom { get; set; } = "Custom";
+    private string targetChecked { get; set; } = "Target";
+
+    private string DropDownDisplay { get; set; } = "";
+    private string TextBoxDisplay { get; set; } = "none";
+    private string ToastContent = "You have a new friend request yet to accept";
+
+    public class DropDownfields
     {
         public string id { get; set; }
         public string text { get; set; }
     }
 
-    List<DDLfields> DdlData = new List<DDLfields>()
+    private List<DropDownfields> DropDownData = new List<DropDownfields>()
 {
-        new DDLfields(){ id= "topleft", text= "Top Left" },
-        new DDLfields(){ id= "topright", text= "Top Right" },
-        new DDLfields(){ id= "topcenter", text= "Top Center" },
-        new DDLfields(){ id= "bottomleft", text= "Bottom Left" },
-        new DDLfields(){ id= "bottomright", text= "Bottom Right" },
-        new DDLfields(){ id= "bottomcenter", text= "Bottom Center" }
+        new DropDownfields(){ id= "topleft", text= "Top Left" },
+        new DropDownfields(){ id= "topright", text= "Top Right" },
+        new DropDownfields(){ id= "topcenter", text= "Top Center" },
+        new DropDownfields(){ id= "bottomleft", text= "Bottom Left" },
+        new DropDownfields(){ id= "bottomright", text= "Bottom Right" },
+        new DropDownfields(){ id= "bottomcenter", text= "Bottom Center" }
     };
 
-    // default values for component initialization.
-    public string ToastContent = "You have a new friend request yet to accept";
-    public string PositionX = "Center";
-    public string PositionY = "Bottom";
-    public string ToastTarget = null;
-    public string Width = "300";
-    public string Height = "auto";
-    public bool CustomFlag;
-    public string DispVal1 { get; set; } = "none";
-    public string DispVal2 { get; set; } = "";
-    private void DDLvalueChange(ChangeEventArgs<string> e)
+    private async Task ShowToast()
     {
-        ToastObj.Hide("All");
-        setToastPosValue(e.Value.ToString());
+        if (CustomFlag)
+        {
+            this.SetCustomPosValue();
+        }
+        await ToastObj.Show();
     }
 
-    private void setToastPosValue(string value)
+    private async Task HideToast()
+    {
+        await ToastObj.Hide("All");
+    }
+
+    //Setting Toast Custom Position
+    private void SetCustomPosValue()
+    {
+        PositionX = TextXpos.Value;
+        PositionY = TextYpos.Value;
+    }
+
+    private async Task DropDownChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> e)
+    {
+        await ToastObj.Hide("All");
+        this.SetToastPosition(e.Value.ToString());
+    }
+
+    private void SetToastPosition(string value)
     {
         switch (value)
         {
-
             case "Top Left":
                 PositionX = "Left";
                 PositionY = "Top";
@@ -193,77 +218,36 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
         }
     }
 
-    private void CheckboxChange(Syncfusion.Blazor.Buttons.ChangeArgs e)
+    private async Task RadioButtonChange(Syncfusion.Blazor.Buttons.ChangeArgs<string> e)
     {
         if (e.Value == "Target")
         {
-            ToastObj.Hide("All");
+            await ToastObj.Hide("All");
             ToastTarget = "#toast_pos_target";
             StateHasChanged();
         }
-    }
-
-    private void CheckboxChange1(Syncfusion.Blazor.Buttons.ChangeArgs e)
-    {
-        if (e.Value == "Global")
+        else if (e.Value == "Global")
         {
-            ToastObj.Hide("All");
+            await ToastObj.Hide("All");
             ToastTarget = null;
             StateHasChanged();
         }
-    }
-
-    private void CheckboxChange2(Syncfusion.Blazor.Buttons.ChangeArgs e)
-    {
-        if (e.Value == "Position")
+        else if (e.Value == "Position")
         {
-            ToastObj.Hide("All");
-            DispVal2 = "table-cell";
-            DispVal1 = "none";
-            setToastPosValue(ListObj.Value.ToString());
+            await ToastObj.Hide("All");
+            DropDownDisplay = "table-cell";
+            TextBoxDisplay = "none";
+            this.SetToastPosition(ListObj.Value.ToString());
             CustomFlag = false;
         }
-    }
-
-    private void CheckboxChange3(Syncfusion.Blazor.Buttons.ChangeArgs e)
-    {
-        if (e.Value == "Custom")
+        else if (e.Value == "Custom")
         {
-            ToastObj.Hide("All");
-            DispVal1 = "table-cell";
-            DispVal2 = "none";
-            SetcustomPosValue();
+            await ToastObj.Hide("All");
+            TextBoxDisplay = "table-cell";
+            DropDownDisplay = "none";
+            this.SetCustomPosValue();
             CustomFlag = true;
         }
     }
-
-    //Setting Toast Custom Position
-    private void SetcustomPosValue()
-    {
-        PositionX = TextXpos.Value;
-        PositionY = TextYpos.Value;
-    }
-
-    private void toastShow(int timeDelay)
-    {
-        Thread.Sleep(timeDelay);
-        ToastObj.Show();
-    }
-
-    private void ShowOnClick()
-    {
-        if (CustomFlag)
-        {
-            SetcustomPosValue();
-        }
-        ToastObj.Show();
-    }
-
-    private void HideOnClick()
-    {
-        ToastObj.Hide("All");
-    }
-
 }
-
 ```

@@ -12,13 +12,12 @@ The following code explains how to initialize a Toast with `Template`.
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
-<SfButton @onclick="@ShowOnClick"> Show Toast</SfButton>
+<SfButton @onclick="@ShowToast"> Show Toast</SfButton>
 
-<SfToast @ref="@ToastObj" Width="400px" CssClass="toast-custom" ExtendedTimeout=0 TimeOut=120000>
+<SfToast ID="toast_custom" @ref="@ToastObj" Width="400px" ExtendedTimeout=0 TimeOut=120000>
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
     <ToastTemplates>
         <Template>
@@ -43,9 +42,9 @@ The following code explains how to initialize a Toast with `Template`.
 @code {
     SfToast ToastObj;
 
-    private void ShowOnClick()
+    private async Task ShowToast()
     {
-        this.ToastObj.Show();
+        await this.ToastObj.Show();
     }
 }
 
@@ -70,22 +69,22 @@ The following code explains how to initialize a Toast with `Template`.
         -moz-osx-font-smoothing: grayscale;
     }
 
-    .toast-custom .e-toast .e-toast-title,
-    .toast-custom .e-toast .e-toast-message,
-    .toast-custom .e-toast .e-toast-message .e-toast-content,
-    .toast-custom .e-toast .e-toast-close-icon {
+    #toast_custom .e-toast .e-toast-title,
+    #toast_custom .e-toast .e-toast-message,
+    #toast_custom .e-toast .e-toast-message .e-toast-content,
+    #toast_custom .e-toast .e-toast-close-icon {
         color: #fff;
     }
 
-    .toast-custom .e-toast-container .e-toast .e-toast-message .e-toast-content {
+    #toast_custom .e-toast-container .e-toast .e-toast-message .e-toast-content {
         padding: 14px 0 0 0;
     }
 
-    .toast-custom .e-toast-template {
+    #toast_custom .e-toast-template {
         display: inline-flex;
     }
 
-    .toast-custom .e-toast-icon.e-toast-image {
+    #toast_custom .e-toast-icon.e-toast-image {
         border-radius: 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -95,8 +94,8 @@ The following code explains how to initialize a Toast with `Template`.
         align-self: center;
     }
 
-    .toast-custom .camden .e-toast-icon.e-toast-image,
-    .toast-custom .chase .e-toast-icon.e-toast-image {
+    #toast_custom .camden .e-toast-icon.e-toast-image,
+    #toast_custom .chase .e-toast-icon.e-toast-image {
         width: 65px !important;
     }
 
@@ -136,11 +135,10 @@ The HTML element tag's can be given as a string for the `Template` property when
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
-<SfButton @onclick="@ShowOnClick"> Show Toast </SfButton>
+<SfButton @onclick="@ShowToast"> Show Toast </SfButton>
 
 <SfToast @ref="ToastObj" />
 
@@ -149,9 +147,9 @@ The HTML element tag's can be given as a string for the `Template` property when
 
     private string template = "<div id='toastEmail_template'><div class='e-toast-template'><img class='e-toast-icon e-toast-image' src='https://blazor.syncfusion.com/demos/images/toast/laura.png' /><div class='e-toast-message'><div class='e-toast-title'>Anjolie Stokes</div><div class='e-toast-content'>Networking Referral</div></div></div></div>";
 
-    private void ShowOnClick()
+    private async Task ShowToast()
     {
-        this.ToastObj.Show(new ToastModel { Template = template });
+        await this.ToastObj.Show(new ToastModel { Template = template });
     }
 }
 

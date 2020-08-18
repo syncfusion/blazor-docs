@@ -12,7 +12,6 @@ The following sample demonstrates adding multiple toasts in different positions.
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
@@ -37,21 +36,22 @@ The following sample demonstrates adding multiple toasts in different positions.
     SfToast WarningToastObj;
     SfToast SuccessToastObj;
 
-    public string WarningContent { get; set;} = "There was a problem with your network connection.";
-    public string SuccessContent { get; set;} = "Your message has been sent successfully.";
+    private string SuccessContent { get; set; } = "Your message has been sent successfully.";
+    private string WarningContent { get; set; } = "There was a problem with your network connection.";
 
     private void ToastClick(ToastClickEventArgs args)
     {
         args.ClickToClose = true;
     }
-    private void ShowWarningToast()
+
+    private async Task ShowWarningToast()
     {
-        this.WarningToastObj.Show();
+        await this.WarningToastObj.Show();
     }
 
-    private void ShowSuccessToast()
+    private async Task ShowSuccessToast()
     {
-        this.SuccessToastObj.Show();
+        await this.SuccessToastObj.Show();
     }
 }
 

@@ -14,10 +14,9 @@ The following sample demonstrates some types of animations that suit toast. You 
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Notifications
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Notifications
 
 <SfToast @ref="ToastObj" Title="Matt sent you a friend request" Content="@ToastContent">
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
@@ -26,25 +25,27 @@ The following sample demonstrates some types of animations that suit toast. You 
         <ToastAnimationSettingsShow Effect="@ShowAnimation"></ToastAnimationSettingsShow>
     </ToastAnimationSettings>
 </SfToast>
+
 <div class="col-lg-12 col-sm-12 col-md-12 center">
     <div id="toastBtnDefault" style="margin: auto; text-align: center">
         <div id="textbox-contain">
-            <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+            <div>
                 <label> Show Animation </label>
             </div>
-            <SfDropDownList Placeholder="Select a animate type" DataSource="@ddlData1" TValue="string">
-                <DropDownListEvents ValueChange="DDLvalueChange" TValue="string"></DropDownListEvents>
+            <SfDropDownList Placeholder="Select a animate type" DataSource="@Effects" TValue="string" TItem="DropDownFields">
+                <DropDownListEvents ValueChange="@ShowAnimationChange" TValue="string"></DropDownListEvents>
                 <DropDownListFieldSettings Text="text" Value="id"></DropDownListFieldSettings>
             </SfDropDownList>
-            <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+
+            <div>
                 <label> Hide Animation </label>
             </div>
-            <SfDropDownList Placeholder="Select a animate type" DataSource="@ddlData2" TValue="string">
-                <DropDownListEvents ValueChange="DDLvalueChange1" TValue="string"></DropDownListEvents>
+            <SfDropDownList Placeholder="Select a animate type" DataSource="@Effects" TValue="string" TItem="DropDownFields">
+                <DropDownListEvents ValueChange="@HideAnimationChange" TValue="string"></DropDownListEvents>
                 <DropDownListFieldSettings Text="text" Value="id"></DropDownListFieldSettings>
             </SfDropDownList>
         </div>
-        <SfButton @onclick="@ShowOnClick"> Show Toast </SfButton>
+        <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
     </div>
 </div>
 
@@ -74,70 +75,51 @@ The following sample demonstrates some types of animations that suit toast. You 
 @code {
     SfToast ToastObj;
 
-    public string ShowAnimation = "FadeIn";
-    public string HideAnimation = "FadeOut";
-    public string ToastContent = "You have a new friend request yet to accept";
-    public class DDLfields
+    private string ShowAnimation = "FadeIn";
+    private string HideAnimation = "FadeOut";
+    private string ToastContent = "You have a new friend request yet to accept";
+
+    public class DropDownFields
     {
         public string id { get; set; }
         public string text { get; set; }
     }
 
-    public List<DDLfields> ddlData1 = new List<DDLfields>()
-{
-        new DDLfields(){ id= "FadeIn", text= "Fade In" },
-        new DDLfields(){ id= "FadeZoomIn", text= "Fade Zoom In" },
-        new DDLfields(){ id= "FadeZoomOut", text= "Fade Zoom Out" },
-        new DDLfields(){ id= "FlipLeftDownIn", text= "Flip Left Down In" },
-        new DDLfields(){ id= "FlipLeftDownOut", text= "Flip Left Down Out" },
-        new DDLfields(){ id= "FlipLeftUpIn", text= "Flip Left Up In" },
-        new DDLfields(){ id= "FlipRightDownIn", text= "Flip Right Up In" },
-        new DDLfields(){ id= "FlipRightDownOut", text= "Flip Right Down Out" },
-        new DDLfields(){ id= "FlipRightUpIn", text= "Flip Right Up In" },
-        new DDLfields(){ id= "FlipRightUpOut", text= "Flip Right Up Out" },
-        new DDLfields(){ id= "SlideBottomIn", text= "Slide Bottom In" },
-        new DDLfields(){ id= "SlideBottomOut", text= "Slide Bottom Out" },
-        new DDLfields(){ id= "SlideLeftIn", text= "Slide Left In" },
-        new DDLfields(){ id= "SlideLeftOut", text= "Slide Left Out" },
-        new DDLfields(){ id= "SlideRightIn", text= "Slide Right In" },
-        new DDLfields(){ id= "SlideRightOut", text= "Slide Right Out" },
-        new DDLfields(){ id= "SlideTopIn", text= "Slide Top In" },
-        new DDLfields(){ id= "ZoomIn", text= "Zoom In" },
-        new DDLfields(){ id= "ZoomOut", text= "Zoom Out" }
-    };
-    public List<DDLfields> ddlData2 = new List<DDLfields>()
-{
-        new DDLfields(){ id= "FadeIn", text= "Fade In" },
-        new DDLfields(){ id= "FadeZoomIn", text= "Fade Zoom In" },
-        new DDLfields(){ id= "FadeZoomOut", text= "Fade Zoom Out" },
-        new DDLfields(){ id= "FlipLeftDownIn", text= "Flip Left Down In" },
-        new DDLfields(){ id= "FlipLeftDownOut", text= "Flip Left Down Out" },
-        new DDLfields(){ id= "FlipLeftUpIn", text= "Flip Left Up In" },
-        new DDLfields(){ id= "FlipRightDownIn", text= "Flip Right Up In" },
-        new DDLfields(){ id= "FlipRightDownOut", text= "Flip Right Down Out" },
-        new DDLfields(){ id= "FlipRightUpIn", text= "Flip Right Up In" },
-        new DDLfields(){ id= "FlipRightUpOut", text= "Flip Right Up Out" },
-        new DDLfields(){ id= "SlideBottomIn", text= "Slide Bottom In" },
-        new DDLfields(){ id= "SlideBottomOut", text= "Slide Bottom Out" },
-        new DDLfields(){ id= "SlideLeftIn", text= "Slide Left In" },
-        new DDLfields(){ id= "SlideLeftOut", text= "Slide Left Out" },
-        new DDLfields(){ id= "SlideRightIn", text= "Slide Right In" },
-        new DDLfields(){ id= "SlideRightOut", text= "Slide Right Out" },
-        new DDLfields(){ id= "SlideTopIn", text= "Slide Top In" },
-        new DDLfields(){ id= "ZoomIn", text= "Zoom In" },
-        new DDLfields(){ id= "ZoomOut", text= "Zoom Out" }
+    private List<DropDownFields> Effects = new List<DropDownFields>()
+    {
+        new DropDownFields(){ id= "FadeIn", text= "Fade In" },
+        new DropDownFields(){ id= "FadeZoomIn", text= "Fade Zoom In" },
+        new DropDownFields(){ id= "FadeZoomOut", text= "Fade Zoom Out" },
+        new DropDownFields(){ id= "FlipLeftDownIn", text= "Flip Left Down In" },
+        new DropDownFields(){ id= "FlipLeftDownOut", text= "Flip Left Down Out" },
+        new DropDownFields(){ id= "FlipLeftUpIn", text= "Flip Left Up In" },
+        new DropDownFields(){ id= "FlipRightDownIn", text= "Flip Right Up In" },
+        new DropDownFields(){ id= "FlipRightDownOut", text= "Flip Right Down Out" },
+        new DropDownFields(){ id= "FlipRightUpIn", text= "Flip Right Up In" },
+        new DropDownFields(){ id= "FlipRightUpOut", text= "Flip Right Up Out" },
+        new DropDownFields(){ id= "SlideBottomIn", text= "Slide Bottom In" },
+        new DropDownFields(){ id= "SlideBottomOut", text= "Slide Bottom Out" },
+        new DropDownFields(){ id= "SlideLeftIn", text= "Slide Left In" },
+        new DropDownFields(){ id= "SlideLeftOut", text= "Slide Left Out" },
+        new DropDownFields(){ id= "SlideRightIn", text= "Slide Right In" },
+        new DropDownFields(){ id= "SlideRightOut", text= "Slide Right Out" },
+        new DropDownFields(){ id= "SlideTopIn", text= "Slide Top In" },
+        new DropDownFields(){ id= "ZoomIn", text= "Zoom In" },
+        new DropDownFields(){ id= "ZoomOut", text= "Zoom Out" }
     };
 
-    private void ShowOnClick()
+    private async Task ShowToast()
     {
-        ToastObj.Show();
+        await ToastObj.Show();
     }
-    private void DDLvalueChange(ChangeEventArgs<string> args)
+
+    private void ShowAnimationChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
     {
         ShowAnimation = args.Value as string;
         StateHasChanged();
     }
-    private void DDLvalueChange1(ChangeEventArgs<string> args)
+
+    private void HideAnimationChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
     {
         HideAnimation = args.Value as string;
         StateHasChanged();

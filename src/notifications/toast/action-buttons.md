@@ -10,21 +10,20 @@ You can include action buttons to the toast control by adding the `ToastButtonMo
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
-@using Microsoft.AspNetCore.Components.Web
 
-<SfToast @ref="ToastObj" Title="Anjolie Stokes" Width="280" Height="120" Content="@ToastContent" Icon="e-laura">
+<SfToast @ref="ToastObj" Title="Anjolie Stokes" Width="280" Height="120" Icon="e-laura" Content="@ToastContent">
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
     <ToastButtonModelProps>
-        <ToastButtonModelProp Model="@IgnoreBtnObj" Clicked="@OnIgnore"></ToastButtonModelProp>
-        <ToastButtonModelProp Model="@ReplyBtnObj" Clicked="@OnIgnore"></ToastButtonModelProp>
+        <ToastButtonModelProp Model="@IgnoreBtnModel" Clicked="@HideToast"></ToastButtonModelProp>
+        <ToastButtonModelProp Model="@ReplyBtnModel" Clicked="@HideToast"></ToastButtonModelProp>
     </ToastButtonModelProps>
 </SfToast>
+
 <div class="col-lg-12 col-sm-12 col-md-12 center">
     <div id="toastBtnDefault" style="margin: auto; text-align: center">
-        <SfButton @onclick="@ShowOnClick"> Show Toast </SfButton>
+        <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
     </div>
 </div>
 
@@ -35,9 +34,10 @@ You can include action buttons to the toast control by adding the `ToastButtonMo
         background-size: cover;
         background-image: url(https://blazor.syncfusion.com/demos/images/toast/laura.png);
         height: 44px !important;
-        margin: 0;
+        margin: 0 10px 0 0;
         width: 60px;
     }
+
     #elementToastTime .e-toast-message {
         padding: 10px;
     }
@@ -45,22 +45,27 @@ You can include action buttons to the toast control by adding the `ToastButtonMo
 
 @code {
     SfToast ToastObj;
-    public string ToastContent { get;set; } = "Thanks for the update!";
-    private void ShowOnClick(object args)
-    {
-        this.ToastObj.Show();
-    }
-    private ButtonModel IgnoreBtnObj = new ButtonModel
+
+    private string ToastContent { get; set; } = "Thanks for the update!";
+
+    private SfButton IgnoreBtnModel = new SfButton
     {
         Content = "Ignore"
     };
-    private ButtonModel ReplyBtnObj = new ButtonModel
+
+    private SfButton ReplyBtnModel = new SfButton
     {
         Content = "reply"
     };
-    private void OnIgnore(MouseEventArgs args)
+
+    private async Task ShowToast()
     {
-        this.ToastObj.Hide();
+        await this.ToastObj.Show();
+    }
+
+    private async Task HideToast()
+    {
+        await this.ToastObj.Hide();
     }
 }
 

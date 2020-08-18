@@ -22,20 +22,20 @@ The toast component implements the keyboard navigation support by using the foll
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Notifications
 
-<SfToast @ref="ToastObj" Title="Matt sent you a friend request" Content="@ToastContent" TimeOut="0" >
-    <ToastEvents Created="OnCreate"></ToastEvents>
+<SfToast @ref="ToastObj" Title="Matt sent you a friend request" Content="@ToastContent" TimeOut="0">
+    <ToastEvents Created="@OnCreate"></ToastEvents>
 </SfToast>
 
 @code {
     SfToast ToastObj;
-    public string ToastContent { get;set; } = "You have a new friend request yet to accept";
 
-    private void OnCreate(object args)
+    private string ToastContent { get; set; } = "You have a new friend request yet to accept";
+
+    private async Task OnCreate()
     {
-        this.ToastObj.Show();
+        await this.ToastObj.Show();
     }
 }
 

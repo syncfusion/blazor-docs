@@ -12,7 +12,6 @@ The following sample demonstrates the click/tap action in toast.
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
@@ -23,22 +22,23 @@ The following sample demonstrates the click/tap action in toast.
 
 <div class="col-lg-12 col-sm-12 col-md-12 center">
     <div style="margin: auto; text-align: center">
-        <SfButton @onclick="@ShowOnClick"> Show Toast </SfButton>
+        <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
     </div>
 </div>
 
 @code {
     SfToast ToastObj;
 
-    public string ToastContent { get; set;} = "You have a new friend request yet to accept";
+    private string ToastContent { get; set;} = "You have a new friend request yet to accept";
 
     private void ToastClick(ToastClickEventArgs args)
     {
         args.ClickToClose = true;
     }
-    private void ShowOnClick()
+
+    private async Task ShowToast()
     {
-        this.ToastObj.Show();
+        await this.ToastObj.Show();
     }
 }
 

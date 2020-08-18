@@ -16,26 +16,25 @@ The toast can be expired based on the `TimeOut` property. The toast can live til
 
 ```csharp
 
-@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
-@using Syncfusion.Blazor.Inputs
-@using Microsoft.AspNetCore.Components.Web
 
 <div class="control-section toast-default-section">
-    <SfToast @ref="ToastObj" TimeOut="@ToastTimeOut" Title="Anjolie Stokes" Width="230" Height="250" Content="@ToastContent" >
+    <SfToast @ref="ToastObj" Title="Anjolie Stokes" Width="230" Height="250" Content="@ToastContent" TimeOut="@ToastTimeOut">
         <ToastPosition X="Right" Y="Bottom"></ToastPosition>
         <ToastButtonModelProps>
-            <ToastButtonModelProp Model="@IgnoreBtnObj" Clicked="@OnIgnore"></ToastButtonModelProp>
-            <ToastButtonModelProp Model="@ReplyBtnObj"></ToastButtonModelProp>
+            <ToastButtonModelProp Model="@IgnoreBtnModel" Clicked="@HideToast"></ToastButtonModelProp>
+            <ToastButtonModelProp Model="@ReplyBtnModel"></ToastButtonModelProp>
         </ToastButtonModelProps>
     </SfToast>
+
     <div class="col-lg-12 col-sm-12 col-md-12 center">
         <div id="toastBtnDefault" style="margin: auto; text-align: center">
             <div id="textbox-contain" style="text-align: initial; display: inline-block;">
-                <SfTextBox @ref="TextBoxObj" FloatLabelType="FloatLabelType.Auto" Value="@TextBoxVal" Placeholder="Enter timeOut" ValueChange="@OnValChange"></SfTextBox>
+                <SfTextBox @ref="TextBoxObj" FloatLabelType="FloatLabelType.Auto" Placeholder="Enter timeOut" Value="@TextBoxVal" ValueChange="@OnValChange"></SfTextBox>
             </div>
-            <SfButton @onclick="@ShowOnClick"> Show Toast </SfButton>
+            <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
         </div>
     </div>
     <br /><br />
@@ -55,37 +54,38 @@ The toast can be expired based on the `TimeOut` property. The toast can live til
 </style>
 
 @code {
-    SfTextBox TextBoxObj;
     SfToast ToastObj;
-    public string ToastContent { get;set; } = "<p><img src='https://blazor.syncfusion.com/demos/images/toast/laura.png'></p>";
-    public double ToastTimeOut { get;set; } = 0;
-    public string TextBoxVal { get;set; } = "0";
+    SfTextBox TextBoxObj;
 
-    private void ShowOnClick()
+    private double ToastTimeOut { get; set; } = 0;
+    private string TextBoxVal { get; set; } = "0";
+    private string ToastContent { get; set; } = "<p><img src='https://blazor.syncfusion.com/demos/images/toast/laura.png'></p>";
+
+    private SfButton IgnoreBtnModel = new SfButton
     {
-        this.ToastObj.Show();
+        Content = "Ignore"
+    };
+
+    private SfButton ReplyBtnModel = new SfButton
+    {
+        Content = "reply"
+    };
+
+    private async Task ShowToast()
+    {
+        await this.ToastObj.Show();
     }
 
-    private void OnValChange(object args)
+    private void OnValChange()
     {
         this.ToastTimeOut = int.Parse(this.TextBoxObj.Value);
         this.TextBoxVal = this.TextBoxObj.Value;
         this.StateHasChanged();
     }
 
-    private ButtonModel IgnoreBtnObj = new ButtonModel
+    private async Task HideToast()
     {
-        Content = "Ignore"
-    };
-
-    private ButtonModel ReplyBtnObj = new ButtonModel
-    {
-        Content = "reply"
-    };
-
-    private void OnIgnore(MouseEventArgs args)
-    {
-        this.ToastObj.Hide();
+        await this.ToastObj.Hide();
     }
 }
 
@@ -101,17 +101,16 @@ You can prevent auto hiding in a toast as visible like static by setting zero (`
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
-@using Syncfusion.Blazor.Inputs
 
 <SfToast @ref="ToastObj" TimeOut=0 Title="Matt sent you a friend request" Content="@ToastContent">
     <ToastPosition X="Right"></ToastPosition>
 </SfToast>
+
 <div class="col-lg-12 col-sm-12 col-md-12 center">
     <div id="toastBtnDefault" style="margin: auto; text-align: center">
-        <SfButton @onclick="@ShowOnClick"> Show Toast </SfButton>
+        <SfButton @onclick="@ShowToast"> Show Toast </SfButton>
     </div>
 </div>
 
@@ -124,10 +123,12 @@ You can prevent auto hiding in a toast as visible like static by setting zero (`
 
 @code {
     SfToast ToastObj;
-    public string ToastContent = "You have a new friend request yet to accept";
-    private void ShowOnClick()
+
+    private string ToastContent = "You have a new friend request yet to accept";
+
+    private async Task ShowToast()
     {
-        this.ToastObj.Show();
+        await this.ToastObj.Show();
     }
 }
 

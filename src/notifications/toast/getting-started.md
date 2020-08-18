@@ -9,6 +9,9 @@ description: "This section explains the step-by-step process to get started with
 
 This section briefly explains how to include a Toast component in your Blazor Server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/server-side-blazor/) for the introduction and configuring the common specifications.
 
+To get start quickly with Blazor Toast component, you can check on this video:
+`youtube:tMa7JvcfNcY`
+
 ## Importing Syncfusion Blazor component in the application
 
 * Install `Syncfusion.Blazor` NuGet package to the application by using the `NuGet Package Manager`.
@@ -89,17 +92,17 @@ The following code explains how to initialize a simple Toast in Razor page.
 
 ```csharp
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Notifications
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Notifications
 
 <SfToast @ref="ToastObj" Title="Adaptive Tiles Meeting" TimeOut=5000 Icon="e-meeting" Content="@ToastContent">
     <ToastPosition X="Right"></ToastPosition>
 </SfToast>
+
 <div class="col-lg-12 col-sm-12 col-md-12 center">
     <div id="toastBtnDefault" style="margin: auto;text-align: center">
-        <SfButton Content="Show Toasts" @onclick="@ShowOnClick"></SfButton>
-        <SfButton Content="Hide All" @onclick="@HideOnClick"></SfButton>
+        <SfButton Content="Show Toasts" @onclick="@ShowToast"></SfButton>
+        <SfButton Content="Hide All" @onclick="@HideToast"></SfButton>
     </div>
 </div>
 
@@ -113,16 +116,17 @@ The following code explains how to initialize a simple Toast in Razor page.
 @code {
     SfToast ToastObj;
 
-    public string ToastContent { get; set;} = "Conference Room 01 / Building 135 10:00 AM-10:30 AM";
-    private void ShowOnClick()
+    private string ToastContent { get; set; } = "Conference Room 01 / Building 135 10:00 AM-10:30 AM";
+
+    private async Task ShowToast()
     {
-        this.ToastObj.Show();
-    }
-    private void HideOnClick()
-    {
-        this.ToastObj.Hide("All");
+        await this.ToastObj.Show();
     }
 
+    private async Task HideToast()
+    {
+        await this.ToastObj.Hide("All");
+    }
 }
 
 ```

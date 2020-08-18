@@ -1,0 +1,7 @@
+* [Features](document-editor/getting-started/features.md)
+* [Server App in Visual Studio 2019](document-editor/getting-started/server-side-application.md)
+* [WebAssembly App in Visual Studio 2019](document-editor/getting-started/client-side-application.md)
+* [Opening a document](document-editor/opening-a-document.md)
+* [Saving document](document-editor/saving-document.md)
+* [Clipboard](document-editor/clipboard.md)
+* [Accessibility](document-editor/accessibility.md)

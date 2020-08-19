@@ -383,7 +383,7 @@ OData is a standardized protocol for creating and consuming data. User can retri
 
     <SfPivotView TValue="OrderDetails" Width="800" Height="340">
         <PivotViewDataSourceSettings TValue="OrderDetails">
-            <SfDataManager Url="https://js.syncfusion.com/demos/Sfervices/Wcf/Northwind.svc/Orders/?$top=7"   Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
+            <SfDataManager Url="https://js.syncfusion.com/ejServices/Wcf/Northwind.svc/Orders"   Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
             <PivotViewColumns>
                 <PivotViewColumn Name="OrderDate"></PivotViewColumn>
                 <PivotViewColumn Name="ShipCity"></PivotViewColumn>

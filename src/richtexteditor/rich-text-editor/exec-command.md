@@ -11,36 +11,36 @@ The `ExecuteCommand` will perform the following commands.
 
 | **commands** | **Value [options]** |
 | --- | --- |
-| bold | Bolds the selected content in the Rich Text Editor. |
-| italic | The selected text will be Italics. |
-| underline | Underlines the selected text in the Rich Text Editor. |
-| strikeThrough | Applies single line strike through formatting for the selected text. |
-| superscript | Makes the selected text as superscript (higher). |
-| subscript | Makes the selected text as subscript (lower). |
-| uppercase | Changes the case of selected text to upper in the content. |
-| lowercase | Changes the case of selected text to lower in the content. |
-| fontColor | Applies the specified font color for the selected text. |
-| fontName | Applies the specified font name for the selected text. |
-| fontSize | Applies the specified font size for the selected text. |
-| backColor | Applies the specified background color the selected text. |
-| justifyCenter | Aligns the content with center margin. |
-| justifyFull | Aligns the content with left margin. |
-| justifyLeft | Aligns the content with left margin. |
-| justifyRight | Aligns the content with right margin. |
-| undo | Allows to undo the actions. |
-| redo | Allows to redo the actions |
-| formatBlock | Adds HTML block element to the selected text. |
-| heading | Adds heading to the selected text.  |
-| indent | Allows to increase the indent level of the content. |
-| outdent | Allows to decrease the indent level of the content. |
-| insertHTML | Inserts the html content to the current cursor position. |
-| insertOrderedList | Creates a new list item (numbered). |
-| insertUnorderedList | Creates a new list item (bulleted). |
-| insertParagraph | Inserts a paragraph to the selection or the current line. |
-| removeFormat | Removes all formatting styles (such as bold, Italic, underline, color, superscript, subscript, and more) from currently selected text. |
-| insertText | Inserts text to the current cursor position. |
-| insertHorizontalRule | Inserts horizontal rule to the current cursor position. |
-| insertBrOnReturn | Inserts `<br>` tag to the current cursor position. |
+| Bold | Bolds the selected content in the Rich Text Editor. |
+| Italic | The selected text will be Italics. |
+| UnderLine | Underlines the selected text in the Rich Text Editor. |
+| StrikeThrough | Applies single line strike through formatting for the selected text. |
+| SuperScript | Makes the selected text as superscript (higher). |
+| SubScript | Makes the selected text as subscript (lower). |
+| UpperCase | Changes the case of selected text to upper in the content. |
+| LowerCase | Changes the case of selected text to lower in the content. |
+| FontColor | Applies the specified font color for the selected text. |
+| FontName | Applies the specified font name for the selected text. |
+| FontSize | Applies the specified font size for the selected text. |
+| BackColor | Applies the specified background color the selected text. |
+| JustifyCenter | Aligns the content with center margin. |
+| JustifyFull | Aligns the content with left margin. |
+| JustifyLeft | Aligns the content with left margin. |
+| JustifyRight | Aligns the content with right margin. |
+| Undo | Allows to undo the actions. |
+| Redo | Allows to redo the actions |
+| FormatBlock | Adds HTML block element to the selected text. |
+| Heading | Adds heading to the selected text.  |
+| Indent | Allows to increase the indent level of the content. |
+| Outdent | Allows to decrease the indent level of the content. |
+| InsertHTML | Inserts the html content to the current cursor position. |
+| InsertOrderedList | Creates a new list item (numbered). |
+| InsertUnorderedList | Creates a new list item (bulleted). |
+| InsertParagraph | Inserts a paragraph to the selection or the current line. |
+| RemoveFormat | Removes all formatting styles (such as bold, Italic, underline, color, superscript, subscript, and more) from currently selected text. |
+| InsertText | Inserts text to the current cursor position. |
+| InsertHorizontalRule | Inserts horizontal rule to the current cursor position. |
+| InsertBrOnReturn | Inserts `<br>` tag to the current cursor position. |
 
 > Provided support to apply execute commands which do not require direct DOM access.
 

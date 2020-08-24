@@ -9,7 +9,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Prerequisites
 
-* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [.NET Core SDK 3.1.7](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ## Create a Blazor Server project using .NET Core CLI
 

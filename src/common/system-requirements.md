@@ -13,14 +13,14 @@ By using the following IDEs, you can develop Blazor applications
 
 The below tool required to run the Blazor application.
 
-* [`.NET Core SDK 3.1.3`](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [`.NET Core SDK 3.1.7`](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ## Extensions
 
 To install the essential project templates in the Visual Studio 2019, run the below line in the command prompt.
 
 ```bash
-    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    dotnet new --install Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.1
  ```
 
-> **Note:** .NET Core SDK 3.1.3 requires Visual Studio 2019 16.5 or later.
+> **Note:** .NET Core SDK 3.1.7 requires Visual Studio 2019 16.7 or later.

@@ -9,18 +9,18 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [.NET Core SDK 3.1.7](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-> **Note:** .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
+> **Note:** .NET Core SDK 3.1.7 requires Visual Studio 2019 16.7 or later.
 >
-> Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+> Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 7 and it requires Visual Studio 16.7 Preview 1 or later.
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
 1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
 
     ```bash
-    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    dotnet new --install Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.1
     ````
 
 2. Choose **Create a new project** from the Visual Studio dashboard.

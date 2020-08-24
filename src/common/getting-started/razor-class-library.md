@@ -5,9 +5,9 @@ This section provides information about creating Razor Class Library with the Sy
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [.NET Core SDK 3.1.7](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-> **Note:** .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
+> **Note:** .NET Core SDK 3.1.7 requires Visual Studio 2019 16.7 or later.
 
 ## Create a Razor Class Library using Syncfusion Blazor components in Visual Studio 2019
 

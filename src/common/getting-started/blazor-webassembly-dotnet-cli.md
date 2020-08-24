@@ -9,14 +9,14 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Prerequisites
 
-* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [.NET Core SDK 3.1.7](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ## Create a Blazor WebAssembly project using .NET Core CLI
 
 1. Install the Blazor project templates by using below command line in the command prompt:
 
     ```bash
-    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    dotnet new --install Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.1
     ````
 
 2. Once project templates installed, run the following command line to create a new Blazor WebAssembly application.

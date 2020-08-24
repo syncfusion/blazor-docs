@@ -8,7 +8,7 @@ description: "This section for Syncfusion ASP.NET drop-down list control shows h
 
 The DropDownList loads the data either from local data sources or
 remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~DataSource.html) property. It supports
-the data type of `array` or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.DataManager_members.html).
+the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager_members.html).
 
 The DropDownList also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion~Syncfusion.DataManager_members.html) adaptors.
 

@@ -140,8 +140,8 @@ namespace blazorDropdowns
 ## Blazor WebAssembly
 
 The Localization library allows you to localize static text content of the
-[NoRecordsTemplate](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion~Syncfusion.DropDowns.DropDownListBuilder~NoRecordsTemplate.html)
-and [ActionFailureTemplate](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion~Syncfusion.DropDowns.DropDownListBuilder~ActionFailureTemplate.html)
+[NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListTemplates%601~NoRecordsTemplate.html)
+and [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListTemplates%601~ActionFailureTemplate.html)
 &nbsp;properties according to the culture currently assigned to the DropDownList.
 
 | Locale key | en-US (default)
@@ -198,7 +198,7 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-In the following sample, French culture is set to the DropDownList and no data is loaded. Hence, the [NoRecordsTemplate](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion~Syncfusion.DropDowns.DropDownListBuilder~NoRecordsTemplate.html) property displays its text in French culture initially, and if the sample is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion~Syncfusion.DropDowns.DropDownListBuilder~ActionFailureTemplate.html) property displays its text appropriately.
+In the following sample, French culture is set to the DropDownList and no data is loaded. Hence, the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListTemplates%601~NoRecordsTemplate.html) property displays its text in French culture initially, and if the sample is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListTemplates%601~ActionFailureTemplate.html) property displays its text appropriately.
 
 ```csharp
 @using Syncfusion.Blazor.Data

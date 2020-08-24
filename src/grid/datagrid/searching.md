@@ -6,7 +6,7 @@ description: "Learn how to search DataGrid content, change search operators, per
 
 # Search
 
-You can search records in a DataGrid, by using the **Search** method with search key as a parameter. This also provides an option to integrate search text box in datagrid's toolbar by adding **Search** item to the [`Toolbar`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~Toolbar.html).
+You can search records in a DataGrid, by using the **Search** method with search key as a parameter. This also provides an option to integrate search text box in datagrid's toolbar by adding **Search** item to the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Toolbar.html).
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -52,7 +52,7 @@ The following GIF image represents a DataGrid Searching.
 
 ## Initial search
 
-To apply search at initial rendering, set the **Fields**, **Operator**, **Key**, and **IgnoreCase** using [`GridSearchSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~SearchSettings.html) component.
+To apply search at initial rendering, set the **Fields**, **Operator**, **Key**, and **IgnoreCase** using [`GridSearchSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings.html) component.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -98,11 +98,11 @@ The following screenshot represents a DataGrid with initial searching.
 
 ![Initial Search](./images/grid-initialsearch.png)
 
-> By default, datagrid searches all the bound column values. To customize this behavior define the [`Fields`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion~Syncfusion.Grids.GridSearchSettings~Fields.html) property of **GridSearchSettings** component.
+> By default, datagrid searches all the bound column values. To customize this behavior define the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Fields.html) property of **GridSearchSettings** component.
 
 ## Search operators
 
-The search operator can be defined in the [`Operator`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Operator.html) property of **GridSearchSettings** to configure specific searching.
+The search operator can be defined in the [`Operator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Operator.html) property of **GridSearchSettings** to configure specific searching.
 
 The following operators are supported in searching:
 
@@ -114,7 +114,7 @@ Contains |Checks whether a value contains the specified value.
 Equal |Checks whether a value is equal to the specified value.
 NotEqual |Checks for values not equal to the specified value.
 
-> By default, the [`Operator`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Operator.html) value is **Contains**.
+> By default, the [`Operator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Operator.html) value is **Contains**.
 
 ## Search by external button
 
@@ -169,7 +169,7 @@ To search datagrid records from an external button, invoke the **Search** method
 
 ## Search specific columns
 
-By default, datagrid searches all visible columns. You can search specific columns by defining the specific column's field names in the [`Fields`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Fields.html) property of **GridSearchSettings** component.
+By default, datagrid searches all visible columns. You can search specific columns by defining the specific column's field names in the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Fields.html) property of **GridSearchSettings** component.
 
 ```csharp
 @using Syncfusion.Blazor.Grids

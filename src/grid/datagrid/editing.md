@@ -55,7 +55,7 @@ Deletion of the record is possible by selecting the required row and click on **
 The following screenshot represents Editing with Default Mode.
 ![Edit Action](./images/edit-action.png)
 
-> * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it is must to have parameterless constructor defined for the model class.
+> * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it is must to have parameterless constructor defined for the model class. To provide custom logic for object creation during editing, you can refer [here](#provide-new-item-or-edited-item-using-events).
 > * If [`IsIdentity`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~IsIdentity.html) is enabled, then it will be considered as a read-only column when editing and adding a record.
 > * You can disable editing for a particular column, by specifying
 [`AllowEditing`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~AllowEditing.html) to **false**.
@@ -844,6 +844,156 @@ You can set validation rules by defining the [`ValidationRules`](https://help.sy
 
 The following screenshot represents the Column Validation in Normal Editing.
 ![Validation Rules](./images/validation-rules.png)
+
+## Provide new item or edited item using events
+
+Grid uses `Activator.CreateInstance<TValue>()` to create or clone new record instance during add and edit operations, so it is must to have parameterless constructor defined for the model class.
+
+There are cases where custom logic is required for creating new object or new object instance cannot be created using  `Activator.CreateInstance<TValue>()`. In such cases you can provide model object instance manually using events.
+
+### Normal or Dialog editing
+
+You can use OnActionBegin event to provide new object instance during editing operation. The new object should be assigned to the `OnActionBegin<TValue>.Data` property.
+
+In the following example:
+
+* A model class with no parameter-less constructor is bound with grid.
+* Enabled inline editing feature in grid.
+* `OnActionBegin` event callback is assigned in which `Data` property is assigned with custom object for both add and edit operation.
+
+```csharp
+
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <GridEditSettings AllowEditing="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+    <GridEvents TValue="Order" OnActionBegin="ActionBegin"></GridEvents>
+</SfGrid>
+
+@code {
+
+    List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order(1000 + x)
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI",
+                "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x,
+            OrderDate = (new DateTime[] { new DateTime(2019, 01, 01), new DateTime(2019, 01, 02) })[new Random().Next(2)]
+        }).ToList();
+    }
+
+    public void ActionBegin(ActionEventArgs<Order> arg)
+    {
+        //Handles add operation
+        if (arg.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Add))
+        {
+            arg.Data = new Order(0) { CustomerID = "Customer ID" };
+        }
+
+        //Handles edit operation. During edit operation, original object will be cloned.
+        if (arg.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit))
+        {
+            arg.Data = new Order(arg.RowData.OrderID)
+            {
+                CustomerID = arg.RowData.CustomerID,
+                Freight = arg.RowData.Freight,
+                OrderDate = arg.RowData.OrderDate
+            };
+        }
+    }
+
+    // This class does not contain any parameter-less constructor, hence this cannot be instantiated using Activator.CreateInstance.
+    public class Order
+    {
+        public Order(int orderid) => OrderID = orderid;
+
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
+
+### Batch editing
+
+You can use `OnBatchAdd` and `OnCellEdit` event to provide new object instance during add and cell edit operation respectively.
+
+For add operation assign new object to the `OnBatchAdd.DefaultData` property. For cell edit, assign cloned object in the `OnCellEdit.Data` property.
+
+In the following example:
+
+* A model class with no parameter-less constructor is bound with grid.
+* Enabled batch editing feature in grid.
+* `OnBatchAdd` event callback is assigned in which `DefaultData` property is assigned with custom object for add operation.
+* `OnCellEdit` event callback is assigned in which `Data` property is assigned with custom object for handling edit operation.
+
+```csharp
+
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Update", "Cancel" })">
+    <GridEditSettings AllowEditing="true" AllowAdding="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+    <GridEvents TValue="Order" OnBatchAdd="BeforeAdd" OnCellEdit="CellEdit"></GridEvents>
+</SfGrid>
+
+@code {
+
+    List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order(1000 + x)
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI",
+                "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x,
+            OrderDate = (new DateTime[] { new DateTime(2019, 01, 01), new DateTime(2019, 01, 02) })[new Random().Next(2)]
+        }).ToList();
+    }
+
+    public void BeforeAdd(BeforeBatchAddArgs<Order> arg)
+    {
+        arg.DefaultData = new Order(0) { CustomerID = "Customer ID" };
+    }
+
+    public void CellEdit(CellEditArgs<Order> arg)
+    {
+        //Return args.Data if its not null so previously edited data will not be lost.
+        arg.Data = arg.Data ?? new Order(arg.RowData.OrderID)
+        {
+            CustomerID = arg.RowData.CustomerID,
+            Freight = arg.RowData.Freight,
+            OrderDate = arg.RowData.OrderDate
+        };
+    }
+
+    // This class does not contain any parameter-less constructor, hence this cannot be instantiated using Activator.CreateInstance.
+    public class Order
+    {
+        public Order(int orderid) => OrderID = orderid;
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
 
 ## Entity Framework
 

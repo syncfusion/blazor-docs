@@ -7,18 +7,18 @@ description: "Documentation on column reordering, resizing, header templates (cu
 # Columns
 
 The column definitions are used as the **DataSource** schema in the DataGrid. This plays a vital role in rendering column values in the required format.
-The datagrid operations such as sorting, filtering and grouping etc. are performed based on column definitions. The [`Field`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) property of **GridColumn**,
+The datagrid operations such as sorting, filtering and grouping etc. are performed based on column definitions. The [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) property of **GridColumn**,
 is necessary to map the datasource values in DataGrid columns.
 
-> 1. If the column [`Field`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) is not specified in the dataSource, the column values will be empty.
-> 2. If the [`Field`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) name contains “dot” operator, it is considered as complex binding.
-> 3. If a property in model class has `JsonProperty` attribute, then the corresponding [`Field`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) must be the value of `JsonProperty` attribute of the model class instead of the property name.
+> 1. If the column [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) is not specified in the dataSource, the column values will be empty.
+> 2. If the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) name contains “dot” operator, it is considered as complex binding.
+> 3. If a property in model class has `JsonProperty` attribute, then the corresponding [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) must be the value of `JsonProperty` attribute of the model class instead of the property name.
 > 4. It is must to define the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) property for a [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Template.html) column, to perform CRUD or Data Operations such as filtering, searching etc.
 
 ## Auto generation
 
-The [`Columns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~_columns.html) are automatically generated when
-[`Columns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~_columns.html) declaration is empty or undefined while initializing the datagrid. All the columns in the **DataSource** are bound as datagrid columns.
+The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Columns.html) are automatically generated when
+[`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Columns.html) declaration is empty or undefined while initializing the datagrid. All the columns in the **DataSource** are bound as datagrid columns.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -263,7 +263,7 @@ The following image represents foreign key column
 
 ## Header text
 
-By default, column header title is displayed from column [`Field`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) value. To override the default header title, you have to define the **HeaderText** value in the [`HeaderText`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~HeaderText.html) property of **GridColumn** directive.
+By default, column header title is displayed from column [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) value. To override the default header title, you have to define the **HeaderText** value in the [`HeaderText`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~HeaderText.html) property of **GridColumn** directive.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -303,7 +303,7 @@ By default, column header title is displayed from column [`Field`](https://help.
 The Output image for header text is as follows
 ![Header Text](./images/header-text.png)
 
-> * If both the [`Field`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) and [`HeaderText`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~HeaderText.html)
+> * If both the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) and [`HeaderText`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~HeaderText.html)
 are not defined in the column, the column renders with “empty” header text.
 
 ## Header template

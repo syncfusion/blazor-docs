@@ -7,7 +7,7 @@ description: "Explains how to disable the user interaction on date time picker c
 # Disable the component
 
 To disable the DateTimePicker, set its
-[Enabled](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion~Syncfusion.Calendars.DateTimePicker~Enabled.html)
+[Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfDateTimePicker%601~Enabled.html)
 property to `false`.
 
 The following code demonstrates the disabled component.

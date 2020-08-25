@@ -8,7 +8,7 @@ description: "Explains how to achieve UI level customization in the time picker 
 
 TimePicker allows you to customize the text box and popup list appearance to suit your
 application by using the
-[CssClass](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion~Syncfusion.Calendars.TimePicker~CssClass.html) property.
+[CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfTimePicker%601~CssClass.html) property.
 
 The following code demonstrates customization of text appearance in a text box, popup button, and popup list along with hover and active
 state by using the `e-custom-style` class. Following is the list of available classes used to customize the entire TimePicker component:

@@ -6,7 +6,7 @@ description: "Explains how to allow the users to enter only the valid time value
 
 # Strict Mode
 
-The [StrictMode](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion~Syncfusion.Calendars.TimePicker~StrictMode.html)
+The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfTimePicker%601~StrictMode.html)
 is an act that allows you to enter only valid time value within the specified Min/Max
 range in the textbox. If the value is invalid, the component Value sets to the previous value.
 If the value is

@@ -8,7 +8,7 @@ description: "Data labels are names of the data points that are displayed on the
 
 # Data Label
 
-Data label can be added to a point by enabling the [`Visible`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.AccumulationDataLabelSettings~Visible.html)
+Data label can be added to a point by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationDataLabelSettingsModel~Visible.html)
 option in the DataLabel property.
 
 {% aspTab template="chart/accumulation-charts/datalabel/default", sourceFiles="default.razor" %}
@@ -19,7 +19,7 @@ option in the DataLabel property.
 
 ## Position
 
-Accumulation chart provides support for placing the data label either `Inside` or `Outside` of the chart by using [`Position`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.AccumulationDataLabelSettings~Position.html) property.
+Accumulation chart provides support for placing the data label either `Inside` or `Outside` of the chart by using [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationDataLabelSettingsModel~Position.html) property.
 
 {% aspTab template="chart/accumulation-charts/datalabel/position", sourceFiles="position.razor" %}
 

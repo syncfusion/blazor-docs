@@ -16,7 +16,7 @@ Data markers are used to provide information about the data points in the series
 
 <!-- markdownlint-disable MD036 -->
 
-Markers can be added to the points by enabling the [`Visible`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Marker.html)
+Markers can be added to the points by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartMarker~Visible.html)
 option of the marker property.
 
 {% aspTab template="chart/data-marker/marker", sourceFiles="marker.razor" %}
@@ -35,12 +35,12 @@ Markers can be assigned with different shapes such as Rectangle, Circle, Diamond
 
 ![Shape](images/marker/shape-razor.png)
 
->Note : To know more about the marker shape type refer the [`Shape`](https://help.syncfusion.com/cr/cref_files/aspnetmvc-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartMarkerSettings~Shape.htmlg).
+>Note : To know more about the marker shape type refer the [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartMarker~Shape.html).
 
 ## Images
 
 Apart from the shapes, you can also add custom images to mark the data point using the
-[`ImageUrl`](https://help.syncfusion.com/cr/cref_files/aspnetmvc-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartMarkerSettings~ImageUrl.html) property.
+[`ImageUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartMarker~ImageUrl.html) property.
 
 {% aspTab template="chart/data-marker/images", sourceFiles="images.razor" %}
 

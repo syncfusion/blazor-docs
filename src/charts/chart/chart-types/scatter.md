@@ -2,7 +2,7 @@
 
 ## Scatter
 
-Scatter plot or scatter chart plots data with two numeric parameters. To render a scatter series, use series [`Type`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Type.html) as `Scatter`.
+Scatter plot or scatter chart plots data with two numeric parameters. To render a scatter series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `Scatter`.
 
 {% aspTab template="chart/series/scatter-bubble/scatter", sourceFiles="scatter.razor" %}
 
@@ -14,7 +14,7 @@ Scatter plot or scatter chart plots data with two numeric parameters. To render 
 
 You can use the following properties to customize the scatter series.
 
-* [`Fill`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Fill.html) – used to change the color of the scatter.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the scatter.
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Opacity.html) – used to control the transparency of the chart series.
 * [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.ChartCommonMarkerSettings~Shape.html) - used to change the shape of the scatter series.
 

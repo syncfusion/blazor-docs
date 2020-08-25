@@ -1,7 +1,7 @@
 # Hilo
 
 Hilo Series illustrates the price movements in stock using the high and low values.
-To render a Hilo series, use series [`Type`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Type.html) as `Hilo`.
+To render a Hilo series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `Hilo`.
 
 Hilo series requires 3 fields (x, high and low) to show the high and low price in the stock.
 
@@ -15,7 +15,7 @@ Hilo series requires 3 fields (x, high and low) to show the high and low price i
 
 You can use the following properties to customize the hilo series.
 
-* [`Fill`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Fill.html) – used to change the color of the hilo.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the hilo.
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Opacity.html) – used to control the transparency of the chart series.
 
 ```csharp

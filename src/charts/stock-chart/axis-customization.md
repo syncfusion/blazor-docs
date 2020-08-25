@@ -36,8 +36,8 @@ You can customize the  `Width`, `Color` and `Size` of the minor and major 
 ## Grid Lines Customization
 
 You can customize the  `Width`, `Color` and `DashArray` of the minor and major grid lines, using
-[`MajorGridLines`](https://help.syncfusion.com/cr/cref_files/aspnetmvc-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartAxis~MajorGridLines.html) and
-[`MinorGridLines`](https://help.syncfusion.com/cr/cref_files/aspnetmvc-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartAxis~MinorGridLines.html) properties in the axis.
+[`MajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MajorGridLines.html) and
+[`MinorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MinorGridLines.html) properties in the axis.
 
 {% aspTab template="stock-chart/axis/category/grid", sourceFiles="grid.razor" %}
 

@@ -36,7 +36,7 @@ use indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~S
 ## Momentum
 
 Momentum shows the speed at which the price of the stock is changing. To render a Momentum indicator, use indicator
-[`Type`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.StockChartIndicator~Type.html) as `Momentum`. Momentum indicator will be represented by two lines (upperLine,
+[`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartIndicator~Type.html) as `Momentum`. Momentum indicator will be represented by two lines (upperLine,
 signalLine).In momentum indicator the upperBand value is always renders at the value 100.
 
 ## Moving Average Convergence Divergence (MACD)

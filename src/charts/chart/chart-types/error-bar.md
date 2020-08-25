@@ -3,7 +3,7 @@
 ## Error Bar
 
 Error bars are graphical representations of the variability of data and used on graphs to indicate the error or uncertainty in a reported
-measurement. To render the error bar for the series, set [`Visible`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Visible.html)
+measurement. To render the error bar for the series, set [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ErrorBarSettingsModel~Visible.html)
 as `True` in error bar object.
 
 {% aspTab template="chart/series/other-types/errorbar", sourceFiles="errorbar.razor" %}
@@ -14,8 +14,8 @@ as `True` in error bar object.
 
 ## Error Bar Type
 
-To change the error bar rendering type using [`Type`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Type.html)
-option of error bar. To change the error bar line length you can use [`VerticalError`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries.html)
+To change the error bar rendering type using [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ErrorBarSettingsModel~Type.html)
+option of error bar. To change the error bar line length you can use [`VerticalError`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ErrorBarSettingsModel~VerticalError.html)
 property.
 
 {% aspTab template="chart/series/other-types/error-type", sourceFiles="error-type.razor" %}
@@ -24,7 +24,7 @@ property.
 
 ## Customizing Error Bar Type
 
-To customize the error bar type, set error bar [`Type`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Type.html) as `Custom` and
+To customize the error bar type, set error bar [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ErrorBarSettingsModel~Type.htmll) as `Custom` and
 then change the horizontal/vertical positive and negative error of error bar.
 
 {% aspTab template="chart/series/other-types/custom-error", sourceFiles="custom-error.razor" %}
@@ -36,7 +36,7 @@ then change the horizontal/vertical positive and negative error of error bar.
 ## Error Bar Mode
 
 Error bar mode is used to define whether the error bar line has to be drawn horizontally, vertically or in both side.
-To change the error bar mode use [`Mode`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries.html) option.
+To change the error bar mode use [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ErrorBarSettingsModel~Mode.html) option.
 
 {% aspTab template="chart/series/other-types/error-mode", sourceFiles="error-mode.razor" %}
 
@@ -44,7 +44,7 @@ To change the error bar mode use [`Mode`](https://help.syncfusion.com/cr/cref_fi
 
 ## Error Bar Direction
 
-To change the error bar direction to plus, minus or both side using [`Direction`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries.html) option.
+To change the error bar direction to plus, minus or both side using [`Direction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ErrorBarSettingsModel~Direction.html) option.
 
 {% aspTab template="chart/series/other-types/error-direction", sourceFiles="error-direction.razor" %}
 
@@ -52,7 +52,7 @@ To change the error bar direction to plus, minus or both side using [`Direction`
 
 ## Customizing Error Bar Cap
 
-To customize the error bar cap length, width and fill color, you can use [`ErrorBarCap`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries.html) option.
+To customize the error bar cap length, width and fill color, you can use [`ErrorBarCap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ErrorBarSettingsModel~ErrorBarCap.html) option.
 
 {% aspTab template="chart/series/other-types/error-cap", sourceFiles="error-cap.razor" %}
 

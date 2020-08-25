@@ -4,7 +4,7 @@
 
 Candle series are similar to Hilo Open Close series, are used to represent the low,
 high, open and closing price over time. To render a candle series, use series
-[`Type`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Type.html) as `Candle`.
+[`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `Candle`.
 
 {% aspTab template="chart/series/financial-charts/candle", sourceFiles="candle.razor" %}
 
@@ -43,11 +43,11 @@ By default, BullFillColor is set as red and BearFillColor is set as green.
 
 ## Solid Candles
 
-[`EnableSolidCandles`](https://help.syncfusion.com/cr/cref_files/aspnetmvc-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~EnableSolidCandles.html) is used to enable/disable the solid
+[`EnableSolidCandles`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~EnableSolidCandles.html) is used to enable/disable the solid
 candles. By default is set to be false. The fill color of the candle will be defined by its opening and closing values.
 
-[`BearFillColor`](https://help.syncfusion.com/cr/cref_files/aspnetmvc-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~BearFillColor.html) will be applied when the opening value is less than the closing value.
-[`BullFillColor`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~BullFillColor.html)
+[`BearFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~BearFillColor.html) will be applied when the opening value is less than the closing value.
+[`BullFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~BullFillColor.html)
 will be applied when the opening value is greater than closing value.
 
 {% aspTab template="chart/series/financial-charts/solid-candles", sourceFiles="solid-candles.razor" %}

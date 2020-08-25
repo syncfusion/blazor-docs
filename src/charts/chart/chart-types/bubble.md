@@ -2,7 +2,7 @@
 
 ## Bubble
 
-Visualize data with three numeric parameters. The bubble size depends on third parameter. To render a bubble series, use series [`Type`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Type.html) as `Bubble`.
+Visualize data with three numeric parameters. The bubble size depends on third parameter. To render a bubble series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `Bubble`.
 
 {% aspTab template="chart/series/scatter-bubble/bubble", sourceFiles="bubble.razor" %}
 
@@ -22,7 +22,7 @@ Visualize data with three numeric parameters. The bubble size depends on third p
 
 You can use the following properties to customize the bubble series.
 
-* [`Fill`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.Charts.ChartSeries~Fill.html) – used to change the color of the bubble.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the bubble.
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Opacity.html) – used to control the transparency of the chart series.
 
 ```csharp

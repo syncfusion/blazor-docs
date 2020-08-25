@@ -18,8 +18,8 @@ Chart can render to its container size. You can set the size inline or through 
 
 ## Size for Chart
 
-You can also set size for chart directly through [`Width`](https://help.syncfusion.com/cr/cref_files/aspnetmvc-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.Chart~Width.html) and
-[`Height`](https://help.syncfusion.com/cr/cref_files/aspnetmvc-js2/Syncfusion.EJ2~Syncfusion.EJ2.Charts.Chart~Height.html) properties.
+You can also set size for chart directly through [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartModel~Width.html) and
+[`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartModel~Height.html) properties.
 
 <!-- markdownlint-disable MD036 -->
 **In Pixel**

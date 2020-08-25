@@ -12,8 +12,7 @@ is necessary to map the datasource values in DataGrid columns.
 
 > 1. If the column [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) is not specified in the dataSource, the column values will be empty.
 > 2. If the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) name contains “dot” operator, it is considered as complex binding.
-> 3. If a property in model class has `JsonProperty` attribute, then the corresponding [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) must be the value of `JsonProperty` attribute of the model class instead of the property name.
-> 4. It is must to define the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) property for a [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Template.html) column, to perform CRUD or Data Operations such as filtering, searching etc.
+> 3. It is must to define the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Field.html) property for a [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~Template.html) column, to perform CRUD or Data Operations such as filtering, searching etc.
 
 ## Auto generation
 

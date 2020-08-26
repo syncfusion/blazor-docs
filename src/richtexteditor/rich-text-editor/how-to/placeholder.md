@@ -6,7 +6,7 @@ description: "This section explains how to customize the font style of placehold
 
 # Customize placeholder style
 
-By using `rte-placeholder` class, you can customize the placeholder style.
+By using `e-rte-placeholder` class, you can customize the placeholder style.
 
 ```csharp
 
@@ -15,7 +15,7 @@ By using `rte-placeholder` class, you can customize the placeholder style.
 <SfRichTextEditor Placeholder="Type Something" />
 
 <style>
-    .e-richtexteditor .rte-placeholder {
+    .e-richtexteditor .e-rte-placeholder {
         /* placeholder style */
         font-family: monospace;
         color: deeppink;

@@ -10,11 +10,11 @@ description: "This section describes how to configure the undo and redo manager,
 
 Specifies the placeholder for the Rich Text Editor’s content used when the Rich Text Editor body is empty through the `placeholder` property.
 
-Use the `rte-placeholder` class to define the custom font family, font color, and styles to the placeholder text.
+Use the `e-rte-placeholder` class to define the custom font family, font color, and styles to the placeholder text.
 
 ```bash
 
-.e-richtexteditor .rte-placeholder {
+.e-richtexteditor .e-rte-placeholder {
     font-family: monospace;
 }
 

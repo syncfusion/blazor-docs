@@ -6,7 +6,7 @@ description: "This section helps to learn how to Enable or disable context menu 
 
 # Enable or disable context menu items
 
-You can enable and disable the menu items using the [`EnableItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~EnableItems.html) method in Context Menu. To enable menuItems, set the `Enable` property in argument to `true` and vice-versa.
+You can enable and disable the menu items using the [`EnableItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_EnableItems_System_Collections_Generic_List_System_String__System_Boolean_System_Boolean_) method in Context Menu. To enable menuItems, set the `Enable` property in argument to `true` and vice-versa.
 
 In the following example, the **Display Settings** in parent items and **Medium icons** in sub menu items are disabled.
 
@@ -65,4 +65,4 @@ Output be like
 
 ![Context Menu Sample](./../images/cm-disable.png)
 
-> To disable sub menu items, use the [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~OnOpen.html) event.
+> To disable sub menu items, use the [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html) event.

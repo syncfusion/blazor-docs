@@ -8,7 +8,7 @@ description: "This sample demonstrates the header orientation of the Tabs. Selec
 
 This section explains about modifying the position and modes of Tab header.
 
-It allows placing the header section inside the Tabs component at different positions by using the  [`HeaderPlacement`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfTab~HeaderPlacement.html) property. The available positions are as follows:
+It allows placing the header section inside the Tabs component at different positions by using the  [`HeaderPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_HeaderPlacement) property. The available positions are as follows:
 
 * **Top**: Tab header items can be arranged horizontally, and their content can be placed after the header.
 * **Bottom**: Tab header items can be arranged horizontally, and their content can be placed before the header.

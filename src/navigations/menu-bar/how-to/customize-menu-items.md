@@ -8,7 +8,7 @@ description: "This section helps to learn how to Customize Menu Items."
 
 ## Add or Remove Menu Items
 
-Menu items can be added or removed using the [`InsertAfter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~InsertAfter.html), [`InsertBefore`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~InsertBefore.html) and [`RemoveItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~RemoveItems.html) methods.
+Menu items can be added or removed using the [`InsertAfter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_InsertAfter_System_Collections_Generic_List__0__System_String_System_Boolean_), [`InsertBefore`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_InsertBefore_System_Collections_Generic_List__0__System_String_System_Boolean_) and [`RemoveItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_RemoveItems_System_Collections_Generic_List_System_String__System_Boolean_) methods.
 
 In the following example, the `Europe` menu items are added before the Oceania item, the `Africa` menu items are added after the Asia, and the South America and Mexico items are removed from menu.
 
@@ -93,7 +93,7 @@ Output be like
 
 ## Enable or Disable Menu Items
 
-You can enable and disable the menu items using the [`EnableItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~EnableItems.html) method in Menu. To enable menuItems, set the `Enable` property in argument to true and vice-versa.
+You can enable and disable the menu items using the [`EnableItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_EnableItems_System_Collections_Generic_List_System_String__System_Boolean_System_Boolean_) method in Menu. To enable menuItems, set the `Enable` property in argument to true and vice-versa.
 
 In the following example, the Directory header item, Conferences, and Music sub menu items are disabled.
 
@@ -151,7 +151,7 @@ Output be like
 
 ## Show or Hide Menu Items
 
-You can show or hide the menu items using the [`ShowItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~ShowItems.html) and [`HideItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~HideItems.html) methods.
+You can show or hide the menu items using the [`ShowItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_ShowItems_System_Collections_Generic_List_System_String__System_Boolean_) and [`HideItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_HideItems_System_Collections_Generic_List_System_String__System_Boolean_) methods.
 
 In the following example, the Movies header item, Workshops, and Music sub menu items are hidden in menu.
 

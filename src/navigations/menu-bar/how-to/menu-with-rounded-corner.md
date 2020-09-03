@@ -6,7 +6,7 @@ description: "This section helps to learn customise the menu bar with rounded co
 
 # Menu Bar with rounded corner
 
-The rounded corner can be achieved by using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~CssClass.html) property. Add a custom class to the menu bar component and customize it using the `border-radius` CSS property. For more information, refer to the `styles` specified in the below sample.
+The rounded corner can be achieved by using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu.html#Syncfusion_Blazor_Navigations_SfMenu_CssClass) property. Add a custom class to the menu bar component and customize it using the `border-radius` CSS property. For more information, refer to the `styles` specified in the below sample.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations

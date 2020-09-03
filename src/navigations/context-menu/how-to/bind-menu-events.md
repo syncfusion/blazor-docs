@@ -6,7 +6,7 @@ description: "This section helps to learn how to Bind Menu Events"
 
 # Bind Menu Events
 
-To bind the menu event in the context menu [`ItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfListBox~ItemSelected.html) is used and the event is triggered when the item in the context menu is selected.
+To bind the menu event in the context menu [`ItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) is used and the event is triggered when the item in the context menu is selected.
 
 ```csharp
 

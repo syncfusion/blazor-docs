@@ -6,7 +6,7 @@ description: "This section helps to learn how to change the animations of menu b
 
 # Change animation settings
 
-To change the animation of the Menu Bar, [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~AnimationSettings.html) property is used. The supported effects for Menu Bar are,
+To change the animation of the Menu Bar, [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu.html#Syncfusion_Blazor_Navigations_SfMenu_AnimationSettings) property is used. The supported effects for Menu Bar are,
 
 | Effect | Functionality |
 | ------------ | ----------------------- |
@@ -15,7 +15,7 @@ To change the animation of the Menu Bar, [`AnimationSettings`](https://help.sync
 | ZoomIn | Specifies the sub menu transform with zoom in effect. |
 | FadeIn | Specifies the sub menu transform with fade in effect. |
 
-The following sample illustrates how to open Menu with `FadeIn` [`effect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuAnimationSettingsModel~Effect.html) with the [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuAnimationSettingsModel~Duration.html) of `400ms`. Also we can set [`Easing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuAnimationSettingsModel~Easing.html) for menu items.
+The following sample illustrates how to open Menu with `FadeIn` [`effect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettingsModel.html#Syncfusion_Blazor_Navigations_MenuAnimationSettingsModel_Effect) with the [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettingsModel.html#Syncfusion_Blazor_Navigations_MenuAnimationSettingsModel_Duration) of `400ms`. Also we can set [`Easing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettingsModel.html#Syncfusion_Blazor_Navigations_MenuAnimationSettingsModel_Easing) for menu items.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations

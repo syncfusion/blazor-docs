@@ -6,8 +6,8 @@ description: "This section helps to learn how to Open and close Context Menu"
 
 # Open and close Context Menu
 
-Open and close the Context Menu manually whenever required by using the open and close methods. In the following sample, to open the Context Menu at specified position the [`Open`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~Open.html) method is used with `X` and `Y` coordinates
-and to close Context Menu [`Close`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~Close.html) method can be used.
+Open and close the Context Menu manually whenever required by using the open and close methods. In the following sample, to open the Context Menu at specified position the [`Open`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Open_System_Nullable_System_Double__System_Nullable_System_Double__) method is used with `X` and `Y` coordinates
+and to close Context Menu [`Close`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Close) method can be used.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations

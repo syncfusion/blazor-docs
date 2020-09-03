@@ -6,7 +6,7 @@ description: "This example demonstrates how to prevent the tab selection on touc
 
 # Prevent content swipe selection
 
-We can prevent the tab selection on touch swipe action by using the Tab [Selecting](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.TabEvents~Selecting.html) &nbsp;event. Refer the below sample with preventing swipe selection.
+We can prevent the tab selection on touch swipe action by using the Tab [Selecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_Selecting) &nbsp;event. Refer the below sample with preventing swipe selection.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations

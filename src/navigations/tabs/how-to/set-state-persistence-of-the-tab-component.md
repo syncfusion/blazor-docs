@@ -6,7 +6,7 @@ description: "This example demonstrates how to retain the current model value in
 
 # Set state persistence
 
-State persistence allows the Tab to retain the current modal value in the browser cookies for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfTab~EnablePersistence.html) property which is set to false by default.
+State persistence allows the Tab to retain the current modal value in the browser cookies for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnablePersistence) property which is set to false by default.
 When it is set to true, some of the Tab component model values will be retained even after refreshing the page.
 
 > Tab **ID** is essential to set state persistence .

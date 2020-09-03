@@ -2,7 +2,7 @@
 
 ## Customizing Context Menu Items
 
-The Context Menu items can be customized by using the [`OnItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~OnItemRender.html) event. In the following sample, the menu items is customized by adding new styles.
+The Context Menu items can be customized by using the [`OnItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html) event. In the following sample, the menu items is customized by adding new styles.
 
 ```csharp
 
@@ -53,8 +53,8 @@ Output be like
 
 ## Multilevel nesting
 
-The Multiple level nesting supports in Context Menu. It can be achieved by mapping the [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~Items.html)
-property inside the parent [`MenuItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuItem.html). In the below sample, three level nesting of Context Menu is provided.
+The Multiple level nesting supports in Context Menu. It can be achieved by mapping the [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu.html#Syncfusion_Blazor_Navigations_SfMenu_Items)
+property inside the parent [`MenuItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ContextMenuItem.html). In the below sample, three level nesting of Context Menu is provided.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations

@@ -6,7 +6,7 @@ description: "This section helps to learn how to bind data"
 
 # Data Binding
 
-To bind local data source to the Context Menu, menu items are populated from data source and mapped to [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~Items.html) property. In the following example, data given in `CustomItems.cs` file is mapped to `Items` property.
+To bind local data source to the Context Menu, menu items are populated from data source and mapped to [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Items) property. In the following example, data given in `CustomItems.cs` file is mapped to `Items` property.
 
 ```csharp
 

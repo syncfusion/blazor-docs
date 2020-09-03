@@ -6,7 +6,7 @@ description: "This example demonstrates how to dynamically load or add an accord
 
 # Load items dynamically
 
-Accordion items can be added dynamically by passing the item through [`AddItem`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfAccordion~AddItem.html) method.
+Accordion items can be added dynamically by passing the item through [`AddItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_AddItem_System_Object_System_Nullable_System_Int32__) method.
 
 In the following demo, new items are added dynamically when you click **Add Item** button.
 

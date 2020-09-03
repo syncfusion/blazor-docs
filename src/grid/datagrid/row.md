@@ -149,7 +149,7 @@ The output will be as follows.
 
 ### Row template with formatting
 
-If the [`RowTemplate`](./templates/#gridtemplates-component) is used, the value cannot be formatted inside the template using the [`Columns.Format`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.ColumnModel~Format.html) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
+If the [`RowTemplate`](./templates/#gridtemplates-component) is used, the value cannot be formatted inside the template using the [`Columns.Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -625,11 +625,11 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 ```
 
 > * You can expand all the rows by using `ExpandAll` method.
-> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [`dataBound`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataBound.html) event of the DataGrid.
+> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [`dataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
 
 <!-- Row spanning
 
-The datagrid has option to span row cells. To achieve this, You need to define the `RowSpan` attribute to span cells in the [`QueryCellInfo`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~QueryCellInfo.html) event.
+The datagrid has option to span row cells. To achieve this, You need to define the `RowSpan` attribute to span cells in the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
 In the following demo, **Davolio** cell is spanned to two rows in the **EmployeeName** column.
 
@@ -812,12 +812,12 @@ Also DataGrid supports the spanning of rows and columns for same cells. **Lunch 
 }
 ```
 
-> When paging is enabled in datagrid, you can disable the rows and columns spanning for any particular page. To achieve this, we need to check **RequestType** as paging `<code class='language-text'> string</code>` in [`QueryCellInfo`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~QueryCellInfo.html) event of datagrid. -->
+> When paging is enabled in datagrid, you can disable the rows and columns spanning for any particular page. To achieve this, we need to check **RequestType** as paging `<code class='language-text'> string</code>` in [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of datagrid. -->
 
 ## Customize rows
 
-You can customize the appearance of a row by using the [`RowDataBound`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~RowDataBound.html) event.
-The [`RowDataBound`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~RowDataBound.html) event triggers for every row. In the event handler, you can get the
+You can customize the appearance of a row by using the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
+The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers for every row. In the event handler, you can get the
 **RowDataBoundEventArgs** that contains details of the row.
 
 ```csharp
@@ -959,7 +959,7 @@ The output will be as follows.
 
 ## Row height
 
-You can customize the row height of datagrid rows through the [`RowHeight`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~RowHeight.html) property. The [`RowHeight`](hhttps://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~RowHeight.html) property
+You can customize the row height of datagrid rows through the [`RowHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property. The [`RowHeight`](hhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property
 is used to change the row height of entire datagrid rows.
 
 In the below example, the `RowHeight` is set as '60'.
@@ -1010,10 +1010,10 @@ The output will be as follows.
 
 ### Customize row height for particular row
 
-DataGrid row height for particular row can be customized using the [`RowDataBound`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~RowDataBound.html)
+DataGrid row height for particular row can be customized using the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html)
 event by setting the height by adding `row-height` class in required row element.
 
-In the below example, the row height for the row with OrderID as '1003' is set as '90px' using the [`RowDataBound`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~RowDataBound.html) event.
+In the below example, the row height for the row with OrderID as '1003' is set as '90px' using the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
 ```csharp
 @using Syncfusion.Blazor.Grids

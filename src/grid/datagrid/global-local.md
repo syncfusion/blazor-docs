@@ -213,7 +213,7 @@ namespace BlazorServer
 
 > **Note** BlazorServer denotes the ApplicationNameSpace of your project.
 
-* Finally, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Locale.html) property.
+* Finally, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -317,7 +317,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 > **Note** ClientApplication denotes the ApplicationNameSpace of your project.
 
-* Now, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Locale.html) property.
+* Now, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 
 ```csharp
 @using Syncfusion.Blazor.Grids

@@ -7,7 +7,7 @@ description: "Learn how to access the foreign key column value in the dialog edi
 <!-- Access foreign key column in edit template
 
 You can define the **ForeignKeyColumn** in the grid and access it's value in the edit template property.
-This can be achieved by initially defining [`ForeignKeyValue`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~ForeignKeyValue.html) for the required column which compares the local-foreign data and returns the column name. This is then accessed in the grid's edit template using the common column field present in both the data.
+This can be achieved by initially defining [`ForeignKeyValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) for the required column which compares the local-foreign data and returns the column name. This is then accessed in the grid's edit template using the common column field present in both the data.
 
 This is demonstrated in the below sample code,
 

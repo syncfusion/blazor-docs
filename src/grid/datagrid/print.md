@@ -8,7 +8,7 @@ description: "Learn how to print the DataGrid content, set up pages for printing
 
 # Print
 
-To print the DataGrid, call the [`Print`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Print.html) method using datagrid reference. The print option can also be displayed on the toolbar by adding the `Print` toolbar item.
+To print the DataGrid, call the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Print) method using datagrid reference. The print option can also be displayed on the toolbar by adding the `Print` toolbar item.
 
 The below sample code demonstrates DataGrid with print option added in the toolbar,
 
@@ -119,7 +119,7 @@ The following image represents DataGrid with external button for invoking print 
 
 ## Print the visible page
 
-By default, the datagrid prints all the pages. To print the current page alone, set the [`PrintMode`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridModel%601~PrintMode.html) value as **CurrentPage**.
+By default, the datagrid prints all the pages. To print the current page alone, set the [`PrintMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) value as **CurrentPage**.
 
 The below sample code demonstrates this,
 
@@ -163,7 +163,7 @@ The below sample code demonstrates this,
 
 <!-- Print the hierarchy datagrid
 
-By default, the datagrid will print the master and expanded child grids alone. You can change the print option by using the [`HierarchyPrintMode`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridModel%601~HierarchyPrintMode.html) property of the Grid component. The available options are,
+By default, the datagrid will print the master and expanded child grids alone. You can change the print option by using the [`HierarchyPrintMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property of the Grid component. The available options are,
 
 Mode |Behavior
 -----|-----

@@ -9,7 +9,7 @@ description: "Documentation on exporting DataGrid content to PDF format and cust
 # PDF Export
 
 PDF export allows exporting DataGrid data to PDF document. You need to use the
- **PdfExport** method for exporting. To enable PDF export in the datagrid, set the [`AllowPdfExport`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~AllowPdfExport.html) as true.
+ **PdfExport** method for exporting. To enable PDF export in the datagrid, set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) as true.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -182,7 +182,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 <!-- Default fonts for pdf exporting
 
-By default, datagrid uses **Helvetica** font in the exported document. You can change the default font by using [`Theme`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~Theme.html) property of [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties_properties.html).
+By default, datagrid uses **Helvetica** font in the exported document. You can change the default font by using [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Theme) property of [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
 
 The available fonts are,
 
@@ -266,7 +266,7 @@ The following sample code demonstrates changing the default font value on export
 
 <!-- Add custom font for pdf exporting
 
-You can change the default font of Grid header, content and caption cells in the exported document by using the [`Theme`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~Theme.html) property of [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties_properties.html).
+You can change the default font of Grid header, content and caption cells in the exported document by using the [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Theme) property of [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
 
 The following sample code demonstrates changing the default font value to custom font on exported document,
 
@@ -346,7 +346,7 @@ You can customize text, page number, line, page size and changing orientation in
 
 #### How to add a text in header/footer
 
-You can add text and customize it's styles either in Header or Footer of exported PDF document using [`Header`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~Header.html) and [`Footer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~Footer.html) properties of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
+You can add text and customize it's styles either in Header or Footer of exported PDF document using [`Header`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Header) and [`Footer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) properties of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
 
 The following sample code demonstrates adding text and customizing it's styles in the Header section of the exported document,
 
@@ -410,7 +410,7 @@ The following sample code demonstrates adding text and customizing it's styles i
 
 #### How to draw a line in header/footer
 
-You can add line either in the Header or Footer area of the exported PDF document using [`Header`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~Header.html) and [`Footer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~Footer.html) properties of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
+You can add line either in the Header or Footer area of the exported PDF document using [`Header`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Header) and [`Footer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) properties of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
 
 Supported line styles are,
 
@@ -482,7 +482,7 @@ The following sample code demonstrates adding line in the Header section of the 
 
 #### Add page number in header/footer
 
-You can add page number either in Header or Footer area of exported PDF document using [`Header`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~Header.html) and [`Footer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~Footer.html) properties of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
+You can add page number either in Header or Footer area of exported PDF document using [`Header`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Header) and [`Footer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) properties of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
 
 Supported page number types are,
 
@@ -554,7 +554,7 @@ The following sample code demonstrates adding page number in the Header section 
 
 #### Insert an image in header/footer
 
-Image (Base64 string) can be added in header/footer area of the exported PDF document using [`Header`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~Header.html) and [`Footer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~Footer.html) properties of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
+Image (Base64 string) can be added in header/footer area of the exported PDF document using [`Header`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Header) and [`Footer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) properties of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
 
 The following sample code demonstrates inserting image in the Header section of the exported document,
 
@@ -991,7 +991,7 @@ This is demonstrated in the below sample code where initially the **CustomerID**
 
 ## Custom data source
 
-PDF export provides an option to define the datasource dynamically before exporting. To export data dynamically, define it in the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties~DataSource.html) property of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.PdfExportProperties.html) class
+PDF export provides an option to define the datasource dynamically before exporting. To export data dynamically, define it in the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class
 
 The following sample code demonstrates dynamically modifying the data source before exporting it,
 

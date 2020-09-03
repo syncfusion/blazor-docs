@@ -6,14 +6,14 @@ description: "Learn how to aggregate rows, apply custom aggregates, and format t
 
 # Aggregates
 
-Aggregate values are displayed in the footer, group footer, or group caption of the Grid. It can be configured through [`GridAggregates`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~Aggregates.html) component.
- [`Field`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridAggregateColumn~Field.html) and
-  [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridAggregateColumn~Type.html)
+Aggregate values are displayed in the footer, group footer, or group caption of the Grid. It can be configured through [`GridAggregates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Aggregates) component.
+ [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and
+  [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type)
  are the minimum properties required to represent an aggregate column.
 
 ## Built-in aggregate types
 
-The aggregate type should be specified in the [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridAggregateColumn~Type.html) property to configure an aggregate column.
+The aggregate type should be specified in the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property to configure an aggregate column.
 
 The built-in aggregates are,
 
@@ -25,7 +25,7 @@ The built-in aggregates are,
 * TrueCount
 * FalseCount
 
-> * Multiple aggregates can be used for an aggregate column by setting the [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridAggregateColumn~Type.html) property
+> * Multiple aggregates can be used for an aggregate column by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property
 with an array of aggregate types.
 > * Multiple types for a column is supported only when one of the aggregate templates is used.
 
@@ -105,11 +105,11 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 The following image represents the FooterTemplate with aggregates
 ![Footer Template](./images/footertemplate.png)
 
-> The aggregate values must be accessed inside the template using their corresponding [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridAggregateColumn~Type.html) name.
+> The aggregate values must be accessed inside the template using their corresponding [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
 
 ## How to format aggregate value
 
-You can format the aggregate value result by using the [`Format`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridAggregateColumn~Format.html) property.
+You can format the aggregate value result by using the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property.
 
 To access the aggregate values inside the **FooterTemplate**, you can use the implicit named parameter **context**. You can type cast the ***context** as **AggregateTemplateContext** to get aggregate values inside template.
 
@@ -266,7 +266,7 @@ To access the aggregate values inside the **GroupFooterTemplate** and **GroupCap
 The following image represents the Group and Caption template with aggregates.
 ![Group Template](./images/captionaggregate.png)
 
-> The aggregate values must be accessed inside the template using their corresponding [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridAggregateColumn~Type.html) name.
+> The aggregate values must be accessed inside the template using their corresponding [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
 
 <!-- Reactive aggregate update
 

@@ -6,9 +6,9 @@ description: "Learn how to Render Blazor DataGrid inside the Tab with specific h
 
 # Render DataGrid inside the Tab with specific height
 
-By default, DataGrid will occupy the entire space of the parent element when DataGrid [`Height`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Height.html) and [`Width`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Width.html) property is defined as 100%. But if you render the similar DataGrid inside the Tab control, it will consider the entire page and render the DataGrid without horizontal scroller.
+By default, DataGrid will occupy the entire space of the parent element when DataGrid [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) property is defined as 100%. But if you render the similar DataGrid inside the Tab control, it will consider the entire page and render the DataGrid without horizontal scroller.
 
-To overcome this behavior we suggest you to render Tab element inside a specific container and define the [`HeightAdjustMode`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ITab~HeightAdjustMode.html) of tab as **Fill**. Now the DataGrid inside the Tab element will occupy the specific height.
+To overcome this behavior we suggest you to render Tab element inside a specific container and define the [`HeightAdjustMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) of tab as **Fill**. Now the DataGrid inside the Tab element will occupy the specific height.
 
 ```csharp
 @using Syncfusion.Blazor

@@ -6,7 +6,7 @@ description: "Documentation on the usage features of the Blazor SfDataManager co
 
 # Overview
 
-The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) is a data management component used for performing data operations in applications. It acts as an abstraction for using local data source - array of objects and remote data source - web services returning JSON, JSONP, oData or XML.
+The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) is a data management component used for performing data operations in applications. It acts as an abstraction for using local data source - array of objects and remote data source - web services returning JSON, JSONP, oData or XML.
 
 ## Key Features
 

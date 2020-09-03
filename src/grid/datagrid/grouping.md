@@ -8,7 +8,7 @@ description: "Learn how to group rows, apply initial groups, customize caption t
 
 The DataGrid has options to group records by dragging and dropping the column header to the group drop area. When grouping is applied, datagrid records are organized into a hierarchical structure to facilitate easier expansion and collapse of records.
 
-To enable grouping in the datagrid, set the [`AllowGrouping`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~AllowGrouping.html) as true. Grouping options can be configured through the [`GridGroupSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~GroupSettings.html) component.
+To enable grouping in the datagrid, set the [`AllowGrouping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) as true. Grouping options can be configured through the [`GridGroupSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -52,11 +52,11 @@ The following GIF image represents a DataGrid Grouping.
 > * You can group and ungroup columns by using the **GroupColumn** and
 **UngroupColumn** methods.
 > * To disable grouping for a particular column, set the
-[`AllowGrouping`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~AllowGrouping.html) to false in **GridColumn** component.
+[`AllowGrouping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to false in **GridColumn** component.
 
 ## Initial group
 
-To apply group at initial rendering, set the column field name in the [`Columns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridGroupSettings~Columns.html) property of **GridGroupSettings** component.
+To apply group at initial rendering, set the column field name in the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property of **GridGroupSettings** component.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -104,7 +104,7 @@ The following screenshot represents a DataGrid with initial grouping.
 ## Hide drop area
 
 To avoid ungrouping or further grouping of a column after initial column
-grouping, define the [`ShowDropArea`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridGroupSettings~ShowDropArea.html) of **GridGroupSettings** as false.
+grouping, define the [`ShowDropArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowDropArea) of **GridGroupSettings** as false.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -151,7 +151,7 @@ The following screenshot represents hiding the Group drop area in DataGrid.
 
 <!--Group with paging
 
-On grouping columns with paging feature, the aggregated information and total items are displayed based on the current page. The grid does not consider aggregated information and total items from other pages. To get additional details (aggregated information and total items) from other pages, set the [`DisablePageWiseAggregates`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridGroupSettings~DisablePageWiseAggregates.html) property of **GridGroupSettings** to false.
+On grouping columns with paging feature, the aggregated information and total items are displayed based on the current page. The grid does not consider aggregated information and total items from other pages. To get additional details (aggregated information and total items) from other pages, set the [`DisablePageWiseAggregates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_DisablePageWiseAggregates) property of **GridGroupSettings** to false.
 
 > If remote data is bound to grid dataSource, two requests will be sent when performing grouping action; one for getting the grouped data and another for getting aggregate details and total items count. -->
 
@@ -159,7 +159,7 @@ On grouping columns with paging feature, the aggregated information and total it
 
 By default, a column will be grouped by the data or value present for the particular row. To group the numeric
 or datetime column based on the mentioned format, you have to enable the
-[`EnableGroupByFormat`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~EnableGroupByFormat.html) property of the corresponding
+[`EnableGroupByFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EnableGroupByFormat) property of the corresponding
 datagrid columns.
 
 ```csharp
@@ -203,8 +203,8 @@ datagrid columns.
 
 ## Grouping events
 
-During the group action, the datagrid component triggers two events. The [`OnActionBegin`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~ActionBegin.html) event
-triggers before the group action starts and the [`OnActionComplete`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~OnActionComplete.html) event triggers after the group action is completed. Using these events you can perform any action.
+During the group action, the datagrid component triggers two events. The [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event
+triggers before the group action starts and the [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after the group action is completed. Using these events you can perform any action.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -252,7 +252,7 @@ triggers before the group action starts and the [`OnActionComplete`](https://hel
 
 ## Caption template
 
-You can customize the group caption by using the [`CaptionTemplate`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridGroupSettings~CaptionTemplate.html) of the [`GridGroupSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridGroupSettings.html) component.
+You can customize the group caption by using the [`CaptionTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) of the [`GridGroupSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) component.
 
 The following sample code demonstrates the above,
 

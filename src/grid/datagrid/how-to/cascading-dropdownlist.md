@@ -6,7 +6,7 @@ description: "Learn how to render cascading dropdownlist with editing in the Bla
 
 <!-- Cascading dropdownlist with grid editing
 
-You can achieve the Cascading DropDownList with grid editing by using the [`EditTemplate`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn~EditTemplate.html) of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridColumn.html) component.
+You can achieve the Cascading DropDownList with grid editing by using the [`EditTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
 This is demonstrated in the below sample code where cascading dropdownlist is rendered for the **ShipCountry** and **ShipState** column when editing is enabled in the grid,
 

@@ -5,12 +5,12 @@ description: "Learn how to use the toolbar and add custom toolbar items in the B
 ---
 # Toolbar
 
-The DataGrid provides tool bar support to handle datagrid actions. The [`Toolbar`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~Toolbar.html)
- property accepts either the collection of built-in tool bar items and [`ItemModel`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ToolbarModel~Items.htmls)
+The DataGrid provides tool bar support to handle datagrid actions. The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar)
+ property accepts either the collection of built-in tool bar items and [`ItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray)
 
 ## Built-in Tool Bar Item
 
-The DataGrid provides tool bar support to handle datagrid actions. The [`Toolbar`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~Toolbar.html) as a collection of built-in items. It renders the button with icon and text.
+The DataGrid provides tool bar support to handle datagrid actions. The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) as a collection of built-in items. It renders the button with icon and text.
 
 The following table shows built-in tool bar items and its actions.
 
@@ -73,7 +73,7 @@ The following screenshots represent a datagrid with Built-in toolbar,
 
 ## Custom Toolbar Items
 
-Custom tool bar items can be added by defining the [`Toolbar`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~Toolbar.html).
+Custom tool bar items can be added by defining the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar).
 Custom toolbar items can be achieved by using Expand all and Collapse all functions.
 
 ```csharp
@@ -212,7 +212,7 @@ The following screenshots represent a datagrid with Built-in and custom items in
 
 ## Custom Toolbar
 
-Custom tool bar items can be added by defining the [`Toolbar Template`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~Toolbar.html) .Custom toolbar can be placed inside datagrid using [`ToolbarTemplate`] as below.
+Custom tool bar items can be added by defining the [`Toolbar Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) .Custom toolbar can be placed inside datagrid using [`ToolbarTemplate`] as below.
 
 ```csharp
 

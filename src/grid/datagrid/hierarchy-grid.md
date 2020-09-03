@@ -6,8 +6,8 @@ description: "Learn how to display master-detail data in the Essential JS 2 Data
 
 <!-- # Hierarchical Binding
 
-The DataGrid allows display of table data in a hierarchical structure to visualize relations between parent and child records. This feature is enabled by defining the [`ChildGrid`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~ChildGrid.html) and
-`ChildGrid.QueryString`. The [`ChildGrid`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~ChildGrid.html) describes the options of datagrid and the `ChildGrid.QueryString` describes the relation between parent and child grids.
+The DataGrid allows display of table data in a hierarchical structure to visualize relations between parent and child records. This feature is enabled by defining the [`ChildGrid`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) and
+`ChildGrid.QueryString`. The [`ChildGrid`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) describes the options of datagrid and the `ChildGrid.QueryString` describes the relation between parent and child grids.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -79,7 +79,7 @@ The DataGrid allows display of table data in a hierarchical structure to visuali
 ```
 
 > * DataGrid supports n level of child grids.
-> * Hierarchical binding is not supported when [`DetailTemplate`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DetailTemplate.html) is enabled.
+> * Hierarchical binding is not supported when [`DetailTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) is enabled.
 
 ## ExpandAll by external button
 
@@ -179,7 +179,7 @@ By default, datagrid renders in collapsed state. You can expand all child datagr
 
 ## Expand child datagrid initially
 
-You can expand a particular child datagrid at initial rendering by invoking the **Expand** method in the [`DataBound`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~DataBound.html) event.
+You can expand a particular child datagrid at initial rendering by invoking the **Expand** method in the [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
 ```csharp
 @using Syncfusion.Blazor.Grids

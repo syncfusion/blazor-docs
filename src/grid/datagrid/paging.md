@@ -6,10 +6,10 @@ description: "Learn how to add and customize the pager in the Blazor DataGrid co
 
 # Paging
 
-Paging provides an option to display DataGrid data in page segments. To enable paging, set the [`AllowPaging`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~AllowPaging.html) to true. When paging is enabled, pager component renders at the bottom of the datagrid.
-Paging options can be configured through the [`GridPageSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~PageSettings.html) component.
+Paging provides an option to display DataGrid data in page segments. To enable paging, set the [`AllowPaging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) to true. When paging is enabled, pager component renders at the bottom of the datagrid.
+Paging options can be configured through the [`GridPageSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
 
-In the below sample, [`PageSize`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridPageSettings~PageSize.html) is calculated based on the datagrid height by using the [`OnLoad`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~OnLoad.html) event.
+In the below sample, [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) is calculated based on the datagrid height by using the [`OnLoad`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -65,7 +65,7 @@ In the below sample, [`PageSize`](https://help.syncfusion.com/cr/aspnetcore-blaz
 
 ## Pager with page size dropdown
 
-The pager dropdown allows you to change the number of records in the DataGrid dynamically. It can be enabled by defining the [`PageSizes`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridPageSettings~PageSizes.html) property of **GridPageSettings** as true.
+The pager dropdown allows you to change the number of records in the DataGrid dynamically. It can be enabled by defining the [`PageSizes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSizes) property of **GridPageSettings** as true.
 
 ```csharp
 @using Syncfusion.Blazor.Grids

@@ -7,7 +7,7 @@ description: "Toggle Switch Button how to section, customization of Toggle Switc
 # Change Size
 
 The different Toggle Switch Button sizes available are default and small. To reduce the size of default Toggle Switch Button to small,
-set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfSwitch~CssClass.html) property to `e-small`.
+set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property to `e-small`.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons

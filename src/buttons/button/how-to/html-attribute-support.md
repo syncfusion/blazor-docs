@@ -6,7 +6,7 @@ description: "This section explains the HTML attribute support given for buttons
 
 # HTML Attribute Support
 
-HTML attribute support is given for button using [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfButton~HtmlAttributes.html) property.
+HTML attribute support is given for button using [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property.
 
 ```csharp
 

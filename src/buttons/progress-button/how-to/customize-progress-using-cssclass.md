@@ -6,12 +6,12 @@ description: "Progress Button how to section, change text content and styles, hi
 
 # Customize progress using cssClass
 
-You can customize the background filler UI using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~CssClass.html) property.
+You can customize the background filler UI using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.
 
 * Adding `e-vertical` to `CssClass` shows vertical progress.
 * Adding `e-progress-top` to `CssClass` shows progress at the top.
 
-You can also show reverse progress by adding custom class to the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~CssClass.html) property.
+You can also show reverse progress by adding custom class to the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.
 
 ```csharp
 @using Syncfusion.Blazor.SplitButtons

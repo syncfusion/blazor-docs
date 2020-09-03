@@ -6,7 +6,7 @@ description: "Split Button how to section, group popup items using list view com
 
 # Create right-to-left Split Button
 
-Split Button component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfSplitButton~EnableRtl.html) as `true`.
+Split Button component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_EnableRtl) as `true`.
 
 The following example illustrates how to enable right-to-left support in Split Button component.
 

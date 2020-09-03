@@ -8,7 +8,7 @@ description: "This section explains how to group popup items using list view com
 
 Items in popup can be grouped in Split Button by templating entire popup with ListView. To achieve grouping in ListView,
 check [`ListView Grouping`](../../listview/grouping#grouping) documentation. To template ListView in popup, create
-ListView with ID `listview` and provide it as [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfSplitButton~Target.html) for Split Button.
+ListView with ID `listview` and provide it as [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html) for Split Button.
 
 The following example illustrates how to group items in popup using ListView component.
 

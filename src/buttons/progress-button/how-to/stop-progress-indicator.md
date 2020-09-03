@@ -6,7 +6,7 @@ description: "This Section explains how to stop progress indicator"
 
 # Stop Progress Indicator
 
-You can stop the progress indicator using [`ProgressComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~ProgressComplete.html) method. In the following sample, the progress indicator is stopped by clicking the `Stop` button.
+You can stop the progress indicator using [`ProgressComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_ProgressComplete) method. In the following sample, the progress indicator is stopped by clicking the `Stop` button.
 
 ```csharp
 @using Syncfusion.Blazor.SplitButtons

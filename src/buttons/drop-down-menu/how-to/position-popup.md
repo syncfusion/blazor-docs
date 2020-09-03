@@ -1,6 +1,6 @@
 # Position Popup Open
 
-Popup open position can be changed according to the requirement. Popup open position can be changed in [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.DropDownButtonEvents~OnOpen.html) event by setting `Top` and `Left` for the popup element.
+Popup open position can be changed according to the requirement. Popup open position can be changed in [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnOpen) event by setting `Top` and `Left` for the popup element.
 
 In the following example, the `Top` position of the popup element is changed in open event.
 

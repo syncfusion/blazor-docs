@@ -7,8 +7,8 @@ description: "Dropdown Menu how to section, hide drop down arrow, group popup it
 # Change caret icon
 
 Dropdown arrow can be customized on popup open and close. It can be handled in
-[`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfDropDownButton~OnOpen.html) and
-[`OnClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfDropDownButton~OnClose.html) event.
+[`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html) and
+[`OnClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html) event.
 
 In the following example, the up arrow is updated on popup close and down arrow is updated on popup open using `OnOpen` and `OnClose` event by adding and removing `e-caret-up` class.
 

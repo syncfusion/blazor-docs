@@ -7,7 +7,7 @@ description: "Dropdown Menu how to section, hide drop down arrow, group popup it
 # Hide dropdown arrow
 
 You can hide the dropdown arrow from the Dropdown Menu by adding class `e-caret-hide`
-to Dropdown Menu element using [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfDropDownButton~CssClass.html)
+to Dropdown Menu element using [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass)
 property.
 
 ```csharp

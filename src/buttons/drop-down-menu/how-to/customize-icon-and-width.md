@@ -8,7 +8,7 @@ description: "Dropdown Menu how to section, hide drop down arrow, group popup it
 
 Width of the Dropdown Menu can be customized by setting required width to the dropdown element.
 
-The following UI can be achieved by setting [`IconPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfDropDownButton~IconPosition.html) as `Top`, width as `85px` and size of the font icon as `40px` by adding `e-custom` class.
+The following UI can be achieved by setting [`IconPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconPosition) as `Top`, width as `85px` and size of the font icon as `40px` by adding `e-custom` class.
 
 ```csharp
 @using Syncfusion.Blazor.SplitButtons

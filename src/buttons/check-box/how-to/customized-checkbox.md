@@ -10,7 +10,7 @@ description: "Checkbox how to section, name and value in form submit, and custom
 
 You can customize the appearance of the Checkbox component using the CSS rules.
 Define own CSS rules according to your requirement and assign the class name to the
-[`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfCheckBox~CssClass.html) property.
+[`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property.
 
 The background and border color of the Checkbox is customized through the custom classes to create primary, success, warning, and danger info type of checkbox.
 

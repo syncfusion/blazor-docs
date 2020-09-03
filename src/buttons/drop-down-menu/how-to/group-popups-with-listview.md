@@ -6,10 +6,10 @@ description: " This section explains how to group popup items using list view co
 
 # Group popup items with ListView component
 
-Header in popup items is possible in Dropdown Menu by templating entire popup with ListView. Create ListView with [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Lists.SfListView~ID.html) listview and provide it as a [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfSplitButton~Target.html) for Dropdown Menu.
+Header in popup items is possible in Dropdown Menu by templating entire popup with ListView. Create ListView with [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ID) listview and provide it as a [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html) for Dropdown Menu.
 
 In the following example, ListView element is given as `Target` to Dropdown Menu and header can be achieved
-by [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Lists.FieldSettingsModel~GroupBy.html) property.
+by [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.FieldSettingsModel.html#Syncfusion_Blazor_Lists_FieldSettingsModel_GroupBy) property.
 
 ```csharp
 

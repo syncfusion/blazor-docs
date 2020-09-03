@@ -6,7 +6,7 @@ description: "This section explains how to add tooltip for blazor button."
 
 # Tooltip For Button
 
-Tooltip can be shown on Button hover and it can be achieved by [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfButton~HtmlAttributes.html) property.
+Tooltip can be shown on Button hover and it can be achieved by [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property.
 
 ```csharp
 

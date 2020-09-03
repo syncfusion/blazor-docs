@@ -10,8 +10,8 @@ This section explains the different sizes and labels.
 
 ## Label
 
-The Checkbox caption can be defined by using the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfCheckBox~Label.html) property.
-This reduces the manual addition of label for Checkbox. You can customize the label position before or after the Checkbox through the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfCheckBox~LabelPosition.html) property.
+The Checkbox caption can be defined by using the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html#Syncfusion_Blazor_Buttons_SfCheckBox_1_Label) property.
+This reduces the manual addition of label for Checkbox. You can customize the label position before or after the Checkbox through the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html#Syncfusion_Blazor_Buttons_SfCheckBox_1_LabelPosition) property.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -32,7 +32,7 @@ Output be like
 
 ## Size
 
-The different Checkbox sizes available are default and small. To reduce the size of default Checkbox to small, set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Buttons.SfCheckBox~CssClass.html) property to `e-small`.
+The different Checkbox sizes available are default and small. To reduce the size of default Checkbox to small, set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property to `e-small`.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons

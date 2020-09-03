@@ -8,7 +8,7 @@ description: "Dropdown Menu allows the end user to customize the whole popup or 
 
 ## Icons
 
-The popup action item have an icon or image to provide visual representation of the action. To place the icon on a popup item, set the [`IconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfDropDownButton~IconCss.html) property to `e-icons` with the required icon CSS. By default, the icon is
+The popup action item have an icon or image to provide visual representation of the action. To place the icon on a popup item, set the [`IconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is
 positioned to the left side of the popup action item.
 
 In the following sample, the icons for edit, delete, mark as read  and like message menu items are
@@ -53,7 +53,7 @@ Output be like
 ## Separator
 
 The Separators are the horizontal lines that are used to separate the popup items. You `cannot` select the separators.
-You can enable separators to group the popup items using the [`Separator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.ItemModel~Separator.html) property.
+You can enable separators to group the popup items using the [`Separator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Separator) property.
 
 In the following sample, cut, copy, and paste popup items are grouped using the separator property:
 
@@ -80,7 +80,7 @@ Output be like
 
 ## Navigations
 
-Actions in Dropdown Menu can be used to navigate to the other web page when action item is clicked. This can be achieved by providing link to the action item using [`url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.ItemModel~Url.html) property.
+Actions in Dropdown Menu can be used to navigate to the other web page when action item is clicked. This can be achieved by providing link to the action item using [`url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Url) property.
 
 In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal action items are added using the url property:
 
@@ -114,7 +114,7 @@ Output be like
 
 ### Item Templating
 
-Popup items can be customized using the [`OnItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.DropDownButtonEvents~OnItemRender.html) event. The item render event triggers while rendering each popup action item. The event argument will be used to customize the items based on the requirement.
+Popup items can be customized using the [`OnItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnItemRender) event. The item render event triggers while rendering each popup action item. The event argument will be used to customize the items based on the requirement.
 
 ```csharp
 

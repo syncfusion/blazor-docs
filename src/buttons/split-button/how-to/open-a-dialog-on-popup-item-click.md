@@ -7,7 +7,7 @@ description: "This section explains how to open a dialog on popup item click in 
 # Open a dialog on popup item click
 
 This section explains about how to open a dialog on Split Button popup item click. This can be achieved by
-handling dialog open in [`ItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SplitButtonEvents~ItemSelected.html) event of the Split Button.
+handling dialog open in [`ItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SplitButtonEvents.html#Syncfusion_Blazor_SplitButtons_SplitButtonEvents_ItemSelected) event of the Split Button.
 
 In the following example, Dialog will open while selecting `Update` item.
 

@@ -6,7 +6,7 @@ description: "Progress Button how to section, change text content and styles, hi
 
 # Hide spinner
 
-You can hide spinner in the Progress Button by setting the `e-hide-spinner` property to [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.SplitButtons.SfProgressButton~CssClass.html).
+You can hide spinner in the Progress Button by setting the `e-hide-spinner` property to [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass).
 
 ```csharp
 @using Syncfusion.Blazor.SplitButtons

@@ -6,7 +6,7 @@ The following options are available to customize the group and leaf items in the
 
 ## Range color mapping
 
-Range color mapping is used to apply color to items by giving specific ranges in the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~DataSource.html). You should specify the data source field in the [`RangeColorValuePath`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~RangeColorValuePath.html) property.
+Range color mapping is used to apply color to items by giving specific ranges in the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource). You should specify the data source field in the [`RangeColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath) property.
 
 The following code example demonstrates how to apply range color mapping.
 
@@ -45,7 +45,7 @@ The following code example demonstrates how to apply range color mapping.
 
 ## Equal color mapping
 
-Equal color mapping is used to fill colors to each item by specifying equal value present in the datasource field that can be specified in the [`EqualColorValuePath`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~EqualColorValuePath.html) property.
+Equal color mapping is used to fill colors to each item by specifying equal value present in the datasource field that can be specified in the [`EqualColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EqualColorValuePath) property.
 
 The following code example demonstrates how to apply equal color mapping.
 
@@ -87,7 +87,7 @@ The following code example demonstrates how to apply equal color mapping.
 
 ## Desaturation color mapping
 
-Desaturation color mapping is used to apply colors to items with opacity, based on the [`MinOpacity`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LeafItemSettingsModel~ColorMapping.html) and [`MaxOpacity`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LeafItemSettingsModel~ColorMapping.html) properties set to the [`ColorMappingModel`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LeafItemSettingsModel~ColorMapping.html) in the TreeMap component.
+Desaturation color mapping is used to apply colors to items with opacity, based on the [`MinOpacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) and [`MaxOpacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) properties set to the [`ColorMappingModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) in the TreeMap component.
 
 The following code example demonstrates how to apply desaturation color mapping.
 
@@ -110,9 +110,9 @@ The following code example demonstrates how to apply desaturation color mapping.
 
 ## Desaturation with multiple colors
 
-Multiple colors are used to provide gradient effect to specific shapes based on the [`ColorMapping`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LeafItemSettingsModel~ColorMapping.html) ranges in datasource.
+Multiple colors are used to provide gradient effect to specific shapes based on the [`ColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) ranges in datasource.
 
-By using the [`Color`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LeafItemSettingsModel~ColorMapping.html) API, you can set n number of colors.
+By using the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) API, you can set n number of colors.
 
 The following code example demonstrates how to use multiple colors.
 
@@ -135,7 +135,7 @@ The following code example demonstrates how to use multiple colors.
 
 ## Palette color mapping
 
-The palette color mapping is used to fill the same color to each group or leaf node by given colors in the [`Palette`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~Palette.html) property in the TreeMap component.
+The palette color mapping is used to fill the same color to each group or leaf node by given colors in the [`Palette`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Palette) property in the TreeMap component.
 
 The following code example demonstrates how to apply  palette color mapping.
 
@@ -178,7 +178,7 @@ The following code example demonstrates how to set the color for items excluded 
 
 ## Bind the colors to the items from data source
 
-To set color for each item in TreeMap, bind the field name in the datasource to the [`RangeColorValuePath`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~RangeColorValuePath.html).
+To set color for each item in TreeMap, bind the field name in the datasource to the [`RangeColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath).
 
 The following code example demonstrates how to set the color for TreeMap items.
 

@@ -2,7 +2,7 @@
 
 ## Using methods in TreeMap component
 
-You can create object for the treemap component using `@ref` and call the [`Print`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap%601~Print.html) method as shown in the following example.
+You can create object for the treemap component using `@ref` and call the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Print_System_Object_) method as shown in the following example.
 
 ```csharp
 <button @onclick="PrintMap">Print tree map</button>

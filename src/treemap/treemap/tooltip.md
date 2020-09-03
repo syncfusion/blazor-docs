@@ -4,7 +4,7 @@ Tooltip is used to display details about the items in TreeMap when the mouse hov
 
 ## Default tooltip
 
-By default, the tooltip is not visible. You can enable the tooltip by setting the [`Visible`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings~Visible.html) property to true in the [`TreeMapTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings_members.html) tag.
+By default, the tooltip is not visible. You can enable the tooltip by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property to true in the [`TreeMapTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) tag.
 
 The following example shows the default tooltip.
 
@@ -63,7 +63,7 @@ You can customize the TreeMap component tooltip using following properties.
 
 ## Formatting tooltip text
 
-By default, the tooltip shows information about weight value of current item. In addition, to show more information in tooltip, [`Format`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings~Format.html) the tooltip as `${datafield}` from data source.
+By default, the tooltip shows information about weight value of current item. In addition, to show more information in tooltip, [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Format) the tooltip as `${datafield}` from data source.
 
 The following example shows how to format the tooltip.
 

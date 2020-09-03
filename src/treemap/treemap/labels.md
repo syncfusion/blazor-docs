@@ -1,12 +1,12 @@
 # Labels
 
-Data labels are used to identify the name of items or groups in the TreeMap component. Data labels will be shown by given specified [`LabelPath`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LeafItemSettingsModel~LabelPath.html) in the data source field.
+Data labels are used to identify the name of items or groups in the TreeMap component. Data labels will be shown by given specified [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPath) in the data source field.
 
 The following options are available to customize the labels in the TreeMap component.
 
 ## Formatting labels
 
-You can customize the labels for each item using the [`LabelFormat`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LeafItemSettingsModel~LabelPath.html) property in [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LeafItemSettingsModel_members.html).
+You can customize the labels for each item using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPath) property in [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html).
 
 The label format is shown in the following code example.
 
@@ -41,7 +41,7 @@ The label format is shown in the following code example.
 
 ## Label position
 
-Using the [`LabelPosition`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings~_labelPosition.html) property, you can position the labels at any of the following locations.
+Using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) property, you can position the labels at any of the following locations.
 
 * BottomCenter
 * BottomLeft
@@ -70,7 +70,7 @@ Using the [`LabelPosition`](https://help.syncfusion.com/cr/cref_files/aspnetcore
 
 ## Intersect action
 
-You can avoid overlapping by customizing the labels in each item when they exceed their actual size using the [`InterSectAction`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LeafItemSettingsModel~InterSectAction.html) property in [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LeafItemSettingsModel_members.html).
+You can avoid overlapping by customizing the labels in each item when they exceed their actual size using the [`InterSectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_InterSectAction) property in [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html).
 
 The intersect action concepts are illustrated in the following code example.
 

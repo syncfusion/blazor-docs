@@ -2,7 +2,7 @@
 
 ## Print
 
-To use the print functionality, we should set the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap%601~AllowPrint.html) property to **true**. The rendered treemap can be printed directly from the browser by calling the method [`print`]. You can get the TreeMap component object using `@ref="treemap"`.
+To use the print functionality, we should set the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true**. The rendered treemap can be printed directly from the browser by calling the method [`print`]. You can get the TreeMap component object using `@ref="treemap"`.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -43,7 +43,7 @@ To use the print functionality, we should set the [`AllowPrint`](https://help.sy
 
 ### Image Export
 
-To use the image export functionality, we should set the [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap%601~AllowImageExport.html) property to **true**. The rendered treemap can be exported as an image using the [`export`] method. The method requires two parameters: image type and file name. The treemap can be exported as an image in the following formats.
+To use the image export functionality, we should set the [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowImageExport) property to **true**. The rendered treemap can be exported as an image using the [`export`] method. The method requires two parameters: image type and file name. The treemap can be exported as an image in the following formats.
 
 * JPEG
 * PNG
@@ -72,7 +72,7 @@ To use the image export functionality, we should set the [`AllowImageExport`](ht
 
 ### PDF Export
 
-To use the PDF export functionality, we should set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap%601~AllowPdfExport.html) property to **true**. The rendered treemap can be exported as PDF using the [`export`] method. The [`export`] method requires three parameters: file type, file name and orientation of the PDF document. The orientation setting is optional and "0" indicates portrait and "1" indicates landscape.
+To use the PDF export functionality, we should set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property to **true**. The rendered treemap can be exported as PDF using the [`export`] method. The [`export`] method requires three parameters: file type, file name and orientation of the PDF document. The orientation setting is optional and "0" indicates portrait and "1" indicates landscape.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap

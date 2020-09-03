@@ -4,7 +4,7 @@ The TreeMap component supports drill-down to expose the hierarchy achieved by cl
 
 ## Perform drill-down
 
-The TreeMap elements can be drilled down by setting the [`EnableDrillDown`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~EnableDrillDown.html) property to true. You can view the hierarchy of the TreeMap by clicking the TreeMap items and move to the previous level by clicking the drill-down header.
+The TreeMap elements can be drilled down by setting the [`EnableDrillDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableDrillDown) property to true. You can view the hierarchy of the TreeMap by clicking the TreeMap items and move to the previous level by clicking the drill-down header.
 
 The drill-down concepts are shown in the following code example.
 
@@ -60,7 +60,7 @@ The drill-down concepts are shown in the following code example.
 
 ## On-demand data loading
 
-In normal drill-down process, all the child items are rendered in DOM, and they are visible at initial time of TreeMap rendering. But, on-demand data loading, it will not render child items at initial time. The child nodes will be rendered on the drill-down process only. By setting the [`DrillDownView`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~DrillDownView.html) property to true, you can enable the drill down view at a initial rendering.
+In normal drill-down process, all the child items are rendered in DOM, and they are visible at initial time of TreeMap rendering. But, on-demand data loading, it will not render child items at initial time. The child nodes will be rendered on the drill-down process only. By setting the [`DrillDownView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DrillDownView) property to true, you can enable the drill down view at a initial rendering.
 
 In the following sample, on-demand data loading is shown.
 
@@ -98,7 +98,7 @@ In the following sample, on-demand data loading is shown.
 
 Using breadcrumb navigation, you can directly drill up to any level of parent, and it displays the level from root parent to the current level at the top layout of TreeMap.
 
-You can show or hide the breadcrumb using the [`EnableBreadcrumb`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~EnableBreadcrumb.html) API. You can also customize the breadcrumb connector using the [`BreadcrumbConnector`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~BreadcrumbConnector.html) property. By default, `-` is the connector.
+You can show or hide the breadcrumb using the [`EnableBreadcrumb`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableBreadcrumb) API. You can also customize the breadcrumb connector using the [`BreadcrumbConnector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_BreadcrumbConnector) property. By default, `-` is the connector.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap

@@ -1,14 +1,14 @@
 # Levels
 
-You can give 'n' number of levels to the TreeMap. Each level is separated using the [`GroupPath`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLevel~GroupPath.html) property.
+You can give 'n' number of levels to the TreeMap. Each level is separated using the [`GroupPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property.
 
 The following customization options are available to customize the TreeMap levels.
 
 ## Group path
 
-The [`GroupPath`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLevel~GroupPath.html) property is used to separate each level in the TreeMap. The GroupPath accepts a field name in [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~DataSource.html).
+The [`GroupPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property is used to separate each level in the TreeMap. The GroupPath accepts a field name in [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource).
 
-In the following example, three levels are added and each level is configured using the [`GroupPath`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLevel~GroupPath.html) property.
+In the following example, three levels are added and each level is configured using the [`GroupPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -61,7 +61,7 @@ In the following example, three levels are added and each level is configured us
 
 ## Gap between groups
 
-The [`GroupGap`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LevelSettingsModel~GroupGap.html) property is used to separate an item from every group or another item to differentiate the levels mentioned in the TreeMap.
+The [`GroupGap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupGap) property is used to separate an item from every group or another item to differentiate the levels mentioned in the TreeMap.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -93,7 +93,7 @@ The [`GroupGap`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Bla
 
 ## Header format and alignment
 
-You can customize header using the [`HeaderFormat`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LevelSettingsModel~HeaderFormat.html) property in which the fields are mapping from the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.SfTreeMap~DataSource.html). You can also align the header using the [`HeaderAlignment`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LevelSettingsModel~HeaderAlignment.html) property.
+You can customize header using the [`HeaderFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderFormat) property in which the fields are mapping from the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource). You can also align the header using the [`HeaderAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderAlignment) property.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -125,7 +125,7 @@ You can customize header using the [`HeaderFormat`](https://help.syncfusion.com/
 
 ## Header height and style
 
-You can customize the font color, family, weight, and size using the [`TreeMapHeaderStyle`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LevelSettingsModel~HeaderStyle.html) tag. Based on font size, the header height can be given using the [`HeaderHeight`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LevelSettingsModel~HeaderHeight.html) property in levels.
+You can customize the font color, family, weight, and size using the [`TreeMapHeaderStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderStyle) tag. Based on font size, the header height can be given using the [`HeaderHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderHeight) property in levels.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap

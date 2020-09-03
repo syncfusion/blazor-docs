@@ -4,7 +4,7 @@ A legend is used to provide valuable information for interpreting what the TreeM
 
 ## Types of legend
 
-The TreeMap component supports two different types of legend rendering modes [`Default`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendMode.html) and [`Interactive`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendMode.html).
+The TreeMap component supports two different types of legend rendering modes [`Default`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LegendMode.html) and [`Interactive`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LegendMode.html).
 
 ### Default legend
 
@@ -53,7 +53,7 @@ The following code example demonstrates the default mode of legends.
 
 ### Interactive legend
 
-The legends can be made interactive with an arrow mark that indicates exact range color in legend when the mouse hovers over the corresponding shape. You can enable this option by setting the values of mode property in legendSettings to [`Interactive`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendMode.html). The default value of the mode property is [`Default`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendMode.html) to enable normal legend.
+The legends can be made interactive with an arrow mark that indicates exact range color in legend when the mouse hovers over the corresponding shape. You can enable this option by setting the values of mode property in legendSettings to [`Interactive`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LegendMode.html). The default value of the mode property is [`Default`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LegendMode.html) to enable normal legend.
 
 The following code example demonstrates the interactive mode of legends.
 
@@ -100,7 +100,7 @@ The following code example demonstrates the interactive mode of legends.
 
 ## Position and alignment
 
-The legend position is used to place legend in various positions. Based on the legend position, the legend item will be aligned. For example, if the position is [`Top`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendPosition.html) or [`Bottom`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendPosition.html), the legend items are placed by rows. If the position is [`Left`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendPosition.html) or [`Right`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendPosition.html), the legend items are placed by columns.
+The legend position is used to place legend in various positions. Based on the legend position, the legend item will be aligned. For example, if the position is [`Top`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html) or [`Bottom`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html), the legend items are placed by rows. If the position is [`Left`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html) or [`Right`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html), the legend items are placed by columns.
 
 The following options are available to customize the legend position:
 
@@ -195,7 +195,7 @@ The following code example demonstrates legend alignment.
 
 ## Legend size
 
-You can customize the legend size by modifying the [`Height`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendSettingsModel~Height.html) and [`Width`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendSettingsModel~Width.html) properties in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendSettingsModel_members.html). It accepts values in both percentage and pixel. If the value is specified in percentage for height or width, the legend height will be calculated for overall height.
+You can customize the legend size by modifying the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_Height) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_Width) properties in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html). It accepts values in both percentage and pixel. If the value is specified in percentage for height or width, the legend height will be calculated for overall height.
 
 Legend size is shown in the following example.
 
@@ -333,7 +333,7 @@ The following code example demonstrates how to set the color for items excluded 
 
 ## Hide desired legend items
 
-To enable or disable the desired legend for each color mapping,set the [`showLegend`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLegendSettings_members.html) property to [`true`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLegendSettings~Visible.html) in [`colorMapping`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings~ColorMapping.html).
+To enable or disable the desired legend for each color mapping,set the [`showLegend`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html) property to [`true`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_Visible) in [`colorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping).
 
 The following code example demonstrates to hide the desired legend.
 
@@ -378,7 +378,7 @@ The following code example demonstrates to hide the desired legend.
 
 ## Hide legend items based on data source value
 
-To enable or disable the legend visibility for each item, bind the field name in the data source to the [`ShowLegendPath`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLegendSettings~ShowLegendPath.html) property in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLegendSettings_members.html).
+To enable or disable the legend visibility for each item, bind the field name in the data source to the [`ShowLegendPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_ShowLegendPath) property in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html).
 
 The following code example demonstrates how to hide legend items based on data source value.
 
@@ -419,7 +419,7 @@ The following code example demonstrates how to hide legend items based on data s
 
 ## Bind legend item text from data source
 
-To show the legend text based on binding, the field name in the datasource should be set to the [`ValuePath`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLegendSettings~ValuePath.html) property in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLegendSettings_members.html).
+To show the legend text based on binding, the field name in the datasource should be set to the [`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_ValuePath) property in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html).
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -456,7 +456,7 @@ To show the legend text based on binding, the field name in the datasource shoul
 
 ## Hide duplicate legend items
 
-To enable or disable the duplicate legend items, set the [`RemoveDuplicateLegend`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLegendSettings~RemoveDuplicateLegend.html) property to [`true`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLegendSettings~RemoveDuplicateLegend.html) in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLegendSettings_members.html).
+To enable or disable the duplicate legend items, set the [`RemoveDuplicateLegend`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_RemoveDuplicateLegend) property to [`true`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_RemoveDuplicateLegend) in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html).
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -494,7 +494,7 @@ To enable or disable the duplicate legend items, set the [`RemoveDuplicateLegend
 
 ## Positioning based on size
 
-Use a responsive legend that switches positions between the right and bottom based on the available height and width. To enable the responsive legend, set the [`Position`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendPosition.html) property to [`Auto`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.LegendPosition.html) in the [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeMap.TreeMapLegendSettings_members.html) API, and the legend position is changed based on available height and width.
+Use a responsive legend that switches positions between the right and bottom based on the available height and width. To enable the responsive legend, set the [`Position`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html) property to [`Auto`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html) in the [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html) API, and the legend position is changed based on available height and width.
 
 In the following sample, the responsive legend is shown.
 

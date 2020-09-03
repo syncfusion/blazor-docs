@@ -1,6 +1,6 @@
 # Layers
 
-The Maps component is maintained through [`layers`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsLayer_members.html), and it can accommodate one or more layers.
+The Maps component is maintained through [`layers`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayer.html), and it can accommodate one or more layers.
 
 ## Sublayer
 
@@ -62,9 +62,9 @@ If you set the [`BaseLayerIndex`](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 This concept is used in the Maps drill-down feature, so the corresponding shape will be loaded when clicking a shape of the maps.
 
-> Note: The Maps component will render even [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.Maps.MapsLayer~ShapeData.html) only is set in [`MapsLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.Maps.MapsLayer_members.html). The [`LayerType`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.Maps.MapsLayer~LayerType.html) will be set Geometry by default. If we set `LayerType` other than Geometry type and `ShapeData` in the `MapsLayer`, the Maps will be rendered based on the provided `LayerType`. It will not consider the `ShapeData` as the `LayerType` is not Geometry type.
+> Note: The Maps component will render even [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SummaryFillColor) only is set in [`MapsLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html). The [`LayerType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_NavigatorBorder) will be set Geometry by default. If we set `LayerType` other than Geometry type and `ShapeData` in the `MapsLayer`, the Maps will be rendered based on the provided `LayerType`. It will not consider the `ShapeData` as the `LayerType` is not Geometry type.
 
-Consider we want to view Bing map. If we set `ShapeData` and [`BingMapType`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.Maps.MapsLayer~BingMapType.html) in the MapsLayer but missed to set LayerType, the Maps component will consider the `LayerType` as Geometry and render the map based on the provided ShapeType.
+Consider we want to view Bing map. If we set `ShapeData` and [`BingMapType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_ValueType) in the MapsLayer but missed to set LayerType, the Maps component will consider the `LayerType` as Geometry and render the map based on the provided ShapeType.
 
 ## See also
 

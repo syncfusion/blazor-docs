@@ -2,7 +2,7 @@
 
 ## Customizing shape
 
-The following properties are available in [`MapsShapeSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsShapeSettings_members.html) to customize the shapes of the Maps component.
+The following properties are available in [`MapsShapeSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html) to customize the shapes of the Maps component.
 
 * Fill - Customizes the shape color.
 * Autofill - Applies the default palette colors to shapes.
@@ -29,7 +29,7 @@ The following properties are available in [`MapsShapeSettings`](https://help.syn
 
 ![Maps with custom shape](./images/Customization/CustomizeShape.png)
 
-To apply the default palette colors to shapes, enable the [`Autofill`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.ShapeSettingsModel~Autofill.html) property.
+To apply the default palette colors to shapes, enable the [`Autofill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.ShapeSettingsModel.html#Syncfusion_Blazor_Maps_ShapeSettingsModel_Autofill) property.
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -46,7 +46,7 @@ To apply the default palette colors to shapes, enable the [`Autofill`](https://h
 
 ![Maps with auto fill shape settings](./images/Customization/Autofill.png)
 
-To apply own custom palette to shapes, provide the palette colors to [`Palette`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsShapeSettings~Palette.html).
+To apply own custom palette to shapes, provide the palette colors to [`Palette`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_Palette).
 
 ```csharp
 @using Syncfusion.Blazor.Maps

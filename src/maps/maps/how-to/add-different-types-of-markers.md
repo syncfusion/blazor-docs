@@ -1,12 +1,12 @@
 # Add different types of markers
 
-You can add different types of markers in the Maps component using the [`MapsMarkerSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsMarkerSettings_members.html) property.
+You can add different types of markers in the Maps component using the [`MapsMarkerSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerSettings.html) property.
 
 The following steps describe how to add different types of markers.
 
 <b>Step 1</b>
 
-Initialize the Maps component with marker settings. Here, a marker is added with specified latitude and longitude of California using the [`DataSource`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsMarker~DataSource.html) property. You can customize the shape of the marker using the [`Shape`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsMarker~Shape.html) property and change the border color and width of the marker using the [`MapsMarkerBorder`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsMarkerBorder_members.html) tag as demonstrated in the following code example.
+Initialize the Maps component with marker settings. Here, a marker is added with specified latitude and longitude of California using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Crosshair) property. You can customize the shape of the marker using the [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_Shape) property and change the border color and width of the marker using the [`MapsMarkerBorder`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerBorder.html) tag as demonstrated in the following code example.
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -91,7 +91,7 @@ Customize the above option for n number of markers as demonstrated in the follow
 
 ## Tooltip for marker
 
-Tooltip is used to display more information about marker on mouse over or touch-end event. This can be enabled separately for layer or marker using the [`MapsMarkerTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings_members.html) tag. The [`ValuePath`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.MapsTooltipSettings~ValuePath.html) property in tooltip takes the field name that presents in dataSource and displays that value as tooltip text. The following code example demonstrates how to enable tooltip for marker to show city name.
+Tooltip is used to display more information about marker on mouse over or touch-end event. This can be enabled separately for layer or marker using the [`MapsMarkerTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html) tag. The [`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) property in tooltip takes the field name that presents in dataSource and displays that value as tooltip text. The following code example demonstrates how to enable tooltip for marker to show city name.
 
 ```csharp
 @using Syncfusion.Blazor.Maps

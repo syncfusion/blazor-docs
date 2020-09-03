@@ -2,7 +2,7 @@
 
 ## Print
 
-To use the print functionality, we should set the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~AllowPrint.html) property to **true**. The rendered map can be printed directly from the browser by calling the method [`print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~Print.html). You can get the Maps component object using `@ref="maps"`.
+To use the print functionality, we should set the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_AllowPrint) property to **true**. The rendered map can be printed directly from the browser by calling the method [`print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Print_System_Object_). You can get the Maps component object using `@ref="maps"`.
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -35,7 +35,7 @@ To use the print functionality, we should set the [`AllowPrint`](https://help.sy
 
 ### Image Export
 
-To use the image export functionality, we should set the [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~AllowImageExport.html) property to **true**. The rendered map can be exported as an image using the [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~Export.html) method. The method requires two parameters: image type and file name. The map can be exported as an image in the following formats.
+To use the image export functionality, we should set the [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_AllowImageExport) property to **true**. The rendered map can be exported as an image using the [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Export_Syncfusion_Blazor_Maps_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method. The method requires two parameters: image type and file name. The map can be exported as an image in the following formats.
 
 * JPEG
 * PNG
@@ -65,7 +65,7 @@ To use the image export functionality, we should set the [`AllowImageExport`](ht
 
 ### PDF Export
 
-To use the PDF export functionality, we should set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~AllowPdfExport.html) property to **true**. The rendered map can be exported as PDF using the [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~Export.html) method. The [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~Export.html) method requires three parameters: file type, file name and orientation of the PDF document. The orientation setting is optional and "0" indicates portrait and "1" indicates landscape.
+To use the PDF export functionality, we should set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_AllowPdfExport) property to **true**. The rendered map can be exported as PDF using the [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Export_Syncfusion_Blazor_Maps_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method. The [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Export_Syncfusion_Blazor_Maps_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method requires three parameters: file type, file name and orientation of the PDF document. The orientation setting is optional and "0" indicates portrait and "1" indicates landscape.
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -91,7 +91,7 @@ To use the PDF export functionality, we should set the [`AllowPdfExport`](https:
 
 ### Export the tile maps
 
-The rendered map with providers such as OSM, Bing and Google static maps can be exported using the [`Export`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~Export.html) method. It supports the following export formats.
+The rendered map with providers such as OSM, Bing and Google static maps can be exported using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Export_Syncfusion_Blazor_Maps_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method. It supports the following export formats.
 
 * JPEG
 * PNG

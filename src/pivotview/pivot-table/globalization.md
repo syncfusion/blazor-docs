@@ -524,7 +524,7 @@ PivotFieldList_Format | Format
 
 All locale files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale/tree/master/src) location. You can get any resource file from there and utilize it in your application.
 
-* Finally, Specify the culture for pivot table using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.PivotView.SfPivotView%601~Locale.html) property.
+* Finally, Specify the culture for pivot table using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Locale) property.
 
 ```csharp
     @using Syncfusion.Blazor.PivotView;
@@ -1024,7 +1024,7 @@ The following example demonstrates the pivot table in **Deutsch** culture. Here 
 
 ## Internationalization
 
-Internationalization library is used to globalize number, date, and time values in pivot table component using format strings in the [`Format`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.PivotView.PivotViewFormatSetting~Format.html). In the below sample we set the culture and currency using the `SetCulture` and `SetCurrencyCode` methods.
+Internationalization library is used to globalize number, date, and time values in pivot table component using format strings in the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format). In the below sample we set the culture and currency using the `SetCulture` and `SetCurrencyCode` methods.
 
 ```csharp
     @using Syncfusion.Blazor.PivotView;
@@ -1072,7 +1072,7 @@ Internationalization library is used to globalize number, date, and time values 
 
 ```
 
-> * In the above sample, **Amount** column is formatted by [`Format`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.PivotView.PivotViewFormatSetting~Format.html).
+> * In the above sample, **Amount** column is formatted by [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format).
 > * Default culture is **en-US**. If you want to change the **en-US** culture to a different culture, you have to set accordingly in `SetCulture` method.
 > * The decimal separators of pivot table values varies based on the culture applied to the component.
 

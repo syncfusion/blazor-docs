@@ -1,13 +1,13 @@
 # Customize number and date formatting
 
-User can format the number, date, and time values for each field using [`PivotViewFormatSettings`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html) option under [`PivotViewDataSource`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings%601.html). It can be configured through code behind, during initial rendering.
+User can format the number, date, and time values for each field using [`PivotViewFormatSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html) option under [`PivotViewDataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). It can be configured through code behind, during initial rendering.
 
 ## Number formatting
 
 For numbers, the formatting settings required to apply through code behind are:
 
-* [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.PivotView.PivotViewFormatSetting~Name.html): It allows to set the field name.
-* [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.PivotView.PivotViewFormatSetting~Format.html): It allows to set the format of the respective field.
+* [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name): It allows to set the field name.
+* [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format): It allows to set the format of the respective field.
 
 ```csharp
     @using Syncfusion.Blazor.PivotView
@@ -52,9 +52,9 @@ For numbers, the formatting settings required to apply through code behind are:
 
 For date and time, the formatting settings required to apply through code behind are:
 
-* [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.PivotView.PivotViewFormatSetting~Name.html): It allows to set the field name.
-* [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.PivotView.PivotViewFormatSetting~Format.html): It allows to set the format of the respective field.
-* [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.PivotView.PivotViewFormatSetting~Type.html): It allows to set the type of format to be used for the respective field.
+* [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name): It allows to set the field name.
+* [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format): It allows to set the format of the respective field.
+* [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Type): It allows to set the type of format to be used for the respective field.
 
 ```csharp
     @using Syncfusion.Blazor.PivotView

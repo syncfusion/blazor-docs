@@ -7,7 +7,7 @@ description: "Explains how to disable the user interaction on date picker compon
 # Disabled State
 
 To disable the DatePicker, use its
-[Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfDatePicker%601~Enabled.html)
+[Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Enabled)
 property.
 
 The following code demonstrates the DatePicker in

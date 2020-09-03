@@ -10,7 +10,7 @@ Date format is a way of representing the date value in different string formats 
 
 By default, the DatePicker's format is based on the culture. You can also set the own
 custom format by using the
-[Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfDatePicker%601~Format.html)
+[Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format)
 property.
 
 > Once the date format property has been defined, it will be common for all the cultures.

@@ -222,7 +222,7 @@ The output will be as follows.
 ## Right-To-Left
 
 The Calendar supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display
-the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfCalendar%601~EnableRtl.html)
+the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html#Syncfusion_Blazor_Calendars_SfCalendar_1_EnableRtl)
 property to set the RTL direction.
 
 The following code example initializes the Calendar component in `Arabic` culture.

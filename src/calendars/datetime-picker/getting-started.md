@@ -95,7 +95,7 @@ The output will be as follows.
 
 ## Setting the Value, Min and Max
 
-The minimum and maximum date time can be defined with the help of [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfDateTimePicker%601~Min.html) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfDateTimePicker%601~Max.html) properties.
+The minimum and maximum date time can be defined with the help of [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Max) properties.
 
 The following code demonstrates how to set the `Min` and `Max` on initializing the
 DateTimePicker. `TValue` specifies the type of the DatePicker component.

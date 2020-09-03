@@ -6,7 +6,7 @@ description: "Explains how to allow the users to enter only the valid date value
 
 # Strict Mode
 
-The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfDatePicker%601~StrictMode.html)
+The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode)
 is an act that allows the users to enter only the valid date within the specified `Min/Max` range in text box.
 If the date is invalid, then the component will stay with the previous value.
 Else, if the date is out of range, then the component will set the date to the Min/Max date.

@@ -222,7 +222,7 @@ The output will be as follows.
 ## Right-To-Left
 
 The TimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display
-the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfTimePicker~EnableRtl.html)
+the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_EnableRtl)
 property to set the RTL direction.
 
 The following code example initializes the TimePicker component in `Arabic` culture.

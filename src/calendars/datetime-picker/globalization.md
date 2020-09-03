@@ -224,7 +224,7 @@ The output will be as follows.
 ## Right-To-Left
 
 The DateTimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to displays
-the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfDateTimePicker~EnableRtl.html)
+the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_EnableRtl)
 property to set the RTL direction.
 
 The following code example initialize the DateTimePicker component in `Arabic` culture.

@@ -234,7 +234,7 @@ The output will be as follows.
 ## Right-To-Left
 
 The DateRangePicker supports RTL (right-to-left) functionality for languages like Hebrew and Hebrew to displays
-the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfDateRangePicker~EnableRtl.html)
+the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_EnableRtl)
 property to set the RTL direction.
 
 The following code example initialize the DateRangePicker component in `Hebrew` culture.

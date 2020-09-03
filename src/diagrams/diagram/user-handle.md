@@ -10,7 +10,7 @@ User handles are customizable handles that can be used to perform custom actions
 
 ## Initialization an userhandle
 
-The user handle can enables for the selected nodes/connectors by setting a [`SelectorConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SelectorConstraints.html) as `UserHandle` and then use the [`DiagramUserHandle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle_members.html) class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
+The user handle can enables for the selected nodes/connectors by setting a [`SelectorConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SelectorConstraints.html) as `UserHandle` and then use the [`DiagramUserHandle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html) class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -79,7 +79,7 @@ The user handle can enables for the selected nodes/connectors by setting a [`Sel
 
 ## Customization
 
-If set `false` to the [`DisableConnectors`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~DisableConnectors.html) property in userhandle, the userhandle prevents to rendering for the connectors. The following code example is used to show userhandle for the nodes alone.
+If set `false` to the [`DisableConnectors`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_DisableConnectors) property in userhandle, the userhandle prevents to rendering for the connectors. The following code example is used to show userhandle for the nodes alone.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -162,13 +162,13 @@ If set `false` to the [`DisableConnectors`](https://help.syncfusion.com/cr/blazo
 }
 ```
 
->**Note**: Also you can disable the [`DisableNodes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~DisableNodes.html) property in userhandle, the userhandle prevent to rendering for the nodes.
+>**Note**: Also you can disable the [`DisableNodes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_DisableNodes) property in userhandle, the userhandle prevent to rendering for the nodes.
 
 ### Position
 
-The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~Offset.html) property of userhandle is used to align the userhandles based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width or Height.
+The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Offset) property of userhandle is used to align the userhandles based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width or Height.
 
-The [`Side`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~Side.html) property is used to set how the userhandle is aligned based on the given [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~Offset.html).
+The [`Side`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Side) property is used to set how the userhandle is aligned based on the given [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Offset).
 
 The following table shows all the possible alignments visually shows the userhandle positions.
 
@@ -185,17 +185,17 @@ The following table shows all the possible alignments visually shows the userhan
 
 ### Size
 
-Diagram allows you set size for userhandles by using the [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~Size.html) property. The default value of the [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~Offset.html) property is 25.
+Diagram allows you set size for userhandles by using the [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Size) property. The default value of the [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Offset) property is 25.
 
 ### Style
 
 * You can change the style of the userhandles with the specific properties of PathColor, BorderColor, BackgroundColor and BorderWidth. The following code explains how to customize the appearance of the userhandles.
 
-* The userhandle's [`PathColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~PathColor.html) property used to change the color of the given [`PathData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~PathData.html) of the userhandle.
+* The userhandle's [`PathColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_PathColor) property used to change the color of the given [`PathData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_PathData) of the userhandle.
 
-* The userhandle [`BorderColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~BorderColor.html), [`BackgroundColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~BackgroundColor.html) properties are used to define the background color and border color of the userhandle and the [`BorderWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~BorderWidth.html) property is used to define the border width of the userhandles.
+* The userhandle [`BorderColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BorderColor), [`BackgroundColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BackgroundColor) properties are used to define the background color and border color of the userhandle and the [`BorderWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BorderWidth) property is used to define the border width of the userhandles.
 
-*The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramUserHandle~Visible.html) property of the userhandle enables or disables the visibility of userhandle.
+*The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Visible) property of the userhandle enables or disables the visibility of userhandle.
 
 The following code explains how to customize the appearance of the userhandle.
 
@@ -238,10 +238,10 @@ The Diagram control provides following list of events for the userhandle.
 
 | Event Name | Event Type | Description |
 | -------- | -------- | -------- |
-| [`OnUserHandleMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramEvents~OnUserHandleMouseDown.html) | [`UserHandleEventsArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.UserHandleEventsArgs_members.html) | Triggered when the mouse pointer is over the userhandle and mouse button is down. |
-| [`OnUserHandleMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramEvents~OnUserHandleMouseUp.html) | [`UserHandleEventsArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.UserHandleEventsArgs_members.html) | Triggered when the mouse pointer is over the userhandle and mouse button is released. |
-| [`OnUserHandleMouseEnter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramEvents~OnUserHandleMouseEnter.html) | [`UserHandleEventsArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.UserHandleEventsArgs_members.html) | Triggered when mouse enter into the userhandle. |
-| [`OnUserHandleMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramEvents~OnUserHandleMouseLeave.html) | [`UserHandleEventsArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.UserHandleEventsArgs_members.html) | Triggered when mouse leaves the userhandle. |
+| [`OnUserHandleMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnUserHandleMouseDown) | [`UserHandleEventsArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.UserHandleEventsArgs.html) | Triggered when the mouse pointer is over the userhandle and mouse button is down. |
+| [`OnUserHandleMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnUserHandleMouseUp) | [`UserHandleEventsArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.UserHandleEventsArgs.html) | Triggered when the mouse pointer is over the userhandle and mouse button is released. |
+| [`OnUserHandleMouseEnter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnUserHandleMouseEnter) | [`UserHandleEventsArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.UserHandleEventsArgs.html) | Triggered when mouse enter into the userhandle. |
+| [`OnUserHandleMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnUserHandleMouseLeave) | [`UserHandleEventsArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.UserHandleEventsArgs.html) | Triggered when mouse leaves the userhandle. |
 
 The following code explains how to use the `OnUserHandleMouseUp` event for an userhandle.
 

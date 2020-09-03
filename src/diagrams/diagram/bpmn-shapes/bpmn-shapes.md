@@ -43,7 +43,7 @@ The following code example explains how to create a simple business process.
 }
 ```
 
->Note : The default value for the property [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~Shape.html) is “event”.
+>Note : The default value for the property [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shape) is “event”.
 
 The list of BPMN shapes are as follows:
 

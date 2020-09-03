@@ -6,7 +6,7 @@ description: "Event is notated with a circle and it represents an event in a bus
 
 # BPMN event
 
-An [`Event`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnEvent~Event.html) is a common BPMN process model element that represents something happens during a business process and its is notated with a circle. The type of events are as follows:
+An [`Event`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnEvent.html#Syncfusion_Blazor_Diagrams_DiagramBpmnEvent_Event) is a common BPMN process model element that represents something happens during a business process and its is notated with a circle. The type of events are as follows:
 
     * Start - indicates the beginning of the process and every business process start with an event.
     * Intermediate - indicates the middle of the process.

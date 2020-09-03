@@ -16,7 +16,7 @@ A node can be created and added to the diagram, either programmatically or inter
 
 ## Add node through nodes collection
 
-To create a node, define the [`DiagramNode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode_members.html) object and add that to the nodes collection of the diagram model. The following code example shows how to add a node to the diagram.
+To create a node, define the [`DiagramNode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html) object and add that to the nodes collection of the diagram model. The following code example shows how to add a node to the diagram.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -50,7 +50,7 @@ To create a node, define the [`DiagramNode`](https://help.syncfusion.com/cr/blaz
 
 ## Add node at runtime
 
-* A node can be added in a diagram at runtime by using the [`AddNode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~AddNode.html).
+* A node can be added in a diagram at runtime by using the [`AddNode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddNode_Syncfusion_Blazor_Diagrams_DiagramNode_System_Nullable_System_Boolean__).
 
 * The node’s ID property is used to define the name of the node and it is further used to find the node at runtime and do any customization.
 
@@ -119,13 +119,13 @@ public void AddNode()
 ## Add node from palette
 
 Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information
-about adding nodes from symbol palette, refer to the [`Symbol Palette`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SymbolPaletteModel.html).
+about adding nodes from symbol palette, refer to the [`Symbol Palette`](https://help.syncfusion.com/cr/blazor).
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
-* When a symbol is dragged into a diagram from symbol palette, the [`DragEnter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IBlazorDragEnterEventArgs.html) event gets triggered.
-* When a symbol is dragged over a diagram, the [`DragOver`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IDragOverEventArgs.html) event gets triggered.
-* When a symbol is dragged and dropped from symbol palette to diagram area, the [`Drop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IBlazorDropEventArgs.html) event gets triggered.
-* When a symbol is dragged outside of the diagram, the [`DragLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IBlazorDragLeaveEventArgs.html) event gets triggered.
+* When a symbol is dragged into a diagram from symbol palette, the [`DragEnter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDragEnterEventArgs.html) event gets triggered.
+* When a symbol is dragged over a diagram, the [`DragOver`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IDragOverEventArgs.html) event gets triggered.
+* When a symbol is dragged and dropped from symbol palette to diagram area, the [`Drop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDropEventArgs.html) event gets triggered.
+* When a symbol is dragged outside of the diagram, the [`DragLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDragLeaveEventArgs.html) event gets triggered.
 
 For more information about adding nodes from symbol palette, refer to the [`Symbol Palette`](../symbol-palette).
 
@@ -185,7 +185,7 @@ For more information about adding nodes from symbol palette, refer to the [`Symb
 
 ## Draw Node using drawing object
 
-Nodes can be interactively drawn by clicking and dragging on the diagram surface by using the [`DrawingObject`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~DrawingObject.html).
+Nodes can be interactively drawn by clicking and dragging on the diagram surface by using the [`DrawingObject`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DrawingObject).
 
 For more information about drawing Node, refer to the [`Draw Nodes`](./tools/#Shapes).
 
@@ -198,7 +198,7 @@ these nodes are fetched from default settings.
 
 ## Remove node at runtime
 
-* A node can be removed from diagram at runtime by using the [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~Remove(Object).html) method.
+* A node can be removed from diagram at runtime by using the [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Remove_System_Object_) method.
 
 The following code shows how to remove a node at runtime.
 

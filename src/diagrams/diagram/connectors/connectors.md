@@ -10,11 +10,11 @@ Connectors are objects used to create link between two points, nodes or ports to
 
 ## Create connector
 
-Connector can be created by defining the source and target point of the connector. The path to be drawn can be defined with a collection of segments. To explore the properties of a [`Connector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramConnector.html), refer to [`Connector Properties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramConnector_properties.html).
+Connector can be created by defining the source and target point of the connector. The path to be drawn can be defined with a collection of segments. To explore the properties of a [`Connector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html), refer to [`Connector Properties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html).
 
 ## Add connectors through connectors collection
 
-The [`SourcePoint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramConnector~SourcePoint.html) and [`TargetPoint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramConnector~TargetPoint.html) properties of connector allow you to define the end points of a connector.
+The [`SourcePoint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_SourcePoint) and [`TargetPoint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_TargetPoint) properties of connector allow you to define the end points of a connector.
 
 The following code example illustrates how to add a connector through connector collection,
 
@@ -180,7 +180,7 @@ For more information about adding connectors from symbol palette, refer to the [
 
 ## Draw connectors using drawing object
 
-Connectors can be interactively drawn by clicking and dragging on the diagram surface by using [`DrawingObject`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~DrawingObject.html).
+Connectors can be interactively drawn by clicking and dragging on the diagram surface by using [`DrawingObject`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DrawingObject).
 
 For more information about drawing connectors, refer to [`Draw Connectors`](./tools/#connectors).
 
@@ -188,7 +188,7 @@ For more information about drawing connectors, refer to [`Draw Connectors`](./to
 
 ## Remove connectors at runtime
 
-* A connector can be removed from the diagram at runtime by using the [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~Remove(Object).html) method.
+* A connector can be removed from the diagram at runtime by using the [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Remove_System_Object_) method.
 
 The following code shows how to remove a connector at runtime.
 
@@ -297,7 +297,7 @@ The following code example explains how to change the connector properties.
 
 ### Connections with nodes
 
-* The [`SourceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramConnector~SourceID.html) and [`TargetID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramConnector~TargetID.html) properties allow to define the nodes to be connected.
+* The [`SourceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_SourceID) and [`TargetID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_TargetID) properties allow to define the nodes to be connected.
 
 * The following code example illustrates how to connect two nodes.
 
@@ -379,9 +379,9 @@ The following code example explains how to change the connector properties.
 
 ![Node to Node Connection](../images/NodeToNodeConnection.png)
 
-* When you remove [`NodeConstraints.InConnect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.NodeConstraints.html) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove [`NodeConstraints.OutConnect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.NodeConstraints.html) from Default, the node accepts only an incoming connection to dock in it.
+* When you remove [`NodeConstraints.InConnect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove [`NodeConstraints.OutConnect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) from Default, the node accepts only an incoming connection to dock in it.
 
-* When you remove both InConnect and OutConnect [`NodeConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.NodeConstraints.html) from `Default`, the node restricts connector to establish connection in it.
+* When you remove both InConnect and OutConnect [`NodeConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) from `Default`, the node restricts connector to establish connection in it.
 
 * The following code illustrates how to disable InConnect constraints.
 
@@ -423,7 +423,7 @@ The following code example explains how to change the connector properties.
 
 ### Connections with ports
 
-The [`SourcePortID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramConnector~SourcePortID.html) and [`TargetPortID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramConnector~TargetPortID.html) properties allow to create connections between some specific points of source/target nodes.
+The [`SourcePortID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_SourcePortID) and [`TargetPortID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_TargetPortID) properties allow to create connections between some specific points of source/target nodes.
 
 The following code example illustrates how to create port to port connections.
 
@@ -532,8 +532,8 @@ The following code example illustrates how to create port to port connections.
 
 ![Port to Port Connection](../images/PortToPortConnection.png)
 
-* When you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.PortConstraints.html) to `InConnect`, the port accepts only an incoming connection to dock in it. Similarly, when you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.PortConstraints.html) to `OutConnect`, the port accepts only an outgoing connection to dock in it.
-* When you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.PortConstraints.html) to `None`, the port restricts connector to establish connection in it.
+* When you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `InConnect`, the port accepts only an incoming connection to dock in it. Similarly, when you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `OutConnect`, the port accepts only an outgoing connection to dock in it.
+* When you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `None`, the port restricts connector to establish connection in it.
 
 ```csharp
 

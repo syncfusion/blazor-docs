@@ -24,7 +24,7 @@ Ports act as the connection points of the node and allows creating connections w
 
 ## Create ports
 
-To add a connection port, define the port object and add it to node’s ports collection. The [`Offset`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramPort~Offset.html) property of the port accepts an object of fractions and used to determine the position of ports. The following code explains how to add ports when initializing the node.
+To add a connection port, define the port object and add it to node’s ports collection. The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Offset) property of the port accepts an object of fractions and used to determine the position of ports. The following code explains how to add ports when initializing the node.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -66,7 +66,7 @@ To add a connection port, define the port object and add it to node’s ports co
 
 Add ports at runtime by using the server-side method [`Add`] in the port collection. The following code explains how to add ports to node at runtime.
 
-The port’s [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramPort~Id.html) property is used to define the unique ID for the port and it is further used to find the port at runtime.
+The port’s [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Id) property is used to define the unique ID for the port and it is further used to find the port at runtime.
 If **Id** is not set, then default **Id** is automatically set.
 
 ```csharp

@@ -44,7 +44,7 @@ BPMN shapes are used to represent the internal business procedure in a graphical
 }
 ```
 
->Note : The default value for the property [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~Shape.html) is “event”.
+>Note : The default value for the property [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shape) is “event”.
 
 The list of BPMN shapes are as follows:
 
@@ -62,7 +62,7 @@ The BPMN shapes and its types are explained as follows.
 
 ## Event
 
-An [`Event`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnEvent~Event.html) is notated with a circle and it represents an event in a business process. The type of events are as follows:
+An [`Event`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnEvent.html#Syncfusion_Blazor_Diagrams_DiagramBpmnEvent_Event) is notated with a circle and it represents an event in a business process. The type of events are as follows:
 
     * Start
     * End
@@ -125,7 +125,7 @@ Event triggers are notated as icons inside the circle and they represent the spe
 
 ## Gateway
 
-Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set as “Gateway” and the [`Gateway`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnGateway.html) property can be set with any of the appropriate gateways. The following code example illustrates how to create a BPMN Gateway.
+Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set as “Gateway” and the [`Gateway`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnGateway.html) property can be set with any of the appropriate gateways. The following code example illustrates how to create a BPMN Gateway.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -182,7 +182,7 @@ There are several types of gateways as tabulated:
 
 ## Activity
 
-The [`Activity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle.
+The [`Activity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle.
 
 There are two types of activities. They are listed as follows:
 
@@ -230,7 +230,7 @@ To create a BPMN activity, set the `Shape` as **Activity**. You also need to set
 
 ## Tasks
 
-The [`Task`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html) property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set as **None**. The following code illustrates how to create different types of
+The [`Task`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html) property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set as **None**. The following code illustrates how to create different types of
 BPMN tasks.
 The events property of tasks allows to represent these results as an event attached to the task.
 
@@ -290,7 +290,7 @@ The various types of BPMN tasks are tabulated as follows.
 
 ## Subprocess
 
-A [`Sub-process`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is a group of tasks, which is used to hide or reveal details of additional levels using the `Collapsed` property.
+A [`Sub-process`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is a group of tasks, which is used to hide or reveal details of additional levels using the `Collapsed` property.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -339,7 +339,7 @@ The different types of subprocess are as follows:
 
 ## Event SubProcess
 
-A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is defined as an event SubProcess, when it is triggered by an event. An event SubProcess is placed within another subprocess which part of the normal flow of its parent process is not. You can set event to a subprocess with the `Event` and `Trigger` property of the subprocess. The `Type` property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
+A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is defined as an event SubProcess, when it is triggered by an event. An event SubProcess is placed within another subprocess which part of the normal flow of its parent process is not. You can set event to a subprocess with the `Event` and `Trigger` property of the subprocess. The `Type` property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -397,7 +397,7 @@ A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfus
 
 ## Transaction subprocess
 
-* [`Transaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Transaction.html) is a set of activities that logically belong together, in which all contained activities must complete their parts of the transaction; otherwise the process is undone. The execution result of a transaction is one of Successful Completion, Unsuccessful Completion (Cancel), and Hazard (Exception). The `Events` property of subprocess allows to represent these results as an event attached to the subprocess.
+* [`Transaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Transaction) is a set of activities that logically belong together, in which all contained activities must complete their parts of the transaction; otherwise the process is undone. The execution result of a transaction is one of Successful Completion, Unsuccessful Completion (Cancel), and Hazard (Exception). The `Events` property of subprocess allows to represent these results as an event attached to the subprocess.
 
 * The event object allows you to define the type of event by which the subprocess will be triggered. The name of the event can be defined to identify the event at runtime.
 
@@ -460,11 +460,11 @@ A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfus
 
 ## Process
 
-[`Processes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Processes.html) is an array collection that defines the children values for BPMN subprocess.
+[`Processes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Processes) is an array collection that defines the children values for BPMN subprocess.
 
 ## Loop
 
-[`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Loop.html) is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for `Loop` is **None**.
+[`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Loop) is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for `Loop` is **None**.
 You can define the loop property in subprocess BPMN shape as shown in the following code.
 
 ```csharp
@@ -522,7 +522,7 @@ The following table contains various types of BPMN loops.
 
 ## Compensation
 
-[`Compensation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Compensation.html) is triggered, when operation is partially failed and enabled it with the compensation property of the task and the subprocess.
+[`Compensation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Compensation) is triggered, when operation is partially failed and enabled it with the compensation property of the task and the subprocess.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -599,7 +599,7 @@ The following table contains various types of BPMN loops.
 
 ## Call
 
-A [`Call`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnTask~Call.html) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
+A [`Call`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html#Syncfusion_Blazor_Diagrams_DiagramBpmnTask_Call) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -648,7 +648,7 @@ A [`Call`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Bl
 
 ## Ad-Hoc
 
-An ad-hoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [`Ad-hoc`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Adhoc.html) property of subprocess.
+An ad-hoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [`Ad-hoc`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Adhoc) property of subprocess.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -698,7 +698,7 @@ An ad-hoc subprocess is a group of tasks that are executed in any order or skipp
 
 ## Boundary
 
-Boundary represents the type of task that is being processed. The [`Boundary`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Boundary.html) property of subprocess allows you to define the type of boundary. By default, it is set as **Default**.
+Boundary represents the type of task that is being processed. The [`Boundary`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Boundary) property of subprocess allows you to define the type of boundary. By default, it is set as **Default**.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -755,7 +755,7 @@ The following table contains various types of BPMN boundaries.
 
 ## Data
 
-A data object represents information flowing through the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. To define a [`DataObject`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramShape~Dataobject.html), set the shape as **DataObject** and the type property defines whether data is an input or an output. You can create multiple instances of data object with the collection property of data.
+A data object represents information flowing through the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. To define a [`DataObject`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShape.html#Syncfusion_Blazor_Diagrams_DiagramShape_DataObject), set the shape as **DataObject** and the type property defines whether data is an input or an output. You can create multiple instances of data object with the collection property of data.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -960,7 +960,7 @@ A group is used to frame a part of the diagram, shows that elements included in 
 
 ## Association
 
-[`BPMN Association`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.BpmnAssociationFlows.html) flow is used to link flow objects with its corresponding text or artifact. An association is represented as a dotted graphical line with opened arrow. The types of association are as follows:
+[`BPMN Association`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnAssociationFlows.html) flow is used to link flow objects with its corresponding text or artifact. An association is represented as a dotted graphical line with opened arrow. The types of association are as follows:
 
 * Directional
 * BiDirectional
@@ -1012,7 +1012,7 @@ The following table demonstrates the visual representation of association flows.
 
 ## Sequence
 
-A [`Sequence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.BpmnSequenceFlows.html) flow shows the order in which the activities are performed in a BPMN process and is represented by a solid graphical line. The types of sequence are as follows:
+A [`Sequence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnSequenceFlows.html) flow shows the order in which the activities are performed in a BPMN process and is represented by a solid graphical line. The types of sequence are as follows:
 
 * Normal
 * Conditional
@@ -1064,7 +1064,7 @@ The following table contains various representation of sequence flows.
 
 ## Message
 
-A [`Message`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.BpmnMessageFlows.html) flow shows the flow of messages between two participants and is represented by dashed line. The types of message are as follows:
+A [`Message`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnMessageFlows.html) flow shows the flow of messages between two participants and is represented by dashed line. The types of message are as follows:
 
 * InitiatingMessage
 * NonInitiatingMessage

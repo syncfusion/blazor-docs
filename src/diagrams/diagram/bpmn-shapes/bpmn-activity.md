@@ -6,7 +6,7 @@ description: "BPMN Activity is the task that is performed in a business process.
 
 # BPMN activity
 
-The [`Activity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle.
+The [`Activity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle.
 
 There are two types of activities. They are listed as follows:
 
@@ -51,7 +51,7 @@ There are two types of activities. They are listed as follows:
 
 ## BPMN activity task
 
-The [`Task`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html) property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set to **None**. The following code explains how to create different types of BPMN tasks.
+The [`Task`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html) property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set to **None**. The following code explains how to create different types of BPMN tasks.
 The events property of tasks allows you to represent these results as an event attached to the task.
 
 ```csharp
@@ -108,7 +108,7 @@ The various types of BPMN tasks are tabulated as follows.
 
 ## BPMN activity sub process
 
-A [`Sub-process`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is a group of tasks that is used to hide or reveal details of additional levels using the `Collapsed` property.
+A [`Sub-process`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is a group of tasks that is used to hide or reveal details of additional levels using the `Collapsed` property.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -155,7 +155,7 @@ The different types of subprocess are as follows:
 
 ### Event sub Process
 
-A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is defined as an event SubProcess when it is triggered by an event. An event SubProcess is placed within another subprocess that part of the normal flow of its parent process is not. You can set event to a subprocess with the `Event` and `Trigger` properties of the subprocess. The `Type` property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
+A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is defined as an event SubProcess when it is triggered by an event. An event SubProcess is placed within another subprocess that part of the normal flow of its parent process is not. You can set event to a subprocess with the `Event` and `Trigger` properties of the subprocess. The `Type` property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -208,7 +208,7 @@ A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfus
 
 ### Transaction sub process
 
-* The [`Transaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Transaction.html) is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
+* The [`Transaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Transaction) is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
 
 The execution result of a transaction is one of
 * Successful Completion
@@ -276,7 +276,7 @@ The `Events` property of subprocess allows you to represent these results as an 
 
 ### Process
 
-[`Processes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Processes.html) is an array collection that defines the children values for BPMN subprocess.
+[`Processes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Processes) is an array collection that defines the children values for BPMN subprocess.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -356,7 +356,7 @@ The `Events` property of subprocess allows you to represent these results as an 
 
 ### Loop
 
-[`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Loop.html) is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for [`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Loop.html) is **None**.
+[`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Loop) is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for [`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Loop) is **None**.
 You can define the loop property in subprocess BPMN shape as shown in the following code.
 
 ```csharp
@@ -414,7 +414,7 @@ The following table contains various types of BPMN loops.
 
 ### Compensation
 
-[`Compensation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Compensation.html) is triggered when the operation is partially failed and enabled it with the compensation property of the task and the subprocess.
+[`Compensation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Compensation) is triggered when the operation is partially failed and enabled it with the compensation property of the task and the subprocess.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -486,7 +486,7 @@ The following table contains various types of BPMN loops.
 
 ### Call
 
-A [`Call`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnTask~Call.html) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
+A [`Call`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html#Syncfusion_Blazor_Diagrams_DiagramBpmnTask_Call) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -533,7 +533,7 @@ A [`Call`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Bl
 
 ### Ad-Hoc
 
-An ad-hoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [`Ad-hoc`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Adhoc.html) property of subprocess.
+An ad-hoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [`Ad-hoc`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Adhoc) property of subprocess.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -579,7 +579,7 @@ An ad-hoc subprocess is a group of tasks that are executed in any order or skipp
 
 ### Boundary
 
-Boundary represents the type of task that is being processed. The [`Boundary`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess~Boundary.html) property of subprocess allows you to define the type of boundary. By default, it is set to **Default**.
+Boundary represents the type of task that is being processed. The [`Boundary`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Boundary) property of subprocess allows you to define the type of boundary. By default, it is set to **Default**.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams

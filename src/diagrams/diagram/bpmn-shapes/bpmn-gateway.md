@@ -6,7 +6,7 @@ description: "BPMN Gateway is used to control the flow of a business process"
 
 # BPMN gateway
 
-Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set to “Gateway” and the [`Gateway`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramBpmnGateway.html) property can be set with any of the appropriate gateways. The following code example explains how to create a BPMN Gateway.
+Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set to “Gateway” and the [`Gateway`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnGateway.html) property can be set with any of the appropriate gateways. The following code example explains how to create a BPMN Gateway.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams

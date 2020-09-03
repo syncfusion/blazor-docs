@@ -8,7 +8,7 @@ description: "Events will notify the actions like editing, double click, keydown
 
 ## Text edit
 
-The TextEdit event will notify the annotation content changes after editing. The [`IBlazorTextEditEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IBlazorTextEditEventArgs.html) interface is used to get event arguments.
+The TextEdit event will notify the annotation content changes after editing. The [`IBlazorTextEditEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorTextEditEventArgs.html) interface is used to get event arguments.
 
 The following code example shows how to register and get the notification from the TextEdit event.
 
@@ -53,9 +53,9 @@ The following code example shows how to register and get the notification from t
 
 ## Double click
 
-The DoubleClick event will notify the annotation start editing. The [`IDoubleClickEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IDoubleClickEventArgs.html) interface is used to get the position actually clicked and clicked object.
+The DoubleClick event will notify the annotation start editing. The [`IDoubleClickEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDoubleClickEventArgs.html) interface is used to get the position actually clicked and clicked object.
 
-The following code example shows how to register and get the notification from the [`OnDoubleClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IDoubleClickEventArgs.html) event.
+The following code example shows how to register and get the notification from the [`OnDoubleClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDoubleClickEventArgs.html) event.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams

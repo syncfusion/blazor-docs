@@ -126,7 +126,7 @@ The following code example illustrates how to customise the swimlane header..
 
 Lane is a functional unit or a responsible department of a business process that helps to map a process within the functional unit or in between other functional units.
 
-The number of [`Lanes`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion~Syncfusion.Diagrams.Shapes.html) can be added to swimlane. The lanes are automatically stacked inside swimlane based on the order they are added.
+The number of `Lanes` can be added to swimlane. The lanes are automatically stacked inside swimlane based on the order they are added.
 
 ### Create an empty lane
 

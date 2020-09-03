@@ -7,7 +7,7 @@ description: "Diagram exporting supports to export the diagram content as image/
 # Exporting
 
 Diagram provides support to export its content as image/svg files.
-The server-side method [`ExportDiagram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~ExportDiagram.html) helps to export the diagram. The following code illustrates how to export the diagram as image.
+The server-side method [`ExportDiagram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ExportDiagram_Syncfusion_Blazor_Diagrams_IExportOptions_) helps to export the diagram. The following code illustrates how to export the diagram as image.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -39,11 +39,11 @@ Diagram provides support to export the desired region of the diagram to desired 
 
 ## File Name
 
-[`FileName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IExportOptions~FileName.html) is the name of the file to be downloaded. By default, the file name is set to **Diagram**.
+[`FileName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IExportOptions.html#Syncfusion_Blazor_Diagrams_IExportOptions_FileName) is the name of the file to be downloaded. By default, the file name is set to **Diagram**.
 
 ## Format
 
-[`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IExportOptions~Format.html) is to specify the type/format of the exported file. By default, the diagram is exported as .jpg format. You can export diagram to the following formats:
+[`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IExportOptions.html#Syncfusion_Blazor_Diagrams_IExportOptions_Format) is to specify the type/format of the exported file. By default, the diagram is exported as .jpg format. You can export diagram to the following formats:
 
 * JPG
 * PNG
@@ -75,7 +75,7 @@ Diagram provides support to export the desired region of the diagram to desired 
 
 ## Margin
 
-[`Margin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IExportOptions~Margin.html) specifies the amount of space that has to be left around the diagram.
+[`Margin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IExportOptions.html#Syncfusion_Blazor_Diagrams_IExportOptions_Margin) specifies the amount of space that has to be left around the diagram.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -108,7 +108,7 @@ Diagram provides support to export the desired region of the diagram to desired 
 
 ## Mode
 
-[`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IExportOptions~Mode.html) specifies whether the diagram is to be exported as files or as data (ImageURL/SVG). The exporting options are as follows:
+[`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IExportOptions.html#Syncfusion_Blazor_Diagrams_IExportOptions_Mode) specifies whether the diagram is to be exported as files or as data (ImageURL/SVG). The exporting options are as follows:
 
 * Data: Exports and downloads the diagram as image.
 * Download: Exports the diagram as data of formats ImageURL/SVG.
@@ -145,7 +145,7 @@ The following code example illustrates how to export the diagram as raw data.
 
 ## Region
 
-You can export any particular [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IExportOptions~Region.html) of the diagram and the region is categorized as follows.
+You can export any particular [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IExportOptions.html#Syncfusion_Blazor_Diagrams_IExportOptions_Region) of the diagram and the region is categorized as follows.
 
 * Region that fits all nodes and connectors that are added to model.
 * Region that fits all pages (single or multiple pages based on page settings).
@@ -184,7 +184,7 @@ The following code example illustrates how to export the region occupied by the 
 
 ## Custom bounds
 
-Diagram provides support to export any specific region of the diagram by using [`Bounds`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IExportOptions~Region.html).
+Diagram provides support to export any specific region of the diagram by using [`Bounds`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IExportOptions.html#Syncfusion_Blazor_Diagrams_IExportOptions_Region).
 
 The following code example illustrates how to export the region occupied by the diagram elements.
 
@@ -228,7 +228,7 @@ The following code example illustrates how to export the region occupied by the 
 
 ## Export diagram with stretch option
 
-Diagram provides support to export the diagram as image for [`Stretch`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.IExportOptions~Stretch.html) option. The exported images will be clearer but larger in file size.
+Diagram provides support to export the diagram as image for [`Stretch`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IExportOptions.html#Syncfusion_Blazor_Diagrams_IExportOptions_Stretch) option. The exported images will be clearer but larger in file size.
 
 The following code example illustrates how to export the region occupied by the diagram elements.
 
@@ -260,7 +260,7 @@ The following code example illustrates how to export the region occupied by the 
 
 ## Print
 
-The server-side method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~Print.html) helps to print the diagram as image.
+The server-side method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Print_Syncfusion_Blazor_Diagrams_IPrintOptions_) helps to print the diagram as image.
 
 | Name | Type | Description|
 |-------- | -------- | -------- |

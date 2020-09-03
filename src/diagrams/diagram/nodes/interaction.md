@@ -10,7 +10,7 @@ Diagram provides the support to drag, resize, or rotate the node interactively.
 
 ## Select
 
-A node can be select at runtime by using the [`Select`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~Select.html) method and clear the selection in the diagram using the [`ClearSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~ClearSelection.html). The following code explains how to select and clear selection in the diagram.
+A node can be select at runtime by using the [`Select`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Select_System_Object_System_Nullable_System_Boolean__) method and clear the selection in the diagram using the [`ClearSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ClearSelection). The following code explains how to select and clear selection in the diagram.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -57,13 +57,13 @@ A node can be select at runtime by using the [`Select`](https://help.syncfusion.
 And also the selection enable during the interaction.
 
 * An element can be selected by clicking that element.
-* When you select the elements in the diagram, the [`SelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramEvents~SelectionChanged.html) event gets triggered and to do customization in this event.
+* When you select the elements in the diagram, the [`SelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_SelectionChanged) event gets triggered and to do customization in this event.
 
 ![Select](../images/node-select.gif)
 
 ## Drag
 
-A node can be drag at runtime by using the [`Drag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~Drag.html) method. The following code explains how to drag the node by using the drag method.
+A node can be drag at runtime by using the [`Drag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Drag_System_Object_System_Double_System_Double_) method. The following code explains how to drag the node by using the drag method.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -103,13 +103,13 @@ A node can be drag at runtime by using the [`Drag`](https://help.syncfusion.com/
 And also the drag the node during the interaction.
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
-* When you drag the elements in the diagram, the [`OnPositionChange`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramEvents~OnPositionChange.html) event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the [`OnPositionChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnPositionChange) event gets triggered and to do customization in this event.
 
 ![Drag](../images/drag.gif)
 
 ## Resize
 
-A node can be resize at runtime by using the [`Scale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~Scale.html) method. The following code explains how to resize the node by using the scale method.
+A node can be resize at runtime by using the [`Scale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Scale_System_Object_System_Double_System_Double_Syncfusion_Blazor_Diagrams_PointModel_) method. The following code explains how to resize the node by using the scale method.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -150,7 +150,7 @@ And also the resize the node during the interaction.
 
 * Selector is surrounded by eight thumbs. When dragging these thumbs, the selected items can be resized.
 * When one corner of the selector is dragged, the opposite corner will be in a static position.
-* When a node is resized, the [`OnSizeChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramEvents~OnSizeChange.html) event gets triggered.
+* When a node is resized, the [`OnSizeChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnSizeChange) event gets triggered.
 
 ![Resize](../images/resize.gif)
 
@@ -158,7 +158,7 @@ And also the resize the node during the interaction.
 
 ## Rotate
 
-A node can be rotate at runtime by using the [`Rotate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~Rotate.html) method. The following code explains how to rotate the node by using method.
+A node can be rotate at runtime by using the [`Rotate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Rotate_System_Object_System_Double_Syncfusion_Blazor_Diagrams_PointModel_) method. The following code explains how to rotate the node by using method.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams

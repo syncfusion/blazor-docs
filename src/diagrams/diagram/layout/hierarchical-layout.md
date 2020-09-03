@@ -6,7 +6,7 @@ description: "The hierarchical tree layout arranges nodes in a tree-like structu
 
 # Hierarchical layout
 
-The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange the nodes in a hierarchical structure, specify the layout [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramLayout~Type.html) as hierarchical tree. The following example shows how to arrange the nodes in a hierarchical structure.
+The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange the nodes in a hierarchical structure, specify the layout [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) as hierarchical tree. The following example shows how to arrange the nodes in a hierarchical structure.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -230,7 +230,7 @@ Diagram allows to expand or collapse the subtrees of a layout. The node’s isEx
 
 ## Complex hierarchical tree
 
-Complex hierarchical tree layout is the extended version of the hierarchical tree layout. The child had been two or more parents. To create a complex hierarchical tree, the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramLayout~Type.html) of layout should be set as `ComplexHierarchicalTree`.
+Complex hierarchical tree layout is the extended version of the hierarchical tree layout. The child had been two or more parents. To create a complex hierarchical tree, the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) of layout should be set as `ComplexHierarchicalTree`.
 
 The following code example shows how to create a complex hierarchical tree.
 

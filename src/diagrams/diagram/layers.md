@@ -8,7 +8,7 @@ description: "Nodes visually represents the geometrical information and process 
 
 **Layer** is used to organize related shapes on a diagram control. A layer is a named category of shapes. By assigning shapes to different layers, you can selectively view, remove, and lock different categories of shapes.
 
-In diagram, [`Layers`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramLayer.html) provide a way to change the properties of all shapes that have been assigned to that layer. The following properties can be set.
+In diagram, [`Layers`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html) provide a way to change the properties of all shapes that have been assigned to that layer. The following properties can be set.
 
 * Visible
 * Lock
@@ -17,7 +17,7 @@ In diagram, [`Layers`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~S
 
 ## Visible
 
-The layer's [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramLayer~Visible.html) property is used to control the visibility of the elements assigned to the layer.
+The layer's [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Visible) property is used to control the visibility of the elements assigned to the layer.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -84,7 +84,7 @@ The layer's [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~
 
 ## Lock
 
-The layer's [`Lock`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramLayer~Lock.html) property is used to prevent or allow changes to the elements dimension and position.
+The layer's [`Lock`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Lock) property is used to prevent or allow changes to the elements dimension and position.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -153,7 +153,7 @@ The layer's [`Lock`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syn
 
 ## Objects
 
-The layer's [`Objects`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramLayer~Objects.html) property defines the diagram elements to the layer.
+The layer's [`Objects`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Objects) property defines the diagram elements to the layer.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -221,7 +221,7 @@ The layer's [`Objects`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~
 
 ## AddInfo
 
-The [`AddInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramLayer~AddInfo.html) property of layers allow you to maintain additional information to the layers.
+The [`AddInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_AddInfo) property of layers allow you to maintain additional information to the layers.
 
 The following code illustrates how to add additional information to the layers.
 
@@ -295,9 +295,9 @@ The following code illustrates how to add additional information to the layers.
 
 ### Add layer at runtime
 
-Layers can be added at runtime by using the [`AddLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~AddLayer.html) public method.
+Layers can be added at runtime by using the [`AddLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddLayer_Syncfusion_Blazor_Diagrams_DiagramLayer_System_Object_) public method.
 
-The layer's [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramLayer~Id.html) property defines the ID of the layer, and its further used to find the layer at runtime and do any customization.
+The layer's [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Id) property defines the ID of the layer, and its further used to find the layer at runtime and do any customization.
 
 The following code illustrates how to add a layer.
 
@@ -337,7 +337,7 @@ The following code illustrates how to add a layer.
 
 ### Remove layer at runtime
 
-Layers can be removed at runtime by using the [`RemoveLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~RemoveLayer.html) public method.
+Layers can be removed at runtime by using the [`RemoveLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_RemoveLayer_System_String_) public method.
 
 The following code illustrates how to remove a layer.
 
@@ -351,7 +351,7 @@ The following code illustrates how to remove a layer.
 
 ### MoveObjects
 
-Objects of the layers can be moved by using the [`MoveObjects`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~MoveObjects.html) public method.
+Objects of the layers can be moved by using the [`MoveObjects`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_MoveObjects_System_Collections_Generic_List_System_String__System_String_) public method.
 
 The following code illustrates how to move objects from one layer to another layer from the diagram.
 
@@ -364,7 +364,7 @@ The following code illustrates how to move objects from one layer to another lay
 
 ### BringLayerForward
 
-Layers can be moved forward at runtime by using the [`BringLayerForward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~BringLayerForward.html) public method.
+Layers can be moved forward at runtime by using the [`BringLayerForward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringLayerForward_System_String_) public method.
 
 The following code illustrates how to bring forward to layer.
 
@@ -377,7 +377,7 @@ The following code illustrates how to bring forward to layer.
 
 ### SendLayerBackward
 
-Layers can be moved backward at runtime by using the [`SendLayerBackward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~SendLayerBackward.html) public method.
+Layers can be moved backward at runtime by using the [`SendLayerBackward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SendLayerBackward_System_String_) public method.
 
 The following code illustrates how to send backward to layer.
 
@@ -390,7 +390,7 @@ The following code illustrates how to send backward to layer.
 
 ### CloneLayer
 
-Layers can be cloned with its object by using the [`CloneLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~CloneLayer.html) public method.
+Layers can be cloned with its object by using the [`CloneLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_CloneLayer_System_String_) public method.
 
 The following code illustrates how to bring forward to layer.
 
@@ -402,7 +402,7 @@ The following code illustrates how to bring forward to layer.
 
 ### GetActiveLayer
 
-To get the active layers back in diagram, use the [`GetActiveLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~GetActiveLayer.html) public method.
+To get the active layers back in diagram, use the [`GetActiveLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_GetActiveLayer) public method.
 
 The following code illustrates how to bring forward to layer.
 
@@ -414,7 +414,7 @@ The following code illustrates how to bring forward to layer.
 
 ### SetActiveLayer
 
-Set the active layer by using the [`SetActiveLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~SetActiveLayer.html) public method.
+Set the active layer by using the [`SetActiveLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SetActiveLayer_System_String_) public method.
 
 The following code illustrates how to bring forward to layer.
 

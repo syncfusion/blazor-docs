@@ -77,7 +77,7 @@ The following another code example shows how the virtualization can be enabled f
 Diagram.Constraints = DiagramConstraints.Default | DiagramConstraints.Virtualization;
 ```
 
-For more information about diagram constraints, refer to the [`DiagramConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramConstraints.html).
+For more information about diagram constraints, refer to the [`DiagramConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConstraints.html).
 
 >**Note** : By default, the following constraints are enabled in the diagram,
 >* UndoRedo
@@ -174,7 +174,7 @@ The following another code example shows how the tooltip can be enabled for the 
 node.Constraints = NodeConstraints.Default | NodeConstraints.Tooltip;
 ```
 
-For more information about node constraints, refer to the [`NodeConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.NodeConstraints.html).
+For more information about node constraints, refer to the [`NodeConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html).
 
 >**Note** : By default, the following constraints are enabled for the node,
 >* Select
@@ -261,7 +261,7 @@ The following another code example shows how the tooltip can be enabled for the 
 connector.Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip;
 ```
 
-For more information about connector constraints, refer to the [`ConnectorConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.ConnectorConstraints.html).
+For more information about connector constraints, refer to the [`ConnectorConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.ConnectorConstraints.html).
 
 >**Note** : By default, the following constraints are enabled for the connector,
 >* Select
@@ -344,7 +344,7 @@ The following another code example shows to modify the port constraints to accep
 port.Constraints = PortConstraints.InConnect;
 ```
 
-For more information about port constraints, refer to the [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.PortConstraints.html).
+For more information about port constraints, refer to the [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html).
 
 >**Note** : By default, the following constraints are enabled for the port,
 >* InConnect
@@ -418,7 +418,7 @@ The following another code example shows how to enable the selection and draggin
 annotation.Constraints = AnnotationConstraints.Select | AnnotationConstraints.Drag;
 ```
 
-For more details about annotation constraints, refer to the [`AnnotationConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.AnnotationConstraints.html).
+For more details about annotation constraints, refer to the [`AnnotationConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationConstraints.html).
 
 >**Note** : The annotation constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [`Bitwise Operations`](#bitwise-operations).
 
@@ -490,7 +490,7 @@ The following another code example shows how to enable the userhandle functional
 selectedItems.Constraints = SelectorConstraints.All | SelectorConstraints.UserHandle;
 ```
 
-For more information about selector constraints, refer to the [`SelectorConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SelectorConstraints.html).
+For more information about selector constraints, refer to the [`SelectorConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SelectorConstraints.html).
 
 >**Note** : By default, the following constraints are enabled for the selected items,
 >* ResizeAll
@@ -552,7 +552,7 @@ The following code shows how to show only horizontal gridlines.
 }
 ```
 
-For more information about snap constraints, refer to the [`SnapConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SnapConstraints.html).
+For more information about snap constraints, refer to the [`SnapConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SnapConstraints.html).
 
 >**Note** : By default, the following constraints are enabled for the snap functionality in the diagram,
 >* ShowLines
@@ -606,7 +606,7 @@ The following code shows how to limit the interaction done inside a diagram with
 }
 ```
 
-For more information about selector constraints, refer to the [`BoundaryConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.BoundaryConstraints.html).
+For more information about selector constraints, refer to the [`BoundaryConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BoundaryConstraints.html).
 
 >**Note** : By default, the following boundary constraints are enabled for the snap functionality in the diagram,
 >* Diagram

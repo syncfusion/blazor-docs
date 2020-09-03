@@ -11,7 +11,7 @@ To learn about annotation constraints, refer to the [`Annotation Constraints`](.
 
 ## Selecting the annotation
 
-Selection of annotation can be enabled by using the [`Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation~Constraints.html) property of `Annotation` and setting its value to [`AnnotationConstraints.Select`].
+Selection of annotation can be enabled by using the [`Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Constraints) property of `Annotation` and setting its value to [`AnnotationConstraints.Select`].
 
 The following code snippet explains how the select constraints are enabled for annotation.
 
@@ -183,7 +183,7 @@ The following code snippet explains how the Resize constraints are enabled for a
 
 ### How to restrict the dragging area
 
-The diagram control now supports defining the [`DragLimit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.AnnotationModel~DragLimit.html) to the label when dragging from the connector and also update the position to the nearest segment offset.
+The diagram control now supports defining the [`DragLimit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) to the label when dragging from the connector and also update the position to the nearest segment offset.
 
 You can set the value to dragLimit left, right, top, and bottom properties that allows dragging of connector labels to a certain limit based on the user defined values.
 

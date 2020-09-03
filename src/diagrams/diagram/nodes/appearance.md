@@ -6,9 +6,9 @@ description: "How to change the appearance of the node"
 
 # Appearance
 
-* The appearance of a node can be customized by changing its [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~Fill.html) color, [`BorderColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~BorderColor.html), [`BorderWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~BorderWidth.html), and [`Shadow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~Shadow.html).
+* The appearance of a node can be customized by changing its [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html) color, [`BorderColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html), [`BorderWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html), and [`Shadow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shadow).
 
-* The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~Visible.html) property of the node enables or disables the visibility of the node.
+* The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Visible) property of the node enables or disables the visibility of the node.
 
 The following code shows how to customize the appearance of the shape.
 
@@ -44,7 +44,7 @@ The following code shows how to customize the appearance of the shape.
 
 ## Gradient
 
-The [`Gradient`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.GradientModel.html) property of the node allows you to define and apply the gradient effect to the node.
+The [`Gradient`](https://help.syncfusion.com/cr/blazor) property of the node allows you to define and apply the gradient effect to the node.
 
 The gradient stop property defines the color and a position, where the previous color transition ends and a new color transition starts.
 
@@ -58,7 +58,7 @@ There are two types of gradients as follows:
 
 ### Linear gradient
 
-* [`LinearGradient`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.LinearGradientModel.html) defines a smooth transition between a set of colors (so-called stops) in a line.
+* [`LinearGradient`](https://help.syncfusion.com/cr/blazor) defines a smooth transition between a set of colors (so-called stops) in a line.
 
 * A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
@@ -107,7 +107,7 @@ There are two types of gradients as follows:
 
 ### Radial gradient
 
-* [`RadialGradient`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.RadialGradientModel.html) defines a smooth transition between stops on a circle.
+* [`RadialGradient`](https://help.syncfusion.com/cr/blazor) defines a smooth transition between stops on a circle.
 
 * A radial gradient’s Cx, Cy, Fx, Fy properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
@@ -162,7 +162,7 @@ There are two types of gradients as follows:
 
 ## Shadow
 
-Diagram provides support to add [`Shadow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~Shadow.html) effect to a node that is disabled, by default. It can be enabled with the
+Diagram provides support to add [`Shadow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shadow) effect to a node that is disabled, by default. It can be enabled with the
 constraints property of the node. The following code shows how to draw shadow.
 
 ```csharp
@@ -199,7 +199,7 @@ constraints property of the node. The following code shows how to draw shadow.
 
 ### Customizing shadow
 
-The [`Angle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramShadow~Angle.html), [`Distance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramShadow~Distance.html), and [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramShadow~Opacity.html) of the shadow can be customized with the shadow property of the node. The following code
+The [`Angle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Angle), [`Distance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Distance), and [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Opacity) of the shadow can be customized with the shadow property of the node. The following code
 example illustrates how to customize shadow.
 
 ```csharp
@@ -246,7 +246,7 @@ Diagram provides support to describe the state of the node. i.e., the node is ex
 
 >Note: Icon can be created only when the node has outEdges.
 
-* To explore the properties of expand and collapse icon, refer to [`ExpandIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~ExpandIcon.html) and [`CollapseIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~CollapseIcon.html).
+* To explore the properties of expand and collapse icon, refer to [`ExpandIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_ExpandIcon) and [`CollapseIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_CollapseIcon).
 
 * The ExpandIcon’s and CollapseIcon’s shape properties allow you to define the shape of the icon.
 
@@ -322,10 +322,10 @@ The following code example shows how to create an icon of various shapes.
 
 ### Customizing collapse icon
 
-* Set the borderColor, borderWidth, background color for an collapseIcon using the [`BorderColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.NodeCollapseIcon~BorderColor.html), [`BorderWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.NodeCollapseIcon~BorderWidth.html), and [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.NodeCollapseIcon~Fill.html) properties.
+* Set the borderColor, borderWidth, background color for an collapseIcon using the [`BorderColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeCollapseIcon.html#Syncfusion_Blazor_Diagrams_NodeCollapseIcon_BorderColor), [`BorderWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeCollapseIcon.html#Syncfusion_Blazor_Diagrams_NodeCollapseIcon_BorderWidth), and [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeCollapseIcon.html#Syncfusion_Blazor_Diagrams_NodeCollapseIcon_Fill) properties.
 
-* Set a size for collapseIcon by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.NodeCollapseIcon~Width.html) and
-[`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.NodeCollapseIcon~Height.html) properties.
+* Set a size for collapseIcon by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeCollapseIcon.html#Syncfusion_Blazor_Diagrams_NodeCollapseIcon_Width) and
+[`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeCollapseIcon.html#Syncfusion_Blazor_Diagrams_NodeCollapseIcon_Height) properties.
 
 * Like expand icon, collapse icon also can be aligned relative to the node boundaries. It has Margin, Offset, HorizontalAlignment, and VerticalAlignment settings. It is quite tricky when all four alignments are used together but gives you more control over alignment.
 
@@ -335,7 +335,7 @@ The constraints property of the node allows you to enable/disable certain featur
 
 ## Custom properties
 
-The [`AddInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.DiagramNode~AddInfo.html) property of the node allows you to maintain additional information to the node.
+The [`AddInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_AddInfo) property of the node allows you to maintain additional information to the node.
 
 The following code shows how to set the `AddInfo` value.
 
@@ -437,7 +437,7 @@ The following code illustrates how to render a node based on the stack order.
 
 ## Data flow
 
-You can find the flow in the diagram by using the [`GetEdges`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Diagrams.SfDiagram~GetEdges.html) method. In this method, you can find what are all the connectors that are connected to the node.
+You can find the flow in the diagram by using the [`GetEdges`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_GetEdges_System_String_System_Boolean_) method. In this method, you can find what are all the connectors that are connected to the node.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams

@@ -1,7 +1,7 @@
 # Customize the step value and hide spin buttons
 
-The spin buttons allows you to increase or decrease the value with the predefined [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfNumericTextBox%601~Step.html)
-value. The visibility of spin buttons can be set using the [ShowSpinButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfNumericTextBox%601~ShowSpinButton.html) property.
+The spin buttons allows you to increase or decrease the value with the predefined [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Step)
+value. The visibility of spin buttons can be set using the [ShowSpinButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_ShowSpinButton) property.
 
 ```csharp
 @using Syncfusion.Blazor.Inputs

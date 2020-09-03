@@ -7,7 +7,7 @@ description: "Explains how to control the read-only state of the text box compon
 # Set the read-only TextBox
 
 The following example demonstrates how to set `Readonly` in TextBox Component.
-You can achieve this by using [Readonly](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion~Syncfusion.Calendars.DatePicker~Readonly.html) property.
+You can achieve this by using [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property.
 
 ```csharp
 @using Syncfusion.Blazor.Inputs

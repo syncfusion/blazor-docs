@@ -93,7 +93,7 @@ The output will be as follows.
 
 ## Range validation
 
-You can set the minimum and maximum range of values in the NumericTextBox using the [`Min`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfNumericTextBox%601~Min.html) and [`Max`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfNumericTextBox%601~Max.html) properties, so the numeric value should be in the min and max range.
+You can set the minimum and maximum range of values in the NumericTextBox using the [`Min`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Min) and [`Max`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Max) properties, so the numeric value should be in the min and max range.
 
 The following example demonstrates range validation.
 
@@ -107,7 +107,7 @@ The output will be as follows.
 
 ## Formatting the value
 
-Users can set the format of the NumericTextBox component using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfNumericTextBox%601~Format.html) property. The value will be displayed in the specified format, when the component is in focused out state.
+Users can set the format of the NumericTextBox component using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Format) property. The value will be displayed in the specified format, when the component is in focused out state.
 
 The following example demonstrates format the value by using currency format value `c2`.
 
@@ -121,8 +121,8 @@ The output will be as follows.
 
 ## Precision of numbers
 
-You can restrict the number of decimals to be entered in the NumericTextBox by using the [Decimals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfNumericTextBox%601~Decimals.html)
-and [ValidateDecimalOnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfNumericTextBox%601~ValidateDecimalOnType.html) properties.
+You can restrict the number of decimals to be entered in the NumericTextBox by using the [Decimals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Decimals)
+and [ValidateDecimalOnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_ValidateDecimalOnType) properties.
 So, you cannot enter the number whose precision is greater than the mentioned decimals.
 
 * If `ValidateDecimalOnType` is false, number of decimals will not be restricted. Else, number of decimals will be restricted while typing in the NumericTextBox.

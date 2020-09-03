@@ -6,7 +6,7 @@ description: "Different mask configuration in masked textbox"
 
 # Mask Configuration
 
-The [Mask](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.MaskedTextBoxModel~Mask.html) is a combination of standard and custom mask elements that validates the user input based on its behavior.
+The [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.MaskedTextBoxModel.html#Syncfusion_Blazor_Inputs_MaskedTextBoxModel_Mask) is a combination of standard and custom mask elements that validates the user input based on its behavior.
 
 > When the mask value is empty, the MaskedTextBox behaves as an input element with text type.
 
@@ -56,7 +56,7 @@ Other than the above standard mask elements, the mask can be configured with th
 ### Custom characters
 
 You can define any of the non-mask element as the mask element
-and its behavior through the [CustomCharacters](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfMaskedTextBox~CustomCharacters.html) property.
+and its behavior through the [CustomCharacters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CustomCharacters) property.
 
 In the following example, non-mask element `P` accepts the values `P, A, p, a`, and `M` accepts the values `M, m`  as mentioned in the custom characters collection.
 
@@ -97,7 +97,7 @@ The output will be as follows.
 ## Prompt character
 
 The Prompt character is a prompting symbol in the MaskedTextBox for the mask elements. The symbol is used to show the input positions in the MaskedTextBox. You can customize the prompt character of MaskedTextBox
-by using the [PromptChar](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfMaskedTextBox~PromptChar.html) property.
+by using the [PromptChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_PromptChar) property.
 
 The following example demonstrates the MaskedTextBox with customized prompt character as `#`.
 

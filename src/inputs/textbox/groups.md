@@ -143,7 +143,7 @@ The output will be as follows.
 
 ## Multi-line input with floating label
 
-The following example demonstrates how to set [Multiline](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfTextBox~Multiline.html) in the `TextBox` component with float label structure.
+The following example demonstrates how to set [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) in the `TextBox` component with float label structure.
 
 ```csharp
 @using Syncfusion.Blazor.Inputs

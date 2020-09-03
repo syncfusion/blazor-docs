@@ -1,6 +1,6 @@
 # Customize the UI appearance of the component
 
-The appearance of the MaskedTextBox can be changed by adding custom [CssClass](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfMaskedTextBox~CssClass.html) to the component and enabling styles.
+The appearance of the MaskedTextBox can be changed by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CssClass) to the component and enabling styles.
 Refer to the following example to change the appearance of the MaskedTextBox.
 
 ```csharp

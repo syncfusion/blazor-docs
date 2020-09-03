@@ -9,7 +9,7 @@ description: "Explains various sources to file upload such as drag and drop (cus
 ## Directory upload
 
 The uploader component allows you to upload all files in the folders to server by using
-the [DirectoryUpload](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.UploaderModel~DirectoryUpload.html) property. When this property is enabled,
+the [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DirectoryUpload) property. When this property is enabled,
 the uploader component processes the files by iterating through the files and sub-directories in a directory.
 It allows you to select only folders instead of files to upload.
 
@@ -146,7 +146,7 @@ By default, the uploader component act as drop area element. The drop area gets 
 
 ### Custom drop area
 
-The uploader component allows you to set external target element as drop area using the [DropArea](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.UploaderModel~DropArea.html) property. The element can be represented as HTML element or element’s ID.
+The uploader component allows you to set external target element as drop area using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DropArea) property. The element can be represented as HTML element or element’s ID.
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 

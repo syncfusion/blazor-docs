@@ -89,7 +89,7 @@ The output will be as follows.
 
 ## Set the mask
 
-You can set the mask to the MaskedTextBox to validate the user input by using the [Mask](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.MaskedTextBoxModel~Mask.html) property.
+You can set the mask to the MaskedTextBox to validate the user input by using the [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.MaskedTextBoxModel.html#Syncfusion_Blazor_Inputs_MaskedTextBoxModel_Mask) property.
 The following example demonstrates the usage of mask element `0` that allows any single digit from `0` to `9`.
 
 ```csharp

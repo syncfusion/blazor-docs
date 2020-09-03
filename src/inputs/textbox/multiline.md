@@ -10,7 +10,7 @@ This feature allows the textbox to accept one or more lines of text like address
 
 ## Create multiline textbox
 
-You can convert the default textbox into the multiline textbox by setting the [Multiline](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfTextBox~Multiline.html) API value as true or pass HTML5 textarea as element to the textbox.
+You can convert the default textbox into the multiline textbox by setting the [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) API value as true or pass HTML5 textarea as element to the textbox.
 
 > The multiline text box allows you to resize it in vertical direction alone.
 
@@ -34,7 +34,7 @@ The output will be as follows.
 
 ## Implementing floating label
 
-You can achieve the floating label behavior in the multiline text box by setting [FloatLabelType](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfTextBox~FloatLabelType.html) to 'Auto'. The Placeholder text act as floating label to the multiline textbox. You can provide the Placeholder text to the multiline textbox either by using the [Placeholder](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfTextBox~Placeholder.html) property or Placeholder attribute.
+You can achieve the floating label behavior in the multiline text box by setting [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) to 'Auto'. The Placeholder text act as floating label to the multiline textbox. You can provide the Placeholder text to the multiline textbox either by using the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Placeholder) property or Placeholder attribute.
 
 ```csharp
 @using Syncfusion.Blazor.Inputs

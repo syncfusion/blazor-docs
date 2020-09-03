@@ -7,7 +7,7 @@ description: "Explains how to disable the user interaction on the text box compo
 # Set the disabled state
 
 To disable the TextBox, use its
-[Enabled](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Inputs.SfTextBox~Enabled.html)
+[Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Enabled)
 property.
 
 The following example demonstrates the TextBox in

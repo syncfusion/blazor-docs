@@ -6,7 +6,7 @@ description: "Custom formats in numeric textbox"
 
 # Number Formats
 
-You can format the value of NumericTextBox using the [Format](https://help.syncfusion.com/cr/blazor/SfNumericTextBox.Blazor~SfNumericTextBox.Blazor.Inputs.SfNumericTextBox%601~Format.html) property.
+You can format the value of NumericTextBox using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property.
 The value will be displayed in the specified format when the component is in focused out state. The format string
 supports both the standard numeric format string and custom numeric format string.
 

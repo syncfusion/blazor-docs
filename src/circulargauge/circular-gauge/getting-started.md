@@ -73,7 +73,7 @@ After the successful compilation of your application, press F5 to run the applic
 
 ## Set pointer value
 
-You can change the pointer value in the above sample using the [`Value`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugePointer~Value.html) property in [`CircularGaugePointer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugePointer_members.html).
+You can change the pointer value in the above sample using the [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Value) property in [`CircularGaugePointer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html).
 
 > In Circular Gauge, you can configure multiple axes. On each axis, you can add a pointer.
 

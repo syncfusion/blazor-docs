@@ -4,7 +4,7 @@ Annotations are used to mark a specific area of interest in the Circular Gauge w
 
 ## Customization
 
-You can place any custom element on the axis area using [`ContentTemplate`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation~ContentTemplate.html) in the [`CircularGaugeAnnotation`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation_members.html).
+You can place any custom element on the axis area using [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_ContentTemplate) in the [`CircularGaugeAnnotation`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html).
 
 ```csharp
 @using Syncfusion.Blazor.CircularGauge
@@ -42,7 +42,7 @@ You can place any custom element on the axis area using [`ContentTemplate`](http
 
 ## Positioning the annotation
 
-Annotations can be placed around an axis using the [`Radius`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation~Radius.html) and [`Angle`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation~Angle.html) properties.
+Annotations can be placed around an axis using the [`Radius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_Radius) and [`Angle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_Angle) properties.
 For example, if the angle is 90 degrees and the radius is 110%, then the annotation will be placed at the right of the axis.
 
 The radius of an annotation takes values either in pixel or in percentage. By setting value in percentage, annotation gets its position with respect to its axis radius.
@@ -85,7 +85,7 @@ The radius of an annotation takes values either in pixel or in percentage. By se
 
 ## Multiple annotations
 
-Using [`CircularGaugeAnnotation`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation_members.html), you can add multiple annotations to the circular gauge and each annotation content can be customized separately.
+Using [`CircularGaugeAnnotation`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html), you can add multiple annotations to the circular gauge and each annotation content can be customized separately.
 
 ```csharp
 @using Syncfusion.Blazor.CircularGauge

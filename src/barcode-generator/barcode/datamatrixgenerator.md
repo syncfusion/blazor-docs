@@ -21,7 +21,7 @@ DataMatrix Barcode is a two dimensional barcode that consists of a grid of dark 
 
 ## Customizing the Barcode color
 
-A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases the barcode can also be customized to suit the needs. You can achieve this by using the [`Forecolor`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.BarcodeGenerator.DataMatrixGeneratorModel~ForeColor.html) property .
+A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases the barcode can also be customized to suit the needs. You can achieve this by using the [`Forecolor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_ForeColor) property .
 
 ```csharp
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -34,7 +34,7 @@ A page or printed media with barcode often appears colorful in the background an
 
 ## Customizing the Barcode dimension
 
-The dimension of the barcode can be changed using the [`Height`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.BarcodeGenerator.DataMatrixGeneratorModel~Height.html) and [`Width`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.BarcodeGenerator.DataMatrixGeneratorModel~Width.html) property of the barcode generator.
+The dimension of the barcode can be changed using the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_Height) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_Width) property of the barcode generator.
 
 ```csharp
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -45,7 +45,7 @@ The dimension of the barcode can be changed using the [`Height`](https://help.sy
 
 ## Customizing the text
 
-In barcode generators you can customize the barcode text by using the display [`Text`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.BarcodeGenerator.DataMatrixGeneratorDisplayText~Text.html) property .
+In barcode generators you can customize the barcode text by using the display [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.DataMatrixGeneratorDisplayText.html#Syncfusion_Blazor_BarcodeGenerator_DataMatrixGeneratorDisplayText_Text) property .
 
 ```csharp
 @using Syncfusion.Blazor.BarcodeGenerator

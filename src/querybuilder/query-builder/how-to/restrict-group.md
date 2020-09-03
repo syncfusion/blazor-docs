@@ -6,7 +6,7 @@ description: "Restrict the group support in Blazor Query Builder control."
 
 # Restrict the groups
 
-You can restrict the groups by defining the [`MaxGroupCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.QueryBuilder.SfQueryBuilder~MaxGroupCount.html) property. By default, the value is 5. In the below demo, the `MaxGroupCount` is set to 2 .
+You can restrict the groups by defining the [`MaxGroupCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_MaxGroupCount) property. By default, the value is 5. In the below demo, the `MaxGroupCount` is set to 2 .
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder

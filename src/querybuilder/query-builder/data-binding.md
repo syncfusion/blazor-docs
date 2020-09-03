@@ -6,11 +6,11 @@ description: "Learn how to bind local data in the Blazor Query Builder control."
 
 # Data binding
 
-The Query Builder uses `DataManager` to bind the dataSource which supports both RESTful JSON data services binding and local object binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.QueryBuilder.SfQueryBuilder~DataSource.html) property can be assigned either with the instance of `DataManager` or object collection.
+The Query Builder uses `DataManager` to bind the dataSource which supports both RESTful JSON data services binding and local object binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property can be assigned either with the instance of `DataManager` or object collection.
 
 ## Local data
 
-To bind local data to the Query Builder, you can assign the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.QueryBuilder.SfQueryBuilder~DataSource.html) property  with a list of object.
+To bind local data to the Query Builder, you can assign the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property  with a list of object.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
@@ -58,7 +58,7 @@ Output will be shown as
 
 ## Remote Data
 
-To bind remote data to Query Builder component, assign service data as an instance of SfDataManager to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.QueryBuilder.SfQueryBuilder~DataSource.html) property or by using `SfDataManager` component. To interact with remote data source, provide the endpoint `Url`.Refer to the following code example for remote Data binding using `OData` service.
+To bind remote data to Query Builder component, assign service data as an instance of SfDataManager to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property or by using `SfDataManager` component. To interact with remote data source, provide the endpoint `Url`.Refer to the following code example for remote Data binding using `OData` service.
 
 ```csharp
 

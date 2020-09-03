@@ -10,7 +10,7 @@ Importing allows you to view or edit the predefined conditions which is availabl
 
 ## Initial rendering
 
-To apply conditions initially, you can define the [`Rule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.QueryBuilder.SfQueryBuilder~rule.html). Here, you can import structured JSON object by defining the [`Rule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.QueryBuilder.SfQueryBuilder~rule.html) property.
+To apply conditions initially, you can define the [`Rule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Rule). Here, you can import structured JSON object by defining the [`Rule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Rule) property.
 
 ```csharp
 
@@ -65,7 +65,7 @@ Output will be shown as
 
 ### Importing from JSON
 
-You can set the conditions from structured JSON object through the [`SetRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.QueryBuilder.SfQueryBuilder~SetRules.html) method.
+You can set the conditions from structured JSON object through the [`SetRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SetRules_Syncfusion_Blazor_QueryBuilder_RuleModel_) method.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
@@ -125,7 +125,7 @@ Output will be shown as
 
 ### Importing from SQL
 
-You can set the conditions from SQL query through the [`SetRulesFromSql`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.QueryBuilder.SfQueryBuilder~SetRulesFromSql.html) method.
+You can set the conditions from SQL query through the [`SetRulesFromSql`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SetRulesFromSql_System_String_) method.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
@@ -179,11 +179,11 @@ Exporting allows you to save or maintain the created conditions through the Quer
 
 ## Exporting to JSON
 
-You can export the defined conditions to structured JSON object through the [`GetValidRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.QueryBuilder.SfQueryBuilder~GetValidRules.html) method.
+You can export the defined conditions to structured JSON object through the [`GetValidRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_GetValidRules_Syncfusion_Blazor_QueryBuilder_RuleModel_) method.
 
 ## Exporting to SQL
 
-You can export the defined conditions to SQL query through the [`GetRulesFromSql`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.QueryBuilder.SfQueryBuilder~GetRulesFromSql.html) method.
+You can export the defined conditions to SQL query through the [`GetRulesFromSql`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_GetRulesFromSql_System_String_) method.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder

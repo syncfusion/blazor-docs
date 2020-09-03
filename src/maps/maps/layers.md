@@ -38,7 +38,7 @@ In this example, the United States map shape is used as shape data by utilizing 
 
 ## Displaying layer in the view
 
-In Maps, you can load multiple shape files. Using the [`BaseLayerIndex`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Base~LoadCldrData.html) property, you can select a layer to display on user interface.
+In Maps, you can load multiple shape files. Using the [`BaseLayerIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~BaseLayerIndex.html) property, you can select a layer to display on user interface.
 
 In this example, we have loaded two layers with the World map and the United States map shape data and selected a layer using the `BaseLayerIndex` property to show that layer on the web page.
 
@@ -58,7 +58,7 @@ In this example, we have loaded two layers with the World map and the United Sta
 
 ![Maps with multiple layer](./images/Layers/multi-layer.png)
 
-If you set the [`BaseLayerIndex`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Base~LoadCldrData.html) value to 0, the world map will be loaded.
+If you set the [`BaseLayerIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~BaseLayerIndex.html) value to 0, the world map will be loaded.
 
 This concept is used in the Maps drill-down feature, so the corresponding shape will be loaded when clicking a shape of the maps.
 

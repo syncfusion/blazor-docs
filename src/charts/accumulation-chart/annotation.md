@@ -38,7 +38,7 @@ Specifies the coordinate units of an annotation either in `Pixel` or `Point`.
 
 ## Alignment
 
-The annotations can be moved vertically and horizontally from its default position by using [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationAnnotationSettingsModel.html) or [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationAnnotationSettingsModel.html) properties. The `VerticalAlignment` provides options to move the content to `Top`, `Bottom` or `Middle` and the `HorizontalAlignment` mouses the content to `Near`, `Far` or `Center`.
+The annotations can be moved vertically and horizontally from its default position by using [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationAnnotationSettingsModel.html) or [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationAnnotationSettingsModel.html) properties. The `VerticalAlignment` provides options to move the content to `Top`, `Bottom` or `Middle` and the `HorizontalAlignment` mouses the content to `Near`, `Far` or `Center`.
 
 {% aspTab template="chart/accumulation-charts/annotation/alignment", sourceFiles="alignment.razor" %}
 

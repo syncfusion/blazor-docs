@@ -85,7 +85,7 @@ Now, add the Syncfusion Blazor components in any web page (razor) in the Pages f
 
 ## Populate Stock Chart with Data
 
-To bind data for the Stock Chart component, you can assign a list of items to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartSeries~DataSource.html) property. The list can also be provided as an instance of the `DataManager`.
+To bind data for the Stock Chart component, you can assign a list of items to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_DataSource) property. The list can also be provided as an instance of the `DataManager`.
 
 ```csharp
 public class StockChartData
@@ -141,7 +141,7 @@ You can add a title using `Title` property to the Stock Chart to provide quick i
 
 Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position.
 
-Crosshair lines can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartCrosshairSettings~Enable.html) property in the [`Crosshair`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsStockChart~Crosshair.html). Likewise tooltip label for an axis can be enabled by using `Enable` property of `CrosshairTooltip` in the corresponding axis.
+Crosshair lines can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property in the [`Crosshair`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Coefficient). Likewise tooltip label for an axis can be enabled by using `Enable` property of `CrosshairTooltip` in the corresponding axis.
 
 {% aspTab template="stock-chart/getting-started/crosshair", sourceFiles="crosshair.razor" %}
 
@@ -153,7 +153,7 @@ Crosshair lines can be enabled by using [`Enable`](https://help.syncfusion.com/c
 
 Trackball is used to track a data point closest to the mouse or touch position. Trackball marker indicates the closest point and trackball tooltip displays the information about the point.
 
-Trackball can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartCrosshairSettings~Enable.html) property of the `Crosshair` to true and [`Shared`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartTooltipSettings~Shared.html) property in `Tooltip` to true in chart.
+Trackball can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property of the `Crosshair` to true and [`Shared`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Shared) property in `Tooltip` to true in chart.
 
 {% aspTab template="stock-chart/getting-started/trackball", sourceFiles="trackball.razor" %}
 

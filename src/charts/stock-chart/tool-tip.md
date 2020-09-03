@@ -15,7 +15,7 @@ Stock Chart will display details about the points through tooltip, when the mous
 ## Default Tooltip
 
 By default, tooltip is not visible. Enable the tooltip by setting
-[`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartTooltipSettings~Enable.html) property to true .
+[`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Enable) property to true .
 
 {% aspTab template="stock-chart/stockchart-feature/tooltip", sourceFiles="tooltip.razor" %}
 
@@ -37,7 +37,7 @@ By default, tooltip shows information of x and y value in points. In addition to
 
 ## Customize the Appearance of Tooltip
 
-The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartTooltipSettings~Fill.html) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartTooltipSettings~Border.html) properties are used to customize the background color and border of the tooltip respectively. The [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartTooltipSettings~TextStyle.html) property in the tooltip is used to customize the font of the tooltip text.
+The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Border) properties are used to customize the background color and border of the tooltip respectively. The [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_TextStyle) property in the tooltip is used to customize the font of the tooltip text.
 
 {% aspTab template="stock-chart/stockchart-feature/customtooltip", sourceFiles="customtooltip.razor" %}
 

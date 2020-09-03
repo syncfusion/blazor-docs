@@ -10,7 +10,7 @@ description: "We can customize stock chart appearance by using title and tooltip
 
 ## Stock Chart Title
 
-Stock Chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartModel~Title.html) property, to show the information
+Stock Chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property, to show the information
 about the data plotted.
 
 {% aspTab template="stock-chart/appearance/title", sourceFiles="title.razor" %}

@@ -18,8 +18,8 @@ As like a chart, the legend is also available for accumulation charts, which giv
 
 ## Position and Alignment
 
-By using the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartLegendSettings~Position.html) property, you can position the legend at the `Left`, `Right`, `Top` or `Bottom` of the chart.
-You can also align the legend to `Center`, `Far` or `Near` to the chart using the [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartLegendSettings~Alignment.html) property.
+By using the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Position) property, you can position the legend at the `Left`, `Right`, `Top` or `Bottom` of the chart.
+You can also align the legend to `Center`, `Far` or `Near` to the chart using the [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Alignment) property.
 
 {% aspTab template="chart/accumulation-charts/legend/position", sourceFiles="position.razor" %}
 
@@ -29,7 +29,7 @@ You can also align the legend to `Center`, `Far` or `Near` to the chart usi
 
 ## Legend Shape
 
-To change the legend icon, use the [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartSeries~LegendShape.html) property in the `Series`. By default, legend icon is `SeriesType`.
+To change the legend icon, use the [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_LegendShape) property in the `Series`. By default, legend icon is `SeriesType`.
 
 {% aspTab template="chart/accumulation-charts/legend/legend-shape", sourceFiles="legend-shape.razor" %}
 
@@ -39,7 +39,7 @@ To change the legend icon, use the [`LegendShape`](https://help.syncfusion.com/
 
 ## Legend Size
 
-The legend size can be changed by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartLegendSettings~Width.html) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartLegendSettings~Height.html) properties of the `LegendSettings`.
+The legend size can be changed by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Height) properties of the `LegendSettings`.
 
 {% aspTab template="chart/accumulation-charts/legend/size", sourceFiles="size.razor" %}
 
@@ -49,7 +49,7 @@ The legend size can be changed by using the [`Width`](https://help.syncfusion.co
 
 ## Legend Item Size
 
-You can customize the size of the legend items by using the [`ShapeHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartLegendSettings~ShapeHeight.html) and [`ShapeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartLegendSettings~ShapeWidth.html) properties.
+You can customize the size of the legend items by using the [`ShapeHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeHeight) and [`ShapeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeWidth) properties.
 
 {% aspTab template="chart/accumulation-charts/legend/item-size", sourceFiles="item-size.razor" %}
 

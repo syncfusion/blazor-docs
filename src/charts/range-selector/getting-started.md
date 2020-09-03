@@ -82,7 +82,7 @@ Now, add the Syncfusion Blazor components in any web page (razor) in the Pages f
 ## Populate Range Navigator with Data
 
 To bind data for the Range Navigator component, you can assign a IEnumerable object to
-the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorSeries~DataSource.html) property. The list can also be provided as an instance of the **DataManager**.
+the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. The list can also be provided as an instance of the **DataManager**.
 
 ```csharp
 public class StockPrice
@@ -102,7 +102,7 @@ public List<StockPrice> StockDetails = new List<StockPrice>
         };
 ```
 
-Now map the field names `Date` and `Close` in the data to the [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorSeries~XName.html) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorSeries~YName.html) properties of the range navigator series, then set the StockDetails to [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorSeries~DataSource.html) property.
+Now map the field names `Date` and `Close` in the data to the [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_YName) properties of the range navigator series, then set the StockDetails to [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
 
 ```csharp
 <SfRangeNavigator Value="@Value" ValueType="Syncfusion.EJ2.Blazor.Charts.RangeValueType.DateTime" IntervalType="RangeIntervalType.Years" LabelFormat="yyyy">

@@ -41,8 +41,8 @@ Chart can render to its container size. You can set the size inline or through 
 
 ## Size for Bullet Chart
 
-You can also set size for bullet chart directly through [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.BulletChartModel~Width.html) and
-[`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.BulletChartModel~Height.html) properties.
+You can also set size for bullet chart directly through [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartModel.html#Syncfusion_Blazor_Charts_BulletChartModel_Width) and
+[`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartModel.html#Syncfusion_Blazor_Charts_BulletChartModel_Height) properties.
 
 <!-- markdownlint-disable MD036 -->
 **In Pixel**

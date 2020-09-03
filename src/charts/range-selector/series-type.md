@@ -16,7 +16,7 @@ Essential JS 2 Range navigator supports 3 types of series, to render the data.
 
 <!-- markdownlint-disable MD036 -->
 
-To render a step line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorSeries~Type.html) as `Line`. By default line series render in range navigator.
+To render a step line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as `Line`. By default line series render in range navigator.
 
 {% aspTab template="range-navigator/series-type/line", sourceFiles="line.razor" %}
 
@@ -26,7 +26,7 @@ To render a step line series, use series [`Type`](https://help.syncfusion.com/cr
 
 ## Area
 
-To render a area series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorSeries~Type.html) as `Area`
+To render a area series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as `Area`
 
 {% aspTab template="range-navigator/series-type/area", sourceFiles="area.razor" %}
 
@@ -36,7 +36,7 @@ To render a area series, use series [`Type`](https://help.syncfusion.com/cr/blaz
 
 ## StepLine
 
-To render a step line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorSeries~Type.html) as `StepLine`
+To render a step line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as `StepLine`
 
 {% aspTab template="range-navigator/series-type/step", sourceFiles="step.razor" %}
 

@@ -12,7 +12,7 @@ The period selector allows to select a range with specified periods.
 
 ## Periods
 
-An array of objects that allows users to specify a predefined periods. The [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.PeriodsModel~Interval.html) property specifies the count value of the button, and the [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.PeriodsModel~Text.html) property specifies the text to be displayed on button. The [`IntervalType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.PeriodsModel~IntervalType.html) property allows users to customize the type of the interval. The `IntervalType` property supports the following interval types:
+An array of objects that allows users to specify a predefined periods. The [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PeriodsModel.html#Syncfusion_Blazor_Charts_PeriodsModel_Interval) property specifies the count value of the button, and the [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PeriodsModel.html#Syncfusion_Blazor_Charts_PeriodsModel_Text) property specifies the text to be displayed on button. The [`IntervalType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PeriodsModel.html#Syncfusion_Blazor_Charts_PeriodsModel_IntervalType) property allows users to customize the type of the interval. The `IntervalType` property supports the following interval types:
 
 * Auto
 * Years
@@ -32,7 +32,7 @@ An array of objects that allows users to specify a predefined periods. The [`Int
 
 ## Position
 
-The [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorPeriodSelectorSettings~Position.html) property allows users to position the period selector either at the `Top` or `Bottom`.
+The [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriodSelectorSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriodSelectorSettings_Position) property allows users to position the period selector either at the `Top` or `Bottom`.
 
 {% aspTab template="range-navigator/period/position", sourceFiles="position.razor" %}
 
@@ -42,7 +42,7 @@ The [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfus
 
 ## Height
 
-The [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorPeriodSelectorSettings~Height.html) property allows users to specify the height for period selector. The default value of the height property is 43px.
+The [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriodSelectorSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriodSelectorSettings_Height) property allows users to specify the height for period selector. The default value of the height property is 43px.
 
 {% aspTab template="range-navigator/period/height", sourceFiles="height.razor" %}
 
@@ -52,7 +52,7 @@ The [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusio
 
 ## Visibility
 
-[`DisableRangeSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorModel~DisableRangeSelector.html) property allows users to render the period selector without range navigator.
+[`DisableRangeSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorModel.html#Syncfusion_Blazor_Charts_RangeNavigatorModel_DisableRangeSelector) property allows users to render the period selector without range navigator.
 
 {% aspTab template="range-navigator/period/visible", sourceFiles="visible.razor" %}
 

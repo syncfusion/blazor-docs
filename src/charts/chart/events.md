@@ -9,7 +9,7 @@ description: "Learn how to use events in Blazor Data Chart component."
 In this section, we have provided the list of events of the Chart component which will be
 triggered for appropriate Chart actions.
 
-The events should be provided to the Chart using [`ChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents.html) component.
+The events should be provided to the Chart using [`ChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
 
 > From `v17.2.*`, we have added only the limited number of events for the Chart component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
 
@@ -33,7 +33,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnAnimationComplete
 
-[`OnAnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnAnimationComplete.html) event is triggers after animation is completed for the series.
+[`OnAnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAnimationComplete) event is triggers after animation is completed for the series.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -74,7 +74,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnPrint
 
-[`OnPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnPrint.html) event is triggers before the prints gets started.
+[`OnPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPrint) event is triggers before the prints gets started.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -115,7 +115,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnChartMouseClick
 
-[`OnChartMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnChartMouseClick.html) event is triggers on clicking the chart.
+[`OnChartMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnChartMouseClick) event is triggers on clicking the chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -156,7 +156,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnChartMouseDown
 
-[`OnChartMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnChartMouseDown.html) event is triggers on mouse down.
+[`OnChartMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnChartMouseDown) event is triggers on mouse down.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -197,7 +197,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnChartMouseLeave
 
-[`OnChartMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnChartMouseLeave.html) event is triggers when cursor leaves the chart.
+[`OnChartMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnChartMouseLeave) event is triggers when cursor leaves the chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -238,7 +238,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnChartMouseMove
 
-[`OnChartMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnChartMouseMove.html) event is triggers on hovering the chart.
+[`OnChartMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnChartMouseMove) event is triggers on hovering the chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -279,7 +279,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnChartMouseUp
 
-[`OnChartMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnChartMouseUp.html) event is triggers on mouse up.
+[`OnChartMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnChartMouseUp) event is triggers on mouse up.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -320,7 +320,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnDragComplete
 
-[`OnDragComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnDragComplete.html) event is triggers after the drag selection is completed.
+[`OnDragComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDragComplete) event is triggers after the drag selection is completed.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -361,7 +361,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## Loaded
 
-[`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~Loaded.html) event is triggers after chart load.
+[`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Loaded) event is triggers after chart load.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -402,7 +402,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnPointClick
 
-[`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnPointClick.html) event is triggers on point click.
+[`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointClick) event is triggers on point click.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -443,7 +443,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## PointMoved
 
-[`PointMoved`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~PointMoved.html) event is triggers on point move.
+[`PointMoved`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_PointMoved) event is triggers on point move.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -484,7 +484,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## Resized
 
-[`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~Resized.html) event is triggers after resizing of chart.
+[`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Resized) event is triggers after resizing of chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -525,7 +525,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## ScrollChanged
 
-[`ScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~ScrollChanged.html) event is triggers when change the scroll.
+[`ScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ScrollChanged) event is triggers when change the scroll.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -566,7 +566,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnScrollStart
 
-[`OnScrollStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnScrollStart.html) event is triggers when start the scroll.
+[`OnScrollStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollStart) event is triggers when start the scroll.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -607,7 +607,7 @@ scrollStart |[OnScrollStart](events/#onscrollend)
 
 ## OnScrollEnd
 
-[`OnScrollEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartEvents~OnScrollEnd.html) event is triggers after the scroll end.
+[`OnScrollEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollEnd) event is triggers after the scroll end.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

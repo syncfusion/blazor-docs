@@ -30,7 +30,7 @@ Accumulation chart provides support for placing the data label either `Inside` o
 ## Smart Labels
 
 Datalabels will be arranged smartly without overlapping with each other. You can enable or disable this feature using
-the [`EnableSmartLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartModel~EnableSmartLabels.html)
+the [`EnableSmartLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_EnableSmartLabels)
 property.
 
 {% aspTab template="chart/accumulation-charts/datalabel/smartlabels", sourceFiles="smartlabels.razor" %}
@@ -42,7 +42,7 @@ property.
 ## Connector Line
 
 Connector line will be visible when the data label is placed `Outside` the chart.
-The connector line can be customized using the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartConnector~Type.html), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartConnector~Color.html), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartConnector~Width.html), [`Length`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartConnector~Length.html) and [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartConnector~DashArray.html) properties
+The connector line can be customized using the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Type), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Color), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Width), [`Length`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Length) and [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_DashArray) properties
 
 {% aspTab template="chart/accumulation-charts/datalabel/connector", sourceFiles="connector.razor" %}
 

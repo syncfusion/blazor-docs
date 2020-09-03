@@ -10,7 +10,7 @@ description: "Numeric axis used to represent numeric values data in chart. we ca
 
 # Numeric Axis
 
-You can use numeric axis to represent numeric values of data in chart. By default, the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~ValueType.html) of an axis is `Double`.
+You can use numeric axis to represent numeric values of data in chart. By default, the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_ValueType) of an axis is `Double`.
 
 {% aspTab template="chart/axis/double/double", sourceFiles="double.razor" %}
 
@@ -21,8 +21,8 @@ You can use numeric axis to represent numeric values of data in chart. By defaul
 ## Range and Interval
 
 Range for an axis, will be calculated automatically based on the provided data, you can also customize the range
-of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Minimum.html),
-[`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Maximum.html) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Interval.html) property of
+of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Minimum),
+[`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Maximum) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Interval.html) property of
 the axis.
 
 {% aspTab template="chart/axis/double/range", sourceFiles="range.razor" %}
@@ -34,7 +34,7 @@ the axis.
 ## Range Padding
 
 Padding can be applied to the minimum and maximum extremes of the axis range by using the
-[`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~RangePadding.html) property. Numeric axis supports following types of padding.
+[`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) property. Numeric axis supports following types of padding.
 
 * None
 * Round
@@ -44,7 +44,7 @@ Padding can be applied to the minimum and maximum extremes of the axis range by 
 
 **Numeric - None**
 
-When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~RangePadding.html) is set to `None`, minimum and maximum of an axis is based on the data.
+When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to `None`, minimum and maximum of an axis is based on the data.
 
 {% aspTab template="chart/axis/double/none", sourceFiles="none.razor" %}
 
@@ -52,7 +52,7 @@ When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 **Numeric - Round**
 
-When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~RangePadding.html) is set to `Round`, minimum and maximum will be
+When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to `Round`, minimum and maximum will be
 rounded to the nearest possible value divisible by interval. For example, when the minimum is 3.5 and the interval
 is 1, then the minimum will be rounded to 3.
 
@@ -62,7 +62,7 @@ is 1, then the minimum will be rounded to 3.
 
 **Numeric - Additional**
 
-When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~RangePadding.html) is set to `Additional`, interval of an axis will
+When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to `Additional`, interval of an axis will
 be padded to the minimum and maximum of the axis.
 
 {% aspTab template="chart/axis/double/additional", sourceFiles="additional.razor" %}
@@ -71,7 +71,7 @@ be padded to the minimum and maximum of the axis.
 
 **Numeric - Normal**
 
-When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~RangePadding.html) is set to `Normal`, padding is applied to the axis
+When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to `Normal`, padding is applied to the axis
 based on default range calculation.
 
 {% aspTab template="chart/axis/double/normal", sourceFiles="normal.razor" %}
@@ -80,7 +80,7 @@ based on default range calculation.
 
 **Numeric - Auto**
 
-When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~RangePadding.html) is set to `Auto`,horizontal numeric axis takes
+When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to `Auto`,horizontal numeric axis takes
 None as padding calculation, while the vertical numeric axis takes Normal as padding calculation.
 
 {% aspTab template="chart/axis/double/auto", sourceFiles="auto.razor" %}
@@ -91,7 +91,7 @@ None as padding calculation, while the vertical numeric axis takes Normal as pad
 
 **Numeric Label Format**
 
-Numeric labels can be formatted by using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~LabelFormat.html) property.
+Numeric labels can be formatted by using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelFormat) property.
 Numeric labels supports all globalize format.
 
 {% aspTab template="chart/axis/double/label-format", sourceFiles="label-format.razor" %}
@@ -161,7 +161,7 @@ The following table describes the result of applying some commonly used label fo
 
 ## Grouping Separator
 
-To separate groups of thousands, use [`UseGroupingSeparator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~UseGroupingSeparator.html) property in chart.
+To separate groups of thousands, use [`UseGroupingSeparator`](https://help.syncfusion.com/cr/blazor/) property in chart.
 
 {% aspTab template="chart/axis/double/group", sourceFiles="group.razor" %}
 

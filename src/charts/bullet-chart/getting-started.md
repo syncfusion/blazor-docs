@@ -102,7 +102,7 @@ After successful compilation of your application, the Syncfusion Blazor Bullet C
 
 ## Add Title
 
-You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.BulletChartModel~Title.html) property to the Bullet Chart, to provide quick information to the user about the data plotted in the chart.
+You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartModel.html#Syncfusion_Blazor_Charts_BulletChartModel_Title) property to the Bullet Chart, to provide quick information to the user about the data plotted in the chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

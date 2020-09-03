@@ -10,15 +10,15 @@ description: "Chart can be rendered by using different types of data source. The
 
 # Woking with Data
 
-The Chart uses [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.EjsDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DataSource.html) value can be assigned either with the property values from [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.EjsDataManager.html) or list of business objects.
+The Chart uses [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be assigned either with the property values from [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or list of business objects.
 It supports the following kinds of data binding method:
 * List binding
 * Remote data
 
 ## List binding
 
-To bind list to the chart, you can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DataSource.html) property. The list data source can also be provided as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.EjsDataManager.html) or by using [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.EjsDataManager.html) component. Now map the fields in list to
-[`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~XName.html) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~YName.html)
+To bind list to the chart, you can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. The list data source can also be provided as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or by using [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) component. Now map the fields in list to
+[`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~XName.html) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName)
 properties.
 
 {% aspTab template="chart/axis/working-data/local-data", sourceFiles="local-data.razor" %}
@@ -29,7 +29,7 @@ properties.
 
 ## Remote Data
 
-To bind remote data to chart component, assign service data as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.EjsDataManager.html) to the DataSource property or by using EjsDataManager component. To interact with remote data source, provide the endpoint Url.
+To bind remote data to chart component, assign service data as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to the DataSource property or by using EjsDataManager component. To interact with remote data source, provide the endpoint Url.
 
 {% aspTab template="chart/axis/working-data/remote-data", sourceFiles="remote-data.razor" %}
 
@@ -37,11 +37,11 @@ To bind remote data to chart component, assign service data as an instance of [`
 
 ### Binding with OData services
 
-[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.EjsDataManager.html). Refer to the following code example for remote Data binding using **OData** service.
+[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html). Refer to the following code example for remote Data binding using **OData** service.
 
 ### Binding with OData v4 services
 
-The ODataV4 is an improved version of OData protocols, and the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.EjsDataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the **ODataV4Adaptor**.
+The ODataV4 is an improved version of OData protocols, and the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the **ODataV4Adaptor**.
 
 ![Remote Data](images/working-data/remote-data.png)
 
@@ -69,7 +69,7 @@ You can use **WebApiAdaptor** to bind chart with Web API created using [OData](h
 
 ### Enable EjsDataManager after initial rendering
 
-It is possible to render the datasource in Chart after initial rendering. This can be achieved by conditionally enabling the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.EjsDataManager.html) component after Chart rendering.
+It is possible to render the datasource in Chart after initial rendering. This can be achieved by conditionally enabling the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) component after Chart rendering.
 
 The following sample code demonstrates enabling data manager condition in the Chart on button click,
 
@@ -108,7 +108,7 @@ The following sample code demonstrates enabling data manager condition in the Ch
 
 ### Sending additional parameters to the server
 
-To add a custom parameter to the data request. Assign the Query object with additional parameters to the Chart's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Query.html) property.
+To add a custom parameter to the data request. Assign the Query object with additional parameters to the Chart's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Query) property.
 
 The following sample code demonstrates sending parameters using the Query property in the series,
 
@@ -131,7 +131,7 @@ The following sample code demonstrates sending parameters using the Query proper
 
 ### Change Query parameter value dynamically
 
-It is possible to dynamically modify Chart's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Query.html) property value.
+It is possible to dynamically modify Chart's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Query) property value.
 
 The following sample code demonstrates achieving this,
 
@@ -174,7 +174,7 @@ After modified:
 
 ## Empty points
 
-The Data points that contains `NaN` value are considered as empty points. By using [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~EmptyPointSettings.html) property in series, you can customize the empty point. Default `Mode` of the empty point is `Gap`.
+The Data points that contains `NaN` value are considered as empty points. By using [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings) property in series, you can customize the empty point. Default `Mode` of the empty point is `Gap`.
 
 {% aspTab template="chart/axis/working-data/empty-points", sourceFiles="empty-points.razor" %}
 
@@ -182,7 +182,7 @@ The Data points that contains `NaN` value are considered as empty points. By usi
 
 **Customizing empty point**
 
-Specific color for empty point can be set by `Fill` property in [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~EmptyPointSettings.html). Border for a empty point can be set by
+Specific color for empty point can be set by `Fill` property in [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings). Border for a empty point can be set by
 `Border` property.
 
 {% aspTab template="chart/axis/working-data/custom-emptypoint", sourceFiles="custom-emptypoint.razor" %}
@@ -365,9 +365,9 @@ namespace BlazorApplication
 
 ### Configure chart component
 
-Configure the chart to bind data using either [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfChart~DataSource.html) property or [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DataManager.html).
+Configure the chart to bind data using either [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_DataSource) property or [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-For instance, to bind data directly from the data access layer class **OrderDataAccessLayer**, assign the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfChart~DataSource.html) property to be **OrderData.GetAllOrders()**.
+For instance, to bind data directly from the data access layer class **OrderDataAccessLayer**, assign the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_DataSource) property to be **OrderData.GetAllOrders()**.
 
 ```csharp
 
@@ -389,7 +389,7 @@ For instance, to bind data directly from the data access layer class **OrderData
     }
 ```
 
-On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
+On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

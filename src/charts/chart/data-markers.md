@@ -27,7 +27,7 @@ option of the marker property.
 
 ## Shape
 
-Markers can be assigned with different shapes such as Rectangle, Circle, Diamond etc using the [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.ChartCommonMarkerSettings~Shape.html) property.
+Markers can be assigned with different shapes such as Rectangle, Circle, Diamond etc using the [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property.
 
 {% aspTab template="chart/data-marker/shape", sourceFiles="shape.razor" %}
 

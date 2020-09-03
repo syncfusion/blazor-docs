@@ -17,7 +17,7 @@ Tooltips  display the selected start and end values.
 
 ## Enable Tooltip
 
-The tooltip is useful to show the selected data. You can enable tooltip by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings~Enable.html) property as true in tooltip object.
+The tooltip is useful to show the selected data. You can enable tooltip by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Enable) property as true in tooltip object.
 
 {% aspTab template="range-navigator/tooltip/tooltip", sourceFiles="tooltip.razor" %}
 
@@ -27,13 +27,13 @@ The tooltip is useful to show the selected data. You can enable tooltip by setti
 
 ## Customization
 
-Tooltips can be [customized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html)  using the following properties:
+Tooltips can be [customized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html)  using the following properties:
 
-* [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings~Enable.html): Customizes the visibility of the tooltip.
-* [`DisplayMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings~TextStyle.html): Customizes the display mode of the tooltip.
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings~Fill.html): Customizes the background color of the tooltip.
-* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings~Opacity.html): Customizes the opacity of the tooltip.
-* [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings~TextStyle.html): Customizes the `Size`, `Color`, `FontFamily`, `FontStyle`, `FontWeight`, `TextAlignment` and `TextOverflow` of the tooltip text.
+* [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Enable): Customizes the visibility of the tooltip.
+* [`DisplayMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_TextStyle): Customizes the display mode of the tooltip.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Fill): Customizes the background color of the tooltip.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Opacity): Customizes the opacity of the tooltip.
+* [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_TextStyle): Customizes the `Size`, `Color`, `FontFamily`, `FontStyle`, `FontWeight`, `TextAlignment` and `TextOverflow` of the tooltip text.
 
 {% aspTab template="range-navigator/tooltip/tooltip-custom", sourceFiles="tooltip-custom.razor" %}
 
@@ -43,7 +43,7 @@ Tooltips can be [customized](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ## Label Format
 
-You can format and parse the date to all globalize format using [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorModel~LabelFormat.html) property in an axis.
+You can format and parse the date to all globalize format using [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorModel.html#Syncfusion_Blazor_Charts_RangeNavigatorModel_LabelFormat) property in an axis.
 
 {% aspTab template="range-navigator/tooltip/format", sourceFiles="format.razor" %}
 
@@ -51,7 +51,7 @@ You can format and parse the date to all globalize format using [`LabelFormat`]
 
 ![Label Format](images/tooltip/tooltip-format.png)
 
-The following table describes the result of applying some common date time formats to the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorModel~LabelFormat.html) property
+The following table describes the result of applying some common date time formats to the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorModel.html#Syncfusion_Blazor_Charts_RangeNavigatorModel_LabelFormat) property
 
 <!-- markdownlint-disable MD033 -->
 <table>

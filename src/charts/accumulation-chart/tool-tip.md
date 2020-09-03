@@ -8,7 +8,7 @@ description: "Accumulation chart tooltip represents the x and y values of the cu
 
 # Tooltip
 
-Tooltip for the accumulation chart can be enabled by using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings~Enable.html) property.
+Tooltip for the accumulation chart can be enabled by using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property.
 
 {% aspTab template="chart/accumulation-charts/tooltip/default", sourceFiles="default.razor" %}
 
@@ -18,7 +18,7 @@ Tooltip for the accumulation chart can be enabled by using the [`Enable`](https
 
 ## Header
 
-We can specify header for the tooltip using [`Header`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings~Header.html) property.
+We can specify header for the tooltip using [`Header`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Header) property.
 
 {% aspTab template="chart/accumulation-charts/tooltip/header", sourceFiles="header.razor" %}
 
@@ -39,10 +39,10 @@ information in tooltip. For example the format `${point.x} : <b>${point.y}%</b>
 
 ## Customization
 
-The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings~Fill.html) and
-[`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings~Border.html)
+The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Fill) and
+[`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Border)
 properties are used to customize the background color and border of the tooltip respectively.
-The [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings~TextStyle.html)
+The [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_TextStyle)
 property in the tooltip is used to customize the font of the tooltip text.
 
 {% aspTab template="chart/accumulation-charts/tooltip/custom", sourceFiles="custom.razor" %}
@@ -53,7 +53,7 @@ property in the tooltip is used to customize the font of the tooltip text.
 
 ## Tooltip Text Mapping
 
-By default, tooltip shows information of x and y value in points. You can show more information from datasource in tooltip by using the [`TooltipMappingName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartSeries~TooltipMappingName.html) . You can use the `${point.tooltip}` as place holders to display the specified tooltip content.
+By default, tooltip shows information of x and y value in points. You can show more information from datasource in tooltip by using the [`TooltipMappingName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_TooltipMappingName) . You can use the `${point.tooltip}` as place holders to display the specified tooltip content.
 
 {% aspTab template="chart/accumulation-charts/tooltip/mapping", sourceFiles="mapping.razor" %}
 

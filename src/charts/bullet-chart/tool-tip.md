@@ -14,7 +14,7 @@ description: "Tooltip is used to show the data value when mouse hover on the cha
 
 ## Default Tooltip
 
-By setting [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.BulletChartTooltip~Enable.html)the property to 'True' in `BulletChartTooltip` tag. The 'Tooltip' is visible in the 'Bullet chart' by default.
+By setting [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip.html#Syncfusion_Blazor_Charts_BulletChartTooltip_Enable)the property to 'True' in `BulletChartTooltip` tag. The 'Tooltip' is visible in the 'Bullet chart' by default.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

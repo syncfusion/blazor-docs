@@ -20,7 +20,7 @@ Chart supports 6 types of trendlines.
 ## Linear
 
 A linear trendline is a best fit straight line that is used with simpler data sets. To render a linear trendline,
-use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartTrendline~Type.html) as `Linear`.
+use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `Linear`.
 
 {% aspTab template="chart/trendlines", sourceFiles="linear.razor" %}
 
@@ -34,7 +34,7 @@ An exponential trendline is a curved line that is most useful when data values r
 at increasingly higher rates. You cannot create an exponential trendline, if your data contains zero or negative values.
 
 To render a exponential trendline,
-use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartTrendline~Type.html) as `Exponential`.
+use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `Exponential`.
 
 {% aspTab template="chart/trendlines", sourceFiles="exponential.razor" %}
 
@@ -47,7 +47,7 @@ in the data increases or decreases quickly and then levels out.
 
 A logarithmic trendline can use negative and/or positive values.
 
-To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartTrendline~Type.html) as `Logarithmic`.
+To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `Logarithmic`.
 
 {% aspTab template="chart/trendlines", sourceFiles="logarithmic.razor" %}
 
@@ -58,7 +58,7 @@ To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusio
 A polynomial trendline is a curved line that is used when data fluctuates.
 
 To render a polynomial trendline,
-use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartTrendline~Type.html) as `Polynomial`.
+use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `Polynomial`.
 
 `PolynomialOrder` used to define the polynomial value.
 
@@ -70,7 +70,7 @@ use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~S
 
 A power trendline is a curved line that is best used with data sets that compare measurements that increase at a specific rate.
 
-To render a power trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartTrendline~Type.html) as `Power`.
+To render a power trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `Power`.
 
 {% aspTab template="chart/trendlines", sourceFiles="power.razor" %}
 
@@ -80,7 +80,7 @@ To render a power trendline, use trendline [`Type`](https://help.syncfusion.com/
 
 A moving average trendline smoothen out fluctuations in data to show a pattern or trend more clearly.
 
-To render a moving average trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartTrendline~Type.html) as `MovingAverage`.
+To render a moving average trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `MovingAverage`.
 
 `Period` property defines the period to find the moving average.
 
@@ -90,8 +90,8 @@ To render a moving average trendline, use trendline [`Type`](https://help.syncfu
 
 **Customization of Trendlines**
 
-The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartTrendline~Fill.html)
-and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartTrendline~Width.html)
+The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Fill)
+and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Width)
 properties are used to customize the appearance of the trendline.
 
 ## Forecasting

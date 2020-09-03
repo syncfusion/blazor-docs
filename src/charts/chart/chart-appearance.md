@@ -11,7 +11,7 @@ description: "We can customize chart appearance by using color palette, point le
 ## Custom Color Palette
 
 You can customize the default color of series or points by providing a custom color palette of your choice by
-using the [`Palettes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~Palettes.html) property.
+using the [`Palettes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_TextWrapSettings) property.
 
 {% aspTab template="chart/series/column/custom", sourceFiles="custom.razor" %}
 
@@ -28,7 +28,7 @@ using the [`Palettes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~S
 **Customize the Chart Background**
 
 <!-- markdownlint-disable MD013 -->
-Using [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~Background.html) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~Border.html) properties, you can change the background color and border of the chart.
+Using [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser) properties, you can change the background color and border of the chart.
 
 {% aspTab template="chart/series/column/area", sourceFiles="area.razor" %}
 
@@ -38,7 +38,7 @@ Using [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syn
 
 **Chart Margin**
 
-You can set margin for chart from its container through [`Margin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~Margin.html) property.
+You can set margin for chart from its container through [`Margin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser) property.
 
 {% aspTab template="chart/series/column/margin", sourceFiles="margin.razor" %}
 
@@ -46,8 +46,8 @@ You can set margin for chart from its container through [`Margin`](https://help.
 
 **Chart Area Background**
 
-The chart area background can be customized by using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartAreaModel~Background.html)
-property in the [`ChartArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~ChartArea.html).
+The chart area background can be customized by using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaModel.html#Syncfusion_Blazor_Charts_ChartAreaModel_Background)
+property in the [`ChartArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems).
 
 {% aspTab template="chart/series/column/background", sourceFiles="background.razor" %}
 
@@ -55,7 +55,7 @@ property in the [`ChartArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ## Animation
 
-You can customize animation for a particular series using [`Animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Animation.html) property. You can enable or disable animation of the series using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AnimationModel~Enable.html) property. [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AnimationModel~Duration.html) specifies the duration of an animation and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AnimationModel~Duration.html) allows us to start the animation at desire time.
+You can customize animation for a particular series using [`Animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Animation) property. You can enable or disable animation of the series using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AnimationModel.html#Syncfusion_Blazor_Charts_AnimationModel_Enable) property. [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AnimationModel.html#Syncfusion_Blazor_Charts_AnimationModel_Duration) specifies the duration of an animation and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AnimationModel.html#Syncfusion_Blazor_Charts_AnimationModel_Duration) allows us to start the animation at desire time.
 
 {% aspTab template="chart/series/column/animation", sourceFiles="animation.razor" %}
 
@@ -63,7 +63,7 @@ You can customize animation for a particular series using [`Animation`](https://
 
 ## Chart Title
 
-Chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~Title.html) property, to show the information about the data plotted.
+Chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property, to show the information about the data plotted.
 
 {% aspTab template="chart/series/column/title", sourceFiles="title.razor" %}
 
@@ -73,7 +73,7 @@ Chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor
 
 ## Chart SubTitle
 
-Chart can be given a subtitle using [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~SubTitle.html) property, to show the information about the data plotted.
+Chart can be given a subtitle using [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ContextMenuItems) property, to show the information about the data plotted.
 
 {% aspTab template="chart/series/column/subtitle", sourceFiles="subtitle.razor" %}
 

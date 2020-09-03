@@ -13,7 +13,7 @@ Annotations are used to mark the specific area of interest in the chart area wit
 <!-- markdownlint-disable MD033 -->
 
 You can add annotations to the chart by using the <code>annotations</code> option. By using the
-[`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartAnnotation~Content.html) option of annotation , you can specify the id of the element that needs to be displayed in the chart area.
+[`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) option of annotation , you can specify the id of the element that needs to be displayed in the chart area.
 
 {% aspTab template="chart/series/column/annotation", sourceFiles="annotation.razor" %}
 
@@ -43,7 +43,7 @@ The coordinate units of the annotation can be specified either in `Pixel` or `Po
 
 ## Alignment
 
-Annotation provides [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartAnnotation~VerticalAlignment.html) and [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartAnnotation~HorizontalAlignment.html). The `VerticalAlignment` provides options to move the content to `Top`, `Bottom` or `Middle` position and the `HorizontalAlignment` mouses the content to `Near`, `Far` or `Center`.
+Annotation provides [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html) and [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html). The `VerticalAlignment` provides options to move the content to `Top`, `Bottom` or `Middle` position and the `HorizontalAlignment` mouses the content to `Near`, `Far` or `Center`.
 
 {% aspTab template="chart/series/column/alignment", sourceFiles="alignment.razor" %}
 

@@ -22,8 +22,8 @@ both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnit
 ## Range
 
 Range of an axis, will be calculated automatically based on the provided data, you can also customize the range
-of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Minimum.html),
-[`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Maximum.html) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Interval.html) property of the axis.
+of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Minimum),
+[`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Maximum) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Interval) property of the axis.
 
 {% aspTab template="chart/axis/log/range", sourceFiles="range.razor" %}
 
@@ -31,7 +31,7 @@ of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Logarithmic Base
 
-Logarithmic base can be customized by using the [`LogBase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~LogBase.html) property of the axis.
+Logarithmic base can be customized by using the [`LogBase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LogBase) property of the axis.
 For example when the logBase is 5, the axis values follows 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>,
 5<sup>1</sup>, 5<sup>2</sup> etc.
 
@@ -43,7 +43,7 @@ For example when the logBase is 5, the axis values follows 5<sup>-2</sup>, 5<su
 
 ## Logarithmic Interval
 
-Logarithmic axis Interval can be customized by using the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Interval.html)
+Logarithmic axis Interval can be customized by using the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Interval)
 property of the axis. When the logarithmic base is 10 and logarithmic Interval is 2, then the axis labels are
 placed at an Interval of 10<sup>2</sup>. The default value of the Interval is 1.
 
@@ -55,7 +55,7 @@ placed at an Interval of 10<sup>2</sup>. The default value of the Interval is 1.
 
 ### Logarithmic Label Format
 
-Logarithmic labels can be formatted by using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~LabelFormat.html) property.
+Logarithmic labels can be formatted by using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelFormat) property.
 Logarithmic labels supports all globalize format.
 
 {% aspTab template="chart/axis/log/label-format", sourceFiles="label-format.razor" %}

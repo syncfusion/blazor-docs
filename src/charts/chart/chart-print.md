@@ -10,7 +10,7 @@ description: "The rendered chart can be printed or exported directly from the br
 
 ## Print
 
-The rendered chart can be printed directly from the browser by calling the public method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~Print.html).
+The rendered chart can be printed directly from the browser by calling the public method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuItemClicked).
 You can pass array of ID of elements or element to this method. By default it take element of the chart.
 
 {% aspTab template="chart/getting-started/print", sourceFiles="print.razor" %}
@@ -19,7 +19,7 @@ You can pass array of ID of elements or element to this method. By default it ta
 
 ## Export
 
-The rendered chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~Export.html) method in chart. The input parameters for this method are `Export Type` for format and `FileName` for result.
+The rendered chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) method in chart. The input parameters for this method are `Export Type` for format and `FileName` for result.
 
 The optional parameters for this method are,
 * `Orientation` - either portrait or landscape,

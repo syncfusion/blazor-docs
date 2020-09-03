@@ -10,10 +10,10 @@ description: "Chart contains smart axis labels, label positioning, multilevelabe
 
 ## Smart Axis Labels
 
-When the axis labels overlap with each other, you can use [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~LabelIntersectAction.html)
+When the axis labels overlap with each other, you can use [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction)
 property in the axis, to place them smartly.
 
-When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~LabelIntersectAction.html) as `Hide`
+When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) as `Hide`
 
 {% aspTab template="chart/axis/multiple/hide", sourceFiles="hide.razor" %}
 
@@ -21,7 +21,7 @@ When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Sync
 
 ![Hide](images/axis-labels/hide.png)
 
-When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~LabelIntersectAction.html) as `Rotate45`
+When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) as `Rotate45`
 
 {% aspTab template="chart/axis/multiple/rotate45", sourceFiles="rotate45.razor" %}
 
@@ -29,7 +29,7 @@ When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Sync
 
 ![Rotate45](images/axis-labels/rotate45.png)
 
-When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~LabelIntersectAction.html) as `Rotate90`
+When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) as `Rotate90`
 
 {% aspTab template="chart/axis/multiple/rotate90", sourceFiles="rotate90.razor" %}
 
@@ -40,7 +40,7 @@ When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Sync
 ## Axis Labels Positioning
 
 By default, the axis labels can be placed `Outside` of the axis line and this also can be placed `Inside`
-the axis line using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~LabelPosition.html) property.
+the axis line using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelPosition) property.
 
 {% aspTab template="chart/axis/multiple/position", sourceFiles="position.razor" %}
 
@@ -50,7 +50,7 @@ the axis line using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/
 
 ## Multilevel Labels
 
-Any number of levels of labels can be added to an axis using the [`MultiLevelLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MultiLevelLabels.html) property. This property can be configured using the following properties.
+Any number of levels of labels can be added to an axis using the [`MultiLevelLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MultiLevelLabels) property. This property can be configured using the following properties.
 
 ### Categories
 
@@ -107,7 +107,7 @@ are `Rectangle`, `Brace`, `WithoutBorder`, `WithoutTopBorder`, `WithoutTopandBot
 ## Edge Label Placement
 
 Labels with long text at the edges of an axis may appear partially in the chart. To avoid this,
-use [`EdgeLabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~EdgeLabelPlacement.html) property in axis, which moves
+use [`EdgeLabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_EdgeLabelPlacement) property in axis, which moves
 the label inside the chart area for better appearance or hides it.
 
 {% aspTab template="chart/axis/multiple/edge", sourceFiles="edge.razor" %}
@@ -116,7 +116,7 @@ the label inside the chart area for better appearance or hides it.
 
 ## Labels Customization
 
-The [`LabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~LineStyle.html) property of an axis provides options to customize the color and font of the axis labels.
+The [`LabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LineStyle) property of an axis provides options to customize the color and font of the axis labels.
 
 {% aspTab template="chart/axis/multiple/labels-custom", sourceFiles="labels-custom.razor" %}
 
@@ -124,7 +124,7 @@ The [`LabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sync
 
 ## Label Trim
 
-You can trim the label using [`EnableTrim`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~EnableTrim.html)  and width of the labels can also be customized using [`MaximumLabelWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MaximumLabelWidth.html) property in the axis, by default maximum width of the label is `34px`.
+You can trim the label using [`EnableTrim`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_EnableTrim)  and width of the labels can also be customized using [`MaximumLabelWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MaximumLabelWidth) property in the axis, by default maximum width of the label is `34px`.
 
 {% aspTab template="chart/axis/multiple/labels-trim", sourceFiles="labels-trim.razor" %}
 

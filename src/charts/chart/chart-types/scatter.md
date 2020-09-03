@@ -15,8 +15,8 @@ Scatter plot or scatter chart plots data with two numeric parameters. To render 
 You can use the following properties to customize the scatter series.
 
 * [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the scatter.
-* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Opacity.html) – used to control the transparency of the chart series.
-* [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.ChartCommonMarkerSettings~Shape.html) - used to change the shape of the scatter series.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – used to control the transparency of the chart series.
+* [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) - used to change the shape of the scatter series.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

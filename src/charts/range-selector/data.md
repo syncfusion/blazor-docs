@@ -12,7 +12,7 @@ description: "Range navigator supports double, datetime and logarithmic data val
 
 ## Numeric
 
-Numeric scale is used to represent the numeric values of data in a range navigator. By default, the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsRangeNavigator~ValueType.html) of a range navigator is `Double`.
+Numeric scale is used to represent the numeric values of data in a range navigator. By default, the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) of a range navigator is `Double`.
 
 {% aspTab template="range-navigator/data/double", sourceFiles="double.razor" %}
 
@@ -22,7 +22,7 @@ Numeric scale is used to represent the numeric values of data in a range navigat
 
 ### Range
 
-Minimum and maximum of the scale will be calculated automatically based on the provided data. You can also customize the range using the [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsRangeNavigator~Minimum.html), [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsRangeNavigator~Maximum.html), and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsRangeNavigator~Interval.html) properties.
+Minimum and maximum of the scale will be calculated automatically based on the provided data. You can also customize the range using the [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType), [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType), and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) properties.
 
 {% aspTab template="range-navigator/data/range", sourceFiles="range.razor" %}
 
@@ -32,7 +32,7 @@ Minimum and maximum of the scale will be calculated automatically based on the p
 
 ### Label Format
 
-Numeric labels can be formatted using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsRangeNavigator~LabelFormat.html) property and it supports all globalized formats.
+Numeric labels can be formatted using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property and it supports all globalized formats.
 
 {% aspTab template="range-navigator/data/format", sourceFiles="format.razor" %}
 
@@ -134,7 +134,7 @@ Minimum and maximum of the Range navigator will be calculated automatically base
 
 ### Logarithmic Base
 
-Logarithmic base can be customized using the [`LogBase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsRangeNavigator~LogBase.html) property. The default value of the LogBase property is 10.
+Logarithmic base can be customized using the [`LogBase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property. The default value of the LogBase property is 10.
 
 {% aspTab template="range-navigator/data/log-base", sourceFiles="log-base.razor" %}
 
@@ -154,7 +154,7 @@ Range navigator supports date-time scale and displays date-time values as a labe
 
 ### Interval Customization
 
-Date-time Intervals can be customized using the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsRangeNavigator~Interval.html) and [`IntervalType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsRangeNavigator~IntervalType.html) properties of the range navigator.
+Date-time Intervals can be customized using the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) and [`IntervalType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_StartAngle) properties of the range navigator.
 For example, when you set Interval as 2 and IntervalType as years, the interval will be considered as 2 years.
 Date-time supports the following Interval types:
 * Auto
@@ -174,7 +174,7 @@ Date-time supports the following Interval types:
 
 **Label Format**
 
-You can format and parse the date to all globalize format using [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsRangeNavigator~LabelFormat.html) property.
+You can format and parse the date to all globalize format using [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property.
 
 {% aspTab template="range-navigator/data/date-time-format", sourceFiles="date-time-format.razor" %}
 

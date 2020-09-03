@@ -20,7 +20,7 @@ The following are the number of events supported for Range Navigator component.
 
 ## Loaded
 
-[`Loaded`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorEvents~Loaded.html) event triggers after range navigator is rendered.
+[`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Loaded) event triggers after range navigator is rendered.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -62,7 +62,7 @@ The following are the number of events supported for Range Navigator component.
 
 ## OnPrint
 
-[`OnPrint`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorEvents~OnPrint.html) event triggers before range navigator prints get started.
+[`OnPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrint) event triggers before range navigator prints get started.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -104,7 +104,7 @@ The following are the number of events supported for Range Navigator component.
 
 ## Changed
 
-[`Changed`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorEvents~Changed.html) event triggers after slider is changed.
+[`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Changed) event triggers after slider is changed.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -146,7 +146,7 @@ The following are the number of events supported for Range Navigator component.
 
 ## Resized
 
-[`Resized`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.RangeNavigatorEvents~Resized.html) event triggers after range navigator is resized.
+[`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Resized) event triggers after range navigator is resized.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

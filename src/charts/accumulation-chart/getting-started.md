@@ -112,7 +112,7 @@ After successful compilation of your application, the Syncfusion Blazor accumula
 
 ## Add Title
 
-You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsAccumulationChart~Title.html) property to the accumulation chart, to provide quick information to the user about the data plotted in the chart.
+You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_NoRecordsTemplate) property to the accumulation chart, to provide quick information to the user about the data plotted in the chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -147,7 +147,7 @@ You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Add Data Label
 
-You can add data labels to improve the readability of the Accumulation chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationDataLabelSettings~Visible.html) property to true in the `DataLabel`.
+You can add data labels to improve the readability of the Accumulation chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property to true in the `DataLabel`.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -184,7 +184,7 @@ You can add data labels to improve the readability of the Accumulation chart. Th
 
 ## Enable Tooltip
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings~Enable.html) property as true in [`TooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsAccumulationChart~Tooltip.html).
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property as true in [`TooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_ActionFailureTemplate).
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -223,7 +223,7 @@ The tooltip is useful when you cannot display information by using the data labe
 
 ## Enable Legend
 
-You can use legend for the accumulation chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartLegendSettings~Visible.html) property to true in [`LegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsAccumulationChart~LegendSettings.html).
+You can use legend for the accumulation chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Visible) property to true in [`LegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo).
 
 ```csharp
  @using Syncfusion.Blazor.Charts

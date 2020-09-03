@@ -9,7 +9,7 @@ description: "Learn how to use events in Blazor Accumulation Chart component."
 In this section, we have provided the list of events of Accumulation Chart component which will be
 triggered for appropriate accumulation chart actions.
 
-The events should be provided to the Accumulation Chart using [`AccumulationChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents.html) component.
+The events should be provided to the Accumulation Chart using [`AccumulationChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html) component.
 
 The following are the number of events supported for Accumulation Chart component.
 
@@ -27,7 +27,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## Loaded
 
-[`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~Loaded.html) event is triggers after accumulation chart loaded.
+[`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_Loaded) event is triggers after accumulation chart loaded.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -69,7 +69,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## OnAnimationComplete
 
-[`OnAnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~OnAnimationComplete.html) event is triggers after animation gets completed for series.
+[`OnAnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnAnimationComplete) event is triggers after animation gets completed for series.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -112,7 +112,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## OnChartMouseClick
 
-[`OnChartMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~OnChartMouseClick.html) event is triggers on clicking the accumulation chart.
+[`OnChartMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnChartMouseClick) event is triggers on clicking the accumulation chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -155,7 +155,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## OnChartMouseDown
 
-[`OnChartMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~OnChartMouseDown.html) event is triggers on mouse down.
+[`OnChartMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnChartMouseDown) event is triggers on mouse down.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -198,7 +198,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## OnChartMouseLeave
 
-[`OnChartMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~OnChartMouseLeave.html) event is triggers while cursor leaves the accumulation chart.
+[`OnChartMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnChartMouseLeave) event is triggers while cursor leaves the accumulation chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -241,7 +241,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## OnChartMouseMove
 
-[`OnChartMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~OnChartMouseMove.html) event is triggers on hovering the accumulation chart.
+[`OnChartMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnChartMouseMove) event is triggers on hovering the accumulation chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -284,7 +284,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## OnChartMouseUp
 
-[`OnChartMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~OnChartMouseUp.html) event is triggers on mouse up.
+[`OnChartMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnChartMouseUp) event is triggers on mouse up.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -327,7 +327,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## OnPointClick
 
-[`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~OnPointClick.html) event is triggers on point click.
+[`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPointClick) event is triggers on point click.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -370,7 +370,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## PointMoved
 
-[`PointMoved`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~PointMoved.html) event is triggers on point move.
+[`PointMoved`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_PointMoved) event is triggers on point move.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -413,7 +413,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## OnPrint
 
-[`OnPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~OnPrint.html) event is triggers before the prints gets started.
+[`OnPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPrint) event is triggers before the prints gets started.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -456,7 +456,7 @@ The following are the number of events supported for Accumulation Chart componen
 
 ## Resized
 
-[`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationChartEvents~Resized.html) event is triggers after window resize.
+[`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_Resized) event is triggers after window resize.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

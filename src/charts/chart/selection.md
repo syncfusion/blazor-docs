@@ -26,7 +26,7 @@ We have different type of selection mode for selecting the data. They are,
 
 ## Point
 
- You can select a point, by setting [`SelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~SelectionMode.html) to point.
+ You can select a point, by setting [`SelectionMode`](https://help.syncfusion.com/cr/blazor/) to point.
 
 {% aspTab template="chart/user-interaction/selection/point-selection", sourceFiles="point-selection.razor" %}
 
@@ -36,7 +36,7 @@ We have different type of selection mode for selecting the data. They are,
 
 ## Series
 
- You can select a series, by setting [`SelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~SelectionMode.html) to series.
+ You can select a series, by setting [`SelectionMode`](https://help.syncfusion.com/cr/blazor/) to series.
 
 {% aspTab template="chart/user-interaction/selection/series-selection", sourceFiles="series-selection.razor" %}
 
@@ -46,7 +46,7 @@ We have different type of selection mode for selecting the data. They are,
 
 ## Cluster
 
-You can select the points that corresponds to the same index in all the series, by setting [`SelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~SelectionMode.html) to cluster.
+You can select the points that corresponds to the same index in all the series, by setting [`SelectionMode`](https://help.syncfusion.com/cr/blazor/) to cluster.
 
 {% aspTab template="chart/user-interaction/selection/cluster-selection", sourceFiles="cluster-selection.razor" %}
 
@@ -58,7 +58,7 @@ You can select the points that corresponds to the same index in all the series, 
 
 **DragXY, DragX and DragY**
 
-To fetch the collection of data under a particular region, you have to set [`SelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~SelectionMode.html) as `DragXY`.
+To fetch the collection of data under a particular region, you have to set [`SelectionMode`](https://help.syncfusion.com/cr/blazor/) as `DragXY`.
 
 * DragXY - Allows us to select data with respect to horizontal and vertical axis.
 * DragX - Allows us to select data with respect to horizontal axis.
@@ -74,7 +74,7 @@ The selected data’s are returned as an array collection in the `DragComplete` 
 
 ## Selection type
 
-You can select multiple points or series, by enabling the [`IsMultiSelect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~IsMultiSelect.html) property.
+You can select multiple points or series, by enabling the [`IsMultiSelect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_Content) property.
 
 {% aspTab template="chart/user-interaction/selection/selection-type", sourceFiles="selection-type.razor" %}
 
@@ -83,7 +83,7 @@ You can select multiple points or series, by enabling the [`IsMultiSelect`](http
 ## Selection on load
 
 You can able to select a point or series programmatically on a chart using
-[`SelectedDataIndexes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.EjsChart~SelectedDataIndexes.html)
+[`SelectedDataIndexes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_SelectedCellsInfo)
 property.
 
 {% aspTab template="chart/user-interaction/selection/onload", sourceFiles="onload.razor" %}
@@ -93,7 +93,7 @@ property.
 ## Legend Selection
 
 You can able to select a point or series through on legend using
-[`ToggleVisibility`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartLegendSettings~_toggleVisibility.html) property.
+[`ToggleVisibility`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) property.
 
 {% aspTab template="chart/user-interaction/selection/selection-legend", sourceFiles="selection-legend.razor" %}
 
@@ -101,7 +101,7 @@ You can able to select a point or series through on legend using
 
 ## Customization for selection
 
-You can apply custom style to selected points or series with [`SelectionStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~SelectionStyle.html)
+You can apply custom style to selected points or series with [`SelectionStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SelectionStyle)
 property.
 
 {% aspTab template="chart/user-interaction/selection/custom-selection", sourceFiles="custom-selection.razor" %}

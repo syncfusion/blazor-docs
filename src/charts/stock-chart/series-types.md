@@ -14,7 +14,7 @@ Stock Chart supports 6 major types of series namely `Line`, `Spline`, `Hilo`, `H
 
 **Line**
 
-To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartSeries~Type.html) as `Line`.
+To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Line`.
 
 {% aspTab template="stock-chart/series-types", sourceFiles="line.razor" %}
 
@@ -24,7 +24,7 @@ To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blaz
 
 **Spline**
 
-To render a spline series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartSeries~Type.html) as `Spline`.
+To render a spline series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Spline`.
 
 {% aspTab template="stock-chart/series-types", sourceFiles="spline.razor" %}
 
@@ -34,11 +34,11 @@ To render a spline series, use series [`Type`](https://help.syncfusion.com/cr/bl
 
 **HollowCandle**
 
-To render a hollowcandle series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartSeries~Type.html) as `Candle` and set `EnableSolidCandle` as false.
+To render a hollowcandle series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Candle` and set `EnableSolidCandle` as false.
 
 **Hilo**
 
-To render a hilo series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartSeries~Type.html) as `Hilo`.
+To render a hilo series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Hilo`.
 
 {% aspTab template="stock-chart/series-types", sourceFiles="hilo.razor" %}
 
@@ -48,7 +48,7 @@ To render a hilo series, use series [`Type`](https://help.syncfusion.com/cr/blaz
 
 **HiloOpenClose**
 
-To render a HiloOpenClose series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartSeries~Type.html) as `HiloOpenClose`.
+To render a HiloOpenClose series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `HiloOpenClose`.
 
 {% aspTab template="stock-chart/series-types", sourceFiles="hiloopenclose.razor" %}
 
@@ -58,7 +58,7 @@ To render a HiloOpenClose series, use series [`Type`](https://help.syncfusion.co
 
 **Candle**
 
-To render a candle series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.StockChartSeries~Type.html) as `Candle`.
+To render a candle series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Candle`.
 
 {% aspTab template="stock-chart/stockchart-feature/candle", sourceFiles="candle.razor" %}
 

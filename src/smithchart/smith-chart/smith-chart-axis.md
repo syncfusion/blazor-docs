@@ -1,8 +1,8 @@
 # Axis
 
 Like chart, Smith Chart is having support for two types of axis.
-* **Horizontal axis** - axis drawn as straight line in the horizontal direction of the Smith Chart
-* **Radial axis** - axis is drawn as circular path
+* **Horizontal axis** - axis drawn as straight line in the horizontal direction of the Smith Chart.
+* **Radial axis** - axis is drawn as circular path.
 
 ## Labels Customization
 

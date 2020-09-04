@@ -6,7 +6,7 @@ description: "This section give you an introduction about the Blazor Smith chart
 
 # Getting Started
 
-This section briefly explains how to include a [`Smithchart`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSmithchart.html) in your Blazor client-side application. Refer to this [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor/) documentation for introduction and configuring the common specifications.
+This section briefly explains how to include a [`Smithchart`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SfSmithchart.html) in your Blazor client-side application. Refer to this [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor/) documentation for introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in an application
 
@@ -83,11 +83,11 @@ After the successful compilation of your application, press F5 to run the applic
 
 ## Add series to Smith Chart
 
-Smith Chart series can be added in two ways. You can use either [`Points`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeries.html) or [`Datasource`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeries~DataSource.html) in the [`SmithchartSeries`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeries.html) tag. Both points and datasource both should be an array of object.
+Smith Chart series can be added in two ways. You can use either [`Points`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html) or [`Datasource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html#Syncfusion_Blazor_Charts_SmithchartSeries_DataSource) in the [`SmithchartSeries`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html) tag. Both points and datasource both should be an array of object.
 
-If you add using [`Datasource`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeries~DataSource.html) property, additionally you need to specify data source mapping fields using [`Reactance`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeries~Reactance.html) and [`Resistance`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeries~Resistance.html) properties.
+If you add using [`Datasource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html#Syncfusion_Blazor_Charts_SmithchartSeries_DataSource) property, additionally you need to specify data source mapping fields using [`Reactance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html#Syncfusion_Blazor_Charts_SmithchartSeries_Reactance) and [`Resistance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html#Syncfusion_Blazor_Charts_SmithchartSeries_Resistance) properties.
 
-In [`Points`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeries~Points.html) case, you don't need to specify mapping fields as like in [`DataSource`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeries~DataSource.html). But data source fields name should be in 'resistance' and 'reactance'.
+In [`Points`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html#Syncfusion_Blazor_Charts_SmithchartSeries_Points) case, you don't need to specify mapping fields as like in [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html#Syncfusion_Blazor_Charts_SmithchartSeries_DataSource). But data source fields name should be in 'resistance' and 'reactance'.
 
 The following sample demonstrates adding two series to Smith Chart in both ways.
 
@@ -155,7 +155,7 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 
 ## Add title to SmithChart
 
-[`SmithchartTitle`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartTitle.html) property used to add title for SmithChart. In that [`Text`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartTitle~Text.html) API used to set text of the title.
+[`SmithchartTitle`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SmithchartTitle.html) property used to add title for SmithChart. In that [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartTitle.html#Syncfusion_Blazor_Charts_SmithchartTitle_Text) API used to set text of the title.
 
 ```csharp
 <SfSmithchart>
@@ -176,7 +176,7 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 
 ## Enable marker to Smith Chart
 
-To display marker for particular series, need to set the [`Visible`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeriesMarker~Visible.html) property to true in [`SmithchartSeriesMarker`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeriesMarker.html). In below sample, marker is enabled for first series only.
+To display marker for particular series, need to set the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeriesMarker.html#Syncfusion_Blazor_Charts_SmithchartSeriesMarker_Visible) property to true in [`SmithchartSeriesMarker`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SmithchartSeriesMarker.html). In below sample, marker is enabled for first series only.
 
 ```csharp
 <SfSmithchart>
@@ -198,7 +198,7 @@ To display marker for particular series, need to set the [`Visible`](https://hel
 
 ## Enable data label to Smith Chart marker
 
-To display data label for particular marker series, need to set [`Visible`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.MarkerDatalabel~Visible.html) property to true in [`SmithchartSeriesDatalabel`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeriesDatalabel.html). In below sample, data label is enabled for first series only.
+To display data label for particular marker series, need to set [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeFontSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeFontSettings_FontWeight) property to true in [`SmithchartSeriesDatalabel`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SmithchartSeriesDatalabel.html). In below sample, data label is enabled for first series only.
 
 ```csharp
 <SfSmithchart>
@@ -222,7 +222,7 @@ To display data label for particular marker series, need to set [`Visible`](http
 
 ## Enable legend for Smith Chart
 
-Smith Chart had a legend feature, which is used to denote the correspond series. To enable the legend, set [`Visible`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartLegendSettingsModel~Visible.html) property value to true in [`SmithchartLegendSettings`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartLegendSettings.html).
+Smith Chart had a legend feature, which is used to denote the correspond series. To enable the legend, set [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartLegendSettingsModel.html#Syncfusion_Blazor_Charts_SmithchartLegendSettingsModel_Visible) property value to true in [`SmithchartLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SmithchartLegendSettings.html).
 
 ```csharp
 <SfSmithchart>
@@ -247,7 +247,7 @@ Smith Chart had a legend feature, which is used to denote the correspond series.
 
 ## Enable tooltip for Smith Chart Series
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`Visible`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeriesTooltip~Visible.html) property to true in [`SmithchartSeriesTooltip`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeriesTooltip.html).
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithchartSeriesTooltip_Visible) property to true in [`SmithchartSeriesTooltip`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SmithchartSeriesTooltip.html).
 
 ```csharp
 <SfSmithchart>

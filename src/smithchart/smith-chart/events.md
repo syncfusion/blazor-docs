@@ -2,7 +2,7 @@
 
 ## AnimationCompleted
 
-Description: Triggers, after animation is completed
+Description: Triggers, after animation is completed.
 
 ## AxisLabelRendering
 

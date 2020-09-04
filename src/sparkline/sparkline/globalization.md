@@ -50,7 +50,7 @@ protected override void OnAfterRender()
 
 ## RTL support
 
-If you set the [`EnableRtl`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline~_enableRtl.html) property to true, then the Sparkline Charts will be rendered from right-to-left direction.
+If you set the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html) property to true, then the Sparkline Charts will be rendered from right-to-left direction.
 
 The following example shows the Sparkline Charts render from "Right-to-left".
 

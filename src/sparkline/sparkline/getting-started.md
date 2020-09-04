@@ -70,7 +70,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor Sparkline component in any webpage `razor` in the `Pages` folder. For example, the sparkline component is added in the `~/Pages/Index.razor` page.
 
-You can use the [`DataSource`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline~DataSource.html) property to load climate data into Sparkline. Also using the [`XName`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline~XName.html) and [`YName`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline~YName.html) properties, you can map the values of the x-axis and y-axis in sparkline from the data source. Since the *Month* is a value based on categories, specify it using the [`ValueType`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ValueType.html) property.
+You can use the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_DataSource) property to load climate data into Sparkline. Also using the [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_YName) properties, you can map the values of the x-axis and y-axis in sparkline from the data source. Since the *Month* is a value based on categories, specify it using the [`ValueType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.ValueType.html) property.
 
 ```csharp
 <SfSparkline XName="Month"
@@ -113,7 +113,7 @@ After the successful compilation of your application, press F5 to run the applic
 
 ## Change the type of sparkline
 
-You can change the sparkline type by setting the [`Type`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline~Type.html) property to **Line**, **Column**, **WinLoss**, **Pie** or **Area**. Here, the sparkline type is set to **Area**.
+You can change the sparkline type by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property to **Line**, **Column**, **WinLoss**, **Pie** or **Area**. Here, the sparkline type is set to **Area**.
 
 ```csharp
 <SfSparkline XName="Month"
@@ -133,7 +133,7 @@ You can change the sparkline type by setting the [`Type`](https://help.syncfusio
 
 ## Add data label
 
-You can add data labels to improve the readability of the sparkline chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelSettings~Visible.html) property in the [`SparklineDataLabelSettings`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html). Available types are:
+You can add data labels to improve the readability of the sparkline chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Visible) property in the [`SparklineDataLabelSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html). Available types are:
 
 * Start
 * End
@@ -161,7 +161,7 @@ You can add data labels to improve the readability of the sparkline chart. This 
 
 ## Enable tooltip
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`Visible`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineTooltipSettings~Visible.html) property value to true in [`SparklineTooltipSettings`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineTooltipSettings.html).
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_Visible) property value to true in [`SparklineTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings.html).
 
 ```csharp
 <SfSparkline DataSource="ClimateData"

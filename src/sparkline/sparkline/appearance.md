@@ -4,7 +4,7 @@ The appearance of the Sparkline Charts can be customized using margin, container
 
 ## Sparkline border
 
-The [`SparklineContainerAreaBorder`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineContainerAreaBorder.html) of the Sparkline Charts is used to render border to cover the Sparkline Charts area.
+The [`SparklineContainerAreaBorder`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineContainerAreaBorder.html) of the Sparkline Charts is used to render border to cover the Sparkline Charts area.
 
 The following code example shows the Sparkline Charts with overall border.
 
@@ -27,7 +27,7 @@ The following code example shows the Sparkline Charts with overall border.
 
 ## Sparkline padding
 
-Padding is used to specify padding value between container and Sparkline Charts. By default, padding value of the Sparkline Charts is 5. The [`Padding`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklinePadding.html) values of Sparkline Charts are specified by the left, right, top, and bottom.
+Padding is used to specify padding value between container and Sparkline Charts. By default, padding value of the Sparkline Charts is 5. The [`Padding`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklinePadding.html) values of Sparkline Charts are specified by the left, right, top, and bottom.
 
 The following code example shows the Sparkline Charts with overall padding is set to 20.
 
@@ -52,7 +52,7 @@ The following code example shows the Sparkline Charts with overall padding is se
 
 ## Sparkline area customization
 
-The background color of the Sparkline Charts area can be customized using the [`SparklineContainerArea Background`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineContainerArea~_background.html) color. By default, the Sparkline Charts background color is `Transparent`.
+The background color of the Sparkline Charts area can be customized using the [`SparklineContainerArea Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineContainerArea.html) color. By default, the Sparkline Charts background color is `Transparent`.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

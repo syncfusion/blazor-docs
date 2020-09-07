@@ -4,7 +4,6 @@
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor WebAssembly application using [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
-
 > **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
 ## Prerequisites
@@ -20,7 +19,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     ````
 
 2. Once project templates installed, run the following command line to create a new Blazor WebAssembly application.
-    
+
     ```bash
         dotnet new blazorwasm -o WebApplication1
         cd WebApplication1
@@ -74,7 +73,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     </head>
     ```
     > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.55/styles/bootstrap4.css).
-    > 
+    >
     > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
     > ```csharp
     > using Syncfusion.Blazor;

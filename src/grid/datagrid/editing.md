@@ -9,6 +9,10 @@ description: "Learn how to perform CRUD operations in various edit modes, use di
 The DataGrid component has options to dynamically insert, delete and update records.
 Editing feature requires a primary key column for CRUD operations.
 
+To know about editing feature in Blazor DataGrid component, you can check on this video.
+
+`youtube:jOiZpLexDB0`
+
 To define the primary key, set [`IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) to **true** in particular column whose value is unique.
 
 You can start the edit action either by double clicking the particular row or by selecting the required row and click on **Edit** button in the toolbar. Similarly, you can add a new record to datagrid either by clicking on **Add** button in the toolbar or on an external button which is bound to invoke the [`AddRecord`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecord) method of the datagrid, **Save** and **Cancel** while in edit mode is possible using respective toolbar icon in datagrid.

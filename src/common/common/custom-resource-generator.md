@@ -14,19 +14,19 @@ Refer to the following steps to search and select the components in CRG:
 
 2. Type the required component name in the search bar and select the checkbox. The dependency of the selected component is resolved in the application itself, so you do not need to choose each dependent component manually.
 
-![Search and select Syncfusion Blazor UI components](images/search-non-injectable.png)
+    ![Search and select Syncfusion Blazor UI components](images/search-non-injectable.png)
 
 3. Click the expand icon and select the required features for the specific set of components.
 
-![Select feature-based script in the supported components](images/select-injectable-module.png)
+    ![Select feature-based script in the supported components](images/select-injectable-module.png)
 
 4. If the entire features of the component are needed, then click the specific component's checkbox to select all features.
 
-![Select all features in the component](images/select-all-injectable.png)
+    ![Select all features in the component](images/select-all-injectable.png)
 
 5. Select the required built-in themes from the **Select Themes** option. This provides an option to select more than one theme.
 
-![Select the built-in themes](images/select-inbuilt-themes.png)
+    ![Select the built-in themes](images/select-inbuilt-themes.png)
 
 ## Download the selected component resources
 
@@ -36,19 +36,19 @@ Refer to the following steps to download the custom resources in CRG:
 
 1. Click the **DOWNLOAD** button at the bottom of the page. Select the **Minified** option to generate the minified file output for production.
 
-![Download option](images/download-option.png)
+    ![Download option](images/download-option.png)
 
 2. Change the file name as needed, and click **GENERATE** button in the pop-up.
 
-![Export popup for generation custom resources](images/export-popup.png)
+    ![Export popup for generation custom resources](images/export-popup.png)
 
 3. Now, the bundling process for the selected components will be started, and the output will be downloaded as a zip file.
 
-![blazor Bundle custom resources](images/bundling-custom-resources.png)
+    ![blazor Bundle custom resources](images/bundling-custom-resources.png)
 
 4. The final output contains the custom interop script and styles for the selected components and an **import.json** file, which stores the current settings.
 
-![Final output of customized resources](images/customized-resources.png)
+    ![Final output of customized resources](images/customized-resources.png)
 
 ## How to use custom resources in the Blazor application
 
@@ -106,8 +106,8 @@ Refer to the following steps to import previous settings in CRG:
 
 1. Click the **IMPORT SETTINGS** button at the bottom of the page.
 
-![Import option in CRG](images/import-option.png)
+    ![Import option in CRG](images/import-option.png)
 
 2. Upload the **import.json** file, so that the previously stored data will be restored in the CRG application. Now, add more components and export the resources again.
 
-![blazor Previous changes restored](images/previous-changes-restored.png)
+    ![blazor Previous changes restored](images/previous-changes-restored.png)

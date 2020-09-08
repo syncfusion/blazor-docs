@@ -4,6 +4,8 @@ The following table describes the version compatibility of .NET Core SDK and Syn
 
 | .NET Core SDK Version | Syncfusion.Blazor NuGet version |
 | ------------- | ------------- |
+| [.NET Core 5.0](https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-8/) | 18.2.0.57  |
+| [.NET Core 5.0](https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-8/) | 18.2.0.56  |
 | [.NET Core 5.0](https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-7/) | 18.2.0.55  |
 | [.NET Core 5.0](https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-7/) | 18.2.0.54  |
 | [.NET Core 5.0](https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-6/) | 18.2.0.48  |

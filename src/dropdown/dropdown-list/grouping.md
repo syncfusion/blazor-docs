@@ -7,7 +7,7 @@ description: "This section for Syncfusion ASP.NET drop-down list control demonst
 # Grouping
 
 The DropDownList supports wrapping nested elements into a group based on different categories. The category
-of each list item can be mapped through the [GroupBy](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListFieldSettings~GroupBy.html) field in
+of each list item can be mapped through the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field in
 the data table. The group header is displayed both as inline and fixed headers. The fixed group header content
 is updated dynamically on scrolling the popup list with its category value.
 

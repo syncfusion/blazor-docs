@@ -11,11 +11,11 @@ The ListBox provides support to select an item or a group of item by mouse or ke
 * Single -  To select single item in the ListBox.
 * Multiple -  To select multiple items in the ListBox.
 
-> On selection of each ListBox item, [`Select`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfListBox~Select.html) event is triggered.
+> On selection of each ListBox item, [`Select`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) event is triggered.
 
 ## Single selection
 
-To enable single selection in the ListBox, [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings~Mode.html) should be set as `Single` in [`SelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property.
+To enable single selection in the ListBox, [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) should be set as `Single` in [`SelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
@@ -91,11 +91,11 @@ Output will be shown as
 
 ## CheckBox Selection
 
-ListBox supports checkbox selection which is used to select multiple items. To enable the checkbox selection, set the [`ShowCheckbox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings~ShowCheckbox.html) property to `true`.
+ListBox supports checkbox selection which is used to select multiple items. To enable the checkbox selection, set the [`ShowCheckbox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_ShowCheckbox) property to `true`.
 
 ### Select All
 
-To select all the items in the ListBox, enable the [`ShowSelectAll`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings~ShowSelectAll.html) property to true.
+To select all the items in the ListBox, enable the [`ShowSelectAll`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_ShowSelectAll) property to true.
 
 ```csharp
 

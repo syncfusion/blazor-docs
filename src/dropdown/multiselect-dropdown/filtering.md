@@ -6,7 +6,7 @@ description: "This section shows the built-in filtering support with a rich set 
 
 # Filtering
 
-The MultiSelect has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.MultiSelectModel~AllowFiltering.html) is enabled. The filter
+The MultiSelect has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) is enabled. The filter
 operation starts as soon as you start typing characters in the MultiSelect input.
 
 ```csharp
@@ -31,7 +31,7 @@ The output will be as follows.
 
 MultiSelect supports diacritics filtering which will ignore the [Diacritics](https://en.wikipedia.org/wiki/Diacritic) and
 makes it easier to filter the results in international characters lists
-when the [IgnoreAccent](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.MultiSelectModel~IgnoreAccent.html) is enabled.
+when the [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_IgnoreAccent) is enabled.
 
 In the following sample, data with diacritics are bound as dataSource for MultiSelect.
 

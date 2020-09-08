@@ -12,7 +12,7 @@ starts as soon as you start typing characters in the component.
 ## Change the filter type
 
 Determines on which filter type the component needs to be considered on search action.
-The available [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~FilterType.html) and its supported data types are:
+The available [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_FilterType) and its supported data types are:
 
 | **Filter Type** | **Description** | **Supported Types** |
 | --- | --- |
@@ -57,7 +57,7 @@ The output will be as follows.
 ## Filter item count
 
 You can specify the filter suggestion item count using the
-[SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfAutoComplete%601~SuggestionCount.html) property of AutoComplete.
+[SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_SuggestionCount) property of AutoComplete.
 
 Refer to the following example to restrict the suggestion list item counts as 3.
 
@@ -97,7 +97,7 @@ The output will be as follows.
 ## Limit the minimum filter character
 
 You can set the limit for the character count to filter the data on the AutoComplete. This can be done by
-setting the [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfAutoComplete%601~MinLength.html) property to AutoComplete.
+setting the [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) property to AutoComplete.
 
 In the following example, the remote request doesn't fetch the search data until the search key contains three characters.
 
@@ -137,7 +137,7 @@ The output will be as follows.
 ## Case sensitive filtering
 
 Data items can be filtered either with or without case sensitivity using the DataManager.
-This can be done by setting the [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~IgnoreCase.html) property of AutoComplete.
+This can be done by setting the [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_IgnoreCase) property of AutoComplete.
 
 The following sample depicts how to filter the data with case-sensitive.
 
@@ -176,7 +176,7 @@ The following sample depicts how to filter the data with case-sensitive.
 
 An AutoComplete supports diacritics filtering, which will ignore the [Diacritics](https://en.wikipedia.org/wiki/Diacritic) and
 makes it easier to filter the results in international characters lists
-when the [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~IgnoreAccent.html) is enabled.
+when the [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_IgnoreAccent) is enabled.
 
 In the following sample, data with diacritics are bound as dataSource for AutoComplete.
 

@@ -27,7 +27,7 @@ You can bind value to the ComboBox component directly for the `Value` property a
 
 @code {
 
-    public string ComboVal = "Austarlia";
+    public string ComboVal = "Austarila";
     public class Countries
     {
         public string Name { get; set; }

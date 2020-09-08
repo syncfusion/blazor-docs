@@ -89,7 +89,7 @@ Output be like below
 
 ## Binding data source
 
-After initialization, populate the DropDownList with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~DataSource.html) property.
+After initialization, populate the DropDownList with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_DataSource) property.
 Here, an array of object values is passed to the DropDownList component. `TItem` specifies the type of the Datasource in DropDownList.
 
 ```csharp
@@ -126,7 +126,7 @@ The output will be as follows.
 
 By default, the width of the popup list automatically adjusts according to the DropDownList input element's width, and the height of the popup list has `350px`.
 
-The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfDropDownList%602~PopupHeight.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfDropDownList%602~PopupWidth.html) properties respectively.
+The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties respectively.
 
 In the following sample, popup list's width and height are configured.
 

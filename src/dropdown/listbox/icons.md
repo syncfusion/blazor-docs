@@ -8,7 +8,7 @@ description: "ListBox supports icons, images and customization of each list elem
 
 ## Icons
 
-To place the icon on a list box, set the [`iconCss`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.DropDowns.ListBoxFieldSettings~IconCss.html) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the list.
+To place the icon on a list box, set the [`iconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the list.
 
 In the following sample, icon classes are mapped with `iconCss` field.
 

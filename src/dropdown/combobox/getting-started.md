@@ -93,7 +93,7 @@ The output will be as follows.
 
 ## Binding data source
 
-After initializing, populate the ComboBox with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~DataSource.html) property. Here, an array of string values is passed to the ComboBox component.
+After initializing, populate the ComboBox with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_DataSource) property. Here, an array of string values is passed to the ComboBox component.
 
 The following example illustrates the output in your browser.
 
@@ -130,7 +130,7 @@ The output will be as follows.
 ## Custom values
 
 The ComboBox allows the users to give input as custom value, which is not required to present in predefined
-set of values. By default, this support is enabled by [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfComboBox%601~AllowCustom.html) property. In this case, both text field and value field is considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
+set of values. By default, this support is enabled by [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) property. In this case, both text field and value field is considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
 
 ```csharp
 <SfComboBox TValue="string"  TItem="Games" AllowCustom=true Placeholder="Select a game" DataSource="@LocalData">
@@ -166,7 +166,7 @@ The output will be as follows.
 
 By default, the width of the popup list automatically adjusts according to the ComboBox input element's width, and the height of the popup list has `350px`.
 
-The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfComboBox%601~PopupHeight.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfComboBox%601~PopupWidth.html) properties respectively.
+The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) properties respectively.
 
 In the following sample, popup list's width and height are configured.
 

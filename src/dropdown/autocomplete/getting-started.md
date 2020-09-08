@@ -114,7 +114,7 @@ The output will be as follows.
 
 ## Binding data source
 
-After initialization, populate the AutoComplete with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~DataSource.html) property. Here, an array of string values is passed to the AutoComplete component.
+After initialization, populate the AutoComplete with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_DataSource) property. Here, an array of string values is passed to the AutoComplete component.
 
 The following example illustrates the output in your browser.
 
@@ -162,7 +162,7 @@ The output will be as follows.
 ## Custom values
 
 The AutoComplete allows the users to give input as custom value, which is not required to present in
-predefined set of values. By default, this support is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfAutoComplete%601~AllowCustom.html) property.
+predefined set of values. By default, this support is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_AllowCustom) property.
 The custom value will be sent to post back handler when a form is about to be submitted.
 
 ```csharp
@@ -206,7 +206,7 @@ The custom value will be sent to post back handler when a form is about to be su
 
 By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has `300px`.
 
-The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfAutoComplete%601~PopupHeight.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfAutoComplete%601~PopupWidth.html) property respectively.
+The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) property respectively.
 
 In the following sample, suggestion list's width and height are configured.
 

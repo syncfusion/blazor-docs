@@ -6,7 +6,7 @@ description: "This section for Syncfusion ASP.NET combo box control shows the bu
 
 # Filtering
 
-The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfComboBox%601~AllowFiltering.html) is enabled. The filter
+The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) is enabled. The filter
 operation starts as soon as you start typing characters in the component.
 
 ```csharp
@@ -39,7 +39,7 @@ The output will be as follows.
 
 ComboBox supports diacritics filtering, which will ignore the [Diacritics](https://en.wikipedia.org/wiki/Diacritic) and
 makes it easier to filter the results in international characters lists
-when the [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~IgnoreAccent.html) is enabled.
+when the [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_IgnoreAccent) is enabled.
 
 In the following sample, data with diacritics are bound as dataSource for ComboBox.
 

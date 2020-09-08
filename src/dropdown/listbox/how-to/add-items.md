@@ -6,7 +6,7 @@ description: "ListBox component supports adding of items to the listbox."
 
 # Add items to the listbox
 
-To add an item or multiple items, [`AddItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfListBox%601~AddItems.html) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be added while clicking `Add Items` button.
+To add an item or multiple items, [`AddItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be added while clicking `Add Items` button.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
@@ -52,7 +52,7 @@ Output will be shown as
 
 # Remove items from the listbox
 
-To remove an item or multiple items, [`RemoveItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfListBox%601~RemoveItems.html) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be removed while clicking `Remove Items` button.
+To remove an item or multiple items, [`RemoveItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_RemoveItems_System_Object_System_Nullable_System_Double__) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be removed while clicking `Remove Items` button.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns

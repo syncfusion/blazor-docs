@@ -85,7 +85,7 @@ Output be like below
 
 ## Binding data source
 
-After initialization, populate the MultiSelect with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~DataSource.html) property. Here, an array of string values is passed to the MultiSelect component.
+After initialization, populate the MultiSelect with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_DataSource) property. Here, an array of string values is passed to the MultiSelect component.
 
 The following example illustrates the output in your browser.
 
@@ -124,7 +124,7 @@ The output will be as follows.
 
 By default, the width of the popup list automatically adjusts according to the MultiSelect input element's width, and the height auto adjust's according to the height of the popup list items.
 
-The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfMultiSelect%601~PopupHeight.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.SfMultiSelect%601~PopupWidth.html) properties respectively.
+The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_PopupWidth) properties respectively.
 
 In the following sample, popup list's width and height are configured.
 

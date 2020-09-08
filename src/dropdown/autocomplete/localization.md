@@ -199,8 +199,8 @@ namespace WebAssemblyLocale
 * Set the culture by using the `SetCulture` method.
 
 In the following sample, French culture is set to the AutoComplete and no data is loaded. Hence, the
-[NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~NoRecordsTemplate.html) property displays its text in French culture initially and if the sample
-is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownBase%601~ActionFailureTemplate.html) property displays its text appropriately.
+[NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_NoRecordsTemplate) property displays its text in French culture initially and if the sample
+is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_ActionFailureTemplate) property displays its text appropriately.
 
 ```csharp
 @using Syncfusion.Blazor.Data

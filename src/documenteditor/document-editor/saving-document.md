@@ -27,9 +27,8 @@ You might need to save the document back to the server. The following code examp
     public async void OnSave()
     {
         DocumentEditorModule editor = container.GetDocumentEditor();
-        object base64Data = await editor.SaveAsBlob(FormatType.Docx);
-        Dictionary<string, string> documentContent = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(base64Data.ToString());
-        byte[] data = Convert.FromBase64String(documentContent["data"]);
+        string base64Data = await editor.SaveAsBlob(FormatType.Docx);
+        byte[] data = Convert.FromBase64String(base64Data);
         //Word document file stream
         Stream stream = new MemoryStream(data);
         using (var fileStream = new FileStream(@"wwwroot\data\GettingStarted.docx", FileMode.Create, FileAccess.Write))
@@ -64,10 +63,8 @@ If you have plenty of documents stored in database and you want to save the comp
     {
         string documentID = "Getting_Started.docx";
         DocumentEditorModule editor = container.GetDocumentEditor();
-        object base64Data = await editor.SaveAsBlob(FormatType.Docx);
-        Dictionary<string, string>
-        documentContent = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(base64Data.ToString());
-        byte[] data = Convert.FromBase64String(documentContent["data"]);
+        string base64Data = await editor.SaveAsBlob(FormatType.Docx);
+        byte[] data = Convert.FromBase64String(base64Data);
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\database.mdf;";
         string queryStmt = "Update DocumentsTable SET Data = @Content where DocumentName = '" + documentID + "'";
         using (SqlConnection con = new SqlConnection(connectionString))

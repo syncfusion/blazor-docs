@@ -221,7 +221,6 @@ The following sample code demonstrates implementing custom data binding using cu
     }
     public class CustomAdaptor : DataAdaptor
     {
-        static readonly HttpClient client = new HttpClient();
         public static List<OrdersDetails> order = OrdersDetails.GetAllRecords();
         public override object Read(DataManagerRequest dm, string key = null)
         {

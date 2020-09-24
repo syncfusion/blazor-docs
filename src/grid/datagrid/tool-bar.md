@@ -374,7 +374,7 @@ The following screenshots represent a datagrid with Custom toolbar dropdown list
 
 ## Enable/Disable Toolbar Items
 
-You can enable / disable tool bar items by using the [`EnableToolbarItems method`](https:/help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfToolbar~EnableItems.html).
+You can enable / disable tool bar items by using the [`EnableToolbarItems method`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_EnableItems_System_Collections_Generic_List_System_Int32__System_Nullable_System_Boolean__).
 
 ```csharp
 

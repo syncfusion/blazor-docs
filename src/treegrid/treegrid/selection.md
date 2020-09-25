@@ -54,7 +54,7 @@ The following output is displayed as a result of the above code example.
 
 ![Cell Selection](images/selectmultiple.png)
 
-> Cell selection requires the [`Mode`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/aspnetcore/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridSelectionSettings~Mode.html) to be **Cell** or **Both**, and
+> Cell selection requires the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~Mode.html) to be **Cell** or **Both**, and
 **Type** should be **Multiple**.
 
 ## Checkbox selection

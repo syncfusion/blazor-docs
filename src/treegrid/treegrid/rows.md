@@ -148,6 +148,45 @@ In the below example, the row height for the row with Task ID as 3 is set as 90p
 ```
 -->
 
-## See Also
+### See Also
 
 * [TreeGridTemplates component](./templates/#treegridtemplates-component)
+
+## Drag and drop
+
+The Tree Grid rows can be reordered, dropped to another Tree Grid or custom control by enabling the [`AllowRowDragAndDrop`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~AllowRowDragAndDrop.html) to true.
+
+### Drag and drop within TreeGrid
+
+The Tree Grid row drag and drop allows you to drag and drop Tree Grid rows on the same Tree Grid using drag icon. To enable row drag and drop, set the [`AllowRowDragAndDrop`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~AllowRowDragAndDrop.html) to true. It provides the way to drop the row above, below or child to the target row with respective to the target row position.
+
+{% aspTab template="tree-grid/rows/row-drag-drop", sourceFiles="index.razor,treegriddata.cs" %}
+
+{% endaspTab %}
+
+The following output is displayed as a result of the above code example.
+
+![Drag and drop within TreeGrid](images/draganddrop.gif)
+
+> Selection feature must be enabled for row drag and drop.
+> For multiple row selection, the type property must be set to multiple.
+
+### Drag and drop to another TreeGrid
+
+To drag and drop between two Tree Grid, enable the [`AllowRowDragAndDrop`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~AllowRowDragAndDrop.html) property and specify the target Tree Grid ID in [`TargetID`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridRowDropSettings~TargetID.html) property of [`RowDropSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridRowDropSettings).
+
+{% aspTab template="tree-grid/rows/row-dragdrop-anothergrid", sourceFiles="index.razor,treegriddata.cs" %}
+
+{% endaspTab %}
+
+The following output is displayed as a result of the above code example.
+
+![ Drag and drop to another TreeGrid](images/dragdropanothergrid.gif)
+
+### Drag and drop events
+
+The following events are triggered while drag and drop the tree grid rows.
+
+[`OnRowDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnRowDragStart) -Triggers when starts to drag the tree grid row.
+
+[`RowDropped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDropped) - Triggers when a drag element is dropped on the target element.

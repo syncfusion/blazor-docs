@@ -11,6 +11,7 @@
 * [Searching](treegrid/searching.md)
 * [Paging](treegrid/paging.md)
 * [Scrolling](treegrid/scrolling.md)
+* [Virtualization](treegrid/virtual.md)
 * [Aggregate](treegrid/aggregate.md)
 * [Globalization](treegrid/globalization.md)
 * [Selection](treegrid/selection.md)

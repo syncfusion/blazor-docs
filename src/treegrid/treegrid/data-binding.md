@@ -133,6 +133,85 @@ The following code example shows you how to bind the hierarchical list data into
 > Batch Editing is not supported for Hierarchy Data.
 > `PageSizeMode` --> `All` is not supported for Hierarchy Data.
 
+### ExpandoObject binding
+
+Tree Grid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the tree grid as list of ExpandoObject.
+
+ExpandoObject can be bound to Tree grid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~DataSource.html) property. Tree Grid can also perform all kind of supported data operations and editing in ExpandoObject.
+
+```csharp
+
+@using Syncfusion.Blazor.TreeGrid;
+
+<SfTreeGrid DataSource="@TreeData" @ref="TreeGrid" AllowPaging="true" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1"  Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
+    <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Cell"></TreeGridEditSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="80" IsPrimaryKey="true"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText="StartDate" Format="d" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+@code {
+    SfTreeGrid<ExpandoObject> TreeGrid;
+    public List<ExpandoObject> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = GetData().ToList();
+    }
+    public static List<ExpandoObject> Data = new List<ExpandoObject>();
+    public static int ParentRecordID { get; set; }
+    public static int ChildRecordID { get; set; }
+    public static List<ExpandoObject> GetData()
+    {
+        Data.Clear();
+        ParentRecordID = 0;
+        ChildRecordID = 0;
+        for (var i = 1; i <= 60; i++)
+        {
+            Random ran = new Random();
+            DateTime start = new DateTime(1992, 06, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
+            dynamic ParentRecord = new ExpandoObject();
+            ParentRecord.TaskID = ++ParentRecordID;
+            ParentRecord.TaskName = "Parent Task " + i;
+            ParentRecord.StartDate = startingDate;
+            ParentRecord.Progress = ParentRecordID % 2 == 0 ? "In Progress" : "Open";
+            ParentRecord.Priority = ParentRecordID % 2 == 0 ? "High" : "Low";
+            ParentRecord.Duration = ParentRecordID % 2 == 0 ? 32 : 76;
+            ParentRecord.ParentID = null;
+            Data.Add(ParentRecord);
+            AddChildRecords(ParentRecordID);
+        }
+        return Data;
+    }
+    public static void AddChildRecords(int ParentId)
+    {
+        for (var i = 1; i < 4; i++)
+        {
+            Random ran = new Random();
+            DateTime start = new DateTime(1992, 06, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
+            dynamic ChildRecord = new ExpandoObject();
+            ChildRecord.TaskID = ++ParentRecordID;
+            ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
+            ChildRecord.StartDate = startingDate;
+            ChildRecord.Progress = ParentRecordID % 3 == 0 ? "Validated" : "Closed";
+            ChildRecord.Priority = ParentRecordID % 3 == 0 ? "Low" : "Critical";
+            ChildRecord.Duration = ParentRecordID % 3 == 0 ? 64 : 98;
+            ChildRecord.ParentID = ParentId;
+            Data.Add(ChildRecord);
+        }
+    }
+}
+
+```
+
 ## Remote Service binding
 
 To bind remote data to Tree Grid component, assign service data as an instance of **SfDataManager** to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~DataSource.html) property. To interact with remote data source,  provide the endpoint **url** and define the [`HasChildMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~HasChildMapping.html) property of tree grid.
@@ -268,15 +347,15 @@ To add a custom parameter to the data request, use the **addParams** method of *
 <!--Handling HTTP error
 
 During server interaction from the tree grid, some server-side exceptions may occur, and you can acquire those error messages or exception details
-in client-side using the [`ActionFailure`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridBuilder~ActionFailure.html) event.
+in client-side using the [`ActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionFailure.html) event.
 
-The argument passed to the [`ActionFailure`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridBuilder~ActionFailure.html) event contains the error details returned from the server.
+The argument passed to the [`ActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionFailure.html) event contains the error details returned from the server.
 
 {% aspTab template="tree-grid/data-binding-mvc/http-error", sourceFiles="http-error.cs" %}
 
 {% endaspTab %}
 
-> The [`ActionFailure`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridBuilder~ActionFailure.html) event will be triggered not only for the server errors, but
+> The [`ActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionFailure.html) event will be triggered not only for the server errors, but
 also when there is an exception while processing the tree grid actions.
 
 -->

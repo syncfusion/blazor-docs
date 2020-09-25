@@ -27,7 +27,6 @@ The following output is displayed as a result of the above code example.
 
 ## Limitations for Virtualization
 
-* In Blazor Virtualization is supported only using **SfDataManager** with **JsonAdaptor**.
 * Due to the element height limitation in browsers, the maximum number of records loaded by the tree grid is limited by the browser capability.
 * Cell selection will not be persisted in row.
 * Virtual scrolling is not compatible with detail template.

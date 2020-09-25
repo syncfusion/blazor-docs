@@ -34,8 +34,8 @@ The following output is displayed as a result of the above code example.
 ## Auto wrap
 
 The auto wrap allows the cell content of the tree grid to wrap to the next line when it exceeds the boundary of the cell width. The Cell Content wrapping works based on the position of white space between words.
-To enable auto wrap, set the [`AllowTextWrap`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGrid~AllowTextWrap.html) property to **true**.
-<!-- You can configure the auto wrap mode by setting the [`textWrapSettings.wrapMode`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGrid~TextWrapSettings.html) property.
+To enable auto wrap, set the [`AllowTextWrap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~AllowTextWrap.html) property to **true**.
+<!-- You can configure the auto wrap mode by setting the [`textWrapSettings.wrapMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~TextWrapSettings.html) property.
 
 There are three types of `wrapMode`. They are:
 
@@ -58,7 +58,7 @@ The following output is displayed as a result of the above code example.
 <!--
  Custom Attributes
 
-You can customize the tree grid cells by adding a CSS class to the [`customAttribute`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridColumn~CustomAttributes.html) property of the column.
+You can customize the tree grid cells by adding a CSS class to the [`customAttribute`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~CustomAttributes.html) property of the column.
 
 ```CSS
 .e-attr {

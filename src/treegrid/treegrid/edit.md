@@ -15,7 +15,7 @@ To define the primary key, set [`TreeGridColumn.IsPrimaryKey`](https://help.sync
 {% endaspTab %}
 
 You can disable editing for a particular column, by specifying
-[`TreeGridColumn.AllowEditing`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGridColumn~AllowEditing.html) to **false**.
+[`TreeGridColumn.AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowEditing.html) to **false**.
 
 > To perform the editing operation in the Blazor Tree Grid, we recommend to mention the respective model class type (List<TreeData.BusinessObject>), in the Tree Grid's dataSource property value.
 
@@ -34,7 +34,7 @@ You can disable editing for a particular column, by specifying
 ## Toolbar with edit option
 
 The tree grid toolbar has the built-in items to execute Editing actions.
-You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGrid~Toolbar.html) property.
+You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Toolbar.html) property.
 
 {% aspTab template="tree-grid/editing/toolbaredit", sourceFiles="index.razor,treegriddata.cs" %}
 
@@ -180,7 +180,7 @@ The following output is displayed as a result of the above code example.
 
  <!-- Get value from editor
 
-You can read, format, and update the current editor value in the [`ActionBegin`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGrid~ActionBegin.html) event at the time of setting `requestType` to `save`.
+You can read, format, and update the current editor value in the [`ActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionBegin.html) event at the time of setting `requestType` to `save`.
 
 In the following code example, the `progress` value has been formatted and updated.
 
@@ -198,7 +198,7 @@ In the following code example, the `progress` value has been formatted and updat
 
 By default, the first input element in the dialog will be focused while opening the dialog.
 If the first input element is in disabled or hidden state, focus the valid input element in the
-[`ActionComplete`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGrid~ActionComplete.html)
+[`ActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionComplete.html)
 event based on `requestType` as `beginEdit`.
 
 ```typescript
@@ -214,7 +214,7 @@ event based on `requestType` as `beginEdit`.
 
  Adding validation rules for custom editors
 
-If you have used additional fields that are not present in the column model, then add the validation rules to the [`ActionComplete`](https://help.syncfusion.com/cr/cref_files/aspnetcore-js2/Syncfusion.EJ2~Syncfusion.EJ2.TreeGrid.TreeGrid~ActionComplete.html) event.
+If you have used additional fields that are not present in the column model, then add the validation rules to the [`ActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionComplete.html) event.
 
 ```typescript
 

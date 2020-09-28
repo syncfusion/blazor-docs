@@ -59,9 +59,8 @@ The following sample demonstrates the different types of toast.
         this.ToastTitle = this.Toasts[this.ToastFlag].Title;
         this.ToastContent = this.Toasts[this.ToastFlag].Content;
         this.ToastCssClass = this.Toasts[this.ToastFlag].CssClass;
-        // Delay mandatory to update the dynamically changed Toast properties
         await Task.Delay(100);
-        await this.ToastObj.Show();
+       this.ToastObj.Show();
         this.ToastFlag = ((this.ToastFlag == Toasts.Length - 1) ? 0 : (this.ToastFlag + 1));
     }
 }

@@ -29,17 +29,17 @@ Toast supports to change templates dynamically with displaying in multiple toast
     private int ToastFlag = 0;
 
     private ToastModel[] Messages = new ToastModel[] {
-        new ToastModel() { Template = "2 Mail has received"},
-        new ToastModel() { Template = "User Guest Logged in"},
-        new ToastModel() { Template = "Logging in as Guest"},
-        new ToastModel() { Template = "Ticket has reserved"}
+        new ToastModel() { ContentTemplate = @<p>2 Mail has received</p>},
+        new ToastModel() {  ContentTemplate = @<p>User Guest Logged in</p>},
+        new ToastModel() {  ContentTemplate = @<p>Logging in as Guest</p>},
+        new ToastModel() {  ContentTemplate = @<p>Ticket has reserved</p>}
     };
 
     private async Task ShowToast()
     {
         // Delay mandatory to update the dynamically changed Toast properties
         await Task.Delay(100);
-        await this.ToastObj.Show(Messages[this.ToastFlag]);
+        this.ToastObj.Show(Messages[this.ToastFlag]);
         this.ToastFlag = ((this.ToastFlag == Messages.Length - 1) ? 0 : (this.ToastFlag + 1));
     }
 }

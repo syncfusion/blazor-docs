@@ -15,9 +15,8 @@ The following sample demonstrates the click/tap action in toast.
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
-<SfToast @ref="ToastObj" TimeOut=0 Title="Matt sent you a friend request" Content="@ToastContent">
+<SfToast @ref="ToastObj" Title="Alert" Content="@ToastContent">
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
-    <ToastEvents OnClick="@ToastClick"></ToastEvents>
 </SfToast>
 
 <div class="col-lg-12 col-sm-12 col-md-12 center">
@@ -29,16 +28,23 @@ The following sample demonstrates the click/tap action in toast.
 @code {
     SfToast ToastObj;
 
-    private string ToastContent { get; set;} = "You have a new friend request yet to accept";
-
-    private void ToastClick(ToastClickEventArgs args)
-    {
-        args.ClickToClose = true;
-    }
+    private int ToastFlag = 0;
+    private string ToastContent = "";
+    private string[] Contents = new string[] {
+        "Welcome User",
+        "Upload in progress",
+        "Upload success",
+        "Profile updated",
+        "Profile picture changed",
+        "Password changed"
+    };
 
     private async Task ShowToast()
     {
-        await this.ToastObj.Show();
+        this.ToastContent = this.Contents[this.ToastFlag];
+        await Task.Delay(100);
+       this.ToastObj.Show();
+        this.ToastFlag = ((this.ToastFlag != 5) ? (this.ToastFlag + 1) : 0);
     }
 }
 

@@ -24,7 +24,7 @@ The toast component implements the keyboard navigation support by using the foll
 
 @using Syncfusion.Blazor.Notifications
 
-<SfToast @ref="ToastObj" Title="Matt sent you a friend request" Content="@ToastContent" TimeOut="0">
+<SfToast @ref="ToastObj" Title="Matt sent you a friend request" Content="@ToastContent" Timeout="0">
     <ToastEvents Created="@OnCreate"></ToastEvents>
 </SfToast>
 
@@ -35,7 +35,7 @@ The toast component implements the keyboard navigation support by using the foll
 
     private async Task OnCreate()
     {
-        await this.ToastObj.Show();
+       await this.ToastObj.Show();
     }
 }
 

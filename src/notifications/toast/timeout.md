@@ -21,12 +21,12 @@ The toast can be expired based on the `TimeOut` property. The toast can live til
 @using Syncfusion.Blazor.Notifications
 
 <div class="control-section toast-default-section">
-    <SfToast @ref="ToastObj" Title="Anjolie Stokes" Width="230" Height="250" Content="@ToastContent" TimeOut="@ToastTimeOut">
+    <SfToast @ref="ToastObj" Title="Anjolie Stokes" Width="230" Height="250" Content="@ToastContent" Timeout="@ToastTimeOut">
         <ToastPosition X="Right" Y="Bottom"></ToastPosition>
-        <ToastButtonModelProps>
-            <ToastButtonModelProp Model="@IgnoreBtnModel" Clicked="@HideToast"></ToastButtonModelProp>
-            <ToastButtonModelProp Model="@ReplyBtnModel"></ToastButtonModelProp>
-        </ToastButtonModelProps>
+        <ToastButtons>
+            <ToastButton  Content = "Ignore" OnClick="@HideToast"></ToastButton>
+            <ToastButton  Content = "reply"></ToastButton>
+        </ToastButtons>
     </SfToast>
 
     <div class="col-lg-12 col-sm-12 col-md-12 center">
@@ -57,23 +57,13 @@ The toast can be expired based on the `TimeOut` property. The toast can live til
     SfToast ToastObj;
     SfTextBox TextBoxObj;
 
-    private double ToastTimeOut { get; set; } = 0;
+    private int ToastTimeOut { get; set; } = 0;
     private string TextBoxVal { get; set; } = "0";
     private string ToastContent { get; set; } = "<p><img src='https://blazor.syncfusion.com/demos/images/toast/laura.png'></p>";
 
-    private SfButton IgnoreBtnModel = new SfButton
-    {
-        Content = "Ignore"
-    };
-
-    private SfButton ReplyBtnModel = new SfButton
-    {
-        Content = "reply"
-    };
-
     private async Task ShowToast()
     {
-        await this.ToastObj.Show();
+       await this.ToastObj.Show();
     }
 
     private void OnValChange()
@@ -85,7 +75,7 @@ The toast can be expired based on the `TimeOut` property. The toast can live til
 
     private async Task HideToast()
     {
-        await this.ToastObj.Hide();
+       await this.ToastObj.Hide();
     }
 }
 
@@ -104,7 +94,7 @@ You can prevent auto hiding in a toast as visible like static by setting zero (`
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
-<SfToast @ref="ToastObj" TimeOut=0 Title="Matt sent you a friend request" Content="@ToastContent">
+<SfToast @ref="ToastObj" Timeout=0 Title="Matt sent you a friend request" Content="@ToastContent">
     <ToastPosition X="Right"></ToastPosition>
 </SfToast>
 
@@ -128,7 +118,7 @@ You can prevent auto hiding in a toast as visible like static by setting zero (`
 
     private async Task ShowToast()
     {
-        await this.ToastObj.Show();
+       await this.ToastObj.Show();
     }
 }
 

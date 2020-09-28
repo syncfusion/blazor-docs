@@ -95,7 +95,7 @@ The following code explains how to initialize a simple Toast in Razor page.
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
-<SfToast @ref="ToastObj" Title="Adaptive Tiles Meeting" TimeOut=5000 Icon="e-meeting" Content="@ToastContent">
+<SfToast @ref="ToastObj" Title="Adaptive Tiles Meeting" Timeout=5000 Icon="e-meeting" Content="@ToastContent">
     <ToastPosition X="Right"></ToastPosition>
 </SfToast>
 
@@ -120,12 +120,12 @@ The following code explains how to initialize a simple Toast in Razor page.
 
     private async Task ShowToast()
     {
-        await this.ToastObj.Show();
+       await this.ToastObj.Show();
     }
 
     private async Task HideToast()
     {
-        await this.ToastObj.Hide("All");
+       await this.ToastObj.Hide("All");
     }
 }
 

@@ -15,10 +15,10 @@ You can include action buttons to the toast control by adding the `ToastButtonMo
 
 <SfToast @ref="ToastObj" Title="Anjolie Stokes" Width="280" Height="120" Icon="e-laura" Content="@ToastContent">
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
-    <ToastButtonModelProps>
-        <ToastButtonModelProp Model="@IgnoreBtnModel" Clicked="@HideToast"></ToastButtonModelProp>
-        <ToastButtonModelProp Model="@ReplyBtnModel" Clicked="@HideToast"></ToastButtonModelProp>
-    </ToastButtonModelProps>
+    <ToastButtons>
+        <ToastButton  Content = "Ignore" OnClick="@HideToast"></ToastButton>
+        <ToastButton  Content = "reply" OnClick="@HideToast"></ToastButton>
+    </ToastButtons>
 </SfToast>
 
 <div class="col-lg-12 col-sm-12 col-md-12 center">
@@ -48,24 +48,14 @@ You can include action buttons to the toast control by adding the `ToastButtonMo
 
     private string ToastContent { get; set; } = "Thanks for the update!";
 
-    private SfButton IgnoreBtnModel = new SfButton
-    {
-        Content = "Ignore"
-    };
-
-    private SfButton ReplyBtnModel = new SfButton
-    {
-        Content = "reply"
-    };
-
     private async Task ShowToast()
     {
-        await this.ToastObj.Show();
+      await this.ToastObj.Show();
     }
 
     private async Task HideToast()
     {
-        await this.ToastObj.Hide();
+       await this.ToastObj.Hide();
     }
 }
 

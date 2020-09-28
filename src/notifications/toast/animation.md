@@ -21,8 +21,8 @@ The following sample demonstrates some types of animations that suit toast. You 
 <SfToast @ref="ToastObj" Title="Matt sent you a friend request" Content="@ToastContent">
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
     <ToastAnimationSettings>
-        <ToastAnimationSettingsHide Effect="@HideAnimation"></ToastAnimationSettingsHide>
-        <ToastAnimationSettingsShow Effect="@ShowAnimation"></ToastAnimationSettingsShow>
+        <ToastShowAnimationSettings Effect="@ShowAnimation"></ToastShowAnimationSettings>
+        <ToastHideAnimationSettings Effect="@HideAnimation"></ToastHideAnimationSettings>
     </ToastAnimationSettings>
 </SfToast>
 
@@ -75,8 +75,8 @@ The following sample demonstrates some types of animations that suit toast. You 
 @code {
     SfToast ToastObj;
 
-    private string ShowAnimation = "FadeIn";
-    private string HideAnimation = "FadeOut";
+    private ToastEffect ShowAnimation = ToastEffect.FadeIn;
+    private ToastEffect HideAnimation = ToastEffect.FadeOut;
     private string ToastContent = "You have a new friend request yet to accept";
 
     public class DropDownFields
@@ -86,7 +86,7 @@ The following sample demonstrates some types of animations that suit toast. You 
     }
 
     private List<DropDownFields> Effects = new List<DropDownFields>()
-    {
+{
         new DropDownFields(){ id= "FadeIn", text= "Fade In" },
         new DropDownFields(){ id= "FadeZoomIn", text= "Fade Zoom In" },
         new DropDownFields(){ id= "FadeZoomOut", text= "Fade Zoom Out" },
@@ -115,13 +115,13 @@ The following sample demonstrates some types of animations that suit toast. You 
 
     private void ShowAnimationChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
     {
-        ShowAnimation = args.Value as string;
+        this.ShowAnimation  = (ToastEffect)System.Enum.Parse(typeof(ToastEffect), args.Value);
         StateHasChanged();
     }
 
     private void HideAnimationChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
     {
-        HideAnimation = args.Value as string;
+        this.HideAnimation = (ToastEffect)System.Enum.Parse(typeof(ToastEffect), args.Value);
         StateHasChanged();
     }
 }

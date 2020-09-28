@@ -17,7 +17,7 @@ The following code explains how to initialize a Toast with `Template`.
 
 <SfButton @onclick="@ShowToast"> Show Toast</SfButton>
 
-<SfToast ID="toast_custom" @ref="@ToastObj" Width="400px" ExtendedTimeout=0 TimeOut=120000>
+<SfToast ID="toast_custom" @ref="@ToastObj" Width="400px" ExtendedTimeout=0 Timeout=120000>
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
     <ToastTemplates>
         <Template>
@@ -44,7 +44,7 @@ The following code explains how to initialize a Toast with `Template`.
 
     private async Task ShowToast()
     {
-        await this.ToastObj.Show();
+       await this.ToastObj.Show();
     }
 }
 
@@ -145,11 +145,11 @@ The HTML element tag's can be given as a string for the `Template` property when
 @code {
     SfToast ToastObj;
 
-    private string template = "<div id='toastEmail_template'><div class='e-toast-template'><img class='e-toast-icon e-toast-image' src='https://blazor.syncfusion.com/demos/images/toast/laura.png' /><div class='e-toast-message'><div class='e-toast-title'>Anjolie Stokes</div><div class='e-toast-content'>Networking Referral</div></div></div></div>";
+    private RenderFragment template = @<div id='toastEmail_template'><div class='e-toast-template'><img class='e-toast-icon e-toast-image' src='https://blazor.syncfusion.com/demos/images/toast/laura.png' /><div class='e-toast-message'><div class='e-toast-title'>Anjolie Stokes</div><div class='e-toast-content'>Networking Referral</div></div></div></div>;
 
     private async Task ShowToast()
     {
-        await this.ToastObj.Show(new ToastModel { Template = template });
+       await this.ToastObj.Show(new ToastModel { ContentTemplate = template });
     }
 }
 

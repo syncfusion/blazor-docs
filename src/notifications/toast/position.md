@@ -54,12 +54,12 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
             <tr>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Label="Position" Name="toastPos" Value="Position" @bind-Checked="@Checked2" ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
+                        <SfRadioButton Label="Position" Name="toastPos" Value=@("Position") Checked=@("Position") ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
                     </div>
                 </td>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Label="Custom" Name="toastPos" Value="Custom" @bind-Checked="@checkedCustom" ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
+                        <SfRadioButton Label="Custom" Name="toastPos" Value=@("Custom") ValueChange="@RadioButtonChange"   Checked=@("Custom")  TChecked="string"></SfRadioButton>
                     </div>
                 </td>
             </tr>
@@ -86,12 +86,12 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
             <tr>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton id="radio1" Label="Target" Name="toast" Value="Target" @bind-Checked="@targetChecked" ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
+                        <SfRadioButton Label="Target" Name="toast" Value=@("Target") ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
                     </div>
                 </td>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton id="radio2" Label="Global" Name="toast" Value="Global" @bind-Checked="@Checked" ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
+                        <SfRadioButton Label="Global" Name="toast" Value=@("Global") Checked=@("Global") ValueChange="@RadioButtonChange" TChecked="string"></SfRadioButton>
                     </div>
                 </td>
             </tr>
@@ -130,11 +130,6 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
     private string ToastTarget = null;
     private string PositionX = "Center";
     private string PositionY = "Bottom";
-    private string Checked2 { get; set; } = "Position";
-    private string Checked { get; set; } = "Global";
-    private string checkedCustom { get; set; } = "Custom";
-    private string targetChecked { get; set; } = "Target";
-
     private string DropDownDisplay { get; set; } = "";
     private string TextBoxDisplay { get; set; } = "none";
     private string ToastContent = "You have a new friend request yet to accept";
@@ -146,7 +141,7 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
     }
 
     private List<DropDownfields> DropDownData = new List<DropDownfields>()
-{
+    {
         new DropDownfields(){ id= "topleft", text= "Top Left" },
         new DropDownfields(){ id= "topright", text= "Top Right" },
         new DropDownfields(){ id= "topcenter", text= "Top Center" },

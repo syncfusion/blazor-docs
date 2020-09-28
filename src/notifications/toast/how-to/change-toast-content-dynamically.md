@@ -40,9 +40,8 @@ The Toast component supports to change its content dynamically while displaying 
     private async Task ShowToast()
     {
         this.ToastContent = this.Contents[this.ToastFlag];
-        // Delay mandatory to update the dynamically changed Toast properties
         await Task.Delay(100);
-        await this.ToastObj.Show();
+       this.ToastObj.Show();
         this.ToastFlag = ((this.ToastFlag != 5) ? (this.ToastFlag + 1) : 0);
     }
 }

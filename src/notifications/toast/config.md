@@ -43,7 +43,7 @@ Toast can be created with the notification message. The message contains `Title`
 
     private async Task ShowToast()
     {
-        await this.ToastObj.Show();
+       await this.ToastObj.Show();
     }
 }
 
@@ -98,7 +98,7 @@ Here, The following sample demonstrates the combination of the `Target`, `ShowCl
 
     private async Task ShowToast()
     {
-        await this.ToastObj.Show();
+       await this.ToastObj.Show();
     }
 }
 
@@ -192,19 +192,19 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
             <tr>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Name="toast" Label="Top" Value="Target" TChecked="string" ValueChange="@RadioButtonChange" @bind-Checked="@RadioTarget"></SfRadioButton>
+                        <SfRadioButton Name="toast" Label="Top" Value="Target"  TChecked="string" @bind-Checked="@RadioTopChecked" ValueChange="@RadioButtonChange"></SfRadioButton>
                     </div>
                 </td>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                        <SfRadioButton Name="toast" Label="Bottom" Value="Global" TChecked="string" ValueChange="@RadioButtonChange" @bind-Checked="@RadioChecked"></SfRadioButton>
+                        <SfRadioButton Name="toast" Label="Bottom" Value="Global" TChecked="string" ValueChange="@RadioButtonChange" @bind-Checked="@RadioBottomChecked"></SfRadioButton>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div style='padding:25px 0 0 0;'>
-                       <SfCheckBox Label="100% Width" TChecked="bool" ValueChange="@CheckBoxChange"></SfCheckBox>
+                        <SfCheckBox Label="100% Width" TChecked="bool" ValueChange="@CheckBoxChange"></SfCheckBox>
                     </div>
                 </td>
             </tr>
@@ -220,8 +220,9 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
     private string Width { get; set; } = "400";
     private string Height { get; set; } = "120";
     private string PositionY { get; set; } = "Bottom";
-    private string RadioChecked { get; set; } = "Global";
-    private string RadioTarget { get; set; } = "Target";
+    private string RadioBottomChecked { get; set; } = "Global";
+    private string RadioTopChecked { get; set; } = "Target";
+
     private string Title { get; set; } = "Matt sent you a friend request";
     private string ToastContent { get; set; } = "You have a new friend request yet to accept";
 

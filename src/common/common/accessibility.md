@@ -7,7 +7,7 @@ All the Syncfusion Blazor components follow the WAI-ARIA accessibility standard 
 Keyboard navigation support enables users to interact with components using keyboard shortcuts. Each component has its own set of shortcuts. Refer to the following documents to get the details of each component.
 
 * [Accordion](../accordion/accessibility)
-* [AutoComplete](../auto-complete/accessibility)
+* [AutoComplete](../autocomplete/accessibility)
 * [Calendar](../calendar/accessibility)
 * [CheckBox](../check-box/accessibility)
 * [Chip](../chip/accessibility)

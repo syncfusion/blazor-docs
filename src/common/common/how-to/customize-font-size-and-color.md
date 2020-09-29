@@ -71,7 +71,7 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
     ```
 
-    > **Note:** For production purposes and minimal requirement, Syncfusion provides an option to generate scripts and styles of selective control by using the Custom Resource Generator (CRG) web tool. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
+    > **Note:** Syncfusion provides an option to generate custom interop scripts and styles of selective components by using the Custom Resource Generator (CRG) web tool for the production environment. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
 
 7. Run the application. The styles are applied in our Blazor component.
 

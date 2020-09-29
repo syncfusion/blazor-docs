@@ -40,7 +40,7 @@ This section provides information about creating Razor Class Library with the Sy
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created RLC by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
 
-    ![nuget explorer](images/RLC-nuget-explorer.png)
+    ![nuget explorer](images/rcl-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in RLC.
 
@@ -175,7 +175,7 @@ This section provides information about creating Razor Class Library with the Sy
 
 5. Run the application, The Syncfusion Blazor Calendar component will render in the default web browser.
 
-    ![RCL output](images/RCL-output.png)
+    ![RCL output](images/rcl-output.png)
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019 with Razor Class Library (RCL)
 
@@ -193,7 +193,7 @@ This section provides information about creating Razor Class Library with the Sy
 
 4. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core 3.1** is selected at the top.
 
-    ![select framework](images/web-client-template.png)
+    ![select framework](images/webassembly-template.png)
 
     > **Note:** ASP.NET Core 3.1 available in Visual Studio 2019 version.
 
@@ -285,4 +285,4 @@ This section provides information about creating Razor Class Library with the Sy
 
 5. Run the application, The Syncfusion Blazor Calendar component will render in the default web browser.
 
-    ![RCL output](images/RCL-output.png)
+    ![RCL output](images/rcl-output.png)

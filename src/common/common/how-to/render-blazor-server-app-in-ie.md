@@ -2,11 +2,11 @@
 
 ## Blazor WebAssembly App
 
-†Microsoft Internet Explorer doesn't support `WebAssembly`. So, Blazor WebAssembly does not support Internet Explorer.
+†Microsoft Internet Explorer doesn't support with `WebAssembly`. So, Blazor WebAssembly application does not support with Internet Explorer.
 
 ## Blazor Server App
 
-†Microsoft Internet Explorer supports `Blazor Server` with additional polyfills. Find the following steps to add the polyfills in the Blazor server application.
+†Microsoft Internet Explorer supports `Blazor Server` app with additional polyfills. Find the following steps to add the polyfills in the Blazor server application.
 
 ## Create a Blazor Server Application
 
@@ -25,8 +25,8 @@
     </head>
 
     ```
-    > Including this [polyfill](https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js)  for Blazor provides IE support with server-side mode.
+    > This [polyfill](https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js) is required to configure in Blazor server application for IE 11 support.
 
-3. Run the Application, The Syncfusion Blazor Component will render in the IE web browser.
+3. Run the Application, The Syncfusion Blazor Component will render in the IE 11 web browser.
 
     ![output](../../getting-started/images/browser-output.png)

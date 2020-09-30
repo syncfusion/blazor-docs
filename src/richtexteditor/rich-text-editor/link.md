@@ -56,7 +56,7 @@ The output will be as follows.
 
 ## Remove Link
 
-To remove a hyperlink from a text or image, select the text or image with the hyperlink and click `RemoveHyperlink` tool from the toolbar. It will keep the text or image.
+To remove a hyperlink from a text or image, select the text or image with the hyperlink and click `Remove Hyperlink` tool from the toolbar. It will keep the text or image.
 
 ## Auto-link
 

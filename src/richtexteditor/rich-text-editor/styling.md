@@ -14,11 +14,11 @@ To apply different font style for section of the content, select the text that y
 
 ### Font name
 
-The following table lists the default font name and width of the `FontName` dropdown and available list of font names.
+The following table, lists the default font name and width of the `FontName` dropdown and available list of font names.
 
 | Default Key | Default Value |
 |----------------|--------------------------------------|
-| Font name | null |
+| Default | null |
 | Width | 65px|
 | Items | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-segoe-ui", Command = "Font", SubCommand = "FontName", Text = "Segoe UI", Value = "Segoe UI" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-arial", Command = "Font", SubCommand = "FontName", Text = "Arial", Value = "Arial,Helvetica,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-georgia", Command = "Font", SubCommand = "FontName", Text = "Georgia", Value = "Georgia,serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-impact", Command = "Font", SubCommand = "FontName", Text = "Impact", Value = "Impact,Charcoal,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-tahoma", Command = "Font", SubCommand = "FontName", Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-times-new-roman", Command = "Font", SubCommand = "FontName", Text = "Times New Roman", Value = "Times New Roman,Times,serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-verdana", Command = "Font", SubCommand = "FontName", Text = "Verdana", Value = "Verdana,Geneva,sans-serif"}<br>};|
 
@@ -28,7 +28,7 @@ The following table list the default font size and width of the `FontSize` dropd
 
 | Default Key | Default Value |
 |----------------|---------|
-| Font size | null |
+| Default | null |
 | Width | 35px.|
 | Items |new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "8 pt", Value = "8pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "10 pt", Value = "10pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "12 pt", Value = "12pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "14 pt", Value = "14pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "18 pt", Value = "18pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "24 pt", Value = "24pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "36 pt", Value = "36pt" }<br>};|
 
@@ -87,7 +87,7 @@ The output will be as follows.
 ## Custom font and size
 
 Rich Text Editor provides support to custom fonts and size with existing list.
-If you want to add additional font names and font sizes to font drop-down, pass the font information as `List<DropDownItemModel>` data to the items field of `FontSize` and `FontFamily` property.
+If you want to add additional font names and font sizes to font drop-down, pass the font information as `List<DropDownItemModel>` data to the `Items` field of `RichTextEditorFontSize` and `RichTextEditorFontFamily` tag.
 
 ```csharp
 
@@ -163,9 +163,9 @@ The output will be as follows.
 
 To apply font color or background color for a selected content of RTE, use the font color and background color tools.
 
-Rich Text Editor support to provide customs font color and background color with existing list through the `ColorCode` field of `FontColor` and `BackgroundColor`.
+Rich Text Editor support to provide customs font color and background color with existing list through the `ColorCode` field of `RichTextEditorFontColor` and `RichTextEditorBackgroundColor`.
 
-The FontColor and BackgroundColor property has two `Mode` Picker and Palette. Palette mode has predefined set of `ColorCode` and in the picker mode, more colors has been provided. Through `ModeSwitcher`, you can able to switch between these two options.
+The RichTextEditorFontColor and RichTextEditorBackgroundColor tag has two `Mode` of `Picker` and `Palette`. Palette mode has predefined set of `ColorCode` and in the picker mode, more colors has been provided. Through `ModeSwitcher`, you can able to switch between these two options.
 
 ```csharp
 
@@ -221,7 +221,7 @@ The output will be as follows.
 
 ## Editor content styles
 
-By default, The content styles of Rich Text Editor are not returned while retrieving HTML value from the editor. So, the styles are not applied when using the HTML value outside of the editor. To get the styles to Rich Text Editor’s content for your application, You can copy and use the below styles directly in your application. The styles listed below which used in the UI elements of the Rich Text Editor.  
+By default, The content styles of Rich Text Editor are not returned while retrieving HTML value from the editor. So, the styles are not applied when using the HTML value outside of the editor. To get the styles to Rich Text Editor’s content for your application, You can copy and use the below styles directly in your application. The styles listed below which used in the UI elements of the Rich Text Editor.
 
 > Make sure to add a CSS class ‘e-rte-content’ to the content container.
 

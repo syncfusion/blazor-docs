@@ -18,7 +18,7 @@ Render the Rich Text Editor in form as below.
 @using System.ComponentModel.DataAnnotations;
 
 <div class="control-section">
-    <div class="content-wrapper">
+    <div class="content-container">
         <div id="content" class="box-form" style="margin: 0 auto; max-width:750px; padding:25px">
             <EditForm Model="@Model">
                 <DataAnnotationsValidator />
@@ -79,7 +79,7 @@ The Rich Text Editor is a textarea control. The Rich Text Editor also provides t
 | MinLength | Requires the value to be of given minimum characters count.|
 | MaxLength | Requires the value to be of given maximum characters count.|
 
-This sample is used to validate form using the `DataAnnotationsValidator`.
+This sample is demonstrate form validation using the `DataAnnotationsValidator`.
 
 ```csharp
 

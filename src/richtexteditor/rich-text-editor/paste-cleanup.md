@@ -31,7 +31,7 @@ You can control the formatting and styles on pasting the content to the editor u
 | [DeniedAttributes](#denied-attributes) | To paste the content by filtering out these attributes from the content. | null | string[] |
 | [AllowedStyleProperties](#allowed-style-properties) | To paste the content by accepting these style attributes and removing other style attributes. | ['background', 'background-color', 'border', 'border-bottom', 'border-left', 'border-radius', 'border-right', 'border-style', 'border-top', 'border-width', 'clear', 'color', 'cursor', 'direction', 'display', 'float', 'font', 'font-family', 'font-size', 'font-weight', 'font-style', 'height', 'left', 'line-height', 'margin', 'margin-top', 'margin-left', 'margin-right', 'margin-bottom', 'max-height', 'max-width', 'min-height', 'min-width', 'overflow', 'overflow-x', 'overflow-y', 'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top', 'position', 'right', 'table-layout', 'text-align', 'text-decoration', 'text-indent', 'top', 'vertical-align', 'visibility', 'white-space', 'width'] | string[] |
 
-> Rich Text Editor features are segregated into individual feature-wise modules. To use paste cleanup, configure paste cleanup using the `RichTextEditorPasteCleanupSettings`.
+> To use paste cleanup, configure paste cleanup using the `RichTextEditorPasteCleanupSettings`.
 
 ## Prompt dialog
 
@@ -50,9 +50,9 @@ When `PlainText` is set to true, the copied content will be converted as plain t
 
 ## Keep format
 
-When `KeepFormat` is set to true, the copied content will maintain all the style formatting allowed in the `AllowedStyleProps` on pasting the content in the editor.
+When `KeepFormat` is set to true, the copied content will maintain all the style formatting allowed in the `AllowedStyleProperties` on pasting the content in the editor.
 
-When `KeepFormat` is set to false, the style in the copied content will be removed without considering the allowed styles in the `AllowedStyleProps` when pasting the content in the editor.
+When `KeepFormat` is set to false, the style in the copied content will be removed without considering the allowed styles in the `AllowedStyleProperties` when pasting the content in the editor.
 
 > When `KeepFormat` value is set true, the API property [Prompt](#prompt-dialog) and [PlainText](#paste-as-plain-text) should be set to false.
 
@@ -82,7 +82,7 @@ For Example,
 
 `public string[] AllowedStyles = new string[] { "color", "margin" };`: This will allow only the style properties 'color' and 'margin' in each pasted element.
 
-In the following example, the paste cleanup related settings are explained with its module configuration.
+In the following example, the paste cleanup related settings are explained with configuration.
 
 ```csharp
 

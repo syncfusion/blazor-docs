@@ -27,7 +27,7 @@ Rich Text Editor allows inserting images from online sources and local computer 
 
 Through the `browse` option in the Image dialog, select the image from the local machine and insert into the Rich Text Editor content.
 
-If the path field is not specified in the `RichTextEditorImageSettings`, the image will be converted into base64 and blob url for the image will be created and the generated url will be set as src property of `<img>` tag as below.
+If the path field is not specified in the `RichTextEditorImageSettings`, the image will be converted into base64 and blob url for the image will be created then generated url will be set as `src` property of `<img>` tag as below.
 
 The image has been loaded from the local machine and it will be saved in the given location.
 
@@ -37,11 +37,11 @@ The image has been loaded from the local machine and it will be saved in the giv
 
 ```
 
-> If you want to insert a lot of tiny images in the editor and don't want a specific physical location for saving images, you can opt to save format as Base64.
+> If you want to insert a lot of tiny images in the editor and don't want a specific physical location for saving images, you can opt to save format as `Base64`.
 
 ## Server side action
 
-The selected image can be uploaded to the required destination by using the following controller action. Map this method name in `SaveUrl` property of `RichTextEditorImageSettings` and provide required destination path through `Path` property.
+The selected image can be uploaded to the required destination by using the following controller action. Map controller method name in `SaveUrl` property of `RichTextEditorImageSettings` and provide required destination path through `Path` property.
 
 > The following code block shows saving the image file uploaded to Rich Text Editor using the `Blazor Server App` project. The runnable Blazor Server app demo is available in this [Github](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload) repository.
 
@@ -139,7 +139,7 @@ The output will be as follows.
 
 ## Image delete
 
-To remove am image from the Rich Text Editor content, select the image and click "Remove" tool from quick toolbar. It will delete the image from the Rich Text Editor content.
+To remove an image from the Rich Text Editor content, select the image and click "Remove" tool from quick toolbar. It will delete the image from the Rich Text Editor content.
 
 After selecting the image from the local machine, the URL for the image will be generated, from there also you can remove the image from the service location by clicking the cross icon as in the following image.
 
@@ -169,8 +169,7 @@ By clicking the Image Caption, the image will get wrapped in an image element wi
 
 ## Display position
 
-Sets the default display for an image when it is inserted in the
-Rich Text Editor using `Display` field in`RichTextEditorImageSettings`.
+Sets the default display for an image when it is inserted in the Rich Text Editor using `Display` field in`RichTextEditorImageSettings`.
 
 > It has two possible options: `Inline` and `Break`.
 

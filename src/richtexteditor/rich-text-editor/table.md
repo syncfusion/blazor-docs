@@ -13,7 +13,7 @@ Rich Text Editor allows you to insert table of content in edit panel and provide
 | MinWidth | Sets the default minWidth of the table. | 0 |
 | MaxWidth | Sets the default maxWidth of the table. | null |
 | EnableResize | Enables resize feature in table.| true |
-| Styles | This is an array of key value pair, on each pair, key should be name of styling and value is class name. this list will be shown on quick toolbar options to change the styles of table on designing like dashed, double bordered. | `TableStyleItems` |
+| Styles | This is an array of key value pair, on each pair, key should be name of styling and value is class name. this list will be shown on quick toolbar options to change the styles of table on designing like dashed, double bordered. | `List<DropDownItemModel>` |
 | Width | Sets the default width of the table. | 100% |
 
 ## Insert table
@@ -22,9 +22,9 @@ Using the `CreateTable` toolbar option, select a number of rows and columns to b
 grid and insert table into Rich Text Editor content using the mouse.
 
 Tables can also be inserted through the `Insert Table` option in the pop-up where the number of rows
-and columns can be provided manually,and this is the default way in devices.
+and columns can be provided manually and this is the default way in devices.
 
-In the following sample, the table has been injected from table module.
+In the following sample, the table has been inserted using `CreateTable` toolbar item.
 
 ```csharp
 
@@ -86,7 +86,7 @@ options of the column item.
 
 ## Set Color
 
-The Background Color can be set for each table cell through the `Background Color` command available
+The Background Color can be set for each table cell through the `BackgroundColor` command available
 with quick toolbar.
 
 ![RTE table background color](./images/table_bg_color.png)
@@ -98,13 +98,13 @@ Using the delete item in the quick toolbar, users can delete the entire table.
 ## Vertical Align
 
 Text inside the table can be aligned to top, middle, or bottom using the `TableCellVerticalAlign`
-tool of the quick toolbar.
+command of the quick toolbar.
 
 ![RTE table vertical alignment](./images/table_vertical.png)
 
 ## Horizontal Align
 
-Text inside the table can be aligned left, right, or center using the `TableCellHorizontalAlign` tool
+Text inside the table can be aligned left, right, or center using the `TableCellHorizontalAlign` command
 of the quick toolbar.
 
 ![RTE table horizontal alignment](./images/table_horizontal.png)
@@ -114,7 +114,7 @@ of the quick toolbar.
 Table styles provided for class name should be appended to a table element. It helps to design the
 table in specific CSS styles when inserting in the editor.
 
-By Default, provides Dashed border and Alternate rows.
+By default, provides `Dashed border` and `Alternate rows`.
 
 **Dashed border**: Applies the dashed border to the table.
 
@@ -128,6 +128,6 @@ Sets the default width of the table when it is inserted in the Rich Text Editor 
 `RichTextEditorTableSettings`.
 
 Using the quick toolbar, users can change the width, cell padding, and cell spacing in the selected
-table using the properties option.
+table using the `TableEditProperties` command dialog action.
 
 ![RTE table settings](./images/table_properties.png)

@@ -320,13 +320,13 @@ Refer to the following code snippet for custom tool with tooltip text which will
 
 ## Quick inline toolbar
 
-Quick commands are opened as context-menu on clicking the corresponding element. The commands must be passed to image, text, and link attributes of the `RichTextEditorQuickToolbarSettings` property.
+Quick commands are opened as context-menu on clicking the corresponding element. The commands must be passed to image, link and table attributes of the `RichTextEditorQuickToolbarSettings` property.
 
 | Target Element | Default Quick Toolbar items |
 |----------------|---------|
-| Image | 'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'Display', 'AltText','Dimension'.|
-| Link | 'Open', 'Edit', 'UnLink'.|
-| Text | 'Cut', 'Copy', 'Paste'.|
+| Image | 'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'Display', 'AltText', 'Dimension'. |
+| Link | 'Open', 'Edit', 'UnLink'. |
+| Table | 'TableHeader', 'TableRows', 'TableColumns', 'BackgroundColor', 'TableRemove', 'Alignments', 'TableCellVerticalAlign', 'Styles'. |
 
 The following sample demonstrates the option to insert the image to the Rich Text Editor content as well as option to rotate the image through the quick toolbar. The image rotation functionalities have been achieved through the `OnToolbarClick` event.
 

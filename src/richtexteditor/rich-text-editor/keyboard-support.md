@@ -10,7 +10,7 @@ The editor has full keyboard accessibility that includes shortcuts to open and o
 
 ## HTML formation shortcut key
 
-You can use the following key shortcuts when the Rich Text Editor renders with `HTML` and `EditMode`.
+You can use the following key shortcuts when the Rich Text Editor renders with `HTML` editMode.
 
 | Actions | Keyboard shortcuts |
 |----------------|---------|
@@ -94,7 +94,7 @@ The output will be as follows.
 
 ## Custom key config
 
-Customize the key config for the keyboard interaction of Rich Text Editor, using the `KeyConfig` property.
+Customize the key config for the keyboard interaction of Rich Text Editor, using the `KeyConfigure` property.
 
 In the following code block, customize the bold and italic, toolbar actions with `ctrl+1`, `ctrl+2` respectively.
 

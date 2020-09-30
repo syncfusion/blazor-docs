@@ -58,6 +58,7 @@ Open the **Startup.cs** file and add services required by Syncfusion components 
 ```csharp
 
 using Syncfusion.Blazor;
+
 namespace BlazorApplication
 {
     public class Startup

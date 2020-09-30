@@ -181,4 +181,4 @@ The output will be as follows.
 
 ![RTL](./images/rte-rtl.png)
 
-> `EnableRtl` property will not change based on current culture.
+> `EnableRtl` property will not change, based on current culture.

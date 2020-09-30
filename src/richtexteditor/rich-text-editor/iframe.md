@@ -6,7 +6,7 @@ description: "This section explains how to render the Blazor Rich Text Editor us
 
 # Iframe
 
-When the `RichTextEditorIframeSettings` option is enabled, the Rich Text Editor creates the iframe element as the content area on component initialization; it is used to display and edit the content. In content area, the editor displays only the body tag of a `<iframe>` document.
+When the `RichTextEditorIframeSettings` option is enabled, the Rich Text Editor creates the iframe element as the content area on component initialization, it is used to display and edit the content. In content area, the editor displays only the body tag of a `<iframe>` document.
 
 ```csharp
 
@@ -34,7 +34,7 @@ The output will be as follows.
 
 ## IFrame attributes
 
-The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using attributes fields of the `Attributes` fields of `RichTextEditorIframeSettings` property. This property contains name/value pairs in string format. It is used to override the default appearance of the content area.
+The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using `Attributes` fields of `RichTextEditorIframeSettings` property. This property contains name/value pairs in string format. It is used to override the default appearance of the content area.
 
 ```csharp
 

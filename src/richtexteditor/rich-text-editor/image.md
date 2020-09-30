@@ -10,14 +10,14 @@ Rich Text Editor allows inserting images from online sources and local computer 
 
 | Options | Description |
 |----------------|---------|
-| AllowedTypes | Specifies the extensions of the image types allowed to insert on bowering and passing the extensions with comma separators. For example, pass allowedTypes as .jpg and .png.|
-| Display | Sets the default display for an image when it is inserted in to the Rich Text Editor. Possible options are: `inline` and `break`.|
+| AllowedTypes | Specifies the extensions of the image types allowed to insert on bowering and passing the extensions with comma separators. For example, pass AllowedTypes as .jpg and .png.|
+| Display | Sets the default display for an image when it is inserted in to the Rich Text Editor. Possible options are: `Inline` and `Break`.|
 | Width | Sets the default width of the image when it is inserted in the Rich Text Editor.|
 | Height | Sets the default height of the image when it is inserted in the Rich Text Editor.|
 | SaveUrl | Provides URL to map the action result method to save the image.|
 | Path | Specifies the location to store the image.|
-| Resize | Enables resizing for image element.|
-| MinWidth | Defines the maximum Width of the image.|
+| EnableResize | Enables resizing for image element.|
+| MinWidth | Defines the minimum Width of the image.|
 | MaxWidth | Defines the maximum Width of the image.|
 | MinHeight | Defines the minimum Height of the image.|
 | MaxHeight | Defines the maximum Height of the image.|
@@ -27,7 +27,7 @@ Rich Text Editor allows inserting images from online sources and local computer 
 
 Through the `browse` option in the Image dialog, select the image from the local machine and insert into the Rich Text Editor content.
 
-If the path field is not specified in the `RichTextEditorImageSettings`, the image will be converted into base 64 and blob url for the image will be created and the generated url will be set as src property of `<img>` tag as below.
+If the path field is not specified in the `RichTextEditorImageSettings`, the image will be converted into base64 and blob url for the image will be created and the generated url will be set as src property of `<img>` tag as below.
 
 The image has been loaded from the local machine and it will be saved in the given location.
 
@@ -52,7 +52,7 @@ The selected image can be uploaded to the required destination by using the foll
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorImageSettings SaveUrl="api/Image/Save" Path="./Images/"></RichTextEditorImageSettings>
+    <RichTextEditorImageSettings SaveUrl="api/Image/Save" Path="./Images/" />
 </SfRichTextEditor>
 
 ```
@@ -179,7 +179,7 @@ Rich Text Editor using `Display` field in`RichTextEditorImageSettings`.
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorImageSettings Display="Inline"></RichTextEditorImageSettings>
+    <RichTextEditorImageSettings Display="ImageDisplay.Inline" />
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
     <p><b>Get started Quick Toolbar to click on the image</b></p>
     <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
@@ -196,7 +196,7 @@ The hyperlink itself can be an image in Rich Text Editor. If the image given as 
 
 ## Resize
 
-Rich Text Editor has a built-in image inserting support.  The resize points will be appearing on each corner of image when focus. So, users can resize the image using mouse points or thumb through the resize points easily. Also, the resize calculation will be done based on aspect ratio.
+Rich Text Editor has a built-in image inserting support. The resize points will be appearing on each corner of image when focus. So, users can resize the image using mouse points or thumb through the resize points easily. Also, the resize calculation will be done based on aspect ratio.
 
 ![RTE image resize](./images/image-resize.png)
 

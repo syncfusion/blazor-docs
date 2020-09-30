@@ -15,8 +15,8 @@ By using the `RichTextEditorImageSettings` property, we can specify the server h
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorImageSettings SaveUrl="[SERVICE_HOSTED_PATH]/api/Image/Rename" Path="./Images/"></RichTextEditorImageSettings>
-    <RichTextEditorEvents OnImageUploadSuccess="@ImageUploadSuccess"> </RichTextEditorEvents>
+    <RichTextEditorImageSettings SaveUrl="[SERVICE_HOSTED_PATH]/api/Image/Rename" Path="./Images/" />
+    <RichTextEditorEvents OnImageUploadSuccess="@ImageUploadSuccess" />
 </SfRichTextEditor>
 
 @code {

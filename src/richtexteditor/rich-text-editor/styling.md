@@ -8,7 +8,7 @@ description: "This section describes the list of default font names and sizes su
 
 ## Font name and size
 
-By default, the editor is initialized with font name and font size as `null`. To change it, select a different font name and font size from the drop-down in the editor’s toolbar.
+By default, the editor is initialized with default items of font name and font size. To change it, select a different font name and font size from the drop-down in the editor’s toolbar.
 
 To apply different font style for section of the content, select the text that you would like to change, and select a required font style from the drop-down to apply the changes to the selected text.
 
@@ -20,7 +20,7 @@ The following table lists the default font name and width of the `FontName` drop
 |----------------|--------------------------------------|
 | Font name | null |
 | Width | 65px|
-| Items | { Text: 'Segoe UI', Value: 'Segoe UI' },{ Text: 'Arial', Value: 'Arial,Helvetica,sans-serif' },{ Text: 'Courier New', Value: 'Courier New,Courier,monospace' },{ Text: 'Georgia', Value: 'Georgia,serif' },{ Text: 'Impact', Value: 'Impact,Charcoal,sans-serif' },{ Text: 'Lucida Console', Value: 'Lucida Console,Monaco,monospace' },{ Text: 'Tahoma', Value: 'Tahoma,Geneva,sans-serif' },{ Text: 'Times New Roman', Value: 'Times New Roman,Times,serif' },{ Text: 'Trebuchet MS', Value: 'Trebuchet MS,Helvetica,sans-serif' },{ Text: 'Verdana', Value: 'Verdana,Geneva,sans-serif' }|
+| Items | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-segoe-ui", Command = "Font", SubCommand = "FontName", Text = "Segoe UI", Value = "Segoe UI" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-arial", Command = "Font", SubCommand = "FontName", Text = "Arial", Value = "Arial,Helvetica,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-georgia", Command = "Font", SubCommand = "FontName", Text = "Georgia", Value = "Georgia,serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-impact", Command = "Font", SubCommand = "FontName", Text = "Impact", Value = "Impact,Charcoal,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-tahoma", Command = "Font", SubCommand = "FontName", Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-times-new-roman", Command = "Font", SubCommand = "FontName", Text = "Times New Roman", Value = "Times New Roman,Times,serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-verdana", Command = "Font", SubCommand = "FontName", Text = "Verdana", Value = "Verdana,Geneva,sans-serif"}<br>};|
 
 ### Font size
 
@@ -30,7 +30,7 @@ The following table list the default font size and width of the `FontSize` dropd
 |----------------|---------|
 | Font size | null |
 | Width | 35px.|
-| Items |{ Text: '8 pt', Value: '8pt' },{ Text: '10 pt', Value: '10pt' },{ Text: '12 pt', Value: '12pt' },{ Text: '14 pt', Value: '14pt' },{ Text: '18 pt', Value: '18pt' },{ Text: '24 pt, Value: '24pt' },{ Text: '36 pt', Value: '36pt' }.|
+| Items |new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "8 pt", Value = "8pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "10 pt", Value = "10pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "12 pt", Value = "12pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "14 pt", Value = "14pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "18 pt", Value = "18pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "24 pt", Value = "24pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "36 pt", Value = "36pt" }<br>};|
 
 The following sample demonstrates the option to add the font name and font size tools to the toolbar as well as modify the default `Width` of the tools.
 
@@ -38,8 +38,10 @@ The following sample demonstrates the option to add the font name and font size 
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor FontSize="@FontSize" FontFamily="@FontFamily">
-    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorFontFamily Width="50px" />
+    <RichTextEditorFontSize Width="50px" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -52,13 +54,28 @@ The following sample demonstrates the option to add the font name and font size 
     </ul>
 </SfRichTextEditor>
 
-@code {
-    public object[] Tools = new object[] {
-        "Bold", "Italic", "Underline", "FontName", "FontSize", "FontColor", "BackgroundColor", "|",
-        "Formats", "Alignments", "|", "CreateLink", "Image", "|","SourceCode", "|", "Undo", "Redo"
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
-    public RichTextEditorFontFamily FontFamily = new RichTextEditorFontFamily { Width = "50px" };
-    public RichTextEditorFontSize FontSize = new RichTextEditorFontSize{ Width = "50px" };
 }
 
 ```
@@ -70,16 +87,16 @@ The output will be as follows.
 ## Custom font and size
 
 Rich Text Editor provides support to custom fonts and size with existing list.
-If you want to add additional font names and font sizes to font drop-down, pass the font information as JSON data to the items field of `FontSize` and `FontFamily` property.
+If you want to add additional font names and font sizes to font drop-down, pass the font information as `List<DropDownItemModel>` data to the items field of `FontSize` and `FontFamily` property.
 
 ```csharp
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-        <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
-        <RichTextEditorFontFamily Width="50px" Items="@FontItems"></RichTextEditorFontFamily>
-        <RichTextEditorFontSize Width="50px" Items="@FontSizeItems" ></RichTextEditorFontSize>
+        <RichTextEditorToolbarSettings Items="@Tools" />
+        <RichTextEditorFontFamily Width="50px" Items="@FontFamilyItems" />
+        <RichTextEditorFontSize Width="50px" Items="@FontSizeItems" />
         <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
         <p><b> Key features:</b></p>
         <ul>
@@ -92,31 +109,46 @@ If you want to add additional font names and font sizes to font drop-down, pass 
         </ul>
 </SfRichTextEditor>
 
-@code {
-    public object[] Tools = new object[] {
-        "Bold", "Italic", "Underline", "FontName", "FontSize", "FontColor", "BackgroundColor", "|",
-        "Formats", "Alignments", "|", "CreateLink", "Image", "|","SourceCode", "|", "Undo", "Redo"
-    };
-    public List<IDropDownItemModel> FontItems = new List<IDropDownItemModel>() {
-        new IDropDownItemModel() { text = "Segoe UI", value = "Arial,Helvetica,sans-serif" },
-        new IDropDownItemModel() { text = "Arial", value = "Roboto" },
-        new IDropDownItemModel() { text = "Courier New", value = "Courier New,Courier,monospace"},
-        new IDropDownItemModel() { text = "Georgia", value = "Georgia,serif" },
-        new IDropDownItemModel() { text = "Impact", value = "Impact,Charcoal,sans-serif" },
-        new IDropDownItemModel() { text = "Calibri Light", value = "CalibriLight" }
-    };
-    public List<IDropDownItemModel> FontSizeItems = new List<IDropDownItemModel>() {
-        new IDropDownItemModel() { text = "8 pt", value = "8pt" },
-        new IDropDownItemModel() { text = "10 pt", value = "10pt" },
-        new IDropDownItemModel() { text = "12 pt", value = "12pt"},
-        new IDropDownItemModel() { text = "14 pt", value = "14pt" },
-        new IDropDownItemModel() { text = "42 pt", value = "42pt" }
-    };
-    public class IDropDownItemModel
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
-        public string text { get; set; }
-        public string value { get; set; }
-    }
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+    };
+
+    private List<DropDownItemModel> FontFamilyItems = new List<DropDownItemModel>()
+    {
+        new DropDownItemModel() { CssClass = "e-segoe-ui", Command = "Font", SubCommand = "FontName", Text = "Segoe UI", Value = "Arial,Helvetica,sans-serif" },
+        new DropDownItemModel() { CssClass = "e-arial", Command = "Font", SubCommand = "FontName", Text = "Arial", Value = "Roboto" },
+        new DropDownItemModel() { CssClass = "e-georgia", Command = "Font", SubCommand = "FontName", Text = "Georgia", Value = "Georgia,serif" },
+        new DropDownItemModel() { CssClass = "e-impact", Command = "Font", SubCommand = "FontName", Text = "Impact", Value = "Impact,Charcoal,sans-serif" },
+        new DropDownItemModel() { CssClass = "e-tahoma", Command = "Font", SubCommand = "FontName", Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" }
+    };
+
+    private List<DropDownItemModel> FontSizeItems = new List<DropDownItemModel>()
+    {
+        new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "8 pt", Value = "8pt" },
+        new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "10 pt", Value = "10pt" },
+        new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "12 pt", Value = "12pt" },
+        new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "14 pt", Value = "14pt" },
+        new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "42 pt", Value = "42pt" }
+    };
 }
 
 ```
@@ -139,8 +171,10 @@ The FontColor and BackgroundColor property has two `Mode` Picker and Palette. Pa
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor BackgroundColor="@BackgroundColor" FontColor="@FontColor">
-    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorBackgroundColor ModeSwitcher="true" />
+    <RichTextEditorFontColor ModeSwitcher="true" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -153,13 +187,28 @@ The FontColor and BackgroundColor property has two `Mode` Picker and Palette. Pa
     </ul>
 </SfRichTextEditor>
 
-@code {
-    public object[] Tools = new object[] {
-        "Bold", "Italic", "Underline", "FontName", "FontSize", "FontColor", "BackgroundColor", "|",
-        "Formats", "Alignments", "|", "CreateLink", "Image", "|","SourceCode", "|", "Undo", "Redo"
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
-    public RichTextEditorBackgroundColor BackgroundColor = new RichTextEditorBackgroundColor { ModeSwitcher = true };
-    public RichTextEditorFontColor FontColor = new RichTextEditorFontColor { ModeSwitcher = true };
 }
 
 ```

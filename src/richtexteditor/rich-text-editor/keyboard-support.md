@@ -96,13 +96,13 @@ The output will be as follows.
 
 Customize the key config for the keyboard interaction of Rich Text Editor, using the `KeyConfig` property.
 
-In the following code block, customize the cut and copy, toolbar actions with `ctrl+1`, `ctrl+2` respectively.
+In the following code block, customize the bold and italic, toolbar actions with `ctrl+1`, `ctrl+2` respectively.
 
 ```csharp
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor KeyConfig="@Keyconfig">
+<SfRichTextEditor KeyConfigure="@KeyConfig">
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -117,10 +117,10 @@ In the following code block, customize the cut and copy, toolbar actions with `c
 </SfRichTextEditor>
 
 @code {
-    public object Keyconfig = new
+    private ShortcutKeys KeyConfig = new ShortcutKeys()
     {
-        cut = "ctrl+1",
-        copy = "ctrl+2"
+        Bold = "ctrl+1",
+        Italic = "ctrl+2"
     };
 }
 

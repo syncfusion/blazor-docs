@@ -28,7 +28,7 @@ Point the cursor anywhere within the editor where you would like to insert the l
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+    <RichTextEditorToolbarSettings Items="@Tools" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -42,8 +42,9 @@ Point the cursor anywhere within the editor where you would like to insert the l
 </SfRichTextEditor>
 
 @code {
-    public object[] Tools = new object[]{
-       "CreateLink", "RemoveLink"
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink }
     };
 }
 
@@ -55,7 +56,7 @@ The output will be as follows.
 
 ## Remove Link
 
-To remove a hyperlink from a text or image, select the text or image with the hyperlink and click `Remove Hyperlink` tool from the toolbar. It will keep the text or image.
+To remove a hyperlink from a text or image, select the text or image with the hyperlink and click `RemoveHyperlink` tool from the toolbar. It will keep the text or image.
 
 ## Auto-link
 
@@ -74,14 +75,13 @@ The quick toolbar for the link has the following options.
 | Open | The given link page will open in new window. |
 | Edit Link | Edits the link in the Rich Text Editor content. |
 | Remove Link | Removes link from the content of Rich Text Editor. |
-| Custom Tool | Adds the custom options in the quick toolbar. |
 
 ```csharp
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorQuickToolbarSettings Link="@Link"></RichTextEditorQuickToolbarSettings>
+    <RichTextEditorQuickToolbarSettings Link="@Link" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -95,8 +95,11 @@ The quick toolbar for the link has the following options.
 </SfRichTextEditor>
 
 @code {
-    public object[] Link = new object[] {
-        "Open", "Edit", "UnLink"
+    private List<LinkToolbarItemModel> Link = new List<LinkToolbarItemModel>()
+    {
+        new LinkToolbarItemModel() { Command = LinkToolbarCommand.Open },
+        new LinkToolbarItemModel() { Command = LinkToolbarCommand.Edit },
+        new LinkToolbarItemModel() { Command = LinkToolbarCommand.UnLink }
     };
 }
 

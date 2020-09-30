@@ -140,15 +140,13 @@ The Rich Text Editor provides an option to localize its strings; it is used for 
 | RichTextEditor_PasteDialogOk  | OK  |
 | RichTextEditor_PasteDialogCancel  | Cancel  |
 
-The following sample code block demonstrates that the Rich Text Editor control rendered with `de-DE` German language using the Locale property.
+The following sample code block demonstrates that the Rich Text Editor control rendered with `de-DE` German language.
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.RichTextEditor
-@using Microsoft.JSInterop;
 
-<SfRichTextEditor Locale="de-DE">
+<SfRichTextEditor>
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -183,4 +181,4 @@ The output will be as follows.
 
 ![RTL](./images/rte-rtl.png)
 
-> `EnableRtl` property will not change based on `Locale` property.
+> `EnableRtl` property will not change based on current culture.

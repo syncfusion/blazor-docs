@@ -28,10 +28,10 @@ You can control the formatting and styles on pasting the content to the editor u
 | [PlainText](#paste-as-plain-text) | To paste the content as plain text. | false | boolean |
 | [KeepFormat](#keep-format) | To keep the same format with copied content. | true | boolean |
 | [DeniedTags](#denied-tags) | To ignore the tags when pasting HTML content. | null | string[] |
-| [DeniedAttrs](#denied-attributes) |  To paste the content by filtering out these attributes from the content. | null | string[] |
-| [AllowedStyleProps](#allowed-style-properties) |  To paste the content by accepting these style attributes and removing other style attributes. | ['background', 'background-color', 'border', 'border-bottom', 'border-left', 'border-radius', 'border-right', 'border-style', 'border-top', 'border-width', 'clear', 'color', 'cursor', 'direction', 'display', 'float', 'font', 'font-family', 'font-size', 'font-weight', 'font-style', 'height', 'left', 'line-height', 'margin', 'margin-top', 'margin-left', 'margin-right', 'margin-bottom', 'max-height', 'max-width', 'min-height', 'min-width', 'overflow', 'overflow-x', 'overflow-y', 'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top', 'position', 'right', 'table-layout', 'text-align', 'text-decoration', 'text-indent', 'top', 'vertical-align', 'visibility', 'white-space', 'width'] | string[] |
+| [DeniedAttributes](#denied-attributes) | To paste the content by filtering out these attributes from the content. | null | string[] |
+| [AllowedStyleProperties](#allowed-style-properties) | To paste the content by accepting these style attributes and removing other style attributes. | ['background', 'background-color', 'border', 'border-bottom', 'border-left', 'border-radius', 'border-right', 'border-style', 'border-top', 'border-width', 'clear', 'color', 'cursor', 'direction', 'display', 'float', 'font', 'font-family', 'font-size', 'font-weight', 'font-style', 'height', 'left', 'line-height', 'margin', 'margin-top', 'margin-left', 'margin-right', 'margin-bottom', 'max-height', 'max-width', 'min-height', 'min-width', 'overflow', 'overflow-x', 'overflow-y', 'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top', 'position', 'right', 'table-layout', 'text-align', 'text-decoration', 'text-indent', 'top', 'vertical-align', 'visibility', 'white-space', 'width'] | string[] |
 
-> Rich Text Editor features are segregated into individual feature-wise modules. To use paste cleanup, inject paste cleanup module using the `RichTextEditorPasteCleanupSettings`.
+> Rich Text Editor features are segregated into individual feature-wise modules. To use paste cleanup, configure paste cleanup using the `RichTextEditorPasteCleanupSettings`.
 
 ## Prompt dialog
 
@@ -66,7 +66,7 @@ When `DeniedTags` values are set, the tags that matches the 'denied tags' list w
 
 ## Denied attributes
 
-When the `DeniedAttrs` values are set, the attributes that matches the 'denied attributes' list will be removed on pasting the copied content in the editor. For Example,
+When the `DeniedAttributes` values are set, the attributes that matches the 'denied attributes' list will be removed on pasting the copied content in the editor. For Example,
 
 `'id', 'title'`: This will remove the attributes ‘id’ and ‘title’ from all tags.
 
@@ -76,7 +76,7 @@ By default, the following basic styles are allowed on pasting the content to the
 
 ['background', 'background-color', 'border', 'border-bottom', 'border-left', 'border-radius', 'border-right', 'border-style', 'border-top', 'border-width', 'clear', 'color', 'cursor', 'direction', 'display', 'float', 'font', 'font-family', 'font-size', 'font-weight', 'font-style', 'height', 'left', 'line-height', 'margin', 'margin-top', 'margin-left', 'margin-right', 'margin-bottom', 'max-height', 'max-width', 'min-height', 'min-width', 'overflow', 'overflow-x', 'overflow-y', 'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top', 'position', 'right', 'table-layout', 'text-align', 'text-decoration', 'text-indent', 'top', 'vertical-align', 'visibility', 'white-space', 'width']
 
-When you configure AllowedStyleProps, the styles, which matches the 'allowed style properties' list are allowed, all other style properties will be removed on pasting the content in the editor.
+When you configure `AllowedStyleProperties`, the styles, which matches the 'allowed style properties' list are allowed, all other style properties will be removed on pasting the content in the editor.
 
 For Example,
 
@@ -89,7 +89,7 @@ In the following example, the paste cleanup related settings are explained with 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorPasteCleanupSettings Prompt="true" PlainText="false" KeepFormat="false" DeniedTags="@DeniedTag" DeniedAttrs="@DeniedAttributes" AllowedStyleProps="@AllowedStyles"></RichTextEditorPasteCleanupSettings>
+    <RichTextEditorPasteCleanupSettings Prompt="true" PlainText="false" KeepFormat="false" DeniedTags="@DeniedTag" DeniedAttributes="@DeniedAttributes" AllowedStyleProperties="@AllowedStyles" />
     <p>Rich Text Editor is a WYSIWYG editing control which will reduce the effort for users while trying to express their formatting word content as HTML or Markdown format.</p>
     <p><b>Paste Cleanup properties:</b></p>
     <ul>
@@ -103,9 +103,9 @@ In the following example, the paste cleanup related settings are explained with 
 </SfRichTextEditor>
 
 @code {
-    public string[] DeniedTag = new string[] { "a" };
-    public string[] DeniedAttributes = new string[] { "class", "title", "id" };
-    public string[] AllowedStyles = new string[] { "color", "margin", "font-size" };
+    private string[] DeniedTag = new string[] { "a" };
+    private string[] DeniedAttributes = new string[] { "class", "title", "id" };
+    private string[] AllowedStyles = new string[] { "color", "margin", "font-size" };
 }
 
 ```

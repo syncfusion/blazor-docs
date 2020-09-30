@@ -22,7 +22,7 @@ The `ExecuteCommand` will perform the following commands.
 | FontColor | Applies the specified font color for the selected text. |
 | FontName | Applies the specified font name for the selected text. |
 | FontSize | Applies the specified font size for the selected text. |
-| BackColor | Applies the specified background color the selected text. |
+| BackgroundColor | Applies the specified background color the selected text. |
 | JustifyCenter | Aligns the content with center margin. |
 | JustifyFull | Aligns the content with left margin. |
 | JustifyLeft | Aligns the content with left margin. |
@@ -48,8 +48,8 @@ The following code block demonstrates the usage of the ExecuteCommand in Rich Te
 
 ```csharp
 
-@using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor @ref="@RteObj">
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
@@ -63,20 +63,20 @@ The following code block demonstrates the usage of the ExecuteCommand in Rich Te
         <li><p> Supports third - party library integration.</p></li>
     </ul>
 </SfRichTextEditor>
-<SfButton @onclick="@onBoldCommand" Content="Bold"></SfButton>
-<SfButton @onclick="@onInsertHtmlCommand" Content="InsertHTML"></SfButton>
+<SfButton Content="Bold" @onclick="@OnBoldCommand" />
+<SfButton Content="InsertHTML" @onclick="@OnInsertHtmlCommand" />
 
 @code {
     SfRichTextEditor RteObj;
 
-    private void onBoldCommand()
+    private async Task OnBoldCommand()
     {
-        this.RteObj.ExecuteCommand(CommandName.Bold);
+        await this.RteObj.ExecuteCommand(CommandName.Bold);
     }
 
-    private void onInsertHtmlCommand()
+    private async Task OnInsertHtmlCommand()
     {
-        this.RteObj.ExecuteCommand(CommandName.InsertHTML, "<div>Syncfusion Rich Text Editor component</div>");
+        await this.RteObj.ExecuteCommand(CommandName.InsertHTML, "<div>Syncfusion Rich Text Editor component</div>");
     }
 }
 

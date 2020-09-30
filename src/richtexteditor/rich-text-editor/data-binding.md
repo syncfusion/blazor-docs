@@ -20,10 +20,10 @@ You can bind the value to the Rich Text Editor by using the `Value` property dir
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor Value="@RTEValue" />
+<SfRichTextEditor Value="@Value" />
 
 @code {
-    private string RTEValue { get; set; } = "Syncfusion RichTextEditor";
+    private string Value { get; set; } = "<p>Syncfusion RichTextEditor</p>";
 }
 
 ```
@@ -38,12 +38,14 @@ The following example explains how to achieve two-way binding with textarea and 
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor @bind-Value="@RTEValue" />
+<SfRichTextEditor @bind-Value="@Value" />
 
-<textarea @bind="@RTEValue" />
+<br />
+
+<textarea rows="5" cols="60" @bind="@Value" />
 
 @code {
-    private string RTEValue { get; set; } = "Syncfusion RichTextEditor";
+    private string Value { get; set; } = "<p>Syncfusion RichTextEditor</p>";
 }
 
 ```
@@ -56,19 +58,19 @@ The following example shows how to update a Rich Text Editor value dynamically o
 
 ```csharp
 
-@using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.RichTextEditor
 
-<SfButton @onclick="OnClicked">Update Value</SfButton>
+<SfButton @onclick="@Update">Update Value</SfButton>
 
-<SfRichTextEditor Value="@RTEValue" />
+<SfRichTextEditor Value="@Value" />
 
 @code {
-    private string RTEValue { get; set; } = "Syncfusion RichTextEditor";
+    private string Value { get; set; } = "<p>Syncfusion RichTextEditor</p>";
 
-    private void OnClicked()
+    private void Update()
     {
-        this.RTEValue = "Dynamic Value";
+        this.Value = "<p>Dynamic Value</p>";
     }
 }
 

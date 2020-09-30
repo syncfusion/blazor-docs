@@ -13,8 +13,8 @@ To use web fonts in Rich Text Editor, the web fonts need not to be present in th
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
-    <RichTextEditorFontFamily Items="@FontItems"></RichTextEditorFontFamily>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorFontFamily Items="@FontFamilyItems" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -29,24 +29,37 @@ To use web fonts in Rich Text Editor, the web fonts need not to be present in th
 </SfRichTextEditor>
 
 @code {
-    public List<IDropDownItemModel> FontItems = new List<IDropDownItemModel>() {
-        new IDropDownItemModel() { text = "Segoe UI", value = "Segoe UI" },
-        new IDropDownItemModel() { text = "Roboto", value = "Roboto" },
-        // here font is added
-        new IDropDownItemModel() { text = "Great vibes", value = "Great Vibes,cursive"},
-        new IDropDownItemModel() { text = "Noto Sans", value = "Noto Sans" },
-        new IDropDownItemModel() { text = "Impact", value = "Impact,Charcoal,sans-serif" },
-        new IDropDownItemModel() { text = "Tahoma", value = "Tahoma,Geneva,sans-serif" }
-    };
-    public object[] Tools = new object[]{
-        "Bold", "Italic", "Underline", "|", "FontName", "FontSize", "FontColor",
-        "Formats", "Alignments", "|", "CreateLink", "Image", "|", "SourceCode", "|", "Undo", "Redo"
-    };
-    public class IDropDownItemModel
+    private List<DropDownItemModel> FontFamilyItems = new List<DropDownItemModel>()
     {
-        public string text { get; set; }
-        public string value { get; set; }
-    }
+        new DropDownItemModel() { CssClass = "e-segoe-ui", Command = "Font", SubCommand = "FontName", Text = "Segoe UI", Value = "Arial,Helvetica,sans-serif" },
+        new DropDownItemModel() { CssClass = "e-arial", Command = "Font", SubCommand = "FontName", Text = "Arial", Value = "Roboto" },
+        new DropDownItemModel() { CssClass = "e-georgia", Command = "Font", SubCommand = "FontName", Text = "Georgia", Value = "Georgia,serif" },
+        new DropDownItemModel() { CssClass = "e-impact", Command = "Font", SubCommand = "FontName", Text = "Impact", Value = "Impact,Charcoal,sans-serif" },
+        new DropDownItemModel() { CssClass = "e-tahoma", Command = "Font", SubCommand = "FontName", Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" }
+    };
+
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+    };
 }
 
 ```

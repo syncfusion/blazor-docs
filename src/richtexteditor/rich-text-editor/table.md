@@ -12,7 +12,7 @@ Rich Text Editor allows you to insert table of content in edit panel and provide
 |----------------|---------|-----------------------------|
 | MinWidth | Sets the default minWidth of the table. | 0 |
 | MaxWidth | Sets the default maxWidth of the table. | null |
-| Resize | Enables resize feature in table.| true |
+| EnableResize | Enables resize feature in table.| true |
 | Styles | This is an array of key value pair, on each pair, key should be name of styling and value is class name. this list will be shown on quick toolbar options to change the styles of table on designing like dashed, double bordered. | `TableStyleItems` |
 | Width | Sets the default width of the table. | 100% |
 
@@ -31,7 +31,7 @@ In the following sample, the table has been injected from table module.
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor ShowCharCount="true">
-    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+    <RichTextEditorToolbarSettings Items="@Tools" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -44,9 +44,10 @@ In the following sample, the table has been injected from table module.
     </ul>
 </SfRichTextEditor>
 
-@code {
-    public object[] Tools = new object[]{
-        "CreateTable"
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable }
     };
 }
 

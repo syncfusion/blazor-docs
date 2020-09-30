@@ -110,7 +110,7 @@ Configure the toolbar with the tools using `Items` field of the `RichTextEditorT
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+    <RichTextEditorToolbarSettings Items="@Tools" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -125,14 +125,42 @@ Configure the toolbar with the tools using `Items` field of the `RichTextEditorT
 </SfRichTextEditor>
 
 @code {
-    public object[] Tools = new object[]{
-        "Bold", "Italic", "Underline", "SubScript", "SuperScript", "StrikeThrough",
-        "FontName", "FontSize", "FontColor", "BackgroundColor",
-        "LowerCase", "UpperCase", "|",
-        "Formats", "Alignments", "OrderedList", "UnorderedList",
-        "Outdent", "Indent", "|", "CreateTable",
-        "CreateLink", "Image", "|", "ClearFormat", "Print",
-        "SourceCode", "FullScreen", "|", "Undo", "Redo"
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.StrikeThrough },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.LowerCase },
+        new ToolbarItemModel() { Command = ToolbarCommand.UpperCase },
+        new ToolbarItemModel() { Command = ToolbarCommand.SuperScript },
+        new ToolbarItemModel() { Command = ToolbarCommand.SubScript },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.Outdent },
+        new ToolbarItemModel() { Command = ToolbarCommand.Indent },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.ClearFormat },
+        new ToolbarItemModel() { Command = ToolbarCommand.Print },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.FullScreen },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
 }
 
@@ -146,17 +174,15 @@ The output will be as follows.
 
 The `Image` module inserts an image into Rich Text Editor's content area, and the `Link` module links external resources such as website URLs to the selected text in the Rich Text Editor's content respectively.
 
-The link inject module adds a link icon to the toolbar and the image inject module adds an image icon to the toolbar.
-
-Specifies the items to be rendered in quick toolbar based on the target elements such as image, link and text element. The quick toolbar opens to customize the element by clicking the target element.
+Specifies the items to be rendered in quick toolbar based on the target elements such as image, link and table element. The quick toolbar opens to customize the element by clicking the target element.
 
 ```csharp
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorQuickToolbarSettings Image="@Image" Link="@Link"></RichTextEditorQuickToolbarSettings>
-    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorQuickToolbarSettings Image="@Image" Link="@Link" />
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
     <p><b>Get started Quick Toolbar to click on the image</b></p>
     <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
@@ -164,18 +190,44 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 </SfRichTextEditor>
 
 @code {
-    public object[] Tools = new object[] {
-        "Bold", "Italic", "Underline", "|",
-        "Formats", "Alignments", "|", "CreateLink", "Image", "|","SourceCode", "|", "Undo", "Redo"
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
 
-    public object[] Image = new object[] {
-        "Replace", "Align", "Caption", "Remove", "InsertLink", "OpenImageLink", "-",
-        "EditImageLink", "RemoveImageLink", "Display", "AltText", "Dimension"
+    private List<ImageToolbarItemModel> Image = new List<ImageToolbarItemModel>()
+    {
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Replace },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Align },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Caption },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Remove },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.OpenImageLink },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.HorizontalSeparator },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.EditImageLink },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.RemoveImageLink },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Display },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.AltText },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Dimension }
     };
 
-    public object[] Link = new object[] {
-        "Open", "Edit", "UnLink"
+    private List<LinkToolbarItemModel> Link = new List<LinkToolbarItemModel>()
+    {
+        new LinkToolbarItemModel() { Command = LinkToolbarCommand.Open },
+        new LinkToolbarItemModel() { Command = LinkToolbarCommand.Edit },
+        new LinkToolbarItemModel() { Command = LinkToolbarCommand.UnLink }
     };
 }
 
@@ -187,38 +239,31 @@ The output will be as follows.
 
 ## Retrieve the formatted content
 
-To retrieve the editor contents, use the `Value` property of Rich Text Editor. Or, you can use the public method, `GetHtml` to retrieve the Rich Text Editor content. To fetch the Rich Text Editor's text content, use `GetText` method of Rich Text Editor.
+To retrieve the editor contents, use the `Value` property of Rich Text Editor. To fetch the Rich Text Editor's text content, use `GetText` method of Rich Text Editor.
 
 ```csharp
 
-@using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.RichTextEditor
 
 <SfButton @onclick="@GetValue">Get Value</SfButton>
-<SfButton @onclick="@GetHtml">Get Html</SfButton>
 <SfButton @onclick="@GetText">Get Text</SfButton>
 
-<SfRichTextEditor @ref="RteObj" Value="@RteValue">
-    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
-</SfRichTextEditor>
+<br />
+
+<SfRichTextEditor @ref="RteObj" Value="@RteValue" />
 
 @code {
     SfRichTextEditor RteObj;
 
-    public string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />";
-    public object[] Tools = new object[] {
-        "Bold", "Italic", "Underline", "|",
-        "Formats", "Alignments", "|", "CreateLink", "Image", "|","SourceCode", "|", "Undo", "Redo"
-    };
-    public void GetValue()
+    private string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />";
+
+    private void GetValue()
     {
         string Value = this.RteValue;
     }
-    public async void GetHtml()
-    {
-        string GetHtml = await this.RteObj.GetHtml();
-    }
-    public async void GetText()
+
+    private async Task GetText()
     {
         string GetText = await this.RteObj.GetText();
     }

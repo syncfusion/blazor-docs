@@ -14,14 +14,14 @@ Inline editing is a true WYSIWYG formation and on the contrary to Rich Text Edit
 
 ## Show on select/click
 
-Enabling the `OnSelection` option of `RichTextEditorInlineMode` makes the inline Rich Text Editor to appear. You can select the text in the editable area, otherwise the inline Rich Text Editor will be appeared after clicking the editable area.
+Enabling the `ShowOnSelection` option of `RichTextEditorInlineMode` makes the inline Rich Text Editor to appear. You can select the text in the editable area, otherwise the inline Rich Text Editor will be appeared after clicking the editable area.
 
 ```csharp
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorInlineMode Enable="true" OnSelection="true"></RichTextEditorInlineMode>
+    <RichTextEditorInlineMode Enable="true" ShowOnSelection="true" />
     <p>The sample is configured with inline mode of editor. Initially, the editor is rendered without a
     <a href='https://blazor.syncfusion.com/home/' target='_blank'>toolbar</a>. The toolbar becomes visible only when the content is selected.</p>
 </SfRichTextEditor>

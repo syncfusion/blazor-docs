@@ -61,7 +61,7 @@ Refer to the following sample and code snippets to add the table in Markdown edi
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor EditorMode="EditorMode.Markdown" Height="340px" Placeholder="Type Something">
-    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+    <RichTextEditorToolbarSettings Items="@Tools" />
     In Rich Text Editor , you click the toolbar buttons to format the words and the changes are visible immediately.
     Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words
     and phrases should look different from each other.
@@ -77,10 +77,10 @@ Refer to the following sample and code snippets to add the table in Markdown edi
     |Col B1|Col B2|
 </SfRichTextEditor>
 
-
 @code {
-    public object[] Tools = new object[]{
-        "CreateTable"
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable }
     };
 }
 

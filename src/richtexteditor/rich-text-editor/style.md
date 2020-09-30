@@ -1,5 +1,5 @@
 ---
-title: "Blazor Rich Text Editor |  CSS Structures"
+title: "Blazor Rich Text Editor | CSS Structures"
 component: "Rich Text Editor"
 description: "This section for Blazor Rich Text editor describes the details of the CSS structures in the Rich Text editor."
 ---

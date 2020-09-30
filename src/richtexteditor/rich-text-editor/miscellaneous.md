@@ -8,7 +8,7 @@ description: "This section describes how to configure the undo and redo manager,
 
 ## Placeholder
 
-Specifies the placeholder for the Rich Text Editor’s content used when the Rich Text Editor body is empty through the `placeholder` property.
+Specifies the placeholder for the Rich Text Editor’s content used when the Rich Text Editor body is empty through the `Placeholder` property.
 
 Use the `e-rte-placeholder` class to define the custom font family, font color, and styles to the placeholder text.
 
@@ -29,7 +29,7 @@ The following sample demonstrates the placeholder option in Rich Text Editor.
 <SfRichTextEditor Placeholder="Type something" />
 
 <style>
-    .e-richtexteditor .rte-placeholder {
+    .e-richtexteditor .e-rte-placeholder {
         font-family: monospace;
     }
 </style>
@@ -77,7 +77,6 @@ Rich Text Editor includes the ability for users to directly edit HTML code via `
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
@@ -135,18 +134,11 @@ To render the Rich Text Editor in the resizable mode, set the `EnableResize` pro
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor EnableResize="@resize">
-    <ChildContent>
-        <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='images/RichTextEditor/RTEImage-Feather.png' />
-    </ChildContent>
+<SfRichTextEditor EnableResize="true">
+    <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='images/RichTextEditor/RTEImage-Feather.png' />
 </SfRichTextEditor>
-
-@code {
-    public bool resize = true;
-}
 
 ```
 

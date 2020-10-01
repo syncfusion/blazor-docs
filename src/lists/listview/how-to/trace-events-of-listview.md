@@ -29,9 +29,10 @@ select event, and display the selected list item text in the event trace panel w
     <div class="flex vertical-center">
         <div class="sample padding">
             <SfListView DataSource="@DataSource">
-                <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+                <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
                 <ListViewEvents TValue="ListDataModel"
-                                Selected="@(e => Events.Add(e.Text +" is selected"))"
+                                Created="@(e => Events.Add("Created is selected"))"
+                                Clicked="@(e => Events.Add(e.Text +" is selected"))"
                                 OnActionBegin="@(e => Events.Add("OnActionBegin is triggered"))"
                                 OnActionComplete="@(e => Events.Add("OnActionComplete is triggered"))">
                 </ListViewEvents>

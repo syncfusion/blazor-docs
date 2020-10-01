@@ -13,7 +13,7 @@ In the following sample, The cars are grouped based on its category by using the
 ```csharp
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@DataSource">
-    <ListViewFieldSettings Id="Id" Text="Text" GroupBy="Type"></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel"  Id="Id" Text="Text" GroupBy="Type"></ListViewFieldSettings>
 </SfListView>
 
 @code {

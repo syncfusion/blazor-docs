@@ -28,7 +28,7 @@ two templates have been loaded for mobile and desktop modes. To check the device
                      ShowHeader="true"
                      HeaderTitle="Syncfusion Blog"
                      CssClass="e-list-template">
-            <ListViewFieldSettings Id="Id" Text="Name"></ListViewFieldSettings>
+            <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Name"></ListViewFieldSettings>
             <ListViewTemplates TValue="ListDataModel">
                 <Template>
                     @{

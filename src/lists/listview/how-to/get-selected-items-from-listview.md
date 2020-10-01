@@ -24,10 +24,9 @@ list items. This is called as the `GetSelectedItems` method.
 <div style="display: flex">
     <div class="margin">
         <SfListView @ref="@SfList"
-
-                     DataSource="@DataSource"
-                     ShowCheckBox="true">
-            <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+                    DataSource="@DataSource"
+                    ShowCheckBox="true">
+            <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
         </SfListView>
     </div>
     <div class="margin">
@@ -55,9 +54,7 @@ list items. This is called as the `GetSelectedItems` method.
 @code
 {
     SfListView<ListDataModel> SfList;
-
     List<ListDataModel> SelectedItems = new List<ListDataModel>();
-
     List<ListDataModel> DataSource = new List<ListDataModel>()
     {
         new ListDataModel{ Id = "1", Text = "Artwork"},
@@ -70,7 +67,7 @@ list items. This is called as the `GetSelectedItems` method.
 
     async void OnSelect()
     {
-        var items = await SfList.GetSelectedItems();
+        var items = await SfList.GetCheckedItems();
         if (items.Data != null)
         {
             SelectedItems = items.Data;
@@ -83,7 +80,6 @@ list items. This is called as the `GetSelectedItems` method.
         public string Id { get; set; }
         public string Text { get; set; }
     }
-
 }
 
 <style>

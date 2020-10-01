@@ -58,8 +58,8 @@ enabled when selecting an item in lists.
             <div class="padding">
                 <SfTextBox Placeholder="Filter" Input="@(e => OnInput(e, 1))"></SfTextBox>
                 <SfListView DataSource="@FirstData">
-                    <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
-                    <ListViewEvents TValue="ListDataModel" Selected="@(e => OnSelected(e, 1))"></ListViewEvents>
+                    <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
+                    <ListViewEvents TValue="ListDataModel" Clicked="@(e => OnSelected(e, 1))"></ListViewEvents>
                 </SfListView>
             </div>
             <div class="flex vertical vertical__center flex__center padding">
@@ -79,8 +79,8 @@ enabled when selecting an item in lists.
             <div class="padding">
                 <SfTextBox Placeholder="Filter" Input="@(e => OnInput(e, 2))"></SfTextBox>
                 <SfListView DataSource="@SecondData">
-                    <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
-                    <ListViewEvents TValue="ListDataModel" Selected="@(e => OnSelected(e, 2))"></ListViewEvents>
+                    <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
+                    <ListViewEvents TValue="ListDataModel" Clicked="@(e => OnSelected(e, 2))"></ListViewEvents>
                 </SfListView>
             </div>
         </div>
@@ -146,15 +146,15 @@ enabled when selecting an item in lists.
         }
     }
 
-    void OnSelected(SelectEventArgs<ListDataModel> eventArgs, int listviewIndex)
+    void OnSelected(ClickEventArgs<ListDataModel> eventArgs, int listviewIndex)
     {
         if (listviewIndex == 1)
         {
-            FirstSelected = eventArgs.Data;
+            FirstSelected = eventArgs.ItemData;
         }
         else
         {
-            SecondSelected = eventArgs.Data;
+            SecondSelected = eventArgs.ItemData;
         }
     }
 

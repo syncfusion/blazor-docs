@@ -19,7 +19,7 @@ So, we need to map id attribute to listview items using `ListViewFieldSettings` 
     <div class="sample flex vertical-center">
         <div class="padding">
             <SfListView DataSource="@DataSource" CssClass="e-list-template">
-                <ListViewFieldSettings Id="Id" Text="Name"></ListViewFieldSettings>
+                <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Name"></ListViewFieldSettings>
                 <ListViewTemplates TValue="ListDataModel">
                     <Template>
                         @{

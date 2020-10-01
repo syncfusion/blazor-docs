@@ -16,7 +16,7 @@ In the below sample, we have rendered `ListView` with search engines URL.
 <div id="container">
     <div id="sample">
         <SfListView ID="list" DataSource="@DataSource">
-            <ListViewFieldSettings Id="Id" Text="Name"></ListViewFieldSettings>
+            <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Name"></ListViewFieldSettings>
             <ListViewTemplates TValue="ListDataModel">
                 <Template>
                     <a target='_blank' href="@((context as ListDataModel).Url)">

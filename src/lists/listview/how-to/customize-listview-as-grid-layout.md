@@ -38,11 +38,14 @@ In the below sample, we have rendered List items in grid layout.
 
 ```C#
 
+@using Syncfusion.Blazor.Lists
 <div id="container">
     <div class="sample flex">
         <div class="flex">
             <div class="padding">
-                <SfListView DataSource="@ListItems"></SfListView>
+                <SfListView DataSource="@ListItems">
+                    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
+                </SfListView>
             </div>
         </div>
     </div>
@@ -50,7 +53,26 @@ In the below sample, we have rendered List items in grid layout.
 
 @code
 {
-    List<int> ListItems = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+        List<DataModel> ListItems = new List<DataModel>() {
+            new DataModel() {Id="1", Text="1" },
+            new DataModel() {Id="2", Text="2" },
+            new DataModel() {Id="3", Text="3" },
+            new DataModel() {Id="4", Text="4" },
+            new DataModel() {Id="5", Text="5" },
+            new DataModel() {Id="6", Text="6" },
+            new DataModel() {Id="7", Text="7" },
+            new DataModel() {Id="8", Text="8" },
+            new DataModel() {Id="9", Text="9" },
+            new DataModel() {Id="10", Text="10" },
+            new DataModel() {Id="11", Text="11" },
+            new DataModel() {Id="12", Text="12" },
+
+        };
+    public class DataModel
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+    }
 }
 
 <style>
@@ -60,22 +82,22 @@ In the below sample, we have rendered List items in grid layout.
         width: 400px;
     }
 
-    #container .e-listview .e-list-item {
-        height: 100px;
-        width: 100px;
-        float: left;
-    }
-
-        #container .e-listview .e-list-item .e-text-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
+        #container .e-listview .e-list-item {
+            height: 100px;
+            width: 100px;
+            float: left;
         }
 
-    #container .e-listview .e-list-text {
-        width: unset;
-    }
+            #container .e-listview .e-list-item .e-text-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+        #container .e-listview .e-list-text {
+            width: unset;
+        }
 
     .sample {
         justify-content: center;
@@ -147,7 +169,6 @@ In the below sample, we have sorted in `Ascending` order. To sort it in descendi
                         <span class="e-btn-icon e-icons e-add-icon"></span>
                     </button>
                     <SfDialog @ref="DialogObj"
-
                                Target="#container"
                                ShowCloseIcon="true"
                                Header="@("Add item")"
@@ -173,7 +194,7 @@ In the below sample, we have sorted in `Ascending` order. To sort it in descendi
             <div>
                 <div class="listview-container">
                     <SfListView DataSource="@DataSource" SortOrder="@ListSortOrder">
-                        <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+                        <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
                         <ListViewTemplates TValue="ListDataModel">
                             <Template>
                                 @{

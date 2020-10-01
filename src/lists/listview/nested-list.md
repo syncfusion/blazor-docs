@@ -11,7 +11,7 @@ The ListView component supports Nested list. For that, the child property should
 ```csharp
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@ListData" ShowHeader="true" HeaderTitle="Continent">
-    <ListViewFieldSettings Id="Id" Text="Text" Child="Child"></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" Child="Child"></ListViewFieldSettings>
 </SfListView>
 
 @code{

@@ -19,7 +19,7 @@ In the following example, we have rendered ListView with customized header which
 ```csharp
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@FruitsData" ShowHeader="true">
-    <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
     <ListViewTemplates TValue="DataModel">
         <HeaderTemplate>
             <div class="headerContainer">
@@ -81,27 +81,26 @@ In the following example, we have customized list items with built-in CSS classe
 
 ```csharp
 @using Syncfusion.Blazor.Lists
-<SfListView Id="List"
-             DataSource="@ListData"
-             HeaderTitle="Contacts"
-             ShowHeader="true"
-             CssClass="e-list-template"
-             Width="350"
-             SortOrder="Syncfusion.Blazor.Lists.SortOrder.Ascending">
-    <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+<SfListView DataSource="@ListData"
+            HeaderTitle="Contacts"
+            ShowHeader="true"
+            CssClass="e-list-template"
+            Width="350"
+            SortOrder="Syncfusion.Blazor.Lists.SortOrder.Ascending">
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
     <ListViewTemplates TValue="DataModel">
         <Template>
             <div class="e-list-wrapper e-list-multi-line e-list-avatar">
-                @if (((context as DataModel).Avatar) != "")
+                @if (context.Avatar != "")
                 {
-                <span class="e-avatar e-avatar-circle">@((context as DataModel).Avatar)</span>
+                    <span class="e-avatar e-avatar-circle">@(context.Avatar)</span>
                 }
                 else
                 {
-                    <span class="@((context as DataModel).Pic) e-avatar e-avatar-circle"> </span>
+                    <span class="@context.Pic e-avatar e-avatar-circle"> </span>
                 }
-                    <span class="e-list-item-header">@((context as DataModel).Text)</span>
-            <span class="e-list-content">@((context as DataModel).Contact)</span>
+                <span class="e-list-item-header">@context.Text</span>
+                <span class="e-list-content">@context.Contact</span>
             </div>
         </Template>
     </ListViewTemplates>
@@ -181,7 +180,7 @@ In the following example, we have customized list items with built-in CSS classe
 
     }
 
-   public class DataModel
+    public class DataModel
     {
         public string Id { get; set; }
         public string Text { get; set; }
@@ -244,7 +243,7 @@ In the following example, we have grouped ListView based on the category. The ca
 ```csharp
 @using Syncfusion.Blazor.Lists
 <SfListView ID="list" DataSource="@ListData" CssClass="e-list-template">
-    <ListViewFieldSettings Id="Id" Text="Name" GroupBy="Category"></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name" GroupBy="Category"></ListViewFieldSettings>
     <ListViewTemplates TValue="DataModel">
         <Template>
             <div class="e-list-wrapper e-list-multi-line e-list-avatar">

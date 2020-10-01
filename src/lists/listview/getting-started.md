@@ -118,7 +118,7 @@ Add the Syncfusion Blazor ListView component in any web page (razor) in the `Pag
 @using Syncfusion.Blazor.Lists
 
 <SfListView DataSource="@Data">
-    <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
 </SfListView>
 
 @code

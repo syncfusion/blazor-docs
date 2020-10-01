@@ -28,26 +28,6 @@ ListView supports different kind of data services such as OData, OData V4, and W
 
 ## Bind to local data
 
-Local data can be represented in two ways, they are as follows:
-
-* Array of simple data.
-* Array of JSON data.
-
-### Array of simple data
-
-ListView supports to load the array of primitive data like string and numbers. Here, both value and text field act as same.
-
-```csharp
-
-<SfListView DataSource="@StringData"></SfListView>
-
-@code{
-    string[] StringData = new string[] { "Artwork", "Abstract", "Modern Painting", "Ceramics", "Animation Art", "Oil Painting" };
-}
-```
-
-![ListView - Simple Data](./images/list/data-binding-simple-array.png)
-
 ### Array of JSON data
 
 ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the field property.
@@ -55,7 +35,7 @@ ListView can generate its list items through an array of complex data. To get it
 ```csharp
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@Data">
-    <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
 </SfListView>
 
 @code {
@@ -100,9 +80,9 @@ In the following sample, first 6 products from the Product table of NorthWind da
 ```csharp
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Data
-
-<SfListView  HeaderTitle="Products" ShowHeader="true" TValue="Data" Query="@query">
-    <ListViewFieldSettings Id="ProductID" Text="ProductName"></ListViewFieldSettings>
+@using Syncfusion.Blazor
+<SfListView HeaderTitle="Products" ShowHeader="true" TValue="Data" Query="@query">
+    <ListViewFieldSettings TValue="Data" Id="ProductID" Text="ProductName"></ListViewFieldSettings>
     <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
 </SfListView>
 
@@ -251,7 +231,7 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
 <div class="row">
     <div class="col-md-4">
         <SfListView CssClass="listview" TValue="Products" Height="400px" @ref="List">
-            <ListViewFieldSettings Text="ProductName" Id="ProductID"></ListViewFieldSettings>
+            <ListViewFieldSettings TValue="Products" Text="ProductName" Id="ProductID"></ListViewFieldSettings>
             <SfDataManager Url="api/Products" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
         </SfListView>
     </div>
@@ -272,14 +252,14 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
         this.List.AddItem(product, null);
     }
 
-    async void Delete()
+    async Task Delete()
     {
         var items = await this.List.GetSelectedItems();
         if (items.Data != null)
         {
             selectedItems = items.Data;
             Products list = new Products() { ProductID = selectedItems[0].ProductID, ProductName = selectedItems[0].ProductName };
-            await this.List.RemoveItem(list);
+            this.List.RemoveItem(list);
         }
     }
 }

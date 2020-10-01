@@ -55,7 +55,7 @@ ListDataModel item = context as ListDataModel;
                      HeaderTitle="Contacts"
                      CssClass="e-list-template"
                      SortOrder="Syncfusion.Blazor.Lists.SortOrder.Ascending">
-            <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+            <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
             <ListViewTemplates TValue="ListDataModel">
                 <Template>
                     @{

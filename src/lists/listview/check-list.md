@@ -16,7 +16,7 @@ it will be useful in selecting multiple items that belongs to same category usin
 ```csharp
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@Data" ShowCheckBox="true">
-    <ListViewFieldSettings Id="Id" Text="Text" IsChecked="IsChecked"></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" IsChecked="IsChecked"></ListViewFieldSettings>
 </SfListView>
 
 @code {
@@ -56,7 +56,7 @@ This can be achieved by `CheckBoxPosition` property. By default, checkbox will b
 ```csharp
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@Data" ShowCheckBox="true" CheckBoxPosition="CheckBoxPosition.Right">
-    <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
 </SfListView>
 
 @code {

@@ -62,6 +62,7 @@ void OnSend()
 
 ```csharp
 @using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Lists
 @using System.Collections.ObjectModel
 
 <div id="container">
@@ -71,7 +72,7 @@ void OnSend()
                      ShowHeader="true"
                      Height="420px"
                      HeaderTitle="Chat">
-            <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+            <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
             <ListViewTemplates TValue="ListDataModel">
                 <Template>
                     @{

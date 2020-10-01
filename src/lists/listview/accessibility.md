@@ -22,7 +22,7 @@ The following key shortcuts are used to access the ListView control without any 
 @using Syncfusion.Blazor.Data
 
 <SfListView DataSource="@ListData" ShowHeader="true" HeaderTitle="Continent">
-    <ListViewFieldSettings Id="Id" Text="Text" Child="Child"></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" Child="Child"></ListViewFieldSettings>
 </SfListView>
 
 @code {

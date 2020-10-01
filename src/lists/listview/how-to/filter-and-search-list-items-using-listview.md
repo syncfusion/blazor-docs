@@ -25,7 +25,7 @@ following steps to render the ListView with filtered data.
     <div id="sample">
         <SfTextBox Placeholder="Filter" Input="@OnInput"></SfTextBox>
         <SfListView ID="list" DataSource="@ListData">
-            <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+            <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
         </SfListView>
     </div>
 </div>

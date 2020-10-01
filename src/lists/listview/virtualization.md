@@ -21,7 +21,7 @@ It has two types of scrollers as follows:
 ```csharp
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@ListData" EnableVirtualization="true">
-    <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
 </SfListView>
 
 @code{

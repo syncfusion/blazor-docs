@@ -20,7 +20,7 @@ delete icon list item to `OnDelete` method.
 <div class="flex">
     <div class="margin">
         <SfListView DataSource="@DataSource">
-            <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+            <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
             <ListViewTemplates TValue="ListDataModel">
                 <Template>
                     @{

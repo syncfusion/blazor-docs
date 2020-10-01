@@ -44,7 +44,8 @@ Point the cursor anywhere within the editor where you would like to insert the l
 @code {
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink }
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.RemoveLink }
     };
 }
 

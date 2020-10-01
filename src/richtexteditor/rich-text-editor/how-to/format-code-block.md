@@ -1,12 +1,12 @@
 ---
-title: "Blazor Rich Text Editor | how to | format code block using toolbar button"
+title: "Blazor Rich Text Editor | how to | Format code block using toolbar button"
 component: "Rich Text Editor"
 description: "This section explains about, how to format code block using toolbar button click in Blazor Rich Text Editor component."
 ---
 
 # Format code block using toolbar button
 
-You can configure code block formatting as a separate toolbar button by adding the **InsertCode** keyword within the `RichTextEditorToolbarSettings` items property.
+You can configure code block formatting as a separate toolbar button by adding the **InsertCode** Command within the `RichTextEditorToolbarSettings` - `Items` property.
 
 The InsertCode button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor.
 
@@ -17,7 +17,7 @@ The following code will configure the InsertCode button in toolbar and set the b
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+    <RichTextEditorToolbarSettings Items="@Tools" />
         <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
         <p><b> Key features:</b></p>
         <ul>
@@ -38,9 +38,10 @@ The following code will configure the InsertCode button in toolbar and set the b
     }
 </style>
 
-@code {
-    public object[] Tools = new object[]{
-        "InsertCode"
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.InsertCode }
     };
 }
 

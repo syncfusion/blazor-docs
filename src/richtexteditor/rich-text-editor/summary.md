@@ -22,4 +22,4 @@
 * [Check image size](rich-text-editor/how-to/check-image-size.md)
 * [Customize placeholder style](rich-text-editor/how-to/placeholder.md)
 * [Rename images before inserting it in Rich Text Editor](rich-text-editor/how-to/rename-image.md)
-<!-- * [Format code block using toolbar button](rich-text-editor/how-to/format-code-block.md) -->
+* [Format code block using toolbar button](rich-text-editor/how-to/format-code-block.md)

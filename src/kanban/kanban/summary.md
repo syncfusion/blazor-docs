@@ -5,5 +5,4 @@
 * [Card Editing](kanban/dialog.md)
 * [Tooltip](kanban/tooltip.md)
 * [WIP Validation](kanban/validation.md)
-* [Localization](kanban/localization.md)
 * [Dimensions](kanban/dimensions.md)

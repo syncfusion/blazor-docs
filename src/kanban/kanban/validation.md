@@ -28,10 +28,10 @@ The `MaxCount` property is used to specify the maximum cards hold on particular 
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open" ShowItemCount="true" MinCount="6"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress" ShowItemCount="true" MaxCount="5"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing" ShowItemCount="true" MinCount="3" MaxCount="4"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close" ShowItemCount="true"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open" }) ShowItemCount="true" MinCount="6"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" }) ShowItemCount="true" MaxCount="5"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" }) ShowItemCount="true" MinCount="3" MaxCount="4"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" }) ShowItemCount="true"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>

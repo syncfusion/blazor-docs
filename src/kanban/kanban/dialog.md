@@ -34,10 +34,10 @@ KanbanSwimlaneSettings.KeyField (If applicable) | DropDown | -
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open" })></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" })></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" })></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" })></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
@@ -104,10 +104,10 @@ Using the dialog template, you can render your own form fields with dialog by us
 
 <SfKanban @ref="KanbanRef" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open" })></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" })></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" })></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" })></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
     <KanbanDialogSettings>
@@ -149,7 +149,6 @@ Using the dialog template, you can render your own form fields with dialog by us
             }
         </Template>
     </KanbanDialogSettings>
-    <KanbanEvents TValue="TasksModel" DialogClose="@OnDialogClose"></KanbanEvents>
 </SfKanban>
 
 @code {
@@ -159,7 +158,7 @@ Using the dialog template, you can render your own form fields with dialog by us
     SfTextBox SummaryRef;
 
     private List<DropDownModel> StatusData = new List<DropDownModel>()
-    {
+{
         new DropDownModel { Id = 0, Value = "Open" },
         new DropDownModel { Id = 1, Value = "InProgress" },
         new DropDownModel { Id = 2, Value = "Testing" },
@@ -167,7 +166,7 @@ Using the dialog template, you can render your own form fields with dialog by us
     };
 
     private List<DropDownModel> AssigneeData = new List<DropDownModel>()
-    {
+{
         new DropDownModel { Id = 0, Value = "Nancy Davloio" },
         new DropDownModel { Id = 1, Value = "Andrew Fuller" },
         new DropDownModel { Id = 2, Value = "Janet Leverling" },
@@ -177,34 +176,7 @@ Using the dialog template, you can render your own form fields with dialog by us
         new DropDownModel { Id = 6, Value = "Michael Suyama" }
     };
 
-    private async void OnDialogClose(DialogCloseEventArgs args)
-    {
-        if (args.Interaction != "Cancel" && args.Interaction != "Close")
-        {
-            if (args.RequestType == CurrentAction.Edit)
-            {
-                TasksModel data = args.Data as TasksModel;
-                data.Status = this.StatusRef.Value;
-                data.Assignee = this.AssigneeRef.Value;
-                data.Summary = this.SummaryRef.Value;
-                await this.KanbanRef.UpdateCard(data);
-            }
-            else if (args.RequestType == CurrentAction.Add)
-            {
-                TasksModel data = new TasksModel()
-                {
-                    Id = (this.Tasks.Count() + 1).ToString(),
-                    Title = "BLAZ-29040",
-                    Status = this.StatusRef.Value,
-                    Summary = this.SummaryRef.Value,
-                    Assignee = this.AssigneeRef.Value
-                };
-                await this.KanbanRef.AddCard(data);
-            }
-        }
-    }
-
-    private void ShowAddCardDialog()
+    private async void ShowAddCardDialog()
     {
         TasksModel data = new TasksModel()
         {
@@ -214,7 +186,7 @@ Using the dialog template, you can render your own form fields with dialog by us
             Status = "Open",
             Assignee = "Nancy Davloio"
         };
-        this.KanbanRef.OpenDialog(CurrentAction.Add, data);
+        await this.KanbanRef.OpenDialog(CurrentAction.Add, data);
     }
 
     private class DropDownModel
@@ -232,7 +204,7 @@ Using the dialog template, you can render your own form fields with dialog by us
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-    {
+{
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling" },
@@ -279,10 +251,10 @@ The Kanban allows to prevent to open a dialog on card double-click by enabling `
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open" })></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" })></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" })></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" })></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
     <KanbanEvents TValue="TasksModel" DialogOpen="@OnDialogOpen"></KanbanEvents>
@@ -299,7 +271,7 @@ The Kanban allows to prevent to open a dialog on card double-click by enabling `
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-{
+    {
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling" },
@@ -329,7 +301,7 @@ The Kanban allows to prevent to open a dialog on card double-click by enabling `
         new TasksModel { Id = "Task 27", Title = "BLAZ-29027", Status = "Testing", Summary = "Test editing feature in the IE browser.", Assignee = "Janet Leverling" }
     };
 
-    private void OnDialogOpen(DialogEventArgs args)
+    private void OnDialogOpen(DialogOpenEventArgs<TasksModel> args)
     {
         args.Cancel = true;
     }

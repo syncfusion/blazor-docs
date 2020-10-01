@@ -28,10 +28,10 @@ In the following demo, the `ShowHeader` property is disabled on Kanban board.
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open" })></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" })></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" })></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" })></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings ShowHeader="false" HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
@@ -47,7 +47,7 @@ In the following demo, the `ShowHeader` property is disabled on Kanban board.
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-    {
+{
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling" },
@@ -98,9 +98,9 @@ You can customize the default card layout using template as per your application
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open" })></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" })></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" })></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary">
         <Template>
@@ -211,10 +211,10 @@ Select the multiple cards randomly using Ctrl + mouse click and select the multi
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open" })></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" })></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" })></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" })></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary" SelectionType="SelectionType.Multiple"></KanbanCardSettings>
 </SfKanban>
@@ -230,7 +230,7 @@ Select the multiple cards randomly using Ctrl + mouse click and select the multi
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-    {
+{
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling" },

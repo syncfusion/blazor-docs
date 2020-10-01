@@ -78,7 +78,7 @@ Use the following list of keys to navigate the Calendar after the pop-up has bee
 <SfDatePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="DateObj"></SfDatePicker>
 
 @code {
-    public SfDatePicker DateObj;
+    public SfDatePicker<DateTime?> DateObj;
     public void KeyPressed(KeyboardEventArgs args)
     {
         if (args.Key == "t")

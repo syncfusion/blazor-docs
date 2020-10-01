@@ -92,7 +92,7 @@ Use the following shortcut keys to interact with the TimePicker after the TimePi
 <SfDateTimePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="DateTimeObj"></SfDateTimePicker>
 
 @code {
-    public SfDateTimePicker DateTimeObj;
+    public SfDateTimePicker<DateTime?> DateTimeObj;
     public void KeyPressed(KeyboardEventArgs args)
     {
         if (args.Key == "t")

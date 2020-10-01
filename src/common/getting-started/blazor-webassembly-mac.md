@@ -13,6 +13,8 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 > **Note:** .NET Core SDK 3.1.8 requires Visual Studio for Mac 8.7.6 or later.
 
+> **New:** Syncfusion Blazor components are [compatible with .NET 5.0 RC](blazor-rc.md) and it requires Visual Studio for Mac 8.7.6 or later.
+
 ## Create a Blazor WebAssembly project in Visual Studio for Mac
 
 1. Choose **New** from the Visual Studio for Mac dashboard.
@@ -79,7 +81,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
-    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.59/styles/bootstrap4.css).
+    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.3.35/styles/bootstrap4.css).
     >
     > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
     >

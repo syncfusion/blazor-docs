@@ -9,11 +9,11 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.7](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-> **Note:** .NET Core SDK 3.1.7 requires Visual Studio 2019 16.7 or later.
->
-> Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 7 and it requires Visual Studio 16.7 Preview 1 or later.
+> **Note:** .NET Core SDK 3.1.8 requires Visual Studio 2019 16.7 or later.
+
+> **New:** Syncfusion Blazor components are [compatible with .NET 5.0 RC](blazor-rc.md) and it requires Visual Studio 16.8 Preview 3 or later.
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
@@ -89,7 +89,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
-    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.59/styles/bootstrap4.css).
+    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.3.35/styles/bootstrap4.css).
     >
     > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
     >

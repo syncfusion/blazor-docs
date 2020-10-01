@@ -5,9 +5,9 @@ This section provides information about creating Razor Class Library with the Sy
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.7](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-> **Note:** .NET Core SDK 3.1.7 requires Visual Studio 2019 16.7 or later.
+> **Note:** .NET Core SDK 3.1.8 requires Visual Studio 2019 16.7 or later.
 
 ## Create a Razor Class Library using Syncfusion Blazor components in Visual Studio 2019
 
@@ -145,7 +145,7 @@ This section provides information about creating Razor Class Library with the Sy
     </head>
     ```
 
-    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.1.55/styles/bootstrap4.css).
+    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.3.35/styles/bootstrap4.css).
     >
     > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Startup.cs** file by using true parameter as mentioned below.
     >
@@ -254,7 +254,7 @@ This section provides information about creating Razor Class Library with the Sy
     </head>
     ```
 
-    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.1.55/styles/bootstrap4.css).
+    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.3.35/styles/bootstrap4.css).
     >
     > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
     >

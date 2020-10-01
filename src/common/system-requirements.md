@@ -13,7 +13,9 @@ By using the following IDEs, you can develop Blazor applications
 
 The below tool required to run the Blazor application.
 
-* [`.NET Core SDK 3.1.7`](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [`.NET Core SDK 3.1.8`](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+> Syncfusion Blazor components are compatible with .NET 5.0 RC and it requires Visual Studio 16.8 Preview 3 or later.
 
 ## Extensions
 

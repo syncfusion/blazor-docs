@@ -346,7 +346,7 @@ The event editor window can be customized by making use of the `EditorTemplate` 
 
 ### How to add resource options within editor template
 
-The resource field can be added within editor template with multiselect control to allow multiple resources.
+The resource field can be added within editor template with the following code example.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -354,10 +354,10 @@ The resource field can be added within editor template with multiselect control 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor"></ScheduleResource>
     </ScheduleResources>
     <ScheduleTemplates>
         <EditorTemplate>
@@ -366,33 +366,33 @@ The resource field can be added within editor template with multiselect control 
                     <tr>
                         <td class="e-textlabel">Summary</td>
                         <td colspan="4">
-                            <SfTextBox ID="Subject" CssClass="e-field e-input" Value="@((context as AppointmentData).Subject)"></SfTextBox>
+                            <SfTextBox @bind-Value="@((context as AppointmentData).Subject)"></SfTextBox>
                         </td>
                     </tr>
                     <tr>
                         <td class="e-textlabel">Status</td>
                         <td colspan="4">
-                            <SfMultiSelect ID="OwnerId" TValue="int[]" Placeholder="Choose owner" DataSource="@OwnerData" HtmlAttributes="@OwnerName" CssClass="e-field" Value="@((context as AppointmentData).OwnerId)">
-                                <MultiSelectFieldSettings Text="Text" Value="Id"></MultiSelectFieldSettings>
-                            </SfMultiSelect>
+                            <SfDropDownList TValue="int" TItem="ResourceData" ID="OwnerId" DataSource="@OwnersData" Placeholder="Choose owner" @bind-Value="@((context as AppointmentData).OwnerId)">
+                                <DropDownListFieldSettings Text="Text" Value="Id"></DropDownListFieldSettings>
+                            </SfDropDownList>
                         </td>
                     </tr>
                     <tr>
                         <td class="e-textlabel">From</td>
                         <td colspan="4">
-                            <SfDateTimePicker ID="StartTime" HtmlAttributes="@StartName" CssClass="e-field" Value="@((context as AppointmentData).StartTime.ToUniversalTime())"></SfDateTimePicker>
+                            <SfDateTimePicker @bind-Value="@((context as AppointmentData).StartTime)"></SfDateTimePicker>
                         </td>
                     </tr>
                     <tr>
                         <td class="e-textlabel">To</td>
                         <td colspan="4">
-                            <SfDateTimePicker ID="EndTime" HtmlAttributes="@EndName" CssClass="e-field" Value="@((context as AppointmentData).EndTime.ToUniversalTime())"></SfDateTimePicker>
+                            <SfDateTimePicker @bind-Value="@((context as AppointmentData).EndTime)"></SfDateTimePicker>
                         </td>
                     </tr>
                     <tr>
                         <td class="e-textlabel">Reason</td>
                         <td colspan="4">
-                            <textarea id="Description" class="e-field e-input" name="Description" rows="3" cols="50" value="@((context as AppointmentData).Description)" style="width: 100%; height: 60px !important; resize: vertical"></textarea>
+                            <SfTextBox Multiline="true" @bind-Value="@((context as AppointmentData).Description)"></SfTextBox>
                         </td>
                     </tr>
                 </tbody>
@@ -403,29 +403,7 @@ The resource field can be added within editor template with multiselect control 
 </SfSchedule>
 
 @code{
-    public class DDFields
-    {
-        public int Id { get; set; }
-        public string Text { get; set; }
-    }
-    private List<DDFields> OwnerData = new List<DDFields>()
-    {
-        new DDFields(){ Id= 1, Text= "Nancy" },
-        new DDFields(){ Id= 2, Text= "Steven" },
-        new DDFields(){ Id= 3, Text= "Michael" }
-    };
-    Dictionary<string, object> StartName = new Dictionary<string, object>()
-    {
-        {"data-name","StartTime"},
-    };
-    Dictionary<string, object> EndName = new Dictionary<string, object>() {
-        {"data-name","EndTime"},
-    };
-    Dictionary<string, object> OwnerName = new Dictionary<string, object>()
-    {
-        {"data-name","OwnerId"},
-    };
-
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string[] Resources { get; set; } = { "Owners" };
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
     {
@@ -435,7 +413,7 @@ The resource field can be added within editor template with multiselect control 
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = new int[] { 1 } }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1 }
     };
     public class AppointmentData
     {
@@ -444,7 +422,7 @@ The resource field can be added within editor template with multiselect control 
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public string Description { get; set; }
-        public int[] OwnerId { get; set; }
+        public int OwnerId { get; set; }
     }
     public class ResourceData
     {

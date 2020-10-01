@@ -10,14 +10,14 @@ The AutoComplete loads the data either from local data sources or remote data se
 
 The AutoComplete also supports different kinds of data services such as OData, OData V4, and Web API and data formats such as XML, JSON, JSONP with the help of DataManager Adaptors.
 
-| Fields | Type | Description
-|------|------|-------------|
-| Value |  `int or string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
-| GroupBy |  `string` | Specifies the category under which the list item has to be grouped. |
-| IconCss |  `string` | Specifies the icon class of each list item. |
+| Fields  | Type            | Description                                                                                  |
+| ------- | --------------- | -------------------------------------------------------------------------------------------- |
+| Value   | `int or string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
+| GroupBy | `string`        | Specifies the category under which the list item has to be grouped.                          |
+| IconCss | `string`        | Specifies the icon class of each list item.                                                  |
 
->While binding complex data to AutoComplete, fields should be mapped correctly. Otherwise, the selected
-item remains undefined.
+> While binding complex data to AutoComplete, fields should be mapped correctly. Otherwise, the selected
+> item remains undefined.
 
 ## Bind to local data
 
@@ -135,17 +135,22 @@ property is used to fetch data from the database and bind it to the AutoComplete
 The following sample displays the first 6 contacts from the **Customers** table of the `Northwind` data service.
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="OrderDetails" Placeholder="Select a customerID" Query="@Query">
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/" Adaptor="Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
-    <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+        <SfAutoComplete TValue="string" TItem="OrderDetails" Placeholder="Select a name" Query="@RemoteDataQuery" Autofill="true">
+            <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
+            <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
+        </SfAutoComplete>
 
-@code {
-    public Query Query = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
-    public class OrderDetails
+@code{
+
+    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
+
+    public Syncfusion.Blazor.Lists.SortOrder Sort { get; set; } = Syncfusion.Blazor.Lists.SortOrder.Ascending;
+
+     public class OrderDetails
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
@@ -382,7 +387,7 @@ namespace EFDropDown.Shared.DataAccess
 
 ### Creating Web API Controller
 
- A Web API Controller has to be created which allows AutoComplete directly to consume data from the Entity framework.
+A Web API Controller has to be created which allows AutoComplete directly to consume data from the Entity framework.
 
 ```csharp
 using EFDropDown.Shared.DataAccess;

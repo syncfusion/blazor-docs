@@ -17,7 +17,7 @@ In the following example, the keyPressed method is called every time the key is 
 ```csharp
 @using Syncfusion.Blazor.Data
 
-<SfComboBox TValue="string" TItem="Countries" @onkeypress='@KeyPressed' DataSource="@Country">
+<SfComboBox TValue="string" TItem="Countries" @onkeypress="@KeyPressed" DataSource="@Country">
     <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
 </SfComboBox>
 
@@ -64,7 +64,7 @@ Blazor provides set of argument types to map to native events. The list of event
 In the following example, the keyPressed method is called every time any key is pressed inside input. But the message will print when you press "c" key.
 
 ```csharp
-<SfComboBox TValue="string" TItem="Countries" @onkeypress='@(e => KeyPressed(e))' DataSource="@Country">
+<SfComboBox TValue="string" TItem="Countries" @onkeypress="@(e => KeyPressed(e))" DataSource="@Country">
     <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
 </SfComboBox>
 

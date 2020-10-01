@@ -300,22 +300,34 @@ In the following sample, when the data fetch request fails, the AutoComplete dis
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
-    <AutoCompleteTemplates TItem="EmployeeData">
+<SfAutoComplete TValue="string" TItem="OrderDetails" Placeholder="Select a name" Query="@RemoteDataQuery">
+    <AutoCompleteTemplates TItem="OrderDetails">
         <ActionFailureTemplate>
             <span class='norecord'>Data fetch get fails </span>
         </ActionFailureTemplate>
     </AutoCompleteTemplates>
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svcs/Employees" Adaptor="Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
-    <AutoCompleteFieldSettings Value="FirstName"></AutoCompleteFieldSettings>
+     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
+     <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
-    public class EmployeeData
+    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
+
+    public Syncfusion.Blazor.Lists.SortOrder Sort { get; set; } = Syncfusion.Blazor.Lists.SortOrder.Ascending;
+
+     public class OrderDetails
     {
-        public string FirstName { get; set; }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public int? EmployeeID { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public bool Verified { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public string ShipAddress { get; set; }
     }
-    public EmployeeData Data = new EmployeeData();
-    public Query Query = new Query().Select(new List<string> { "FirstName", "Country" }).Take(6).RequiresCount();
 }
 ```

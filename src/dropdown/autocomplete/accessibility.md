@@ -49,13 +49,15 @@ You can use the following key shortcuts to access the AutoComplete without inter
 ```csharp
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="Countries" @ref="AutoObj" Placeholder="Select a country" @onkeyup="@KeyUp" DataSource="@LocalData">
+<SfAutoComplete TValue="string" TItem="Countries" @ref="AutoObj" Placeholder="Select a country" Enabled="@enable" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
 
     public SfAutoComplete<string, Countries> AutoObj;
+
+    public bool enable { get; set; } = true ;
     public class Countries
     {
         public string Name { get; set; }
@@ -75,11 +77,11 @@ You can use the following key shortcuts to access the AutoComplete without inter
         new Countries() { Name = "Hong Kong", Code = "HK" },
     };
 
-    public void KeyUp(KeyboardEventArgs args)
+    public void KeyPressed(KeyboardEventArgs args)
     {
         if (args.Key == "t")
         {
-            this.AutoObj.Enabled = false;
+            enable = false;
         }
     }
 }

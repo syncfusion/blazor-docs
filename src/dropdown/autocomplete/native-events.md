@@ -15,7 +15,9 @@ You can access any native event by using on `<event>` attribute with a component
 In the following example, the keyPressed method is called every time the key is pressed on input.
 
 ```csharp
-<SfAutoComplete TValue="string" TItem="Countries" @onkeypress='@KeyPressed'></SfAutoComplete>
+<SfAutoComplete TValue="string" TItem="Countries" @onkeypress="@KeyPressed">
+    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+</SfAutoComplete>
 
 @code {
     public void KeyPressed()
@@ -60,7 +62,9 @@ Blazor provides set of argument types to map to native events. The list of event
 In the following example, the onkeypress method is called every time any key is pressed inside input. But the message will print when you press "a" key.
 
 ```csharp
-<SfAutoComplete TValue="string" TItem="Countries" @onkeypress='@(e => KeyPressed(e))' ></SfAutoComplete>
+<SfAutoComplete TValue="string" TItem="Countries" @onkeypress="@(e => KeyPressed(e))" >
+    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+</SfAutoComplete>
 
 @code {
   public void KeyPressed(KeyboardEventArgs args) {

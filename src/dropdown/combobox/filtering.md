@@ -35,43 +35,54 @@ The output will be as follows.
 
 ![ComboBox](./images/filter.png)
 
-## Diacritics filtering
+## Custom Filtering
 
-ComboBox supports diacritics filtering, which will ignore the [Diacritics](https://en.wikipedia.org/wiki/Diacritic) and
-makes it easier to filter the results in international characters lists
-when the [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_IgnoreAccent) is enabled.
-
-In the following sample, data with diacritics are bound as dataSource for ComboBox.
+The ComboBox component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
 
 ```csharp
-@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
 
-<SfComboBox TValue="string" TItem="Data" Placeholder="e.g: Aero" AllowFiltering=true IgnoreAccent=true DataSource="@Country">
-    <ComboBoxFieldSettings Value="Name"></ComboBoxFieldSettings>
+<SfComboBox TValue="string" @ref="comboObj" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country" AllowFiltering="true">
+    <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
+    <ComboBoxEvents TValue="string" TItem="Countries" Filtering="OnFilter"></ComboBoxEvents>
 </SfComboBox>
 
 @code {
 
-    public class Data
+    SfComboBox<string, Countries> comboObj { get; set; }
+
+    public class Countries
     {
         public string Name { get; set; }
+
+        public string Code { get; set; }
     }
 
-    List<Data> Country = new List<Data>
-{
-        new Data() { Name = "Aeróbics"},
-        new Data() { Name = "Aeróbics en Agua"},
-        new Data() { Name = "Aerografía"},
-        new Data() { Name = "Águilas"},
-        new Data() { Name = "Ajedrez"},
-        new Data() { Name = "Ala Delta"},
-        new Data() { Name = "Álbumes de Música"},
-        new Data() { Name = "Alusivos"},
-        new Data() { Name = "Análisis de Escritura a Mano"},
+    List<Countries> Country = new List<Countries>
+    {
+        new Countries() { Name = "Australia", Code = "AU" },
+        new Countries() { Name = "Bermuda", Code = "BM" },
+        new Countries() { Name = "Canada", Code = "CA" },
+        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Countries() { Name = "Denmark", Code = "DK" }
     };
+
+    List<Countries> Country1 = new List<Countries>
+    {
+        new Countries() { Name = "France", Code = "FR" },
+        new Countries() { Name = "Finland", Code = "FI" },
+        new Countries() { Name = "Germany", Code = "DE" },
+        new Countries() { Name = "Greenland", Code = "GL" }
+    };
+
+    private async Task OnFilter(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        var query = new Query().Where(new WhereFilter() { Field = "Name", Operator = "contains", value = args.Text, IgnoreCase = true });
+
+        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+
+        await comboObj.Filter(Country1, query);
+    }
 }
 ```
-
-The output will be as follows.
-
-![ComboBox](./images/diacritics.png)

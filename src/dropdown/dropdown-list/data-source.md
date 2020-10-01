@@ -315,7 +315,7 @@ You can bind enum data to DropDownList component. The following code helps you g
 
 @using Syncfusion.Blazor.DropDowns;
 
-<SfDropDownList TValue="string" TItem="Values" Placeholder="e.g. Australia" DataSource="@EnumValues" @bind-Value="@ddlVal">
+<SfDropDownList TValue="Values" TItem="string" Placeholder="e.g. Australia" DataSource="@EnumValues" @bind-Value="@ddlVal">
 </SfDropDownList>
 
 @code{

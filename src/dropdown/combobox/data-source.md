@@ -87,13 +87,13 @@ In the following example, `Code.ID` column and `Country.CountryID` column from c
 ```csharp
 @using Syncfusion.Blazor.DropDowns
 
-<SfComboBox TValue="string" Placeholder="e.g. Select a Country" DataSource="@LocalData"TValue="string" TItem="Complex" Placeholder="e.g. Select a Country" DataSource="@LocalData">
+<SfComboBox TValue="string" DataSource="@LocalData" TValue="string" TItem="Complex" Placeholder="e.g. Select a Country">
     <ComboBoxFieldSettings Text="Country.CountryID" Value="Code.ID"></ComboBoxFieldSettings>
 </SfComboBox>
 
 @code {
 
-public IEnumerable LocalData { get; set; } = new Complex().GetData();
+public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
 
     public class Code
     {

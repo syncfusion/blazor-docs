@@ -14,11 +14,11 @@ starts as soon as you start typing characters in the component.
 Determines on which filter type the component needs to be considered on search action.
 The available [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_FilterType) and its supported data types are:
 
-| **Filter Type** | **Description** | **Supported Types** |
-| --- | --- |
-| StartsWith | Checks whether a value begins with the specified value. | String |
-| EndsWith | Checks whether a value ends with specified value. | String |
-| Contains | Checks whether a value contains with specified value. | String |
+| **Filter Type** | **Description**                                         | **Supported Types** |
+| --------------- | ------------------------------------------------------- | ------------------- |
+| StartsWith      | Checks whether a value begins with the specified value. | String              |
+| EndsWith        | Checks whether a value ends with specified value.       | String              |
+| Contains        | Checks whether a value contains with specified value.   | String              |
 
 The following examples shows data filtering is done with the `StartsWith` type.
 
@@ -26,13 +26,13 @@ The following examples shows data filtering is done with the `StartsWith` type
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="OrderDetails"  Placeholder="Select a customerID" Query="@Query" FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/" Adaptor="Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
-    <AutoCompleteFieldSettings Value="ContactName"></AutoCompleteFieldSettings>
+<SfAutoComplete TValue="string" TItem="OrderDetails"  Placeholder="Select a customerID" Query="@RemoteDataQuery" FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
+    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor" CrossDomain=true></SfDataManager>
+    <AutoCompleteFieldSettings  Value="CustomerID"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
-    public Query Query = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
+    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
     public class OrderDetails
     {
         public int? OrderID { get; set; }
@@ -63,16 +63,15 @@ Refer to the following example to restrict the suggestion list item counts as 3.
 
 ```csharp
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="OrderDetails" Placeholder="Select a customerID" Query="@Query" SuggestionCount=3 FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/" Adaptor="Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
-    <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
+<SfAutoComplete TValue="string" TItem="OrderDetails"  Placeholder="Select a customerID" SuggestionCount=3 Query="@RemoteDataQuery" FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
+    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor" CrossDomain=true></SfDataManager>
+    <AutoCompleteFieldSettings  Value="CustomerID"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
 
-    public Query Query = new Query().Select(new List<string> { "CustomerID" }).RequiresCount();
+    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).RequiresCount();
     public class OrderDetails
     {
         public int? OrderID { get; set; }
@@ -105,14 +104,13 @@ In the following example, the remote request doesn't fetch the search data until
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="OrderDetails" Placeholder="Select a customerID" Query="@Query" MinLength=3 FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/" Adaptor="Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+<SfAutoComplete TValue="string" TItem="OrderDetails"  Placeholder="Select a customerID" MinLength=3 Query="@RemoteDataQuery" FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
+    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor" CrossDomain=true></SfDataManager>
     <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
-
-    public Query Query = new Query().Select(new List<string> { "CustomerID" }).RequiresCount();
+    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).RequiresCount();
     public class OrderDetails
     {
         public int? OrderID { get; set; }
@@ -172,40 +170,46 @@ The following sample depicts how to filter the data with case-sensitive.
 }
 ```
 
-## Diacritics filtering
+## Custom Filtering
 
-An AutoComplete supports diacritics filtering, which will ignore the [Diacritics](https://en.wikipedia.org/wiki/Diacritic) and
-makes it easier to filter the results in international characters lists
-when the [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_IgnoreAccent) is enabled.
-
-In the following sample, data with diacritics are bound as dataSource for AutoComplete.
+The AutoComplete component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
 
 ```csharp
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="Data" Placeholder="e.g: Aero" IgnoreAccent=true DataSource="@Country">
-    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+<SfAutoComplete TValue="string" @ref="autoObj" TItem="Countries" Placeholder="e.g. Australia" AllowFiltering="true">
+    <AutoCompleteFieldSettings Text="Name" Value="Code"></AutoCompleteFieldSettings>
+    <AutoCompleteEvents TValue="string" TItem="Countries" Filtering="OnFilter"></AutoCompleteEvents>
 </SfAutoComplete>
 
 @code {
 
-    public class Data
+    SfAutoComplete<string, Countries> autoObj { get; set; }
+
+    public class Countries
     {
         public string Name { get; set; }
+
+        public string Code { get; set; }
     }
 
-    List<Data>Country = new List<Data>
+    List<Countries> Country = new List<Countries>
     {
-        new Data() { Name = "Aeróbics"},
-        new Data() { Name = "Aeróbics en Agua"},
-        new Data() { Name = "Aerografía"},
-        new Data() { Name = "Águilas"},
-        new Data() { Name = "Ajedrez"},
-        new Data() { Name = "Ala Delta"},
-        new Data() { Name = "Álbumes de Música"},
-        new Data() { Name = "Alusivos"},
-        new Data() { Name = "Análisis de Escritura a Mano"},
+        new Countries() { Name = "Australia", Code = "AU" },
+        new Countries() { Name = "Bermuda", Code = "BM" },
+        new Countries() { Name = "Canada", Code = "CA" },
+        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Countries() { Name = "Denmark", Code = "DK" }
     };
+
+    private async Task OnFilter(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        var query = new Query().Where(new WhereFilter() { Field = "Name", Operator = "contains", value = args.Text, IgnoreCase = true });
+
+        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+
+        await autoObj.Filter(Country, query);
+    }
 }
 ```

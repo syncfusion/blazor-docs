@@ -113,7 +113,7 @@ In the following sample, employees are grouped according to their city.
 <SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
     <DropDownListTemplates TItem="EmployeeData">
         <GroupTemplate>
-            <span class="group">@((context as EmployeeData).Country)</span>
+            <span class="group">@(context.Text)</span>
         </GroupTemplate>
     </DropDownListTemplates>
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>

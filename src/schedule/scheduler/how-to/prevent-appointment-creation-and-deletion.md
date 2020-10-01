@@ -1,15 +1,16 @@
 # Prevent Appointment Creation and Deletion
 
-By default Scheduler allows the user to perform all the CRUD actions. We can prevent a particular action by setting `false` to the respective property. In the following code example, only edit actions are allowed as we set `false` to `AllowAdding` and `AllowDeleting` properties and by `AllowEditing` will be `true`.
+By default, Scheduler allows the user to perform all the CRUD actions. We can prevent a particular action by setting `false` to the respective property. In the following code example, only edit actions are allowed as `AllowAdding` and `AllowDeleting` properties are set to `false`.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="new DateTime(2020, 2, 11)">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource" AllowAdding="false" AllowDeleting="false"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 2, 11);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 11, 10, 0, 0) , EndTime = new DateTime(2020, 2, 11, 12, 0, 0) },

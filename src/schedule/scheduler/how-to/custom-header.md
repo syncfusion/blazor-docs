@@ -14,8 +14,8 @@ We can hide the Scheduler header bar by setting `false` to `ShowHeaderBar` and u
         <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
         <ToolbarItem Type="ItemType.Input" Align="ItemAlign.Right">
             <Template>
-                <SfDropDownList TItem="Views" TValue="string" ID="Views" DataSource="@ViewsList" Width="120" Index="1">
-                    <DropDownListEvents TValue="string" ValueChange="OnValueChange"></DropDownListEvents>
+                <SfDropDownList TItem="Views" TValue="string" ID="Views" DataSource="@ViewsList" Width="120" @bind-Index="@index">
+                    <DropDownListEvents TItem="Views" TValue="string" ValueChange="OnValueChange"></DropDownListEvents>
                     <DropDownListFieldSettings Value="Text"></DropDownListFieldSettings>
                 </SfDropDownList>
             </Template>
@@ -23,7 +23,7 @@ We can hide the Scheduler header bar by setting `false` to `ShowHeaderBar` and u
     </ToolbarItems>
 </SfToolbar>
 
-<SfSchedule SelectedDate="@DateValue" TValue="AppointmentData" CurrentView="@MyView" Height="650px" ShowHeaderBar="false">
+<SfSchedule @bind-SelectedDate="@DateValue" TValue="AppointmentData" @bind-CurrentView="@MyView" Height="650px" ShowHeaderBar="false">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
@@ -40,6 +40,7 @@ We can hide the Scheduler header bar by setting `false` to `ShowHeaderBar` and u
 @code{
     public DateTime DateValue { get; set; } = new DateTime(2020, 2, 11);
     public View MyView = View.Week;
+    private int? index = 1;
     public void Clicked(ClickEventArgs args)
     {
         int addDay = 7;
@@ -56,7 +57,7 @@ We can hide the Scheduler header bar by setting `false` to `ShowHeaderBar` and u
             DateValue = DateValue.AddDays(addDay);
         }
     }
-    public void OnValueChange(ChangeEventArgs<string> args)
+    public void OnValueChange(ChangeEventArgs<string, Views> args)
     {
         this.MyView = (View)Enum.Parse(typeof(View), args.Value);
     }

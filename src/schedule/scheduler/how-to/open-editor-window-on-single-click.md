@@ -5,22 +5,23 @@ By default, the editor window will open on double clicking the cell or appointme
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule @ref="ScheduleObj" TValue="AppointmentData" ShowQuickInfo="false" Height="550px" SelectedDate="@(new DateTime(2020, 3, 11))">
+<SfSchedule @ref="ScheduleRef" TValue="AppointmentData" ShowQuickInfo="false" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleEvents TValue="AppointmentData" OnCellClick="OnCellClick" OnEventClick="OnEventClick"></ScheduleEvents>
 </SfSchedule>
 
 @code{
-    SfSchedule<AppointmentData> ScheduleObj;
-    public async void OnCellClick(CellClickEventArgs args)
+    DateTime CurrentDate = new DateTime(2020, 3, 11);
+    SfSchedule<AppointmentData> ScheduleRef;
+    public async Task OnCellClick(CellClickEventArgs args)
     {
-        var cellData = await ScheduleObj.GetCellDetails(args.Element); //to get the current cell details
-        await ScheduleObj.OpenEditor(cellData, CurrentAction.Add); //to open the editor on cell click
+        args.Cancel = true;
+        await ScheduleRef.OpenEditor(args, CurrentAction.Add); //to open the editor on cell click
     }
-    public async void OnEventClick(EventClickArgs<AppointmentData> args)
+    public async Task OnEventClick(EventClickArgs<AppointmentData> args)
     {
-        var eventData = await ScheduleObj.GetEventDetails(args.Element); //to get the current appointment details
-        await ScheduleObj.OpenEditor(eventData, CurrentAction.Save); //to open the editor on event click
+        args.Cancel = true;
+        await ScheduleRef.OpenEditor(args.Event, CurrentAction.Save); //to open the editor on event click
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {

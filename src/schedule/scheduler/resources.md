@@ -35,20 +35,21 @@ The default options available within the `Resources` collection are as follows,
 
 ## Resource data binding
 
-The data for resources can bind with Scheduler either as list of object collection or a service URL, retrieving resource data from remote data services.
+The data for resources can bind with Scheduler either as list of object collection or a service URL, retrieving resource data from remote data services. The `TItem` in the `ScheduleResource` holds the generic class model of resource DataSource and `TValue` holds the generic type of resource id which need to be in array when `AllowMultiple` is set to true.
 
 The following code example depicts how to bind the list of object collection to the `DataSource` of Resource collection.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="650px" SelectedDate="@(new DateTime(2020, 4, 4))">
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnerData" Field="OwnerId" Title="Owner" Name="Owner" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@OwnerData" Field="OwnerId" Title="Owner" Name="Owner" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
     </ScheduleResources>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 4, 4);
     public List<ResourceData> OwnerData { get; set; } = new List<ResourceData> {
         new ResourceData{ Text = "Nancy", Id= 1, Color = "#df5286" },
         new ResourceData{ Text = "Steven", Id= 2, Color = "#7fa900" },
@@ -88,14 +89,14 @@ The appointments belonging to the different resources will be displayed altogeth
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
-
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1 }
@@ -144,16 +145,16 @@ The following code example displays how the multiple resources are grouped and i
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id" ColorField="RoomColor" AllowMultiple="false"></ScheduleResource>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id" ColorField="RoomColor" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
-
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -204,21 +205,21 @@ The following code example depicts how to group the multiple resources on Timeli
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id" ColorField="RoomColor" AllowMultiple="false"></ScheduleResource>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id" ColorField="RoomColor" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
-        <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="2"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" MaxEventsPerRow="2"></ScheduleView>
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -271,15 +272,15 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
-
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string[] Resources { get; set; } = { "Owners" };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -323,18 +324,18 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@HotelData" Field="HotelId" Title="Hotel" Name="Hotels" TextField="HotelText" IdField="Id" ColorField="HotelColor" AllowMultiple="false"></ScheduleResource>
-        <ScheduleResource TValue="ResourceData" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id" ColorField="RoomColor"
-        GroupIDField="RoomGroupId" AllowMultiple="false"></ScheduleResource>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@HotelData" Field="HotelId" Title="Hotel" Name="Hotels" TextField="HotelText" IdField="Id" ColorField="HotelColor" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id" ColorField="RoomColor"
+                          GroupIDField="RoomGroupId" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
-
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string[] Resources { get; set; } = { "Hotels", "Rooms", "Owners" };
     public List<ResourceData> HotelData { get; set; } = new List<ResourceData>
     {
@@ -395,17 +396,17 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup ByGroupID="false" Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id"
-        ColorField="RoomColor" AllowMultiple="false"></ScheduleResource>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id"
+                          ColorField="RoomColor" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
-
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -460,19 +461,19 @@ It groups the number of resources under each date and is applicable only on the 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup ByDate="true" Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id"
-        GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id"
+                          GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
-
 @code{
+    private DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string[] Resources { get; set; } = { "Owners" };
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
-    {
+{
         new ResourceData{ OwnerText = "Nancy", Id = 1, OwnerColor = "#ffaa00" },
         new ResourceData{ OwnerText = "Steven", Id = 2, OwnerColor = "#f8a398" },
         new ResourceData{ OwnerText = "Michael", Id = 3, OwnerColor = "#7499e1" }
@@ -512,7 +513,7 @@ The above code renders the scheduler as in the following image.
 
 ## Working with shared events
 
-Multiple resources can share the same events, thus allowing the CRUD action made on it to reflect on all other shared instances simultaneously. To enable such option, set `AllowGroupEdit` option to `true` within the `Group` property. With this property enabled, a single appointment object will be maintained within the appointment collection, even if it is shared by more than one resource – whereas the resource fields of such appointment object will be in array which hold the IDs of the multiple resources.
+Multiple resources can share the same events, thus allowing the CRUD action made on it to reflect on all other shared instances simultaneously. To enable such option, set `AllowGroupEdit` option to `true` within the `Group` property. With this property enabled, a single appointment will be maintained within the appointment collection, even if it is shared by more than one resource – whereas the resource fields of such appointment will be in array which hold the IDs of the multiple resources.
 
 > Any actions such as create, edit or delete held on any one of the shared event instances, will be reflected on all other related instances visible on the UI.
 
@@ -521,15 +522,16 @@ Multiple resources can share the same events, thus allowing the CRUD action made
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup AllowGroupEdit="true" Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@ConferenceData" Field="ConferenceId" Title="Attendees" Name="Conferences" TextField="Text" IdField="Id" ColorField="Color" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@ConferenceData" Field="ConferenceId" Title="Attendees" Name="Conferences" TextField="Text" IdField="Id" ColorField="Color" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string[] Resources { get; set; } = { "Conferences" };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -574,23 +576,58 @@ It is possible to customize the resource header cells using built-in template op
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 4, 4))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleTemplates>
         <ResourceHeaderTemplate>
-            <div class='template-wrap'>
-                <div class="resource-image"><img src="https://ej2.syncfusion.com/demos/src/schedule/images/@(((context as AppointmentData).ResourceData as ResourceData).Image).png" /></div>
-                <div class="resource-details">
-                    <div class="resource-name">@(((context as AppointmentData).ResourceData as ResourceData).Text)</div>
-                    <div class="resource-designation">@(((context as AppointmentData).ResourceData as ResourceData).Designation)</div>
+            @{
+                var resourceData = (context as TemplateContext).ResourceData as ResourceData;
+                <div class='template-wrap'>
+                    <div class="resource-image"><img src="https://ej2.syncfusion.com/demos/src/schedule/images/@(resourceData.Image).png" /></div>
+                    <div class="resource-details">
+                        <div class="resource-name">@(resourceData.Text)</div>
+                        <div class="resource-designation">@(resourceData.Designation)</div>
+                    </div>
                 </div>
-            </div>
+            }
         </ResourceHeaderTemplate>
     </ScheduleTemplates>
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource DataSource="@DoctorsData" Field="DoctorId" Title="Doctor Name" Name="Doctors" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@DoctorsData" Field="DoctorId" Title="Doctor Name" Name="Doctors" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
     </ScheduleResources>
 </SfSchedule>
+@code{
+    DateTime CurrentDate = new DateTime(2020, 4, 4);
+    public string[] Resources { get; set; } = { "Doctors" };
+    public List<ResourceData> DoctorsData { get; set; } = new List<ResourceData>
+    {
+        new ResourceData{ Text = "Will Smith", Id = 1, Color = "#ea7a57", Designation = "Cardiologist", Image = "will-smith" },
+        new ResourceData{ Text = "Alice", Id = 2, Color = "rgb(53, 124, 210)", Designation = "Neurologist", Image = "alice"  },
+        new ResourceData{ Text = "Robson", Id = 3, Color = "#7fa900", Designation = "Orthopedic Surgeon", Image = "robson"  }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int DoctorId { get; set; }
+    }
+    public class ResourceData
+    {
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public string Designation { get; set; }
+        public string Color { get; set; }
+        public string Image { get; set; }
+    }
+}
 <style>
     .e-schedule .e-vertical-view .e-resource-cells {
         height: 62px;
@@ -629,39 +666,6 @@ It is possible to customize the resource header cells using built-in template op
         display: none;
     }
 </style>
-
-@code{
-    public string[] Resources { get; set; } = { "Doctors" };
-    public List<ResourceData> DoctorsData { get; set; } = new List<ResourceData>
-    {
-        new ResourceData{ Text = "Will Smith", Id = 1, Color = "#ea7a57", Designation = "Cardiologist", Image = "will-smith" },
-        new ResourceData{ Text = "Alice", Id = 2, Color = "rgb(53, 124, 210)", Designation = "Neurologist", Image = "alice"  },
-        new ResourceData{ Text = "Robson", Id = 3, Color = "#7fa900", Designation = "Orthopedic Surgeon", Image = "robson"  }
-    };
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-        public int DoctorId { get; set; }
-        public ResourceData ResourceData { get; set; }
-    }
-    public class ResourceData
-    {
-        public int Id { get; set; }
-        public string Text { get; set; }
-        public string Designation { get; set; }
-        public string Color { get; set; }
-        public string Image { get; set; }
-    }
-}
 ```
 
 The output of the above code example in desktop mode will be as in the following image.
@@ -679,30 +683,84 @@ It is possible to customize the resource headers to display with multiple column
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 1, 31))" CurrentView="View.TimelineWeek">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate" @bind-CurrentView="@CurrentView">
     <ScheduleWorkHours Start="08:00" End="18:00"></ScheduleWorkHours>
     <ScheduleTimeScale SlotCount="1" Interval="60"></ScheduleTimeScale>
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
-        <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="2"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" MaxEventsPerRow="2"></ScheduleView>
     </ScheduleViews>
     <ScheduleGroup Resources="@GroupData"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource DataSource="@RoomData" Field="RoomId" Title="RoomType" Name="Room" TextField="Text" IdField="Id" ColorField="Roomcolor" AllowMultiple="false"></ScheduleResource>
-        <ScheduleResource DataSource="@OwnersData" Field="OwnerId" Title="OwnerType" Name="Owner" TextField="Text" IdField="Id" GroupIDField="OwnerGroupId" ColorField="Ownercolor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@RoomData" Field="RoomId" Title="RoomType" Name="Room" TextField="Text" IdField="Id" ColorField="Roomcolor" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="OwnerType" Name="Owner" TextField="Text" IdField="Id" GroupIDField="OwnerGroupId" ColorField="Ownercolor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleTemplates>
         <ResourceHeaderTemplate>
-            <div class='template-wrap'>
-                <div class="room-name">@(((context as AppointmentData).ResourceData as ResourceData).Text)</div>
-                <div class="room-type">@(((context as AppointmentData).ResourceData as ResourceData).Capacity)</div>
-                <div class="room-capacity">@(((context as AppointmentData).ResourceData as ResourceData).Type)</div>
-                <div class="room-avail">@(((context as AppointmentData).ResourceData as ResourceData).Availability)</div>
-            </div>
+            @{
+                var resourceData = (context as TemplateContext).ResourceData as ResourceData;
+                <div class='template-wrap'>
+                    <div class="room-name">@(resourceData.Text)</div>
+                    <div class="room-type">@(resourceData.Capacity)</div>
+                    <div class="room-capacity">@(resourceData.Type)</div>
+                    <div class="room-avail">@(resourceData.Availability)</div>
+                </div>
+            }
         </ResourceHeaderTemplate>
     </ScheduleTemplates>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    private View CurrentView = View.TimelineWeek;
+    public string[] GroupData { get; set; } = { "Room", "Owner" };
+    public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
+    {
+        new ResourceData{ Text = "Mission", Id = 1, RoomColor = "#df5286", Capacity = 25, Type = "Conference", Availability = 15 },
+        new ResourceData{ Text = "Hangout", Id = 2,  RoomColor = "#00bdae", Capacity = 10, Type = "Cabin", Availability = 8 }
+    };
+    public List<ResourceData> OwnersData { get; set; } = new List<ResourceData> {
+        new ResourceData{ Text = "Jammy", Id = 1, OwnerGroupId = 1, Ownercolor = "#ea7a57", Capacity = 20, Type = "Conference" , Availability = 10 },
+        new ResourceData{ Text = "Tweety", Id = 2, OwnerGroupId = 2, Ownercolor = "#7fa900", Capacity = 7, Type = "Cabin", Availability = 5 },
+        new ResourceData{ Text = "Nestle", Id = 3, OwnerGroupId = 1, Ownercolor = "#865fcf", Capacity = 5, Type = "Cabin", Availability = 2 },
+        new ResourceData{ Text = "Phoenix", Id = 4, OwnerGroupId = 2, Ownercolor = "#fec200", Capacity = 15, Type = "Conference", Availability = 12 },
+        new ResourceData{ Text = "Rick Roll", Id = 5, OwnerGroupId = 1, Ownercolor = "#865fcf", Capacity = 20, Type = "Conference", Availability = 7 },
+        new ResourceData{ Text = "Rainbow", Id = 6, OwnerGroupId = 2, Ownercolor = "#1aaa55", Capacity = 8, Type = "Cabin", Availability = 3 }
+
+    };
+    public class ResourceData
+    {
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public int OwnerGroupId { get; set; }
+        public string RoomColor { get; set; }
+        public string Ownercolor { get; set; }
+        public int Capacity { get; set; }
+        public string Type { get; set; }
+        public int Availability { get; set; }
+    }
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
+        OwnerId = 1, RoomId = 1 }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int OwnerId { get; set; }
+        public int RoomId { get; set; }
+    }
+}
 <style>
     .e-schedule .e-timeline-month-view .e-resource-left-td,
     .e-schedule .e-timeline-view .e-resource-left-td {
@@ -839,50 +897,6 @@ It is possible to customize the resource headers to display with multiple column
         }
     }
 </style>
-
-@code{
-    public string[] GroupData { get; set; } = { "Room", "Owner" };
-    public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
-    {
-        new ResourceData{ Text = "Mission", Id = 1, RoomColor = "#df5286", Capacity = 25, Type = "Conference", Availability = 15 },
-        new ResourceData{ Text = "Hangout", Id = 2,  RoomColor = "#00bdae", Capacity = 10, Type = "Cabin", Availability = 8 }
-    };
-    public List<ResourceData> OwnersData { get; set; } = new List<ResourceData> {
-        new ResourceData{ Text = "Jammy", Id = 1, OwnerGroupId = 1, Ownercolor = "#ea7a57", Capacity = 20, Type = "Conference" , Availability = 10 },
-        new ResourceData{ Text = "Tweety", Id = 2, OwnerGroupId = 2, Ownercolor = "#7fa900", Capacity = 7, Type = "Cabin", Availability = 5 },
-        new ResourceData{ Text = "Nestle", Id = 3, OwnerGroupId = 1, Ownercolor = "#865fcf", Capacity = 5, Type = "Cabin", Availability = 2 },
-        new ResourceData{ Text = "Phoenix", Id = 4, OwnerGroupId = 2, Ownercolor = "#fec200", Capacity = 15, Type = "Conference", Availability = 12 },
-        new ResourceData{ Text = "Rick Roll", Id = 5, OwnerGroupId = 1, Ownercolor = "#865fcf", Capacity = 20, Type = "Conference", Availability = 7 },
-        new ResourceData{ Text = "Rainbow", Id = 6, OwnerGroupId = 2, Ownercolor = "#1aaa55", Capacity = 8, Type = "Cabin", Availability = 3 }
-
-    };
-    List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
-        OwnerId = 1, RoomId = 1 }
-    };
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public int OwnerId { get; set; }
-        public int RoomId { get; set; }
-        public ResourceData ResourceData { get; set; }
-    }
-    public class ResourceData
-    {
-        public int Id { get;set; }
-        public string Text { get; set; }
-        public int OwnerGroupId { get;set; }
-        public string RoomColor { get; set; }
-        public string Ownercolor { get; set; }
-        public int Capacity { get; set; }
-        public string Type { get; set; }
-        public int Availability { get; set; }
-    }
-}
 ```
 
 The output of the above code example in desktop mode will be as in the following image.
@@ -896,29 +910,33 @@ It is possible to display tooltip over the resource headers showing the resource
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources">
         <HeaderTooltipTemplate>
-            <div class='template-wrap'>
-                <div class="resource-image"><img src="https://ej2.syncfusion.com/demos/src/schedule/images/@(((context as  AppointmentData).ResourceData as ResourceData).Image).png" /></div>
-                <div class="resource-details">
-                    <div class="resource-name">@(((context as  AppointmentData).ResourceData as ResourceData).Text)</div>
+            @{
+                var resourceData = (context as TemplateContext).ResourceData as ResourceData;
+                <div class='template-wrap'>
+                    <div class="resource-image"><img src="https://ej2.syncfusion.com/demos/src/schedule/images/@(resourceData.Image).png" /></div>
+                    <div class="resource-details">
+                        <div class="resource-name">@(resourceData.Text)</div>
+                    </div>
                 </div>
-            </div>
+            }
         </HeaderTooltipTemplate>
     </ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource DataSource="@ConferenceData" Field="ConferenceId" Title="Attendees" Name="Conferences" TextField="Text" IdField="Id" ColorField="Color" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TValue="int[]" TItem="ResourceData" DataSource="@ConferenceData" Field="ConferenceId" Title="Attendees" Name="Conferences" TextField="Text" IdField="Id" ColorField="Color" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string[] Resources { get; set; } = { "Conferences" };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
-        ConferenceId = new int[] { 1, 2, 3 } }
+        ConferenceId = 1 }
     };
     public List<ResourceData> ConferenceData { get; set; } = new List<ResourceData>
     {
@@ -938,8 +956,7 @@ It is possible to display tooltip over the resource headers showing the resource
         public string RecurrenceRule { get; set; }
         public string RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
-        public int[] ConferenceId { get; set; }
-        public ResourceData ResourceData { get; set; }
+        public int ConferenceId { get; set; }
     }
     public class ResourceData
     {
@@ -964,19 +981,21 @@ In the following example, the colors mentioned in the second level will get appl
 <SfRadioButton Label="Hotels" Name="Select" Value="Hotels" @bind-Checked="@ResourceColor"></SfRadioButton>
 <SfRadioButton Label="Rooms" Name="Select" Value="Rooms" @bind-Checked="@ResourceColor"></SfRadioButton>
 <SfRadioButton Label="Owners" Name="Select" Value="Owners" @bind-Checked="@ResourceColor"></SfRadioButton>
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@HotelData" Field="HotelId" Title="Hotel" Name="Hotels" TextField="HotelText" IdField="Id" ColorField="HotelColor" AllowMultiple="false"></ScheduleResource>
-        <ScheduleResource TValue="ResourceData" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id"
-        ColorField="RoomColor" GroupIDField="RoomGroupId" AllowMultiple="false"></ScheduleResource>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id"
-        GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@HotelData" Field="HotelId" Title="Hotel" Name="Hotels" TextField="HotelText" IdField="Id" ColorField="HotelColor" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id"
+                          ColorField="RoomColor" GroupIDField="RoomGroupId" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id"
+                          GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
-    <ScheduleEventSettings DataSource="@DataSource" ResourceColorField= "@ResourceColor"></ScheduleEventSettings>
+    <ScheduleEventSettings DataSource="@DataSource" ResourceColorField="@ResourceColor"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string ResourceColor { get; set; } = "Rooms";
     public string[] Resources { get; set; } = { "Hotels", "Rooms", "Owners" };
     public List<ResourceData> HotelData { get; set; } = new List<ResourceData>
@@ -998,7 +1017,7 @@ In the following example, the colors mentioned in the second level will get appl
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
-         OwnerId = 1, RoomId = 1, HotelId = 1 }
+        OwnerId = 1, RoomId = 1, HotelId = 1 }
     };
     public class AppointmentData
     {
@@ -1044,15 +1063,17 @@ Different working days can be set for the resources of Scheduler using the `Work
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))" CurrentView="View.WorkWeek">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate" @bind-CurrentView="@CurrentView">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@DoctorsData" Field="DoctorId" Title="Doctor Name" Name="Doctors" TextField="Text"
-         IdField="Id" ColorField="Color" WorkDaysField="WorkDays"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@DoctorsData" Field="DoctorId" Title="Doctor Name" Name="Doctors" TextField="Text"
+                          IdField="Id" ColorField="Color" WorkDaysField="WorkDays"></ScheduleResource>
     </ScheduleResources>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    View CurrentView = View.WorkWeek;
     public string[] Resources { get; set; } = { "Doctors" };
     public List<ResourceData> DoctorsData { get; set; } = new List<ResourceData>
     {
@@ -1098,15 +1119,16 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@DoctorsData" Field="DoctorId" Title="Doctor Name" Name="Doctors" TextField="Text" IdField="Id"
-        ColorField="Color" WorkDaysField="WorkDays" StartHourField="StartHour" EndHourField="EndHour"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@DoctorsData" Field="DoctorId" Title="Doctor Name" Name="Doctors" TextField="Text" IdField="Id"
+                          ColorField="Color" WorkDaysField="WorkDays" StartHourField="StartHour" EndHourField="EndHour"></ScheduleResource>
     </ScheduleResources>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public string[] Resources { get; set; } = { "Doctors" };
     public List<ResourceData> DoctorsData { get; set; } = new List<ResourceData>
     {

@@ -80,9 +80,9 @@ To change the default labels such as Title, Location and other field names in th
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource">
-        <ScheduleField Id="TravelId">
+        <ScheduleField>
             <FieldSubject Title="Travel Summary"></FieldSubject>
             <FieldLocation Title="Source"></FieldLocation>
             <FieldDescription Title="Comments"></FieldDescription>
@@ -96,6 +96,7 @@ To change the default labels such as Title, Location and other field names in th
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
@@ -120,12 +121,12 @@ The following screenshot represents the editor window with custom label.
 
 ### Field validation
 
-It is possible to validate the required fields of the editor window from client-side before submitting it, by adding appropriate validation rules to each field. The appointment fields have been extended to accept both `string` and `object` type values.
+It is possible to validate the required fields of the editor window before submitting it, by adding appropriate validation rules to each field. In the following code example, validation are applied to Subject, Location and Description fields.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 6))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource">
         <ScheduleField>
             <FieldSubject Name="Subject" Validation="@ValidationRules"></FieldSubject>
@@ -138,13 +139,14 @@ It is possible to validate the required fields of the editor window from client-
 </SfSchedule>
 
 @code{
-    Dictionary<string, object> ValidationRules = new Dictionary<string, object>() { { "required", true } };
-    Dictionary<string, object> LocationValidationRules = new Dictionary<string, object>() { { "required", true }, { "regex", new string[] { "^[a-zA-Z0-9- ]*$", "Special character(s) not allowed in this field" } } };
-    Dictionary<string, object> DescriptionValidationRules = new Dictionary<string, object>() { { "required", true }, { "minLength", 5 }, { "maxLength", 500 } };
+    DateTime CurrentDate = new DateTime(2020, 1, 6);
+    static Dictionary<string, object> ValidationMessages = new Dictionary<string, object>() { { "regex", "Special character(s) not allowed in this field" } };
+    ValidationRules ValidationRules = new ValidationRules { Required = true };
+    ValidationRules LocationValidationRules = new ValidationRules { Required = true, RegexPattern = "^[a-zA-Z0-9- ]*$", Messages = ValidationMessages };
+    ValidationRules DescriptionValidationRules = new ValidationRules { Required = true, MinLength = 5, MaxLength = 500 };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 6, 9, 30, 0) , EndTime = new DateTime(2020, 1, 6, 11, 0, 0),
-        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5", RecurrenceException = "20200107T043000Z,20200109T043000Z" }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 6, 9, 30, 0) , EndTime = new DateTime(2020, 1, 6, 11, 0, 0) }
     };
 
     public class AppointmentData
@@ -165,8 +167,6 @@ The following image shows the validation error message while saving the appointm
 
 ![Editor window with validation](images/validation.png)
 
-> Applicable validation rules can be referred from [form validation](http://ej2.syncfusion.com/documentation/form-validator/#validation-rules) documentation.
-
 ### Customizing the default time duration in editor window
 
 In default event editor window, start and end time duration are processed based on the `Interval` value set within the `ScheduleTimeScale` property. By default, `Interval` value is set to 30, and therefore the start/end time duration within the event editor will be in a 30 minutes time difference. You can change this duration value by changing the `Duration` option within the `OnPopupOpen` event as shown in the following code example.
@@ -174,13 +174,14 @@ In default event editor window, start and end time duration are processed based 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnPopupOpen="@OnPopupOpen"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource">
     </ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public void OnPopupOpen(PopupOpenEventArgs<AppointmentData> args)
     {
         if (args.Type == PopupType.Editor)
@@ -213,13 +214,14 @@ It is possible to prevent the display of editor and quick popup windows by passi
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnPopupOpen="@OnPopupOpen"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource">
     </ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    private DateTime CurrentDate = new DateTime(2020, 1, 31);
     public void OnPopupOpen(PopupOpenEventArgs<AppointmentData> args)
     {
         if (args.Type == PopupType.Editor || args.Type == PopupType.QuickInfo)
@@ -261,7 +263,7 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 
 ## Customizing event editor using template
 
-The event editor window can be customized by making use of the `EditorTemplate` option. Each field defined within template should contain the **e-field** class, so as to allow the processing of those field values internally.
+The event editor window can be customized by making use of the `EditorTemplate` option. Each field defined within template must use two way binding for the `Value` property of the components used within the template to perform CRUD actions.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -269,7 +271,7 @@ The event editor window can be customized by making use of the `EditorTemplate` 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleTemplates>
         <EditorTemplate>
             <table class="custom-event-editor" width="100%" cellpadding="5">
@@ -277,13 +279,13 @@ The event editor window can be customized by making use of the `EditorTemplate` 
                     <tr>
                         <td class="e-textlabel">Summary</td>
                         <td colspan="4">
-                            <SfTextBox ID="Subject" CssClass="e-field e-input" Value="@((context as AppointmentData).Subject)"></SfTextBox>
+                            <SfTextBox @bind-Value="@((context as AppointmentData).Subject)"></SfTextBox>
                         </td>
                     </tr>
                     <tr>
                         <td class="e-textlabel">Status</td>
                         <td colspan="4">
-                            <SfDropDownList ID="EventType" DataSource="@StatusData" placeholder="Choose status" CssClass="e-field" Value="@((context as AppointmentData).EventType)" HtmlAttributes="@EventType">
+                            <SfDropDownList ID="EventType" DataSource="@StatusData" Placeholder="Choose status" @bind-Value="@((context as AppointmentData).EventType)">
                                 <DropDownListFieldSettings Value="Id"></DropDownListFieldSettings>
                             </SfDropDownList>
                         </td>
@@ -291,19 +293,19 @@ The event editor window can be customized by making use of the `EditorTemplate` 
                     <tr>
                         <td class="e-textlabel">From</td>
                         <td colspan="4">
-                            <SfDateTimePicker ID="StartTime" HtmlAttributes="@StartName" CssClass="e-field" Value="@((context as AppointmentData).StartTime.ToUniversalTime())"></SfDateTimePicker>
+                            <SfDateTimePicker @bind-Value="@((context as AppointmentData).StartTime)"></SfDateTimePicker>
                         </td>
                     </tr>
                     <tr>
                         <td class="e-textlabel">To</td>
                         <td colspan="4">
-                            <SfDateTimePicker ID="EndTime" HtmlAttributes="@EndName" CssClass="e-field" Value="@((context as AppointmentData).EndTime.ToUniversalTime())"></SfDateTimePicker>
+                            <SfDateTimePicker @bind-Value="@((context as AppointmentData).EndTime)"></SfDateTimePicker>
                         </td>
                     </tr>
                     <tr>
                         <td class="e-textlabel">Reason</td>
                         <td colspan="4">
-                            <textarea id="Description" class="e-field e-input" name="Description" rows="3" cols="50" value="@((context as AppointmentData).Description)" style="width: 100%; height: 60px !important; resize: vertical"></textarea>
+                            <SfTextBox Multiline="true" @bind-Value="@((context as AppointmentData).Description)"></SfTextBox>
                         </td>
                     </tr>
                 </tbody>
@@ -314,6 +316,7 @@ The event editor window can be customized by making use of the `EditorTemplate` 
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public class DDFields
     {
         public string Id { get; set; }
@@ -323,17 +326,6 @@ The event editor window can be customized by making use of the `EditorTemplate` 
         new DDFields(){ Id= "New", Text= "New" },
         new DDFields(){ Id= "Requested", Text= "Requested" },
         new DDFields(){ Id= "Confirmed", Text= "Confirmed" },
-    };
-    Dictionary<string, object> StartName = new Dictionary<string, object>()
-    {
-        {"data-name","StartTime"},
-    };
-    Dictionary<string, object> EndName = new Dictionary<string, object>() {
-        {"data-name","EndTime"},
-    };
-    Dictionary<string, object> EventType = new Dictionary<string, object>()
-    {
-        {"data-name","EventType"},
     };
 
     List<AppointmentData> DataSource = new List<AppointmentData>
@@ -472,12 +464,13 @@ By default, these popups are displayed over cells and appointments of Scheduler 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))" ShowQuickInfo="false">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate" ShowQuickInfo="false">
     <ScheduleEventSettings DataSource="@DataSource">
     </ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
@@ -1209,11 +1202,12 @@ By default, the `QuickInfoOnSelectionEnd` property is set to `false` to prevent 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" QuickInfoOnSelectionEnd="true" SelectedDate="@(new DateTime(2020, 2, 11))">
+<SfSchedule TValue="AppointmentData" Height="550px" QuickInfoOnSelectionEnd="true" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 2, 11);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 11, 10, 0, 0) , EndTime = new DateTime(2020, 2, 11, 12, 0, 0) },
@@ -1242,11 +1236,12 @@ By default, the Scheduler allows the user to select multiple days. We can preven
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" AllowMultiRowSelection="false" SelectedDate="@(new DateTime(2020, 2, 11))">
+<SfSchedule TValue="AppointmentData" Height="550px" AllowMultiRowSelection="false" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 2, 11);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 11, 10, 0, 0) , EndTime = new DateTime(2020, 2, 11, 12, 0, 0) },
@@ -1281,16 +1276,17 @@ The following code example shows how to disable the display of such popups while
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 9))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnPopupOpen="OnPopupOpen"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource">
     </ScheduleEventSettings>
     <ScheduleViews>
-    <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="2"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 9);
     public void OnPopupOpen(PopupOpenEventArgs<AppointmentData> args)
     {
         if (args.Type == PopupType.EventContainer)

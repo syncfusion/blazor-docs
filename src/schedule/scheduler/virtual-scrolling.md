@@ -11,10 +11,10 @@ To achieve better performance in the Scheduler when loading a large number of re
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="EventData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 4, 1))">
+<SfSchedule TValue="EventData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup EnableCompactView="false" Resources="@GroupData"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@ResourceDatasource" Field="ResourceId" Title="Resource" Name="Resources" TextField="Text" IdField="Id" ColorField="Color" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@ResourceDatasource" Field="ResourceId" Title="Resource" Name="Resources" TextField="Text" IdField="Id" ColorField="Color" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@AppointmentData"></ScheduleEventSettings>
     <ScheduleViews>
@@ -23,6 +23,7 @@ To achieve better performance in the Scheduler when loading a large number of re
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 4, 1);
     static EventData data = new EventData();
     public static List<ResourceData> ResourceDatasource = GenerateResourceData();
     public static List<EventData> AppointmentData = GenerateStaticEvents();
@@ -46,6 +47,7 @@ To achieve better performance in the Scheduler when loading a large number of re
         }
         return resources;
     }
+
     public static List<EventData> GenerateStaticEvents()
     {
         DateTime date = new DateTime(2020, 4, 1);
@@ -105,10 +107,10 @@ To achieve better performance in the Scheduler when loading a large number of re
 
 In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` property is enabled. In the following code, templates were applied to resources and appointments.
 
+```csharp
 @using Syncfusion.Blazor.Schedule
 
-```csharp
-<SfSchedule TValue="EventData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 4, 1))">
+<SfSchedule TValue="EventData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleTemplates>
         <ResourceHeaderTemplate>
             <div class='template-wrap'>
@@ -136,6 +138,7 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 4, 1);
     static EventData data = new EventData();
     public static List<ResourceData> ResourceDatasource = GenerateResourceData();
     public static List<EventData> AppointmentData = GenerateStaticEvents();

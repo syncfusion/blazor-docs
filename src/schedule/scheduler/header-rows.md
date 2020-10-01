@@ -30,7 +30,7 @@ The following example shows the Scheduler displaying all the available header ro
         <ScheduleHeaderRow Option="HeaderRowType.Hour"></ScheduleHeaderRow>
     </ScheduleHeaderRows>
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -64,10 +64,9 @@ To display the timeline Scheduler simply with year and month names alone, define
         <ScheduleHeaderRow Option="HeaderRowType.Month"></ScheduleHeaderRow>
     </ScheduleHeaderRows>
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineMonth" Interval="24"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" MaxEventsPerRow="10" Interval="24"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public class AppointmentData
     {
@@ -99,11 +98,10 @@ The week number can be displayed in a separate header row of the timeline Schedu
         <ScheduleHeaderRow Option="HeaderRowType.Hour"></ScheduleHeaderRow>
     </ScheduleHeaderRows>
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
-        <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public class AppointmentData
     {
@@ -134,10 +132,9 @@ It is possible to display a complete year in a timeline view by setting `Interva
         <ScheduleHeaderRow Option="HeaderRowType.Date"></ScheduleHeaderRow>
     </ScheduleHeaderRows>
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineMonth" Interval="12"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" MaxEventsPerRow="10" Interval="12"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public class AppointmentData
     {

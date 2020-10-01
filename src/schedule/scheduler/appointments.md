@@ -19,16 +19,17 @@ Represents an appointment that is created for any specific time interval within 
 
 ### Creating a normal event
 
-The following example depicts how to define a normal event on the Scheduler, with event data being loaded from simple list of array objects.
+The following example depicts how to define a normal event on the Scheduler, with event data being loaded from simple list of appointment collection.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
@@ -76,11 +77,12 @@ The following example depicts how to create a recurring event on Scheduler with 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 9))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 9);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 6, 9, 30, 0) , EndTime = new DateTime(2020, 1, 6, 11, 0, 0),
@@ -92,6 +94,7 @@ The following example depicts how to create a recurring event on Scheduler with 
         public string Subject { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
         public string RecurrenceRule { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
         public string RecurrenceException { get; set; }
@@ -103,20 +106,21 @@ The following example depicts how to create a recurring event on Scheduler with 
 
 A few instance of the recurrence series can be excluded on specific dates, by adding those exceptional dates to the `RecurrenceException` field. These date values should be given in the ISO date time format with no hyphens(-) separating the date elements.
 
-For example, 22nd February 2020 can be represented as 20200222. Also, the time part being represented in UTC format needs to add "Z" after the time portion with no space. "07:30:00 UTC" is therefore represented as "073000Z".
+For example, 7th January 2020 can be represented as 20200107. Also, the time part being represented in UTC format needs to add "Z" after the time portion with no space. "09:30 AM" is therefore represented as "040000Z".
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 6))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 6);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 6, 9, 30, 0) , EndTime = new DateTime(2020, 1, 6, 11, 0, 0),
-        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5", RecurrenceException = "20200107T043000Z,20200109T043000Z" }
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5", RecurrenceException = "20200107T040000Z,20200109T040000Z" }
     };
     public class AppointmentData
     {
@@ -124,6 +128,7 @@ For example, 22nd February 2020 can be represented as 20200222. Also, the time p
         public string Subject { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
         public string RecurrenceRule { get; set; }
         public string RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
@@ -135,20 +140,21 @@ For example, 22nd February 2020 can be represented as 20200222. Also, the time p
 
 To dynamically edit a particular occurrence from an event series and display it on the initial load of Scheduler, the edited occurrence needs to be added as a new event to the dataSource collection, with an additional `RecurrenceID` field defined to it. The `RecurrenceID` field of edited occurrence usually maps the ID value of the parent event.
 
-In this example, a recurring instance that displays on the date 30th Jan 2020 is edited with different timings. Therefore, this particular date is excluded from the parent recurring event that repeats from 28th January 2020 to 4th February 2020. This can be done by adding the `RecurrenceException` field with the excluded date value on the parent event. Also, the edited occurrence event which is created as a new event should carry the `RecurrenceID` field pointing to the parent event's `Id` value.
+In this example, a recurring instance that displays on the date 30th January 2020 is edited with different timings. Therefore, this particular date is excluded from the parent recurring event that repeats from 28th January 2020 to 1st February 2020. This can be done by adding the `RecurrenceException` field with the excluded date value on the parent event. Also, the edited occurrence event which is created as a new event should carry the `RecurrenceID` field pointing to the parent event's `Id` value.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Scrum Meeting", StartTime = new DateTime(2020, 1, 28, 9, 30, 0) , EndTime = new DateTime(2020, 1, 28, 11, 0, 0),
-        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5", RecurrenceException = "20200130T043000Z" },
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5", RecurrenceException = "20200130T040000Z" },
         new AppointmentData { Id = 2, Subject = "Scrum Meeting Rescheduled", StartTime = new DateTime(2020, 1, 30, 10, 30, 0) , EndTime = new DateTime(2020, 1, 30, 12, 0, 0), RecurrenceID = 1 }
     };
     public class AppointmentData
@@ -157,6 +163,7 @@ In this example, a recurring instance that displays on the date 30th Jan 2020 is
         public string Subject { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
         public string RecurrenceRule { get; set; }
         public string RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
@@ -166,16 +173,17 @@ In this example, a recurring instance that displays on the date 30th Jan 2020 is
 
 ### Edit/Delete following recurrence events
 
-The Scheduler allows the user to edit the following recurrence events by setting true value to `EditFollowingEvents` within the `ScheduleEventSettings` tag. Once we have edited/ deleted the recurrence events as following events, then the following recurrence events will be considered as separate series, the changes will not reflect to parent series. In the following code example, if we edit or delete any of the recurrence event with following events option, then the edit or delete action is applied to further recurrence events.
+The Scheduler allows the user to edit the following recurrence events by setting true value to `AllowEditFollowingEvents` within the `ScheduleEventSettings` tag. Once we have edited/ deleted the recurrence events as following events, then the following recurrence events will be considered as separate series, the changes will not reflect to parent series. In the following code example, if we edit or delete any of the recurrence event with following events option, then the edit or delete action is applied to further recurrence events.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
-    <ScheduleEventSettings DataSource="@DataSource" EditFollowingEvents="true"></ScheduleEventSettings>
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource" AllowEditFollowingEvents="true"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 30, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
@@ -289,7 +297,7 @@ The built-in validation support has been added by default for recurring appointm
 
 ## Event fields
 
-The Scheduler dataSource usually holds the event instances, where each of the instance includes a collection of appropriate [fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html). It is mandatory to map these fields with the equivalent fields of database, when remote data is bound to it. When the local JSON data is bound, then the field names defined within the instances needs to be mapped with the scheduler event fields correctly.
+The Scheduler dataSource usually holds the event instances, where each of the instance includes a collection of appropriate [fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html). It is mandatory to map these fields with the equivalent fields of database, when remote data is bound to it. When the local data is bound, then the field names defined within the instances needs to be mapped with the scheduler event fields correctly.
 
 > To create an event on Scheduler, it is enough to define the `StartTime` and `EndTime` fields. In case, if remote data is bound to Scheduler, then `Id` field becomes mandatory to process the CRUD actions on appropriate events.
 
@@ -313,6 +321,7 @@ The built-in fields available on Scheduler event object are as follows.
 | RecurrenceException | It maps the `RecurrenceException` field from dataSource and is used to hold the collection of exception dates, on which the recurring occurrences needs to be excluded. |
 | IsReadonly | It maps the `IsReadonly` field from dataSource. It is mainly used to make specific appointments as readonly when set to `true`. |
 | IsBlock | It maps the `IsBlock` field from dataSource. It is used to block the particular time ranges in the Scheduler and prevents the event creation on those time slots. |
+| CssClass | It maps the `CssClass` field from the dataSource. It is used to customize the particular events. |
 
 ### Binding different field names
 
@@ -321,7 +330,7 @@ When the fields of event instances has the default mapping name, it is not manda
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 10))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource">
         <ScheduleField Id="TravelId">
             <FieldSubject Name="TravelSummary"></FieldSubject>
@@ -337,6 +346,7 @@ When the fields of event instances has the default mapping name, it is not manda
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { TravelId = 1, TravelSummary = "Paris", DepartureTime = new DateTime(2020, 1, 10, 10, 0, 0) , ArrivalTime = new DateTime(2020, 1, 10, 12, 30, 0),
@@ -357,7 +367,7 @@ When the fields of event instances has the default mapping name, it is not manda
 }
 ```
 
-> The mapper field `Id` is of string type and has no additional validation options, whereas all other fields are of `Object` type and has additional options.
+> The mapper field `Id` is of string type and has no additional validation options, whereas all other fields has additional options.
 
 ### Event field settings
 
@@ -375,8 +385,8 @@ In following example, the Subject field in event editor will display its appropr
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
-    <ScheduleEventSettings DataSource="@DataSource">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings TValue="AppointmentData" DataSource="@DataSource">
         <ScheduleField Id="Id">
             <FieldSubject Name="Subject" Title="Summary" Default="Add Summary"></FieldSubject>
             <FieldLocation Name="Location"></FieldLocation>
@@ -386,8 +396,8 @@ In following example, the Subject field in event editor will display its appropr
         </ScheduleField>
     </ScheduleEventSettings>
 </SfSchedule>
-
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
@@ -415,12 +425,13 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource">
     </ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
@@ -457,11 +468,12 @@ By default, you can drag and drop the events within any of the applicable schedu
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" AllowDragAndDrop="false" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" AllowDragAndDrop="false" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0)}
@@ -489,12 +501,13 @@ It is possible to prevent the drag action on particular target, by passing the t
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnAppointmentDrag"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public void OnAppointmentDrag(DragEventArgs<AppointmentData> args)
     {
         args.ExcludeSelectors = "e-header-cells,e-all-day-cells";
@@ -526,12 +539,13 @@ By default, while dragging an appointment to the edges, either top/bottom in the
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnAppointmentDrag"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public void OnAppointmentDrag(DragEventArgs<AppointmentData> args)
     {
         args.Scroll.Enable = false;
@@ -563,12 +577,13 @@ The speed of the scrolling action while dragging an appointment to the Scheduler
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnAppointmentDrag"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public void OnAppointmentDrag(DragEventArgs<AppointmentData> args)
     {
         args.Scroll.ScrollBy = 5;
@@ -603,12 +618,13 @@ By default, the navigation delay is set to 2000ms. The navigation delay decides 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnAppointmentDrag"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public void OnAppointmentDrag(DragEventArgs<AppointmentData> args)
     {
         args.Navigation.Enable = true;
@@ -641,12 +657,13 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnAppointmentDrag"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public void OnAppointmentDrag(DragEventArgs<AppointmentData> args)
     {
         args.Interval = 10;
@@ -681,12 +698,15 @@ In this example, we have used the tree view control as an external source and th
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Navigations
 
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Navigations
+
 <div class="row">
     <div class="col-lg-8 e-droppable">
-        <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="650px" SelectedDate="@(new DateTime(2020, 1, 31))">
+        <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
             <ScheduleGroup Resources="@GroupData"></ScheduleGroup>
             <ScheduleResources>
-                <ScheduleResource TValue="ResourceData" DataSource="@Consultants" Field="ConsultantID" Title="Consultant" Name="Consultants" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
+                <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@Consultants" Field="ConsultantID" Title="Consultant" Name="Consultants" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
             </ScheduleResources>
             <ScheduleEventSettings DataSource="@DataSource">
             </ScheduleEventSettings>
@@ -695,14 +715,14 @@ In this example, we have used the tree view control as an external source and th
     <div class="col-lg-4">
         <h3>Waiting list</h3>
         <SfTreeView TValue="EmployeeData" AllowDragAndDrop="true">
-            <TreeViewFieldsSettings DataSource="@WaitingListData" Text="Name"></TreeViewFieldsSettings>
-            <TreeViewEvents TValue="EmployeeData" OnNodeDragged="DragStop"></TreeViewEvents>
+            <TreeViewFieldsSettings DataSource="@WaitingListData" Id="Id" Text="Name"></TreeViewFieldsSettings>
+            <TreeViewEvents TValue="EmployeeData" OnNodeDragStop="DragStop"></TreeViewEvents>
         </SfTreeView>
     </div>
 </div>
 
 @code{
-    // Reference for Schedule
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     SfSchedule<AppointmentData> ScheduleRef;
     public string[] GroupData = new string[] { "Consultants" };
     public List<ResourceData> Consultants { get; set; } = new List<ResourceData> {
@@ -718,31 +738,28 @@ In this example, we have used the tree view control as an external source and th
         new EmployeeData { Id = 3,  Name = "Sanjay" }
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
-    {
+{
         new AppointmentData{ Id = 1, Subject = "General-Check up", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), ConsultantID=1 }
     };
 
-    // Triggers when node drop is happened successfully
     async void DragStop(DragAndDropEventArgs args)
     {
         args.Cancel = true;
-        object isScheduleSlot = await args.Target.GetAttribute("role");
-        if (isScheduleSlot != null && isScheduleSlot.ToString() == "gridcell")
+        CellClickEventArgs cellData = await ScheduleRef.GetTargetCell((int)args.Left, (int)args.Top);
+        if (cellData != null)
         {
-            CellClickEventArgs cellData = await ScheduleRef.GetCellDetails(args.Target);
-            var resourceDetails = await ScheduleRef.GetResourcesByIndex(cellData.GroupIndex);
+            var resourceDetails = ScheduleRef.GetResourceByIndex(cellData.GroupIndex);
             Random rnd = new Random();
-            int Id = rnd.Next(1000);
             AppointmentData eventData = new AppointmentData
             {
-                Id = Id,
+                Id = rnd.Next(1000),
                 Subject = args.DraggedNodeData.Text,
                 StartTime = cellData.StartTime,
                 EndTime = cellData.EndTime,
                 IsAllDay = cellData.IsAllDay,
-                ConsultantID = resourceDetails.ResourceData.Id
+                ConsultantID = resourceDetails.GroupData.ConsultantID,
             };
-            await ScheduleRef.OpenEditor(eventData, CurrentAction.Add, true);
+            await ScheduleRef.OpenEditor(eventData, CurrentAction.Add);
         }
     }
 
@@ -781,7 +798,7 @@ You can drag and drop the events to external source by setting the target to the
 
 <div class="row">
     <div class="col-lg-6">
-        <SfSchedule @ref="Schedule1Ref" Height="550px" TValue="AppointmentData" EventDragArea=".ScheduleClass" SelectedDate="@(new DateTime(2020, 1, 6))">
+        <SfSchedule @ref="Schedule1Ref" Height="550px" TValue="AppointmentData" EventDragArea=".ScheduleClass" @bind-SelectedDate="@CurrentDate">
             <ScheduleEvents TValue="AppointmentData" Dragged="OnDragged"></ScheduleEvents>
             <ScheduleEventSettings DataSource="@ScheduleData"></ScheduleEventSettings>
         </SfSchedule>
@@ -794,6 +811,7 @@ You can drag and drop the events to external source by setting the target to the
 
 
 @code {
+    DateTime CurrentDate = new DateTime(2020, 1, 6);
     SfSchedule<AppointmentData> Schedule1Ref;
     SfSchedule<AppointmentData> Schedule2Ref;
     List<AppointmentData> ScheduleData = new List<AppointmentData>
@@ -833,17 +851,18 @@ There are scenarios where you want to open the editor filled with data on newly 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Dragged="OnAppointmentDragStop"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     SfSchedule<AppointmentData> ScheduleRef;
     public void OnAppointmentDragStop(DragEventArgs<AppointmentData> args)
     {
         args.Cancel = true;
-        this.ScheduleRef.OpenEditor(args.Data, CurrentAction.Save, true);
+        this.ScheduleRef.OpenEditor(args.Data, CurrentAction.Save);
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -876,11 +895,12 @@ By default, resizing of events is allowed on all Scheduler views except Agenda a
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" AllowResizing="false" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" AllowResizing="false" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0)}
@@ -908,12 +928,13 @@ By default, while resizing an appointment, when its handler reaches the extreme 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnResizeStart="OnAppointmentResize"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public void OnAppointmentResize(ResizeEventArgs<AppointmentData> args)
     {
         args.Scroll.Enable = false;
@@ -945,12 +966,13 @@ The speed of the scrolling action while resizing an appointment to the Scheduler
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnResizeStart="OnAppointmentResize"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public void OnAppointmentResize(ResizeEventArgs<AppointmentData> args)
     {
         args.Scroll.ScrollBy = 15;
@@ -977,17 +999,18 @@ The speed of the scrolling action while resizing an appointment to the Scheduler
 
 ### Setting resize time interval
 
-By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to `interval` option within the `resizeStart` event.
+By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to `Interval` option within the `OnResizeStart` event.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnResizeStart="OnAppointmentResize"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public void OnAppointmentResize(ResizeEventArgs<AppointmentData> args)
     {
         args.Interval = 10;
@@ -1017,8 +1040,8 @@ By default, while resizing an appointment, it extends or shrinks at an interval 
 The look and feel of the Scheduler events can be customized using any one of the following ways.
 
 * [Using event template](#using-template)
-* [Using eventRendered event](#using-eventrendered-event)
-* [Using custom CSS class](#using-cssclass)
+* [Using EventRendered event](#using-eventrendered-event)
+* [Using CssClass property](#using-cssclass)
 
 ### Using template
 
@@ -1027,17 +1050,18 @@ Any kind of text, images and links can be added to customize the look of the eve
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="650px" SelectedDate= "@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource">
         <Template>
             <div>Subject: @((context as AppointmentData).Subject)</div>
-            <div>StartTime: @((context as AppointmentData).StartTime.ToUniversalTime())</div>
-            <div>EndTime:  @((context as AppointmentData).EndTime.ToUniversalTime())</div>
+            <div>StartTime: @((context as AppointmentData).StartTime)</div>
+            <div>EndTime:  @((context as AppointmentData).EndTime)</div>
         </Template>
     </ScheduleEventSettings>
 </SfSchedule>
 @code {
-     List<AppointmentData> DataSource = new List<AppointmentData>
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
     };
@@ -1060,31 +1084,32 @@ Any kind of text, images and links can be added to customize the look of the eve
 
 > All the built-in fields that are mapped to the appropriate field properties within the `ScheduleEventsettings`, as well as custom mapped fields from the Scheduler dataSource can be accessed within the template code.
 
-### Using eventRendered event
+### Using EventRendered event
 
-The `EventRendered` event triggers before the appointment renders on the Scheduler. Therefore, this client-side event can be utilized to customize the look of events based on any specific criteria, before rendering them on the scheduler. Also, you can customize the appointment color by adding `CategoryColor` field to the `AppointmentData` and assign the required color code to that filed. In the below example, the background of appointments has been changed by customizing the `style` attribute of the appointment data.
+The `EventRendered` event triggers before the appointment renders on the Scheduler. Therefore, this  event can be utilized to customize the look of events based on any specific criteria, before rendering them on the scheduler. In the following code example, the custom class has been added to events using `CssClasses` to apply color to the events.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="650px" SelectedDate="@(new DateTime(2020, 1, 9))">
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" EventRendered="OnEventRendered"></ScheduleEvents>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+    </ScheduleViews>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
-
-@code{
-    public async Task OnEventRendered(EventRenderedArgs<AppointmentData> args)
+@code {
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    public List<string> CustomClass = new List<string>()  { "custom-class" } ;
+    public void OnEventRendered(EventRenderedArgs<AppointmentData> args)
     {
-        string style = (await args.Element.GetAttribute("style")).ToString();  // Get style attribute of the element
-        style += "background:" + args.Data.CategoryColor;               // concatenate the background color
-        args.Element.SetAttribute("style", style);                      // Reset the values of style attribute
+        args.CssClasses = CustomClass;
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", StartTime = new DateTime(2020, 1, 5, 9, 30, 0) , EndTime = new DateTime(2020, 1, 5, 11, 0, 0), CategoryColor= "#df5286" },
-        new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", StartTime = new DateTime(2020, 1, 6, 12, 0, 0) , EndTime = new DateTime(2020, 1, 6, 14, 0, 0), CategoryColor= "#7fa900" },
-        new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", StartTime = new DateTime(2020, 1, 7, 9, 30, 0) , EndTime = new DateTime(2020, 1, 7, 11, 0, 0), CategoryColor= "#1aaa55" },
-        new AppointmentData { Id = 4, Subject = "Meteor Showers in 2018", StartTime = new DateTime(2020, 1, 8, 13, 0, 0) , EndTime = new DateTime(2020, 1, 8, 14, 30, 0), CategoryColor= "#ea7a57", RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
     };
 
     public class AppointmentData
@@ -1099,31 +1124,82 @@ The `EventRendered` event triggers before the appointment renders on the Schedul
         public string RecurrenceRule { get; set; }
         public string RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
-        public string CategoryColor { get; set; }
     }
 }
+<style>
+    .e-schedule .e-vertical-view .e-all-day-appointment-wrapper .e-appointment.custom-class,
+    .e-schedule .e-vertical-view .e-day-wrapper .e-appointment.custom-class,
+    .e-schedule .e-month-view .e-appointment.custom-class {
+        background: #32CD32;
+    }
+</style>
 ```
 
-### Using cssClass
+### Using CssClass
 
-The customization of events can also be achieved using `CssClass` property of the Scheduler. In the following example, the background of appointments has been changed using the cssClass.
+The customization of events can also be achieved using the built-in field `CssClass` in which you can pass the class name to be applied to specific appointments. In the following example, the background of appointments has been changed.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" CssClass="custom-class" SelectedDate="@(new DateTime(2020, 1, 31))">
+@using Syncfusion.Blazor.Schedule
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+    </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+@code {
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), CssClass = "progress" },
+        new AppointmentData{ Id = 2, Subject = "Meeting-postponed", StartTime = new DateTime(2020, 1, 28, 9, 30, 0) , EndTime = new DateTime(2020, 1, 28, 11, 0, 0), CssClass = "delayed" }
+    };
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public string CssClass { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+<style>
+    .e-schedule .e-vertical-view .e-all-day-appointment-wrapper .e-appointment.progress,
+    .e-schedule .e-vertical-view .e-day-wrapper .e-appointment.progress,
+    .e-schedule .e-month-view .e-appointment.progress {
+        background: #32CD32;
+    }
+
+    .e-schedule .e-vertical-view .e-all-day-appointment-wrapper .e-appointment.delayed,
+    .e-schedule .e-vertical-view .e-day-wrapper .e-appointment.delayed,
+    .e-schedule .e-month-view .e-appointment.delayed {
+        background: #CD5C5C;
+    }
+</style>
+```
+
+Also, the customization of events can be achieved using `CssClass` property of the Scheduler. In the following example, the background of appointments has been changed using the CssClass.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" CssClass="custom-class" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
-<style>
-    .custom-class.e-schedule .e-vertical-view .e-all-day-appointment-wrapper .e-appointment,
-    .custom-class.e-schedule .e-vertical-view .e-day-wrapper .e-appointment,
-    .custom-class.e-schedule .e-month-view .e-appointment {
-        background: green;
-    }
-</style>
-
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
@@ -1143,6 +1219,14 @@ The customization of events can also be achieved using `CssClass` property of th
         public Nullable<int> RecurrenceID { get; set; }
     }
 }
+
+<style>
+    .custom-class.e-schedule .e-vertical-view .e-all-day-appointment-wrapper .e-appointment,
+    .custom-class.e-schedule .e-vertical-view .e-day-wrapper .e-appointment,
+    .custom-class.e-schedule .e-month-view .e-appointment {
+        background: #32CD32;
+    }
+</style>
 ```
 
 ## Block Date and Time
@@ -1152,11 +1236,12 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
@@ -1184,11 +1269,12 @@ Block events can also be defined to repeat on several days as shown in the follo
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
@@ -1218,11 +1304,12 @@ An interaction with the appointments of Scheduler can be enabled/disabled using 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" Readonly="true" SelectedDate="@(new DateTime(2020, 1, 31))">
+SfSchedule TValue="AppointmentData" Height="550px" Readonly="true" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
@@ -1250,11 +1337,12 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
-    <ScheduleEventSettings DataSource="DataSource"></ScheduleEventSettings>
+SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="DataSource"> </ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 1, 28, 10, 0, 0) , EndTime = new DateTime(2020, 1, 28, 12, 0, 0),
@@ -1299,20 +1387,15 @@ In the following code example, the appointments beyond current date of the sched
     <ScheduleEvents TValue="AppointmentData" EventRendered="OnEventRendered"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
-<style>
-    .e-schedule .e-vertical-view .e-day-wrapper .e-appointment.e-past-app, .e-schedule .e-month-view .e-appointment.e-past-app{
-        background-color:chocolate;
-    }
-</style>
 
 @code{
     public DateTime SelectedDate = new DateTime(2020,1,10);
-    public string[] CustomClass { get; set; } = { "e-past-app" };
+    public List<string> CustomClass = new List<string>() { "e-past-app" };
     public void OnEventRendered(EventRenderedArgs<AppointmentData> args)
     {
         if(args.Data.StartTime < SelectedDate)
         {
-            args.Element.AddClass(CustomClass);
+            args.CssClasses = CustomClass;
         }
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
@@ -1328,6 +1411,11 @@ In the following code example, the appointments beyond current date of the sched
         public DateTime EndTime { get; set; }
     }
 }
+<style>
+    .e-schedule .e-vertical-view .e-day-wrapper .e-appointment.e-past-app, .e-schedule .e-month-view .e-appointment.e-past-app{
+        background-color: chocolate;
+    }
+</style>
 ```
 
 ## Appointments occupying entire cell
@@ -1384,11 +1472,12 @@ The tooltip can be displayed for appointments by setting `true` to the `EnableTo
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 10))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource" EnableTooltip="true"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 1, 8, 10, 0, 0) , EndTime = new DateTime(2020, 1, 8, 12, 0, 0),
@@ -1419,19 +1508,20 @@ After enabling the default tooltip, it is possible to customize the display of n
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 13))">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource" EnableTooltip="true">
         <TooltipTemplate>
             <div class="tooltip-wrap">
                 <div>@((context as AppointmentData).Subject)</div>
-                <div>From&nbsp;:&nbsp;@((context as AppointmentData).StartTime.ToLocalTime())</div>
-                <div>To&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;@((context as AppointmentData).EndTime.ToLocalTime()) </div>
+                <div>From&nbsp;:&nbsp;@((context as AppointmentData).StartTime)</div>
+                <div>To&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;@((context as AppointmentData).EndTime) </div>
             </div>
         </TooltipTemplate>
     </ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 13);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 1, 14, 10, 0, 0) , EndTime = new DateTime(2020, 1, 14, 12, 0, 0) },
@@ -1470,43 +1560,7 @@ With the options available to select multiple appointments, it is also possible 
 
 ## Retrieve event details from the UI of an event
 
-It is possible to access the information about the event fields of an appointment element displayed on the Scheduler UI. This can be achieved by passing an appointment element as argument to the public method `GetEventDetails`.
-
-In the following example, the subject of the appointment clicked has been stored in eventData variable.
-
-```csharp
-@using Syncfusion.Blazor.Schedule
-
-<SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020,1,10))">
-    <ScheduleEvents TValue="AppointmentData" OnEventClick="EventClick"></ScheduleEvents>
-    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
-</SfSchedule>
-
-@code{
-    SfSchedule<AppointmentData> ScheduleRef;
-    public async void EventClick(EventClickArgs<AppointmentData> args)
-    {
-        AppointmentData eventData = await ScheduleRef.GetEventDetails(args.Element);
-        //In the eventData we can get the currently clicked Appointments
-    }
-    List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 10, 9, 30, 0) , EndTime = new DateTime(2020, 1, 10, 11, 30, 0) },
-        new AppointmentData { Id = 1, Subject = "Conference", StartTime = new DateTime(2020, 1, 9, 11, 30, 0) , EndTime = new DateTime(2020, 1, 9, 13, 0, 0) }
-    };
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-    }
-}
-```
-
-**Output:**
-
-![Event details](images/event-details.png)
+It is possible to access the information about the event fields of an appointment based on the X and Y co-ordinates. This can be achieved by passing an X and Y co-ordinates to the public method `GetTargetEvent`. You can also get the selected appointment details using `GetSelectedEvents` method.
 
 ## Get the current view appointments
 
@@ -1515,16 +1569,17 @@ To retrieve the appointments present in the current view of the Scheduler, you c
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 1, 10))">
+<SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" DataBound="OnDataBound"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 10);
     SfSchedule<AppointmentData> ScheduleRef;
-    public async void OnDataBound(DataBoundEventArgs<AppointmentData> args)
+    public void OnDataBound(DataBoundEventArgs<AppointmentData> args)
     {
-        List<AppointmentData> EventCollection = await ScheduleRef.GetCurrentViewEvents();
+        List<AppointmentData> eventCollection = ScheduleRef.GetCurrentViewEvents();
         //You can get the current view appointment collections in the EventCollection variable
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
@@ -1536,8 +1591,14 @@ To retrieve the appointments present in the current view of the Scheduler, you c
     {
         public int Id { get; set; }
         public string Subject { get; set; }
+        public string Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 ```
@@ -1570,11 +1631,19 @@ The entire collection of appointments rendered on the Scheduler can be accessed 
     {
         public int Id { get; set; }
         public string Subject { get; set; }
+        public string Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 ```
+
+> You can also get the specific range of appointments by passing the start and end time in the `GetEvents` method. To get the block events, you can make use of the method `GetBlockEvents`.
 
 ## Refresh appointments
 

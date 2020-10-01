@@ -59,7 +59,7 @@ namespace BlazorApplication
     {
         ....
         ....
-        public void ConfigureServices(IServiceCollection services)
+            public void ConfigureServices(IServiceCollection services)
         {
             ....
             ....
@@ -87,7 +87,22 @@ The Scheduler component can be rendered on the page by defining the `SfSchedule`
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue=object></SfSchedule>
+<SfSchedule TValue=AppointmentData></SfSchedule>
+@code {
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
 ```
 
 The output of the above code will display the empty scheduler as shown in the following image.
@@ -115,8 +130,14 @@ The output of the above code will display the empty scheduler as shown in the fo
     {
         public int Id { get; set; }
         public string Subject { get; set; }
+        public string Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 ```
@@ -127,28 +148,34 @@ The scheduler with the appointments will be rendered as shown in the following i
 
 ## Setting date
 
-The Scheduler usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the `SelectedDate` property.
+The Scheduler usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the two-way binding for `SelectedDate` property.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="650px" SelectedDate="@(new DateTime(2020, 1, 10))">
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
 </SfSchedule>
-
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 10);
     public class AppointmentData
     {
         public int Id { get; set; }
         public string Subject { get; set; }
+        public string Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 ```
 
 ## Setting view
 
-The Scheduler displays `Week` view by default. To change the current view, define the applicable view name to the `CurrentView` property. The applicable view names are,
+The Scheduler displays `Week` view by default. To change the current view, define the applicable view name to the two-way binding of `CurrentView` property. The applicable view names are,
 
 * Day
 * Week
@@ -166,16 +193,22 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="650px" CurrentView="View.Month">
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-CurrentView="@CurrentView">
 </SfSchedule>
-
 @code{
+    View CurrentView = View.Month;
     public class AppointmentData
     {
         public int Id { get; set; }
         public string Subject { get; set; }
+        public string Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 ```
@@ -187,21 +220,27 @@ Each individual Scheduler views can be customized with its own options such as s
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="650px" SelectedDate="@(new DateTime(2020, 2, 13))">
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Week" StartHour="07:00" EndHour="15:00"></ScheduleView>
         <ScheduleView Option="View.WorkWeek" StartHour="10:00" EndHour="18:00"></ScheduleView>
-        <ScheduleView Option="View.Month" ShowWeekend="false"></ScheduleView>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="2" ShowWeekend="false"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
+    DateTime CurrentDate = new DateTime(2020, 2, 13);
     public class AppointmentData
     {
         public int Id { get; set; }
         public string Subject { get; set; }
+        public string Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 ```

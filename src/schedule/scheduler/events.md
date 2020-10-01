@@ -15,32 +15,35 @@ The events should be provided to the Scheduler using **ScheduleEvents** tag. Whe
 
 `ActionCompleted` event triggers on successful completion of the Scheduler actions.
 
-The request type that can be checked within the `ActionCompleted` event are as follows.
+The action type that can be checked within the `ActionCompleted` event are as follows.
 
-| RequestType | Description |
+| ActionType | Description |
 |------|-------------|
-| `eventCreate` | Triggers on creating new event.|
-| `eventChange` | Triggers on updating an event.|
-| `eventRemove` | Triggers on deleting an event.|
-| `dateNavigate` | Triggers while performing date navigations.|
-| `viewNavigate` | Triggers while performing view navigations.|
+| `EventCreate` | Triggers once event is created.|
+| `EventChange` | Triggers once event is updated.|
+| `EventRemove` | Triggers once event is deleted.|
+| `DateNavigate` | Triggers once date navigation is performed.|
+| `ViewNavigate` | Triggers once view navigation is performed.|
+| `ResourceExpand` | Triggers once resource is expanded in timeline views.|
+| `ResourceCollapse` | Triggers once resource is collapsed in timeline views.|
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<p style="color:green; font-size:20px">@ActionCompleted</p>
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<p style="color:green; font-size:20px">@Status</p>
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" ActionCompleted="OnActionCompleted"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
-    string ActionCompleted = "";
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    string Status = "";
     public void OnActionCompleted(ActionEventArgs<AppointmentData> args)
     {
-        if (args.RequestType == "eventCreated" || args.RequestType == "eventChanged")   //To check for request type is add event or edit event
+        if (args.ActionType == ActionType.EventCreate || args.ActionType == ActionType.EventChange)
         {
-            ActionCompleted = "Success";   //ActionCompleted become success while on create and update an event
+            Status = "Success";   //Status become success on create and update of an event.
         }
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
@@ -70,13 +73,14 @@ The request type that can be checked within the `ActionCompleted` event are as f
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Created="OnCreated"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
-    public void OnCreated(object args)
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    public void OnCreated()
     {
         //Here you can customize your code
     }
@@ -107,16 +111,16 @@ The request type that can be checked within the `ActionCompleted` event are as f
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" DataBinding="DataBindHandler"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void DataBindHandler(DataBindingEventArgs<AppointmentData> args)
     {
-        //Here you can customize your code
-        //Triggers before the data binds to the Scheduler, while performing CRUD actions, View and Date navigations
+        //Triggers before the data binds to the scheduler, while performing CRUD actions, View and Date navigations
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -145,16 +149,17 @@ The request type that can be checked within the `ActionCompleted` event are as f
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" DataBound="OnDataBound"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     SfSchedule<AppointmentData> ScheduleRef;
-    public async void OnDataBound(DataBoundEventArgs<AppointmentData> args)
+    public async Task OnDataBound(DataBoundEventArgs<AppointmentData> args)
     {
-        List<AppointmentData> EventCollection = await ScheduleRef.GetEvents();   //You can get the entire appointment collections in the EventCollection variable
+        List<AppointmentData> eventCollection = await ScheduleRef.GetEvents();   //You can get the entire appointment collections in the EventCollection variable
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -183,13 +188,14 @@ The request type that can be checked within the `ActionCompleted` event are as f
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Destroyed="OnDestroyed"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
-    public void OnDestroyed(object args)
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    public void OnDestroyed()
     {
         //Here you can customize your code
     }
@@ -220,16 +226,17 @@ The request type that can be checked within the `ActionCompleted` event are as f
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" @ref="@ScheduleObj" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Dragged="OnDragged"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
-    SfSchedule<AppointmentData> ScheduleRef;
-    public void OnDragged(DragEventArgs<AppointmentData> args)
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    SfSchedule<AppointmentData> ScheduleObj;
+    public async Task OnDragged(DragEventArgs<AppointmentData> args)
     {
-        ScheduleRef.OpenEditor(args.Data, CurrentAction.Save, true);   //To open the editor window at drag stop
+        await ScheduleObj.OpenEditor(args.Data, CurrentAction.Save);   //To open the editor window at drag stop
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -258,7 +265,7 @@ The request type that can be checked within the `ActionCompleted` event are as f
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" EventRendered="OnEventRendered"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
@@ -272,10 +279,11 @@ The request type that can be checked within the `ActionCompleted` event are as f
 </style>
 
 @code{
+    private DateTime CurrentDate = new DateTime(2020, 3, 10);
     public string[] CustomClass = { "custom-class" };
     public void OnEventRendered(EventRenderedArgs<AppointmentData> args)
     {
-        args.Element.AddClass(CustomClass);   //The custom-class will change the default color of appointment to green color while on event rendered
+        args.CssClasses = new List<string>(CustomClass);
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -304,12 +312,14 @@ The request type that can be checked within the `ActionCompleted` event are as f
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))" CurrentView="View.Month">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate" @bind-CurrentView="@CurrentView">
     <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsClick"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    View CurrentView = View.Month;
     public void OnMoreEventsClick(MoreEventsClickArgs args)
     {
         args.Cancel = true;   //To prevent showing the appointments in more indiactor
@@ -343,15 +353,18 @@ The request type that can be checked within the `ActionCompleted` event are as f
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Navigating="OnNavigating"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void OnNavigating(NavigatingEventArgs args)
     {
-        args.Cancel = true;   //To prevent date and view navigations
+        if (args.Action == "date") {
+            args.Cancel = true;   //To prevent date navigation
+        }
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -379,26 +392,29 @@ The request type that can be checked within the `ActionCompleted` event are as f
 
 The request type that can be checked within the `OnActionBegin` event are as follows.
 
-| RequestType | Description |
+| ActionType | Description |
 |------|-------------|
-| `eventCreate` | Triggers on Creating new event.|
-| `eventChange` | Triggers on updating an event.|
-| `eventRemove` | Triggers on Deleting an event.|
-| `dateNavigate` | Triggers while performing date navigations.|
-| `viewNavigate` | Triggers while performing view navigations.|
+| `EventCreate` | Triggers on Creating new event.|
+| `EventChange` | Triggers on updating an event.|
+| `EventRemove` | Triggers on Deleting an event.|
+| `DateNavigate` | Triggers while performing date navigations.|
+| `ViewNavigate` | Triggers while performing view navigations.|
+| `ResourceExpand` | Triggers while expanding resource on timeline views.|
+| `ViewNavigate` | Triggers while collapsing resource on timeline views.|
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnActionBegin="OnActionBegin"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void OnActionBegin(ActionEventArgs<AppointmentData> args)
     {
-        if (args.RequestType == "eventRemove")   //To check for request type is event delete
+        if (args.ActionType == ActionType.EventRemove)   //To check for request type is event delete
         {
             args.Cancel = true;   //To prevent the appointment deletion
         }
@@ -430,15 +446,16 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnActionFailure="OnActionFailure"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void OnActionFailure(ActionEventArgs<AppointmentData> args)
     {
-        //Here you can customize your code
+        //args.Error catches the failure details.
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -467,17 +484,18 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnCellClick="OnCellClick"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     SfSchedule<AppointmentData> ScheduleRef;
-    public async void OnCellClick(CellClickEventArgs args)
+    public async Task OnCellClick(CellClickEventArgs args)
     {
-        var CellData = await ScheduleRef.GetCellDetails(args.Element);   //To get the current cell details
-        await ScheduleRef.OpenEditor(CellData, CurrentAction.Add);   //To open editor window on cell click
+        args.cancel = true;
+        await ScheduleRef.OpenEditor(args, CurrentAction.Add);   //To open editor window on cell click
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -506,15 +524,16 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnCellDoubleClick="OnCellDoubleClick"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void OnCellDoubleClick(CellClickEventArgs args)
     {
-        args.Cancel = true;   //To prevent the opening of editor window
+        args.Cancel = true;   //To prevent the opening of editor window on cells alone.
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -543,16 +562,16 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnDragStart"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void OnDragStart(DragEventArgs<AppointmentData> args)
     {
         args.Scroll.Enable = false;   //To prevent scroll action on dragging
-        args.Navigation.Enable = true;   //To allow events to navigate between dates while on dragging
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -581,17 +600,18 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnEventClick="OnEventClick"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     SfSchedule<AppointmentData> ScheduleRef;
-    public async void OnEventClick(EventClickArgs<AppointmentData> args)
+    public async Task OnEventClick(EventClickArgs<AppointmentData> args)
     {
-        AppointmentData EventData = await ScheduleRef.GetEventDetails(args.Element);   //In EventData we can get the details of currently clicked Appointments
-        await ScheduleRef.OpenEditor(EventData, CurrentAction.Save);   //To open the editor on event click
+        args.cancel = true;
+        await ScheduleRef.OpenEditor(args.Event, CurrentAction.Save);   //To open the editor on event click
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -634,12 +654,13 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnPopupClose="OnPopupClose"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void OnPopupClose(PopupCloseEventArgs<AppointmentData> args)
     {
         if (args.Type == PopupType.Editor || args.Type == PopupType.QuickInfo)
@@ -688,16 +709,16 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnPopupOpen="OnPopupOpen"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void OnPopupOpen(PopupOpenEventArgs<AppointmentData> args)
     {
-        //In case end time is lesser than the start time popup will be opened for validation alert
-        if (args.Type == PopupType.ValidationAlert)   //To check for PopupType is ValidationAlert  
+        if (args.Type == PopupType.ValidationAlert)
         {
             args.Cancel = true;   //To prevent start and end time validation alert
         }
@@ -744,7 +765,7 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnRenderCell="OnRenderCell"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
@@ -755,13 +776,13 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 </style>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public string[] CustomClass = { "custom-class" };
     public void OnRenderCell(RenderCellEventArgs args)
     {
-        //workhours is highlighted with ivory color
-        if (args.ElementType == ElementType.WorkCells)   //To check for ElementType is WorkCells
+        if (args.ElementType == ElementType.WorkCells)
         {
-            args.Element.AddClass(CustomClass);   //The default work hours color is changed to ivory color
+            args.CssClasses = new List<string>(CustomClass); //The default work hours color is changed to ivory color
         }
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
@@ -791,15 +812,16 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnResizeStart="OnResizeStart"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void OnResizeStart(ResizeEventArgs<AppointmentData> args)
     {
-        args.Scroll.Enable = false;   //To prevent scrolling when resize the event
+        args.Scroll.Enable = false;   //To prevent scrolling will resize the event
         args.Interval = 10;   //To change the resizing time imterval from 30 minutes(default) to 10 minutes
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
@@ -829,12 +851,13 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Resized="OnResized"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     public void OnResized(ResizeEventArgs<AppointmentData> args)
     {
         args.Cancel = true;   //To prevent resize action

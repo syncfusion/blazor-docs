@@ -75,11 +75,11 @@ The template option is available to allow customization of time slots which are 
 @code{
     public static string majorSlotTemplate(DateTime date)
     {
-        return date.ToLocalTime().ToString("hh", CultureInfo.InvariantCulture);
+        return date.ToString("hh", CultureInfo.InvariantCulture);
     }
     public static string minorSlotTemplate(DateTime date)
     {
-        return date.ToLocalTime().ToString("mm", CultureInfo.InvariantCulture);
+        return date.ToString("mm", CultureInfo.InvariantCulture);
     }
     public class AppointmentData
     {
@@ -108,7 +108,7 @@ The grid lines which indicates the exact time duration can be enabled or disable
     <ScheduleTimeScale Enable="false"></ScheduleTimeScale>
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -139,7 +139,7 @@ By default, Scheduler indicates current date with a highlighted date header on a
 <SfSchedule TValue="AppointmentData" Height="650px" ShowTimeIndicator="false">
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 

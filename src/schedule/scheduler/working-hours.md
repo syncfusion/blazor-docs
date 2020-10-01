@@ -28,12 +28,12 @@ The following example code depicts how to set the Scheduler to display Monday, W
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="650px" WorkDays="@WorkingDays">
+<SfSchedule TValue="AppointmentData" Height="650px" ShowWeekend="false" WorkDays="@WorkingDays">
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
         <ScheduleView Option="View.WorkWeek"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
-        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="2"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -68,8 +68,8 @@ Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore th
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
         <ScheduleView Option="View.WorkWeek"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
-        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="2"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -104,10 +104,9 @@ It is possible to show the week number count of a week in the header bar of the 
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
         <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="2"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public class AppointmentData
     {
@@ -140,10 +139,9 @@ Working hours indicates the work hour limit within the Scheduler, which is visua
     <ScheduleWorkHours Highlight="true" Start="11:00" End="20:00"></ScheduleWorkHours>
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public class AppointmentData
     {
@@ -173,10 +171,9 @@ The following code example displays the Scheduler starting from the time range 7
 <SfSchedule TValue="AppointmentData" Height="650px" StartHour="07:00" EndHour="18:00">
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public class AppointmentData
     {
@@ -206,11 +203,10 @@ By default, Scheduler defaults to `Sunday` as its first day of a week. To change
 <SfSchedule TValue="AppointmentData" Height="650px" FirstDayOfWeek=3>
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.Month"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="2"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public class AppointmentData
     {
@@ -238,11 +234,12 @@ You can manually scroll to a specific time on Scheduler by making use of the `Sc
 
 <div>
     <span>Scroll To</span>
-    <SfTimePicker TValue="DateTime" Width="100px" Format="HH:mm" Value="TimeValue">
-        <TimePickerEvents TValue="DateTime" ValueChange="OnValueChange"></TimePickerEvents>
+    <SfTimePicker TValue="DateTime?" Width="100px" Format="HH:mm" @bind-Value="TimeValue">
+        <TimePickerEvents TValue="DateTime?" ValueChange="OnValueChange"></TimePickerEvents>
     </SfTimePicker>
+
 </div>
-<SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
         <ScheduleView Option="View.Week"></ScheduleView>
@@ -252,11 +249,12 @@ You can manually scroll to a specific time on Scheduler by making use of the `Sc
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     SfSchedule<AppointmentData> ScheduleRef;
-    public DateTime? TimeValue = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 0, 0);
-    public async void OnValueChange(Syncfusion.Blazor.Calendars.ChangeEventArgs<DateTime> args)
+    public DateTime TimeValue = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 0, 0);
+    public void OnValueChange(Syncfusion.Blazor.Calendars.ChangeEventArgs<DateTime?> args)
     {
-        await ScheduleRef.ScrollTo(args.Text);
+        ScheduleRef.ScrollTo(args.Text);
     }
 
     List<AppointmentData> DataSource = new List<AppointmentData>

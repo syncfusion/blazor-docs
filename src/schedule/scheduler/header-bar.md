@@ -15,10 +15,11 @@ By default, the header bar holds the date and view navigation options, through w
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" ShowHeaderBar="false" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
+<SfSchedule TValue="AppointmentData" ShowHeaderBar="false" Height="550px" @bind-SelectedDate="@CurrentDate">
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -43,7 +44,7 @@ The Scheduler UI that displays the date text on all views are considered as the 
 @using Syncfusion.Blazor.Schedule
 @using System.Globalization
 
-<SfSchedule TValue="AppointmentData" Width="100%" CssClass="schedule-date-header-template" Height="650px" SelectedDate="@(new DateTime(2020, 1, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" CssClass="schedule-date-header-template" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleTemplates>
         <DateHeaderTemplate>
             <div class="date-text">@(getDateHeaderText((context as TemplateContext).Date))</div>
@@ -83,6 +84,7 @@ The Scheduler UI that displays the date text on all views are considered as the 
 </SfSchedule>
 
 @code {
+    DateTime CurrentDate = new DateTime(2020, 1, 10);
     public static string getDateHeaderText(DateTime date)
     {
         return date.ToString("dd ddd", CultureInfo.InvariantCulture);

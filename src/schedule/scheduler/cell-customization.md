@@ -64,8 +64,8 @@ The height and width of the Scheduler cells can be customized either to increase
 
 <SfSchedule TValue="AppointmentData" CssClass="schedule-cell-dimension" Height="550px">
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
-        <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -104,7 +104,7 @@ The `CellTemplate` is used to customize the cell background with specific images
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 1, 15))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleTemplates>
         <CellTemplate>
             <div class="templatewrap">
@@ -146,18 +146,20 @@ The `CellTemplate` is used to customize the cell background with specific images
         </CellTemplate>
     </ScheduleTemplates>
     <ScheduleViews>
-        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="2"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 <style>
     .e-schedule .e-month-view .e-work-cells {
         position: relative;
     }
+
     .e-schedule .templatewrap {
         text-align: center;
         position: absolute;
         width: 100%;
     }
+
     .e-schedule .caption {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -166,6 +168,7 @@ The `CellTemplate` is used to customize the cell background with specific images
 </style>
 
 @code {
+    DateTime CurrentDate = new DateTime(2020, 1, 15);
     public class AppointmentData
     {
         public int Id { get; set; }

@@ -36,14 +36,14 @@ In the following example, the Scheduler displays 2 views namely, Week and Timeli
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" CurrentView="View.Week">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-CurrentView="@CurrentView">
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.TimelineDay"></ScheduleView>
+        <ScheduleView Option="View.TimelineDay" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
+    View CurrentView = View.Week;
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -65,14 +65,14 @@ To configure Scheduler with different configurations on each view, refer the fol
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" CurrentView="View.Week">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-CurrentView="@CurrentView">
     <ScheduleViews>
         <ScheduleView Option="View.Week" DateFormat="dd-MMM-yyyy"></ScheduleView>
-        <ScheduleView Option="View.Month" Readonly="true" ShowWeekend="false"></ScheduleView>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="2" Readonly="true" ShowWeekend="false"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
+    View CurrentView = View.Week;
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -220,17 +220,16 @@ A Month view displays the entire days of a particular month and all its related 
 
 By default, when you try to create an appointment through Month view, it is considered as created for an entire day. You can explicitly change this behavior by unchecking the `All-day` option from editor window, so that it defaults to the start time duration as 9.00 AM and end time as 9.30 AM.
 
-You can also have the `+ more` text indicator on each day cell of a Month view, clicking on which will allows you to view the hidden appointments of a day. The following code example depicts how to change the working days only on the `Month` view of the Scheduler.
+By default, in month view, you can view single appointment on each day cell. If you have more than one appointment in a day, the `+ more` text indicator will be available on that cell, clicking on which will allows you to view the hidden appointments of a day. You can decide how many appointments can render on a day based on your Scheduler and Month cell height using `MaxEventsPerRow` property within `ScheduleView` whereas its default value is 1. The following code example depicts how to change the working days only on the `Month` view of the Scheduler.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px">
     <ScheduleViews>
-        <ScheduleView Option="View.Month" WorkDays="@WorkingDays"></ScheduleView>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="2" WorkDays="@WorkingDays"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public int[] WorkingDays { get; set; } = { 1, 3, 5 };
     public class AppointmentData
@@ -263,7 +262,6 @@ The following code example depicts how to display events of four days in Agenda 
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public class AppointmentData
     {
@@ -316,20 +314,19 @@ The following code example shows how to hide the weekend days on `MonthAgenda` v
 
 ### Timeline views – Day, Week, Work Week
 
-Similar to the vertical day, week and work week views, the respective view shows all its appointments where the time slots are displayed horizontally. By default, the cell height adjusts as per the height set to Scheduler. When the number of appointments exceeds the visible area of the cells, the `+ more` text indicator will be displayed at the bottom to denote the presence of few more appointments in that time range.
+Similar to the vertical day, week and work week views, the respective view shows all its appointments where the time slots are displayed horizontally. By default, the cell height adjusts as per the height set to Scheduler and you can view single appointment on each cell. If you have more than one appointment, the `+ more` text indicator will be available on the bottom of that cell, clicking on which will allows you to view the hidden appointments of a day. You can decide how many appointments can render on a cell based on your Scheduler and work cell height using `MaxEventsPerRow` property within `ScheduleView` whereas its default value is `1`.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px">
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineDay" StartHour="08:00" EndHour="12:00" ShowWeekend="false"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek" IsSelected="true"></ScheduleView>
-        <ScheduleView Option="View.TimelineWorkWeek" StartHour="13:00" EndHour="20:00" WorkDays="@WorkingDays"></ScheduleView>
+        <ScheduleView Option="View.TimelineDay" StartHour="08:00" EndHour="12:00" ShowWeekend="false" MaxEventsPerRow="10"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek" IsSelected="true" MaxEventsPerRow="10"></ScheduleView>
+        <ScheduleView Option="View.TimelineWorkWeek" StartHour="13:00" EndHour="20:00" WorkDays="@WorkingDays" MaxEventsPerRow="10"></ScheduleView>
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public int[] WorkingDays { get; set; } = { 1, 3, 6 };
     public class AppointmentData
@@ -359,11 +356,10 @@ A Timeline Month view displays the current month days along with its appointment
 
 <SfSchedule TValue="AppointmentData" Height="550px">
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineDay" StartHour="08:00" EndHour="12:00" ></ScheduleView>
-        <ScheduleView Option="View.TimelineMonth" IsSelected="true" ShowWeekend="false"></ScheduleView>
+        <ScheduleView Option="View.TimelineDay" StartHour="08:00" EndHour="12:00" MaxEventsPerRow="10"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" IsSelected="true" ShowWeekend="false" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 @code{
     public class AppointmentData
     {
@@ -390,21 +386,21 @@ A Timeline Year view displays the complete year along with its appointments.
 By default the timeline year view orientation is set to Horizontal view. In this following code example, the timeline year view is set with vertical orientation.
 
 >The Scheduler has the following limitations with Timeline Year View
->1. User couldn’t configure the templates “resource template, cell template and month header template”.
->2. Drag and Drop over the appointments.
->3. Resizing the Scheduler events.
+>1. Drag and Drop over the appointments.
+>2. Resizing the Scheduler events.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineYear" Orientation="Orientation.Vertical" DisplayName="Vertical Year"></ScheduleView>
+        <ScheduleView Option="View.TimelineYear" Orientation="Orientation.Vertical" DisplayName="Horizontal Year"></ScheduleView>
     </ScheduleViews>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 4, 0, 0, 0) , EndTime = new DateTime(2020, 3, 5, 0, 0, 0) },
@@ -434,7 +430,7 @@ The Year view shows a year calendar, where clicking on a particular day will dis
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 10))">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Year"></ScheduleView>
     </ScheduleViews>
@@ -442,6 +438,7 @@ The Year view shows a year calendar, where clicking on a particular day will dis
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 4, 0, 0, 0) , EndTime = new DateTime(2020, 3, 5, 0, 0, 0) },

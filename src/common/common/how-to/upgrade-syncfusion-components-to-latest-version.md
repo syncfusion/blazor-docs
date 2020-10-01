@@ -4,7 +4,7 @@ To upgrade Syncfusion Blazor Components to the latest version, you need to ensur
 
 ## Compatible .NET version
 
-Syncfusion Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of .NET Core 3.1. So, we suggest you to upgrade the .NET Core 3.1 SDK in your machine before upgrading to the latest version. Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Syncfusion Blazor components and .NET Core SDK.
+Syncfusion Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of .NET Core 5.0 RC1 and .NET Core 3.1. Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Syncfusion Blazor components and .NET Core SDK.
 
 ## Client resource file references
 

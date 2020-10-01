@@ -6,14 +6,14 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 > **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
+> **New:** Syncfusion Blazor components are [compatible with .NET 5.0 RC](blazor-net5-rc) and it requires Visual Studio 2019 16.8 Preview 3 or later.
+
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-> **Note:** .NET Core SDK 3.1.8 requires Visual Studio 2019 16.7 or later.
-
-> **New:** Syncfusion Blazor components are [compatible with .NET 5.0 RC](blazor-rc.md) and it requires Visual Studio 16.8 Preview 3 or later.
+> **Note:** **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later and **.NET 5.0 RC1** requires Visual Studio 2019 16.8 Preview 3 or later.
 
 ## Create a Blazor Server project in Visual Studio 2019
 

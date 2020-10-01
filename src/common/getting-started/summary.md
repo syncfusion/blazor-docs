@@ -1,3 +1,4 @@
+* [Blazor App with .NET 5.0 RC1](getting-started/blazor-net5-rc.md)
 * [Server App in Visual Studio 2019](getting-started/server-side-blazor.md)
 * [WebAssembly App in Visual Studio 2019](getting-started/blazor-webassembly.md)
 * [Server App in .NET Core CLI](getting-started/server-side-blazor-dotnet-cli.md)

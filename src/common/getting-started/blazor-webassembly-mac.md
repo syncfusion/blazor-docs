@@ -6,14 +6,14 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 > **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
+> **New:** Syncfusion Blazor components are [compatible with .NET 5.0 RC](blazor-net5-rc) and it requires Visual Studio 2019 for Mac 8.7.6 or later.
+
 ## Prerequisites
 
 * [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 RC](https://dotnet.microsoft.com/download/dotnet/5.0)
 
-> **Note:** .NET Core SDK 3.1.8 requires Visual Studio for Mac 8.7.6 or later.
-
-> **New:** Syncfusion Blazor components are [compatible with .NET 5.0 RC](blazor-rc.md) and it requires Visual Studio for Mac 8.7.6 or later.
+> **Note:** **.NET Core SDK 3.1.8** requires Visual Studio for Mac 8.7.6 or later and **.NET 5.0 RC1** requires Visual Studio 2019 for Mac 8.7.6 or later.
 
 ## Create a Blazor WebAssembly project in Visual Studio for Mac
 

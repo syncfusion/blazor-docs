@@ -6,7 +6,6 @@ var shelljs = require('shelljs');
 var components;
 var compPaths = glob.sync(`./src/**/`, { silent: true, ignore: [`./src/base/`, `./src/`, './src/common/', './src/getting-started/'] });
 
-var branch = 'hotfix/18.2.0.44_Vol2';
 var user = process.env.GIT_USER;
 var token = process.env.GIT_TOKEN;
 var user_mail = process.env.GIT_MAIL;
@@ -45,7 +44,7 @@ gulp.task('ship-to-gitlap', function (done) {
     for (var j = 0; j < cloneRepos.length; j++) {
         var gitPath = 'https://' + user + ':' + token + `@gitlab.syncfusion.com/essential-studio/ej2-${cloneRepos[j]}-razor-docs`;
         console.log('Clone has been started...!');
-        var clone = shelljs.exec('git clone ' + gitPath + ' -b ' + branch + ' ' + `./gitlapRepo/ej2-${cloneRepos[j]}-razor-docs`, {
+        var clone = shelljs.exec('git clone ' + gitPath + ' -b master' + ' ' + `./gitlapRepo/ej2-${cloneRepos[j]}-razor-docs`, {
             silent: false
         });
         if (clone.code !== 0) {

@@ -40,23 +40,20 @@ Card image is supported to include a `Title` property for the image. By default,
 
 Divider used to separate the elements inside the card. You can add divider inside the card elements to separate it.
 
-* Place the  `EnableSeperator` component  inside the card element for adding a divider.
+* Set `EnableSeperator` property to `true` in card content for adding a divider.
 
 ```csharp>
                 <SfCard>
                     <CardHeader Title="Explore Cities"></CardHeader>
-                    <EnableSeperator/>
-                    <CardContent>
+                    <CardContent EnableSeperator="true">
                         Sydney is a city on the east coast of Australia. Sydney is the capital city of New South
                         Wales. About four million people live in Sydney which makes it the biggest cityin Oceania.
                     </CardContent>
-                    <EnableSeperator/>
-                    <CardContent>
+                    <CardContent EnableSeperator="true">
                         New York City has been described as the cultural, financial, and media capital of the
                         world, and exerts a significant impact upon commerce and etc.
                     </CardContent>
-                    <EnableSeperator/>
-                    <CardContent>
+                    <CardContent EnableSeperator="true">
                       Malaysia is one of the Southeast Asian countries, on a peninsula of the Asian continent,
                       to a certain extent; it can be recognized  as part of the Asian continent.
                     </CardContent>

@@ -6,11 +6,11 @@ You can customize the points by initializing the point colors. This customizatio
 
 The customization options allows to differentiate the following cases.
 
-* [`StartPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_StartPointColor)
-* [`EndPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_EndPointColor)
-* [`NegativePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_NegativePointColor)
-* [`LowPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_LowPointColor)
-* [`HighPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_HighPointColor)
+* [`StartPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~StartPointColor.html)
+* [`EndPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~EndPointColor.html)
+* [`NegativePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~NegativePointColor.html)
+* [`LowPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~LowPointColor.html)
+* [`HighPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~HighPointColor.html)
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -57,7 +57,7 @@ The customization options allows to differentiate the following cases.
 
 ## Tie point color
 
-Tie point color is used to configure the win-loss series type Sparkline Chart's y-value point color. The following code sample demonstrates the [`TiePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_TiePointColor) of Sparkline Charts series.
+Tie point color is used to configure the win-loss series type Sparkline Chart's y-value point color. The following code sample demonstrates the [`TiePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~TiePointColor.html) of Sparkline Charts series.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

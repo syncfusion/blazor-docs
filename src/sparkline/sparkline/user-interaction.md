@@ -84,7 +84,7 @@ The following code example shows customizing tooltip format, text color and fill
 
 The track line tracks the data points that are closer to the mouse position or touch contact.
 
-To enable track lines for Sparkline Charts, set the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html#Syncfusion_Blazor_Charts_SparklineTrackLineSettings_ChildContent) option of  [`SparklineTrackLineSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html) to true. Based on theme, the tracker color will be changed. The default value of the tracker color is black.
+To enable track lines for Sparkline Charts, set the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineTrackLineSettings~ChildContent.html) option of  [`SparklineTrackLineSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineTrackLineSettings.html) to true. Based on theme, the tracker color will be changed. The default value of the tracker color is black.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

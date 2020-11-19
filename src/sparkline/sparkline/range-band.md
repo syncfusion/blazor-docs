@@ -4,7 +4,7 @@ This section explains how to customize the Sparkline Charts with multiple range 
 
 ## Range band customization
 
-The range band feature is used to highlight a particular range along with the y-axis using the [`StartRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_StartRange) and [`EndRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_EndRange) properties. You can also customize the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_Color) and [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_Opacity) of the range band.
+The range band feature is used to highlight a particular range along with the y-axis using the [`StartRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineRangeBand~StartRange.html) and [`EndRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineRangeBand~EndRange.html) properties. You can also customize the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineRangeBand~Color.html) and [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineRangeBand~Opacity.html) of the range band.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

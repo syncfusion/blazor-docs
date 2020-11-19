@@ -4,11 +4,11 @@ You can customize axis value types and min and max values of the Sparkline Chart
 
 ## Change value type of the Sparkline Charts
 
-You can change the Sparkline Charts value type by setting the [`ValueType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.ValueType.html) property to [`Numeric`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.ValueType.html), [`Category`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.ValueType.html), or [`DateTime`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.ValueType.html).
+You can change the Sparkline Charts value type by setting the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) property to [`Numeric`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html), [`Category`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html), or [`DateTime`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html).
 
 ### Category
 
-You can assign category values to the Sparkline Charts by setting [`ValueType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.ValueType.html) to [`Category`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.ValueType.html).
+You can assign category values to the Sparkline Charts by setting [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) to [`Category`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html).
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -46,7 +46,7 @@ You can assign category values to the Sparkline Charts by setting [`ValueType`](
 
 ### Numeric
 
-You can assign numeric values to the Sparkline Charts by setting [`ValueType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.ValueType.html) to [`Numeric`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.ValueType.html)
+You can assign numeric values to the Sparkline Charts by setting [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) to [`Numeric`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html)
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -83,9 +83,9 @@ You can assign numeric values to the Sparkline Charts by setting [`ValueType`](h
 
 ## Change min and max values of axis
 
-You can change the min and max values of x-axis by setting the [`MinX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) and [`MaxX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) values to the [`SparklineAxisSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) tag.
+You can change the min and max values of x-axis by setting the [`MinX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.htmlhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MinX) and [`MaxX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MaxX) values to the [`SparklineAxisSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) tag.
 
-You can also change the min and max values of y-axis by setting the [`MinY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) and [`MaxY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) values to the [`SparklineAxisSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) tag.
+You can also change the min and max values of y-axis by setting the [`MinY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MinY) and [`MaxY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MaxY) values to the [`SparklineAxisSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) tag.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -108,7 +108,7 @@ You can also change the min and max values of y-axis by setting the [`MinY`](htt
 
 ## Change value of axis
 
-You can set horizontal axis line value of the Sparkline charts by setting [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) to the [`SparklineAxisSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) tag. The following code example demonstrates this.
+You can set horizontal axis line value of the Sparkline Charts by setting [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_Value) to the [`SparklineAxisSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) tag. The following code example demonstrates this.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -130,9 +130,9 @@ You can set horizontal axis line value of the Sparkline charts by setting [`Valu
 
 ## Axis line customization
 
-Axis of the Sparkline Charts can be collapsed using the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property in [`LineSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html); this is not applicable for win-loss type.
+Axis of the Sparkline Charts can be collapsed using the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property in [`LineSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html); this is not applicable for win-loss type.
 
-You can customize the [`Color`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html), [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html), and [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html) of axis line.
+You can customize the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Width), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Opacity), [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_DashArray), and [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html) of axis line.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

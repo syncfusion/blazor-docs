@@ -63,7 +63,7 @@ By default, the `ShowCloseButton` is not enabled. You can enable it by setting t
 
 ## Progress bar
 
-By default, the `ShowProgressBar` is not enabled. If it is enabled, it can visually indicate how long to get toast expires. Based on the `TimeOut` property, progress bar will appear.
+By default, the `ShowProgressBar` is not enabled. If it is enabled, it can visually indicate how long to get toast expires. Based on the `Timeout` property, progress bar will appear.
 
 ## Newest on top
 

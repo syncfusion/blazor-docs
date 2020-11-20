@@ -6,13 +6,13 @@ description: "This section explains how to create static toast notification and 
 
 # Time out
 
-The toast can be expired based on the `TimeOut` property. The toast can live till the time out reaches without user interaction, a time out value is considered as a millisecond.
+The toast can be expired based on the `Timeout` property. The toast can live till the time out reaches without user interaction, a time out value is considered as a millisecond.
 
-* The `TimeOut` delay can be visually represented using [Progress Bar](./config/#progress-bar).
+* The `Timeout` delay can be visually represented using [Progress Bar](./config/#progress-bar).
 
 * The `ExtendedTimeOut` property determines how long the toast should be displayed after a user hovers over it.
 
-> You can terminate the process by using the `showCloseButton` property for destroying the toast at any time.
+> You can terminate the process by using the `ShowCloseButton` property for destroying the toast at any time.
 
 ```csharp
 
@@ -87,7 +87,7 @@ The above code will give following output.
 
 ## Static toast
 
-You can prevent auto hiding in a toast as visible like static by setting zero (`0`) value in the timeOut Property.
+You can prevent auto hiding in a toast as visible like static by setting zero (`0`) value in the `Timeout` Property.
 
 ```csharp
 

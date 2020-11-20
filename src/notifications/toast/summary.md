@@ -2,7 +2,7 @@
 * [Configuring options](toast/config.md)
 * [Positioning](toast/position.md)
 * [Action Buttons](toast/action-buttons.md)
-* [TimeOut](toast/timeout.md)
+* [Timeout](toast/timeout.md)
 * [Template](toast/template.md)
 * [Animation](toast/animation.md)
 * [CSS Structure](toast/style.md)

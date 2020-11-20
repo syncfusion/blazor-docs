@@ -6,7 +6,9 @@ description: "This section describes how to integrate the action buttons such as
 
 # Action Buttons
 
-You can include action buttons to the toast control by adding the `ToastButtonModelProp` property. The collection of Blazor button models can be bound to the `Model` property inside the ToastButtonModelProps property. You can also include the click event callback function for each button.
+You can include action buttons to the toast control by adding the `ToastButton` property. You can also include the click event callback function for each button.
+
+In the following code, toast buttons are configured using `ToastButton` property.
 
 ```csharp
 

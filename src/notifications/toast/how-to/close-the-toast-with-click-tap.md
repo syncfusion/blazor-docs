@@ -6,7 +6,7 @@ description: "This section explains Toaster component with a click or tap operat
 
 # Close the toast with click/tap
 
-By default, the toasts are expired based on the `TimeOut` value. You can customize the toast hiding process with click/tap action by setting the `ToastClickEventArgs` in the clicked callback function with static Toast.
+By default, the toasts are expired based on the `Timeout` value. You can customize the toast hiding process with click/tap action by setting the `ToastClickEventArgs` in the clicked callback function with static Toast.
 
 The following sample demonstrates the click/tap action in toast.
 

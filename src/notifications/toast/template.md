@@ -6,7 +6,9 @@ description: "This section explains how to customize the Blazor toast notificati
 
 # Template
 
-The Template property in toast can be defined as `HTML element` or `string`.
+Configure templates to display within a header, content, and footer section of Toast.
+
+The header, content and footer templates can be defined as `HTML element` inside `ToastTemplates`.
 
 The following code explains how to initialize a Toast with `Template`.
 
@@ -21,19 +23,8 @@ The following code explains how to initialize a Toast with `Template`.
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
     <ToastTemplates>
         <Template>
-            <div id='template_toast'>
-                <div class="horizontal-align">
-                    <div class='toast-content'>
-                        <div class='toast-title'>
-                            Weekend Alarm
-                        </div>
-                        <div class='toast-message'>
-                            With traffic, its likely to take 45 minutes to get to jenny's 24th Birthday Bash at Hillside Bar, 454 E.
-                            Olive Way by 10:00PM
-                        </div>
-                    </div>
-                </div>
-                <img src="https://blazor.syncfusion.com/demos/images/toast/map.jpg" width="100%" height="70%">
+            <div>
+              Toast
             </div>
         </Template>
     </ToastTemplates>
@@ -131,7 +122,7 @@ The following code explains how to initialize a Toast with `Template`.
 
 ```
 
-The HTML element tag's can be given as a string for the `Template` property when updating the toast templates dynamically. The below code block explains the string template.
+The Template can be given as a RenderFragment type for the `ContentTemplate` property when updating the toast templates dynamically. The below code block explains the string template.
 
 ```csharp
 

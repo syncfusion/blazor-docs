@@ -1,41 +1,40 @@
 ---
-title: "Download"
+title: "Downloading option in PDF Viewer in Blazor server-side"
 component: "PDF Viewer"
-description: "Learn about download option in PDF Viewer to download the loaded document."
+description: "Learn about the available options for download the modified document in PDF Viewer"
 ---
+
 # Download
 
-The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
+The PDF Viewer supports downloading the loaded PDF file from the toolbar by default. You can enable or disable the download option by setting the `EnableDownload` API.
 
-![Alt text](./images/download.png)
+```csharp
+@using Syncfusion.Blazor.PdfViewerServer
 
-You can invoke download action using following code snippet.,
+<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableDownload="true"/>
 
-```html
-    <button id="downloadBtn">Download</button>
-    <div style="width:100%;height:600px">
-        <EjsPdfViewer id="pdfviewer" documentPath="PDF_Succinctly.pdf" documentLoad="@documentLoad"
-         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" style="height: 640px;width: 100%" />
-    </div>
-    @functions{
-    protected async void documentLoad(object args)
+@code{
+    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+}
+```
+
+![Download](../pdfviewer/images/download.png)
+
+And, you can programmatically invoke download action as follows.
+
+```csharp
+@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnClick">Download</SfButton>
+<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" @ref="@Viewer"/>
+
+@code{
+    SfPdfViewerServer Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    public void OnClick(MouseEventArgs args)
     {
-    await JsRuntime.InvokeAsync<bool>
-    ("documentLoaded");
+        Viewer.Download();
     }
-    }
+}
 ```
-
-```javascript
-    function documentLoaded() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        document.getElementById('downloadBtn').addEventListener('click', function() {
-            pdfViewer.download();
-        });
-    }
-```
-
-## See also
-
-* [Toolbar items](./toolbar)
-* [Feature Modules](./feature-module)

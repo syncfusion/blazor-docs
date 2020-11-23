@@ -1,31 +1,71 @@
 ---
-title: "Text Search"
+title: "Text Search in PDF Viewer in Blazor server-side"
 component: "PDF Viewer"
-description: "Learn about text search option in PDF Viewer to find the text."
+description: "Learn about the available options for find and highlight the text of PDF docoument in PDF Viewer"
 ---
-# Text Search
 
-The Text Search option in PDF Viewer is used to find and highlight the text content from the document. You can enable/disable the text search using the following code snippet.
+# Text search
 
-```html
-    <div style="width:100%;height:600px">
-        <EjsPdfViewer id="pdfviewer" documentPath="PDF_Succinctly.pdf" enableTextSearch="true"
-         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" style="height: 640px;width: 100%" />
-    </div>
-    @functions{
-    }
+You can find the specified text content in the PDF document using the built-in options provided with the toolbar. On initiating the search operation, the control searches for the specified text and highlights all the occurrences in the pages.
+
+![Text Search](../pdfviewer/images/text-search.png)
+
+You can enable or disable the text search by setting the `EnableTextSearch` API.
+
+```csharp
+@using Syncfusion.Blazor.PdfViewerServer
+
+<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableTextSearch="true"/>
+
+@code{
+    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+}
 ```
 
-The following text search methods are available in the PDF Viewer,
+Also, you can programmatically perform search operation as given in the following code example.
 
-* [**Search text**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchtext):- Searches the target text in the PDF document and highlights the occurrences in the pages.
-* [**Search next**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchnext):- Searches the next occurrence of the searched text from the current occurrence of the PdfViewer.
-* [**Search previous**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchprevious):- Searches the previous occurrence of the searched text from the current occurrence of the PdfViewer.
-* [**Cancel text search**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#canceltextsearch):- The text search can be cancelled and the highlighted occurrences from the PDF Viewer can be removed .
+```csharp
+@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.Buttons
 
-![Alt text](./images/search.png)
+<div style="display:inline-block">
+    <SfButton OnClick="OnSearchClick">Search Text</SfButton>
+</div>
+<div style="display:inline-block">
+    <SfButton OnClick="OnSearchNext">Search Next</SfButton>
+</div>
+<div style="display:inline-block">
+    <SfButton OnClick="OnSearchPrevious">Search Previous</SfButton>
+</div>
+<div style="display:inline-block">
+    <SfButton OnClick="OnCancelSearch">Cancel Search</SfButton>
+</div>
 
-## See also
+<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
-* [Toolbar items](./toolbar)
-* [Feature Modules](./feature-module)
+@code{
+    SfPdfViewerServer Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+
+    public void OnSearchClick(MouseEventArgs args)
+    {
+        //Here PDF is to be serached from the loaded document
+        Viewer.SearchText("pdf", false);
+    }
+
+    public void OnSearchNext(MouseEventArgs args)
+    {
+        Viewer.SearchNext();
+    }
+
+    public void OnSearchPrevious(MouseEventArgs args)
+    {
+        Viewer.SearchPrevious();
+    }
+
+    public void OnCancelSearch(MouseEventArgs args)
+    {
+        Viewer.CancelTextSearch();
+    }
+}
+```

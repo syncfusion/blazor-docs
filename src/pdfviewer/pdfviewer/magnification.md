@@ -1,91 +1,39 @@
 ---
-title: "Magnification in PDF Viewer in Blazor server-side"
+title: "Magnification"
 component: "PDF Viewer"
-description: "Learn about the available options of magnification or zooming in PDF Viewer"
+description: "Learn about the Magnification support in PDF Viewer."
 ---
+
 # Magnification
 
-The built-in toolbar of PDF Viewer contains the following zooming options:
+The magnification tools of the PDF Viewer contains ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth tools in the
+default toolbar. The PDF Viewer also has an option to show or hide the magnification tools in the
+default toolbar.
 
-* **Zoom** **In**: Increases the zoom value (document magnification) from the current value by preset levels.
-* **Zoom** **Out**: Decreases the zoom value from the current value by preset levels.
-* **Zoom** **To**: Magnifies the pages to the specified zoom value.
-* **Fit** **Page**: Fits the page entirely in the available document view port size.
-* **Fit** **Width**: Fits the page to the width of the view port size.
+The following code snippet describes how to enable the magnification in PDF Viewer.
 
-![Table of content](../pdfviewer/images/magnification.png)
-
-You can enable or disable the magnification option in PDF Viewer default toolbar by setting the `EnableMagnification` property.
-
-```csharp
-@using Syncfusion.Blazor.PdfViewerServer
-
-<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableMagnification="true"/>
-
-@code{
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-}
+```html
+    <div style="width:100%;height:600px">
+        <EjsPdfViewer id="pdfviewer" documentPath="PDF_Succinctly.pdf" enableMagnification="true"
+         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" style="height: 640px;width: 100%" />
+    </div>
+    @functions{
+    }
 ```
 
-Also, you can programmatically perform zooming operations as follows.
+The following magnification options are available in the default toolbar of PDF Viewer,
 
-```csharp
-@using Syncfusion.Blazor.PdfViewerServer
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Inputs
+* [**ZoomIn**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#zoomin):- Zoom in from the current zoom value of PDF pages.
+* [**ZoomOut**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#zoomout):- Zoom out from the current zoom value of PDF pages.
+* [**Zoom**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#zoomto):- Zoom to specific zoom value of PDF pages.
+* [**FitPage**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#fittopage):- Fits the page width with in the available view port size.
+* [**FitWidth**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#fittowidth):- Fits the view port width based on the page content size.
 
-<div style="display:inline-block">
-    <SfButton OnClick="OnZoomInClick">Zoom In</SfButton>
-</div>
-<div style="display:inline-block">
-    <SfButton OnClick="OnZoomOutClick">Zoom Out</SfButton>
-</div>
-<div style="display:inline-block">
-    <SfTextBox @ref="@TextBox"></SfTextBox>
-</div>
-<div style="display:inline-block">
-    <SfButton OnClick="OnZoomClick">Zoom</SfButton>
-</div>
-<div style="display:inline-block;">
-    <SfButton OnClick="OnFitPageClick">Fit To Page</SfButton>
-</div>
-<div style="display:inline-block">
-    <SfButton OnClick="OnFitWidthClick">Fit To Width</SfButton>
-</div>
+![Alt text ](./images/zoom.png)
 
-<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" @ref="@Viewer" />
+>PDF Viewer can support the zoom value ranges from 50 to 400.
 
-@code{
-    SfPdfViewerServer Viewer;
-    SfTextBox TextBox;
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+## See also
 
-    public void OnZoomInClick(MouseEventArgs args)
-    {
-        Viewer.ZoomIn();
-    }
-
-    public void OnZoomOutClick(MouseEventArgs args)
-    {
-        Viewer.ZoomOut();
-    }
-
-    public void OnFitPageClick(MouseEventArgs args)
-    {
-        Viewer.FitToPage();
-    }
-
-    public void OnZoomClick(MouseEventArgs args)
-    {
-        double zoomValue =  double.Parse(TextBox.Value.ToString());
-        Viewer.ZoomTo(zoomValue);
-    }
-
-    public void OnFitWidthClick(MouseEventArgs args)
-    {
-        Viewer.FitToWidth();
-    }
-}
-```
-
->Note: PDF Viewer can support zoom value ranges from 50% to 400%.
+* [Toolbar items](./toolbar)
+* [Feature Modules](./feature-module)

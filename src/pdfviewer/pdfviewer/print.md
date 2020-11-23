@@ -1,40 +1,50 @@
 ---
-title: "Print in PDF Viewer in Blazor server-side"
+title: "Print"
 component: "PDF Viewer"
-description: "Learn about the available options for print the modified document from PDF Viewer"
+description: "Learn about print option in PDF Viewer to print the document."
 ---
-
 # Print
 
-The PDF Viewer supports printing the loaded PDF file by default. You can enable or disable printing by setting the `EnablePrint` property.
+The PDF Viewer supports printing the loaded PDF file. You can enable/disable the print using the following code snippet.
 
-```csharp
-@using Syncfusion.Blazor.PdfViewerServer
-
-<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnablePrint="true"/>
-
-@code{
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-}
-```
-
-![Print](../pdfviewer/images/print.png)
-
-You can programmatically invoke print action as follows.
-
-```csharp
-@using Syncfusion.Blazor.PdfViewerServer
-@using Syncfusion.Blazor.Buttons
-
-<SfButton OnClick="OnClick">Print</SfButton>
-<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" @ref="@Viewer"/>
-
-@code{
-    SfPdfViewerServer Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-    public void OnClick(MouseEventArgs args)
-    {
-        Viewer.Print();
+```html
+    <div style="width:100%;height:600px">
+        <EjsPdfViewer id="pdfviewer" documentPath="PDF_Succinctly.pdf" enablePrint="true"
+         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" style="height: 640px;width: 100%" />
+    </div>
+    @functions{
     }
-}
 ```
+
+![Alt text](./images/print.png)
+
+You can invoke print action using the following code snippet.,
+
+```html
+    <button id="printBtn">Print</button>
+    <div style="width:100%;height:600px">
+        <EjsPdfViewer id="pdfviewer" documentPath="PDF_Succinctly.pdf" documentLoad="@documentLoad"
+         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" style="height: 640px;width: 100%" />
+    </div>
+    @functions{
+    protected async void documentLoad(object args)
+    {
+    await JsRuntime.InvokeAsync<bool>
+    ("documentLoaded");
+    }
+    }
+```
+
+```javascript
+    function documentLoaded() {
+        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
+        document.getElementById('printBtn').addEventListener('click', function() {
+            pdfViewer.print();
+        });
+    }
+```
+
+## See also
+
+* [Toolbar items](./toolbar)
+* [Feature Modules](./feature-module)

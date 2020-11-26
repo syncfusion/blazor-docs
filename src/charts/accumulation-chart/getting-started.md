@@ -262,7 +262,7 @@ You can use legend for the accumulation chart by setting the [`Visible`](https:/
 
 ![Legend](images/getting-started/legend.png)
 
->You can find the fully working sample for Accumulation chart [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BLAZOR~2771645832.zip).
+>You can find the fully working sample for Accumulation chart [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppAccChart-747645871.zip).
 
 ## See also
 

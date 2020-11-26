@@ -161,7 +161,7 @@ Trackball can be enabled by setting the [`Enable`](https://help.syncfusion.com/c
 
 ![Trackball](images/trackball.png)
 
->You can find the fully working sample [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorApp1286933027.zip).
+>You can find the fully working sample [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppStockChart1438159748.zip).
 
 ## See also
 

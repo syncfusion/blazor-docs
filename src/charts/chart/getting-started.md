@@ -300,7 +300,7 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
 
 ![chart](images/getting-started/legend.png)
 
->You can find the fully working sample [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorApp2888075708.zip).
+>You can find the fully working sample [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppChart1351059325.zip).
 
 ## See also
 

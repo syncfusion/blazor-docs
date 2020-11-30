@@ -153,7 +153,7 @@ The following output is displayed as a result of the above code example.
 ### Batch
 
 In Batch edit mode, when you double-click on the tree grid cell, the target cell goes into edit state.
-You can bulk save (added, changed and deleted data in the single request) to data source by clicking on the toolbar's **Update** button or by externally invoking the `BatchSave` method.
+You can bulk save (added, changed and deleted data in the single request) to data source by clicking on the toolbar's **Update** button or by externally invoking the [`EndEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEdit) method.
 To enable Batch edit, set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) property of `TreeGridEditSettings` as **Batch**.
 
 {% aspTab template="tree-grid/editing/batch-edit", sourceFiles="index.razor,treegriddata.cs" %}

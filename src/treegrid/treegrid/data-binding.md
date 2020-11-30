@@ -129,9 +129,10 @@ The following code example shows you how to bind the hierarchical list data into
 
 ```
 
-> ExpandCollapse State maintenance is not supported for Hierarchy Data.
-> Batch Editing is not supported for Hierarchy Data.
-> `PageSizeMode` --> `All` is not supported for Hierarchy Data.
+> * ExpandCollapse State maintenance is not supported for Hierarchy Data.
+> * Batch Editing is not supported for Hierarchy Data.
+> * `PageSizeMode` --> `All` is not supported for Hierarchy Data.
+> * Row Drag and Drop feature is not supported for Hierarchy Data.
 
 ### ExpandoObject binding
 
@@ -529,5 +530,5 @@ Now you can configure the Tree Grid using the **'SfDataManager'** to interact wi
 }
 ```
 
-To perform Tree Grid CRUD operation using Entity Framework. You can refer [`here`](./editing/#entity-framework).
+To perform Tree Grid CRUD operation using Entity Framework. You can refer [`here`](./edit/#entity-framework).
 >You can find the fully working sample [`here`](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).

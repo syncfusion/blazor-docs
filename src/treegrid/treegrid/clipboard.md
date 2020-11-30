@@ -44,7 +44,7 @@ The below are the type of filter mode available in Tree Grid.
 
 {% endaspTab %}
 
-<!--## AutoFill
+## AutoFill
 
 AutoFill Feature allows you to copy the data of selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to required cells. This feature is enabled by defining `EnableAutoFill` property as true.
 
@@ -59,7 +59,6 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
 * Since the string values are not parsed to number and date type, so when the selected string type cells are dragged to number type cells then it will display as **NaN**. For date type cells, when the selected string type cells are dragged to date type cells then it will display as an **empty cell**.
 * Linear series and the sequential data generations are not supported in this autofill feature.
--->
 
 ## Paste
 

@@ -28,6 +28,10 @@ jobs:
        
     - name: Install
       run: npm i
-        
-    - name: Test
-      run: npm run test
+      
+    - name: Get changed files
+      run: |
+          git diff --name-only HEAD^ HEAD
+             
+#     - name: Test
+#       run: npm run test

@@ -75,11 +75,12 @@ namespace BlazorApplication
 
 To initialize the In-Place Editor component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
 
-The following code explains how to initialize a simple In-place Editor in the Razor page.
+The following code explains how to initialize a simple In-place Editor with TextBox in the Razor page.
 
 ```csharp
 
 @using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Inputs
 
 <table>
     <tr>
@@ -89,7 +90,10 @@ The following code explains how to initialize a simple In-place Editor in the Ra
             </label>
         </td>
         <td>
-            <SfInPlaceEditor Mode="RenderMode.Inline" Type="InputType.Text" Value="@TextValue" SubmitOnEnter="true" Model="@TModel">
+            <SfInPlaceEditor @bind-Value="@TextValue" TValue="string">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue" Placeholder="Enter employee name"></SfTextBox>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -97,14 +101,11 @@ The following code explains how to initialize a simple In-place Editor in the Ra
 
 @code {
     public string TextValue = "Andrew";
-
-    public TextBoxModel TModel = new TextBoxModel()
-    {
-        Placeholder = "Enter employee name"
-    };
 }
 
 ```
+
+> The type of component editor must be configured in the 'Type' Editor In-place property. Also, should configure the two-way binding between the In-place Editor and its EditorComponent. It's used to update the editor component value into the In-place Editor component.
 
 ## Render In-place Editor with popup
 
@@ -113,6 +114,7 @@ The following code explains how to initialize a simple In-place Editor with popu
 ```csharp
 
 @using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.DropDowns
 
 <table>
     <tr>
@@ -122,7 +124,12 @@ The following code explains how to initialize a simple In-place Editor with popu
             </label>
         </td>
         <td>
-            <SfInPlaceEditor Mode="RenderMode.Popup" Type="InputType.AutoComplete" Value="@AutoValue" Model="@AutocompleteData">
+            <SfInPlaceEditor Type="Syncfusion.Blazor.InPlaceEditor.InputType.AutoComplete" @bind-Value="@AutoValue" Mode="RenderMode.Popup" TValue="string">
+                <EditorComponent>
+                    <SfAutoComplete TValue="string" TItem="Countries" @bind-Value="@AutoValue" Placeholder="e.g. Australia" DataSource="@LocalData">
+                        <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+                    </SfAutoComplete>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -131,10 +138,18 @@ The following code explains how to initialize a simple In-place Editor with popu
 @code {
     public string AutoValue = "Australia";
 
-    public AutoCompleteModel<string> AutocompleteData = new AutoCompleteModel<string>()
+    public class Countries
     {
-        Placeholder = "Type to search countries",
-        DataSource = new string[] { "Australia", "Bermuda", "Canada", "Cameroon", "Denmark", "Finland", "Greenland", "Poland" }
+        public string Name { get; set; }
+        public string Code { get; set; }
+    }
+
+    List<Countries> LocalData = new List<Countries> {
+        new Countries() { Name = "Australia", Code = "AU" },
+        new Countries() { Name = "Bermuda", Code = "BM" },
+        new Countries() { Name = "Canada", Code = "CA" },
+        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Countries() { Name = "Denmark", Code = "DK" }
     };
 }
 
@@ -152,48 +167,67 @@ Output be like the below.
 
 ## Configuring DropDownList
 
-You can render the Blazor DropDownList by changing the `Type` property as `DropDownList` and configure its properties and methods using the `Model` property.
+You can render the Blazor DropDownList by changing the `Type` property as `DropDownList` and configure `DropDownList` component inside the Editor component.
 
-In the following example, `Type` and model values are configured to render the `DropDownList` component.
+The following sample demonstrates how to render the `DropDownList` component in the In-place Editor,
 
 ```csharp
 
+@using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.InPlaceEditor
 
-<SfInPlaceEditor Mode="RenderMode.Inline" Type="InputType.DropDownList" Value="@DropdownValue" Model="@DropdownData" />
+<SfInPlaceEditor @bind-Value="@DropdownValue" Type="Syncfusion.Blazor.InPlaceEditor.InputType.DropDownList" TValue="string">
+    <EditorComponent>
+        <SfDropDownList TValue="string" TItem="Games"  @bind-Value="@DropdownValue" Placeholder="Select a game" DataSource="@LocalData">
+            <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
+        </SfDropDownList>
+    </EditorComponent>
+</SfInPlaceEditor>
 
 @code {
-    public string DropdownValue = "Australia";
+    public string DropdownValue = "Cricket";
 
-    public DropDownListModel<string> DropdownData = new DropDownListModel<string>()
+    public class Games
     {
-        Placeholder = "Select Country",
-        DataSource = new string[] { "Australia", "Bermuda", "Canada", "Cameroon", "Denmark", "Finland", "Greenland", "Poland" }
-    };
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Text= "American Football" },
+    new Games() { ID= "Game2", Text= "Badminton" },
+    new Games() { ID= "Game3", Text= "Basketball" },
+    new Games() { ID= "Game4", Text= "Cricket" },
+    new Games() { ID= "Game5", Text= "Football" },
+    new Games() { ID= "Game6", Text= "Golf" },
+    new Games() { ID= "Game7", Text= "Hockey" },
+    new Games() { ID= "Game8", Text= "Rugby"},
+    new Games() { ID= "Game9", Text= "Snooker" },
+    new Games() { ID= "Game10", Text= "Tennis"},
+  };
 }
 
 ```
 
 ## Integrate DatePicker
 
-You can render the Blazor `DatePicker` by changing the `Type` property as `Date` and also configure its properties and methods using the `Model` property.
+You can render the Blazor `DatePicker` by changing the `Type` property as `Date` and configure `DatePicker` component inside the Editor component. Also, configure its properties directly in the `Datepicker` component
 
-In the following sample, `Type` and `Model` values are configured to render the `DatePicker` component.
+The following sample demonstrates how to render the `DatePicker` component in the In-place Editor,
 
 ```csharp
 
 @using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Calendars
 
-<SfInPlaceEditor Mode="RenderMode.Inline" Type="InputType.Date" Value="@DateValue" Model="@DateModel" />
+<SfInPlaceEditor Type="Syncfusion.Blazor.InPlaceEditor.InputType.Date" TValue="DateTime?" @bind-Value="@DateValue">
+    <EditorComponent>
+        <SfDatePicker TValue="DateTime?" @bind-Value="@DateValue" Placeholder="Choose a Date"></SfDatePicker>
+    </EditorComponent>
+</SfInPlaceEditor>
 
 @code {
-    public DateTime DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+    public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
-    public DatePickerModel DateModel = new DatePickerModel()
-    {
-        Placeholder = "Select date",
-        ShowTodayButton = true
-    };
 }
 
 ```
@@ -203,6 +237,10 @@ In the following code, it is configured to render the `DatePicker`, `Dropdownlis
 ```csharp
 
 @using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.DropDowns
+
 
 <div id="container" class="control-group">
     <h3> Modify Basic Details </h3>
@@ -210,21 +248,32 @@ In the following code, it is configured to render the `DatePicker`, `Dropdownlis
         <tr>
             <td>Name</td>
             <td class='left'>
-                <SfInPlaceEditor Mode="RenderMode.Inline" Type="InputType.Text" Value="@TextValue" Model="@TModel">
+                <SfInPlaceEditor @bind-Value="@TextValue" TValue="string">
+                    <EditorComponent>
+                        <SfTextBox @bind-Value="@TextValue" Placeholder="Enter your name"></SfTextBox>
+                    </EditorComponent>
                 </SfInPlaceEditor>
             </td>
         </tr>
         <tr>
             <td>Date of Birth</td>
             <td class='left'>
-                <SfInPlaceEditor Mode="RenderMode.Inline" Type="InputType.Date" Value="@DateValue" Model="@DateModel">
+                <SfInPlaceEditor Type="Syncfusion.Blazor.InPlaceEditor.InputType.Date" TValue="DateTime?" @bind-Value="@DateValue">
+                    <EditorComponent>
+                        <SfDatePicker TValue="DateTime?" @bind-Value="@DateValue" Placeholder="Select date"></SfDatePicker>
+                    </EditorComponent>
                 </SfInPlaceEditor>
             </td>
         </tr>
         <tr>
             <td>Gender</td>
             <td class='left'>
-                <SfInPlaceEditor Mode="RenderMode.Inline" Type="InputType.DropDownList" Value="@DropdownValue" Model="@DropdownData">
+                <SfInPlaceEditor @bind-Value="@DropdownValue" Type="Syncfusion.Blazor.InPlaceEditor.InputType.DropDownList"  TValue="string">
+                    <EditorComponent>
+                        <SfDropDownList Width="90%" TItem="Gender" TValue="string" DataSource="@dropdownData" @bind-Value="@DropdownValue">
+                            <DropDownListFieldSettings Text="text" Value="text"></DropDownListFieldSettings>
+                        </SfDropDownList>
+                    </EditorComponent>
                 </SfInPlaceEditor>
             </td>
         </tr>
@@ -253,24 +302,19 @@ In the following code, it is configured to render the `DatePicker`, `Dropdownlis
 </style>
 
 @code {
-    public DateTime DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+    public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
     public string TextValue = "Andrew";
     public string DropdownValue = "Male";
 
-    public DropDownListModel<string> DropdownData = new DropDownListModel<string>()
+    public class Gender
     {
-        Placeholder = "Select Gender",
-        DataSource = new string[] { "Male", "Female" }
-    };
-
-    public DatePickerModel DateModel = new DatePickerModel()
+        public string value { get; set; }
+        public string text { get; set; }
+    }
+    List<Gender> dropdownData = new List<Gender>()
     {
-        Placeholder = "Select date",
-        ShowTodayButton = true
-    };
-    public TextBoxModel TModel = new TextBoxModel()
-    {
-        Placeholder = "Enter your name"
+        new Gender(){ text= "Male" },
+        new Gender(){ text= "Female" }
     };
 }
 
@@ -282,7 +326,7 @@ Output be like the below.
 
 ## Submitting data to the server (save)
 
-You can submit editor value to the server by configuring the `Url`, `Adaptor` and `PrimaryKey` property.
+You can submit editor value to the server by configuring the `SaveUrl`, `Adaptor` and `PrimaryKey` property.
 
 | Property   | Usage                                           |
 |------------|---------------------------------------------------------|
@@ -298,13 +342,23 @@ The edited data is submitted to the server and you can see the new values gettin
 
 ```csharp
 
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.InPlaceEditor
 
 <div id="container">
     <div class="control-group">
-        Best Employee of the year: <SfInPlaceEditor PrimaryKey="Employee" Name="Employee" Adaptor="AdaptorType.UrlAdaptor" Url="https://ej2services.syncfusion.com/production/web-services/api/Editor/UpdateData" Mode="RenderMode.Inline" Type="InputType.DropDownList" Value="@DropdownValue" Model="@DropdownData">
-            <InPlaceEditorEvents Created="OnCreate" OnActionSuccess="OnSuccess" TValue="string"></InPlaceEditorEvents>
+        Best Employee of the year:
+
+        <SfInPlaceEditor @ref="InPlaceObj" PrimaryKey="Employee" Name="Employee" Adaptor="Adaptors.UrlAdaptor"SaveUrl="https://ej2services.syncfusion.com/production/web-services/api/Editor/UpdateData" Type="Syncfusion.Blazor.InPlaceEditor.InputType.DropDownList" @bind-Value="@DropdownValue" TValue="string">
+            <EditorComponent>
+                <SfDropDownList TValue="string" TItem="Games" Placeholder="Select employee" PopupHeight="200px" DataSource="@LocalData">
+                    <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
+                </SfDropDownList>
+            </EditorComponent>t
+            <InPlaceEditorEvents Created="@OnCreate" OnActionSuccess="@OnSuccess" TValue="string"></InPlaceEditorEvents>
         </SfInPlaceEditor>
+
     </div>
     <table style="margin:60px auto;width:25%">
         <tr>
@@ -339,24 +393,35 @@ The edited data is submitted to the server and you can see the new values gettin
 </style>
 
 @code {
-    public string PreviousValue { get; set; }
-    public string DropdownValue = "Andrew Fuller";
-    public string CurrentValue { get; set; }
+    SfInPlaceEditor<string> InPlaceObj;
+public string PreviousValue { get; set; }
+public string DropdownValue = "Andrew Fuller";
+public string CurrentValue { get; set; }
 
-    public DropDownListModel<string> DropdownData = new DropDownListModel<string>()
+    public class Games
     {
-        Placeholder = "Select employee",
-        DataSource = new string[] { "Andrew Fuller", "Janet Leverling", "Laura Callahan", "Margaret Hamilt", "Michael Suyama", "Nancy Davloio", "Robert King" },
-        PopupHeight = "200px"
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Text= "American Football" },
+    new Games() { ID= "Game2", Text= "Badminton" },
+    new Games() { ID= "Game3", Text= "Basketball" },
+    new Games() { ID= "Game4", Text= "Cricket" },
+    new Games() { ID= "Game5", Text= "Football" },
+    new Games() { ID= "Game6", Text= "Golf" },
+    new Games() { ID= "Game7", Text= "Hockey" },
+    new Games() { ID= "Game8", Text= "Rugby"},
+    new Games() { ID= "Game9", Text= "Snooker" },
+    new Games() { ID= "Game10", Text= "Tennis"},
+  };
 
-    };
-
-    public void OnCreate(object args)
+    public void OnCreate(Object args)
     {
         this.CurrentValue = this.DropdownValue;
     }
 
-    public void OnSuccess(ActionEventArgs args)
+    public void OnSuccess(ActionEventArgs<string> args)
     {
         this.PreviousValue = this.CurrentValue;
         this.CurrentValue = args.Value;

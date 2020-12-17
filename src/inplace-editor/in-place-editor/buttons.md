@@ -6,38 +6,42 @@ description: "This section explains how to configure, save, and remove button wi
 
 # Buttons
 
-The In-place Editor had an action for save and cancel using buttons. The `SaveButton` and `CancelButton` properties accept the `ButtonModel` objects for customizing the save and cancel button properties.
+The In-place Editor has an option to save and cancel using buttons. The `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` tags accept the button properties for customizing the save and cancel button.
 
 Buttons can be shown or hidden by setting a Boolean value to the `ShowButtons` property.
 
-> Without buttons, value will be processed via the following ways.
+> Without buttons, the value will be processed in the following ways.
 
-* **actionOnBlur**: By clicking outside, the editor component get focus out and do action based on this property value.
-* **submitOnEnter**: Pressing `Enter` key it performs the submit action, if this property set to `true`.
+* **ActionOnBlur**: By clicking outside, the editor component gets focus out and do an action based on this property value.
+* **SubmitOnEnter**: Pressing the `Enter` key performs the submit action if this property is set to `true`.
 
-In the following sample, the `Content` and `CssClass` properties of `Button` value assigned to the `SaveButton` and `CancelButton` properties to customize its appearance. Also check or uncheck the checkbox buttons rendered or removed from the editor.
-
-To restrict, either save or cancel button rendering into a DOM, simply pass empty object `{}` in the  `SaveButton` or `CancelButton` properties.
+In the following sample, the `Content` and `CssClass` properties of the `Button` value are assigned to the `SaveButton` and `CancelButton` properties to customize its appearance. Also, check or uncheck the checkbox buttons rendered or removed from the editor.
 
 > For more details about buttons, refer this documentation [section](../button/).
 
 ```csharp
 
 @using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 
 <table class="table-section">
     <tr>
         <td> Submit on Enter: </td>
         <td>
-            <SfCheckBox Checked="@SubmitOnEnter" Label="Show" ValueChange="OnChange" TChecked="bool"></SfCheckBox>
+            <SfCheckBox @bind-Checked="SubmitOnEnter" Label="Show" ValueChange="OnChange" TChecked="bool"></SfCheckBox>
         </td>
     </tr>
     <tr>
         <td class="sample-td">Enter your name: </td>
         <td class="sample-td">
-            <SfInPlaceEditor Mode="RenderMode.Inline" Type="InputType.Text" Value="TextValue" SubmitOnEnter="SubmitOnEnter" SaveButton="SaveBtn" CancelButton="CancelBtn" Model="TModel">
-            </SfInPlaceEditor>
+            <SfInPlaceEditor @bind-Value="@TextValue" SubmitOnEnter="SubmitOnEnter" TValue="string">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue" Placeholder="Enter some text"></SfTextBox>
+                </EditorComponent>
+                <InPlaceEditorSaveButton Content="OK" CssClass="e-outline"></InPlaceEditorSaveButton>
+                <InPlaceEditorCancelButton Content="Cancel" CssClass="e-outline"></InPlaceEditorCancelButton>
+             </SfInPlaceEditor>
         </td>
     </tr>
 </table>
@@ -61,29 +65,15 @@ To restrict, either save or cancel button rendering into a DOM, simply pass empt
 
 @code {
     public bool SubmitOnEnter { get; set; } = true;
+
     public string TextValue = "Andrew";
 
-    public TextBoxModel TModel = new TextBoxModel()
-    {
-        Placeholder = "Enter some text"
-    };
-    private void OnChange(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
+    private void OnChange(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool>
+    args)
     {
         this.SubmitOnEnter = args.Checked;
         this.StateHasChanged();
     }
-
-    public ButtonModel SaveBtn = new ButtonModel()
-    {
-        Content = "OK",
-        CssClass = "e-outline"
-    };
-
-    public ButtonModel CancelBtn = new ButtonModel()
-    {
-        Content = "Cancel",
-        CssClass = "e-outline"
-    };
 }
 
 ```

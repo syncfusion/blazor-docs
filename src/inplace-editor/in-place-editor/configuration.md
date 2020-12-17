@@ -13,11 +13,11 @@ This section explains the supported rendering modes of the In-place Editor. The 
     * Popup
     * Inline
 
-> By default, `Popup` mode will be rendered when opening an editor.
+> By default, `Inline` mode will be rendered when opening an editor.
 
 * For `Popup` mode, the editable container displays as like tooltip or popover above the element.
 
-* For `Inline` mode, the editable container displays as instead of the element. To render `Inline` mode while opening the editor, specify `Mode` as `Inline`.
+* For `Inline` mode, the editable container displays instead of the element. To render `Inline` mode while opening the editor, specify `Mode` as `Inline`.
 
 In the following code block, the In-place Editor renders with `Inline` mode. You can dynamically switch into another mode by changing the drop-down item value.
 
@@ -25,21 +25,26 @@ In the following code block, the In-place Editor renders with `Inline` mode. You
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
 
 <table class="table-section">
     <tr>
         <td> Mode: </td>
         <td>
-            <SfDropDownList Value="DropdownValue" Width="auto" Placeholder="Select Mode" DataSource="Modes">
-                <DropDownListEvents ValueChange="OnChange" TValue="string"></DropDownListEvents>
-                <DropDownListFieldSettings Text="Text"></DropDownListFieldSettings>
+            <SfDropDownList Width="90%" TItem="InplaceModes" TValue="string" DataSource="@ModeData" @bind-Value="@DropdownValue">
+                <DropDownListEvents TValue="string" TItem="InplaceModes" ValueChange="@OnChange"></DropDownListEvents>
+                <DropDownListFieldSettings Text="text" Value="value"></DropDownListFieldSettings>
             </SfDropDownList>
+
         </td>
     </tr>
     <tr>
         <td class="sample-td">Enter your name: </td>
         <td class="sample-td">
-            <SfInPlaceEditor Mode="InplaceMode" Type="InputType.Text" Value="TextValue" SubmitOnEnter="true" Model="TModel">
+            <SfInPlaceEditor @bind-Value="@TextValue" Mode="@InplaceMode" TValue="string">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue" Placeholder="Enter some text"></SfTextBox>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -67,23 +72,19 @@ In the following code block, the In-place Editor renders with `Inline` mode. You
     public string TextValue = "Andrew";
     public string DropdownValue = "Inline";
 
-    public class DropDownFields
+    public class InplaceModes
     {
-        public string Text { get; set; }
+        public string value { get; set; }
+        public string text { get; set; }
     }
-    public List<DropDownFields> Modes = new List<DropDownFields>()
-{
-        new DropDownFields(){ Text= "Inline" },
-        new DropDownFields(){ Text= "Popup" },
-
-    };
-
-    public TextBoxModel TModel = new TextBoxModel()
+    List<InplaceModes> ModeData = new List<InplaceModes>()
     {
-        Placeholder = "Enter some text"
+        new InplaceModes(){ value= "Inline", text= "Inline" },
+        new InplaceModes(){ value= "Popup", text= "Popup" }
     };
 
-    private void OnChange(ChangeEventArgs<string> args)
+
+    private void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, InplaceModes> args)
     {
         this.InplaceMode = (args.Value.ToString() == "Popup" ? RenderMode.Popup : RenderMode.Inline);
         this.StateHasChanged();
@@ -94,59 +95,48 @@ In the following code block, the In-place Editor renders with `Inline` mode. You
 
 ### Pop-up customization
 
-In-place Editor popup mode can be customized by using the `Title` and `Model` properties in `PopupSettings` API.
+In-place Editor popup mode can be customized by using the `InPlaceEditorPopupSettings` tag.
 
-Popup mode rendered by using the Blazor Tooltip component, so you can use tooltip properties and events to customize the behavior of popup via the `Model` property of `PopupSettings` API.
+Popup mode is rendered by using the Blazor Tooltip component, so you can use the tooltip properties and events to customize the behavior of popup via the `InPlaceEditorPopupSettings` by configuring tooltip properties.
 
 > For more details, refer to the tooltip documentation [section](../tooltip/).
 
-In the following sample, popup `Title` and `Position` customized using the `PopupSettings` property. All possible tooltip position data is configured in the drop-down, if we change drop down item, selected value bound to `Model` property and applied it to [Tooltip](../tooltip/) component. `Tooltip` have following position options.
-
-* TopLeft
-* TopCenter
-* TopRight
-* BottomLeft
-* BottomCenter
-* BottomRight
-* LeftTop
-* LeftCenter
-* LeftBottom
-* RightTop
-* RightCenter
-* RightBottom
-
 ## Event actions for editing
 
-The event action of the editor enable in the edit mode based on the `EditableOn` property, by default `Click` is assigned, the following options are also supported.
+The event action of the editor will be enabled in the edit mode based on the `EditableOn` property. By default, `Click` is enabled.
+The following options are also supported:
 
-* **Click**:  The editor will be opened as single click actions.
-* **DblClick**: The editor will be opened as double-click actions and it is not applicable for edit icon.
-* **EditIconClick**: Disables the editing of event action of input and allows users to edit only through edit icon.
+* **Click**: The editor will be opened on  single-click actions.
+* **DoubleClick**: The editor will be opened on double-click actions and it is not applicable for the edit icon.
+* **EditIconClick**: Disables the editing of event action of input and allows the users to edit only through edit icon.
 
-> In-place Editor get focus by pressing the `tab` key from previous focusable DOM element and then by pressing `enter` key, the editor will be opened.
+> In-place Editor gets focus by pressing the `tab` key from the previous focusable DOM element. The editor can be opened by pressing the `enter` key.
 
-In the following code block, when switching drop-down item, the selected value assigned to the `EditableOn` property. If you changed to `DblClick`, the editor will open when making a double click on the input.
+In the following code block, when switching the drop-down item, the selected value is assigned to the `EditableOn` property. The editor will be opened when you double click on the input.
 
 ```csharp
 
-
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
 
 <table class="table-section">
     <tr>
         <td>Choose Editable Type: </td>
         <td>
-            <SfDropDownList Value="DropDownValue" Width="auto" Placeholder="Select edit type" DataSource="Modes">
-                <DropDownListFieldSettings Text="Text"></DropDownListFieldSettings>
-                <DropDownListEvents ValueChange="OnChange" TValue="string"></DropDownListEvents>
+            <SfDropDownList Width="90%" TValue="string" TItem="InplaceEditableModes" DataSource="@EditableData" @bind-Value="@DropDownValue">
+                <DropDownListEvents TValue="string" TItem="InplaceEditableModes" ValueChange="@OnChange"></DropDownListEvents>
+                <DropDownListFieldSettings Text="text" Value="value"></DropDownListFieldSettings>
             </SfDropDownList>
         </td>
     </tr>
     <tr>
         <td class="sample-td">Enter your name: </td>
         <td class="sample-td">
-            <SfInPlaceEditor EditableOn="EditableOn" Mode="RenderMode.Inline" Type="InputType.Text" Value="TextValue" SubmitOnEnter="true" Model="TModel">
+            <SfInPlaceEditor @bind-Value="@TextValue" EditableOn="EditableOn" SubmitOnEnter="true" TValue="string">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue" Placeholder="Enter some text"></SfTextBox>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -174,74 +164,76 @@ In the following code block, when switching drop-down item, the selected value a
     public string DropDownValue = "Click";
     public EditableType EditableOn = EditableType.Click;
 
-    public class DropDownFields
+    public class InplaceEditableModes
     {
-        public string Text { get; set; }
+        public string value { get; set; }
+        public string text { get; set; }
     }
 
-    public List<DropDownFields> Modes = new List<DropDownFields>
-{
-        new DropDownFields() { Text= "Click" },
-        new DropDownFields() { Text= "DblClick" },
-        new DropDownFields() { Text= "EditIconClick" }
-    };
-
-    public TextBoxModel TModel = new TextBoxModel()
+    private List<InplaceEditableModes> EditableData = new List<InplaceEditableModes>()
     {
-        Placeholder = "Enter some text"
+        new InplaceEditableModes(){ value= "Click", text= "Click" },
+        new InplaceEditableModes(){ value= "Double Click", text= "Double Click" },
+        new InplaceEditableModes(){ value= "Edit Icon Click", text= "Edit Icon Click" }
     };
 
 
-    private void OnChange(ChangeEventArgs<string> args)
+    private void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, InplaceEditableModes> args)
     {
-        if (args.Value.ToString() == "Click")
+        if (args.Value != null)
         {
-            this.EditableOn = EditableType.Click;
+            if (args.Value.ToString() == "Click")
+            {
+                this.EditableOn = EditableType.Click;
+            }
+            else if (args.Value.ToString() == "Double Click")
+            {
+                this.EditableOn = EditableType.DoubleClick;
+            }
+            else
+            {
+                this.EditableOn = EditableType.EditIconClick;
+            }
+            this.StateHasChanged();
         }
-        else if (args.Value.ToString() == "DblClick")
-        {
-            this.EditableOn = EditableType.DblClick;
-        }
-        else
-        {
-            this.EditableOn = EditableType.EditIconClick;
-        }
-        this.StateHasChanged();
     }
+
 }
-
 ```
 
 ## Action on focus out
 
-Action to be performed when the user clicks outside the container, that means focusing out of editable content and it can be handled by the `ActionOnBlur` property, by default `Submit` assigned. It also has the following options.
+Action will be performed when the user clicks outside the container. That means, focusing out of the editable content can be handled by the `ActionOnBlur` property. By default,  `Submit` is enabled.
+It also has the following options.
 
 * **Cancel**: Cancels the editing and resets the old content.
 * **Submit**: Submits the edited content to the server.
-* **Ignore**: No action is performed with this type and allows to edit multiple editors.
+* **Ignore**: No action will be performed with this type.
 
 In the following code block, when switching drop-down item, the selected value assigned to the `ActionOnBlur` property.
 
 ```csharp
-
-
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
 
 <table class="table-section">
     <tr>
         <td> ActionOnBlur: </td>
         <td>
-            <SfDropDownList Value="DropdownValue" Width="auto" Placeholder="Select blur action" DataSource="Modes">
-                <DropDownListFieldSettings Text="Text"></DropDownListFieldSettings>
-                <DropDownListEvents ValueChange="Onchange" TValue="string"></DropDownListEvents>
+            <SfDropDownList Width="90%" TItem="DropDownFields" TValue="string" DataSource="@Modes" @bind-Value="@DropdownValue">
+                <DropDownListEvents TValue="string" TItem="DropDownFields" ValueChange="@OnChange"></DropDownListEvents>
+                <DropDownListFieldSettings Text="Text" Value="Text"></DropDownListFieldSettings>
             </SfDropDownList>
         </td>
     </tr>
     <tr>
         <td class="sample-td">Enter your name: </td>
         <td class="sample-td">
-            <SfInPlaceEditor ActionOnBlur="OnBlur" Mode="RenderMode.Inline" Type="InputType.Text" Value="TextValue" SubmitOnEnter="true" Model="TModel">
+            <SfInPlaceEditor @bind-Value="@TextValue" ActionOnBlur="OnBlur" SubmitOnEnter="true" TValue="string">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue" Placeholder="Enter some text"></SfTextBox>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -282,13 +274,7 @@ In the following code block, when switching drop-down item, the selected value a
         new DropDownFields() { Text= "Ignore" }
     };
 
-    public TextBoxModel TModel = new TextBoxModel()
-    {
-        Placeholder = "Enter some text"
-    };
-
-
-    private void Onchange(ChangeEventArgs<string> args)
+    private void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropDownFields> args)
     {
         if (args.Value.ToString() == "Submit")
         {
@@ -310,28 +296,34 @@ In the following code block, when switching drop-down item, the selected value a
 
 ## Display modes
 
-By default, In-place Editor input element highlighted with a dotted underline. To remove dotted underline from input element, add `{"data-underline", "false" }` attribute at In-place Editor root element.
+By default, the In-place Editor input element is highlighted with a dotted underline. To remove dotted underline from input element, add `{"data-underline", "false" }` attribute at In-place Editor root element.
 
 In the following code block, indicates the intractable and normal display modes with different examples.
 
 ```csharp
 
-
 @using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Inputs
 
 <h4>Example of data-underline attribute</h4>
 <table class="table-section">
     <tr>
         <td class="col-lg-6 col-md-6 col-sm-6 col-xs-6 control-title"> Intractable UI </td>
         <td class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <SfInPlaceEditor Mode="RenderMode.Inline" Type="InputType.Text" Value="TextValue" SubmitOnEnter="true" Model="TModel">
+            <SfInPlaceEditor @bind-Value="@TextValue" TValue="string" SubmitOnEnter="true">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue" Placeholder="Enter some text"></SfTextBox>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
     <tr>
         <td class="col-lg-6 col-md-6 col-sm-6 col-xs-6 control-title"> Normal UI </td>
         <td class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <SfInPlaceEditor Mode="RenderMode.Inline" HtmlAttributes="htmlAttribute" Type="InputType.Text" Value="TextValue" SubmitOnEnter="true" Model="TModel">
+            <SfInPlaceEditor @bind-Value="@TextValue" TValue="string" SubmitOnEnter="true" @attributes="htmlAttribute">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue" Placeholder="Enter some text"></SfTextBox>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -363,15 +355,11 @@ In the following code block, indicates the intractable and normal display modes 
 @code {
     public string TextValue = "Andrew";
 
-    public TextBoxModel TModel = new TextBoxModel()
-    {
-        Placeholder = "Enter some text"
-    };
-
     Dictionary<string, object> htmlAttribute = new Dictionary<string, object>() {
         {"data-underline", "false" }
     };
 }
+
 ```
 
 The output will be as follows.

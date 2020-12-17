@@ -6,26 +6,30 @@ description: "This how-to section explains changing the default mode to edit mod
 
 # Dynamically move input to edit mode
 
-At component initial load, if you want to open editor state without interacting In-place Editor input element, it can be achieved by configuring the `EnableEditMode` property to `true`.
+At component initial load, you can open the editor state without interacting with the In-place Editor input element by configuring the `EnableEditMode` property to `true`.
 
 In the following example, editor opened at initial load and when toggling a checkbox, it will remove or open the editor.
 
 ```csharp
+
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Buttons
-
+@using Syncfusion.Blazor.Inputs
 
 <table class="table-section">
     <tr>
         <td> EnableEditMode: </td>
         <td>
-            <SfCheckBox Checked="@EditMode" Label="Disable" ValueChange="@onChange" TChecked="bool"></SfCheckBox>
+            <SfCheckBox @bind-Checked="@EditModeEnable" Label="Disable" ValueChange="OnChange" TChecked="bool"></SfCheckBox>
         </td>
     </tr>
     <tr>
         <td class="sample-td"> Enter your name: </td>
         <td class="sample-td">
-            <SfInPlaceEditor Mode="RenderMode.Inline" EnableEditMode="EditModeEnable" ActionOnBlur="ActionBlur.Ignore" Type="InputType.Text" Value="TextValue" SubmitOnEnter="true" Model="TModel">
+            <SfInPlaceEditor @bind-Value="@TextValue" EnableEditMode="EditModeEnable" TValue="string" ActionOnBlur="ActionBlur.Ignore">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue"  Placeholder="Enter some text"></SfTextBox>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -50,18 +54,11 @@ In the following example, editor opened at initial load and when toggling a chec
 
 @code {
     public bool EditModeEnable { get; set; } = true;
-    public string TextValue = "Andrew";
-    private bool EditMode { get; set; } = false;
+    public string TextValue { get; set; } = "Andrew";
 
-     public TextBoxModel TModel = new TextBoxModel()
+    private void OnChange(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
     {
-        Placeholder = "Enter some text"
-    };
-
-    private void onChange(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
-    {
-        this.EditMode = args.Checked;
-        this.EditModeEnable = !args.Checked;
+        this.EditModeEnable = args.Checked;
         this.StateHasChanged();
     }
 }

@@ -6,18 +6,18 @@ description: "This section describes how to integrate native HTML5 components (i
 
 # Integrate HTML5 components (Template)
 
-The In-place Editor supports adding HTML5 input components using the `Template` property. The Template property can be given as follows.
+The In-place Editor supports adding HTML5 input components using the `InPlaceEditorTemplate` property. The Template property can be given as follows.
 
 ```bash
-<InPlaceEditorTemplates>
-    <Template>
-        <input id="date" type="date" />
-    </Template>
-</InPlaceEditorTemplates>
+ <InPlaceEditorTemplate>
+    <input id="date" type="text" />
+</InPlaceEditorTemplate>
 
 ```
 
-Template mode, the `Value` property not handled by the In-place Editor component. So, before sending a value to the server, you need to modify the `OnActionSuccess` event, otherwise, an empty string will pass. In the following template sample, before submitting a data to the server, event argument and `Value` property content updated in the `OnActionSuccess` event handler.
+In Template mode, the `Value` property cannot be handled by the In-place Editor component. So, before sending a value to the server, you need to modify the `OnActionSuccess` event, otherwise, an empty string will be passed.
+
+In the following template sample, before submitting data to the server, the event argument and `Value` property contents are updated in the `OnActionSuccess` event handler.
 
 ```csharp
 
@@ -25,13 +25,11 @@ Template mode, the `Value` property not handled by the In-place Editor component
 
 <div id='container'>
     <span class="content-title"> Select date: </span>
-    <SfInPlaceEditor @ref="InplaceditorObj" EmptyText="Value" TValue="string" Mode="RenderMode.Inline" Type="InputType.Date">
+    <SfInPlaceEditor @ref="InplaceditorObj" EmptyText="Value" TValue="string" @bind-Value="@inplaceValue" Mode="RenderMode.Inline" Type="InputType.Template">
+        <InPlaceEditorTemplate>
+            <input @bind-value="@inplaceValue" id="date" type="text" />
+        </InPlaceEditorTemplate>
         <InPlaceEditorEvents TValue="string" OnActionSuccess="OnSuccess"></InPlaceEditorEvents>
-        <InPlaceEditorTemplates>
-            <Template>
-                <input @bind="Value" id="date" type="text" />
-            </Template>
-        </InPlaceEditorTemplates>
     </SfInPlaceEditor>
 </div>
 
@@ -56,12 +54,11 @@ Template mode, the `Value` property not handled by the In-place Editor component
 @code {
     SfInPlaceEditor<string> InplaceditorObj;
 
-    public string Value { get; set; } = "2018-05-23";
+    public string inplaceValue { get; set; } = "syncfusion";
 
-    private void OnSuccess(ActionEventArgs arg)
+    private void OnSuccess(ActionEventArgs<string> args)
     {
-        this.InplaceditorObj.Value = Value;
-        arg.Value = Value;
+        inplaceValue = args.Value;
     }
 }
 

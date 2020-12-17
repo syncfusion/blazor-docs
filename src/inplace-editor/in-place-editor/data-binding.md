@@ -19,7 +19,11 @@ To bind local data to the Razor components, you can assign an array of object or
 
 <div id="container">
     <span class="content-title"> Select customer name: </span>
-    <SfInPlaceEditor Mode="RenderMode.Inline" Type="InputType.DropDownList" Value="DropDownValue" Model="DropModel">
+    <SfInPlaceEditor @bind-Value="@DropDownValue" Type="Syncfusion.Blazor.InPlaceEditor.InputType.DropDownList" TValue="string">
+        <EditorComponent>
+            <SfDropDownList TItem="string" TValue="string" Placeholder="Select a customer" @bind-Value="@DropDownValue" DataSource="@DataManager">
+            </SfDropDownList>
+        </EditorComponent>
     </SfInPlaceEditor>
 </div>
 
@@ -47,11 +51,6 @@ To bind local data to the Razor components, you can assign an array of object or
     public string DropDownValue = "Maria Anders";
     public static string[] DataManager = new string[] { "Maria Anders", "Ana Trujillo", "Antonio Moreno", "Thomas Hardy", "Chiristina Berglund", "Hanna Moos" };
 
-    public DropDownListModel<string> DropModel = new DropDownListModel<string>()
-    {
-        Placeholder = "Select a customer",
-        DataSource = DataManager
-    };
 }
 
 ```

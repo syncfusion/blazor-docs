@@ -6,24 +6,28 @@ description: "This how-to section explains disabling or enabling the edit mode o
 
 # Disable the edit mode specifically
 
-The edit mode of In-place Editor can be disabled by setting the `Disabled` property value to `true`. In the following example, when check or uncheck the checkbox, In-place Editor component will disable or enable the edit mode.
+The edit mode of the In-place Editor can be disabled by setting the `Disabled` property value to `true`. In the following example, when you check or uncheck the checkbox, the In-place Editor component will disable or enable the edit mode respectively.
 
 ```csharp
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Inputs
 
 <table class="table-section">
     <tr>
         <td> Disabled: </td>
         <td>
-            <SfCheckBox @bind-Checked="Checked" Label="Disable"></SfCheckBox>
+            <SfCheckBox @bind-Checked="Checked" Label="Disable" ></SfCheckBox>
         </td>
     </tr>
     <tr>
         <td class="sample-td"> Enter your name: </td>
         <td class="sample-td">
-            <SfInPlaceEditor Mode="RenderMode.Inline" Disabled="Checked" Type="InputType.Text" Value="TextValue" SubmitOnEnter="true" Model="TModel">
+            <SfInPlaceEditor @bind-Value="@TextValue" TValue="string" Disabled="Checked">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue" Placeholder="Enter some text"></SfTextBox>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -49,11 +53,6 @@ The edit mode of In-place Editor can be disabled by setting the `Disabled` prope
 @code {
     public string TextValue { get; set; } = "Andrew";
     public bool Checked { get; set; } = true;
-
-    public TextBoxModel TModel = new TextBoxModel()
-    {
-        Placeholder = "Enter some text"
-    };
 
 }
 ```

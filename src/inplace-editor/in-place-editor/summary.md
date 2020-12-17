@@ -1,5 +1,4 @@
 * [Getting Started](in-place-editor/getting-started.md)
-* [Native Events](in-place-editor/native-event.md)
 * [List of Components](in-place-editor/controls.md)
 * [Configuration](in-place-editor/configuration.md)
 * [Buttons](in-place-editor/buttons.md)

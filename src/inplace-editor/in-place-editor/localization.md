@@ -25,22 +25,27 @@ In the following sample, `French` culture is set to In-place Editor and change t
 
 ```csharp
 
-@using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Inputs
 
 <table class="table-section">
     <tr>
         <td> Choose Editable Type: </td>
         <td>
-            <SfDropDownList Value="DropdownValue" Width="auto" Placeholder="Select edit type" DataSource="EditableData">
-                <DropDownListEvents ValueChange="Onchange" TValue="string"></DropDownListEvents>
+            <SfDropDownList Width="90%" TValue="string" TItem="InplaceEditableModes" DataSource="@EditableData" @bind-Value="@DropDownValue">
+                <DropDownListEvents TValue="string" TItem="InplaceEditableModes" ValueChange="@OnChange"></DropDownListEvents>
+                <DropDownListFieldSettings Text="text" Value="value"></DropDownListFieldSettings>
             </SfDropDownList>
         </td>
     </tr>
     <tr>
-        <td class="sample-td">Enter your name: </td>
+        <td class="sample-td"> Enter your name: </td>
         <td class="sample-td">
-            <SfInPlaceEditor EditableOn="EditableOn" Mode="RenderMode.Inline" Type="InputType.Text" Value="TextValue" SubmitOnEnter="true" Locale="fr-BE" Model="TModel">
+            <SfInPlaceEditor @bind-Value="@TextValue" EditableOn="@EditableOn" TValue="string" Locale="fr-BE">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue"></SfTextBox>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -64,31 +69,42 @@ In the following sample, `French` culture is set to In-place Editor and change t
 </style>
 
 @code {
-    public string TextValue = "Andrew";
-    public string DropdownValue = "Click";
-    public string[] EditableData = new string[] { "Click", "DblClick", "EditIconClick" };
-    public EditableType EditableOn = EditableType.Click;
+    private string TextValue = "Andrew";
+    public string DropDownValue = "Click";
+    private EditableType EditableOn = EditableType.Click;
 
-    public TextBoxModel TModel = new TextBoxModel()
+    public class InplaceEditableModes
     {
-        Placeholder = "Enter some text"
+        public string value { get; set; }
+        public string text { get; set; }
+    }
+
+    private List<InplaceEditableModes> EditableData = new List<InplaceEditableModes>()
+    {
+        new InplaceEditableModes(){ value= "Click", text= "Click" },
+        new InplaceEditableModes(){ value= "Double Click", text= "Double Click" },
+        new InplaceEditableModes(){ value= "Edit Icon Click", text= "Edit Icon Click" }
     };
 
-    private void Onchange(ChangeEventArgs<string> args)
+
+    private void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, InplaceEditableModes> args)
     {
-        if (args.Value.ToString() == "Click")
+        if (args.Value != null)
         {
-            this.EditableOn = EditableType.Click;
+            if (args.Value.ToString() == "Click")
+            {
+                this.EditableOn = EditableType.Click;
+            }
+            else if (args.Value.ToString() == "Double Click")
+            {
+                this.EditableOn = EditableType.DoubleClick;
+            }
+            else
+            {
+                this.EditableOn = EditableType.EditIconClick;
+            }
+            this.StateHasChanged();
         }
-        else if (args.Value.ToString() == "DblClick")
-        {
-            this.EditableOn = EditableType.DblClick;
-        }
-        else
-        {
-            this.EditableOn = EditableType.EditIconClick;
-        }
-        this.StateHasChanged();
     }
 }
 
@@ -100,19 +116,23 @@ The output will be as follows.
 
 ## Right to left
 
-Specifies the direction of the In-place Editor component using the enableRtl property. For writing systems that requires Arabic, Hebrew, and more. The direction can be switched to right-to-left.
+Specifies the direction of the In-place Editor component using the `EnableRtl` property. For writing systems that requires Arabic, Hebrew, and more. The direction can be switched to right-to-left.
 
 > It will not change based on the locale property.
 
 ```csharp
 
 @using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Inputs
 
 <table>
     <tr>
         <td class="control-title content-title"> Enter your name: </td>
         <td>
-            <SfInPlaceEditor EnableRtl="true" Mode="RenderMode.Inline" Type="InputType.Text" Value="@TextValue" SubmitOnEnter="true" Model="@TModel">
+            <SfInPlaceEditor @bind-Value="@TextValue" EnableRtl="true" TValue="string">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue" Placeholder="Enter some text"></SfTextBox>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -120,11 +140,6 @@ Specifies the direction of the In-place Editor component using the enableRtl pro
 
 @code {
     public string TextValue = "Andrew";
-
-    public TextBoxModel TModel = new TextBoxModel()
-    {
-        Placeholder = "Enter some text"
-    };
 }
 
 ```
@@ -135,7 +150,7 @@ The output will be as follows.
 
 ## Format
 
-Formatting is a way of representing the value in different formats. You can format the following mentioned components with its `format` property when it is passed through the In-place Editor `Model` property.
+Formatting is a way of representing the value in different formats. You can format the following mentioned components with its `format` property when it is directly configured in the Editor component.
 
 * [DatePicker](../datepicker/date-format/)
 * [DateRangePicker](../daterangepicker/globalization/)
@@ -147,25 +162,23 @@ Formatting is a way of representing the value in different formats. You can form
 ```csharp
 
 @using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Calendars
 
 <table>
     <tr>
         <td class="control-title"> DatePicker </td>
         <td>
-            <SfInPlaceEditor Mode="RenderMode.Inline" Type="InputType.Date" Value="@DateValue" Model="@DateModel">
+            <SfInPlaceEditor Type="Syncfusion.Blazor.InPlaceEditor.InputType.Date" TValue="DateTime?" @bind-Value="@DateValue">
+                <EditorComponent>
+                    <SfDatePicker TValue="DateTime?" @bind-Value="@DateValue" Format="yyyy-MM-dd"  Placeholder="Choose a Date"></SfDatePicker>
+                </EditorComponent>
             </SfInPlaceEditor>
         </td>
     </tr>
 </table>
 
 @code {
-    public DateTime DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-
-    public DatePickerModel DateModel = new DatePickerModel()
-    {
-        Placeholder = "Select date",
-        Format = "yyyy-MM-dd"
-    };
+    public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 }
 
 ```

@@ -6,30 +6,36 @@ description: "This how-to section explains applying animation to the popup by cu
 
 # Set custom animation for popup mode
 
-In popup mode, the In-place Editor rendered with the Blazor `Tooltip` component. You can use tooltip properties and events to customize the popup by configure properties into the `Model` property inside the `PopupSettings` API.
+In popup mode, the In-place Editor is rendered with the Blazor `Tooltip` component. You can use the tooltip properties and events to customize the popup by configuring properties using the `InPlaceEditorPopupSettings` tag.
 
-In the following example, popup animation can be customized by passing animation effect using the `Model` property and the dynamic animation effect changes configured from the Blazor `DropDownList` component `ValueChange` event.
+In the following example, popup animation can be customized by passing animation effect using the `InPlaceEditorPopupSettings` tag and the dynamic animation effect changes configured from the Blazor `DropDownList` component `ValueChange` event.
 
 ```csharp
 
+@using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Popups
 
 <div id='container'>
     <table class="table-section">
         <tr>
             <td> Open Animation: </td>
             <td>
-                <SfDropDownList PopupHeight="150px" Value="DropdownValue" Placeholder="Select a animate type" DataSource="OpenAnimateData">
-                    <DropDownListEvents ValueChange="OnChange" TValue="string"></DropDownListEvents>
-                    <DropDownListFieldSettings Text="Text"></DropDownListFieldSettings>
+                <SfDropDownList PopupHeight="150px" @bind-Value="DropdownValue" Placeholder="Select a animate type" DataSource="OpenAnimateData">
+                    <DropDownListEvents ValueChange="@OnChange" TValue="string" TItem="DropDownFields"></DropDownListEvents>
+                    <DropDownListFieldSettings Value="Text" Text="Text"></DropDownListFieldSettings>
                 </SfDropDownList>
             </td>
         </tr>
         <tr>
             <td class="sample-td"> Enter your name: </td>
             <td class="sample-td">
-                <SfInPlaceEditor Mode="RenderMode.Popup" Type="InputType.Text" PopupSettings="InplacePopup" Value="TextValue" Model="TModel">
+                <SfInPlaceEditor @bind-Value="@TextValue" Mode="RenderMode.Popup" TValue="string">
+                    <EditorComponent>
+                        <SfTextBox @bind-Value="@TextValue" Placeholder="Enter some text"></SfTextBox>
+                    </EditorComponent>
+                    <InPlaceEditorPopupSettings Animation="@Animation"></InPlaceEditorPopupSettings>
                 </SfInPlaceEditor>
             </td>
         </tr>
@@ -71,48 +77,22 @@ In the following example, popup animation can be customized by passing animation
         new DropDownFields() { Text= "ZoomIn" }
     };
 
-    public string TextValue = "Andrew";
-    public string DropdownValue = "ZoomIn";
+    public string DropdownValue { get; set; } = "ZoomIn";
+    public string TextValue { get; set; } = "Andrew";
 
-    public TextBoxModel TModel = new TextBoxModel()
+    public AnimationModel Animation { get; set; } = new AnimationModel
     {
-        Placeholder = "Enter some text"
+        Open = new TooltipAnimationSettings { Delay = 0, Duration = 150, Effect = Effect.ZoomIn }
     };
 
-    public void OnChange(ChangeEventArgs<string> args)
+    public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropDownFields> args)
     {
-        InplacePopup = new InPlaceEditorPopupSettings()
+        Animation = new AnimationModel
         {
-            Model = new
-            {
-                animation = new
-                {
-                    open = new
-                    {
-                        effect = args.Value,
-                        duration = 1000,
-                        delay = 0
-                    }
-                }
-            }
+            Open = new TooltipAnimationSettings { Delay = 0, Duration = 150, Effect = (Effect)System.Enum.Parse(typeof(Effect), args.Value) }
         };
     }
 
-    public InPlaceEditorPopupSettings InplacePopup = new InPlaceEditorPopupSettings()
-    {
-        Model = new
-        {
-            animation = new
-            {
-                open = new
-                {
-                    effect = "ZoomIn",
-                    duration = 1000,
-                    delay = 0
-                }
-            }
-        }
-    };
 }
 
 ```

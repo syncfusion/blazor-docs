@@ -6,30 +6,31 @@ description: "This section demonstrates how to apply custom validation rules and
 
 # Validation
 
-In-place Editor component supports validation and it can be achieved by adding rules to the `ValidationRules` property, its child property `key` must be same as `Name` property, otherwise validation not performed. Submitting data to the server or calling the `validate` method validation executed.
+Now, validation can be done by using the  EditForm validation on the server-side. We need to handle the validation from the application level and the custom validation can also be achieved by using this.
 
-In the following sample, first editor value submitted without selecting any date, so the default error message will be displayed below the  `DatePicker` element. Second editor configured with the `Validating` event with the handler. In handler event, the `errorMessage` argument value is modified and it will show below the `DatePicker` element.
+Please refer to the following link for more details,[`EditForm Validation`](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0).
+
+Validation for the `TextBox` is achieved in the following sample using the EditForm validation with a custom error message and validation rules.
 
 ```csharp
 
-
-
 @using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Calendars
+@using System.ComponentModel.DataAnnotations;
 
 <table class="table-section">
     <tr>
-        <td class="col-lg-6 col-md-6 col-sm-6 col-xs-6 control-title"> Default Error Message </td>
-        <td class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <SfInPlaceEditor Mode="RenderMode.Inline" EmptyText="dd/mm/yyyy" Name="Today" ValidationRules="Validate" Type="InputType.Date" Model="DateModel" TValue="string">
-            </SfInPlaceEditor>
-        </td>
-    </tr>
-    <tr>
-        <td class="col-lg-6 col-md-6 col-sm-6 col-xs-6 control-title"> Customized Error Message </td>
-        <td class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <SfInPlaceEditor Mode="RenderMode.Inline" EmptyText="dd/mm/yyyy" Name="TodayCustom" ValidationRules="Validation" Type="InputType.Date" Model="DateModel" TValue="string">
-                <InPlaceEditorEvents Validating="OnValidation" TValue="string"></InPlaceEditorEvents>
-            </SfInPlaceEditor>
+        <td class="sample-td"> Enter your name: </td>
+        <td class="sample-td">
+            <SfInPlaceEditor @bind-Value="exampleModel.Name" Type="Syncfusion.Blazor.InPlaceEditor.InputType.Text"  TValue="string">
+                    <EditorComponent>
+                            <EditForm Model="@exampleModel">
+                                <DataAnnotationsValidator />
+                                <SfTextBox @bind-Value="exampleModel.Name"></SfTextBox>
+                                <ValidationMessage For=@(() => exampleModel.Name) />
+                            </EditForm>
+                    </EditorComponent>
+                </SfInPlaceEditor>
         </td>
     </tr>
 </table>
@@ -39,37 +40,28 @@ In the following sample, first editor value submitted without selecting any date
         margin: 0 auto;
     }
 
-    td {
-        padding: 20px 0;
+    tr td:first-child {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .sample-td {
+        padding-top: 10px;
         min-width: 230px;
         height: 100px;
     }
-
-    .control-title {
-        font-weight: 600;
-        padding-right: 20px;
-        text-align: right;
-        width: 50%;
-    }
 </style>
 
-@code {
-    public DatePickerModel DateModel = new DatePickerModel()
-    {
-        Placeholder = "Select date"
-    };
-    public object Validate = new
-    {
-        Today = new { required = true }
-    };
-    public object Validation = new
-    {
-        TodayCustom = new { required = true }
-    };
 
-    private void OnValidation(ValidateEventArgs args)
+@code {
+    private string primaryKey { get; set; } = "editor1";
+    private ExampleModel exampleModel = new ExampleModel();
+
+    public class ExampleModel
     {
-        args.ErrorMessage = "Field should not be empty";
+        [Required]
+        [StringLength(10, ErrorMessage = "Name is too long.")]
+        public string Name { get; set; } = "sync";
     }
 }
 ```
@@ -77,5 +69,3 @@ In the following sample, first editor value submitted without selecting any date
 The output will be as follows.
 
 ![validation](./images/validation.png)
-
-* For custom validation except specifying validationRules, specify errorMessage at validating event, message will be shown when the value is `Empty`.

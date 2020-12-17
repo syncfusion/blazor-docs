@@ -38,19 +38,19 @@ The panels within the layout can be easily positioned or ordered using the `Row`
         <DashboardLayoutPanel>
             <ContentTemplate><div>1</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel Col=1>
+        <DashboardLayoutPanel  Column=1>
             <ContentTemplate><div>2</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel Col=2>
+        <DashboardLayoutPanel Column=2>
             <ContentTemplate><div>3</div></ContentTemplate>
         </DashboardLayoutPanel>
         <DashboardLayoutPanel Row=1>
             <ContentTemplate><div>4</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel Row=1 Col=1>
+        <DashboardLayoutPanel Row=1 Column=1>
             <ContentTemplate><div>5</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel Row=1 Col=2>
+        <DashboardLayoutPanel Row=1 Column=2>
             <ContentTemplate><div>6</div></ContentTemplate>
         </DashboardLayoutPanel>
     </DashboardLayoutPanels>
@@ -87,19 +87,19 @@ These properties are helpful in designing a dashboard, where the content of each
         <DashboardLayoutPanel>
             <ContentTemplate><div>0</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeX=2 Col=1>
+        <DashboardLayoutPanel SizeX=2 Column=1>
             <ContentTemplate><div>1</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeY=2 Col=3>
+        <DashboardLayoutPanel SizeY=2 Column=3>
             <ContentTemplate><div>2</div></ContentTemplate>
         </DashboardLayoutPanel>
         <DashboardLayoutPanel Row=1>
             <ContentTemplate><div>3</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel Row=1 Col=1>
+        <DashboardLayoutPanel Row=1 Column=1>
             <ContentTemplate><div>4</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel Row=1 Col=2>
+        <DashboardLayoutPanel Row=1 Column=2>
             <ContentTemplate><div>5</div></ContentTemplate>
         </DashboardLayoutPanel>
     </DashboardLayoutPanels>

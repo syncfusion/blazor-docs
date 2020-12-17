@@ -26,10 +26,10 @@ The size of grid cells can be modified to the required size using the `Columns` 
         <DashboardLayoutPanel>
             <ContentTemplate><div>0</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeX=2 SizeY=2 Col=1>
+        <DashboardLayoutPanel SizeX=2 SizeY=2 Column=1>
             <ContentTemplate><div>1</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeY=2 Col=3>
+        <DashboardLayoutPanel SizeY=2 Column=3>
             <ContentTemplate><div>2</div></ContentTemplate>
         </DashboardLayoutPanel>
         <DashboardLayoutPanel Row=1>
@@ -68,10 +68,10 @@ The spacing between each panel in a row and column can be defined using the `Cel
         <DashboardLayoutPanel>
             <ContentTemplate><div>0</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeX=2 SizeY=2 Col=1>
+        <DashboardLayoutPanel SizeX=2 SizeY=2 Column=1>
             <ContentTemplate><div>1</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeY=2 Col=3>
+        <DashboardLayoutPanel SizeY=2 Column=3>
             <ContentTemplate><div>2</div></ContentTemplate>
         </DashboardLayoutPanel>
         <DashboardLayoutPanel Row=1>
@@ -106,13 +106,13 @@ These cells combinedly forms a grid-structured layout, which will be hidden init
         <DashboardLayoutPanel Col=1>
             <ContentTemplate><div>0</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeX=1 SizeY=2 Col=2>
+        <DashboardLayoutPanel SizeX=1 SizeY=2 Column=2>
             <ContentTemplate><div>1</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeY=1 Col=3>
+        <DashboardLayoutPanel SizeY=1 Column=3>
             <ContentTemplate><div>2</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel Row=1 Col=3>
+        <DashboardLayoutPanel Row=1 Column=3>
             <ContentTemplate><div>3</div></ContentTemplate>
         </DashboardLayoutPanel>
     </DashboardLayoutPanels>

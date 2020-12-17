@@ -108,7 +108,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Layouts` package.
 
 ## Initialize the Dashboard Layout component
 
-It is easy to initialize a dashboard layout component with panel. To render a dashboard layout component with default `Row` and `Col` (Row=0, Col=0) value of panels, refer to the following code section.
+It is easy to initialize a dashboard layout component with panel. To render a dashboard layout component with default `Row` and `Column` (Row=0, Column=0) value of panels, refer to the following code section.
 
 ### [Pages/Index.razor]
 
@@ -200,7 +200,7 @@ These complex data (components) are placed as the panel content by assigning the
                             <ChartSeriesCollection>
                                 <ChartSeries DataSource="@DataSource" XName="XValue" YName="YValue" Type="ChartSeriesType.Line">
                                     <ChartMarker Visible="true">
-                                        <ChartDataLabel Visible="true" Position="LabelPosition.Top">
+                                        <ChartDataLabel Visible="true" Position="Syncfusion.Blazor.Charts.LabelPosition.Top">
                                         </ChartDataLabel>
                                     </ChartMarker>
                                 </ChartSeries>
@@ -209,7 +209,7 @@ These complex data (components) are placed as the panel content by assigning the
                     </div>
                 </ContentTemplate>
             </DashboardLayoutPanel>
-            <DashboardLayoutPanel Id="Panel2" SizeX="2" SizeY="2" Col="4">
+            <DashboardLayoutPanel Id="Panel2" SizeX="2" SizeY="2" Column="4">
                 <HeaderTemplate><div class='header'> Product sales in Years </div></HeaderTemplate>
                 <ContentTemplate>
                     <div style="height:100%; width:100%;">
@@ -221,7 +221,7 @@ These complex data (components) are placed as the panel content by assigning the
                     </div>
                 </ContentTemplate>
             </DashboardLayoutPanel>
-            <DashboardLayoutPanel Id="Panel3" SizeX="3" SizeY="2" Row=2 Col=3>
+            <DashboardLayoutPanel Id="Panel3" SizeX="3" SizeY="2" Row=2 Column=3>
                 <HeaderTemplate><div class='header'> Sales Ratio in Countries </div></HeaderTemplate>
                 <ContentTemplate>
                     <div style="height:100%; width:100%;">
@@ -238,7 +238,7 @@ These complex data (components) are placed as the panel content by assigning the
 
                 </ContentTemplate>
             </DashboardLayoutPanel>
-            <DashboardLayoutPanel Id="Panel4" SizeX=3 SizeY=2 Row=2 Col=0>
+            <DashboardLayoutPanel Id="Panel4" SizeX=3 SizeY=2 Row=2 Column=0>
                 <HeaderTemplate><div class='header'> Sales Comparison in Products  </div></HeaderTemplate>
                 <ContentTemplate>
                     <div style="height:100%; width:100%;">
@@ -256,17 +256,17 @@ These complex data (components) are placed as the panel content by assigning the
                     </div>
                 </ContentTemplate>
             </DashboardLayoutPanel>
-            <DashboardLayoutPanel Id="Panel5" SizeX=6 SizeY=2 Col=6 Row=4>
+            <DashboardLayoutPanel Id="Panel5" SizeX=6 SizeY=2 Column=6 Row=4>
                 <HeaderTemplate><div class='header'> Top Customers Details</div></HeaderTemplate>
                 <ContentTemplate>
                     <div style="height:100%; width:100%;">
                         <SfGrid ID="grid" DataSource="@Orders">
                             <GridPageSettings></GridPageSettings>
                             <GridColumns>
-                                <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+                                <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
                                 <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="130"></GridColumn>
-                                <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="yMd" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-                                <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+                                <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="yMd" Type="ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
+                                <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
                             </GridColumns>
                         </SfGrid>
                     </div>
@@ -275,12 +275,12 @@ These complex data (components) are placed as the panel content by assigning the
         </DashboardLayoutPanels>
     </SfDashboardLayout>
 </div>
-@functions {
-    SfChart chartObj;
+@code
+ { SfChart chartObj;
     SfChart barchartObj;
     SfRangeNavigator rangeObj;
     SfChart linechartObj;
-    DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
+    private object[] Value = new object[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
     public class ChartData
     {
         public DateTime XValue;
@@ -325,12 +325,10 @@ These complex data (components) are placed as the panel content by assigning the
     {
         await Task.Delay(3000); // simulate the async operations
         this.chartObj.Refresh();
-        this.rangeObj.Refresh();
         this.linechartObj.Refresh();
         this.barchartObj.Refresh();
     }
-
-}
+ }
 
 <style>
     #linechart, #grid, #chart1, #chart, #range {

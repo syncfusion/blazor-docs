@@ -21,11 +21,11 @@ Basically, Dashboard layout Component have two templates to render the data in p
             <HeaderTemplate><div>Panel 0</div></HeaderTemplate>
             <ContentTemplate><div>Panel Content</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeX=2 SizeY=2 Col=1>
+        <DashboardLayoutPanel SizeX=2 SizeY=2 Column=1>
             <HeaderTemplate><div>Panel 1</div></HeaderTemplate>
             <ContentTemplate><div>Panel Content</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeY=2 Col=3>
+        <DashboardLayoutPanel SizeY=2 Column=3>
             <HeaderTemplate><div>Panel 2</div></HeaderTemplate>
             <ContentTemplate><div>Panel Content</div></ContentTemplate>
         </DashboardLayoutPanel>

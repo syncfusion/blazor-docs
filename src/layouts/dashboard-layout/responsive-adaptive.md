@@ -19,10 +19,10 @@ The dashboard layout is designed to automatically adapt with lower resolutions b
         <DashboardLayoutPanel>
             <ContentTemplate><div>0</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeX=2 SizeY=2 Col=1>
+        <DashboardLayoutPanel SizeX=2 SizeY=2 Column=1>
             <ContentTemplate><div>1</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeY=2 Col=3>
+        <DashboardLayoutPanel SizeY=2 Column=3>
             <ContentTemplate><div>2</div></ContentTemplate>
         </DashboardLayoutPanel>
         <DashboardLayoutPanel Row=1>

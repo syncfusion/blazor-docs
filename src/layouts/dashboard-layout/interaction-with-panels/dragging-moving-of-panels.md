@@ -21,10 +21,10 @@ If one or more panels collide while dragging, then the colliding panels will be 
         <DashboardLayoutPanel>
             <ContentTemplate><div>0</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeX=2 SizeY=2 Col=1>
+        <DashboardLayoutPanel SizeX=2 SizeY=2 Column=1>
             <ContentTemplate><div>1</div></ContentTemplate>
         </DashboardLayoutPanel>
-        <DashboardLayoutPanel SizeY=2 Col=3>
+        <DashboardLayoutPanel SizeY=2 Column=3>
             <ContentTemplate><div>2</div></ContentTemplate>
         </DashboardLayoutPanel>
         <DashboardLayoutPanel Row=1>
@@ -61,10 +61,10 @@ The dragging handler for the panels can be customized using the `DraggableHandle
             <DashboardLayoutPanel>
                 <HeaderTemplate><div>Panel 1</div></HeaderTemplate>
             </DashboardLayoutPanel>
-            <DashboardLayoutPanel SizeX=2 SizeY=2 Col=1>
+            <DashboardLayoutPanel SizeX=2 SizeY=2 Column=1>
                 <HeaderTemplate><div>Panel 2</div></HeaderTemplate>
             </DashboardLayoutPanel>
-            <DashboardLayoutPanel SizeY=2 Col=3>
+            <DashboardLayoutPanel SizeY=2 Column=3>
                 <HeaderTemplate><div>Panel 3</div></HeaderTemplate>
             </DashboardLayoutPanel>
             <DashboardLayoutPanel Row=1>

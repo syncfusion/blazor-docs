@@ -42,7 +42,7 @@ Color bar can be customized in quite a number of ways.
             </div>
             <div class="slider_container">
                 <div class="slider-labeltext slider_userselect">Dynamic thumb and selection bar color</div>
-                <SfSlider @bind-Value="@Value" ID="dynamic_color_slider" Type="SliderType.MinRange" CssClass="@DynamicColor">
+                <SfSlider  @bind-Value="@Value" ID="dynamic_color_slider" Type="SliderType.MinRange" CssClass="@DynamicColor">
                     <SliderEvents TValue="int" ValueChange="@(e => { OnChange(e.Value); })"></SliderEvents>
                 </SfSlider>
             </div>

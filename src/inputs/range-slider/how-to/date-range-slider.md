@@ -14,8 +14,8 @@ The date formatting can be achieved using `TicksRendering` and `TooltipChange` e
 
 <SfSlider TValue="int" Min="MinValue()" Max="@MaxValue()" Value="15">
     <SliderEvents TicksRendering="@TickesRendering" TValue="int" OnTooltipChange="@TooltipChange"></SliderEvents>
-    <SliderTicksData LargeStep="1" ShowSmallTicks="true" Placement="Placement.Before"> </SliderTicksData>
-    <SliderTooltipData Placement="TooltipPlacement.After" IsVisible="true"></SliderTooltipData>
+    <SliderTicks LargeStep="1" ShowSmallTicks="true" Placement="Placement.Before"> </SliderTicks>
+    <SliderTooltip Placement="TooltipPlacement.After" IsVisible="true"></SliderTooltip>
 </SfSlider>
 
 @code{

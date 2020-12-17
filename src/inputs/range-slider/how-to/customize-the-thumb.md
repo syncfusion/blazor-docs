@@ -27,7 +27,7 @@ Slider appearance can be customized through CSS. By overriding the slider CSS cl
             <div class="slider_container">
                 <div class="labelText slider-userselect">Custom image</div>
                 <SfSlider Value="30" ID="image_slider">
-                    <SliderTicksData Placement="@Placement.After" LargeStep="10" SmallStep="5" ShowSmallTicks="true"></SliderTicksData>
+                    <SliderTicks Placement="@Placement.After" LargeStep="10" SmallStep="5" ShowSmallTicks="true"></SliderTicks>
                 </SfSlider>
             </div>
         </div>

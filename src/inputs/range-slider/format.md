@@ -14,8 +14,8 @@ The `Format` feature used to customize the units of Slider values to desired for
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="30">
-    <SliderTooltipData IsVisible="true" ShowOn="TooltipShowOn.Always" Format="C2" Placement="TooltipPlacement.Before"></SliderTooltipData>
-    <SliderTicksData Placement="Placement.Before" Format="C2" ShowSmallTicks="true" LargeStep="20" SmallStep="10"></SliderTicksData>
+    <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Format="C2" Placement="TooltipPlacement.Before"></SliderTooltip>
+    <SliderTicks Placement="Placement.Before" Format="C2" ShowSmallTicks="true" LargeStep="20" SmallStep="10"></SliderTicks>
 </SfSlider>
 ```
 
@@ -29,8 +29,8 @@ Slider provides different predefined formatting styles like Numeric (N), Percent
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Min="1" Max="10" Value="3">
-    <SliderTicksData Placement="Placement.After" Format="P0" ShowSmallTicks="true" LargeStep="2" SmallStep="1"></SliderTicksData>
-    <SliderTooltipData IsVisible="true" ShowOn="TooltipShowOn.Always" Format="P0" Placement="TooltipPlacement.Before"></SliderTooltipData>
+    <SliderTicks Placement="Placement.After" Format="P0" ShowSmallTicks="true" LargeStep="2" SmallStep="1"></SliderTicks>
+    <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Format="P0" Placement="TooltipPlacement.Before"></SliderTooltip>
 </SfSlider>
 ```
 

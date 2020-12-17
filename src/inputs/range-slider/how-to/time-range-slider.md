@@ -13,8 +13,8 @@ The time formatting can be achieved same as the date formatting using `TicksRend
 
 <SfSlider TValue="int[]" Min="MinValue()" Max="@MaxValue()" Type="SliderType.Range" Value="SliderValues">
     <SliderEvents TValue="int[]" OnTooltipChange="@TooltipChange" TicksRendering="@TickesRendering"></SliderEvents>
-    <SliderTicksData Placement="Placement.Before" LargeStep="7200000" SmallStep="3600000" ShowSmallTicks="true"></SliderTicksData>
-    <SliderTooltipData Placement="TooltipPlacement.After" IsVisible="true"></SliderTooltipData>
+    <SliderTicks Placement="Placement.Before" LargeStep="7200000" SmallStep="3600000" ShowSmallTicks="true"></SliderTicks>
+    <SliderTooltip Placement="TooltipPlacement.After" IsVisible="true"></SliderTooltip>
 </SfSlider>
 
 @code{

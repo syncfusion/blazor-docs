@@ -5,22 +5,22 @@ The numeric values can be formatted into different decimal digits or fixed numbe
 We have numeric range sliders, which can be formatted in any way of your choice. In the examples found below, the first one demonstrates the visualization of ticks in km.
 
 ```csharp
- <SliderTicksData ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicksData>
-                <SliderTooltipData IsVisible="true" Placement="TooltipPlacement.Before" Format="##.##km"></SliderTooltipData>
+ <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicks>
+                <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.##km"></SliderTooltip>
 ```
 
 The second example showcases the use of decimal point in the Slider's ticks and tooltip placement.
 
 ```csharp
-  <SliderTicksData ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.#00"> </SliderTicksData>
-                    <SliderTooltipData IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltipData>
+  <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.#00"> </SliderTicks>
+                    <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltip>
 ```
 
 And in the third example, the formatting involves the placement of zeros before the required values.
 
 ```csharp
- <SliderTicksData ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicksData>
-                <SliderTooltipData IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltipData>
+ <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicks>
+                <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltip>
 ```
 
 The complete code for the above Numeric Range Slider can be found below.
@@ -33,22 +33,22 @@ The complete code for the above Numeric Range Slider can be found below.
         <div class="sliderwrap">
             <label class="labeltext userselect">Default Slider</label>
             <SfSlider Value="30">
-                <SliderTicksData ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicksData>
-                <SliderTooltipData IsVisible="true" Placement="TooltipPlacement.Before" Format="##.##km"></SliderTooltipData>
+                <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicks>
+                <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.##km"></SliderTooltip>
             </SfSlider>
         </div>
         <div class="sliderwrap">
             <label class="labeltext userselect">MinRange Slider</label>
             <SfSlider Value="30" Type=SliderType.MinRange>
-                <SliderTicksData ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.#00"> </SliderTicksData>
-                    <SliderTooltipData IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltipData>
+                <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.#00"> </SliderTicks>
+                    <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltip>
             </SfSlider>
         </div>
         <div class="sliderwrap">
             <label class="labeltext userselect">Range slider</label>
             <SfSlider Value=@Value Type=SliderType.Range>
-                <SliderTicksData ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicksData>
-                <SliderTooltipData IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltipData>
+                <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicks>
+                <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltip>
             </SfSlider>
         </div>
     </div>

@@ -29,7 +29,7 @@ Refer to the following snippet to enable the limits in the Slider.
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="30" Type="SliderType.MinRange">
-    <SliderLimitData MinStart="20" MinEnd="50" Enabled="true"></SliderLimitData>
+    <SliderLimits MinStart="20" MinEnd="50" Enabled="true"></SliderLimits>
 </SfSlider>
 ```
 
@@ -44,7 +44,7 @@ In the range slider, both handles can be restricted and locked from the limit's 
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="@Value" Type="SliderType.Range">
-    <SliderLimitData Enabled="true" MinStart="10" MinEnd="40" MaxStart="60" MaxEnd="90"></SliderLimitData>
+    <SliderLimits Enabled="true" MinStart="10" MinEnd="40" MaxStart="60" MaxEnd="90"></SliderLimits>
 </SfSlider>
 
 @code{
@@ -63,8 +63,8 @@ In this sample, the movement of both slider handles has been locked.
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="@Value" Type="SliderType.Range">
-    <SliderLimitData Enabled="true" StartHandleFixed="true" EndHandleFixed="true">
-    </SliderLimitData>
+     <SliderLimits Enabled="true" StartHandleFixed="true" EndHandleFixed="true">
+    </SliderLimits>
 </SfSlider>
 
 @code{

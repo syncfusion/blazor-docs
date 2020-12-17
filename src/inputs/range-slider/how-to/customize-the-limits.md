@@ -19,25 +19,24 @@ And on implementing the above code snippet in the below slider control's Blazor 
         <div class='sliderwrap'>
             <label class="userselect">MinRange Slider With Limits</label>
             <SfSlider @bind-Value="@Default" Min="0" Max="100" Type=SliderType.MinRange>
-                <SliderTicksData Placement="@Placement.Before" LargeStep="20" SmallStep="5" ShowSmallTicks="true"></SliderTicksData>
-                <SliderTooltipData IsVisible="true" Placement="@TooltipPlacement.Before" ShowOn="@TooltipShowOn.Focus"></SliderTooltipData>
-                <SliderLimitData Enabled="true"
+                <SliderTicks Placement="@Placement.Before" LargeStep="20" SmallStep="5" ShowSmallTicks="true"></SliderTicks>
+                <SliderTooltip IsVisible="true" Placement="@TooltipPlacement.Before" ShowOn="@TooltipShowOn.Focus"></SliderTooltip>
+                <SliderLimits Enabled="true"
                                  MinStart="10"
                                  MinEnd="40"
-                                 StartHandleFixed="false"></SliderLimitData>
+                                 StartHandleFixed="false"></SliderLimits>
             </SfSlider>
         </div>
         <div class='sliderwrap'>
             <label class="userselect">Range Slider With Limits</label>
             <SfSlider @bind-Value="@Range" Min="0" Max="100" Type=SliderType.Range>
-                <SliderTicksData Placement="@Placement.Before" LargeStep="20" SmallStep="5" ShowSmallTicks="true"></SliderTicksData>
-                <SliderTooltipData IsVisible="true" Placement="@TooltipPlacement.Before" ShowOn="@TooltipShowOn.Focus"></SliderTooltipData>
-                <SliderLimitData Enabled="true"
+               <SliderTicks Placement="@Placement.Before" LargeStep="20" SmallStep="5" ShowSmallTicks="true"></SliderTicks>
+                <SliderTooltip IsVisible="true" Placement="@TooltipPlacement.Before" ShowOn="@TooltipShowOn.Focus"></SliderTooltip>
+                <SliderLimits Enabled="true"
                                  MinStart="10"
                                  MinEnd="40"
                                  MaxStart="50"
-                                 MaxEnd="90"
-                               ></SliderLimitData>
+                                 MaxEnd="90"></SliderLimits>
             </SfSlider>
         </div>
     </div>

@@ -66,10 +66,11 @@ In the following example, non-mask element `P` accepts the values `P, A, p, a`, 
 <SfMaskedTextBox Mask="00:00 >PM" Placeholder="Time (ex: 10:00 PM, 10:00 AM)" CustomCharacters="@CustomMask"></SfMaskedTextBox>
 
 @code {
-  private object CustomMask {get; set;} = new {
-      P = "P,p, A, a",
-      M = "M, m"
-  };
+    public Dictionary<string, string> CustomMask = new Dictionary<string, string>()
+    {
+        {"P" , "P,p,A,a" },
+        {"M" , "m,M" }
+    };
 }
 ```
 
@@ -104,7 +105,11 @@ The following example demonstrates the MaskedTextBox with customized prompt char
 ```csharp
 @using Syncfusion.Blazor.Inputs
 
-<SfMaskedTextBox Mask="999-999-9999" PromptChar="#"></SfMaskedTextBox>
+<SfMaskedTextBox Mask="999-999-9999" PromptChar="@PromptCharacter"></SfMaskedTextBox>
+
+@code{
+    public char PromptCharacter { get; set; } = '#';
+}
 ```
 
 The output will be as follows.

@@ -19,7 +19,7 @@ You can bind the value to the MaskedTextBox component directly for `Value` prope
 ```csharp
 @using Syncfusion.Blazor.Inputs
 
-<SfMaskedTextBox Mask="00000" Value=@MaskValue></SfMaskedTextBox>
+<SfMaskedTextBox Mask="00000" @bind-Value=@MaskValue></SfMaskedTextBox>
 
 <button @onclick="@UpdateValue">Update Value</button>
 

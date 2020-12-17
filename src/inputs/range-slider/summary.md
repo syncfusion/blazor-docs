@@ -12,4 +12,6 @@
 * [Customize the thumb](range-slider/how-to/customize-the-thumb.md)
 * [Customize the tick label](range-slider/how-to/customize-slider-ticks-label.md)
 * [Numeric Range Slider](range-slider/how-to/numeric-range-slider.md)
-* [Validate the slider using FormValidator](range-slider/how-to/validate.md)
+* [Date Range Slider](range-slider/how-to/date-range-slider.md)
+* [Time Range Slider](range-slider/how-to/time-range-slider.md)
+* [Validation of Slider](range-slider/how-to/validate.md)

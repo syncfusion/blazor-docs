@@ -18,7 +18,7 @@ The file can be uploaded automatically or manually. For more information, you ca
 
 By Default, the uploader component allows you to select and upload multiple files simultaneously.
 The selected files are organized in a list for every file selection until you clear it by clicking clear button that is shown in footer. You can add the multiple attributes to original input element of file by enabling the multiple file selection.
-The following example explains about [Multiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_Multiple) file upload settings.
+The following example explains about [AllowMultiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowMultiple) file upload settings.
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
@@ -33,7 +33,7 @@ The following example explains about [Multiple](https://help.syncfusion.com/cr/b
 
 ## Single file upload
 
-You can select and upload a single file by disabling the [Multiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_Multiple) file selection property.
+You can select and upload a single file by disabling the [AllowMultiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowMultiple) file selection property.
 The file list item is removed for every selection and it always maintain a single file to upload.
 You can remove the multiple attributes form the original input element of file by enabling the single file upload property.
 
@@ -44,7 +44,7 @@ The following example explains about single file upload settings.
 ```csharp
 @using Syncfusion.Blazor.Inputs
 
-<SfUploader ID="UploadFiles" Multiple=false>
+<SfUploader ID="UploadFiles" AllowMultiple=false>
 <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove">
 </UploaderAsyncSettings>
 </SfUploader>
@@ -59,7 +59,7 @@ By default, the uploader processes the files to upload once the files are select
 ```csharp
 @using Syncfusion.Blazor.Inputs
 
-<SfUploader ID="UploadFiles" Multiple=false AutoUpload=false>
+<SfUploader ID="UploadFiles" AllowMultiple=false AutoUpload=false>
 <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove">
 </UploaderAsyncSettings>
 </SfUploader>

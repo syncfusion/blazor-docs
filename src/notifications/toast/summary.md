@@ -12,3 +12,4 @@
 * [Show toast content dynamically](toast/how-to/change-toast-content-dynamically.md)
 * [Close the toast with click/tap](toast/how-to/close-the-toast-with-click-tap.md)
 * [Add dynamic template](toast/how-to/add-dynamic-template.md)
+* [Access specific toast](toast/how-to/access-specific-toast.md)

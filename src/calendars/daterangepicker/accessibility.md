@@ -66,7 +66,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker @onkeypress="@(e => KeyPressed(e))" @ref="RangeObj"></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="RangeObj"></SfDateRangePicker>
 
 @code {
     public SfDateRangePicker RangeObj;

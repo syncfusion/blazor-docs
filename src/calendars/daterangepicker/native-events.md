@@ -17,7 +17,7 @@ In the following example, the KeyPressed method is called every time the key is 
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker @onkeypress='@KeyPressed'></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" @onkeypress='@KeyPressed'></SfDateRangePicker>
 
 @code {
     public void KeyPressed(){
@@ -31,7 +31,7 @@ Also, you can rewrite the above example code as follows using Lambda expressions
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfDateRangePicker>
 ```
 
 ## Pass event data to event handler
@@ -50,7 +50,7 @@ In the following example, the KeyPressed method is called every time any key is 
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker @onkeypress='@(e => KeyPressed(e))'></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" @onkeypress='@(e => KeyPressed(e))'></SfDateRangePicker>
 
 @code {
     public void KeyPressed(KeyboardEventArgs args)

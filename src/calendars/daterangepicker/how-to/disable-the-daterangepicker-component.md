@@ -11,11 +11,11 @@ DateRangePicker can be inactivated on a page. By setting [Enabled](https://help.
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker Enabled=false StartDate='@Start' EndDate='@End'></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Enabled=false StartDate="@Start" EndDate="@End"></SfDateRangePicker>
 
 @code {
-    public DateTime Start { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 20);
-    public DateTime End { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, 25);
+    public DateTime? Start { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 20);
+    public DateTime? End { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, 25);
 }
 ```
 

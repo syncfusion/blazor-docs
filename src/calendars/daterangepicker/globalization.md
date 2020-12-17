@@ -125,7 +125,7 @@ namespace blazorCalendars
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker Locale="de"></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Locale="de"></SfDateRangePicker>
 ```
 
 ## Blazor WebAssembly
@@ -188,7 +188,7 @@ namespace WebAssemblyLocale
 @using Syncfusion.Blazor.Calendars
 @inject HttpClient Http;
 
-<SfDateRangePicker Locale="de"></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Locale="de"></SfDateRangePicker>
 
 @code {
     [Inject]
@@ -243,7 +243,7 @@ The following code example initialize the DateRangePicker component in `Hebrew` 
 @using Syncfusion.Blazor.Calendars
 @inject HttpClient Http;
 
-<SfDateRangePicker Locale="ar" EnableRtl=true></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Locale="ar" EnableRtl=true></SfDateRangePicker>
 
 @code {
     [Inject]

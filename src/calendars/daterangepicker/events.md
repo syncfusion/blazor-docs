@@ -28,8 +28,8 @@ select |[RangeSelected](events/#rangeselected)
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker>
-    <DateRangePickerEvents Blur="BlurHandler"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?">
+    <DateRangePickerEvents TValue="DateTime?" Blur="BlurHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 @code{
 
@@ -47,12 +47,12 @@ select |[RangeSelected](events/#rangeselected)
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker>
-    <DateRangePickerEvents ValueChange="ValueChangeHandler"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?">
+    <DateRangePickerEvents TValue="DateTime?" ValueChange="ValueChangeHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 @code{
 
-    public void ValueChangeHandler(RangeEventArgs args)
+    public void ValueChangeHandler(RangePickerEventArgs<DateTime?> args)
     {
         // Here you can customize your code
     }
@@ -66,12 +66,12 @@ select |[RangeSelected](events/#rangeselected)
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker>
-    <DateRangePickerEvents OnClose="OnCloseHandler"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?">
+    <DateRangePickerEvents TValue="DateTime?" OnClose="OnCloseHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 @code{
 
-    public void OnCloseHandler(object args)
+    public void OnCloseHandler(RangePopupEventArgs args)
     {
         // Here you can customize your code
     }
@@ -85,8 +85,8 @@ select |[RangeSelected](events/#rangeselected)
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker>
-    <DateRangePickerEvents Created="CreatedHandler"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?">
+    <DateRangePickerEvents TValue="DateTime?" Created="CreatedHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 @code{
 
@@ -104,8 +104,8 @@ select |[RangeSelected](events/#rangeselected)
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker>
-    <DateRangePickerEvents Destroyed="DestroyHandler"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?">
+    <DateRangePickerEvents TValue="DateTime?" Destroyed="DestroyHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 @code{
 
@@ -123,8 +123,8 @@ select |[RangeSelected](events/#rangeselected)
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker>
-    <DateRangePickerEvents Focus="FocusHandler"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?">
+    <DateRangePickerEvents TValue="DateTime?"  Focus="FocusHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 
 @code{
@@ -143,8 +143,8 @@ select |[RangeSelected](events/#rangeselected)
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker>
-    <DateRangePickerEvents Navigated="NavigateHandler"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?">
+    <DateRangePickerEvents TValue="DateTime?" Navigated="NavigateHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 
 @code{
@@ -163,13 +163,13 @@ select |[RangeSelected](events/#rangeselected)
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker>
-    <DateRangePickerEvents OnOpen="OpenHandler"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?">
+    <DateRangePickerEvents TValue="DateTime?" OnOpen="OpenHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 
 @code{
 
-    public void OpenHandler(object args)
+    public void OpenHandler(RangePopupEventArgs args)
     {
         // Here you can customize your code
     }
@@ -183,8 +183,8 @@ select |[RangeSelected](events/#rangeselected)
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker>
-    <DateRangePickerEvents OnRenderDayCell="onRenderDayCellHandler"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?">
+    <DateRangePickerEvents TValue="DateTime?" OnRenderDayCell="onRenderDayCellHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 
 @code{
@@ -203,13 +203,13 @@ select |[RangeSelected](events/#rangeselected)
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker>
-    <DateRangePickerEvents RangeSelected="RangeSelectHandler"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?">
+    <DateRangePickerEvents TValue="DateTime?" RangeSelected="RangeSelectHandler"></DateRangePickerEvents>
 </SfDateRangePicker>
 
 @code{
 
-    public void RangeSelectHandler(object args)
+    public void RangeSelectHandler(RangePickerEventArgs<DateTime?> args)
     {
         // Here you can customize your code
     }

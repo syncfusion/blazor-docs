@@ -20,7 +20,7 @@ In the following sample, you can select a range from 15th day of this month to 1
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
 
 @code {
     public DateTime MinDate {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,15);
@@ -45,7 +45,7 @@ In the following sample, the range selection should be greater than 5 days and l
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker MinDays=5 MaxDays=10 Placeholder='Select a range'>
+<SfDateRangePicker TValue="DateTime?" MinDays=5 MaxDays=10 Placeholder='Select a range'>
 </SfDateRangePicker>
 ```
 
@@ -60,13 +60,13 @@ DateRangePicker provides an option to limit the user towards entering the valid 
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker StartDate='@Start' EndDate='@End' StrictMode=true Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" StartDate='@Start' EndDate='@End' StrictMode=true Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
 
 @code {
     public DateTime MinDate {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,15);
     public DateTime MaxDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 15);
-    public DateTime Start {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,20);
-    public DateTime End {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 25);
+    public DateTime? Start {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,20);
+    public DateTime? End {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 25);
 }
 ```
 
@@ -94,13 +94,13 @@ valid or invalid value in text box.
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker StartDate='@Start' EndDate='@End' StrictMode=false Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" StartDate='@Start' EndDate='@End' StrictMode=false Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
 
 @code {
     public DateTime MinDate {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,15);
     public DateTime MaxDate {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 15);
-    public DateTime Start {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,20);
-    public DateTime End {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 25);
+    public DateTime? Start {get;set;} = new DateTime(DateTime.Now.Year,DateTime.Now.Month,20);
+    public DateTime? End {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month+1, 25);
 }
 ```
 

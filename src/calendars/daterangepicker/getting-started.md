@@ -82,7 +82,7 @@ To initialize the DateRangePicker component add the below code to your `Index.ra
 The following code shows a basic DateRangePicker component.
 
 ```csharp
-<SfDateRangePicker Placeholder="Choose a Range"></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Placeholder="Choose a Range"></SfDateRangePicker>
 ```
 
 ## Run the application
@@ -101,7 +101,7 @@ The following code demonstrates how to set the `Min` and `Max` on initializing t
 DateRangePicker.
 
 ```csharp
-<SfDateRangePicker Placeholder="Choose a Range" Min="@MinDate" Max="@MaxDate"></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Placeholder="Choose a Range" Min="@MinDate" Max="@MaxDate"></SfDateRangePicker>
 
 @code {
     public DateTime MinDate {get;set;} = new DateTime(2017, 01, 05);

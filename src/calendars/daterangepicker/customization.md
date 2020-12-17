@@ -17,7 +17,7 @@ By default, first day of a week in en-US is Sunday. In the following example, it
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker Placeholder="Select a range" FirstDayOfWeek=3></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Placeholder="Select a range" FirstDayOfWeek=3></SfDateRangePicker>
 ```
 
 The output will be as follows.

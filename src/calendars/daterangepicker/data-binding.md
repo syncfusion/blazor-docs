@@ -19,15 +19,15 @@ We can bind the value to the DateRangePicker component directly for `StartDate` 
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker StartDate="@StartValue" EndDate="@EndValue"></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" StartDate="@StartValue" EndDate="@EndValue"></SfDateRangePicker>
 
 <button @onclick="@UpdateValue">Update Value</button>
 
 @code {
 
-    public DateTime StartValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28);
+    public DateTime? StartValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28);
 
-    public DateTime EndValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, 28);
+    public DateTime? EndValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, 28);
 
     public void UpdateValue()
     {
@@ -46,7 +46,7 @@ Two-way binding can be achieved by using `bind-StartDate` and `bind-EndDate` att
 
 <p>DateRangePickers StarteDate and EndDate is: <strong>@StartValue</strong> and <strong>@EndValue</strong></p>
 
-<SfDateRangePicker @bind-StartDate="@StartValue" EndDate="@EndValue" ></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" @bind-StartDate="@StartValue" EndDate="@EndValue" ></SfDateRangePicker>
 
 @code {
 
@@ -67,17 +67,17 @@ There is no need to call this method for native events since it’s called after
 
 <p>DateRangePicker StarteDate and EndDate is: <strong> @StartValue </strong> and <strong> @EndValue </strong></p>
 
-<SfDateRangePicker StartDate="@StartValue" EndDate="@EndValue">
-<DateRangePickerEvents ValueChange="@onChange"></DateRangePickerEvents>
+<SfDateRangePicker TValue="DateTime?" StartDate="@StartValue" EndDate="@EndValue">
+<DateRangePickerEvents TValue="DateTime?" ValueChange="@onChange"></DateRangePickerEvents>
 </SfDateRangePicker>
 
 @code {
 
-public DateTime StartValue { get; set; } = DateTime.Now;
+public DateTime? StartValue { get; set; } = DateTime.Now;
 
-public DateTime EndValue { get; set; } = DateTime.Now;
+public DateTime? EndValue { get; set; } = DateTime.Now;
 
-private void onChange(RangeEventArgs args)
+private void onChange(RangePickerEventArgs<DateTime?> args)
 {
     StartValue = args.StartDate;
     EndValue = args.EndDate;

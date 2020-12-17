@@ -38,7 +38,7 @@ Following is the list of classes that provides flexible way to customize the Dat
 ```csharp
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker Placeholder="Select a range" CssClass="CustomCSS" ></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" Placeholder="Select a range" CssClass="CustomCSS" ></SfDateRangePicker>
 
 <style>
      .CustomCSS .e-calendar .e-content .e-selected span.e-day,

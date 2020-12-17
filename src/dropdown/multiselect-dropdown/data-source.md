@@ -7,7 +7,7 @@ description: "This section for Syncfusion ASP.NET multiselect control shows how 
 # Data Source
 
 The MultiSelect loads the data either from local data sources or
-remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
+remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
 
 The MultiSelect also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html) adaptors.
 
@@ -27,14 +27,14 @@ Local data can be represented in two ways as described below.
 ### 1. Array of object
 
 The MultiSelect can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_Fields) property.
+the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
 In the following example, `Name` column from complex data have been mapped to the `Value` field.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" DataSource="@Country">
+<SfMultiSelect TValue="string[]" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
     <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -79,20 +79,20 @@ The output will be as follows.
 ### 2. Array of complex object
 
 The MultiSelect can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_Fields) property.
+the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
 In the following example, `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="e.g. Select a country" DataSource="@LocalData">
+<SfMultiSelect TValue="string[]" TItem="Complex" Placeholder="e.g. Select a country" DataSource="@LocalData">
     <MultiSelectFieldSettings Text="Country.CountryID" Value="Code.ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
 @code {
 
-public object LocalData { get; set; } = new Complex().GetData();
+public List<Complex> LocalData { get; set; } = new Complex().GetData();
 
     public class Code
     {
@@ -108,7 +108,7 @@ public object LocalData { get; set; } = new Complex().GetData();
     {
         public Country Country { get; set; }
         public Code Code { get; set; }
-        public List<Complex>GetData() {
+        public List<Complex> GetData() {
              List<Complex>Data = new List<Complex>();
             Data.Add(new Complex() { Country = new Country() { CountryID = "Australia" }, Code = new Code() { ID = "AU" } });
             Data.Add(new Complex() { Country = new Country() { CountryID = "Bermuda" }, Code = new Code() { ID = "BM" } });
@@ -128,7 +128,7 @@ The output will be as follows.
 
 ## Binding remote data
 
-The MultiSelect supports retrieval of data from remote data services with the help of `DataManager` component. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_Query) property is used to fetch
+The MultiSelect supports retrieval of data from remote data services with the help of `DataManager` component. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch
 data from the database and bind it to the MultiSelect.
 
 The following sample displays the first 6 contacts from **Customers** table of the `Northwind` Data Service.
@@ -137,13 +137,28 @@ The following sample displays the first 6 contacts from **Customers** table of t
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="Select a customer" Query="@Query">
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/" Adaptor="Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
-    <MultiSelectFieldSettings Text="ContactName" Value="CustomerID"></MultiSelectFieldSettings>
+<SfMultiSelect TValue="string[]" TItem="OrderDetails" Placeholder="Select a customer" Query="@Query">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+    <MultiSelectFieldSettings Text="CustomerID" Value="OrderID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
 @code {
-    public string Query = "new sf.data.Query().from('Customers').select(['ContactName', 'CustomerID']).take(6).requiresCount()";
+    public Query Query = new Query().Select(new List<string> { "CustomerID", "OrderID" }).Take(6).RequiresCount();
+
+    public class OrderDetails
+        {
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public int? EmployeeID { get; set; }
+            public double? Freight { get; set; }
+            public string ShipCity { get; set; }
+            public bool Verified { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public string ShipName { get; set; }
+            public string ShipCountry { get; set; }
+            public DateTime? ShippedDate { get; set; }
+            public string ShipAddress { get; set; }
+        }
 }
 ```
 
@@ -165,7 +180,15 @@ Use the `WebApiAdaptor` to bind MultiSelect with Web API created using OData.
 </SfMultiSelect>
 
 @code {
-    public string Query = "new sf.data.Query().select(['FirstName', 'EmployeeID']).take(6).requiresCount()";
+   public Query Query = new Query();
+
+    public class EmployeeData
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
+    }
 }
 ```
 
@@ -201,7 +224,7 @@ The custom data binding can be performed in the MultiSelect component by providi
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
 ```csharp
-<SfMultiSelect TValue="string[]">
+<SfMultiSelect TValue="string[]" TItem="Orders">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <MultiSelectFieldSettings Value="CustomerID"></MultiSelectFieldSettings>
 </SfMultiSelect>
@@ -262,13 +285,21 @@ The following example for remote data binding and enabled offline mode.
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="Select a Employee" Query="@Query">
+<SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a Employee" Query="@Query">
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true Offline=true></SfDataManager>
     <MultiSelectFieldSettings Text="FirstName" Value="EmployeeID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
 @code {
-    public string Query = "new sf.data.Query().select(['FirstName', 'EmployeeID']).take(6).requiresCount()";
+    public Query Query = new Query();
+
+    public class EmployeeData
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
+    }
 }
 ```
 
@@ -398,7 +429,7 @@ Now you can configure the MultiSelect using the **'SfDataManager'** to interact 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="Select a Country">
+<SfMultiSelect TValue="string[]" TItem="Order" Placeholder="Select a Country">
     <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
     <MultiSelectFieldSettings  Text="ShipCountry" Value="OrderID"></MultiSelectFieldSettings>
 </SfMultiSelect>

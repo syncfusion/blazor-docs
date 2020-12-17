@@ -76,7 +76,7 @@ namespace BlazorApplication
 To initialize the MultiSelect component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
 
 ```csharp
-<SfMultiSelect TValue="string[]" Placeholder='First Name'></SfMultiSelect>
+<SfMultiSelect TValue="string[]" TItem="string" Placeholder='First Name'></SfMultiSelect>
 ```
 
 Output be like below
@@ -85,12 +85,12 @@ Output be like below
 
 ## Binding data source
 
-After initialization, populate the MultiSelect with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_DataSource) property. Here, an array of string values is passed to the MultiSelect component.
+After initialization, populate the MultiSelect with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Here, an array of string values is passed to the MultiSelect component. `TItem` specifies the type of the Datasource in MultiSelect.
 
 The following example illustrates the output in your browser.
 
 ```csharp
-<SfMultiSelect TValue="string[]" Placeholder="Favorite Sports" DataSource="@LocalData">
+<SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" DataSource="@LocalData">
 <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -129,7 +129,7 @@ The height and width of the popup list can also be customized using the [PopupHe
 In the following sample, popup list's width and height are configured.
 
 ```csharp
-<SfMultiSelect TValue="string[]" Placeholder="Favorite Sports" PopupHeight="350px" PopupWidth="350px" DataSource="@LocalData">
+<SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" PopupHeight="350px" PopupWidth="350px" DataSource="@LocalData">
 <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 

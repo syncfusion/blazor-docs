@@ -12,7 +12,7 @@ selected value, header, and footer elements.
 ## Item template
 
 The content of each list item within the MultiSelect can be customized with the
-help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_ItemTemplate) property.
+help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
 
 In the following sample, each list item is split into two columns to display relevant data.
 
@@ -20,7 +20,7 @@ In the following sample, each list item is split into two columns to display rel
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect ModelType="@Data" Placeholder="Select a customer" Query="@Query">
+<SfMultiSelect Placeholder="Select a employee" TValue="string[]" TItem="EmployeeData" Query="@Query">
     <MultiSelectTemplates>
         <ItemTemplate>
             <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='country'>@((context as EmployeeData).Country)</span></span>
@@ -36,8 +36,7 @@ In the following sample, each list item is split into two columns to display rel
         public string FirstName { get; set; }
         public string Country { get; set; }
     }
-    public EmployeeData Data = new EmployeeData();
-    public string Query = "new sf.data.Query().select(['FirstName', 'Country']).take(6).requiresCount()";
+    public Query Query = new Query();
 }
 
 <style>
@@ -63,7 +62,7 @@ in the MultiSelect input, which is separated by a hyphen.
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect ModelType="@Data" Placeholder="Select a customer" Query="@Query">
+<SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a employee" Query="@Query">
     <MultiSelectTemplates>
         <ItemTemplate>
             <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='destination'>@((context as EmployeeData).Designation)</span></span>
@@ -82,8 +81,7 @@ in the MultiSelect input, which is separated by a hyphen.
         public string FirstName { get; set; }
         public string Designation { get; set; }
     }
-    public EmployeeData Data = new EmployeeData();
-    public string Query = "new sf.data.Query().select(['FirstName', 'Designation']).take(6).requiresCount()";
+    public Query Query = new Query();
 }
 <style>
     .destination {
@@ -110,7 +108,7 @@ similar to multiple columns of the grid.
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" ModelType="@Data" Placeholder="Select a customer" Query="@Query">
+<SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a employe" Query="@Query">
     <MultiSelectTemplates>
         <ItemTemplate>
             <span class='item'><span class='name'>@((context as EmployeeData).FirstName)</span><span class='city'>@((context as EmployeeData).Country)</span></span>
@@ -129,8 +127,7 @@ similar to multiple columns of the grid.
         public string FirstName { get; set; }
         public string Country { get; set; }
     }
-    public EmployeeData Data = new EmployeeData();
-    public string Query = "new sf.data.Query().select(['FirstName', 'Country']).take(6).requiresCount()";
+    public Query Query = new Query();
 }
 
 <style>
@@ -177,7 +174,7 @@ In the following sample, footer element displays the total number of list items 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" ModelType="@Data" Query="@Query" Placeholder="Select a customer">
+<SfMultiSelect TValue="string[]" TItem="EmployeeData" Query="@Query" Placeholder="Select a customer">
     <MultiSelectTemplates>
         <FooterTemplate>
             <span class='footer'>Total list Item: 6 </span>
@@ -193,8 +190,7 @@ In the following sample, footer element displays the total number of list items 
     {
         public string FirstName { get; set; }
     }
-    public EmployeeData Data = new EmployeeData();
-    public string Query = "new sf.data.Query().select(['FirstName', 'Country']).take(6).requiresCount()";
+    public Query Query = new Query();
 }
 
 <style>
@@ -216,14 +212,14 @@ The output will be as follows.
 
 The MultiSelect is provided with support to custom design the popup list content when no data is found
 and no matches found on search with the help of
-[NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_NoRecordsTemplate) property.
+[NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property.
 
 In the following sample, popup list content displays the notification of no data available.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" ModelType="@Data" Placeholder="Select a customer" CssClass="e-custom" DataSource="@Country">
+<SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a employee" CssClass="e-custom" DataSource="@employee">
     <MultiSelectTemplates>
         <NoRecordsTemplate>
             <span class='norecord'> NO DATA AVAILABLE</span>
@@ -232,12 +228,10 @@ In the following sample, popup list content displays the notification of no data
 </SfMultiSelect>
 
 @code {
+
     public class EmployeeData { }
-    public EmployeeData Data = new EmployeeData();
 
-    public class Countries { }
-
-    List<Countries> Country = new List<Countries> { };
+    List<EmployeeData> employee = new List<EmployeeData> { };
 }
 ```
 
@@ -249,7 +243,7 @@ The output will be as follows.
 
 There is also an option to custom design the popup list content when the data fetch request
 fails at the remote server. This can be achieved using the
-[ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_ActionFailureTemplate) property.
+[ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
 
 In the following sample, when the data fetch request fails, the MultiSelect displays the notification.
 
@@ -257,7 +251,7 @@ In the following sample, when the data fetch request fails, the MultiSelect disp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" ModelType="@Data" Placeholder="Select a customer" Query="@Query">
+<SfMultiSelect  TValue="string[]" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
     <MultiSelectTemplates>
         <ActionFailureTemplate>
             <span class='norecord'>Data fetch get fails </span>
@@ -272,8 +266,7 @@ In the following sample, when the data fetch request fails, the MultiSelect disp
     {
         public string FirstName { get; set; }
     }
-    public EmployeeData Data = new EmployeeData();
-    public string Query = "new sf.data.Query().select(['FirstName', 'Country']).take(6).requiresCount()";
+    public Query Query = new Query();
 }
 ```
 

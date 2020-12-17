@@ -121,7 +121,7 @@ namespace blazorDropdowns
 ```csharp
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="Favorite Sports" Locale="de" AllowFiltering="true" DataSource="@LocalData">
+<SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" Locale="de" AllowFiltering="true" DataSource="@LocalData">
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -145,8 +145,8 @@ namespace blazorDropdowns
 ## Blazor WebAssembly
 
 The Localization library allows you to localize static text content of the
-[NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_NoRecordsTemplate)
-and [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_ActionFailureTemplate)
+[NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate)
+and [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate)
 &nbsp;properties according to the culture currently assigned to the MultiSelect.
 
 | Locale key | en-US (default)
@@ -207,14 +207,14 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-In the following sample, French culture is set to the MultiSelect and no data is loaded. Hence, the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_NoRecordsTemplate) property displays its text in French culture initially, and if the sample is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_ActionFailureTemplate) property displays its text appropriately.
+In the following sample, French culture is set to the MultiSelect and no data is loaded. Hence, the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property displays its text in French culture initially, and if the sample is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property displays its text appropriately.
 
 ```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 @inject HttpClient Http;
 
-<SfMultiSelect TValue="string[]" Query="@Query" Placeholder="Select a customer" Locale="fr">
+<SfMultiSelect TValue="string[]" TItem="EmployeeData" Query="@Query" Placeholder="Select a customer" Locale="fr" AllowFiltering="true" >
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
     <MultiSelectFieldSettings Value="Country" Text="FirstName"></MultiSelectFieldSettings>
 </SfMultiSelect>
@@ -226,7 +226,14 @@ In the following sample, French culture is set to the MultiSelect and no data is
     {
         this.JsRuntime.Sf().LoadLocaleData(await Http.GetJsonAsync<object>("blazor-locale/src/fr.json")).SetCulture("fr");
     }
-    public string Query = "new sf.data.Query().select(['FirstName', 'Country']).take(6).requiresCount()";
+    public Query Query = new Query();
+    public class EmployeeData
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
+    }
 }
 ```
 

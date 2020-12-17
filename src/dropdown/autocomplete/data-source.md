@@ -6,7 +6,7 @@ description: "This section for Essential JS2 Syncfusion ASP.NET autocomplete con
 
 # Data Source
 
-The AutoComplete loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_DataSource) property. It supports the data type of array or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
+The AutoComplete loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of array or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
 
 The AutoComplete also supports different kinds of data services such as OData, OData V4, and Web API and data formats such as XML, JSON, JSONP with the help of DataManager Adaptors.
 
@@ -26,7 +26,7 @@ Local data can be represented in two ways as described below.
 ### Array of object
 
 The AutoComplete can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_Fields) property.
+the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
 In the following example, `Name` column from complex data have been mapped to the `Value` field.
 
@@ -78,7 +78,7 @@ The output will be as follows.
 ### Array of complex object
 
 The AutoComplete can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_Fields) property.
+the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
 In the following example, `Country.CountryID` column from complex data have been mapped to the `Value` field.
 
@@ -129,7 +129,7 @@ The output will be as follows.
 ## Bind to remote data
 
 The AutoComplete supports retrieval of data from remote data services with the help of
-[DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html) component. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_Query)
+[DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query)
 property is used to fetch data from the database and bind it to the AutoComplete.
 
 The following sample displays the first 6 contacts from the **Customers** table of the `Northwind` data service.

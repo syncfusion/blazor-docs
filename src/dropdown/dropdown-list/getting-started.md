@@ -89,7 +89,7 @@ Output be like below
 
 ## Binding data source
 
-After initialization, populate the DropDownList with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_DataSource) property.
+After initialization, populate the DropDownList with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property.
 Here, an array of object values is passed to the DropDownList component. `TItem` specifies the type of the Datasource in DropDownList.
 
 ```csharp

@@ -7,7 +7,7 @@ description: "This section for Syncfusion ASP.NET combo box control shows how to
 # Data Source
 
 The ComboBox loads the data either from local data sources or
-remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_DataSource) property. It supports
+remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports
 the data type of `array` or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
 
 The ComboBox also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html) adaptors.
@@ -28,7 +28,7 @@ Local data can be represented in two ways as described below.
 ### Array of JSON data
 
 The ComboBox can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_Fields) property.
+the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
 In the following example, `Name` column from complex data have been mapped to the `Value` field.
 
@@ -80,7 +80,7 @@ The output will be as follows.
 ### Array of Complex data
 
 The ComboBox can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_Fields) property.
+the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
 In the following example, `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
@@ -129,7 +129,7 @@ The output will be as follows.
 
 ## Binding remote data
 
-The ComboBox supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html) component. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_Query) property is used to fetch
+The ComboBox supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch
 data from the database and bind it to the ComboBox.
 
 In the following sample, displayed first 6 contacts from the **Customers** table of `Northwind` Data Service.

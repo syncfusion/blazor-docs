@@ -16,7 +16,7 @@ In the following sample, vegetables are grouped according on its category using 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="Select a vegetable" DataSource="@LocalData">
+<SfMultiSelect TValue="string[]" TItem="Vegetables" Placeholder="Select a vegetable" DataSource="@LocalData">
     <MultiSelectFieldSettings  GroupBy="Category" Value="Vegetable"></MultiSelectFieldSettings>
 </SfMultiSelect>
 

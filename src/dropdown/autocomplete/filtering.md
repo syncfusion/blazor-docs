@@ -12,7 +12,7 @@ starts as soon as you start typing characters in the component.
 ## Change the filter type
 
 Determines on which filter type the component needs to be considered on search action.
-The available [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_FilterType) and its supported data types are:
+The available [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) and its supported data types are:
 
 | **Filter Type** | **Description**                                         | **Supported Types** |
 | --------------- | ------------------------------------------------------- | ------------------- |
@@ -135,7 +135,7 @@ The output will be as follows.
 ## Case sensitive filtering
 
 Data items can be filtered either with or without case sensitivity using the DataManager.
-This can be done by setting the [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_IgnoreCase) property of AutoComplete.
+This can be done by setting the [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreCase) property of AutoComplete.
 
 The following sample depicts how to filter the data with case-sensitive.
 

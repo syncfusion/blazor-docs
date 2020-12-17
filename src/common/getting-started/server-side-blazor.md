@@ -13,7 +13,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-> **Note:** **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later and **.NET 5.0 RC1** requires Visual Studio 2019 16.8 Preview 3 or later.
+> **Note:** **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later and **.NET 5.0 RC2** requires Visual Studio 2019 16.8 Preview 3 or later.
 
 ## Create a Blazor Server project in Visual Studio 2019
 
@@ -83,7 +83,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     </head>
     ```
 
-    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.3.35/styles/bootstrap4.css).
+    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.3.47/styles/bootstrap4.css).
     >
     > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Startup.cs** file by using true parameter as mentioned below.
     >

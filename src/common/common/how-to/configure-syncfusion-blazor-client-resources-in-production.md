@@ -2,13 +2,11 @@
 
 * The Syncfusion Blazor suit maintains the built-in script resources (interop scripts) by default. So, there is no need to include script reference in the application end.
 
-> **Note:** Starting with version 18.3.0.35 (Volume 3, 2020), the Syncfusion Blazor library is integrated with the JavaScript Isolation feature of Blazor. So, you don’t need to add `DisableScriptManager` anymore in the `AddSyncfusionBlazor` service for your production environment to configure the Syncfusion init interop script (`syncfusion-blazor.min.js`) manually. i.e. The Syncfusion Blazor library itself handles the Syncfusion init interop script and it is no longer need to be added manually in the layout page (_Host.cshtml/index.html) for production.
->
-> The `DisableScriptManager` can be enabled in the production environment for the CDN or custom interop script generated from [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/).
+> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the Syncfusion Blazor library is integrated with the JavaScript Isolation feature of Blazor. So, you don’t need to add `DisableScriptManager` anymore in the `AddSyncfusionBlazor` service for your production environment to configure the Syncfusion init interop script (`syncfusion-blazor.min.js`) manually. i.e. The Syncfusion Blazor library itself handles the Syncfusion init interop script and it is no longer need to be added manually in the layout page (_Host.cshtml/index.html) for production.
 
 ## Adding Syncfusion Blazor init interop script in the production application
 
-> **Note:** Starting with version 18.3.0.35 (Volume 3, 2020), the below configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
+> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the below configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
 
 * Set `DisableScriptManager` as true to the `AddSyncfusionBlazor` service in the `~/Startup.cs` file for Blazor server app or `~/Program.cs` file for Blazor WebAssembly app.
 

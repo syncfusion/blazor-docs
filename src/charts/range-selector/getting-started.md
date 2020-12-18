@@ -75,6 +75,17 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor components in any web page (razor) in the Pages folder. For example, the `Range navigator` component is added in the **~/Pages/Index.razor** page.
 
+**Note:** For smooth user interaction with chart, please load the ***lodash*** script,
+
+```csharp
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+</head>
+```
+
+ in the **HEAD** element of the **~/Pages/_Host.cshtml** page for server side blazor application,
+ in the **HEAD** element of the **~/wwwroot/index.html** for wasm application.
+
 ```csharp
 <SfRangeNavigator></SfRangeNavigator>
 ```
@@ -87,8 +98,8 @@ the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 ```csharp
 public class StockPrice
 {
-    public DateTime Date;
-    public double Close;
+    public DateTime Date { get; set;}
+    public double Close { get; set; }
 }
 public List<StockPrice> StockDetails = new List<StockPrice>
         {

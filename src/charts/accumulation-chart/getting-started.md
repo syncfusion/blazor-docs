@@ -75,6 +75,17 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor components in any web page (razor) in the Pages folder. For example, the AccumulationChart component is added in the **~/Pages/Index.razor** page.
 
+**Note:** For smooth user interaction with chart, please load the ***lodash*** script,
+
+```csharp
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+</head>
+```
+
+ in the **HEAD** element of the **~/Pages/_Host.cshtml** page for server side blazor application,
+ in the **HEAD** element of the **~/wwwroot/index.html** for wasm application.
+
 ```csharp
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart>
@@ -87,8 +98,8 @@ Now, add the Syncfusion Blazor components in any web page (razor) in the Pages f
 @code{
     public class ChartData
     {
-        public string Country;
-        public double Medals;
+        public string Country { get; set;}
+        public double Medals { get; set;}
     }
     public List<ChartData> MedalDetails = new List<ChartData>
 {
@@ -126,8 +137,8 @@ You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfu
 @code{
     public class ChartData
     {
-        public string Country;
-        public double Medals;
+        public string Country { get; set; }
+        public double Medals { get; set; }
     }
     public List<ChartData> MedalDetails = new List<ChartData>
 {
@@ -155,7 +166,7 @@ You can add data labels to improve the readability of the Accumulation chart. Th
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
-            <AccumulationDataLabelSettings Visible="true" Name="Medals"></AccumulationDataLabelSettings>
+            <AccumulationDataLabelSettings Visible="true"/>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
@@ -163,8 +174,8 @@ You can add data labels to improve the readability of the Accumulation chart. Th
 @code{
     public class ChartData
     {
-        public string Country;
-        public double Medals;
+        public string Country { get; set; }
+        public double Medals { get; set; }
     }
     public List<ChartData> MedalDetails = new List<ChartData>
 {
@@ -202,8 +213,8 @@ The tooltip is useful when you cannot display information by using the data labe
 @code{
     public class ChartData
     {
-        public string Country;
-        public double Medals;
+        public string Country { get; set;}
+        public double Medals {get; set;}
     }
     public List<ChartData> MedalDetails = new List<ChartData>
 {
@@ -243,8 +254,8 @@ You can use legend for the accumulation chart by setting the [`Visible`](https:/
 @code{
     public class ChartData
     {
-        public string Country;
-        public double Medals;
+        public string Country { get; set;}
+        public double Medals { get; set;}
     }
     public List<ChartData> MedalDetails = new List<ChartData>
 {

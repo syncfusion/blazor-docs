@@ -75,6 +75,17 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor components in any web page (razor) in the Pages folder. For example, the Chart component is added in the **~/Pages/Index.razor** page.
 
+**Note:** For smooth user interaction with chart, please load the ***lodash*** script,
+
+```csharp
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+</head>
+```
+
+ in the **HEAD** element of the **~/Pages/_Host.cshtml** page for server side blazor application,
+ in the **HEAD** element of the **~/wwwroot/index.html** for wasm application.
+
 ```csharp
 <SfChart></SfChart>
 ```
@@ -92,8 +103,8 @@ To bind data for the Chart component, you can assign a IEnumerable object to the
 ```csharp
 public class SalesInfo
     {
-        public string Month;
-        public double SalesValue;
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
     }
 public List<SalesInfo> Sales = new List<SalesInfo>
     {
@@ -123,8 +134,8 @@ Now map the field  `Month` and `Sales` in the data to the [`XName`](https://help
 @code {
     public class SalesInfo
     {
-        public string Month;
-        public double SalesValue;
+        public string Month { get; set;}
+        public double SalesValue { get; set;}
     }
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
@@ -161,8 +172,8 @@ You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfu
 @code {
     public class SalesInfo
     {
-        public string Month;
-        public double SalesValue;
+        public string Month { get; set;}
+        public double SalesValue { get; set;}
     }
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
@@ -202,8 +213,8 @@ You can add data labels to improve the readability of the chart. This can be ach
   @code {
     public class SalesInfo
     {
-        public string Month;
-        public double SalesValue;
+        public string Month { get; set;}
+        public double SalesValue { get; set;}
     }
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
@@ -242,8 +253,8 @@ The tooltip is useful when you cannot display information by using the data labe
   @code {
     public class SalesInfo
     {
-        public string Month;
-        public double SalesValue;
+        public string Month { get; set;}
+        public double SalesValue { get; set;}
     }
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
@@ -282,8 +293,8 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
 @code {
     public class SalesInfo
     {
-        public string Month;
-        public double SalesValue;
+        public string Month { get; set;}
+        public double SalesValue { get; set;}
     }
     public List<SalesInfo> Sales = new List<SalesInfo>
     {

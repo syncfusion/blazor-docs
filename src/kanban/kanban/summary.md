@@ -4,5 +4,7 @@
 * [Swimlane](kanban/swimlane.md)
 * [Card Editing](kanban/dialog.md)
 * [Tooltip](kanban/tooltip.md)
+* [Styling And Appearance](kanban/style.md)
 * [WIP Validation](kanban/validation.md)
+* [Localization](kanban/localization.md)
 * [Dimensions](kanban/dimensions.md)

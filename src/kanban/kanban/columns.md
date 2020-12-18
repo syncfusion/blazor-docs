@@ -20,10 +20,10 @@ Kanban columns are categorized by mapping the **key** from the datasource using 
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="To Do" KeyField=@(new List<string> { "Open" })></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" })></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" })></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" })></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
@@ -86,10 +86,10 @@ Kanban board allows to render a single column by mapping multiple keys using `Ke
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open", "Validate" })></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" })></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" })></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" })></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="Open, Validate"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
@@ -156,45 +156,45 @@ You can customize the column header with `Template` property as shown in the fol
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open" })>
+        <KanbanColumn HeaderText="Backlog" KeyField="Open">
             <Template>
                 @{
                     KanbanColumn column = (KanbanColumn)context;
                     <div class="header-template-wrap">
-                        <div class="header-icon e-icons @column.KeyField[0]"></div>
+                        <div class="header-icon e-icons @column.KeyField"></div>
                         <div class="header-text">@column.HeaderText</div>
                     </div>
                 }
             </Template>
         </KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" })>
+        <KanbanColumn HeaderText="In Progress" KeyField="InProgress">
             <Template>
                 @{
                     KanbanColumn column = (KanbanColumn)context;
                     <div class="header-template-wrap">
-                        <div class="header-icon e-icons @column.KeyField[0]"></div>
+                        <div class="header-icon e-icons @column.KeyField"></div>
                         <div class="header-text">@column.HeaderText</div>
                     </div>
                 }
             </Template>
         </KanbanColumn>
-        <KanbanColumn HeaderText="Review" KeyField=@(new List<string> { "Review" })>
+        <KanbanColumn HeaderText="Review" KeyField="Review">
             <Template>
                 @{
                     KanbanColumn column = (KanbanColumn)context;
                     <div class="header-template-wrap">
-                        <div class="header-icon e-icons @column.KeyField[0]"></div>
+                        <div class="header-icon e-icons @column.KeyField"></div>
                         <div class="header-text">@column.HeaderText</div>
                     </div>
                 }
             </Template>
         </KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" })>
+        <KanbanColumn HeaderText="Done" KeyField="Close">
             <Template>
                 @{
                     KanbanColumn column = (KanbanColumn)context;
                     <div class="header-template-wrap">
-                        <div class="header-icon e-icons @column.KeyField[0]"></div>
+                        <div class="header-icon e-icons @column.KeyField"></div>
                         <div class="header-text">@column.HeaderText</div>
                     </div>
                 }
@@ -331,10 +331,10 @@ Kanban allows to expand or collapse its columns using `AllowToggle` in `KanbanCo
 
 <SfKanban KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open" }) AllowToggle="true"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" }) AllowToggle="true"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" }) AllowToggle="true"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" }) AllowToggle="true"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="Open" AllowToggle="true"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="InProgress" AllowToggle="true"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="Testing" AllowToggle="true"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="Close" AllowToggle="true"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
@@ -350,7 +350,7 @@ Kanban allows to expand or collapse its columns using `AllowToggle` in `KanbanCo
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-{
+    {
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling" },
@@ -401,10 +401,10 @@ In the following example, the Backlog column is collapsed on initialization of K
 
 <SfKanban KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField=@(new List<string> { "Open" }) AllowToggle="true" IsExpanded="false"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" }) AllowToggle="true"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" }) AllowToggle="true" IsExpanded="false"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" }) AllowToggle="true"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="Open" AllowToggle="true" IsExpanded="false"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="InProgress" AllowToggle="true"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="Testing" AllowToggle="true" IsExpanded="false"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="Close" AllowToggle="true"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
@@ -420,7 +420,7 @@ In the following example, the Backlog column is collapsed on initialization of K
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-{
+    {
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling" },
@@ -471,15 +471,15 @@ In the following code, the kanban columns 'InProgress, Review' are grouped under
 
 <SfKanban KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="To Do" KeyField=@(new List<string> { "Open" })></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField=@(new List<string> { "InProgress" })></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField=@(new List<string> { "Testing" })></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField=@(new List<string> { "Close" })></KanbanColumn>
+        <KanbanColumn HeaderText="To Do" KeyField="Open"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
     </KanbanColumns>
     <KanbanStackedHeaders>
-        <KanbanStackedHeader Text="To Do" KeyFields=@(new List<string> { "Open" })></KanbanStackedHeader>
-        <KanbanStackedHeader Text="Development Phase" KeyFields=@(new List<string> { "InProgress", "Testing" })></KanbanStackedHeader>
-        <KanbanStackedHeader Text="Done" KeyFields=@(new List<string> { "Close" })></KanbanStackedHeader>
+        <KanbanStackedHeader Text="To Do" KeyFields="Open"></KanbanStackedHeader>
+        <KanbanStackedHeader Text="Development Phase" KeyFields="InProgress, Testing"></KanbanStackedHeader>
+        <KanbanStackedHeader Text="Done" KeyFields="Close"></KanbanStackedHeader>
     </KanbanStackedHeaders>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
@@ -495,7 +495,7 @@ In the following code, the kanban columns 'InProgress, Review' are grouped under
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-{
+    {
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling" },

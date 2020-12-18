@@ -18,56 +18,9 @@ In mobile devices, you can open the detailed editor window in edit mode by click
 
 ### How to change the editor window header title and text of footer buttons
 
-You can change the header title and the text of buttons displayed at the footer of the editor window by changing the appropriate localized word collection used in the Scheduler.
+You can change the header title and the text of buttons displayed at the footer of the editor window by changing the appropriate localized word collection in the resx file of your culture file available in the following directory `Project root folder > Resources > SfResources-en-US.resx` like the below image.
 
-```csharp
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Schedule
-@using Microsoft.JSInterop
-
-<SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 1, 31))">
-    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
-</SfSchedule>
-
-@code{
-    [Inject]
-    IJSRuntime JsRuntime { get; set; }
-    List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
-    };
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-        public string RecurrenceException { get; set; }
-    }
-    protected override void OnAfterRender(bool firstRender)
-    {
-        this.JsRuntime.Sf().LoadLocaleData("Pages/locale.json");
-    }
-}
-```
-
-The following `locale.json` file has been added in the `Pages` folder in order to load the respective words in place of localized words.
-
-```csharp
-{
-    "en-US": {
-        "schedule": {
-            "saveButton": "Add",
-            "cancelButton": "Close",
-            "deleteButton": "Remove",
-            "newEvent": "Add Event"
-        }
-    }
-}
-```
+![Custom local words in resx file](images/custom-word-in-resx-file.png)
 
 The editor window opening for creating new event will be displayed as in the following image after changing the localized words.
 
@@ -373,7 +326,7 @@ The resource field can be added within editor template with the following code e
                         <td class="e-textlabel">Status</td>
                         <td colspan="4">
                             <SfDropDownList TValue="int" TItem="ResourceData" ID="OwnerId" DataSource="@OwnersData" Placeholder="Choose owner" @bind-Value="@((context as AppointmentData).OwnerId)">
-                                <DropDownListFieldSettings Text="Text" Value="Id"></DropDownListFieldSettings>
+                                <DropDownListFieldSettings Text="OwnerText" Value="Id"></DropDownListFieldSettings>
                             </SfDropDownList>
                         </td>
                     </tr>
@@ -433,6 +386,8 @@ The resource field can be added within editor template with the following code e
 }
 ```
 
+> EditorTemplate is not applicable when we set `AllowMutiple` as true without `AllowGroupEdit` is enabled, so in that case you need to use custom editor window.
+
 ## Quick popups
 
 The quick info popups are the ones that gets opened, when a cell or appointment is single clicked on the desktop mode. On single clicking a cell, you can simply provide a subject and save it. Also, while single clicking on an event, a popup will be displayed where you can get the overview of the event information. You can also edit or delete those events through the options available in it.
@@ -471,17 +426,7 @@ By default, these popups are displayed over cells and appointments of Scheduler 
 
 ### How to change the watermark text of quick popup subject
 
-By default, `Add Title` text is displayed on the subject field of quick popup. To change the default watermark text, change the value of the appropriate localized word collection used in the Scheduler.
-
-```csharp
-{
-    "en-US": {
-        "schedule": {
-            "addTitle": "Enter Summary"
-        }
-    }
-}
-```
+By default, `Add Title` text is displayed on the subject field of quick popup. To change the default watermark text, you can change the value of the appropriate localized word collection in the resx file of your culture file.
 
 ### Customizing quick popups
 
@@ -542,7 +487,7 @@ The quick popup accepts the template that customizes quick popup only on cell by
         <ScheduleView Option="View.Week"></ScheduleView>
     </ScheduleViews>
     <ScheduleResources>
-        <ScheduleResource TValue="RoomsData" DataSource="@ResourceData" Field="RoomId" Title="Room Type" Name="MeetingRoom" TextField="Name" IdField="Id" ColorField="Color" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TValue="int" TItem="RoomsData" DataSource="@ResourceData" Field="RoomId" Title="Room Type" Name="MeetingRoom" TextField="Name" IdField="Id" ColorField="Color" AllowMultiple="false"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
@@ -574,7 +519,7 @@ The quick popup accepts the template that customizes quick popup only on cell by
             RecurrenceID = data.RecurrenceID,
             RecurrenceRule = data.RecurrenceRule
         };
-        await SheduleRef.OpenEditor(eventData, CurrentAction.Add, true);
+        await SheduleRef.OpenEditor(eventData, CurrentAction.Add);
     }
 
     private async Task OnAdd(MouseEventArgs args, AppointmentData data)
@@ -619,9 +564,6 @@ The quick popup accepts the template that customizes quick popup only on cell by
         public Nullable<int> RecurrenceID { get; set; }
         public string RecurrenceException { get; set; }
         public int RoomId { get; set; }
-        public virtual string ElementType { get; set; }
-        public virtual DateTime StartTimeValue { get; set; }
-        public virtual DateTime EndTimeValue { get; set; }
     }
     public class RoomsData
     {
@@ -741,7 +683,7 @@ The quick popup accepts the template that customizes quick popup only on event b
         <ScheduleView Option="View.Week"></ScheduleView>
     </ScheduleViews>
     <ScheduleResources>
-        <ScheduleResource TValue="RoomsData" DataSource="@ResourceData" Field="RoomId" Title="Room Type" Name="MeetingRoom" TextField="Name" IdField="Id" ColorField="Color" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TValue="int" TItem="RoomsData" DataSource="@ResourceData" Field="RoomId" Title="Room Type" Name="MeetingRoom" TextField="Name" IdField="Id" ColorField="Color" AllowMultiple="false"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
@@ -770,7 +712,7 @@ The quick popup accepts the template that customizes quick popup only on event b
             RecurrenceID = data.RecurrenceID,
             RecurrenceRule = data.RecurrenceRule
         };
-        await SheduleRef.OpenEditor(eventData, CurrentAction.Save, true);
+        await SheduleRef.OpenEditor(eventData, CurrentAction.Save);
     }
     public List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -795,9 +737,6 @@ The quick popup accepts the template that customizes quick popup only on event b
         public Nullable<int> RecurrenceID { get; set; }
         public string RecurrenceException { get; set; }
         public int RoomId { get; set; }
-        public virtual string ElementType { get; set; }
-        public virtual DateTime StartTimeValue { get; set; }
-        public virtual DateTime EndTimeValue { get; set; }
     }
     public class RoomsData
     {
@@ -963,7 +902,7 @@ You can also do different customization for quick popup on cell and event by che
         <ScheduleView Option="View.Month"></ScheduleView>
     </ScheduleViews>
     <ScheduleResources>
-        <ScheduleResource TValue="RoomsData" DataSource="@ResourceData" Field="RoomId" Title="Room Type" Name="MeetingRoom" TextField="Name" IdField="Id" ColorField="Color" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TValue="int" TItem="RoomsData" DataSource="@ResourceData" Field="RoomId" Title="Room Type" Name="MeetingRoom" TextField="Name" IdField="Id" ColorField="Color" AllowMultiple="false"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
@@ -1010,7 +949,7 @@ You can also do different customization for quick popup on cell and event by che
                 RecurrenceID = data.RecurrenceID,
                 RecurrenceRule = data.RecurrenceRule
             };
-            await SheduleRef.OpenEditor(eventData, CurrentAction.Add, true);
+            await SheduleRef.OpenEditor(eventData, CurrentAction.Add);
         }
         else
         {
@@ -1028,7 +967,7 @@ You can also do different customization for quick popup on cell and event by che
                 RecurrenceID = data.RecurrenceID,
                 RecurrenceRule = data.RecurrenceRule
             };
-            await SheduleRef.OpenEditor(eventData, CurrentAction.Save, isEventData);
+            await SheduleRef.OpenEditor(eventData, CurrentAction.Save);
         }
     }
 
@@ -1074,9 +1013,6 @@ You can also do different customization for quick popup on cell and event by che
         public Nullable<int> RecurrenceID { get; set; }
         public string RecurrenceException { get; set; }
         public int RoomId { get; set; }
-        public virtual string ElementType { get; set; }
-        public virtual DateTime StartTimeValue { get; set; }
-        public virtual DateTime EndTimeValue { get; set; }
     }
     public class RoomsData
     {

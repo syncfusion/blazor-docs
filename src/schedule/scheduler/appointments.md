@@ -692,7 +692,7 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 
 It is possible to drag and drop the unplanned items from any of the external source into the scheduler, by manually saving those dropped item as a new appointment data through `AddEvent` method of Scheduler.
 
-In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragged` event of the TreeView component, where we can form an event object and save it using the `AddEvent` method.
+In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where we can form an event object and save it using the `AddEvent` method.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -1086,7 +1086,9 @@ Any kind of text, images and links can be added to customize the look of the eve
 
 ### Using EventRendered event
 
-The `EventRendered` event triggers before the appointment renders on the Scheduler. Therefore, this  event can be utilized to customize the look of events based on any specific criteria, before rendering them on the scheduler. In the following code example, the custom class has been added to events using `CssClasses` to apply color to the events.
+The `EventRendered` event triggers before the appointment renders on the Scheduler. Therefore, this event can be utilized to customize the look of events based on any specific criteria, before rendering them on the scheduler.
+
+In the following code example, the custom class has been added to events using `CssClasses` to apply color to the events.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -1133,6 +1135,50 @@ The `EventRendered` event triggers before the appointment renders on the Schedul
         background: #32CD32;
     }
 </style>
+```
+
+Also, we can customize the events by adding or modifying its element attribute using `Attributes`. In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEvents TValue="AppointmentData" EventRendered="OnEventRendered"></ScheduleEvents>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+    </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+@code {
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    public List<string> CustomClass = new List<string>() { "custom-class" };
+    public void OnEventRendered(EventRenderedArgs<AppointmentData> args)
+    {
+        Dictionary<string, object> attributes = new Dictionary<string, object>();
+        attributes.Add("style", "background: green");
+        args.Attributes = attributes;
+    }
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
+    };
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
 ```
 
 ### Using CssClass
@@ -1228,6 +1274,8 @@ Also, the customization of events can be achieved using `CssClass` property of t
     }
 </style>
 ```
+
+> We can't customize the events using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.
 
 ## Block Date and Time
 
@@ -1544,6 +1592,113 @@ After enabling the default tooltip, it is possible to customize the display of n
 ```
 
 > All the field names that are mapped from the Scheduler dataSource to the appropriate field properties such as subject, description, location, startTime and endTime within the `ScheduleEventSettings` can be accessed within the template.
+
+## Appointment filtering
+
+The appointments can be filtered by passing the predicate value to `Query` option in `ScheduleEventSettings`. The following code example shows how to filter and render the selected appointments alone in the Scheduler.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="ScheduleData.ResourceSampleData" CssClass='schedule-resource' Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleResources>
+        <ScheduleResource TValue="int[]" TItem="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owners" Name="Owners" TextField="OwnerText" IdField="OwnerId" ColorField="Color" AllowMultiple="true"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings DataSource="@DataSource" Query="@ScheduleQuery"></ScheduleEventSettings>
+</SfSchedule>
+<table id='property' title='Properties' class='property-panel-table' style="width: 100%;">
+    <tbody>
+        <tr style="height: 50px">
+            <td style="width: 100%">
+                <SfCheckBox TChecked="bool" @bind-Checked="MargretChecked" Value="@MargretId" ValueChange="@OnChange" Label="Margaret" CssClass="margaret">
+                </SfCheckBox>
+            </td>
+        </tr>
+        <tr style="height: 50px">
+            <td style="width: 100%">
+                <SfCheckBox TChecked="bool" @bind-Checked="RobertChecked" Value="@RobertId" ValueChange="@OnChange" Label="Robert" CssClass="robert">
+                </SfCheckBox>
+            </td>
+        </tr>
+        <tr style="height: 50px">
+            <td style="width: 100%">
+                <SfCheckBox TChecked="bool" @bind-Checked="LauraChecked" Value="@LauraId" ValueChange="@OnChange" Label="Laura" CssClass="laura">
+                </SfCheckBox>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+@code{
+    public DateTime CurrentDate { get; set; } = new DateTime(2020, 6, 5);
+    public bool MargretChecked { get; set; } = true;
+    public bool RobertChecked { get; set; } = true;
+    public bool LauraChecked { get; set; } = true;
+
+    public string MargretId { get; set; } = "1";
+    public string RobertId { get; set; } = "2";
+    public string LauraId { get; set; } = "3";
+
+    public dynamic predicate;
+    public Query ScheduleQuery { get; set; } = null;
+    public List<ScheduleData.ResourceSampleData> DataSource = new ScheduleData().GetResourceSampleData();
+
+    public void OnChange(ChangeEventArgs<bool> args)
+    {
+        predicate = null;
+        if (MargretChecked)
+        {
+            if (predicate != null)
+            {
+                predicate = predicate.Or("OwnerId", "equal", Convert.ToInt32(MargretId));
+            }
+            else
+            {
+                predicate = new WhereFilter() { Field = "OwnerId", Operator = "equal", value = Convert.ToInt32(MargretId) };
+            }
+        }
+        if (RobertChecked)
+        {
+            if (predicate != null)
+            {
+                predicate = predicate.Or("OwnerId", "equal", Convert.ToInt32(RobertId));
+            }
+            else
+            {
+                predicate = new WhereFilter() { Field = "OwnerId", Operator = "equal", value = Convert.ToInt32(RobertId) };
+            }
+        }
+        if (LauraChecked)
+        {
+            if (predicate != null)
+            {
+                predicate = predicate.Or("OwnerId", "equal", Convert.ToInt32(LauraId));
+            }
+            else
+            {
+                predicate = new WhereFilter() { Field = "OwnerId", Operator = "equal", value = Convert.ToInt32(LauraId) };
+            }
+        }
+        if (predicate == null)
+        {
+            predicate = new WhereFilter() { Field = "OwnerId", Operator = "notequal", value = Convert.ToInt32(MargretId) }.And("OwnerId", "notequal", Convert.ToInt32(RobertId)).And("OwnerId", "notequal", Convert.ToInt32(LauraId));
+        }
+        ScheduleQuery = new Query().Where(predicate);
+    }
+    public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
+    {
+        new ResourceData { OwnerText = "Margaret", OwnerId = 1, Color = "#ea7a57" },
+        new ResourceData { OwnerText = "Robert", OwnerId = 2, Color = "#df5286" },
+        new ResourceData { OwnerText = "Laura", OwnerId = 3, Color = "#865fcf" }
+    };
+    public class ResourceData
+    {
+        public int OwnerId { get; set; }
+        public string OwnerText { get; set; }
+        public string Color { get; set; }
+    }
+}
+```
 
 ## Appointment selection
 

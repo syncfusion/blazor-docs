@@ -119,7 +119,7 @@ You can refer [here] (../../common/localization/#enable-localization-in-blazor-w
 
 ## Setting date format
 
-Scheduler can be used with all valid date formats and by default it follows the universal date format "MM/dd/yyyy". If the `DateFormat` property is not specified particularly, then it will work based on the locale that is assigned to the Scheduler. As the default locale applied on Scheduler is "en-US", this makes it to follow the "MM/dd/yyyy" pattern.
+Scheduler can be used with all valid date formats and by default it follows the universal date format "MM/dd/yyyy". If the `DateFormat` property is not specified particularly, then it will work based on the system's local culture. As the system's local culture is "en-US", this makes it to follow the "MM/dd/yyyy" pattern.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -146,7 +146,30 @@ Scheduler can be used with all valid date formats and by default it follows the 
 
 ## Time mode
 
-The time mode of the Scheduler can be either 12 or 24 hours format which is completely based on the `Locale` set to the Scheduler. Since the default `Locale` value of the Scheduler is en-US, the time mode will be set to 12 hours format automatically.
+The time mode of the Scheduler can be either 12 or 24 hours format which is completely based on the system's local culture. And also the Scheduler supported to customize the time mode using the `TimeFormat` property.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="650px" TimeFormat="T">
+</SfSchedule>
+
+@code{
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
 
 ## Displaying Scheduler in RTL mode
 

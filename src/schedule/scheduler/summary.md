@@ -26,3 +26,4 @@
 * [Setting Minimum and Maximum Date](scheduler/how-to/set-min-max-date.md)
 * [Custom Editor With Validation](scheduler/how-to/custom-editor-with-validation.md)
 * [Expand And Collapse Resource Dynamically](scheduler/how-to/expand-collapse-resource-dynamically.md)
+* [Styling And Appearance](scheduler/how-to/scheduler-styling.md)

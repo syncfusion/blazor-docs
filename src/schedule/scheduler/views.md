@@ -385,10 +385,6 @@ A Timeline Year view displays the complete year along with its appointments.
 
 By default the timeline year view orientation is set to Horizontal view. In this following code example, the timeline year view is set with vertical orientation.
 
->The Scheduler has the following limitations with Timeline Year View
->1. Drag and Drop over the appointments.
->2. Resizing the Scheduler events.
-
 ```csharp
 @using Syncfusion.Blazor.Schedule
 

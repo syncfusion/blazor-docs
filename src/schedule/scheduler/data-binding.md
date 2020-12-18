@@ -78,8 +78,6 @@ Any kind of remote data services can be bound to the Scheduler. To do so, provid
 }
 ```
 
-> The runnable sample for the above code will be available [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorOData256427784).
-
 ### Using custom adaptor
 
 It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bounded data is performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding/) abstract class.

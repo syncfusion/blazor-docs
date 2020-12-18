@@ -10,7 +10,7 @@ The Scheduler supports exporting all its appointments both to an Excel or ICS ex
 
 ## Excel Exporting
 
-The Scheduler allows you to export all its events into an Excel format file by setting `true` to `AllowExcelExport` property whereas its default value is false and use the `ExportToExcel` method. By default, it exports all the default fields of Scheduler mapped through `<ScheduleEventSettings>` property.
+The Scheduler allows you to export all its events into an Excel format file by using the `ExportToExcel` method. By default, it exports all the default fields of Scheduler mapped through `<ScheduleEventSettings>` property.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -313,6 +313,58 @@ By default, the Scheduler exports event data to an excel file in the `.xlsx` for
     }
 }
 ```
+
+### Export with specific date format
+
+You can export the Scheduler data with specific date format, by defining the `DateFormat` option which accepts the MSDN date format in string type. In the following code example, the scheduler appointments are exported in 24 hour date format.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Excel Export" OnClick="OnExportToExcel"></SfButton>
+<SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Week"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 1, 10);
+    SfSchedule<AppointmentData> ScheduleRef;
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", Location = "Dallas",  StartTime = new DateTime(2020, 1, 8, 9, 30, 0), EndTime = new DateTime(2020, 1, 8, 11, 0, 0)  },
+        new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", Location = "Texas", StartTime = new DateTime(2020, 1, 9, 12, 0, 0), EndTime = new DateTime(2020, 1, 9, 14, 0, 0)  },
+        new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", Location = "Australia", StartTime = new DateTime(2020, 1, 10, 10, 30, 0), EndTime = new DateTime(2020, 1, 10, 11, 0, 0)  },
+        new AppointmentData { Id = 4, Subject = "Meteor Showers in 2020", Location = "Canada", StartTime = new DateTime(2020, 1, 11, 13, 0, 0), EndTime = new DateTime(2020, 1, 11, 14, 30, 0)  },
+        new AppointmentData { Id = 5, Subject = "Milky Way as Melting pot", Location = "Mexico", StartTime = new DateTime(2020, 1, 12, 12, 0, 0), EndTime = new DateTime(2020, 1, 12, 14, 0, 0)  }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+    public ExportOptions ExportValues = new ExportOptions { DateFormat = "MM/dd/yy H:mm:ss" };
+    public async Task OnExportToExcel()
+    {
+        await ScheduleRef.ExportToExcel(ExportValues);
+    }
+}
+```
+
+Exported Excel file with 24 hour date format be like below
+
+![Excel Exporting with 24 hour date format](images/excel-dateformat.png)
 
 ## Exporting calendar events as ICS file
 

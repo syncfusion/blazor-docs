@@ -6,29 +6,28 @@ description: "This section helps to learn how to Bind Menu Events"
 
 # Bind Menu Events
 
-To bind the menu event in the context menu [`ItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) is used and the event is triggered when the item in the context menu is selected.
+To bind the menu event in the context menu [`ItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) is used and the event is triggered when the item in the context menu is selected.
 
 ```csharp
 
 @using Syncfusion.Blazor.Navigations
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
-<SfContextMenu Target="#target" Items="@MenuItems">
-    <ContextMenuEvents TValue="MenuItem" ItemSelected="@select"></ContextMenuEvents>
+<SfContextMenu Target="#target" TValue="MenuItem">
+    <MenuItems>
+        <MenuItem Text="Cut"></MenuItem>
+        <MenuItem Text="Copy"></MenuItem>
+        <MenuItem Text="Paste"></MenuItem>
+    </MenuItems>
+    <MenuEvents TValue="MenuItem" ItemSelected="@selectedHandler"></MenuEvents>
 </SfContextMenu>
 
 @code {
     public MenuItem SelectedItem;
-    public List<MenuItem> MenuItems = new List <MenuItem>
-    {
-        new MenuItem{ Text = "Cut" },
-        new MenuItem{ Text = "Copy" },
-        new MenuItem{ Text = "Paste" }
-    };
-
-    private void select(MenuEventArgs<MenuItem> args) {
-    this.SelectedItem = args.Item; // Triggers when item is selected
-}
+    // Triggers when item is selected
+    private void selectedHandler(MenuEventArgs<MenuItem> args) {
+        SelectedItem = args.Item;
+    }
 }
 
 <style>

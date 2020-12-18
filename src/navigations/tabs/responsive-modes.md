@@ -13,7 +13,7 @@ The following section explains about rendering Tab when its width exceeds the vi
 
 ## Scrollable
 
-The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_OverflowMode) is `Scrollable`. Scrollable display mode supports displaying the Tab header items in a single line with horizontal scrolling enabled, when the item overflows to the available space.
+The default [OverflowMode](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfTab~OverflowMode.html) is `Scrollable`. Scrollable display mode supports displaying the Tab header items in a single line with horizontal scrolling enabled, when the item overflows to the available space.
 
 * The right and left navigation arrow is added at the start and end of the Tab header through which user can navigate towards overflowed items of the Tab header.
 * You can also see the overflowed items using touch and swipe action on the header and content section.
@@ -29,7 +29,7 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfTab OverflowMode="OverflowMode.Scrollable">
+<SfTab OverflowMode="OverflowMode.Scrollable" Width="500px">
     <TabItems>
         <TabItem Content="HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages. Along with CSS, and JavaScript, HTML is a cornerstone technology, used by most websites to create visually engaging web pages, user interfaces for web applications, and user interfaces for many mobile applications.[1] Web browsers can read HTML files and render them into visible or audible web pages. HTML describes the structure of a website semantically along with cues for presentation, making it a markup language, rather than a programming language.">
             <ChildContent>
@@ -77,7 +77,7 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Popup
 
-The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_OverflowMode) in which the Tab container holds the items that can be placed within the available space. The rest of the overflowing items for which there is no space to fit within the viewing area are moved to overflow popup container.
+The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfTab~OverflowMode.html) in which the Tab container holds the items that can be placed within the available space. The rest of the overflowing items for which there is no space to fit within the viewing area are moved to overflow popup container.
 
 * The items placed in popup can be viewed by opening the popup with the help of drop-down icon given at the end of the Tab header.
 
@@ -88,7 +88,7 @@ The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfTab OverflowMode="OverflowMode.Popup">
+<SfTab OverflowMode="OverflowMode.Popup" Width="500px">
     <TabItems>
         <TabItem Content="HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages. Along with CSS, and JavaScript, HTML is a cornerstone technology, used by most websites to create visually engaging web pages, user interfaces for web applications, and user interfaces for many mobile applications.[1] Web browsers can read HTML files and render them into visible or audible web pages. HTML describes the structure of a website semantically along with cues for presentation, making it a markup language, rather than a programming language.">
             <ChildContent>

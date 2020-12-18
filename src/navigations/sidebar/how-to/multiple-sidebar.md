@@ -24,12 +24,12 @@ In the following sample, more than one sidebar is rendered based on `Position` p
     Header
 </div>
 
-<SfSidebar @ref="leftSidebarInstance" Type=SidebarType.Push Width="250px">
+<SfSidebar @ref="leftSidebarInstance" Type=SidebarType.Push Width="250px" @bind-IsOpen="LeftToggle">
     <ChildContent>
         <div style="text-align: center;" class="text-content"> Left Sidebar</div>
     </ChildContent>
 </SfSidebar>
-<SfSidebar @ref="rightSidebarInstance" Width="250px" Position=SidebarPosition.Right>
+<SfSidebar @ref="rightSidebarInstance" Width="250px" Position=SidebarPosition.Right @bind-IsOpen="RightToggle">
     <ChildContent>
         <div style="text-align: center;" class="text-content"> Right Sidebar</div>
     </ChildContent>
@@ -47,14 +47,16 @@ In the following sample, more than one sidebar is rendered based on `Position` p
 
 @code {
     SfSidebar leftSidebarInstance;
-    SfSidebar rightSidebarInstance;    
+    SfSidebar rightSidebarInstance;
+    public bool LeftToggle = false;
+    public bool RightToggle = false;
     public void ToggleLeftSidebar()
     {
-        this.leftSidebarInstance.Toggle();
+        LeftToggle = !LeftToggle;
     }
     public void ToggleRightSidebar()
     {
-        this.rightSidebarInstance.Toggle();
+        RightToggle = !RightToggle;
     }
 }
 

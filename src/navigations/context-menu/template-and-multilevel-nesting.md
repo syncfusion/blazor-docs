@@ -6,8 +6,8 @@ description: "This section helps to learn how to provide nesting support in Cont
 
 # Multilevel nesting
 
-The Multiple level nesting supports in Context Menu. It can be achieved by mapping the [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu.html#Syncfusion_Blazor_Navigations_SfMenu_Items)
-property inside the parent [`MenuItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ContextMenuItem.html). In the below sample, three level nesting of Context Menu is provided.
+The Multiple level nesting supports in Context Menu. It can be achieved by mapping the [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~Items.html)
+property inside the parent [`MenuItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuItem.html). In the below sample, three level nesting of Context Menu is provided.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations

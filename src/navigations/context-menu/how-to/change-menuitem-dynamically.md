@@ -6,34 +6,32 @@ description: "This section helps to learn how to Change Menu Item Dynamically"
 
 # Change Menu Item Dynamically
 
-The items visible in the Context Menu can be changed dynamically based on the target. To achieve this behavior, initialize Context Menu with all items using [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Items) property and then you can Hide/Show items using [`HideItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_HideItems_System_Collections_Generic_List_System_String__System_Boolean_)/[`ShowItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_ShowItems_System_Collections_Generic_List_System_String__System_Boolean_) method in [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ContextMenuEvents-1.html#Syncfusion_Blazor_Navigations_ContextMenuEvents_1_OnOpen) event.
+The items visible in the Context Menu can be changed dynamically based on the target. To achieve this behavior, initialize Context Menu with all items using [`MenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItems.html) component and then you can Hide/Show items using [`Hidden`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property by updating its state in [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnOpen) event.
 
 ```csharp
 
 @using Syncfusion.Blazor.Navigations
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
-<SfContextMenu Target="#target" Items="MenuItems" @ref="ContextMenuObj">
-    <ContextMenuEvents TValue="ContextMenuItem" OnOpen="Open"></ContextMenuEvents>
+<SfContextMenu Target="#target" TValue="MenuItem">
+    <MenuItems>
+        <MenuItem Text="Cut" Hidden="@hideItems1"></MenuItem>
+        <MenuItem Text="Copy" Hidden="@hideItems1"></MenuItem>
+        <MenuItem Text="Paste" Hidden="@hideItems1"></MenuItem>
+        <MenuItem Text="Add" Hidden="@hideItems2"></MenuItem>
+        <MenuItem Text="Edit" Hidden="@hideItems2"></MenuItem>
+        <MenuItem Text="Delete" Hidden="@hideItems2"></MenuItem>
+    </MenuItems>
+    <MenuEvents TValue="MenuItem" OnOpen="@BeforeOpenHandler"></MenuEvents>
 </SfContextMenu>
 
 @code {
-    SfContextMenu<ContextMenuItem> ContextMenuObj;
-    public List<ContextMenuItem> MenuItems = new List<ContextMenuItem>
+    private bool hideItems1;
+    private bool hideItems2 = true;
+    private void BeforeOpenHandler()
     {
-        new ContextMenuItem{ Text = "Cut" },
-        new ContextMenuItem{ Text = "Copy" },
-        new ContextMenuItem{ Text = "Paste" },
-        new ContextMenuItem{ Text = "Add" },
-        new ContextMenuItem{ Text = "Edit" },
-        new ContextMenuItem{ Text = "Delete" }
-    };
-
-    public List<string> HideItems = new List<string>() { "Cut", "Copy", "Paste"};
-
-    public void Open(BeforeOpenCloseMenuEventArgs<ContextMenuItem> args)
-    {
-        this.ContextMenuObj.HideItems(this.HideItems);
+        hideItems1 = !hideItems1;
+        hideItems2 = !hideItems2;
     }
 }
 

@@ -6,57 +6,56 @@ description: "This section helps to learn how to Enable or disable context menu 
 
 # Enable or disable context menu items
 
-You can enable and disable the menu items using the [`EnableItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_EnableItems_System_Collections_Generic_List_System_String__System_Boolean_System_Boolean_) method in Context Menu. To enable menuItems, set the `Enable` property in argument to `true` and vice-versa.
+You can enable and disable the menu items using the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in [`MenuItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html). To disable menuItems, set the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in each item to `true` and vice-versa.
 
-In the following example, the **Display Settings** in parent items and **Medium icons** in sub menu items are disabled.
+In the following example, the **Display Settings** in parent items is disabled during initial loading and **Medium icons** in sub menu items are enabled/disabled dynamically while opening the sub menu.
 
 ```csharp
 
 @using Syncfusion.Blazor.Navigations
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
-<SfContextMenu Target="#target" Items="@MenuItems" @ref="ContextMenuObj">
-    <ContextMenuEvents TValue="ContextMenuItem" Created="create" OnOpen="open"></ContextMenuEvents>
+<SfContextMenu Target="#target" TValue="MenuItem">
+    <MenuItems>
+        <MenuItem Text="View">
+            <MenuItems>
+                <MenuItem Text="Large Icons"></MenuItem>
+                <MenuItem Text="Medium Icons" Disabled="@disableState"></MenuItem>
+                <MenuItem Text="Small Icons"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Sort By"></MenuItem>
+        <MenuItem Text="Refresh"></MenuItem>
+        <MenuItem Separator="true"></MenuItem>
+        <MenuItem Text="New"></MenuItem>
+        <MenuItem Separator="true"></MenuItem>
+        <MenuItem Text="Display Settings" Disabled="true"></MenuItem>
+        <MenuItem Text="Personalize"></MenuItem>
+    </MenuItems>
+    <MenuEvents TValue="MenuItem" OnOpen="@BeforeOpenHandler"></MenuEvents>
 </SfContextMenu>
 
 @code {
-    SfContextMenu<ContextMenuItem> ContextMenuObj;
-    public List<ContextMenuItem> MenuItems = new List<ContextMenuItem>
+    private bool disableState;
+
+    private void BeforeOpenHandler(BeforeOpenCloseMenuEventArgs<MenuItem> e)
     {
-        new ContextMenuItem{ Text="View", Items= new List<ContextMenuItem>{
-            new ContextMenuItem { Text="Large Icons"},
-            new ContextMenuItem { Text="Medium Icons"},
-            new ContextMenuItem { Text="Small Icons"} } },
-        new ContextMenuItem{ Text="Sort By" },
-        new ContextMenuItem{ Text="Refresh" },
-        new ContextMenuItem{ Separator=true },
-        new ContextMenuItem{ Text="New" },
-        new ContextMenuItem{ Separator=true},
-        new ContextMenuItem{ Text="Display Settings"},
-        new ContextMenuItem{ Text="Personalize"}
-    };
-        public List<string> SubMenuItem = new List<string> { "Medium Icons" };
-        public List<string> MenuItem = new List<string> { "Display Settings" };
-        private void open(Syncfusion.Blazor.Navigations.BeforeOpenCloseMenuEventArgs<ContextMenuItem> args)
-        {
-            ContextMenuObj.EnableItems(this.SubMenuItem, false);
-        }
-        private void create(object obj)
-        {
-            ContextMenuObj.EnableItems(this.MenuItem, false);
-        }
- };
+        // While opening the first level context menu the parent item will not be available, so it would be null.
+        if (e.ParentItem != null && e.ParentItem.Text == "View")
+            disableState = !disableState; // Execute only for the View item sub menu.
+    }
+};
 
 <style>
-#target {
-    border: 1px dashed;
-    height: 150px;
-    padding: 10px;
-    position: relative;
-    text-align: justify;
-    color: gray;
-    user-select: none;
-}
+    #target {
+        border: 1px dashed;
+        height: 150px;
+        padding: 10px;
+        position: relative;
+        text-align: justify;
+        color: gray;
+        user-select: none;
+    }
 </style>
 
 ```
@@ -65,4 +64,4 @@ Output be like
 
 ![Context Menu Sample](./../images/cm-disable.png)
 
-> To disable sub menu items, use the [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html) event.
+> To disable sub menu items, use the [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~OnOpen.html) event.

@@ -3,6 +3,8 @@
 * [Expand Mode](accordion/expand-mode.md)
 * [Animations](accordion/animations.md)
 * [Accessibility](accordion/accessibility.md)
+* [CSS Structure](accordion/style.md)
+* [Content Render Mode](accordion/content-render-mode.md)
 * [Add Nested Accordion](accordion/how-to/add-nested-accordion.md)
 * [Add Icon to Header](accordion/how-to/add-icon-to-accordion-header.md)
 * [Enable or Disable item](accordion/how-to/enable-disable-accordion-item.md)

@@ -6,7 +6,7 @@ Refer to the sample to customize expand/collapse icons.
 ```csharp
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="DriveData" CssClass="custom">
-    <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="@Child" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="Children" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
@@ -19,7 +19,6 @@ Refer to the sample to customize expand/collapse icons.
         public List<DriveData> Children;
     }
 
-    object Child;
     List<DriveData> Drive = new List<DriveData>();
 
     protected override void OnInitialized()
@@ -102,7 +101,6 @@ Refer to the sample to customize expand/collapse icons.
             NodeId = "02-02",
             NodeText = "Projects"
         });
-        this.Child = "Children";
     }
 }
 

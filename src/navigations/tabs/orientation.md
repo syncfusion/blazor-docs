@@ -8,7 +8,7 @@ description: "This sample demonstrates the header orientation of the Tabs. Selec
 
 This section explains about modifying the position and modes of Tab header.
 
-It allows placing the header section inside the Tabs component at different positions by using the  [`HeaderPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_HeaderPlacement) property. The available positions are as follows:
+It allows placing the header section inside the Tabs component at different positions by using the  [`HeaderPlacement`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfTab~HeaderPlacement.html) property. The available positions are as follows:
 
 * **Top**: Tab header items can be arranged horizontally, and their content can be placed after the header.
 * **Bottom**: Tab header items can be arranged horizontally, and their content can be placed before the header.
@@ -24,7 +24,7 @@ It is also adaptable to the available space when the tab items exceed the view s
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
 
-<SfTab ShowCloseButton="true" HeaderPlacement="@Header" OverflowMode="@Mode">
+<SfTab ShowCloseButton="true" HeaderPlacement="@Header" OverflowMode="@Mode" Width="500px" Height="250px">
     <TabItems>
         <TabItem Content="@Content0">
             <ChildContent>
@@ -81,7 +81,7 @@ It is also adaptable to the available space when the tab items exceed the view s
                         <td style="width: 50%;">
                             <div>
                                 <SfDropDownList DataSource="@OrientationData" @bind-Value="@HeaderValue" TValue="string" TItem="DropdownFields">
-                                    <DropDownListEvents ValueChange="OnHeaderPositionChange" TValue="string"></DropDownListEvents>
+                                    <DropDownListEvents ValueChange="OnHeaderPositionChange" TValue="string"></DropDownListEvents TItem="DropdownFields">
                                     <DropDownListFieldSettings Value="Value" Text="Text"></DropDownListFieldSettings>
                                 </SfDropDownList>
                             </div>
@@ -93,8 +93,8 @@ It is also adaptable to the available space when the tab items exceed the view s
                         </td>
                         <td style="width: 50%;">
                             <div>
-                                <SfDropDownList TValue="string" TItem="DropdownFields" DataSource="@TabModeData" Value="@ModeValue">
-                                    <DropDownListEvents ValueChange="OnChangeMode" TValue="string"></DropDownListEvents>
+                                <SfDropDownList TValue="string" TItem="DropdownFields" DataSource="@TabModeData" @bind-Value="@ModeValue">
+                                    <DropDownListEvents ValueChange="OnChangeMode" TValue="string" TItem="DropdownFields"></DropDownListEvents>
                                     <DropDownListFieldSettings Value="Value" Text="Text"></DropDownListFieldSettings>
                                 </SfDropDownList>
                             </div>
@@ -131,11 +131,11 @@ It is also adaptable to the available space when the tab items exceed the view s
         new DropdownFields() { Value= "Scrollable", Text= "Scrollable" },
         new DropdownFields() { Value= "Popup", Text= "Popup" }
     };
-    public void OnHeaderPositionChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public void OnHeaderPositionChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropdownFields> args)
     {
         Header = (HeaderPosition)Enum.Parse(typeof(HeaderPosition), (args.Value as string));
     }
-        public void OnChangeMode(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+        public void OnChangeMode(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropdownFields> args)
     {
         Mode = (OverflowMode)Enum.Parse(typeof(OverflowMode), (args.Value as string));
     }

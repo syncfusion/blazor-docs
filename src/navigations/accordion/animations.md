@@ -6,13 +6,14 @@ description: "This example demonstrates how to set custom animation for expand a
 
 # Animations
 
-Accordion supports custom animations for both expand and collapse actions from the provided animation option of `Animation` library.  The animation property also allows you to set [`Easing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_UseRangeColor), [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeBorderSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeBorderSettings_Color), and various other effects of your choice.
+Accordion supports custom animations for both expand and collapse actions from the provided animation option of `Animation` library.  The animation property also allows you to set [`Easing`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.AccordionActionSettingsModel~Easing.html), [`Duration`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.AccordionActionSettingsModel~Duration.html), and various other effects of your choice.
 
-Default animation is given as `SlideDown` for expanding the panel using [`Expand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Expand) animation property and `SlideUp` for collapsing the panel using [`Collapse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Collapse) animation property. You can also disable the animation by setting animation [`Effect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeBorderSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeBorderSettings_Width) as `None`.
+Default animation is given as `SlideDown` for expanding the panel using [`Expand`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.AccordionAnimationSettings~Expand.html) animation property and `SlideUp` for collapsing the panel using [`Collapse`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.AccordionAnimationSettings~Collapse.html) animation property. You can also disable the animation by setting animation [`Effect`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.AccordionActionSettingsModel~Effect.html) as `None`.
 
 The sample demonstrates some types of animation that suits for Accordion. You can check all the animation effects here
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
 
@@ -23,9 +24,9 @@ The sample demonstrates some types of animation that suits for Accordion. You ca
                 <label> Expand Animation </label>
             </div>
             <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-                <SfDropDownList TValue="string" Index="0" PopupHeight="150px" Placeholder="Select a animate type" TItem="AnimationEffect" DataSource="@AnimationData">
-                    <DropDownListEvents ValueChange="ExpandOption" TValue="string"></DropDownListEvents>
-                    <DropDownListFieldSettings Value="Text"></DropDownListFieldSettings>
+                <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" TItem="Effect" PopupHeight="150px" Placeholder="Select a animate type" @bind-Value="ExpandEffect">
+                    <DropDownListEvents ValueChange="ExpandOption" TValue="AnimationEffect" TItem="Effect"></DropDownListEvents>
+                    <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
                 </SfDropDownList>
             </div>
         </div>
@@ -34,17 +35,17 @@ The sample demonstrates some types of animation that suits for Accordion. You ca
                 <label> Collapse Animation </label>
             </div>
             <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-                <SfDropDownList TValue="string" Index="1" PopupHeight="150px" Placeholder="Select a animate type" TItem="AnimationEffect" DataSource="@AnimationData">
-                    <DropDownListEvents ValueChange="CollapseOption" TValue="string"></DropDownListEvents>
-                    <DropDownListFieldSettings Value="Text"></DropDownListFieldSettings>
+                <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" TItem="Effect" PopupHeight="150px" Placeholder="Select a animate type" @bind-Value="CollapseEffect">
+                    <DropDownListEvents ValueChange="CollapseOption" TValue="AnimationEffect" TItem="Effect"></DropDownListEvents>
+                    <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
                 </SfDropDownList>
             </div>
         </div>
     </div>
     <SfAccordion>
         <AccordionAnimationSettings>
-            <AccordionAnimationCollapse Effect="@CollapseEffect"></AccordionAnimationCollapse>
-            <AccordionAnimationExpand Effect="@ExpandEffect"></AccordionAnimationExpand>
+            <AccordionAnimationCollapse Effect=@CollapseEffect></AccordionAnimationCollapse>
+            <AccordionAnimationExpand Effect=@ExpandEffect></AccordionAnimationExpand>
         </AccordionAnimationSettings>
         <AccordionItems>
             <AccordionItem Header="ASP.NET" Content="Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services. ASP.NET pages execute on the server and generate markup such as HTML, WML, or XML that is sent to a desktop or mobile browser. ASP.NET pages use a compiled,event-driven programming model that improves performance and enables the separation of application logic and user interface.">
@@ -58,31 +59,30 @@ The sample demonstrates some types of animation that suits for Accordion. You ca
 </div>
 
 @code{
-    public string ExpandEffect { get; set; }
-    public string CollapseEffect { get; set; }
-    public void ExpandOption(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public AnimationEffect ExpandEffect = AnimationEffect.SlideDown;
+    public AnimationEffect CollapseEffect = AnimationEffect.SlideUp;
+    public void ExpandOption(Syncfusion.Blazor.DropDowns.ChangeEventArgs<AnimationEffect, Effect> args)
     {
-        ExpandEffect = args.Value as string;
+        this.ExpandEffect = args.Value;
     }
-    public void CollapseOption(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public void CollapseOption(Syncfusion.Blazor.DropDowns.ChangeEventArgs<AnimationEffect, Effect> args)
     {
-        CollapseEffect = args.Value as string;
+        this.CollapseEffect = args.Value;
     }
-    List<AnimationEffect> AnimationData = new List<AnimationEffect>
-    {
-        new AnimationEffect() { ID= "Animation1", Text= "SlideDown" },
-        new AnimationEffect() { ID= "Animation2", Text= "SlideUp" },
-        new AnimationEffect() { ID= "Animation3", Text= "FadeIn" },
-        new AnimationEffect() { ID= "Animation4", Text= "FadeOut" },
-        new AnimationEffect() { ID= "Animation5", Text= "FadeZoomIn" },
-        new AnimationEffect() { ID= "Animation6", Text= "FadeZoomOut" },
-        new AnimationEffect() { ID= "Animation7", Text= "ZoomIn" },
-        new AnimationEffect() { ID= "Animation8", Text= "ZoomOut"},
-        new AnimationEffect() { ID= "Animation9", Text= "None" }
+    List<Effect> AnimationData = new List<Effect> {
+        new Effect() { ID= AnimationEffect.SlideDown, Text= "SlideDown" },
+        new Effect() { ID= AnimationEffect.SlideUp, Text= "SlideUp" },
+        new Effect() { ID= AnimationEffect.FadeIn, Text= "FadeIn" },
+        new Effect() { ID= AnimationEffect.FadeOut, Text= "FadeOut" },
+        new Effect() { ID= AnimationEffect.FadeZoomIn, Text= "FadeZoomIn" },
+        new Effect() { ID= AnimationEffect.FadeZoomOut, Text= "FadeZoomOut" },
+        new Effect() { ID= AnimationEffect.ZoomIn, Text= "ZoomIn" },
+        new Effect() { ID= AnimationEffect.ZoomOut, Text= "ZoomOut" },
+        new Effect() { ID= AnimationEffect.None, Text= "None" }
     };
-    public class AnimationEffect
+    public class Effect
     {
-        public string ID { get; set; }
+        public AnimationEffect ID { get; set; }
         public string Text { get; set; }
     }
 }

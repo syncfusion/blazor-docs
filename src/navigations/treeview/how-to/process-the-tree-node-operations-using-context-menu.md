@@ -10,11 +10,11 @@ Following is an example which demonstrates the above cases which are used to man
 
 
     <div id="treeview">
-        <SfTreeView TValue="EmployeeData" @ref="tree" AllowDragAndDrop="true" SelectedNodes="@selectedNodes">
-            <TreeViewFieldsSettings Id="Id" ParentID="Pid" DataSource="@ListData" Text="Name" HasChildren="HasChild" Expanded="Expanded"></TreeViewFieldsSettings>
+        <SfTreeView TValue="EmployeeData" @ref="tree" AllowDragAndDrop="true" SelectedNodes="@selectedNodes.ToArray()">
+            <TreeViewFieldsSettings Id="Id" ParentID="Pid" DataSource="@ListData" Text="Name" HasChildren="HasChild"></TreeViewFieldsSettings>
             <TreeViewEvents TValue="EmployeeData" NodeSelected="OnSelect" NodeClicked="nodeClicked"></TreeViewEvents>
             <SfContextMenu TValue="MenuItem" @ref="menu" Target="#treeview" Items="@MenuItems">
-                <ContextMenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></ContextMenuEvents>
+                 <MenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></MenuEvents>
             </SfContextMenu>
         </SfTreeView>
     </div>
@@ -26,9 +26,8 @@ Following is an example which demonstrates the above cases which are used to man
 
     // Reference for context menu
     SfContextMenu<MenuItem> menu;
-
     string selectedId;
-    string[] selectedNodes = new string[] { };
+    public List<string> selectedNodes = new List<string>();
     int index = 100;
 
     // Datasource for menu items
@@ -55,28 +54,21 @@ Following is an example which demonstrates the above cases which are used to man
     // Triggers when TreeView node is clicked
     public async void nodeClicked(NodeClickEventArgs args)
     {
-        string eventString = JsonConvert.SerializeObject(args.Event);
-        Dictionary<string, dynamic> eventParameters = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(eventString);
-        if ((eventParameters["which"]).ToString() == "3")
-        {
-            this.selectedNodes = new string[] { (await args.Node.GetAttribute("data-uid")).ToString() };
-            StateHasChanged();
-        }
+        selectedNodes.Clear();
+        selectedId = args.NodeData.Id;
+        selectedNodes.Add(selectedId);
     }
 
     // To add a new node
     void AddNodes()
     {
-        List<object> TreeData = new List<object>();
         string NodeId = "tree_" + this.index.ToString();
-        TreeData.Add(new
+        ListData.Add(new EmployeeData
         {
             Id = NodeId,
             Name = "NewItem",
-
+            Pid = this.selectedId
         });
-
-        this.tree.AddNodes(TreeData, this.selectedId, null, false);
         this.tree.BeginEdit(NodeId);
         this.index = this.index + 1;
 
@@ -85,8 +77,8 @@ Following is an example which demonstrates the above cases which are used to man
     // To delete a tree node
     void RemoveNodes()
     {
-        string[] removeNode = new string[] { this.selectedId };
-        this.tree.RemoveNodes(removeNode);
+        List<EmployeeData> removeNode = tree.GetTreeData(selectedId);
+        ListData.Remove(removeNode.ElementAt(0));
     }
 
     // To edit a tree node
@@ -120,6 +112,7 @@ Following is an example which demonstrates the above cases which are used to man
 
     protected override void OnInitialized()
     {
+        selectedNodes.Add("1");
         base.OnInitialized();
         ListData = new List<EmployeeData>();
         ListData.Add(new EmployeeData

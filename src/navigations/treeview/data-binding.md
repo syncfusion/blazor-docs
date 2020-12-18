@@ -30,9 +30,9 @@ TreeView can be populated with hierarchical data source that contains nested lis
 In the following example, **Id**, **FolderName**, and **SubFolders** columns from hierarchical data have been mapped to **Id**, **Text**, and **Child** fields, respectively.
 
 ```csharp
- @using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="MailItem">
-    <TreeViewFieldsSettings TValue="MailItem" Id="Id" Text="FolderName" Child="@Child" Selected="Selected" DataSource="@MyFolder" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="MailItem" Id="Id" Text="FolderName" Child="SubFolders" DataSource="@MyFolder" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
@@ -40,10 +40,9 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
     {
         public string Id { get; set; }
         public string FolderName { get; set; }
-        public bool Expanded{ get; set; }
-        public List<MailItem> SubFolders{ get; set; }
+        public bool Expanded { get; set; }
+        public List<MailItem> SubFolders { get; set; }
     }
-    object Child;
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()
     {
@@ -109,7 +108,6 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
             Id = "02-04",
             FolderName = "Archive"
         });
-        this.Child = "SubFolders";
     }
 }
 
@@ -254,17 +252,19 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 ```csharp
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Data
-<SfTreeView TValue="RemoteData">
-    <TreeViewFieldsSettings TValue="RemoteData" Query="new sf.data.Query().from('Employees').select('EmployeeID,FirstName,Title').take(5)" Id="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
-        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
-        <TreeViewFieldChild TValue="RemoteData" Query="new sf.data.Query().from('Orders').select('OrderID,EmployeeID,ShipName').take(5)" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
-            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+<SfTreeView TValue="TreeData">
+    <TreeViewFieldsSettings TValue="TreeData" Query="@Query" Id="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
+        <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+        <TreeViewFieldChild TValue="TreeData" Query="@SubQuery" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
+            <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </TreeViewFieldChild>
     </TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
-    public class RemoteData
+    public Query Query = new Query().From("Employees").Select(new List<string> { "EmployeeID", "FirstName" }).Take(5).RequiresCount();
+    public Query SubQuery = new Query().From("Orders").Select(new List<string> { "OrderID", "EmployeeID", "ShipName" }).Take(5).RequiresCount();
+    public class TreeData
     {
         public int? EmployeeID { get; set; }
         public int OrderID { get; set; }
@@ -590,15 +590,15 @@ Now, you can configure the TreeView using the **‘SfDataManager’** to interac
     // To add a new node
     void AddNodes()
     {
-        List<object> TreeData = new List<object>();
-        TreeData.Add(new
+        List<Employee> TreeData = new List<Employee>();
+        TreeData.Add(new Employee
         {
             Id = this.index,
             Name = "New Entry",
-            ParentId = this.selectedId
+            ParentId = Int32.Parse(this.selectedId)
 
         });
-        this.tree.AddNodes(TreeData, this.selectedId, null, false);
+        this.tree.AddNodes(TreeData, this.selectedId);
         this.index = this.index + 1;
     }
 

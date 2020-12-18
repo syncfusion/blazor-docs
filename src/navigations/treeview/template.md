@@ -18,7 +18,7 @@ In the following sample, employee information such as employee photo, name, and 
 
 <SfTreeView TValue="EmployeeDetails" CssClass="custom">
     <TreeViewFieldsSettings TValue="EmployeeDetails" Id="EmployeeId" Text="EmployeeName" DataSource="@Employee" Expanded="Expanded" HasChildren="HasChild" Selected="Selected" ParentID="ParentId"></TreeViewFieldsSettings>
-    <TreeViewTemplates>
+    <TreeViewTemplates TValue="EmployeeDetails">
         <NodeTemplate>
             @{
                 var employee = ((context as EmployeeDetails));

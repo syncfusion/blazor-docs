@@ -28,8 +28,8 @@ You can customize header styles by adding predefined classes in the Tab root ele
             <label>Header Style</label>
         </div>
         <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-            <SfDropDownList TValue="string" Index="0" DataSource="@HeaderStylesData" Width="30%" TItem="DropdownFields">
-                <DropDownListEvents TValue="string" ValueChange="OnHeaderStyleChange"></DropDownListEvents>
+            <SfDropDownList TValue="string" DataSource="@HeaderStylesData" Width="30%" TItem="DropdownFields" @bind-Index="index">
+                <DropDownListEvents TValue="string" ValueChange="OnHeaderStyleChange" TItem="DropdownFields"></DropDownListEvents>
                 <DropDownListFieldSettings Value="Value" Text="Text"></DropDownListFieldSettings>
             </SfDropDownList>
         </div>
@@ -56,6 +56,7 @@ You can customize header styles by adding predefined classes in the Tab root ele
 </SfTab>
 
 @code{
+    private int? index { get; set; } = 0;
     public string HeaderStyles { get; set; } = "";
     public class DropdownFields
     {
@@ -86,7 +87,7 @@ You can customize header styles by adding predefined classes in the Tab root ele
             "base of up to one billion,[10] making it the most globally popular messaging application. WhatsApp Inc., based in " +
             "Mountain View, California, was acquired by Facebook Inc. on February 19, 2014, for approximately US$19.3 billion.";
 
-    public void OnHeaderStyleChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public void OnHeaderStyleChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropdownFields> args)
     {
         HeaderStyles = args.Value;
     }
@@ -124,8 +125,8 @@ You can customize the position of the Tab header icons using the `IconPosition` 
             <label>Icon Position</label>
         </div>
         <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-            <SfDropDownList TValue="string" Index="0" DataSource="@HeaderIconsData" Width="30%" TItem="HeaderIcons">
-                <DropDownListEvents ValueChange="ChangeHeaderIcon" TValue="string"></DropDownListEvents>
+            <SfDropDownList TValue="string" DataSource="@HeaderIconsData" Width="30%" TItem="HeaderIcons" @bind-Index="index">
+                <DropDownListEvents ValueChange="ChangeHeaderIcon" TValue="string" TItem="HeaderIcons"></DropDownListEvents>
                 <DropDownListFieldSettings Value="Value" Text="Text"></DropDownListFieldSettings>
             </SfDropDownList>
         </div>
@@ -203,6 +204,7 @@ You can customize the position of the Tab header icons using the `IconPosition` 
 </style>
 
 @code{
+    private int? index { get; set; } = 0;
     public string PositionValue { get; set; } = "left";
     List<HeaderIcons> HeaderIconsData = new List<HeaderIcons>
     {
@@ -229,7 +231,7 @@ You can customize the position of the Tab header icons using the `IconPosition` 
             "base of up to one billion,[10] making it the most globally popular messaging application. WhatsApp Inc., based in " +
             "Mountain View, California, was acquired by Facebook Inc. on February 19, 2014, for approximately US$19.3 billion.";
 
-    public void ChangeHeaderIcon(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public void ChangeHeaderIcon(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, HeaderIcons> args)
     {
         PositionValue = args.Value as String;
     }

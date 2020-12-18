@@ -8,7 +8,7 @@ In TreeView component, you can get the original bound data using the `GetTreeDat
 
 <SfTreeView TValue="TreeItem" SortOrder="@Syncfusion.Blazor.Navigations.SortOrder.Ascending" ShowCheckBox="true" AutoCheck="false" @ref="tree">
     <TreeViewEvents TValue="TreeItem" NodeChecking="BeforeCheck"></TreeViewEvents>
-    <TreeViewFieldsSettings DataSource="@TreeDataSource" Id="NodeId" Text="NodeText" Expanded="Expanded" Child="@("Child")" IconCss="Icon"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings DataSource="@TreeDataSource" Id="NodeId" Text="NodeText" Expanded="Expanded" Child="Child" IconCss="Icon"></TreeViewFieldsSettings>
 </SfTreeView>
 @if (SelectedIcon != null)
 {
@@ -26,8 +26,8 @@ In TreeView component, you can get the original bound data using the `GetTreeDat
     {
         if (args.Action == "check")
         {
-            SelectedID = args.Data[0].Id.ToString();
-            List<TreeItem> IconData = await this.tree.GetTreeData(SelectedID);
+            SelectedID = args.NodeData.Id;
+            List<TreeItem> IconData = this.tree.GetTreeData(SelectedID);
             SelectedIcon = $"Icon class is: {IconData[0].Icon}";
             StateHasChanged();
         }

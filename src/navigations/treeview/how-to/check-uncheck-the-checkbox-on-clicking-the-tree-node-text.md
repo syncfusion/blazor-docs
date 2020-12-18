@@ -4,7 +4,7 @@ You can check and uncheck the checkboxes of tree view by clicking the tree node 
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
-<SfTreeView TValue="MusicAlbum" @ref="tree" ShowCheckBox="true" AutoCheck="true">
+<SfTreeView TValue="MusicAlbum" @ref="tree" ShowCheckBox="true" AutoCheck="true" CheckedNodes="@CheckedNodes.ToArray()">
     <TreeViewEvents TValue="MusicAlbum" OnKeyPress="TreeNodeClick" NodeClicked="NodeClick" NodeChecking="BeforeCheck" NodeExpanding="ExpandCollapse" NodeCollapsing="ExpandCollapse"></TreeViewEvents>
     <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
 </SfTreeView>
@@ -15,6 +15,7 @@ You can check and uncheck the checkboxes of tree view by clicking the tree node 
     public bool ExpandIconClick { get; set; } = false;
     public bool CheckBoxClick { get; set; } = false;
     List<MusicAlbum> NodeDetails;
+    public List<string> CheckedNodes = new List<string>();
     public class MusicAlbum
     {
         public int Id { get; set; }
@@ -33,16 +34,15 @@ You can check and uncheck the checkboxes of tree view by clicking the tree node 
         string Key = args.Event.Key;
         if (Key == "Enter" && !ExpandIconClick)
         {
-            NodeDetails = await this.tree.GetTreeData(args.Node);
-            var Element = new[] { args.Node };
+            NodeDetails = this.tree.GetTreeData(args.NodeData.Id);
             bool check = NodeDetails[0].IsChecked ?? false;
             if (check)
             {
-                this.tree.UncheckAll(Element);
+                CheckedNodes.Remove(args.NodeData.Id);
             }
             else
             {
-                this.tree.CheckAll(Element);
+                CheckedNodes.Add(args.NodeData.Id);
             }
         }
         ExpandIconClick = false;
@@ -51,15 +51,15 @@ You can check and uncheck the checkboxes of tree view by clicking the tree node 
     {
         if (!ExpandIconClick && !CheckBoxClick)
         {
-            List<MusicAlbum> NodeDetails = await this.tree.GetTreeData(args.Node);
+            List<MusicAlbum> NodeDetails = this.tree.GetTreeData(args.NodeData.Id);
             var Element = new[] { args.Node };
             if (NodeDetails[0].IsChecked == true)
             {
-                this.tree.UncheckAll(Element);
+                CheckedNodes.Remove(args.NodeData.Id);
             }
             else
             {
-                this.tree.CheckAll(Element);
+                CheckedNodes.Add(args.NodeData.Id);
             }
 
         }

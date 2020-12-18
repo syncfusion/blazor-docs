@@ -20,7 +20,7 @@ In the following sample, the list item has icon with text representation. On doc
     Header
 </div>
 
-<SfSidebar @ref="sidebarObj" Width="220px" DockSize="72px" EnableDock=true>
+<SfSidebar @ref="sidebarObj" Width="220px" DockSize="72px" EnableDock=true @bind-IsOpen="SidebarToggle">
     <ChildContent>
         <div class="dock">
             <ul>
@@ -55,9 +55,10 @@ In the following sample, the list item has icon with text representation. On doc
 
 @code{
     SfSidebar sidebarObj;
+    public bool SidebarToggle = false;
     public void Toggle()
     {
-        this.sidebarObj.Toggle();
+        SidebarToggle = !SidebarToggle;
     }
 }
 

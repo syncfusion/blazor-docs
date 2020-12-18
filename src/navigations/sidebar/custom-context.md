@@ -16,7 +16,7 @@ In the following sample, click the toggle button to expand or collapse the sideb
 
 @using Syncfusion.Blazor.Navigations
 
-<SfSidebar @ref="sidebarObj" Width="280px" Type=SidebarType.Push Target="@Target">
+<SfSidebar @ref="sidebarObj" Width="280px" Type=SidebarType.Push  @bind-IsOpen="SidebarToggle" Target="@Target">
     <ChildContent>
         <div style="text-align: center;" class="text-content">Sidebar</div>
     </ChildContent>
@@ -52,10 +52,10 @@ In the following sample, click the toggle button to expand or collapse the sideb
 @code{
     SfSidebar sidebarObj;
     public string Target = ".maincontent";
-
+    public bool SidebarToggle = false;
     public void Toggle()
     {
-        this.sidebarObj.Toggle();
+        SidebarToggle = !SidebarToggle;
     }
 }
 
@@ -115,7 +115,7 @@ In the following sample, click the toggle button to expand or collapse the sideb
     .e-toolbar .e-toolbar-items, .footer, .e-toolbar .e-toolbar-item .e-tbar-btn.e-btn {
         background-color: midnightblue;
         color: white;
-        font-size:16px;
+        font-size: 16px;
     }
 
     .main > div {

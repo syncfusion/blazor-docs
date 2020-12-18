@@ -8,12 +8,12 @@ This section demonstrates how to get the child nodes from corresponding Parent I
 @using Newtonsoft.Json;
 
 <SfTreeView TValue="TreeData" @ref="tree">
-    <TreeViewFieldsSettings DataSource="@TreeDataSource" Id="Code" Text="Name" Selected="Selected" Expanded="Expanded" Child="@("Child")"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings DataSource="@TreeDataSource" Id="Code" Text="Name" Selected="Selected" Expanded="Expanded" Child="Child"></TreeViewFieldsSettings>
 </SfTreeView>
 <SfMaskedTextBox @ref="mask" Placeholder="Enter the ID (ex: NA)" FloatLabelType="@FloatLabelType.Always" Width="250"></SfMaskedTextBox>
 <button class="e-btn e-info" @onclick="@GetDetails">Submit</button>
-<br/>
-@if(TreeNodeDetails != null)
+<br />
+@if (TreeNodeDetails != null)
 {
     @TreeNodeDetails
 }
@@ -28,7 +28,7 @@ This section demonstrates how to get the child nodes from corresponding Parent I
     async void GetDetails()
     {
         String EnteredText = mask.Value.ToString();
-        List<TreeData> treeData = await tree.GetTreeData(EnteredText);
+        List<TreeData> treeData = tree.GetTreeData(EnteredText);
         TreeNodeDetails = $"NodeData: {JsonConvert.SerializeObject(treeData[0])}";
         StateHasChanged();
 

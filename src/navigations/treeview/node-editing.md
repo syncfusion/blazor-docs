@@ -18,7 +18,7 @@ When editing is completed by focus out or by pressing the **Enter** key, the mod
 ```csharp
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="DriveData" AllowEditing="true">
-    <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="@Child" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="Children" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
@@ -115,7 +115,6 @@ When editing is completed by focus out or by pressing the **Enter** key, the mod
             NodeId = "02-03",
             NodeText = "Office"
         });
-        this.Child = "Children";
     }
 }
 

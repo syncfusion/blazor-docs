@@ -27,7 +27,7 @@ In the following sample, toggle method has been used to show or hide the Sidebar
     Header
 </div>
 
-<SfSidebar @ref="sidebarObj" Width="250px">
+<SfSidebar @ref="sidebarObj" Width="250px" @bind-IsOpen="SidebarToggle">
     <ChildContent>
         <div style="text-align: center;" class="text-content">
             <span>Sidebar</span>
@@ -47,13 +47,14 @@ In the following sample, toggle method has been used to show or hide the Sidebar
 
 @code{
     SfSidebar sidebarObj;
+    public bool SidebarToggle = false;
     public void Close()
     {
-        this.sidebarObj.Hide();
+        SidebarToggle = false;
     }
     public void Toggle()
     {
-        this.sidebarObj.Toggle();
+        SidebarToggle = !SidebarToggle;
     }
 }
 

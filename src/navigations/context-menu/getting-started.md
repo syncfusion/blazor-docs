@@ -86,16 +86,13 @@ Now, add the Blazor Context Menu component in `razor` page in the `Pages` folder
 ```csharp
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
-<SfContextMenu Target="#target" Items="@MenuItems"></SfContextMenu>
-
-@code {
-    public List<MenuItem> MenuItems = new List<MenuItem>
-    {
-        new MenuItem{ Text = "Cut" },
-        new MenuItem{ Text = "Copy" },
-        new MenuItem{ Text = "Paste" }
-    };
-}
+<SfContextMenu Target="#target" TValue="MenuItem">
+    <MenuItems>
+        <MenuItem Text="Cut"></MenuItem>
+        <MenuItem Text="Copy"></MenuItem>
+        <MenuItem Text="Paste"></MenuItem>
+    </MenuItems>
+</SfContextMenu>
 
 <style>
     #target {
@@ -106,7 +103,7 @@ Now, add the Blazor Context Menu component in `razor` page in the `Pages` folder
         text-align: justify;
         color: gray;
         user-select: none;
-}
+    }
 </style>
 
 ```

@@ -22,8 +22,8 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
         <label> Previous Animation </label>
     </div>
     <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-        <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" Index="0" TItem="Effect">
-            <DropDownListEvents ValueChange="PreviousChange" TValue="AnimationEffect"></DropDownListEvents>
+        <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" TItem="Effect" @bind-Value="PreviousEffect">
+            <DropDownListEvents ValueChange="PreviousChange" TValue="AnimationEffect" TItem="Effect"></DropDownListEvents>
             <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
         </SfDropDownList>
     </div>
@@ -33,8 +33,8 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
         <label> Next Animation </label>
     </div>
     <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-        <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" Index="1" TItem="Effect">
-            <DropDownListEvents ValueChange="NextChange" TValue="AnimationEffect"></DropDownListEvents>
+        <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" TItem="Effect" @bind-Value="NextEffect">
+            <DropDownListEvents ValueChange="NextChange" TValue="AnimationEffect" TItem="Effect"></DropDownListEvents>
             <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
         </SfDropDownList>
     </div>
@@ -66,8 +66,8 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
 </SfTab>
 
 @code{
-    public AnimationEffect PreviousEffect { get; set; }
-    public AnimationEffect NextEffect { get; set; }
+    public AnimationEffect PreviousEffect = AnimationEffect.SlideLeftIn;
+    public AnimationEffect NextEffect = AnimationEffect.SlideRightIn;
 
     public string Content1 = "Twitter is an online social networking service that enables users to send and read short 140-character " +
             "messages called 'tweets'. Registered users can read and post tweets, but those who are unregistered can only read " +
@@ -98,11 +98,11 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
         new Effect() { ID= AnimationEffect.ZoomOut, Text= "ZoomOut" },
         new Effect() { ID= AnimationEffect.None, Text= "None" }
     };
-    public void PreviousChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<AnimationEffect> args)
+    public void PreviousChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<AnimationEffect, Effect> args)
     {
         this.PreviousEffect = args.Value;
     }
-    public void NextChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<AnimationEffect> args)
+    public void NextChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<AnimationEffect, Effect> args)
     {
         this.NextEffect = args.Value;
     }

@@ -10,7 +10,7 @@ The Toolbar can be rendered by defining an array of items. Items can be construc
 
 ## Button
 
-`Button` is the default command [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type), and it can be rendered by using the `Text` property.
+`Button` is the default command [Type](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ToolbarItem~Type.html), and it can be rendered by using the `Text` property.
 Properties of the button command type:
 
   Property   | Description
@@ -18,7 +18,7 @@ Properties of the button command type:
   Text       | The text to be displayed for button.
  ID         | The ID of the button to be rendered. If the ID is not given, auto ID is generated.
   PrefixIcon | Defines the class used to specify an icon for the button. The icon is `positioned before` the text if text is available or the icon alone button is rendered.
-SuffixIcon | Defines the class used to specify an icon for the button. The icon is `positioned after` the text if text is available. If both [PrefixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_PrefixIcon) and [SuffixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_SuffixIcon) are specified, only `PrefixIcon` is considered.
+SuffixIcon | Defines the class used to specify an icon for the button. The icon is `positioned after` the text if text is available. If both [PrefixIcon](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ToolbarItem~PrefixIcon.html) and [SuffixIcon](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ToolbarItem~SuffixIcon.html) are specified, only `PrefixIcon` is considered.
   Width      | Used to set the width of the button.
 
 ## Separator
@@ -51,7 +51,7 @@ The `Input` type is only applicable for adding `Template` elements when the  `Te
 
 * The `NumericTextBox` component can be included by importing the `@using Syncfusion.Blazor.Inputs` package into the `~/_Imports.razor` file.
 
-* Initialize the `NumericTextBox` in [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property, where the Toolbar item `Type` is set as `Input`.
+* Initialize the `NumericTextBox` in [Template](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ToolbarItem~Template.html) property, where the Toolbar item `Type` is set as `Input`.
 
 * Related `NumericTextBox` component properties can also be configured as given below.
 

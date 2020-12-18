@@ -27,7 +27,7 @@ The following table explains the usage of indicator icons.
 ```csharp
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="TeamDetails" AllowDragAndDrop="true">
-    <TreeViewFieldsSettings TValue="TeamDetails" Id="Id" Text="Name" Child="@Child" DataSource="@Team" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="TeamDetails" Id="Id" Text="Name" Child="Children" DataSource="@Team" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
@@ -39,8 +39,6 @@ The following table explains the usage of indicator icons.
         public bool Selected { get; set; }
         public List<TeamDetails> Children;
     }
-    object Child;
-
     List<TeamDetails> Team = new List<TeamDetails>();
 
     protected override void OnInitialized()
@@ -107,7 +105,6 @@ The following table explains the usage of indicator icons.
             Id = "03-02",
             Name = "Matthew"
         });
-        this.Child = "Children";
     }
 }
 
@@ -128,7 +125,7 @@ In the following sample,  the `AllowMultiSelection` property is  enabled along w
 ```csharp
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="TeamDetails" AllowDragAndDrop="true" AllowMultiSelection="true">
-    <TreeViewFieldsSettings TValue="TeamDetails" Id="Id" Text="Name" Selected="Selected" Child="@Child" DataSource="@Team" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="TeamDetails" Id="Id" Text="Name" Selected="Selected" Child="Children" DataSource="@Team" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
@@ -140,7 +137,6 @@ In the following sample,  the `AllowMultiSelection` property is  enabled along w
         public bool Selected { get; set; }
         public List<TeamDetails> Children;
     }
-    object Child;
 
     List<TeamDetails> Team = new List<TeamDetails>();
 
@@ -210,7 +206,6 @@ In the following sample,  the `AllowMultiSelection` property is  enabled along w
             Id = "03-02",
             Name = "Matthew"
         });
-        this.Child = "Children";
     }
 }
 

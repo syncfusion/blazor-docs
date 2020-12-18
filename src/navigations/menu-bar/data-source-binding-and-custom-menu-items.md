@@ -12,11 +12,11 @@ The Menu Bar supports data source bindings such as data source that can be struc
 
 ### Hierarchical data
 
-The Menu Bar can be populated with hierarchical data source by assigning it to the [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu.html#Syncfusion_Blazor_Navigations_SfMenu_Items) property, and the fields with corresponding keys can be mapped to the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu.html#Syncfusion_Blazor_Navigations_SfMenu_Fields) property.
+The Menu Bar can be populated with hierarchical data source by assigning it to the [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~Items.html) property, and the fields with corresponding keys can be mapped to the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~Fields.html) property.
 
 #### JSON data
 
-The Menu Bar can generate its menu items through an complex data source by mapping fields from the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu.html#Syncfusion_Blazor_Navigations_SfMenu_Fields) property.
+The Menu Bar can generate its menu items through an complex data source by mapping fields from the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~Fields.html) property.
 
 ```csharp
 
@@ -96,7 +96,7 @@ Output be like
 
 Menu Bar can be populated from self-referential data structure that contains data with `ParentId` mapping.
 
-In the following example, the **id**, **pId**, and **text** columns from self-referential data have been mapped to the [`ItemId`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ItemId), [`ParentId`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ParentId), and [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_Text) fields, respectively.
+In the following example, the **id**, **pId**, and **text** columns from self-referential data have been mapped to the [`ItemId`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuFieldSettings~ItemId.html), [`ParentId`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuFieldSettings~ParentId.html), and [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuFieldSettings~Text.html) fields, respectively.
 
 ```csharp
 
@@ -154,7 +154,7 @@ Output be like
 
 ## Custom Menu Bar Items
 
-To customize Menu Bar items in your application, set your customized template using [`MenuTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates.html). In the following example, the Menu Bar has been rendered with customized Menu Bar items.
+To customize Menu Bar items in your application, set your customized template using [`MenuTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuTemplates.html). In the following example, the Menu Bar has been rendered with customized Menu Bar items.
 
 ```csharp
 

@@ -5,7 +5,7 @@ You can customize the tree nodes level wise by adding custom CssClass to the com
 ```csharp
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="DriveData" CssClass="mytree">
-    <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="@Child" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="Children" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 <div id="details">
     <label>Note:</label>

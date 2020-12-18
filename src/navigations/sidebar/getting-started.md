@@ -164,7 +164,7 @@ The following example shows a Sidebar component with enabled backdrop.
     Header
 </div>
 
-<SfSidebar @ref="sidebarObj" ShowBackdrop="true" Width="250px">
+<SfSidebar @ref="sidebarObj" ShowBackdrop="true" Width="250px" @bind-IsOpen="SidebarToggle">
     <ChildContent>
         <div style="text-align: center;" class="text-content">
             <span>Sidebar</span>
@@ -179,9 +179,10 @@ The following example shows a Sidebar component with enabled backdrop.
 
 @code{
     SfSidebar sidebarObj;
+    public bool SidebarToggle = false;
     public void Close()
     {
-        this.sidebarObj.Hide();
+       SidebarToggle = false;
     }
 }
 
@@ -222,7 +223,7 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
     Header
 </div>
 
-<SfSidebar @ref="sidebarObj" Animate="false" EnableRtl="true" Width="250px">
+<SfSidebar @ref="sidebarObj" Animate="false" EnableRtl="true" Width="250px" @bind-IsOpen="SidebarToggle">
     <ChildContent>
         <div style="text-align: center;" class="text-content">
             <span>Sidebar</span>
@@ -237,9 +238,10 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 
 @code{
     SfSidebar sidebarObj;
+    public bool SidebarToggle = false;
     public void Close()
     {
-        this.sidebarObj.Hide();
+        SidebarToggle = false;
     }
 }
 
@@ -294,7 +296,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
     </SfToolbar>
 </div>
 
-<SfSidebar @ref="sidebarObj" Width="280px">
+<SfSidebar @ref="sidebarObj" Width="280px" @bind-IsOpen="SidebarToggle">
     <ChildContent>
         <span class="e-avatar e-avatar-large e-avatar-circle image"></span>
         <div class="text" style="width: 100%;font-size: 30px;text-align: center;">John </div>
@@ -345,10 +347,11 @@ In the following example, the Sidebar is rendered with Accordion component in it
 @code{
     SfSidebar sidebarObj;
     public string Target = ".maincontent";
+    public bool SidebarToggle = false;
 
     public void Toggle()
     {
-        this.sidebarObj.Toggle();
+        SidebarToggle = !SidebarToggle;
     }
 }
 
@@ -360,7 +363,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
         color: black;
     }
 
-    li{
+    li {
         list-style-type: none !important;
     }
 
@@ -408,7 +411,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
         font-size: 2.5em !important;
     }
 
-    .loading{
+    .loading {
         background-image: url(data:image/png;base64,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);
         background-repeat: no-repeat;
         background-size: cover;
@@ -417,20 +420,20 @@ In the following example, the Sidebar is rendered with Accordion component in it
         margin-left: 45%;
         margin-top: 5px;
         font-size: 2.5em !important;
-        width:85px;
-        height:85px;
+        width: 85px;
+        height: 85px;
     }
 
-    .e-acrdn-content li{
+    .e-acrdn-content li {
         height: 28px !important;
         line-height: 28px !important;
         font-size: 16px;
     }
 
-    .e-acrdn-content li,.e-acrdn-content li .e-content-icon:hover{
-        cursor: pointer;
-        color: #e3165b;
-    }
+        .e-acrdn-content li, .e-acrdn-content li .e-content-icon:hover {
+            cursor: pointer;
+            color: #e3165b;
+        }
 </style>
 
 ```

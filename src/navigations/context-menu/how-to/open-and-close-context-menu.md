@@ -6,28 +6,29 @@ description: "This section helps to learn how to Open and close Context Menu"
 
 # Open and close Context Menu
 
-Open and close the Context Menu manually whenever required by using the open and close methods. In the following sample, to open the Context Menu at specified position the [`Open`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Open_System_Nullable_System_Double__System_Nullable_System_Double__) method is used with `X` and `Y` coordinates
-and to close Context Menu [`Close`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Close) method can be used.
+Open and close the Context Menu manually whenever required by using the Open and Close methods. In the following sample, the Context Menu manually open while clicking the button using [`Open`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Open_System_Nullable_System_Double__System_Nullable_System_Double__) method with `ClientX` and `ClientY` coordinates.
+To manually close the Context Menu, [`Close`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Close) method can be used.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div id="target">
-    <SfContextMenu Target="#target" Items="@MenuItems" @ref="ContextMenuObj"></SfContextMenu>
-    <SfButton CssClass="e-btn" OnClick="open">Open ContextMenu</SfButton>
+    <SfContextMenu @ref="contextMenuObj" TValue="MenuItem">
+        <MenuItems>
+            <MenuItem Text="Cut"></MenuItem>
+            <MenuItem Text="Copy"></MenuItem>
+            <MenuItem Text="Paste"></MenuItem>
+        </MenuItems>
+    </SfContextMenu>
+    <SfButton @onclick="OpenContextMenu">Open ContextMenu</SfButton>
 </div>
 
 @code {
-    SfContextMenu<MenuItem> ContextMenuObj;
-    public List<MenuItem> MenuItems = new List<MenuItem>{
-        new MenuItem { Text = "Cut" },
-        new MenuItem { Text = "Copy" },
-        new MenuItem { Text = "Paste" }
-    };
-    private void open()
+    SfContextMenu<MenuItem> contextMenuObj;
+    private void OpenContextMenu(MouseEventArgs e)
     {
-        ContextMenuObj.Open(280, 110);
+        contextMenuObj.Open(e.ClientX, e.ClientY);
     }
 }
 

@@ -6,6 +6,7 @@
 * [Localization](tabs/localization.md)
 * [Orientation](tabs/orientation.md)
 * [Accessibility](tabs/accessibility.md)
+* [CSS Structure](tabs/style.md)
 * [Add nested Tabs](tabs/how-to/add-nested-tabs.md)
 * [Load Tab items dynamically](tabs/how-to/load-tab-items-dynamically.md)
 * [Prevent content swipe selection](tabs/how-to/prevent-content-swipe-selection.md)

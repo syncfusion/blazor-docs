@@ -6,27 +6,18 @@ Accordion is an interface where a list of items can be collapsed or expanded, bu
 @using Syncfusion.Blazor.Navigations
 
 <div class="tree-container">
-    <SfTreeView TValue="TreeItem" CssClass="accordiontree" @ref="tree">
+    <SfTreeView TValue="TreeItem" CssClass="accordiontree" @ref="tree" ExpandOn="ExpandAction.Click">
         <TreeViewEvents TValue="TreeItem" NodeSelecting="BeforeSelect"></TreeViewEvents>
-        <TreeViewFieldsSettings DataSource="@TreeItems" Id="Id" Text="Name" Child="@("Child")"></TreeViewFieldsSettings>
+        <TreeViewFieldsSettings DataSource="@TreeItems" Id="Id" Text="Name" Child="Child"></TreeViewFieldsSettings>
     </SfTreeView>
 </div>
 @code{
     List<TreeItem> TreeItems = new List<TreeItem>();
     SfTreeView<TreeItem> tree;
+    public List<string> ExpandedNodes = new List<string>();
     async void BeforeSelect(NodeSelectEventArgs args)
     {
-        string TreeLevel = "e-level-1";
-        string[] ClassList = await args.Node.GetClassList();
-        foreach (string x in ClassList)
-        {
-            if (TreeLevel.Contains(x))
-            {
-                this.tree.CollapseAll();
-                string[] ExpandNodes = new string[] { args.NodeData.Id.ToString() };
-                this.tree.ExpandAll(ExpandNodes);
-            }
-        }
+        this.tree.CollapseAll();
     }
     protected override void OnInitialized()
     {
@@ -175,7 +166,7 @@ Accordion is an interface where a list of items can be collapsed or expanded, bu
 <style>
 
     /*To display border for the tree*/
-    .tree-container{
+    .tree-container {
         max-width: 350px;
         max-height: 350px;
         margin: auto;

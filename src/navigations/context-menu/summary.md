@@ -4,7 +4,6 @@
 * [Accessibility](context-menu/accessibility.md)
 * [Customizing and Multilevel nesting](context-menu/customizing-and-multilevel-nesting.md)
 * [Icons and Navigation](context-menu/icons-and-navigations.md)
-* [Add/Remove Context Menu items](context-menu/how-to/add-or-remove-context-menu-items.md)
 * [Bind Context Menu Events](context-menu/how-to/bind-menu-events.md)
 * [Change animation settings](context-menu/how-to/change-animation-settings.md)
 * [Data Binding](context-menu/how-to/data-binding.md)

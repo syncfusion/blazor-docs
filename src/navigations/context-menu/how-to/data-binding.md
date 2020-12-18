@@ -6,15 +6,34 @@ description: "This section helps to learn how to bind data"
 
 # Data Binding
 
-To bind local data source to the Context Menu, menu items are populated from data source and mapped to [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Items) property. In the following example, data given in `CustomItems.cs` file is mapped to `Items` property.
+To bind local data source to the Context Menu, menu items are populated from data source and mapped to `Items` property. In the following example, custom data with different data type is mapped to `Items` property.
 
 ```csharp
 
 @using Syncfusion.Blazor.Navigations
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
-<SfContextMenu Target="#target" Items="@CustomItems.GetItems()"></SfContextMenu>
+<SfContextMenu Target="#target" Items="@menuItems">
+    <MenuFieldSettings Text="Content"></MenuFieldSettings>
+</SfContextMenu>
 
+@code {
+    private List<CustomItem> menuItems = new List<CustomItem>();
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        menuItems.Add(new CustomItem { Content = "Cut", Id = "1" });
+        menuItems.Add(new CustomItem { Content = "Copy", Id = "2" });
+        menuItems.Add(new CustomItem { Content = "Paste", Id = "3" });
+        menuItems.Add(new CustomItem { Content = "New", Id = "4" });
+    }
+    private class CustomItem
+    {
+        public string Content { get; set; }
+        public string Id { get; set; }
+    }
+}
 <style>
     #target {
         border: 1px dashed;
@@ -26,39 +45,6 @@ To bind local data source to the Context Menu, menu items are populated from dat
         user-select: none;
     }
 </style>
-
-```
-
-`CustomItems.cs`
-
-```csharp
-
-using System.Collections.Generic;
-public class CustomItems
-    {
-        public CustomItems()
-        {
-
-        }
-
-        public CustomItems(string Text, string Id)
-        {
-            this.Text = Text;
-            this.Id = Id;
-        }
-
-        public string Text { get; set; }
-        public string Id { get; set; }
-        public static List<CustomItems> GetItems()
-        {
-            List<CustomItems> Items = new List<CustomItems>();
-            Items.Add(new CustomItems { Text = "Cut", Id = "1" });
-            Items.Add(new CustomItems { Text = "Copy", Id = "2" });
-            Items.Add(new CustomItems { Text = "Paste", Id = "3" });
-            Items.Add(new CustomItems { Text = "New", Id = "4" });
-            return Items;
-        }
-    }
 
 ```
 

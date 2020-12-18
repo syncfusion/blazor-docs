@@ -6,8 +6,7 @@ description: "This section helps to learn how to change the animation of context
 
 # Change animation settings
 
-To change the animation of the Context Menu, [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuAnimationSettings.html
-) property is used.
+To change the animation of the Context Menu, [`MenuAnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettings.html) component is used to initialize the animation properties.
 The supported effects for Context Menu are,
 
 | Effect | Functionality |
@@ -23,18 +22,14 @@ The following sample illustrates how to open Context Menu with `FadeIn` effect w
 @using Syncfusion.Blazor.Navigations
 
 <div id="target">Right click/Touch hold to open the Context Menu</div>
-<SfContextMenu Target="#target" Items="@MenuItems">
-    <ContextMenuAnimationSettings Effect = "MenuEffect.FadeIn" Duration = "800"></ContextMenuAnimationSettings>
+<SfContextMenu Target="#target" TValue="MenuItem">
+    <MenuItems>
+        <MenuItem Text="Cut"></MenuItem>
+        <MenuItem Text="Copy"></MenuItem>
+        <MenuItem Text="Paste"></MenuItem>
+    </MenuItems>
+    <MenuAnimationSettings Effect="MenuEffect.FadeIn" Duration="800"></MenuAnimationSettings>
 </SfContextMenu>
-
-@code {
-    public List<MenuItem> MenuItems = new List<MenuItem>{
-        new MenuItem { Text = "Cut" },
-        new MenuItem { Text = "Copy" },
-        new MenuItem { Text = "Paste" }
-    };
-}
-
 <style>
     #target {
         border: 1px dashed;

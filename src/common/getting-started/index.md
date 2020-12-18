@@ -2,7 +2,6 @@
 
 This document illustrates how to build and run a simple Syncfusion Blazor Components in Server/Webassembly application in blazor.
 
-* [Blazor App with .NET 5.0 RC1](blazor-net5-rc)
 * [Getting Started with Blazor Server App in Visual Studio 2019](server-side-blazor)
 * [Getting Started with Blazor WebAssembly App in Visual Studio 2019](blazor-webassembly)
 * [Getting Started with Blazor Server App in .NET Core CLI](server-side-blazor-dotnet-cli)

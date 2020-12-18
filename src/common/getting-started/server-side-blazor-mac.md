@@ -6,14 +6,14 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 > **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
-> **New:** Syncfusion Blazor components are [compatible with .NET 5.0 RC](blazor-net5-rc) and it requires Visual Studio 2019 for Mac 8.7.6 or later.
+> **New:** Syncfusion Blazor components supported with .NET 5.0 and it requires Visual Studio 2019 for Mac 8.8 or later.
 
 ## Prerequisites
 
 * [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 RC](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
 
-> **Note:** **.NET Core SDK 3.1.8** requires Visual Studio for Mac 8.7.6 or later and **.NET 5.0 RC2** requires Visual Studio 2019 for Mac 8.7.6 or later.
+> **Note:** **.NET Core SDK 3.1.8** requires Visual Studio for Mac 8.7.6 or later and **.NET 5.0** requires Visual Studio 2019 for Mac 8.8 or later.
 
 ## Create a Blazor Server project in Visual Studio for Mac
 
@@ -77,32 +77,12 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     <head>
         ....
         ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 
     > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.3.47/styles/bootstrap4.css).
-    >
-    > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Startup.cs** file by using true parameter as mentioned below.
-    >
-    > ```csharp
-    > using Syncfusion.Blazor;
-    >
-    > namespace WebApplication1
-    > {
-    >     public class Startup
-    >     {
-    >         public void ConfigureServices(IServiceCollection services)
-    >         {
-    >            ....
-    >            ....
-    >            services.AddSyncfusionBlazor(true);
-    >         }
-    >     }
-    > }
-    >
-    > ```
-
+    
 7. Now, add the Syncfusion Blazor components in any web page (razor) in the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
 
     ```csharp

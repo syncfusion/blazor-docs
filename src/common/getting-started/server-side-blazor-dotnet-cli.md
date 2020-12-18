@@ -8,7 +8,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Prerequisites
 
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 ## Create a Blazor Server project using .NET Core CLI
 
@@ -66,33 +66,16 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     </head>
     ```
 
-    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.3.47/styles/bootstrap4.css).
-    >
-    > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Startup.cs** file by using true parameter as mentioned below.
-    > ```csharp
-    > using Syncfusion.Blazor;
-    >
-    > namespace WebApplication1
-    > {
-    >     public class Startup
-    >     {
-    >         public void ConfigureServices(IServiceCollection services)
-    >         {
-    >            ....
-    >            ....
-    >            services.AddSyncfusionBlazor(true);
-    >         }
-    >     }
-    > }
-    >
-    > ```
+    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
 
-6. Now, add the Syncfusion Blazor components in any web page (razor) in the `~/Pages` folder. For example, the calendar component is added in the **~/Pages/Index.razor** page.
+## Adding Syncfusion Component And Run the Application
+
+1. Now, add the Syncfusion Blazor components in any web page (razor) in the `~/Pages` folder. For example, the calendar component is added in the **~/Pages/Index.razor** page.
 
     ```csharp
     <SfCalendar TValue="DateTime"></SfCalendar>
     ```
 
-7. Run `dotnet run` command to run the application. The Syncfusion Blazor Calendar component will render in the web browser.
+2. Run `dotnet run` command to run the application. The Syncfusion Blazor Calendar component will render in the web browser.
 
     ![output](images/browser-output.png)

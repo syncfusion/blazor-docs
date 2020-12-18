@@ -6,14 +6,12 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 > **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
-> **New:** Syncfusion Blazor components are [compatible with .NET 5.0 RC](blazor-net5-rc) and it requires Visual Studio 2019 16.8 Preview 3 or later.
-
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
 
-> **Note:** **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later and **.NET 5.0 RC2** requires Visual Studio 2019 16.8 Preview 3 or later.
+> **Note:** **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later and **.NET 5.0** requires Visual Studio 2019 16.8 or later.
 
 ## Create a Blazor Server project in Visual Studio 2019
 
@@ -29,15 +27,19 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
     ![asp.net core project configuration](images/project-configuration.png)
 
-4. Choose **Blazor Server App** from the dashboard and click **Create** button to create a new Blazor Server application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
+4.  Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target that you want.
 
+    ![select framework](images/blazor-select-template.png)
+
+5. Choose **Blazor Server App** from the dashboard and click **Create** button to create a new Blazor Server application. 
+ 
     ![select framework](images/blazor-server-template.png)
 
-    > **Note:** ASP.NET Core 3.1 available in Visual Studio 2019 version.
+    > **Note:** .NET 5.0 available in Visual Studio 2019 version.
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
+1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
 
     ![nuget explorer](images/nuget-explorer.png)
 
@@ -83,34 +85,16 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     </head>
     ```
 
-    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.3.47/styles/bootstrap4.css).
-    >
-    > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Startup.cs** file by using true parameter as mentioned below.
-    >
-    > ```csharp
-    > using Syncfusion.Blazor;
-    >
-    > namespace WebApplication1
-    > {
-    >     public class Startup
-    >     {
-    >         public void ConfigureServices(IServiceCollection services)
-    >         {
-    >            ....
-    >            ....
-    >            services.AddSyncfusionBlazor(true);
-    >         }
-    >     }
-    > }
-    >
-    > ```
+    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
+    
+## Adding Syncfusion Component And Run the Application
 
-7. Now, add the Syncfusion Blazor components in any web page (razor) in the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
+4. Now, add the Syncfusion Blazor components in any web page (razor) in the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
 
     ```csharp
     <SfCalendar TValue="DateTime"></SfCalendar>
     ```
 
-8. Run the application, The Syncfusion Blazor Calendar component will render in the default web browser.
+5. Run the application, The Syncfusion Blazor Calendar component will render in the default web browser.
 
     ![output](images/browser-output.png)

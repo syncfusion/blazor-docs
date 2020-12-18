@@ -1,9 +1,10 @@
 # Overview
 
-The **ProgressButton** visualizes the progression of an operation to indicate the user that a process is happening in the background with visual representation.
+The **ButtonGroup** is a container that groups a series of buttons on a single line. It has an optional radio button (single selection) and checkbox (multiple selection) behavior.
+It may contain DropDownButton or SplitButton component.
 
 ## Key Features
 
-* **Spinner and its customization**
-* **Progress and animation**
-* **Customize ProgressButton using cssClass**
+* **ButtonGroup types**
+* **Predefined Button styles**
+* **Supports text and icon in the ButtonGroup**

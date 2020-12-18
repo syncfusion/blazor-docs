@@ -6,21 +6,19 @@ The following shortcut keys are used to access the Chip control without any inte
 
 | Keyboard shortcuts | Actions |
 |------------|-------------------|
-| <kbd>Enter</kbd> | Selects the targeted chip from the ChipList/ChipCollection. |
-| <kbd>Delete</kbd> | Deletes the targeted chip from the ChipList/ChipCollection. |
+| <kbd>Enter</kbd> | Selects the targeted chip from the Chip/ChipItems. |
+| <kbd>Delete</kbd> | Deletes the targeted chip from the Chip/ChipItems. |
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
-<SfChipList ID="chip-avatar" EnableDelete="true" Selection="Selection.Single">
-    <ChipCollection>
-
-        <ChipListChip Text="Andrew" AvatarIconCss='andrew'></ChipListChip>
-        <ChipListChip Text="Janet" AvatarIconCss='janet'></ChipListChip>
-        <ChipListChip Text="Laura" AvatarIconCss='laura'></ChipListChip>
-        <ChipListChip Text="Margaret" AvatarIconCss='margaret'></ChipListChip>
-
-    </ChipCollection>
-</SfChipList>
+<SfChip ID="chip-avatar" EnableDelete="true" CssClass="e-chip-avatar" Selection="SelectionType.Single">
+    <ChipItems>
+        <ChipItem Text="Andrew" LeadingIconCss='andrew'></ChipItem>
+        <ChipItem Text="Janet" LeadingIconCss='janet'></ChipItem>
+        <ChipItem Text="Laura" LeadingIconCss='laura'></ChipItem>
+        <ChipItem Text="Margaret" LeadingIconCss='margaret'></ChipItem>
+    </ChipItems>
+</SfChip>
 
 <style>
     #chip-avatar .andrew {

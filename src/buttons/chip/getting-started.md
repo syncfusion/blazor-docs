@@ -107,7 +107,12 @@ Now, add the Syncfusion Blazor Chip component in any web page `razor` in the `Pa
 ```csharp
     @using Syncfusion.Blazor.Buttons
 
-    <SfChipList Text="Janet Leverling"></SfChipList>
+    <SfChip>
+        <ChipItems>
+            <ChipItem Text="Janet Leverling"></ChipItem>
+        </ChipItems>
+    </SfChip>
+
 ```
 
 ## Run the application

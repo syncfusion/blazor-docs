@@ -1,15 +1,14 @@
 # Position Popup Open
 
-Popup open position can be changed according to the requirement. Popup open position can be changed in [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnOpen) event by setting `Top` and `Left` for the popup element.
+Popup open position can be changed according to the requirement.  We have set the Popup open position using `CssClass` property as `custom` in `Top` and `Left` for the popup element.
 
-In the following example, the `Top` position of the popup element is changed in open event.
+In the following example, the `Top` position of the popup element.
 
 ```csharp
 
 @using Syncfusion.Blazor.SplitButtons
 
-<SfDropDownButton Content="EDIT">
-    <DropDownButtonEvents OnOpen="Open"></DropDownButtonEvents>
+<SfDropDownButton Content="EDIT" CssClass="custom">
     <DropDownMenuItems>
         <DropDownMenuItem Text="Cut"></DropDownMenuItem>
         <DropDownMenuItem Text="Copy"></DropDownMenuItem>
@@ -17,12 +16,11 @@ In the following example, the `Top` position of the popup element is changed in 
     </DropDownMenuItems>
 </SfDropDownButton>
 
-@code {
-    public void Open(BeforeOpenCloseMenuEventArgs args)
-    {
-        args.Element.SetAttribute("style", "margin:-155px -27px");
+<style>
+    .custom.e-dropdown-popup {
+        margin: -122px -27px;
     }
-}
+</style>
 
 ```
 

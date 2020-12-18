@@ -1,4 +1,10 @@
-# Trace events of Progress Button
+---
+title: "Trace Events of Progress Button"
+component: "Progress Button"
+description: "This Section shows the event trace of progress button"
+---
+
+# Trace Events of Progress Button
 
 The Progress Button component triggers events based on its actions. The events can be used as extension points to perform custom operations.
 
@@ -15,17 +21,17 @@ The events available in Progress Button are [`OnFailure`](https://help.syncfusio
 
 @code {
     private string eventName = "No";
-    public void Begin(ProgressEventArgs args)
+    public void Begin(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
     {
-        this.eventName = "Begin";
+        eventName = "Begin";
     }
-    public void End(ProgressEventArgs args)
+    public void End(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
     {
-        this.eventName = "End";
+        eventName = "End";
     }
-    public void Progressing(ProgressEventArgs args)
+    public void Progressing(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
     {
-        this.eventName = "Progressing";
+        eventName = "Progressing";
     }
 }
 

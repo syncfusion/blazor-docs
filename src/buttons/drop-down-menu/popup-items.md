@@ -114,14 +114,11 @@ Output be like
 
 ### Item Templating
 
-Popup items can be customized using the [`OnItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnItemRender) event. The item render event triggers while rendering each popup action item. The event argument will be used to customize the items based on the requirement.
+Popup items can be customized using the `CssClass` property. We have customize the items using CSS style.
 
 ```csharp
 
-@using Syncfusion.Blazor.SplitButtons
-
-<SfDropDownButton Content="Edit">
-    <DropDownButtonEvents OnItemRender="Render"></DropDownButtonEvents>
+<SfDropDownButton Content="Edit" CssClass="custom">
     <DropDownMenuItems>
         <DropDownMenuItem Text="Cut"></DropDownMenuItem>
         <DropDownMenuItem Text="Copy"></DropDownMenuItem>
@@ -129,15 +126,9 @@ Popup items can be customized using the [`OnItemRender`](https://help.syncfusion
     </DropDownMenuItems>
 </SfDropDownButton>
 
-@code {
-    public void Render(MenuEventArgs args)
-    {
-        args.Element.AddClass(new string[] { "custom" });
-    }
-}
-
 <style>
-    .custom{
+  
+    .custom li {
         float: left;
         font-size: 10px;
         padding-left: 50px;

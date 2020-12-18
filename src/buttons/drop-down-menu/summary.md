@@ -1,7 +1,7 @@
 # Summary
 
 * [Getting Started](drop-down-menu/getting-started.md)
-* [Native Events](drop-down-menu/native-event.md)
+* [Events](drop-down-menu/native-event.md)
 * [Icons](drop-down-menu/icons.md)
 * [Popup Items](drop-down-menu/popup-items.md)
 * [Accessibility](drop-down-menu/accessibility.md)
@@ -14,3 +14,5 @@
 * [Hide dropdown arrow](drop-down-menu/how-to/hide-dropdown-arrow.md)
 * [Open a dialog on popup item click](drop-down-menu/how-to/open-a-dialog-on-popup-item-click.md)
 * [Position popup open](drop-down-menu/how-to/position-popup.md)
+* [Create Dropdown List in Popup](drop-down-menu/how-to/dropdownlist-dropdownbutton.md)
+* [Add and Remove Items](drop-down-menu/how-to/add-remove-items.md)

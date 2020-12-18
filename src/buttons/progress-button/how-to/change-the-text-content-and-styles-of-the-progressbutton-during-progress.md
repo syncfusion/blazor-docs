@@ -20,15 +20,18 @@ the [`OnBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitBut
 @code {
     public string Content = "Upload";
     public string CssClass = "e-hide-spinner";
-    public void Begin(ProgressEventArgs args)
+    public void Begin(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
     {
-        this.Content = "Uploading...";
-        this.CssClass = "e-hide-spinner e-info";
+        Content = "Uploading...";
+        CssClass = "e-hide-spinner e-info";
     }
-    public void End(ProgressEventArgs args)
+    public async Task End(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
     {
-        this.Content = "Success";
-        this.CssClass = "e-hide-spinner e-success";
+        Content = "Success";
+        CssClass = "e-hide-spinner e-success";
+        await Task.Delay(1000);
+        Content = "Upload";
+        CssClass = "e-hide-spinner";
     }
 }
 

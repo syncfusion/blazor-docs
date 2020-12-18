@@ -6,20 +6,20 @@ description: " This section explains how to group popup items using list view co
 
 # Group popup items with ListView component
 
-Header in popup items is possible in Dropdown Menu by templating entire popup with ListView. Create ListView with [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ID) listview and provide it as a [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html) for Dropdown Menu.
+Header in popup items is possible in Dropdown Menu by templating entire popup with ListView. Create ListView with [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ID) listview and provide it as a `PopupContent` for Dropdown Menu.
 
-In the following example, ListView element is given as `Target` to Dropdown Menu and header can be achieved
+In the following example, ListView element is given as `PopupContent` to Dropdown Menu and header can be achieved
 by [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.FieldSettingsModel.html#Syncfusion_Blazor_Lists_FieldSettingsModel_GroupBy) property.
 
 ```csharp
 
-@using Syncfusion.Blazor.SplitButtons
-@using Syncfusion.Blazor.Lists
-
-<SfDropDownButton Target="#listview" CssClass="e-caret-hide" IconCss="e-icons e-down"></SfDropDownButton>
-<SfListView ID="listview" DataSource="@Data" ShowCheckBox="true">
-    <ListViewFieldSettings Text="Text" GroupBy="Category"></ListViewFieldSettings>
-</SfListView>
+<SfDropDownButton CssClass="e-caret-hide" IconCss="e-icons e-down">
+        <PopupContent>
+            <SfListView ID="listview" DataSource="@Data" ShowCheckBox="true">
+                <ListViewFieldSettings Text="Text" GroupBy="Category"></ListViewFieldSettings>
+            </SfListView>
+        </PopupContent>
+    </SfDropDownButton>
 
 @code {
     public List<ListData> Data = new List<ListData>{
@@ -37,12 +37,6 @@ by [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.Fie
         public string Category { get; set; }
     }
 }
-
-<style>
-    .e-down::before {
-    content: '\e744';
-}
-</style>
 
 ```
 

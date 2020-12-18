@@ -1,5 +1,5 @@
 ---
-title: "Customize progress using cssClass"
+title: "Customize progress using CssClass"
 component: "Progress Button"
 description: "Progress Button how to section, change text content and styles, hide spinner, customize progress."
 ---

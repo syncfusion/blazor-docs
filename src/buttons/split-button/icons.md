@@ -82,8 +82,9 @@ The following example illustrates how to enable [`Separator`](https://help.syncf
 
 <SfSplitButton Content="Paste" IconCss="e-icons e-paste" CssClass="e-vertical">
     <DropDownMenuItems>
-        <DropDownMenuItem Text="Cut" ></DropDownMenuItem>
-        <DropDownMenuItem Text="Copy" ></DropDownMenuItem>
+        <DropDownMenuItem Text="Cut"></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem Separator="true"></DropDownMenuItem>
         <DropDownMenuItem Text="Paste"></DropDownMenuItem>
     </DropDownMenuItems>
 </SfSplitButton>

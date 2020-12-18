@@ -1,6 +1,6 @@
 # Types
 
-The ChipList control has the following types.
+The Chip control has the following types.
 
 * Input Chip
 * Choice Chip
@@ -13,33 +13,14 @@ Input Chip holds information in compact form. It converts user input into chips.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
-<SfChipList>
-    <ChipCollection>
-
-        <ChipListChip Text="Anne" LeadingIconCss="anne"></ChipListChip>
-        <ChipListChip Text="Janet" LeadingIconCss="janet"></ChipListChip>
-        <ChipListChip Text="Laura" LeadingIconCss="laura"></ChipListChip>
-        <ChipListChip Text="Margaret" LeadingIconCss="margaret"></ChipListChip>
-
-    </ChipCollection>
-</SfChipList>
-<style>
-    .anne {
-        background-image: url('./anne.png');
-    }
-
-    .janet {
-        background-image: url('./janet.png');
-    }
-
-    .laura {
-        background-image: url('./laura.png');
-    }
-
-    .margaret {
-        background-image: url('./margaret.png');
-    }
-</style>
+<SfChip>
+    <ChipItems>
+        <ChipItem Text="Anne" LeadingIconUrl="./anne.png"></ChipItem>
+        <ChipItem Text="Janet" LeadingIconUrl="./janet.png"></ChipItem>
+        <ChipItem Text="Laura" LeadingIconUrl="./laura.png"></ChipItem>
+        <ChipItem Text="Margaret" LeadingIconUrl="./margaret.png"></ChipItem>
+    </ChipItems>
+</SfChip>
 
 ```
 
@@ -49,20 +30,18 @@ Output be like the below.
 
 ## Choice Chip
 
-Choice Chip allows you to select a single chip from the set of ChipList/ChipCollection. It can be enabled by setting the `Selection` property to `Single`.
+Choice Chip allows you to select a single chip from the set of Chip/ChipItems. It can be enabled by setting the `Selection` property to `Single`.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
-<SfChipList Selection="Selection.Single">
-    <ChipCollection>
-
-        <ChipListChip Text="Small"></ChipListChip>
-        <ChipListChip Text="Medium"></ChipListChip>
-        <ChipListChip Text="Large"></ChipListChip>
-        <ChipListChip Text="Extra Large"></ChipListChip>
-
-    </ChipCollection>
-</SfChipList>
+<SfChip Selection="SelectionType.Single">
+    <ChipItems>
+        <ChipItem Text="Small"></ChipItem>
+        <ChipItem Text="Medium"></ChipItem>
+        <ChipItem Text="Large"></ChipItem>
+        <ChipItem Text="Extra Large"></ChipItem>
+    </ChipItems>
+</SfChip>
 
 ```
 
@@ -72,20 +51,18 @@ Output be like the below.
 
 ## Filter Chip
 
-Filter Chip allows you to select a multiple chip from the set of ChipList/ChipCollection. It can be enabled by setting the `Selection` property to `Multiple`.
+Filter Chip allows you to select a multiple chip from the set of Chip/ChipItems. It can be enabled by setting the `Selection` property to `Multiple`.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
-<SfChipList Selection="Selection.Multiple">
-    <ChipCollection>
-
-      <ChipListChip Text="Chai"></ChipListChip>
-      <ChipListChip Text="Chang"></ChipListChip>
-      <ChipListChip Text="Aniseed Syrup"></ChipListChip>
-      <ChipListChip Text="Ikura"></ChipListChip>
-
-    </ChipCollection>
-</SfChipList>
+<SfChip Selection="SelectionType.Multiple">
+    <ChipItems>
+        <ChipItem Text="Chai"></ChipItem>
+        <ChipItem Text="Chang"></ChipItem>
+        <ChipItem Text="Aniseed Syrup"></ChipItem>
+        <ChipItem Text="Ikura"></ChipItem>
+    </ChipItems>
+</SfChip>
 
 ```
 
@@ -99,24 +76,22 @@ The Action Chip triggers the event like click or delete, which helps doing actio
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
-<SfChipList>
-    <ChipListEvents OnClick="@OnClick"></ChipListEvents>
-    <ChipCollection>
-
-        <ChipListChip Text="Sent a text"></ChipListChip>
-        <ChipListChip Text="Set a remainder"></ChipListChip>
-        <ChipListChip Text="Read my emails"></ChipListChip>
-        <ChipListChip Text="Set alarm"></ChipListChip>
-
-    </ChipCollection>
-</SfChipList>
+<SfChip>
+    <ChipEvents OnClick="@OnClick"></ChipEvents>
+    <ChipItems>
+        <ChipItem Text="Sent a text"></ChipItem>
+        <ChipItem Text="Set a remainder"></ChipItem>
+        <ChipItem Text="Read my emails"></ChipItem>
+        <ChipItem Text="Set alarm"></ChipItem>
+    </ChipItems>
+</SfChip>
 
 <div>@ChipText</div>
 
 @code
 {
     public string ChipText = "";
-    private void OnClick(ClickEventArgs args)
+    private void OnClick(Syncfusion.Blazor.Buttons.ChipEventArgs args)
     {
         ChipText = args.Text;
         this.StateHasChanged();
@@ -131,20 +106,18 @@ Output be like the below.
 
 ### Deletable Chip
 
-Deletable Chip allows you to delete a chip from ChipList/ChipCollection. It can be enabled by setting the `EnableDelete` property to `true`.
+Deletable Chip allows you to delete a chip from Chip/ChipItems. It can be enabled by setting the `EnableDelete` property to `true`.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
-<SfChipList EnableDelete="true">
-    <ChipCollection>
-
-        <ChipListChip Text="Sent a text"></ChipListChip>
-        <ChipListChip Text="Set a remainder"></ChipListChip>
-        <ChipListChip Text="Read my emails"></ChipListChip>
-        <ChipListChip Text="Set alarm"></ChipListChip>
-
-    </ChipCollection>
-</SfChipList>
+<SfChip EnableDelete="true">
+    <ChipItems>
+        <ChipItem Text="Sent a text"></ChipItem>
+        <ChipItem Text="Set a remainder"></ChipItem>
+        <ChipItem Text="Read my emails"></ChipItem>
+        <ChipItem Text="Set alarm"></ChipItem>
+    </ChipItems>
+</SfChip>
 
 ```
 

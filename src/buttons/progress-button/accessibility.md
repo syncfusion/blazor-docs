@@ -34,8 +34,8 @@ Starts the progress</td></tr>
 ```csharp
 @using Syncfusion.Blazor.SplitButtons
 
-<SfProgressButton EnableProgress="true" Content="Slide Right">Slide Right</SfProgressButton>
+<SfProgressButton Content="Spin Left"></SfProgressButton>
 ```
 
 Output be like
-![ProgressButton Sample](./images/pb-animation.png)
+![ProgressButton Sample](./images/progress-button.png)

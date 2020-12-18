@@ -7,8 +7,7 @@ description: "This section explains how to group popup items using list view com
 # Group items in Popup
 
 Items in popup can be grouped in Split Button by templating entire popup with ListView. To achieve grouping in ListView,
-check [`ListView Grouping`](../../listview/grouping#grouping) documentation. To template ListView in popup, create
-ListView with ID `listview` and provide it as [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html) for Split Button.
+check [`ListView Grouping`](../../listview/grouping#grouping) documentation. To template ListView in popup, We have render the ListView Component in Split button popup using `PopupContent` property.
 
 The following example illustrates how to group items in popup using ListView component.
 
@@ -17,12 +16,23 @@ The following example illustrates how to group items in popup using ListView com
 @using Syncfusion.Blazor.SplitButtons
 @using Syncfusion.Blazor.Lists
 
-<SfSplitButton Target="#listview" Content="ClipBoard" ></SfSplitButton>
-<SfListView ID="listview" DataSource="@Data" SortOrder="SortOrder.Descending">
-    <ListViewFieldSettings Text="Text" GroupBy="Category"></ListViewFieldSettings>
-</SfListView>
-
+<SfSplitButton Content="ClipBoard">
+    <PopupContent>
+        <SfListView ID="listview" DataSource="@Data" SortOrder="Syncfusion.Blazor.Lists.SortOrder.Descending" TValue="ListData">
+            <ListViewFieldSettings Text="Text" GroupBy="Category"></ListViewFieldSettings>
+        </SfListView>
+    </PopupContent>
+    <ChildContent>
+        <SplitButtonEvents OnClose="popupClose"></SplitButtonEvents>
+    </ChildContent>
+</SfSplitButton>
 @code {
+
+    private void popupClose(BeforeOpenCloseMenuEventArgs args)
+    {
+
+    }
+
     public List<ListData> Data = new List<ListData>{
         new ListData{ Text = "Cut", Category = "Basic" },
         new ListData{ Text = "Copy", Category = "Basic" },

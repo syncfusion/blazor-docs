@@ -12,7 +12,7 @@ Refer the below code snippet to navigate line between two cities in World map.
 ```csharp
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsNavigationLineSettings>
                 <MapsNavigationLine Visible="true"
                                     Color="black"
@@ -44,7 +44,7 @@ You can enable arrows in the navigation lines using the [`ShowArrow`](https://he
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsNavigationLines>
                 <MapsNavigationLine Visible="true"
                                     Color="blue"

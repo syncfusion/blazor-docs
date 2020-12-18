@@ -17,7 +17,7 @@ The following properties are available in [`MapsShapeSettings`](https://help.syn
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             @* To customize map shape *@
             <MapsShapeSettings Fill="#33CCFF">
                 <MapsShapeBorder Color="#FFFFFF" Width="2"></MapsShapeBorder>
@@ -36,7 +36,7 @@ To apply the default palette colors to shapes, enable the [`Autofill`](https://h
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             @* To set shape color automatically *@
             <MapsShapeSettings Autofill="true"></MapsShapeSettings>
         </MapsLayer>
@@ -53,7 +53,7 @@ To apply own custom palette to shapes, provide the palette colors to [`Palette`]
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsShapeSettings Autofill="true" Palette='new string[] {"#33CCFF", "#FF0000", "#800000", "#FFFF00", "#808000"}'>
             </MapsShapeSettings>
         </MapsLayer>
@@ -86,7 +86,7 @@ The Maps component has the following projection types:
 @* To change Maps projection *@
 <SfMaps ProjectionType="ProjectionType.Miller">
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>

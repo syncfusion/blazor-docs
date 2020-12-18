@@ -74,7 +74,7 @@ You can use the [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 <SfMaps>
     <MapsLayers>
         @* load shape data *@
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -110,8 +110,8 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.
 
     public class UNCouncilCountry
     {
-        public string Name;
-        public string Membership;
+        public string Name { get; set; }
+        public string Membership { get; set; }
     };
 }
 ```
@@ -132,7 +132,7 @@ You should also specify the field names in the shape data and data source to the
                    ShapePropertyPath='@("name")'
                    DataSource="SecurityCouncilDetails"
                    @* To map data source field *@
-                   ShapeDataPath="Name">
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -154,7 +154,7 @@ Specify color and value in [`MapsShapeColorMapping`](https://help.syncfusion.com
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    ShapePropertyPath='@("name")'
                    DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name">
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
             @* color mapping related configuration *@
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
@@ -183,7 +183,7 @@ You can add label text to the shapes in the Maps component using [`MapsDataLabel
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    ShapePropertyPath='@("name")'
                    DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name">
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
             @* To add data labels *@
             <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
@@ -215,7 +215,7 @@ You can add a title using [`MapsTitleSettings`](https://help.syncfusion.com/cr/a
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    ShapePropertyPath='@("name")'
                    DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name">
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
             <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
@@ -247,7 +247,7 @@ The legend items are used to denote color mapping categories, and you can show l
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    ShapePropertyPath='@("name")'
                    DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name">
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
             <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
@@ -278,9 +278,9 @@ You can enable tooltip by setting the [`Visible`](https://help.syncfusion.com/cr
     <MapsLegendSettings Visible="true"></MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='@("name")'
+                   ShapePropertyPath='new string[] {"name"}'
                    DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name">
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
             <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>

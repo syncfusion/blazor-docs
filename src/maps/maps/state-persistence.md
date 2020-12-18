@@ -9,7 +9,7 @@ State persistence allows the Maps to retain the current modal value in the brows
 
 <SfMaps EnablePersistence ="true">
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
     <MapsZoomSettings Enable='true'></MapsZoomSettings>

@@ -12,10 +12,10 @@ To add bubbles to the maps, bind data source to [`MapsBubble`](https://help.sync
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="PopulationDetails"
                    ShapeDataPath="Name"
-                   ShapePropertyPath='@("name")'>
+                   ShapePropertyPath='new string[] {"name"}' TValue="Country">
             @* To add bubbles based on population count *@
             <MapsBubbleSettings>
-                <MapsBubble Visible="true" ValuePath="Population" DataSource="PopulationDetails">
+                <MapsBubble Visible="true" ValuePath="Population" DataSource="PopulationDetails" TValue="Country">
                 </MapsBubble>
             </MapsBubbleSettings>
         </MapsLayer>
@@ -25,8 +25,8 @@ To add bubbles to the maps, bind data source to [`MapsBubble`](https://help.sync
 @code{
     public class Country
     {
-        public string Name;
-        public double Population;
+        public string Name { get; set; }
+        public double Population { get; set; }
     };
     private List<Country> PopulationDetails = new List<Country> {
        new Country
@@ -60,16 +60,16 @@ Using the [`MinRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='@("name")'
+                   ShapePropertyPath='new string[] {"name"}'
                    DataSource="PopulationDetails"
-                   ShapeDataPath="Name">
+                   ShapeDataPath="Name" TValue="Country">
             @* To add different size of bubbles based on population density *@
             <MapsBubbleSettings>
                 <MapsBubble Visible="true"
                             MinRadius="5"
                             MaxRadius="80"
                             ValuePath="PopulationDensity"
-                            DataSource="@populationDetails">
+                            DataSource="@populationDetails" TValue="Country">
                 </MapsBubble>
             </MapsBubbleSettings>
         </MapsLayer>
@@ -93,9 +93,9 @@ In the following code example, the gender-wise population ratio is demonstrated 
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='@("name")'
+                   ShapePropertyPath='new string[] {"name"}'
                    DataSource="GenderRatios"
-                   ShapeDataPath="Country">
+                   ShapeDataPath="Country" TValue="GenderRatio">
             @* To add multiple bubble groups *@
             <MapsBubbleSettings>
                 <MapsBubble Visible="true"
@@ -103,7 +103,7 @@ In the following code example, the gender-wise population ratio is demonstrated 
                             MaxRadius="20"
                             ValuePath="FemaleRatio"
                             ColorValuePath="FemaleRatioColor"
-                            DataSource="GenderRatios">
+                            DataSource="GenderRatios" TValue="GenderRatio">
                 </MapsBubble>
                 <MapsBubble Visible="true"
                             BubbleType="BubbleType.Circle"
@@ -112,7 +112,7 @@ In the following code example, the gender-wise population ratio is demonstrated 
                             MaxRadius="25"
                             ValuePath="MaleRatio"
                             ColorValuePath="MaleRatioColor"
-                            DataSource="GenderRatios">
+                            DataSource="GenderRatios" TValue="GenderRatio">
                 </MapsBubble>
             </MapsBubbleSettings>
         </MapsLayer>
@@ -122,11 +122,11 @@ In the following code example, the gender-wise population ratio is demonstrated 
 @code{
     public class GenderRatio
     {
-        public string Country;
-        public double FemaleRatio;
-        public double MaleRatio;
-        public string FemaleRatioColor;
-        public string MaleRatioColor;
+        public string Country { get; set; }
+        public double FemaleRatio { get; set; }
+        public double MaleRatio { get; set; }
+        public string FemaleRatioColor { get; set; }
+        public string MaleRatioColor { get; set; }
     }
 
     private List<GenderRatio> GenderRatios = new List<GenderRatio> {
@@ -180,12 +180,12 @@ The following code example demonstrates how to enable the legends for bubbles wi
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="PopulationDetails"
                    ShapeDataPath="Name"
-                   ShapePropertyPath='@("name")'>
+                   ShapePropertyPath='new string[] {"name"}' TValue="City">
             <MapsBubbleSettings>
                 <MapsBubble Visible="true"
                             ValuePath="Population"
                             ColorValuePath="Color"
-                            DataSource="PopulationDetails">
+                            DataSource="PopulationDetails" TValue="City">
                 </MapsBubble>
             </MapsBubbleSettings>
         </MapsLayer>

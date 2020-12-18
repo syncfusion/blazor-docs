@@ -8,7 +8,7 @@ You can create an object for the maps component using `@ref` and call the `Print
 <button @onclick="PrintMap">Print</button>
 <SfMaps @ref="maps" @ref:suppressField>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>

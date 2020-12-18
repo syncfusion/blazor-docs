@@ -13,17 +13,17 @@ In this example, the United States map shape is used as shape data by utilizing 
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' Tvalue="string">
             <MapsShapeSettings Fill="#E5E5E5">
                 <MapsShapeBorder Color="black" Width="0.1"></MapsShapeBorder>
             </MapsShapeSettings>
         </MapsLayer>
-        <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/texas.json"}' Type="Syncfusion.Blazor.Maps.Type.SubLayer">
+        <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/texas.json"}' Type="Syncfusion.Blazor.Maps.Type.SubLayer" Tvalue="string">
             <MapsShapeSettings Fill="rgba(141, 206, 255, 0.6)">
                 <MapsShapeBorder Color="#1a9cff" Width="0.25"></MapsShapeBorder>
             </MapsShapeSettings>
         </MapsLayer>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/california.json"}' Type="Syncfusion.Blazor.Maps.Type.SubLayer">
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/california.json"}' Type="Syncfusion.Blazor.Maps.Type.SubLayer" Tvalue="string">
             <MapsShapeSettings Fill="rgba(141, 206, 255, 0.6)">
                 <MapsShapeBorder Color="#1a9cff" Width="0.25"></MapsShapeBorder>
             </MapsShapeSettings>

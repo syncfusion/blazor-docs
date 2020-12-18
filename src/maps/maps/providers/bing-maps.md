@@ -38,7 +38,7 @@ To render the light version of the road maps, set the [`BingMapType`](https://he
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.Bing" BingMapType="BingMapType.CanvasLight" Key="">
+        <MapsLayer LayerType="ShapeLayerType.Bing" BingMapType="BingMapType.CanvasLight" Key="" TValue="string">
         </MapsLayer>
     </MapsLayers>
     @* Additionally map has been zoomed based on the center position *@
@@ -64,7 +64,7 @@ You can zoom and pan the Bing maps layer. Zooming helps you get a closer look at
                       Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.Bing" Key=""></MapsLayer>
+        <MapsLayer LayerType="ShapeLayerType.Bing" Key="" TValue="string"></MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
@@ -86,13 +86,13 @@ Markers can be added to the layers of Bing maps by setting the corresponding loc
     <MapsLayers>
         <MapsLayer LayerType="ShapeLayerType.Bing"
                    BingMapType="BingMapType.CanvasLight"
-                   Key="">
+                   Key="" TValue="string">
             @* Add markers *@
             <MapsMarkerSettings>
                 <MapsMarker Visible="true"
                             Height="25"
                             Width="15"
-                            DataSource="Cities">
+                            DataSource="Cities" TValue="City">
                 </MapsMarker>
             </MapsMarkerSettings>
             @* Add navigation line *@
@@ -111,9 +111,9 @@ Markers can be added to the layers of Bing maps by setting the corresponding loc
 @code{
     public class City
     {
-        public double Latitude;
-        public double Longitude;
-        public string Name;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
     }
     private List<City> Cities = new List<City> {
         new City { Latitude = 34.060620, Longitude = -118.330491,  Name="California" },

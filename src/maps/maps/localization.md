@@ -45,9 +45,9 @@ To load data related to toolbar items, use the `LoadLocaleData` method, and set 
     <MapsZoomSettings Enable="true"></MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='@("name")'
+                   ShapePropertyPath='new string[] {"name"}'
                    DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name">
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
             <MapsDataLabelSettings Visible="true" LabelPath="CountryName"></MapsDataLabelSettings>
             <MapsLayerTooltipSettings Visible="true" Format="${CountryName} - ${Membership}"></MapsLayerTooltipSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">

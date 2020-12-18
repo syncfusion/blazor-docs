@@ -20,8 +20,8 @@ In the below example tooltip is globalized to Deutsch culture.
     <MapsLayers>
         <MapsLayer ShapeData='MapShapeData'
             DataSource='CountryData' Format="c"
-            ShapePropertyPath="name"
-            ShapeDataPath="Country">
+            ShapePropertyPath='new string[] {"name"}'
+            ShapeDataPath="Country" TValue="MapDataSource">
             <MapsShapeSettings Fill="#E5E5E5" colorValuePath="Membership">
                 <MapsColorMappings>
                     <MapsColorMapping Value="Permanent" Color="#D84444"/>
@@ -47,8 +47,8 @@ In the below example tooltip is globalized to Deutsch culture.
         type= "GET"
     };
     public class MapDataSource {
-        public string Country;
-        public string Membership;
+        public string Country{ get; set; }
+        public string Membership{ get; set; }
     };
     public List<MapDataSource> CountryData = new List<MapDataSource>{
          new MapDataSource {  Country= "China", Membership= "Permanent", Population="20"},

@@ -16,7 +16,7 @@ To enable the zooming feature, set the [`Enable`](https://help.syncfusion.com/cr
 <SfMaps>
     <MapsZoomSettings Enable="true"></MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -53,7 +53,7 @@ The following options are available in toolbar, and you can use the options as n
                       Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -69,7 +69,7 @@ Use the [`PinchZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 <SfMaps>
     <MapsZoomSettings Enable="true" PinchZooming="true"></MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -101,7 +101,7 @@ Use the [`DoubleClickZoom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 <SfMaps>
     <MapsZoomSettings Enable="true" DoubleClickZoom="true"></MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -117,7 +117,7 @@ Use the [`MouseWheelZoom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 <SfMaps>
     <MapsZoomSettings Enable="true" MouseWheelZoom="true"></MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -134,7 +134,7 @@ You can use the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Sync
     <MapsZoomSettings Enable="true">
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string"
                    AnimationDuration="500">
         </MapsLayer>
     </MapsLayers>
@@ -156,7 +156,7 @@ You can select a shape by tapping the shape. The single selection is enabled usi
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             <MapsLayerSelectionSettings Enable="true" Fill="green">
                 <MapsLayerSelectionBorder Color="White" Width="2"></MapsLayerSelectionBorder>
             </MapsLayerSelectionSettings>
@@ -182,7 +182,7 @@ The following code example demonstrates how to add interactive legend along with
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="CouncilMemberdetails"
                    ShapeDataPath="Country"
-                   ShapePropertyPath='@("name")'>
+                   ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
@@ -199,8 +199,8 @@ The following code example demonstrates how to add interactive legend along with
 @code{
     public class UNCouncil
     {
-        public string Country;
-        public string Membership;
+        public string Country { get; set; }
+        public string Membership { get; set; }
     };
     private List<UNCouncil> CouncilMemberdetails = new List<UNCouncil>{
          new UNCouncil { Country= "China", Membership= "Permanent"},
@@ -224,7 +224,7 @@ Each shape in the map can be selected by calling the `shapeSelection` method. In
         <div>
             <SfMaps @ref="mapsref">
                 <MapsLayers>
-                    <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+                    <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
                         <MapsLayerSelectionSettings Enable="true" Fill="green">
                             <MapsLayerSelectionBorder Color="white" Width="2"></MapsLayerSelectionBorder>
                         </MapsLayerSelectionSettings>
@@ -256,7 +256,7 @@ Initially, the shape can be selected by using the property `initialShapeSelectio
 ```csharp
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsLayerSelectionSettings Enable="true" Fill="green">
                 <MapsLayerSelectionBorder Color="white" Width="2"></MapsLayerSelectionBorder>
             </MapsLayerSelectionSettings>
@@ -286,7 +286,7 @@ You can highlight a shape by hovering the mouse over the shape. The highlight is
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             <MapsLayerHighlightSettings Enable="true" Fill="green">
                 <MapsLayerHighlightBorder Color="white" Width="2"></MapsLayerHighlightBorder>
             </MapsLayerHighlightSettings>
@@ -312,7 +312,7 @@ The following code example demonstrates how to add interactive legend along with
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="CouncilMemberDetails"
                    ShapeDataPath="Country"
-                   ShapePropertyPath='@("name")'>
+                   ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
@@ -329,8 +329,8 @@ The following code example demonstrates how to add interactive legend along with
 @code{
     public class UNCouncil
     {
-        public string Country;
-        public string Membership;
+        public string Country { get; set; }
+        public string Membership { get; set; }
     };
     private List<UNCouncil> CouncilMemberDetails = new List<UNCouncil>{
          new UNCouncil { Country= "China", Membership= "Permanent"},
@@ -369,7 +369,7 @@ The following code snippet demonstrates how to enable tooltip for layer to show 
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    ShapePropertyPath='@("name")'
                    DataSource='PerformanceReport'
-                   ShapeDataPath="Name">
+                   ShapeDataPath='new string[] {"Name"}' TValue="Country">
             <MapsLayerTooltipSettings Visible="true"
                                   ValuePath="CountryName"
                                   Format="<b>${CountryName}</b><br>Finalist: <b>${Winner}</b><br>Win: <b>${Finalist}">
@@ -405,10 +405,10 @@ The following code snippet demonstrates how to enable tooltip for layer to show 
         };
     public class Country
     {
-        public string Name;
-        public string Winner;
-        public string Finalist;
-        public string CountryName;
+        public string Name { get; set; }
+        public string Winner { get; set; }
+        public string Finalist { get; set; }
+        public string CountryName { get; set; }
     }
 }
 ```
@@ -430,7 +430,7 @@ You can also provide tooltips for other elements such as markers and bubbles usi
                             DataSource="OfficeLocations"
                             Fill="white"
                             Width="20"
-                            Shape="MarkerType.Circle">
+                            Shape="MarkerType.Circle" TValue="OfficeLocation">
                     <MapsMarkerBorder Color="#285255" Width="2"></MapsMarkerBorder>
                     <MapsMarkerTooltipSettings Visible="true" ValuePath="Name"></MapsMarkerTooltipSettings>
                 </MapsMarker>
@@ -442,11 +442,11 @@ You can also provide tooltips for other elements such as markers and bubbles usi
 @code {
     public class OfficeLocation
     {
-        public double Latitude;
-        public double Longitude;
-        public string Name;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
     }
-    private List<OfficeLocation> OfficeLocations = new List<OfficeLocation> {
+    private List<OfficeLocation> officeLocations = new List<OfficeLocation> {
         new OfficeLocation{ Latitude= 37.6276571, Longitude= -122.4276688, Name= "San Bruno" },
         new OfficeLocation{ Latitude= 33.5302186, Longitude= -117.7418381, Name= "Laguna Niguel" },
         new OfficeLocation{ Latitude= 40.7424509, Longitude= -74.0081468, Name= "New York" },

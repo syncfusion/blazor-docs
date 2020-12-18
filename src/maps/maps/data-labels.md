@@ -11,7 +11,7 @@ You can add label text to the shapes of the Maps component using `MapsDataLabelS
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             @* To add data labels *@
             <MapsDataLabelSettings Visible="true" LabelPath="name"></MapsDataLabelSettings>
             <MapsShapeSettings Autofill="true"></MapsShapeSettings>
@@ -39,7 +39,7 @@ The Maps component provides an option to specify the smart labels when the label
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             @* To hide intersect labels with shape border *@
             <MapsDataLabelSettings Visible="true"
                                    LabelPath="name"
@@ -66,7 +66,7 @@ This specifies the intersect action when a label intersect with another label. I
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             @* To trim intersect labels *@
             <MapsDataLabelSettings Visible="true"
                                    LabelPath="name"

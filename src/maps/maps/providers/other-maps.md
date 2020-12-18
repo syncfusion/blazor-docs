@@ -9,7 +9,7 @@ Refer to [Google maps licensing](https://developers.google.com/maps/terms#10-lic
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM" UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level">
+        <MapsLayer LayerType="ShapeLayerType.OSM" UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -30,7 +30,7 @@ You can zoom and pan the Google maps layer. Zooming helps you get a closer look 
                       Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM" UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level">
+        <MapsLayer LayerType="ShapeLayerType.OSM" UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -49,13 +49,13 @@ Markers can be added to the layers of Google maps by setting the corresponding l
     <MapsZoomSettings ZoomFactor="4"></MapsZoomSettings>
     <MapsCenterPosition Latitude="29.394708" Longitude="-94.954653"></MapsCenterPosition>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM" UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level">
+        <MapsLayer LayerType="ShapeLayerType.OSM" UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level" TValue="string">
             @* Add markers *@
             <MapsMarkerSettings>
                 <MapsMarker Visible="true"
                             Height="25"
                             Width="15"
-                            DataSource="Cities">
+                            DataSource="Cities" TValue="City">
                 </MapsMarker>
             </MapsMarkerSettings>
             @* Add navigation line *@
@@ -74,9 +74,9 @@ Markers can be added to the layers of Google maps by setting the corresponding l
 @code{
     public class City
     {
-        public double Latitude;
-        public double Longitude;
-        public string Name;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
     }
     private List<City> Cities = new List<City> {
         new City { Latitude = 34.060620, Longitude = -118.330491,  Name="California" },
@@ -96,11 +96,11 @@ You can render any GeoJSON shape as a sublayer on top of an Google maps layer fo
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM" UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level">
+        <MapsLayer LayerType="ShapeLayerType.OSM" UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level" TValue="string">
         </MapsLayer>
         @* To add geometry shape as sublayer *@
         <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
-                   Type="Syncfusion.Blazor.Maps.Type.SubLayer">
+                   Type="Syncfusion.Blazor.Maps.Type.SubLayer" TValue="string">
             <MapsShapeSettings Fill="blue"></MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>

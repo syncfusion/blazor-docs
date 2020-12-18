@@ -13,13 +13,13 @@ Initialize the Maps component with marker settings. Here, a marker is added with
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker Visible="true"
                             Shape="MarkerType.Circle"
                             Fill="white"
                             Width="15"
-                            DataSource="Cities">
+                            DataSource="Cities" TValue="City">
                     <MapsMarkerBorder Width="2" Color="#333"></MapsMarkerBorder>
                 </MapsMarker>
             </MapsMarkerSettings>
@@ -30,9 +30,9 @@ Initialize the Maps component with marker settings. Here, a marker is added with
 @code {
     public class City
     {
-        public double Latitude;
-        public double Longitude;
-        public string Name;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
     };
     private List<City> Cities = new List<City> {
             new City{ Latitude = 40.7424509, Longitude = -74.0081468, Name = "New York" }
@@ -51,19 +51,19 @@ Customize the above option for n number of markers as demonstrated in the follow
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" Shape="MarkerType.Circle"
                             Fill="white"
                             Width="20"
-                            DataSource="HighestPopulation">
+                            DataSource="HighestPopulation" TValue="City">
                     <MapsMarkerBorder Width="2" Color="#333"></MapsMarkerBorder>
                 </MapsMarker>
                 <MapsMarker Visible="true" Shape="MarkerType.Rectangle"
                             Fill="yellow"
                             Width="20"
                             Height="5"
-                            DataSource="LowestPopulation">
+                            DataSource="LowestPopulation" TValue="City">
                     <MapsMarkerBorder Width="2" Color="#333"></MapsMarkerBorder>
                 </MapsMarker>
             </MapsMarkerSettings>
@@ -74,9 +74,9 @@ Customize the above option for n number of markers as demonstrated in the follow
 @code {
     public class City
     {
-        public double Latitude;
-        public double Longitude;
-        public string Name;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
     };
     public List<City> HighestPopulation = new List<City> {
         new City { Latitude = 40.7424509, Longitude = -74.0081468, Name = "New York" }
@@ -98,12 +98,12 @@ Tooltip is used to display more information about marker on mouse over or touch-
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" Shape="MarkerType.Circle"
                             Fill="white"
                             Width="20"
-                            DataSource="HighestPopulation">
+                            DataSource="HighestPopulation" TValue="City">
                     <MapsMarkerBorder Width="2" Color="#333"></MapsMarkerBorder>
                     <MapsMarkerTooltipSettings Visible="true" ValuePath="Name"></MapsMarkerTooltipSettings>
                 </MapsMarker>
@@ -115,9 +115,9 @@ Tooltip is used to display more information about marker on mouse over or touch-
 @code {
     public class City
     {
-        public double Latitude;
-        public double Longitude;
-        public string Name;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
     };
     public List<City> HighestPopulation = new List<City> {
         new City { Latitude = 40.7424509, Longitude = -74.0081468, Name = "New York" }

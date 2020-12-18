@@ -14,11 +14,11 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.
 @code{
     public class PopulationDetail
     {
-        public string Code;
-        public double Value;
-        public string Name;
-        public double Population;
-        public double Density;
+        public string Code { get; set; }
+        public double Value { get; set; }
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
     };
     private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
         new PopulationDetail {
@@ -61,7 +61,7 @@ The [`ShapePropertyPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-            ShapePropertyPath='@("name")'>
+            ShapePropertyPath='new string[] {"name"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -94,7 +94,7 @@ For example, following population data contains field 'Name', 'Population' and '
     <MapsLayers>
         <MapsLayer
             DataSource="PopulationDetails"
-            ShapeDataPath="Name">
+            ShapeDataPath="Name" TValue="PopulationDetail">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -102,11 +102,11 @@ For example, following population data contains field 'Name', 'Population' and '
 @code{
     public class PopulationDetail
     {
-        public string Name;
-        public double Population;
-        public double Density;
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
     };
-    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
+    private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
         new PopulationDetail {
             Name= "Afghanistan",
             Population= 29863010,
@@ -131,7 +131,7 @@ Refer both shape data and data source as demonstrated in the following code exam
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
             DataSource="PopulationDetails"
             ShapeDataPath="Name"
-            ShapePropertyPath='@("name")'>
+            ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             @*  It display data label for bounded items  *@
             <MapsDataLabelSettings Visible="true" LabelPath="Name"></MapsDataLabelSettings>
         </MapsLayer>
@@ -141,13 +141,13 @@ Refer both shape data and data source as demonstrated in the following code exam
 @code{
     public class PopulationDetail
     {
-        public string Code;
-        public double Value;
-        public string Name;
-        public double Population;
-        public double Density;
+        public string Code { get; set; }
+        public double Value { get; set; }
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
     };
-    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
+    private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
         new PopulationDetail {
             Code = "AF",
             Value= 53,
@@ -200,7 +200,7 @@ else
             <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                        DataSource="PopulationDensity"
                        ShapeDataPath="Name"
-                       ShapePropertyPath='@("name")'>
+                       ShapePropertyPath='new string[] {"name"}' TValue="PopulationDensity">
                 <MapsDataLabelSettings Visible="true" LabelPath="Name"></MapsDataLabelSettings>
             </MapsLayer>
         </MapsLayers>
@@ -283,7 +283,7 @@ else
             <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                        DataSource="PopulationDensity"
                        ShapeDataPath="data.continent"
-                       ShapePropertyPath='@("continent")'>
+                       ShapePropertyPath='new string[] {"continent"}' TValue="PopulationDensity">
 				<MapsShapeSettings ColorValuePath="data.color"></MapsShapeSettings>
                 <MapsDataLabelSettings Visible="true" LabelPath="Name"></MapsDataLabelSettings>
             </MapsLayer>

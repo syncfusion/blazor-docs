@@ -11,7 +11,7 @@ To use the print functionality, we should set the [`AllowPrint`](https://help.sy
 @*  To create reference  *@
 <SfMaps @ref="maps" AllowPrint="true">
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsLayerTooltipSettings Visible="true"
                                   ValuePath="name">
             </MapsLayerTooltipSettings>
@@ -47,7 +47,7 @@ To use the image export functionality, we should set the [`AllowImageExport`](ht
 <button @onclick="ExportMap">Export</button>
 <SfMaps @ref="Maps" AllowImageExport="true">
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -73,7 +73,7 @@ To use the PDF export functionality, we should set the [`AllowPdfExport`](https:
 <button @onclick="ExportMap">Export</button>
 <SfMaps @ref="Maps" AllowPdfExport="true">
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -103,7 +103,7 @@ The rendered map with providers such as OSM, Bing and Google static maps can be 
 <button @onclick="ExportMap">Export</button>
 <SfMaps @ref="Maps" AllowPdfExport="true" AllowImageExport="true">
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM">
+        <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>

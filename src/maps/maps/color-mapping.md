@@ -13,7 +13,7 @@ Bind the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' DataSource="PopulationDetails" ShapeDataPath="Name" ShapePropertyPath='@("name")'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' DataSource="populationDetails" ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             @* To apply color based on density range *@
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Density">
                 <MapsShapeColorMappings>
@@ -28,13 +28,13 @@ Bind the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 @code{
     public class PopulationDetail
     {
-        public string Code;
-        public double Value;
-        public string Name;
-        public double Population;
-        public double Density;
+        public string Code { get; set; }
+        public double Value { get; set; }
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
     };
-    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
+    private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
        new PopulationDetail
        {
            Code = "US",
@@ -84,7 +84,7 @@ Bind the `councilMemberdetails` data to the layer [`DataSource`](https://help.sy
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' DataSource="CouncilMemberdetails" ShapeDataPath="Country" ShapePropertyPath='@("name")'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' DataSource="CouncilMemberdetails" ShapeDataPath="Country" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             @* To apply color based on membership type *@
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
@@ -99,8 +99,8 @@ Bind the `councilMemberdetails` data to the layer [`DataSource`](https://help.sy
 @code{
     public class UNCouncil
     {
-        public string Country;
-        public string Membership;
+        public string Country { get; set; }
+        public string Membership { get; set; }
     };
     private List<UNCouncil> CouncilMemberdetails = new List<UNCouncil>{
          new UNCouncil { Country= "China", Membership= "Permanent"},
@@ -126,7 +126,7 @@ Bind the `populationDetails` value to the [`DataSource`](https://help.syncfusion
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' DataSource="PopulationDetails" ShapeDataPath="Name" ShapePropertyPath='@("name")'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' DataSource="populationDetails" ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetails">
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Density">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping From="100" To="400" Color='@("blue")' MinOpacity="0.3" MaxOpacity="1" />
@@ -153,9 +153,9 @@ Bind the `populationDetails` value to layer [`DataSource`](https://help.syncfusi
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="PopulationDetails"
+                   DataSource="populationDetails"
                    ShapeDataPath="Name"
-                   ShapePropertyPath='@("name")'>
+                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetails">
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Density">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping From="0.00001" To="50" Color='new String[] { "red", "blue"}' />
@@ -182,7 +182,7 @@ In following code example, You have added color mapping for the ranges from 0.00
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' DataSource="PopulationDetails" ShapeDataPath="Name" ShapePropertyPath='@("name")'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' DataSource="populationDetails" ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetails">
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Density">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping From="0.00001" To="100" Color='@("orange")' />

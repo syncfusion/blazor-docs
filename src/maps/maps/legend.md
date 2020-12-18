@@ -28,8 +28,8 @@ The legends can be made interactive with an arrow mark that indicates the exact 
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="SecurityCouncilDetails"
-                   ShapePropertyPath='@("name")'
-                   ShapeDataPath="Name">
+                   ShapePropertyPath='new string[] {"name"}'
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
@@ -54,8 +54,8 @@ The legends can be made interactive with an arrow mark that indicates the exact 
 
     public class UNCouncilCountry
     {
-        public string Name;
-        public string Membership;
+        public string Name { get; set; }
+        public string Membership { get; set; }
     };
 }
 ```
@@ -96,8 +96,8 @@ The above four positions can be aligned with combination of 'Near', 'Center', an
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="SecurityCouncilDetails"
-                   ShapePropertyPath='@("name")'
-                   ShapeDataPath="Name">
+                   ShapePropertyPath='new string[] {"name"}'
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
@@ -143,8 +143,8 @@ To enable equal color mapping, refer to the [`MapsShapeSettings`](https://help.s
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="MembershipDetails"
                    ShapeDataPath="Country"
-                   ShapePropertyPath='@("name")'>
-            <MapsShapeSettings ColorValuePath="Membership">
+                   ShapePropertyPath='new string[] {"name"}'>
+            <MapsShapeSettings ColorValuePath="Membership" TValue="UNCouncilCountry">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
                     <MapsShapeColorMapping Value="Non-Permanent" Color='@("#316DB5")' />
@@ -196,7 +196,7 @@ To get the legend shape value for [`MapsLegendSettings`](https://help.syncfusion
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="MemberShipDetails"
                    ShapeDataPath="Country"
-                   ShapePropertyPath='@("name")'>
+                   ShapePropertyPath='new string[] {"name"}' TValue="UNCouncilCountry">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
@@ -242,9 +242,9 @@ Bind the `populationDetails` value to the [`DataSource`](https://help.syncfusion
     <MapsLegendSettings Visible="true"></MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="PopulationDetails"
+                   DataSource="populationDetails"
                    ShapeDataPath="Name"
-                   ShapePropertyPath='@("name")'>
+                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             <MapsShapeSettings ColorValuePath="Density">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping From="0.0001" To="100" Color='@("yellow")' />
@@ -259,11 +259,11 @@ Bind the `populationDetails` value to the [`DataSource`](https://help.syncfusion
 @code{
     public class PopulationDetail
     {
-        public string Name;
-        public double Population;
-        public double Density;
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
     };
-    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
+    private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
        new PopulationDetail
        {
            Name ="United States",
@@ -305,9 +305,9 @@ To enable or disable the desired legend for each color mapping, set the [`ShowLe
     <MapsLegendSettings Visible="true"></MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="PopulationDetails"
+                   DataSource="populationDetails"
                    ShapeDataPath="Name"
-                   ShapePropertyPath='@("name")'>
+                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetails">
             <MapsShapeSettings ColorValuePath="Density">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping From="0.0001"
@@ -350,7 +350,7 @@ The following code example demonstrates how to hide the legend items based data 
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="PopulationDetails"
                    ShapeDataPath="Name"
-                   ShapePropertyPath='@("name")'>
+                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             <MapsShapeSettings ColorValuePath="Color">
             </MapsShapeSettings>
         </MapsLayer>
@@ -360,14 +360,14 @@ The following code example demonstrates how to hide the legend items based data 
 @code{
     public class PopulationDetail
     {
-        public string Name;
-        public double Population;
-        public double Density;
-        public bool LegendVisibility;
-        public string Color;
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
+        public bool LegendVisibility { get; set; }
+        public string Color { get; set; }
 
     };
-    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
+    private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
        new PopulationDetail
        {
            Name ="United States",
@@ -419,7 +419,7 @@ To show the legend text based on binding, the field name in the data source shou
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="PopulationDetails"
                    ShapeDataPath="Name"
-                   ShapePropertyPath='@("name")'>
+                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             <MapsShapeSettings ColorValuePath="Color">
             </MapsShapeSettings>
         </MapsLayer>
@@ -429,10 +429,10 @@ To show the legend text based on binding, the field name in the data source shou
 @code{
     public class PopulationDetail
     {
-        public string Name;
-        public double Population;
-        public double Density;
-        public string Color;
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
+        public string Color { get; set; }
     };
     private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
        new PopulationDetail
@@ -481,8 +481,8 @@ To enable or disable the duplicate legend items, set the [`RemoveDuplicateLegend
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="PopulationDetails"
-                   ShapeDataPath="Name"
-                   ShapePropertyPath='@("name")'>
+                   ShapeDataPath="Name" TValue="PopulationDetail"
+                   ShapePropertyPath='new string[] {"name"}'>
             <MapsShapeSettings ColorValuePath="Color">
             </MapsShapeSettings>
         </MapsLayer>
@@ -492,10 +492,10 @@ To enable or disable the duplicate legend items, set the [`RemoveDuplicateLegend
 @code{
     public class PopulationDetail
     {
-        public string Name;
-        public double Population;
-        public double Density;
-        public string Color;
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
+        public string Color { get; set; }
     };
     private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
        new PopulationDetail
@@ -564,8 +564,8 @@ The following code example demonstrates how to add the toggle option to legend.
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="PopulationDetails"
-                   ShapeDataPath="Name"
-                   ShapePropertyPath='@("name")'>
+                   ShapeDataPath="Name" TValue="PopulationDetail"
+                   ShapePropertyPath='new string[] {"name"}'>
             <MapsShapeSettings ColorValuePath="Color">
             </MapsShapeSettings>
         </MapsLayer>

@@ -9,11 +9,11 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker Visible="true" DataSource="California" Height="25" Width="15"></MapsMarker>
-                <MapsMarker Visible="true" DataSource="NewYork" Height="25" Width="15"></MapsMarker>
-                <MapsMarker Visible="true" DataSource="Iowa" Height="25" Width="15"></MapsMarker>
+                <MapsMarker Visible="true" DataSource="California" Height="25" Width="15" TValue="City"></MapsMarker>
+                <MapsMarker Visible="true" DataSource="NewYork" Height="25" Width="15" TValue="City"></MapsMarker>
+                <MapsMarker Visible="true" DataSource="Iowa" Height="25" Width="15" TValue="City"></MapsMarker>
             </MapsMarkerSettings>
             <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>
         </MapsLayer>
@@ -22,8 +22,8 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.
 @code {
     public class City
     {
-        public double Latitude;
-        public double Longitude;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     };
     public List<City> California = new List<City> {
         new City {Latitude=35.145083,Longitude=-117.960260}
@@ -52,9 +52,9 @@ The n number of markers can be added to shape layers using the [`DataSource`](ht
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker Visible="true" DataSource="Cities" Height="25" Width="15">
+                <MapsMarker Visible="true" DataSource="Cities" Height="25" Width="15" TValue="City">
                     <MapsMarkerTooltipSettings ValuePath="Name" Visible="true">
                     </MapsMarkerTooltipSettings>
                 </MapsMarker>
@@ -67,9 +67,9 @@ The n number of markers can be added to shape layers using the [`DataSource`](ht
 @code {
     public class City
     {
-        public double Latitude;
-        public double Longitude;
-        public string Name;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
     };
     private List<City> Cities = new List<City> {
         new City {Latitude=35.145083,Longitude=-117.960260, Name= "Californiya"},
@@ -105,12 +105,12 @@ You can specify multiple marker groups and customize each group of markers separ
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker Visible="true" DataSource="CitiesInUS" Shape="MarkerType.Diamond" Height="15" Fill="green" Width="15">
+                <MapsMarker Visible="true" DataSource="CitiesInUS" Shape="MarkerType.Diamond" Height="15" Fill="green" Width="15" TValue="City">
                     <MapsMarkerTooltipSettings ValuePath="Name" Visible="true"></MapsMarkerTooltipSettings>
                 </MapsMarker>
-                <MapsMarker Visible="true" DataSource="CitiesInIndia" Shape="MarkerType.Circle" Fill="blue" Height="10" Width="10">
+                <MapsMarker Visible="true" DataSource="CitiesInIndia" Shape="MarkerType.Circle" Fill="blue" Height="10" Width="10" TValue="City">
                     <MapsMarkerTooltipSettings ValuePath="Name" Visible="true"></MapsMarkerTooltipSettings>
                 </MapsMarker>
             </MapsMarkerSettings>
@@ -121,9 +121,9 @@ You can specify multiple marker groups and customize each group of markers separ
 @code {
     public class City
     {
-        public double Latitude;
-        public double Longitude;
-        public string Name;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
     };
     private List<City> CitiesInUS = new List<City> {
         new City { Latitude = 37.0000, Longitude = -120.0000, Name = "California"},
@@ -165,9 +165,9 @@ The following shapes are used for the marker object.
 @using Syncfusion.Blazor.Maps
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker Visible='true' DataSource='MarkerDataSource' ShapeValuePath="shape" ColorValuePath="color">
+                <MapsMarker Visible='true' DataSource='MarkerDataSource' ShapeValuePath="shape" ColorValuePath="color" TValue="TValue="MarkerData"">
                 </MapsMarker>
             </MapsMarkerSettings>
         </MapsLayer>
@@ -176,16 +176,16 @@ The following shapes are used for the marker object.
 @code {
     public class MapMarker
     {
-        public double latitude;
-        public double longitude;
+        public double latitude { get; set; }
+        public double longitude { get; set; }
     };
     public class MapMarkerDataSource
     {
-        public double latitude;
-        public double longitude;
-        public string name;
-        public string color;
-        public string shape;
+        public double latitude { get; set; }
+        public double longitude { get; set; }
+        public string name { get; set; }
+        public string color { get; set; }
+        public string shape { get; set; }
     };
     public List<MapMarkerDataSource> MarkerDataSource = new List<MapMarkerDataSource> {
         new MapMarkerDataSource{ latitude= 49.95121990866204, longitude= 18.468749999999998, name= "Europe", color="red", shape="Triangle" },
@@ -205,9 +205,9 @@ The map is initially scaled to the center value based on the marker distance. Th
 @using Syncfusion.Blazor.Maps
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker Visible='true' DataSource='MarkerDataSource'>
+                <MapsMarker Visible='true' DataSource='MarkerDataSource' TValue="MapMarker">
                 </MapsMarker>
             </MapsMarkerSettings>
         </MapsLayer>
@@ -217,14 +217,14 @@ The map is initially scaled to the center value based on the marker distance. Th
 @code {
     public class MapMarker
     {
-        public double latitude;
-        public double longitude;
+        public double latitude { get; set; }
+        public double longitude { get; set; }
     };
     public class MapMarkerDataSource
     {
-        public double latitude;
-        public double longitude;
-        public string name;
+        public double latitude { get; set; }
+        public double longitude { get; set; }
+        public string name { get; set; }
     };
     public List<MapMarkerDataSource> MarkerDataSource = new List<MapMarkerDataSource> {
         new MapMarkerDataSource{ latitude= 49.95121990866204, longitude= 18.468749999999998, name= "Europe" },
@@ -244,9 +244,9 @@ The cluster is formed by grouping an identical and non-identical marker from the
 @using Syncfusion.Blazor.Maps
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker Visible='true' DataSource='MarkerDataSource'>
+                <MapsMarker Visible='true' DataSource='MarkerDataSource' TValue="MapMarker"
                 </MapsMarker>
             </MapsMarkerSettings>
             <MapsMarkerClusterSettings AllowClustering="true" AllowClusterExpand="true" Shape="MarkerType.Circle" Height="40" Width="40">
@@ -259,14 +259,14 @@ The cluster is formed by grouping an identical and non-identical marker from the
 @code {
     public class MapMarker
     {
-        public double latitude;
-        public double longitude;
+        public double latitude { get; set; }
+        public double longitude { get; set; }
     };
     public class MapMarkerDataSource
     {
-        public double latitude;
-        public double longitude;
-        public string name;
+        public double latitude { get; set; }
+        public double longitude { get; set; }
+        public string name { get; set; }
     };
     public List<MapMarkerDataSource> MarkerDataSource = new List<MapMarkerDataSource> {
         new MapMarkerDataSource{ latitude= 49.95121990866204, longitude= 18.468749999999998, name= "Europe" },
@@ -298,13 +298,13 @@ The following code snippet demonstrates how to enable legend for markers.
     @*  To enable legend for marker *@
     <MapsLegendSettings Visible="true" Type="LegendType.Markers"></MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker Visible="true"
                             DataSource="Cities"
                             Height="25"
                             Width="15"
-                            LegendText="Name">
+                            LegendText="Name" TValue="City">
                 </MapsMarker>
             </MapsMarkerSettings>
             <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>
@@ -315,9 +315,9 @@ The following code snippet demonstrates how to enable legend for markers.
 @code {
     public class City
     {
-        public double Latitude;
-        public double Longitude;
-        public string Name;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
     };
     private List<City> Cities = new List<City> {
         new City {Latitude=35.145083, Longitude=-117.960260, Name= "Californiya"},
@@ -345,12 +345,12 @@ Using the [`AllowClustering`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 <SfMaps>
     <MapsZoomSettings Enable="true"></MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker Visible="true"
                             DataSource="LargestCities"
                             Height="25"
-                            Width="15">
+                            Width="15" TValue="City">
                 </MapsMarker>
             </MapsMarkerSettings>
             <MapsMarkerClusterSettings AllowClustering="true"
@@ -405,12 +405,12 @@ In the code below, click the user-defined button and the marker is added to the 
     <SfMaps>
         <MapsZoomSettings Enable="true" ZoomFactor="1"></MapsZoomSettings>
         <MapsLayers>
-            <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/world-map.json" }'>
+            <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/world-map.json" }' TValue="string">
                 <MapsShapeSettings Fill="#E5E5E5">
                     <MapsShapeBorder Width="0.2" Color="black"></MapsShapeBorder>
                 </MapsShapeSettings>
                 <MapsMarkerSettings>
-                    <MapsMarker DataSource="MarkerDataSource" Visible="true" Height="20" Width="20" Fill="red" AnimationDuration="0" Shape="MarkerType.Balloon">
+                    <MapsMarker DataSource="MarkerDataSource" Visible="true" Height="20" Width="20" Fill="red" AnimationDuration="0" Shape="MarkerType.Balloon" TValue="MarkerData">
                         <MapsMarkerTooltipSettings Visible="true" ValuePath="name"></MapsMarkerTooltipSettings>
                     </MapsMarker>
                 </MapsMarkerSettings>

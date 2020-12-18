@@ -11,7 +11,7 @@ To render Bing Maps in the Maps component, set `LayerType` as Bing and provide t
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.Bing"
+        <MapsLayer LayerType="ShapeLayerType.Bing" TValue="string"
                    Key="">
         </MapsLayer>
     </MapsLayers>
@@ -36,7 +36,7 @@ Add geometry shape in the Bing Maps using sublayer concept. To add geometry shap
         </MapsLayer>
         @* To add geometry shape as sublayer *@
         <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
-                   Type="Syncfusion.Blazor.Maps.Type.SubLayer">
+                   Type="Syncfusion.Blazor.Maps.Type.SubLayer" TValue="string">
             <MapsShapeSettings Fill="blue"></MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>

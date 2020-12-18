@@ -12,7 +12,7 @@ If you zoom the map using the [`ZoomFactor`](https://help.syncfusion.com/cr/blaz
     <MapsCenterPosition Latitude="25.54244147012483" Longitude="-89.62646484375"></MapsCenterPosition>
     <MapsZoomSettings Enable="false" ZoomFactor="13"></MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'></MapsLayer>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string"></MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```

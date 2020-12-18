@@ -11,32 +11,24 @@ In the following sample, the first tile of the color palette represents the no c
 ```csharp
 
 @using Syncfusion.Blazor.Inputs
-@using Newtonsoft.Json.Linq;
 
-<div id="preview" style="@StyleValue"></div>
+<div id="preview" style="@colorValue"></div>
 <SfColorPicker NoColor="true" Mode="ColorPickerMode.Palette" ShowButtons="false" ModeSwitcher="false" ValueChange="@Changed"></SfColorPicker>
 
-@code{
-    public string StyleValue = "background-color:#008000";
-    public GetCurrentValue ColorValue { get; set; }
-    public void Changed(ColorPickerEventArgs args)
+@code {
+    private string colorValue = "background-color: #008000";
+    private void Changed(ColorPickerEventArgs args)
     {
-        this.ColorValue = ((JObject)args.CurrentValue).ToObject<GetCurrentValue>();
-        this.StyleValue = "background-color:" + this.ColorValue.hex;
-        this.StateHasChanged();
-    }
-    public class GetCurrentValue
-    {
-        public string hex { get; set; }
-        public string rgba { get; set; }
+        colorValue = "background-color:" + args.CurrentValue.Hex;
     }
 }
 
 <style>
-    #preview{
+    #preview {
         border: 1px solid;
         height: 40px;
-        width: 50%;
+        margin-bottom: 10px;
+        width: 300px;
     }
 </style>
 
@@ -53,66 +45,67 @@ The following sample show the color palette with custom no color option.
 
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.SplitButtons
-@using Newtonsoft.Json.Linq;
 
-<div id="preview" style="@StyleValue"></div>
-    <SfSplitButton Target="#target" IconCss="e-icons e-picker"></SfSplitButton>
-<ul id="target" tabindex="0">
-    <li class="e-item e-palette-item">
-        <SfColorPicker Columns="4" Inline="true" Mode="ColorPickerMode.Palette" PresetColors="@CustomValues[0]" ShowButtons="false" ModeSwitcher="false" ValueChange="@Changed"></SfColorPicker>
-    </li>
-    <li class="e-item" @onclick="@Clicked" id="no-color" tabindex="-1">
-        <span class="e-menu-icon e-nocolor"></span>
-        No color
-    </li>
-</ul>
+<div id="preview" style="@colorValue"></div>
+<SfSplitButton @ref="splitBtn" IconCss="e-icons e-picker" CssClass="color-picker">
+    <PopupContent>
+        <ul class="e-dropdown-menu" tabindex="0">
+            <li class="e-item e-palette-item">
+                <SfColorPicker Columns="4" Inline="true" Mode="ColorPickerMode.Palette" PresetColors="@customColors" ShowButtons="false" ModeSwitcher="false" ValueChange="@Changed"></SfColorPicker>
+            </li>
+            <li class="e-item e-separator"></li>
+            <li class="e-item" @onclick="@NoColorHandler" id="no-color" tabindex="-1">
+                <span class="e-menu-icon e-nocolor"></span>
+                No color
+            </li>
+        </ul>
+    </PopupContent>
+</SfSplitButton>
 
-@code{
-    public string StyleValue = "background-color:#008000";
-    public GetCurrentValue ColorValue { get; set; }
-    public void Changed(ColorPickerEventArgs args)
-    {
-        this.ColorValue = ((JObject)args.CurrentValue).ToObject<GetCurrentValue>();
-        this.StyleValue = "background-color:" + this.ColorValue.hex;
-        this.StateHasChanged();
-    }
-    public class GetCurrentValue
-    {
-        public string hex { get; set; }
-        public string rgba { get; set; }
-    }
-    public List<object> CustomValues = new List<object> {
-    new{
-        Custom = new string[] {"#f44336", "#e91e63", "#9c27b0", "#673ab7", "#2196f3", "#03a9f4", "#00bcd4", "#009688", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107"}
+@code {
+    private SfSplitButton splitBtn;
+    private string colorValue = "background-color: #008000";
+    private Dictionary<string, string[]> customColors = new Dictionary<string, string[]> {
+        {
+            "Custom", new string[] {"#f44336", "#e91e63", "#9c27b0", "#673ab7", "#2196f3", "#03a9f4", "#00bcd4", "#009688", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107"}
         }
     };
-    public void Clicked()
+    private void Changed(ColorPickerEventArgs args)
     {
-        this.StyleValue = "background-color: #ffffff";
+        colorValue = "background-color:" + args.CurrentValue.Hex;
+        splitBtn.Toggle();
+    }
+    private void NoColorHandler()
+    {
+        colorValue = "background-color: transparent";
+        splitBtn.Toggle();
     }
 }
 
 <style>
-    .e-picker::before{
+    .e-picker::before {
         content: '\e35c'
     }
-
     #preview {
         border: 1px solid;
         height: 40px;
-        width: 50%;
+        width: 300px;
+        margin-bottom: 10px;
     }
-
-    .e-dropdown-popup ul#target {
+    .color-picker.e-dropdown-popup ul {
         padding: 0;
     }
-
-    .e-dropdown-popup ul .e-item.e-palette-item {
+    .color-picker.e-dropdown-popup ul .e-container {
+        box-shadow: none;
+    }
+    .color-picker.e-dropdown-popup .e-container .e-custom-palette .e-palette {
+        padding-bottom: 2px;
+    }
+    .color-picker.e-dropdown-popup ul .e-item.e-palette-item {
         height: auto;
         padding: 0;
     }
-
-    .e-dropdown-popup ul .e-item .e-menu-icon.e-nocolor {
+    .color-picker.e-dropdown-popup ul .e-item .e-menu-icon.e-nocolor {
         height: 22px;
         margin-top: 8px;
         width: 22px;

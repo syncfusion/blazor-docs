@@ -3,49 +3,21 @@
 
 ## Localization
 
-The `Localization` library allows you to localize default text content of the Color Picker. The Color Picker component has static text for control buttons (apply / cancel) and mode switcher that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object.
+The `Localization` library allows you to localize default text content of the Color Picker. The Color Picker component has static text for control buttons (apply / cancel) and mode switcher that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object.  You can refer [How to enable Localization in Blazor application](https://blazor.syncfusion.com/documentation/common/localization/#how-to-enable-localization-in-blazor-application) page for the introduction and configuring the localization.
 
-The following list of properties and its values are used in the Color Picker.
+You can modify the default value in `.res` file added to Resource folder. Enter the key value (Locale Keywords) in the `Name` column and the translated string in the `Value` column. The following list of keys and its values are used in the Color Picker.
 
-| Locale key | en-US (default) |
-| ------------ | ----------------------- |
-| Apply  | Apply |
-| Cancel  | Cancel |
-| ModeSwitcher | Switch Mode |
-
-> To load translation object in an application, define the culture and the component locale text corresponding to the language in a separate `locale.json` file under `wwwroot` folder.
-
-`locale.json`
-
-```json
-
-{
-    "de-DE": {
-    "colorpicker": {
-      "Apply": "Anwenden",
-      "Cancel": "Abbrechen",
-      "ModeSwitcher": "Modus wechseln"
-    }
-    }
-}
-
-```
+| **Locale key** | **en-US (default culture)** | **de (Deutsch culture)** |
+| ------------ | ----------------------- | --------------------|
+| `ColorPicker_Apply`  | `Apply` | `Anwenden` |
+| `ColorPicker_Cancel`  | `Cancel` | `Abbrechen` |
+| `ColorPicker_ModeSwitcher` | `Switch Mode` | `Modus wechseln` |
 
 ```csharp
 
 @using Syncfusion.Blazor.Inputs
 
 <SfColorPicker></SfColorPicker>
-
-@code {
-    [Inject]
-    protected IJSRuntime JsRuntime { get; set; }
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        this.JsRuntime.Sf().LoadLocaleData("wwwroot/locale.json").SetCulture("de-DE");
-    }
-}
 
 ```
 
@@ -63,16 +35,6 @@ In the following example Color Picker component is rendered in RTL mode with `ar
 @using Syncfusion.Blazor.Inputs
 
 <SfColorPicker EnableRtl="true"></SfColorPicker>
-
-@code {
-    [Inject]
-    protected IJSRuntime JsRuntime { get; set; }
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        this.JsRuntime.Sf().LoadLocaleData("wwwroot/locale.json").SetCulture("ar-AE");
-    }
-}
 
 ```
 

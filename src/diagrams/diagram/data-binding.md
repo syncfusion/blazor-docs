@@ -135,4 +135,4 @@ ausing Syncfusion.Blazor.Diagrams
 
 ## See Also
 
-* [How to arrange the diagram nodes and connectors using varies layout](./automatic-layout)
+* [How to arrange the diagram nodes and connectors using varies layout](https://blazor.syncfusion.com/documentation/diagram/layout/automatic-layout/)

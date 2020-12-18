@@ -6,7 +6,7 @@ description: "An organizational chart is a diagram that displays the structure o
 
 # Organizational Chart
 
-An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) of layout should be set as an `Organizationalchart`.
+An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) of layout should be set as an `OrganizationalChart`.
 The following code example illustrates how to create an organizational chart.
 
 ```csharp

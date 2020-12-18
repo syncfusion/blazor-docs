@@ -743,7 +743,7 @@ You can add ports to a node at runtime by using the [`AddPorts`](https://help.sy
 
 ### Remove the ports
 
-You can remove the exisiting ports in a node by using the [`RemovePorts`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_RemovePorts_Syncfusion_Blazor_Diagrams_DiagramNode_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagrams_DiagramPort__) method. The following code shows how to remove the ports in a diagram.
+You can remove the existing ports in a node by using the [`RemovePorts`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_RemovePorts_Syncfusion_Blazor_Diagrams_DiagramNode_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagrams_DiagramPort__) method. The following code shows how to remove the ports in a diagram.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -1483,7 +1483,7 @@ A sizing commands enable to equally size the selected nodes with respect to the 
 * Height: Scales the height of the selected objects.
 * Size: Scales the selected objects both vertically and horizontally.
 
-The following code example shows how to execute the Samesize commands.
+The following code example shows how to execute the SameSize commands.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -2642,7 +2642,7 @@ You can change the size of the diagram area, after that you can update the view 
 
 ### Bring to center
 
-You can view the paticular bounds to center of the view port by using the [`BringToCenter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringToCenter_System_Object_) method. The following code shows how to use the method.
+You can view the particular bounds to center of the view port by using the [`BringToCenter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringToCenter_System_Object_) method. The following code shows how to use the method.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -2695,7 +2695,7 @@ You can view the paticular bounds to center of the view port by using the [`Brin
 
 ### Bring to view
 
-You can view the paticular bounds to the view port by using the [`BringIntoView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringIntoView_System_Object_) method. The following code show how to use the method.
+You can view the particular bounds to the view port by using the [`BringIntoView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringIntoView_System_Object_) method. The following code show how to use the method.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams

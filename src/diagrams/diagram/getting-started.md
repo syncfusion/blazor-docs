@@ -11,7 +11,7 @@ This section briefly explains about how to include a Diagram in your Blazor Serv
 ## Importing Syncfusion Blazor component in the application
 
  1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**. Note: Please ensure to check the **Include prerelease** option.
- 2. You can add the client-side style resources through CDN or from Nuget package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+ 2. You can add the client-side style resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
@@ -238,8 +238,8 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
 
 ## See Also
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](./how-to/server-side-using-cli)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](./how-to/client-side-using-cli)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor/)
 
-* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019 Preview](./how-to/client-side-using-visual-studio)
+* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor-server/)

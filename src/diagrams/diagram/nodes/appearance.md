@@ -109,7 +109,7 @@ There are two types of gradients as follows:
 
 * [`RadialGradient`](https://help.syncfusion.com/cr/blazor) defines a smooth transition between stops on a circle.
 
-* A radial gradient’s Cx, Cy, Fx, Fy properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
+* A radial gradient properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams

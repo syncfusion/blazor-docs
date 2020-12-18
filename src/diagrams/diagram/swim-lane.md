@@ -75,7 +75,7 @@ The height and width of swimlane header can be customized with `Weight` and `Hei
 
 >Note: By default the swimlane orientation has Horizontal.
 
-The following code example illustrates how to customise the swimlane header..
+The following code example illustrates how to customize the swimlane header..
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams
@@ -288,5 +288,5 @@ The following code example illustrates how to customize the phase in swimlane.
 
 ## Limitations
 
-* Connectors cannot be cancelled when added directly to swimlane. You must initialize the connector through connector collection.
+* Connectors cannot be canceled when added directly to swimlane. You must initialize the connector through connector collection.
 * We cannot edit the phase line style.

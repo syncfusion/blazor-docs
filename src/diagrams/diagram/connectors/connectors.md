@@ -108,7 +108,7 @@ public void AddConnector()
 
 Connectors can be predefined and added to the symbol palette. You can drop those connectors into the diagram when required.
 
-For more information about adding connectors from symbol palette, refer to the [`Symbol Palette`](./symbol-palette).
+For more information about adding connectors from symbol palette, refer to the [`Symbol Palette`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html).
 
 ```csharp
 
@@ -182,7 +182,7 @@ For more information about adding connectors from symbol palette, refer to the [
 
 Connectors can be interactively drawn by clicking and dragging on the diagram surface by using [`DrawingObject`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DrawingObject).
 
-For more information about drawing connectors, refer to [`Draw Connectors`](./tools/#connectors).
+For more information about drawing connectors, refer to [`Draw Connectors`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramTools.html).
 
 ![Drawing Connector](../images/connectorDrawing.gif)
 

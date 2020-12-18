@@ -469,7 +469,7 @@ AnnotationConstraints may have multiple behaviors as follows:
 >**Note :**
 >The default value is AnnotationConstraints.InheritReadOnly for constraints property of the annotation.
 
-Refer to [`Constraints`](./constraints#Annotation-Constraints) to learn about how to enable or disable the annotation constraints.
+Refer to [`Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationConstraints.html) to learn about how to enable or disable the annotation constraints.
 
 ## Annotation template
 

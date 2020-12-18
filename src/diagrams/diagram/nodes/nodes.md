@@ -187,7 +187,7 @@ For more information about adding nodes from symbol palette, refer to the [`Symb
 
 Nodes can be interactively drawn by clicking and dragging on the diagram surface by using the [`DrawingObject`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DrawingObject).
 
-For more information about drawing Node, refer to the [`Draw Nodes`](./tools/#Shapes).
+For more information about drawing Node, refer to the [`Draw Nodes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramTools.html).
 
 ![Drawing Node](../images/node-drawing.gif)
 

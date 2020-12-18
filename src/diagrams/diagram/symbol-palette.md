@@ -350,6 +350,81 @@ BasicShapes { get; set; }
 }
 ```
 
+## Adding symbol description for symbols in the palette
+
+The diagram provides support to add symbol description below each symbol of a palette. This descriptive representation of each symbol will enhance the details of the symbol visually. The height and width of the symbol description can also be set individually.
+* The property `getSymbolInfo`, can be used to add the symbol description at runtime.
+ The following code is an example to set a symbol description for symbols in the palette.
+
+```csharp
+@using Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor.Navigations
+@using System.Collections.ObjectModel
+@* Initializes the symbol palette *@
+@* Defines how many palettes can be at expanded mode at a time *@
+<SfSymbolPalette Height="600px" SymbolHeight="80" SymbolWidth="80" EnableAnimation="false" ExpandMode="ExpandMode.Multiple"
+ @ref="@SymbolPalette" Palettes="@Palettes">
+</SfSymbolPalette>
+
+@code{
+        SfSymbolPalette SymbolPalette;
+    public ObservableCollection<SymbolPalettePalette> Palettes;
+    // Defines palette's basic-shape collection
+    public ObservableCollection<Object> BasicShapes { get; set; }
+    // Defines palette's flow-shape collection
+    public ObservableCollection<Object> FlowShapes { get; set; }
+    protected override void OnInitialized()
+    {
+        Palettes = new ObservableCollection<SymbolPalettePalette>();
+        //Initialize the basicshapes for the symbol palette
+        BasicShapes = new ObservableCollection<Object>()
+        {
+                new DiagramNode()
+                {
+                Id = "Rectangle",
+                Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Rectangle },
+                // Sets symbol description for rectangle shape.
+                SymbolInfo= new SymbolInfo(){Description= new SymbolDescription{Text="Rectangle"}}
+                },
+                new DiagramNode()
+                {
+                Id = "Ellipse",
+                Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Ellipse },
+                // Sets symbol description for ellipse shape.
+                SymbolInfo= new SymbolInfo(){Description=new SymbolDescription{Text="Ellipse"}}
+                },
+                new DiagramNode()
+                {
+                Id = "Hexagon",
+                Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Hexagon },
+                // Sets symbol description for hexagon shape.
+                SymbolInfo= new SymbolInfo(){Description=new SymbolDescription{Text="Hexagon"} }
+                }
+                };
+        Palettes.Add(new SymbolPalettePalette() { Id = "BasicShapes", Expanded = true, Symbols = BasicShapes, Title = "Basicshapes" });
+        //Initialize the flowshapes for the symbol palette
+        FlowShapes = new ObservableCollection<Object>()
+            {
+                    new DiagramNode()
+                    {
+                    Id = "process",
+                    Shape = new DiagramShape() { Type = Shapes.Flow, FlowShape = Syncfusion.Blazor.Diagrams.FlowShapes.Process }
+                    // Sets symbol description for process shape.
+                    ,SymbolInfo= new SymbolInfo(){Description= new SymbolDescription{Text="Process" } }
+                    },
+                    new DiagramNode()
+                    {
+                    Id = "document",
+                    Shape = new DiagramShape() {Type = Shapes.Flow, FlowShape = Syncfusion.Blazor.Diagrams.FlowShapes.Document},
+                    // Sets symbol description for document shape.
+                    SymbolInfo= new SymbolInfo(){Description= new SymbolDescription{Text="Document" } }
+                    },
+                    };
+        Palettes.Add(new SymbolPalettePalette() { Id = "Flowshapes", Expanded = true, Symbols = FlowShapes, Title = "Flowshapes" });
+    }
+}
+```
+
 ## Palette interaction
 
 Palette interaction notifies the element enter, leave, and dragging of the symbols into the diagram.

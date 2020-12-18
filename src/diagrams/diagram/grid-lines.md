@@ -179,7 +179,7 @@ The [`SnapObjectDistance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 The [`SnapAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramSnapSettings.html#Syncfusion_Blazor_Diagrams_DiagramSnapSettings_SnapAngle) property allows you to define the snap angle by which the object needs to be rotated.
 
-The [`Snapconstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramSnapSettings.html#Syncfusion_Blazor_Diagrams_DiagramSnapSettings_Constraints) property allows you to enable or disable the certain features of the snapping, refer to [`Snapconstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SnapConstraints.html).
+The [`SnapConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramSnapSettings.html#Syncfusion_Blazor_Diagrams_DiagramSnapSettings_Constraints) property allows you to enable or disable the certain features of the snapping, refer to [`SnapConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SnapConstraints.html).
 
 ```csharp
 @using Syncfusion.Blazor.Diagrams

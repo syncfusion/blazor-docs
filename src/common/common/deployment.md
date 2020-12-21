@@ -4,8 +4,6 @@ This section provides information about deploying applications with the Syncfusi
 
 You can get more information about deploying Blazor applications [Here](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/).
 
-> **Note:** We highly recommend to load the Syncfusion Blazor interop script in the application end for the production environment. Refer to [this](https://blazor.syncfusion.com/documentation/common/how-to/configure-syncfusion-blazor-client-resources-in-production/) documentation for more details.
-
 ## Publish Blazor Application with Visual Studio 2019
 
 * Create the Blazor server Application with [Syncfusion Blazor Components](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/).

@@ -5,9 +5,11 @@ This section provides information about creating Razor Class Library with the Sy
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 
-> **Note:** .NET Core SDK 3.1.8 requires Visual Studio 2019 16.7 or later.
+> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later.
+>
+> **.NET 5.0** requires Visual Studio 2019 16.8 or later.
 
 ## Create a Razor Class Library using Syncfusion Blazor components in Visual Studio 2019
 
@@ -38,17 +40,23 @@ This section provides information about creating Razor Class Library with the Sy
 
 ## Importing Syncfusion Blazor component in Razor Class Library
 
-### Using Syncfusion individual Nuget Package
+* Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components.
 
-1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the newly created RLC by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages. For more details about available NuGet packages, refer to the [Individual NuGet Packages](../nuget-packages) documentation.
+    > **Note:** You can use anyone of the below standards to add Syncfusion components in your Blazor application.
+
+### Using Syncfusion individual NuGet Package [Suggested - New standard from v18.4.0.30]
+
+1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the newly created RLC by using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
+
+2. Right-click the project and select Manage NuGet Packages. 
 
     ![nuget explorer](images/rcl-nuget-explorer.png)
 
-2. Search **Syncfusion.Blazor.Calendars** keyword in the Browse tab and install **Syncfusion.Blazor.Calendars** NuGet package in RLC.
+3. Search **Syncfusion.Blazor.Calendars** keyword in the Browse tab and install **Syncfusion.Blazor.Calendars** NuGet package in RLC.
 
     ![select nuget](images/individual-nuget.png)
 
-3. The Syncfusion Blazor package will be installed in the project, Once the installation process is completed.
+3. The Syncfusion Blazor Calendars package will be installed in the project, Once the installation process is completed.
 
 4. Open **~/_Imports.razor** file in RLC and import the `Syncfusion.Blazor.Calendars`.
 
@@ -67,6 +75,8 @@ This section provides information about creating Razor Class Library with the Sy
     </head>
     ```
 
+    > Warning: `Syncfusion.Blazor` package should not install along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to use `Syncfusion.Blazor.Themes` package for applying Syncfusion themes in the application.
+
 6. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
     ```csharp
@@ -78,7 +88,9 @@ This section provides information about creating Razor Class Library with the Sy
     <SfCalendar TValue="DateTime"></SfCalendar>
     ```
 
-### Using Syncfusion Blazor Nuget Package
+### Using Syncfusion.Blazor NuGet Package [Previous standard before v18.4.0.30]
+
+> Warning: If you have used the above individual NuGet package standard, then skip this section. If you use both standards in the same project, it will throw ambiguous errors while compiling the application.
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created RLC by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
 
@@ -107,6 +119,8 @@ This section provides information about creating Razor Class Library with the Sy
     </head>
     ```
 
+    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
+
 6. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
     ```csharp
@@ -118,8 +132,6 @@ This section provides information about creating Razor Class Library with the Sy
 
     <SfCalendar TValue="DateTime"></SfCalendar>
     ```
-
-    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
 
 ## Create a Blazor Server project in Visual Studio 2019 with Razor Class Library (RCL)
 

@@ -46,10 +46,10 @@
 * To control the direction of all Syncfusion Blazor components in an application, import `Syncfusion.Blazor`, inject  and the `SyncfusionBlazorService` in your `@code` section and invoke `EnableRtl` method. In the following code snippet, the RTL support has been enabled for all Syncfusion Blazor components.
 
     ```csharp
-    
+
     @using Syncfusion.Blazor;
     @using Syncfusion.Blazor.Grids;
-    
+
     <SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true"  EnablePersistence="true">
         <GridPageSettings PageSize="8"></GridPageSettings>
         <GridColumns>
@@ -59,12 +59,12 @@
             <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></    GridColumn>
         </GridColumns>
     </SfGrid>
-    
+
     @code {
         [Inject]
         SyncfusionBlazorService SyncfusionService { get; set; }
         public List<Order> Orders { get; set; }
-    
+
         protected override async Task OnInitializedAsync()
         {
             await base.OnInitializedAsync();
@@ -75,11 +75,11 @@
                 Freight = 2.1 * x,
                 OrderDate = DateTime.Now.AddDays(-x),
             }).ToList();
-    
+
             //Set EnableRtl to all Syncfusion Blazor Components
             SyncfusionService.EnableRtl();
         }
-    
+
         public class Order
         {
             public int? OrderID { get; set; }
@@ -88,7 +88,7 @@
             public double? Freight { get; set; }
         }
     }
-    
+
     ```
 
     ![Blazor Grid component is rendered from the right to left](images/rteGrid.png)

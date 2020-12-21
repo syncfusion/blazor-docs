@@ -29,12 +29,12 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
     ![asp.net core project configuration](images/project-configuration.png)
 
-4.  Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target that you want.
+4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target that you want.
 
     ![select framework](images/blazor-select-template.png)
 
-5. Choose **Blazor Server App** from the dashboard and click **Create** button to create a new Blazor Server application. 
- 
+5. Choose **Blazor Server App** from the dashboard and click **Create** button to create a new Blazor Server application.
+
     ![select framework](images/blazor-server-template.png)
 
     > **Note:** .NET 5.0 available in Visual Studio 2019 version.
@@ -48,7 +48,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 ### Using Syncfusion individual NuGet Package [Suggested - New standard from v18.4.0.30]
 
 1. Now, add **Syncfusion.Blazor.Calendars** NuGet package to the new application using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
-     
+
     ![nuget explorer](images/nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor.Calendars** keyword in the Browse tab and install **Syncfusion.Blazor.Calendars** NuGet package in the application.
@@ -146,15 +146,15 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     ```
 
     > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
-    
+
 ## Adding Syncfusion Component And Run the Application
 
-4. Now, add the Syncfusion Blazor components in any web page (razor) in the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
+1. Now, add the Syncfusion Blazor components in any web page (razor) in the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
 
     ```csharp
     <SfCalendar TValue="DateTime"></SfCalendar>
     ```
 
-5. Run the application, The Syncfusion Blazor Calendar component will render in the default web browser.
+2. Run the application, The Syncfusion Blazor Calendar component will render in the default web browser.
 
     ![output](images/browser-output.png)

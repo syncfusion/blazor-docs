@@ -48,7 +48,7 @@ This section provides information about creating Razor Class Library with the Sy
 
 1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the newly created RLC by using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
 
-2. Right-click the project and select Manage NuGet Packages. 
+2. Right-click the project and select Manage NuGet Packages.
 
     ![nuget explorer](images/rcl-nuget-explorer.png)
 
@@ -56,15 +56,15 @@ This section provides information about creating Razor Class Library with the Sy
 
     ![select nuget](images/individual-nuget.png)
 
-3. The Syncfusion Blazor Calendars package will be installed in the project, Once the installation process is completed.
+4. The Syncfusion Blazor Calendars package will be installed in the project, Once the installation process is completed.
 
-4. Open **~/_Imports.razor** file in RLC and import the `Syncfusion.Blazor.Calendars`.
+5. Open **~/_Imports.razor** file in RLC and import the `Syncfusion.Blazor.Calendars`.
 
     ```csharp
     @using Syncfusion.Blazor.Calendars
     ```
 
- 5. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page in Blazor App.
+6. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page in Blazor App.
 
     ```html
     <head>
@@ -77,7 +77,7 @@ This section provides information about creating Razor Class Library with the Sy
 
     > Warning: `Syncfusion.Blazor` package should not install along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to use `Syncfusion.Blazor.Themes` package for applying Syncfusion themes in the application.
 
-6. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
+7. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
     ```csharp
 
@@ -108,7 +108,7 @@ This section provides information about creating Razor Class Library with the Sy
     @using Syncfusion.Blazor
     ```
 
- 5. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page in Blazor App.
+5. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page in Blazor App.
 
     ```html
     <head>
@@ -147,11 +147,11 @@ This section provides information about creating Razor Class Library with the Sy
 
     ![asp.net core project configuration](images/blazorapp-template.png)
 
-4.  Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target information.
+4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target information.
 
     ![select framework](images/blazor-select-template.png)
 
-5. Choose **Blazor Server App** from the dashboard and click **Create** button to create a new Blazor Server application. 
+5. Choose **Blazor Server App** from the dashboard and click **Create** button to create a new Blazor Server application.
 
     ![select framework](images/blazor-server-template.png)
 
@@ -217,7 +217,6 @@ This section provides information about creating Razor Class Library with the Sy
     ```
 
     > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
-   
 
 4. Now, add the created custom component that imported with Syncfusion Blazor component from Razor Class Library in any web page (razor) in the `~/Pages` folder. For example, the custom component with imported Syncfusion Blazor Calendar component from Razor Class Library is added to the **~/Pages/Index.razor** page as like below.
 
@@ -243,11 +242,11 @@ This section provides information about creating Razor Class Library with the Sy
 
     ![asp.net core project configuration](images/blazorapp-template.png)
 
-4.Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target information.
+4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target information.
 
     ![select framework](images/blazor-select-template.png)
 
-5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. 
+5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application.
 
     ![select framework](images/webassembly-template.png)
 
@@ -299,14 +298,12 @@ This section provides information about creating Razor Class Library with the Sy
     }
     ```
 
-   
-
-4. Now, add the created custom component that imported with Syncfusion Blazor component from Razor Class Library in any web page (razor) in the `~/Pages` folder. For example, the custom component with imported Syncfusion Blazor Calendar component from Razor Class Library is added to the **~/Pages/Index.razor** page as like below.
+3. Now, add the created custom component that imported with Syncfusion Blazor component from Razor Class Library in any web page (razor) in the `~/Pages` folder. For example, the custom component with imported Syncfusion Blazor Calendar component from Razor Class Library is added to the **~/Pages/Index.razor** page as like below.
 
     ```csharp
     <Component></Component>
     ```
 
-5. Run the application, The Syncfusion Blazor Calendar component will render in the default web browser.
+4. Run the application, The Syncfusion Blazor Calendar component will render in the default web browser.
 
     ![RCL output](images/rcl-output.png)

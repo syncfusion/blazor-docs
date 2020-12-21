@@ -33,7 +33,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
      ![select framework](images/blazor-select-template.png)
 
-5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. 
+5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application.
 
     ![wasm template](images/blazor-client-template.png)
 
@@ -48,13 +48,13 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the new application using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
 
 2. Right-click the project and select Manage NuGet Packages.
-     
+
     ![nuget explorer](images/nuget-explorer.png)
 
 3. Search **Syncfusion.Blazor.Calendars** keyword in the Browse tab and install **Syncfusion.Blazor.Calendars** NuGet package in the application.
 
     ![select nuget](images/individual-nuget.png)
-    
+
 4. The Syncfusion Blazor Calendars package will be installed in the project, once the installation process is completed.
 
 5. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
@@ -84,7 +84,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     }
     ```
 
-6. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
+7. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
 
     ```html
     <head>
@@ -147,7 +147,6 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     </head>
     ```
     > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
-    
 
 ## Adding Syncfusion Component and Run the Application
 

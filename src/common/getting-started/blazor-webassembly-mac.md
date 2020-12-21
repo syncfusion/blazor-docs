@@ -44,7 +44,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 1. Now, add **Syncfusion.Blazor.Calendars** NuGet package to the new application using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
 
 2. Right-click the project and select Manage NuGet Packages.
-     
+
     ![nuget explorer](images/mac-wasm-nuget-explorer.png)
 
 3. Search **Syncfusion.Blazor.Calendars** keyword in the Browse tab and install **Syncfusion.Blazor.Calendars** NuGet package in the application.

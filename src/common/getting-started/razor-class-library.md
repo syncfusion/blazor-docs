@@ -38,13 +38,13 @@ This section provides information about creating Razor Class Library with the Sy
     > </PropertyGroup>
     > ```
 
-## Importing Syncfusion Blazor component in Razor Class Library
+## Installing Syncfusion Blazor packages in the application
 
-* Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components.
+You can use any one of the below standard to install the Syncfusion Blazor library in your application.
 
-    > **Note:** You can use anyone of the below standards to add Syncfusion components in your Blazor application.
+### Using Syncfusion Blazor individual NuGet Packages [New standard]
 
-### Using Syncfusion individual NuGet Package [Suggested - New standard from v18.4.0.30]
+> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) for the benefits of the individual NuGet packages.
 
 1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the newly created RLC by using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
 
@@ -56,15 +56,9 @@ This section provides information about creating Razor Class Library with the Sy
 
     ![select nuget](images/individual-nuget.png)
 
-4. The Syncfusion Blazor Calendars package will be installed in the project, Once the installation process is completed.
+4. The Syncfusion Blazor Calendars package will be included in the newly created project after the installation process is completed.
 
-5. Open **~/_Imports.razor** file in RLC and import the `Syncfusion.Blazor.Calendars`.
-
-    ```csharp
-    @using Syncfusion.Blazor.Calendars
-    ```
-
-6. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page in Blazor App.
+5. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page in Blazor App.
 
     ```html
     <head>
@@ -75,9 +69,9 @@ This section provides information about creating Razor Class Library with the Sy
     </head>
     ```
 
-    > Warning: `Syncfusion.Blazor` package should not install along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to use `Syncfusion.Blazor.Themes` package for applying Syncfusion themes in the application.
+    > Warning: `Syncfusion.Blazor` package should not install along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
-7. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
+6. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
     ```csharp
 
@@ -88,9 +82,9 @@ This section provides information about creating Razor Class Library with the Sy
     <SfCalendar TValue="DateTime"></SfCalendar>
     ```
 
-### Using Syncfusion.Blazor NuGet Package [Previous standard before v18.4.0.30]
+### Using Syncfusion.Blazor NuGet Package [Old standard]
 
-> Warning: If you have used the above individual NuGet package standard, then skip this section. If you use both standards in the same project, it will throw ambiguous errors while compiling the application.
+> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created RLC by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
 

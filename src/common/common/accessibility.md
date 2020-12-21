@@ -7,7 +7,7 @@ All the Syncfusion Blazor components follow the WAI-ARIA accessibility standard 
 Keyboard navigation support enables users to interact with components using keyboard shortcuts. Each component has its own set of shortcuts. Refer to the following documents to get the details of each component.
 
 * [Accordion](../accordion/accessibility)
-* [AutoComplete](../auto-complete/accessibility)
+* [AutoComplete](../autocomplete/accessibility)
 * [Calendar](../calendar/accessibility)
 * [CheckBox](../check-box/accessibility)
 * [Chip](../chip/accessibility)
@@ -18,11 +18,11 @@ Keyboard navigation support enables users to interact with components using keyb
 * [Dashboard Layout](../dashboard-layout/accessibility)
 * [DatePicker](../datepicker/accessibility)
 * [DateRangePicker](../daterangepicker/accessibility)
-* [DateTimePicker](../datetimepicker/accessibility)
+* [DateTimePicker](../datetime-picker/accessibility)
 * [Dialog](../dialog/accessibility)
 * [DropDownButton](../drop-down-button/accessibility)
-* [DropDownList](../dropdownlist/accessibility)
+* [DropDownList](../dropdown-list/accessibility)
 * [FileManager](../file-manager/accessibility)
-* [Grid](../grid/accessibility)
+* [Grid](../datagrid/accessibility)
 * [Linear Gauge](../linear-gauge/accessibility)
 * [List Box](../listbox/accessibility)

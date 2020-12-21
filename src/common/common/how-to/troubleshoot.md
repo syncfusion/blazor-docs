@@ -1,5 +1,7 @@
 # How to troubleshoot server and client exceptions
 
+<!-- markdownlint-disable MD036 -->
+
 ## Runtime exceptions
 
 * **InvalidOperationException: Cannot provide a value for property 'SyncfusionService' on type 'Syncfusion.Blazor.Namespace.Component'**
@@ -40,9 +42,13 @@
     You may see the below exception while running the application in your production/server machine.
 
     > Error: **System.NullReferenceException:** Object reference not set to an instance of an object.
+    >
     > at `Syncfusion.Blazor.SyncfusionBlazorService.GetContext()`
+    >
     > at `Syncfusion.Blazor.BaseComponent.OnInitializedAsync()`
+    >
     > at `Syncfusion.Blazor.Charts.SfChart.OnInitializedAsync()`
+    >
     > at `Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()`
 
     **Cause:**
@@ -85,6 +91,22 @@
     Check installed .NET Core SDK version and update to the latest version. You can also find/download the details of the latest .NET Core SDK version [here](https://dotnet.microsoft.com/download/dotnet-core/).
 
 ## Compile-time errors
+
+* **error CS0121: The call is ambiguous between the following methods or properties: 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool)' and 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool)'**
+
+    You may see the below compile-time exception while running the application.
+
+    > Error: The call is ambiguous between the following methods or properties 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool)'
+
+    **Cause:**
+
+    1. You may used `SfPdfViewer` or `SfDocumentEditor` components along with other Syncfusion Blazor components in your application.
+    2. You may installed both [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) in the same application.
+
+    **Solution**
+
+    1. Starts with Volume 4, 2020 (v18.4.0.30) release, The `SfPdfViewer` and `SfDocumentEditor` components changed its dependency structure.
+    2. We suggest you to use the [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) to resolve this issue.
 
 * **The type or namespace name 'EJ2' does not exist in the namespace 'Syncfusion' (are you missing an assembly reference?)**
 
@@ -145,3 +167,4 @@
     **Solution:**
 
     We recommend you to clear the browser cache to resolve the above script error in v18.2.0.44 or later.
+<!-- markdownlint-enable MD036 -->

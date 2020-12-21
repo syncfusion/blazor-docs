@@ -7,7 +7,7 @@ Syncfusion Blazor is a modern enterprise UI components library for creating Blaz
 ## How to best read this user guide
 
 * The best way to get started would be to read the "Getting Started" section of the
-documentation for the component that you would like to start using first. The "Getting Started" gives just enough information that you need to know before starting to write code.
+documentation for the component that you would like to start using first. The `Getting Started` gives just enough information that you need to know before starting to write code.
 This is the only section that we recommend reading end-to-end before starting to write code,
 all other information can be referred to as needed.
 

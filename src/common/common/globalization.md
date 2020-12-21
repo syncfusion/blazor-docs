@@ -6,4 +6,5 @@
 
 * Suppose, if you want to change any specific culture, then add the corresponding culture resource (`.resx`) file by using the below reference.
 
-[Changing culture and Adding Resx file in the application](https://blazor.syncfusion.com/documentation/common/localization/#how-to-enable-localization-in-blazor-application)
+## See also
+* [Changing culture and Adding Resx file in the application](https://blazor.syncfusion.com/documentation/common/localization/#how-to-enable-localization-in-blazor-application)

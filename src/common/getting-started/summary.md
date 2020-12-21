@@ -2,4 +2,6 @@
 * [WebAssembly App in Visual Studio 2019](getting-started/blazor-webassembly.md)
 * [Server App in .NET Core CLI](getting-started/server-side-blazor-dotnet-cli.md)
 * [WebAssembly App in .NET Core CLI](getting-started/blazor-webassembly-dotnet-cli.md)
+* [Server App in Visual Studio for Mac](getting-started/server-side-blazor-mac.md)
+* [WebAssembly App in Visual Studio for Mac](getting-started/blazor-webassembly-mac.md)
 * [Razor Class Library in Visual Studio 2019](getting-started/razor-class-library.md)

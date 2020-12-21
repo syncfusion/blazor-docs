@@ -4,35 +4,40 @@ To upgrade Syncfusion Blazor Components to the latest version, you need to ensur
 
 ## Compatible .NET version
 
-Syncfusion Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of .NET Core 3.1. So, we suggest you to upgrade the .NET Core 3.1 SDK in your machine before upgrading to the latest version. Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Syncfusion Blazor components and .NET Core SDK.
+Syncfusion Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of .NET Core 5.0 and .NET Core 3.1. Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Syncfusion Blazor components and .NET Core SDK.
 
 ## Client resource file references
 
-Ensure our CSS files have been properly configured in your application.
+Ensure your CSS files have been properly configured in your application.
 
-* If you use the Blazor server app, add the following style file references in **~/Pages/_Host.cshtml**.
+* Add the following style file reference in the **~/Pages/_Host.cshtml** for Blazor Server app or add it in the **~/wwwroot/index.html** for Blazor WebAssembly app.
 
-* If you use the Blazor WebAssembly app, add the following style file references in **~/wwwroot/index.html**.
+    If you are using `Syncfusion.Blazor` NuGet package in your application, then use the below reference link.
 
-```html
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-```
+    ```html
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    ```
 
-> For production purpose and minimal requirement, Syncfusion provides an option to generate scripts and styles of selective control by using the Custom Resource Generator (CRG) web tool. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
+    If you are using [individual NuGet packages](http://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link.
+    ```html
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    ```
+
+> For production purpose and minimal requirement, Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application. Refer to this [link](http://ej2.syncfusion.com/themestudio/) for more details on ThemeStudio.
 
 ## Breaking changes
 
-Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/index/) for our Blazor components.
+Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/index/?type=breaking-changes) for our Blazor components.
 
 ## Cache problem
 
-Before restoring the NuGet packages, clean the old version Syncfusion.Blazor NuGet package.
+Before restoring the NuGet packages, clean the older versions of Syncfusion Blazor NuGet packages.
 
 The following steps explain how to clean the cache:
 
-1. Delete/clear the package Syncfusion.Blazor from the installed location `{System-driver}\Users\{user-name}\.nuget\packages\syncfusion.blazor`. In Windows, the installed location of Syncfusion.Blazor package can be found using `%userprofile%\.nuget\packages\syncfusion.blazor`.
+1. Delete the Syncfusion Blazor NuGet packages from the installed location `{System-driver}\Users\{user-name}\.nuget\packages\`. In Windows, the installed location of Syncfusion Blazor NuGet packages can be found using `%userprofile%\.nuget\packages\`.
 
-2. Update the latest version of Syncfusion.Blazor NuGet package.
+2. Update the latest version of Syncfusion Blazor NuGet packages.
 
 ## Linker.xml configuration
 

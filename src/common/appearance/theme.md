@@ -10,10 +10,11 @@ The Syncfusion Blazor library provides the following list of built-in themes:
 
 > The Syncfusion Bootstrap theme is designed based on `Bootstrap v3`, whereas the Bootstrap4 theme is designed based on `Bootstrap v4`.
 
-* All theme files are shipped as `staticWebAssets` in the `Syncfusion.Blazor` NuGet package.
+* All theme files are shipped as `staticWebAssets` in the `Syncfusion.Blazor` and `Syncfusion.Blazor.Themes` NuGet packages.
 
 * Add the below link reference inside the `<head>` element of the `~/Pages/_Host.cshtml` file for Blazor server app or `~/wwwroot/index.html` file for Blazor WebAssembly app.
 
+    If you are using `Syncfusion.Blazor` NuGet package in your application, then use the below reference link.
     ```html
     <head>
         ....
@@ -21,6 +22,16 @@ The Syncfusion Blazor library provides the following list of built-in themes:
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
+
+    If you are using [individual NuGet packages](http://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link.
+    ```html
+    <head>
+        ....
+        ....
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ```
+
     > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css](https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css).
 
 ## Common Variables

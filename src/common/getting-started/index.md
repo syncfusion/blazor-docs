@@ -1,10 +1,11 @@
 # Overview
 
-This document illustrates how to build and run a simple Syncfusion JavaScript (Essential JS 2) web application in TypeScript.
+This document illustrates how to build and run a simple Syncfusion Blazor Components in Server/Webassembly application in blazor.
 
-* [Getting Started with Syncfusion JavaScript (Essential JS 2) library from a seed application](./getting-started/quick-start)
-* [Getting Started with Syncfusion JavaScript (Essential JS 2) library and Cordova](./getting-started/cordova)
-* [Getting Started with Syncfusion JavaScript (Essential JS 2) library and Ionic Framework](./getting-started/ionic)
-* [Getting Started with Syncfusion JavaScript (Essential JS 2) library and Meteor Framework](./getting-started/meteor)
-* [Getting Started with Syncfusion JavaScript (Essential JS 2) library and SharePoint Framework (SPFx)](./getting-started/sharepoint)
-* [Compatibility with Essential JS 1 JavaScript](./getting-started/compatible-with-essential-js1)
+* [Getting Started with Blazor Server App in Visual Studio 2019](server-side-blazor)
+* [Getting Started with Blazor WebAssembly App in Visual Studio 2019](blazor-webassembly)
+* [Getting Started with Blazor Server App in .NET Core CLI](server-side-blazor-dotnet-cli)
+* [Getting Started with Blazor WebAssembly App in .NET Core CLI](blazor-webassembly-dotnet-cli)
+* [Getting Started with Blazor Server App in Visual Studio for Mac](server-side-blazor-mac)
+* [Getting Started with Blazor WebAssembly App in Visual Studio for Mac](blazor-webassembly-mac)
+* [Getting Started with Razor Class Library in Visual Studio 2019](razor-class-library)

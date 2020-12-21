@@ -1,41 +1,37 @@
  <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor - WebAssembly App in Visual Studio 2019
+# Getting started with Syncfusion Blazor - WebAssembly App in Visual Studio for Mac
 
-This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor WebAssembly application using [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
 
 > **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
 ## Prerequisites
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
+* [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
 * [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 
-> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later.
+> **.NET Core SDK 3.1.8** requires Visual Studio for Mac 8.7.6 or later.
 >
-> **.NET 5.0** requires Visual Studio 2019 16.8 or later.
+> **.NET 5.0** requires Visual Studio 2019 for Mac 8.8 or later.
 
-## Create a Blazor WebAssembly project in Visual Studio 2019
+## Create a Blazor WebAssembly project in Visual Studio for Mac
 
-1. Choose **Create a new project** from the Visual Studio dashboard.
+1. Choose **New** from the Visual Studio for Mac dashboard.
 
-    ![new project in aspnetcore blazor](images/new-project.png)
+    ![new project in blazor](images/mac-new-project.png)
 
-2. Select **Blazor App** from the template and click **Next** button.
+2. Select **Blazor WebAssembly App** from the template and click **Next** button.
 
-    ![blazor template](images/blazor-template.png)
+    ![blazor template](images/mac-wasm-template.png)
 
-3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
+3. Continue with **No Authentication** selection in Authentication and click **Next** button.
 
-    ![asp.net core project configuration](images/project-configuration.png)
+    ![blazor authentication](images/mac-wasm-authentication.png)
 
-4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target that you want.
+4. Now, the Blazor WebAssembly App project configuration window will popup. Click **Create** button to create a new project after filling Project name.
 
-     ![select framework](images/blazor-select-template.png)
-
-5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. 
-
-    ![wasm template](images/blazor-client-template.png)
+    ![blazor project configuration](images/mac-wasm-project-config.png)
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -45,16 +41,14 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ### Using Syncfusion individual NuGet Package [Suggested - New standard from v18.4.0.30]
 
-1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the new application using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
+1. Now, add **Syncfusion.Blazor.Calendars** NuGet package to the new application using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
 
 2. Right-click the project and select Manage NuGet Packages.
      
-    ![nuget explorer](images/nuget-explorer.png)
+    ![nuget explorer](images/mac-wasm-nuget-explorer.png)
 
 3. Search **Syncfusion.Blazor.Calendars** keyword in the Browse tab and install **Syncfusion.Blazor.Calendars** NuGet package in the application.
 
-    ![select nuget](images/individual-nuget.png)
-    
 4. The Syncfusion Blazor Calendars package will be installed in the project, once the installation process is completed.
 
 5. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
@@ -84,7 +78,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     }
     ```
 
-6. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
+7. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
 
     ```html
     <head>
@@ -102,11 +96,11 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
 
-    ![nuget explorer](images/nuget-explorer.png)
+    ![nuget explorer](images/mac-wasm-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-    ![select nuget](images/select-nuget.png)
+    ![select nuget](images/mac-wasm-sync-pack.png)
 
 3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
 
@@ -143,11 +137,10 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
     <head>
         ....
         ....
-         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+       <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
     > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
-    
 
 ## Adding Syncfusion Component and Run the Application
 

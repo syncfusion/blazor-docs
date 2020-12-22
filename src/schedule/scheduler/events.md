@@ -633,6 +633,47 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 }
 ```
 
+## OnEventDoubleClick
+
+`OnEventDoubleClick` event triggers when the events are double clicked.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEvents TValue="AppointmentData" OnEventDoubleClick="OnEventDoubleClick"></ScheduleEvents>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    SfSchedule<AppointmentData> ScheduleRef;
+    public async Task OnEventDoubleClick(EventClickArgs<AppointmentData> args)
+    {
+        args.Cancel = true;
+        await ScheduleRef.OpenQuickInfoPopup(args.Event); //To open Quick popup on double click
+    }
+
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 10, 9, 30, 0) , EndTime = new DateTime(2020, 3, 10, 12, 0, 0) }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
 ## OnPopupClose
 
 `OnPopupClose` event triggers before any of the Scheduler popups close on the page.

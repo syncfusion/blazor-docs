@@ -1068,6 +1068,8 @@ SfToast
 
 The Blazor PDF Viewer supports viewing and reviewing PDF files in web applications and also printing them. The thumbnail, bookmark, hyperlink, and table of contents supports provide easy navigation within and outside the PDF files. The form-filling support provides a platform to fill and print with AcroForms. The PDF files can be reviewed with the available annotation tools.
 
+#### For Blazor WebAssembly application
+
 <table>
 <tr>
 <td>
@@ -1110,6 +1112,45 @@ SfPdfViewer
 </td>
 </tr>
 </table>
+
+#### For Blazor Server application
+
+<table>
+<tr>
+<td>
+<b>NuGet package name</b>
+</td>
+<td>
+<b>Assembly name</b>
+</td>
+<td>
+<b>Components</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+Syncfusion.Blazor.PdfViewerServer.Windows
+</td>
+<td>
+Syncfusion.Blazor.PdfViewerServer.dll
+</td>
+<td>
+SfPdfViewerServer
+</td>
+<td>
+<ul>
+<li><a href="#syncfusionblazorpdfviewer">Syncfusion.Blazor.PdfViewer</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
+> Note: If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
+>* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
+>* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
 ### Syncfusion.Blazor.PivotTable
 

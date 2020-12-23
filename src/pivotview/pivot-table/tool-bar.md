@@ -35,7 +35,7 @@ The following table shows built-in toolbar options and its actions.
 ```csharp
     @using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true">
+    <SfPivotView TValue="ProductDetails" @ref="pivot" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true">
         <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
             <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals="true" ShowSubTotals="true">
                 <PivotViewColumns>
@@ -59,6 +59,7 @@ The following table shows built-in toolbar options and its actions.
     </SfPivotView>
 
     @code{
+        SfPivotView<ProductDetails> pivot;
         public List<ToolbarItems> toolbar = new List<ToolbarItems> {
             ToolbarItems.New,
             ToolbarItems.Load,

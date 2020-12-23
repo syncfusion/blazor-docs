@@ -39,7 +39,7 @@ Refer [here](#data-binding) to know the more details about OLAP data binding.
     @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE"Cube="Adventure Works" Url="https:/bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033"EnableSorting="true"><PivotViewDataSourceSettings>
+        <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE"Cube="Adventure Works" Url="https:/bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033"EnableSorting="true"></PivotViewDataSourceSettings>
     </SfPivotView>
 
 ```

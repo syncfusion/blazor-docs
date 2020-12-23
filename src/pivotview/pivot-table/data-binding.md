@@ -54,6 +54,7 @@ Using local variable, the JSON data can also be bound to the pivot table using [
 
 ```csharp
     @using Syncfusion.Blazor.PivotView
+    @using Syncfusion.Blazor.Data
 
     <SfPivotView TValue="ProductDetails" Width="1500" Height="300">
         <PivotViewDataSourceSettings TValue="ProductDetails" ExpandAll=false EnableSorting=true>
@@ -457,7 +458,7 @@ User can use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/
     @using Syncfusion.Blazor.PivotView
     @using Syncfusion.Blazor.Data
 
-    <SfPivotView TValue="OrderDetails">
+    <SfPivotView TValue="ProductDetails">
         <PivotViewDataSourceSettings TValue="ProductDetails" ExpandAll="true" EnableSorting="true">
             <SfDataManager Url="https://bi.syncfusion.com/northwindservice/api/orders" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
             <PivotViewColumns>

@@ -153,8 +153,7 @@ In the below code sample, the **Pie** chart is rendered, and the other accumulat
                     </td>
                     <td>
                         <div>
-                            <SfDropDownList TValue="string" TItem="DropDownData" Index=0 DataSource="@ChartTypes">
-                                <DropDownListEvents TValue="string" ValueChange="OnChartTypeChange"></DropDownListEvents>
+                            <SfDropDownList TValue="ChartSeriesType" TItem="DropDownData" DataSource="@ChartTypes" @bind-Value="@ChartType">
                                 <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings>
                             </SfDropDownList>
                         </div>
@@ -164,19 +163,22 @@ In the below code sample, the **Pie** chart is rendered, and the other accumulat
         </table>
     </div>
     <div class="content-wrapper">
-        <SfPivotView TValue="ProductDetails">
-            <PivotViewDataSourceSettings DataSource="@data" ExpandAll=false EnableSorting=true>
+        <SfPivotView TValue="ProductDetails" ShowFieldList=true>
+            <PivotViewDataSourceSettings DataSource="@Data" ExpandAll=false EnableSorting=true>
                 <PivotViewColumns>
                     <PivotViewColumn Name="Country"></PivotViewColumn>
                     <PivotViewColumn Name="Products"></PivotViewColumn>
                 </PivotViewColumns>
                 <PivotViewRows>
                     <PivotViewRow Name="Year"></PivotViewRow>
-                    <PivotViewRow Name="Quarter"></PivotViewRow>
+                    <PivotViewRow Name="Order_Source" Caption="Order Source"></PivotViewRow>
                 </PivotViewRows>
                 <PivotViewValues>
                     <PivotViewValue Name="Amount" Caption="Sales Amount"></PivotViewValue>
                 </PivotViewValues>
+                <PivotViewDrilledMembers>
+                    <PivotViewDrilledMember Name="Year" Items="@DrilledMembers"></PivotViewDrilledMember>
+                </PivotViewDrilledMembers>
                 <PivotViewFormatSettings>
                     <PivotViewFormatSetting Name="Amount" Format="C" UseGrouping=true></PivotViewFormatSetting>
                 </PivotViewFormatSettings>
@@ -184,6 +186,9 @@ In the below code sample, the **Pie** chart is rendered, and the other accumulat
             <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
             <PivotChartSettings Title="Sales Analysis">
                 <PivotChartSeries Type="@ChartType"></PivotChartSeries>
+                <PivotChartPrimaryYAxis>
+                    <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
+                </PivotChartPrimaryYAxis>
             </PivotChartSettings>
         </SfPivotView>
     </div>
@@ -191,27 +196,23 @@ In the below code sample, the **Pie** chart is rendered, and the other accumulat
 
 @code{
     public ChartSeriesType ChartType = ChartSeriesType.Pie;
-    public List<ProductDetails> data { get; set; }
+    public string[] DrilledMembers = new string[] { "FY 2015" };
+    public List<ProductDetails> Data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetProductData().ToList();
+        this.Data = ProductDetails.GetProductData();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
-    public void OnChartTypeChange(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
-    {
-        this.ChartType = (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), args.Value, true);
-    }
     List<DropDownData> ChartTypes = new List<DropDownData>() {
-        new DropDownData { Name = "Pie", Value = "Pie" },
-        new DropDownData { Name = "Doughnut", Value = "Doughnut" },
-        new DropDownData { Name = "Funnel", Value = "Funnel" },
-        new DropDownData { Name = "Pyramid", Value = "Pyramid" }
+        new DropDownData { Name = "Pie", Value = ChartSeriesType.Pie },
+        new DropDownData { Name = "Doughnut", Value = ChartSeriesType.Doughnut },
+        new DropDownData { Name = "Funnel", Value = ChartSeriesType.Funnel },
+        new DropDownData { Name = "Pyramid", Value = ChartSeriesType.Pyramid }
     };
     public class DropDownData
     {
         public string Name { get; set; }
-        public string Value { get; set; }
+        public ChartSeriesType Value { get; set; }
     }
 }
 
@@ -1182,7 +1183,7 @@ In the following code sample, exporting can be done using an external button nam
     </SfPivotView>
 
     @code{
-        SfPivotView pivot;
+        SfPivotView<ProductDetails> pivot;
         public List<ProductDetails> data { get; set; }
         protected override void OnInitialized()
         {
@@ -1237,7 +1238,7 @@ In the following code sample, printing can be done using an external button name
     </SfPivotView>
 
     @code{
-        SfPivotView pivot;
+        SfPivotView<ProductDetails> pivot;
         public List<ProductDetails> data { get; set; }
         protected override void OnInitialized()
         {

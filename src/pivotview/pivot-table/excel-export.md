@@ -93,11 +93,13 @@ The Excel export provides an option to change colors for headers, caption and re
     }
 
     public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args) {
-        object excelExportProperties = new {
-            theme = new {
-                header = new { fontName = "Segoe UI", fontColor= "#0fb5fc", fontSize = 15, bold= true },
-                record = new { fontName= "Segoe UI", fontColor= "#000000" },
-                caption= new { fontName= "Segoe UI", fontColor= "#000000" }
+        ExcelExportProperties excelExportProperties = new ExcelExportProperties()
+        {
+            Theme = new ExcelTheme()
+            {
+                Header = new ExcelStyle() { FontName = "Segoe UI", FontColor = "#0fb5fc", FontSize = 15, Bold = true },
+                Record = new ExcelStyle() { FontName = "Segoe UI", FontColor = "#000000" },
+                Caption = new ExcelStyle() { FontName = "Segoe UI", FontColor = "#000000" }
             }
         };
         this.pivot.ExcelExport(excelExportProperties);
@@ -147,8 +149,9 @@ The Excel export provides an option to change file name of the document before e
     }
 
     public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args) {
-        object excelExportProperties = new {
-            fileName = "sample.xlsx"
+        ExcelExportProperties excelExportProperties = new ExcelExportProperties()
+        {
+            FileName = "sample.xlsx"
         };
         this.pivot.ExcelExport(excelExportProperties);
     }

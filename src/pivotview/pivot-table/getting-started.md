@@ -24,9 +24,12 @@ To get start quickly with Blazor Pivot Table component, you can check out this v
 
  ```html
     <head>
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
         <!---CDN--->
         @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+
+        <!---Additionally refer the below file to use pivot chart--->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
     </head>
 ```
 
@@ -36,6 +39,9 @@ To get start quickly with Blazor Pivot Table component, you can check out this v
     <head>
         <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
         <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+
+        <!---Additionally refer the below file to use pivot chart--->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
     </head>
 ```
 
@@ -99,6 +105,9 @@ namespace BlazorApplication
     <head>
         <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
         <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+
+        <!---Additionally refer the below file to use pivot chart--->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
     </head>
 ```
 

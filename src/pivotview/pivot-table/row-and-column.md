@@ -298,7 +298,7 @@ Available mode of grid lines are:
                 <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
             </PivotViewFormatSettings>
         </PivotViewDataSourceSettings>
-            <PivotViewGridSettings GridLines=PivotGridLine.Vertical></PivotViewGridSettings>
+            <PivotViewGridSettings GridLines=PivotTableGridLine.Vertical></PivotViewGridSettings>
     </SfPivotView>
 
     @code{
@@ -345,7 +345,7 @@ To perform multi-selection, press and hold "CTRL" key and click the desired rows
             </PivotViewFormatSettings>
         </PivotViewDataSourceSettings>
             <PivotViewGridSettings AllowSelection="true">
-                <PivotViewSelectionSettings Type=PivotSelectionType.Multiple></PivotViewSelectionSettings>
+                <PivotViewSelectionSettings Type=PivotTableSelectionType.Multiple></PivotViewSelectionSettings>
             </PivotViewGridSettings>
     </SfPivotView>
 
@@ -392,7 +392,7 @@ The pivot table supports four types of selection mode that can be set using [`Mo
             </PivotViewFormatSettings>
         </PivotViewDataSourceSettings>
             <PivotViewGridSettings AllowSelection="true">
-                <PivotViewSelectionSettings Mode=SelectionMode.Both Type=PivotSelectionType.Multiple></PivotViewSelectionSettings>
+                <PivotViewSelectionSettings Mode=SelectionMode.Both Type=PivotTableSelectionType.Multiple></PivotViewSelectionSettings>
             </PivotViewGridSettings>
     </SfPivotView>
 
@@ -437,7 +437,7 @@ The pivot table supports two types of cell selection mode that can be set using 
             </PivotViewFormatSettings>
         </PivotViewDataSourceSettings>
             <PivotViewGridSettings AllowSelection="true">
-                <PivotViewSelectionSettings CellSelectionMode=PivotCellSelectionMode.Box Type=PivotSelectionType.Multiple Mode=SelectionMode.Cell></PivotViewSelectionSettings>
+                <PivotViewSelectionSettings CellSelectionMode=PivotCellSelectionMode.Box Type=PivotTableSelectionType.Multiple Mode=SelectionMode.Cell></PivotViewSelectionSettings>
             </PivotViewGridSettings>
     </SfPivotView>
 
@@ -478,7 +478,7 @@ The background-color of the selected cell can be changed using built-in CSS name
             </PivotViewValues>
         </PivotViewDataSourceSettings>
             <PivotViewGridSettings AllowSelection="true">
-                <PivotViewSelectionSettings CellSelectionMode=PivotCellSelectionMode.Box Type=PivotSelectionType.Multiple Mode=SelectionMode.Cell></PivotViewSelectionSettings>
+                <PivotViewSelectionSettings CellSelectionMode=PivotCellSelectionMode.Box Type=PivotTableSelectionType.Multiple Mode=SelectionMode.Cell></PivotViewSelectionSettings>
             </PivotViewGridSettings>
     </SfPivotView>
 <style>
@@ -531,7 +531,7 @@ The event `CellSelected` is triggered when cell selection gets completed. It pro
             </PivotViewDataSourceSettings>
             <PivotViewEvents TValue="ProductDetails" CellSelected="cellSelected"></PivotViewEvents>
             <PivotViewGridSettings AllowSelection="true">
-                <PivotViewSelectionSettings Mode="SelectionMode.Cell" Type="PivotSelectionType.Multiple" CellSelectionMode="PivotCellSelectionMode.Box"></PivotViewSelectionSettings>
+                <PivotViewSelectionSettings Mode="SelectionMode.Cell" Type="PivotTableSelectionType.Multiple" CellSelectionMode="PivotCellSelectionMode.Box"></PivotViewSelectionSettings>
             </PivotViewGridSettings>
             </SfPivotView>
         </div>

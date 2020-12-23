@@ -162,17 +162,16 @@ You can enable formatting dialog option in the toolbar by adding `NumberFormatti
     SfPivotView<ProductDetails> pivot;
 
     public List<ToolbarItems> toolbar = new List<ToolbarItems> {
-            ToolbarItems.NumberFormatting
-        };
-}
- @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+        ToolbarItems.NumberFormatting
+    };
+
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 

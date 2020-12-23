@@ -93,22 +93,29 @@ The PDF export provides an option to change colors for headers, caption and reco
     }
     public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
-        object pdfExportProperties = new
+        PdfExportProperties pdfExportProperties = new PdfExportProperties()
         {
-            theme = new
+            Theme = new Syncfusion.Blazor.Grids.PdfTheme()
             {
-                header = new
+                Header = new Syncfusion.Blazor.Grids.PdfThemeStyle()
                 {
-                    fontColor = "#0fb5fc",fontName = "Calibri",fontSize = 15,bold = true,
-                    borders = new { color = "#000000", lineStyle = "Thin" }
+                    FontColor = "#0fb5fc",
+                    FontName = "Calibri",
+                    FontSize = 15,
+                    Bold = true,
+                    Border = new Syncfusion.Blazor.Grids.PdfBorder() { Color = "#000000" }
                 },
-                record = new
+                Record = new Syncfusion.Blazor.Grids.PdfThemeStyle()
                 {
-                    fontColor = "#000000",fontName = "Segoe UI",fontSize = 12
+                    FontColor = "#000000",
+                    FontName = "Segoe UI",
+                    FontSize = 12
                 },
-                caption = new
+                Caption = new Syncfusion.Blazor.Grids.PdfThemeStyle()
                 {
-                    fontColor= "#000000", fontName = "Segoe UI", fontSize = 12,
+                    FontColor = "#000000",
+                    FontName = "Segoe UI",
+                    FontSize = 12,
                 }
             }
         };
@@ -158,7 +165,7 @@ The PDF export provides an option to change file name of the document before exp
     }
     public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
-        object pdfExportProperties = new { fileName = "sample.pdf" };
+        PdfExportProperties pdfExportProperties = new PdfExportProperties() { FileName = "sample.pdf" };
         this.pivot.PdfExport(pdfExportProperties);
     }
 }
@@ -208,7 +215,7 @@ Arche, Flsa, HalfLetter, Letter11x17, Ledger.
     }
     public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
-        object pdfExportProperties = new { pageSize = "A3" };
+        PdfExportProperties pdfExportProperties = new PdfExportProperties() {  PageSize = PdfPageSize.A3 };
         this.pivot.PdfExport(pdfExportProperties);
     }
 }
@@ -255,7 +262,7 @@ The PDF export provides an option to change page orientation of the document bef
     }
     public void OnPdfExport()
     {
-        object pdfExportProperties = new { pageOrientation= "Landscape", };
+        PdfExportProperties pdfExportProperties = new PdfExportProperties() { PageOrientation = PageOrientation.Landscape };
         this.pivot.PdfExport(pdfExportProperties);
     }
 }

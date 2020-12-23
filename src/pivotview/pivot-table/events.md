@@ -224,7 +224,7 @@ The event [`ConditionalFormatting`](https://help.syncfusion.com/cr/blazor/Syncfu
             this.data = ProductDetails.GetProductData().ToList();
            //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
         }
-        private void conditionalFormat(CellClickEventArgs args)
+        private void conditionalFormat(ConditionalFormatSettings args)
         {
             //to change the conditional formatting settings in conditional format dialog
             args.Style.BackgroundColor = "Blue";

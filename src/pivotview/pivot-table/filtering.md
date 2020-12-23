@@ -663,10 +663,10 @@ In the below sample, the member editor of field "Country" shows only the selecte
         public void memberEditorOpen(MemberEditorOpenEventArgs args) {
           if (args.FieldName == "Country")
             {
-                List<MemberItems> updatedItems = new List<MemberItems>();
+                List<TreeDataInfo> updatedItems = new List<TreeDataInfo>();
                 for (int i = 0; i < args.FieldMembers.Count; i++)
                 {
-                    MemberItems member = args.FieldMembers[i];
+                    TreeDataInfo member = args.FieldMembers[i];
                     if (member.Id == "France" || member.Id == "Germany")
                     {
                         updatedItems.Add(member);

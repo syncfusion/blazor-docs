@@ -291,6 +291,18 @@ On remote data binding, all tree grid actions such as paging, loading child on-d
 
 ```
 
+### LoadChildOnDemand
+
+Tree Grid provides option to load the child records also during the initial rendering itself for remote data binding by setting [`LoadChildOnDemand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand)  as `true`.
+
+When [`LoadChildOnDemand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand) is enabled parent records are rendered in expanded state.
+
+The following code example describes the behavior of the `LoadChildOnDemand` feature of Tree Grid.
+
+{% aspTab template="tree-grid/loadchildondemand", sourceFiles="index.razor,treegriddata.cs,DefaultController.cs" %}
+
+{% endaspTab %}
+
 <!-- Custom Adaptor
 
 You can create your own adaptor by extending the built-in adaptors. The following demonstrates custom adaptor approach and how to add a serial number for the records by overriding the built-in response processing using the **processResponse** method of the **ODataAdaptor**.

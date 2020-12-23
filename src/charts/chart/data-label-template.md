@@ -22,7 +22,7 @@ For example, you can access the data label template using context as follows.
         <ChartDataLabel Visible="true">
                     <Template>
                         @{
-                            var data = context as IChartTemplate;
+                             var data = context as ChartDataPointInfo;
                             <table>
                                 <tr><td align="center"> @data.Y</td></tr>
                             </table>

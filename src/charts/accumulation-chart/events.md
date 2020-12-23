@@ -14,7 +14,6 @@ The events should be provided to the Accumulation Chart using [`AccumulationChar
 The following are the number of events supported for Accumulation Chart component.
 
 * [Loaded](events/#loaded)
-* [OnAnimationComplete](events/#onanimationcomplete)
 * [OnChartMouseClick](events/#onchartmouseclick)
 * [OnChartMouseDown](events/#onchartmousedown)
 * [OnChartMouseLeave](events/#onchartmouseleave)
@@ -46,8 +45,8 @@ The following are the number of events supported for Accumulation Chart componen
 @code{
     public class Statistics
     {
-        public string Browser;
-        public double Users;
+        public string Browser { get; set; }
+        public double Users { get; set; }
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
@@ -60,50 +59,7 @@ The following are the number of events supported for Accumulation Chart componen
         new Statistics { Browser = "Android", Users = 12 },
     };
 
-    public void LoadHandler(IAccLoadedEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
-## OnAnimationComplete
-
-[`OnAnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnAnimationComplete) event is triggers after animation gets completed for series.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnAnimationComplete="@AnimationHandler"></AccumulationChartEvents>
-
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser;
-        public double Users;
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-
-    public void AnimationHandler(IAccAnimationCompleteEventArgs args)
+    public void LoadHandler(AccumulationLoadedEventArgs args)
     {
         // Here you can customize your code
     }

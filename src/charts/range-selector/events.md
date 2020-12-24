@@ -14,7 +14,7 @@ The events should be provided to the Range Navigator using **RangeNavigatorEvent
 The following are the number of events supported for Range Navigator component.
 
 * [Loaded](events/#loaded)
-* [OnPrint](events/#onprint)
+* [OnPrintCompleted](events/#OnPrintCompleted)
 * [Changed](events/#changed)
 * [Resized](events/#resized)
 
@@ -35,7 +35,7 @@ The following are the number of events supported for Range Navigator component.
 
 @code {
 
-    public void RangeNavigatorLoaded(IRangeLoadedEventArgs args)
+    public void RangeNavigatorLoaded(RangeLoadedEventArgs args)
     {
         // Here you can customize your code
     }
@@ -44,8 +44,8 @@ The following are the number of events supported for Range Navigator component.
 
     public class Data
     {
-        public DateTime Date;
-        public double Close;
+        public DateTime Date {get;set;}
+        public double Close {get;set;}
     }
     public List<Data> StockDetails = new List<Data>
 {
@@ -60,9 +60,9 @@ The following are the number of events supported for Range Navigator component.
 }
 ```
 
-## OnPrint
+## OnPrintCompleted
 
-[`OnPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrint) event triggers before range navigator prints get started.
+[`OnPrintCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrint) event triggers before range navigator prints get started.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -77,7 +77,7 @@ The following are the number of events supported for Range Navigator component.
 
 @code {
 
-    public void PrintHandler(IPrintEventArgs args)
+    public void PrintHandler(EventArgs args)
     {
         // Here you can customize your code
     }
@@ -86,8 +86,8 @@ The following are the number of events supported for Range Navigator component.
 
     public class Data
     {
-        public DateTime Date;
-        public double Close;
+        public DateTime Date {get;set;}
+        public double Close {get;set;}
     }
     public List<Data> StockDetails = new List<Data>
 {
@@ -119,7 +119,7 @@ The following are the number of events supported for Range Navigator component.
 
 @code {
 
-    public void SliderChanged(IChangedEventArgs args)
+    public void SliderChanged(ChangedEventArgs args)
     {
         // Here you can customize your code
     }
@@ -128,8 +128,8 @@ The following are the number of events supported for Range Navigator component.
 
     public class Data
     {
-        public DateTime Date;
-        public double Close;
+        public DateTime Date {get;set;}
+        public double Close {get;set;}
     }
     public List<Data> StockDetails = new List<Data>
 {
@@ -161,7 +161,7 @@ The following are the number of events supported for Range Navigator component.
 
 @code {
 
-    public void RangeNavigatorResized(IResizeRangeNavigatorEventArgs args)
+    public void RangeNavigatorResized(RangeResizeEventArgs args)
     {
         // Here you can customize your code
     }
@@ -170,8 +170,8 @@ The following are the number of events supported for Range Navigator component.
 
     public class Data
     {
-        public DateTime Date;
-        public double Close;
+        public DateTime Date {get;set;}
+        public double Close {get;set;}
     }
     public List<Data> StockDetails = new List<Data>
 {

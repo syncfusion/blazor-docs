@@ -38,25 +38,11 @@ Using the [`NavigatorBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ![Border](images/custom/border.png)
 
-## Deferred update
-
-If the [`EnableDeferredUpdate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorModel.html#Syncfusion_Blazor_Charts_RangeNavigatorModel_EnableDeferredUpdate) property is set to true, then the changed event will be fired after dragging the slider.
-If the `EnableDeferredUpdate` is false, then the changed event will be fired when dragging the slider. By default,
-the `EnableDeferredUpdate` is set to false.
-
 ## Allow snapping
 
 The [`AllowSnapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorModel.html#Syncfusion_Blazor_Charts_RangeNavigatorModel_AllowSnapping) property toggles the placement of the slider exactly to the left or on the nearest interval.
 
 {% aspTab template="range-navigator/custom/snap", sourceFiles="snap.razor" %}
-
-{% endaspTab %}
-
-## Animation
-
-The speed of the animation can be controlled using the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorModel.html#Syncfusion_Blazor_Charts_RangeNavigatorModel_AnimationDuration) property. The default value of the `AnimationDuration` property is 500 milliseconds.
-
-{% aspTab template="range-navigator/custom/animation", sourceFiles="animation.razor" %}
 
 {% endaspTab %}
 

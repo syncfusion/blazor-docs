@@ -11,3 +11,4 @@
 * [Create Wizard](accordion/how-to/create-wizard-using-accordion.md)
 * [Load items dynamically](accordion/how-to/load-accordion-items-dynamically.md)
 * [Treeview Integration](accordion/how-to/integrate-treeview-inside-the-accordion.md)
+* [Prevent Expand or Collapse item](accordion/how-to/prevent-expand-collapse-accordion-item.md)

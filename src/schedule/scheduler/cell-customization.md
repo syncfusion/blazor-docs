@@ -184,3 +184,75 @@ The `CellTemplate` is used to customize the cell background with specific images
     }
 }
 ```
+
+## Customizing cells using OnRenderCell event
+
+We can also customize the cells by using `OnRenderCell` event. In the `OnRenderCell`, the argument `RenderCellEventArgs` returns the `ElementType` as `WorkCells` and `AllDayCells` when the cell is rendering. In the following example, we customized the cell's background color.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEvents TValue="AppointmentData" OnRenderCell="OnRenderCell"></ScheduleEvents>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+<style>
+    .e-schedule .e-vertical-view .e-work-hours.custom-class {
+        background-color: ivory;
+    }
+</style>
+
+@code{
+    private DateTime CurrentDate = new DateTime(2020, 3, 10);
+    public string[] CustomClass = { "custom-class" };
+    public void OnRenderCell(RenderCellEventArgs args)
+    {
+        //Here you can customize with your code
+        if (args.ElementType == ElementType.WorkCells)
+        {
+            args.CssClasses = new List<string>(CustomClass);//The default work hours color is changed to ivory color
+        }
+    }
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 10, 9, 30, 0) , EndTime = new DateTime(2020, 3, 10, 12, 0, 0) }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
+## Customizing the minimum and maximum date values
+
+Providing the `MinDate` and `MaxDate` property with some date values, allows the Scheduler to set the minimum and maximum date range. The Scheduler date that lies beyond this minimum and maximum date range will be in a disabled state so that the date navigation will be blocked beyond the specified date range.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<p>Setting date</p>
+<SfSchedule TValue="AppointmentData" Height="650px" MinDate="new DateTime(2019, 1, 1)" MaxDate="new DateTime(2030, 12, 31)" @bind-SelectedDate="@CurrentDate">
+</SfSchedule>
+@code{
+    private DateTime CurrentDate = new DateTime(2020, 1, 10);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+    }
+}
+```
+
+> By default, the `MinDate` property value is set to new DateTime(1900, 1, 1) and `MaxDate` property value is set to new DateTime(2099, 12, 31). The user can also set the customized `MinDate` and `MaxDate` property values.

@@ -130,3 +130,51 @@ The Scheduler UI that displays the date text on all views are considered as the 
     }
 </style>
 ```
+
+### Customization using OnRenderCell event
+
+We can also customize the date header by using `OnRenderCell` event. In the `OnRenderCell`, the argument `RenderCellEventArgs` returns the `ElementType` as `DateHeader` when the date header is rendering. In the following example, we customized the date header's background color.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEvents TValue="AppointmentData" OnRenderCell="OnRenderCell"></ScheduleEvents>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+<style>
+    .e-schedule .e-vertical-view .e-date-header-wrap table tbody td.e-header-cells {
+        background-color: ivory;
+    }
+</style>
+
+@code{
+    private DateTime CurrentDate = new DateTime(2020, 3, 10);
+    public string[] CustomClass = { "custom-class" };
+    public void OnRenderCell(RenderCellEventArgs args)
+    {
+        //Here you can customize with your code
+        if (args.ElementType == ElementType.DateHeader)
+        {
+            args.CssClasses = new List<string>(CustomClass);
+        }
+    }
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 10, 9, 30, 0) , EndTime = new DateTime(2020, 3, 10, 12, 0, 0) }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```

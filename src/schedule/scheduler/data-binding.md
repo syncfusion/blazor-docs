@@ -558,3 +558,11 @@ namespace Restful_Crud.Controllers
     }
 }
 ```
+
+## Configuring Scheduler with Google API service
+
+We have assigned the dataSource that is retrieved from the Google services within the `OnInitializedAsync` method. And, the CRUD actions are performed within the `ActionCompleted` event.
+
+We have to write our own service to connect retrieve the events from the Google calendar.
+
+> The runnable sample for the above code will be available [here](https://github.com/SyncfusionExamples/google-calendar-synchronization-with-blazor-scheduler).

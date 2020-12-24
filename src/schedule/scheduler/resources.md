@@ -903,6 +903,72 @@ The output of the above code example in desktop mode will be as in the following
 
 ![Multiple columns](images/multiple-columns.png)
 
+## Expand and collapse resource fields
+
+It is possible to expand and collapse the resource field. By default, resource fields are expanded with their child fields. We can customize this behavior using `ExpandedField` property. When set `ExpandedField` property in resources dataSource to `false`, It restricts the resource fields from expanding. By default, `ExpandedField` value set to `true`
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleGroup Resources="@Resources"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@RoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id" ColorField="RoomColor" AllowMultiple="false" ExpandedField="IsExpand"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="2"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" MaxEventsPerRow="2"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code{
+    private DateTime CurrentDate = new DateTime(2020, 1, 31);
+    public string[] Resources { get; set; } = { "Rooms", "Owners" };
+    public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
+    {
+        new ResourceData{ RoomText = "ROOM 1", Id = 1, RoomColor = "#cb6bb2",IsExpand=true},
+        new ResourceData{ RoomText = "ROOM 2", Id = 2, RoomColor = "#56ca85" , IsExpand=false }
+    };
+    public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
+    {
+        new ResourceData{ OwnerText = "Nancy", Id = 1, OwnerGroupId = 1, OwnerColor = "#ffaa00" },
+        new ResourceData{ OwnerText = "Steven", Id = 2, OwnerGroupId = 2, OwnerColor = "#f8a398" },
+        new ResourceData{ OwnerText = "Michael", Id = 3, OwnerGroupId = 1, OwnerColor = "#7499e1" }
+    };
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int OwnerId { get; set; }
+        public int RoomId { get; set; }
+    }
+    public class ResourceData
+    {
+        public int Id { get; set; }
+        public string RoomText { get; set; }
+        public string RoomColor { get; set; }
+        public string OwnerText { get; set; }
+        public string OwnerColor { get; set; }
+        public int OwnerGroupId { get; set; }
+        public bool IsExpand { get; set; }
+    }
+}
+```
+
 ## Displaying tooltip for resource headers
 
 It is possible to display tooltip over the resource headers showing the resource information. By default, there won't be any tooltip displayed on the resource headers, and to enable it, you need to assign the customized template design to the `HeaderTooltipTemplate` option within the `ScheduleGroup`.

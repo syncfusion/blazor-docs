@@ -214,6 +214,12 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 | `ValidationAlert` | For validation alert popup.|
 | `RecurrenceValidationAlert` | For recurrence validation alert popup.|
 
+### How to open editor window manually
+
+It is possible to open the editor window by manually for on specific time or certain events by using the `OpenEditor` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as a parameters.
+
+> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click/) is the example to open the editor window on a single click.
+
 ## Customizing event editor using template
 
 The event editor window can be customized by making use of the `EditorTemplate` option. Each field defined within template must use two way binding for the `Value` property of the components used within the template to perform CRUD actions.
@@ -283,7 +289,7 @@ The event editor window can be customized by making use of the `EditorTemplate` 
 
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), EventType="Confirmed" }
+    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), EventType = "Confirmed" }
     };
     public class AppointmentData
     {
@@ -387,6 +393,198 @@ The resource field can be added within editor template with the following code e
 ```
 
 > EditorTemplate is not applicable when we set `AllowMutiple` as true without `AllowGroupEdit` is enabled, so in that case you need to use custom editor window.
+
+## How to add recurrence options within editor template
+
+The following code example shows how to add recurrence options within the editor template.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleTemplates>
+        <EditorTemplate>
+            <table class="custom-event-editor" width="100%" cellpadding="5">
+                <tbody>
+                    <tr>
+                        <td class="e-textlabel">Summary</td>
+                        <td colspan="4">
+                            <SfTextBox @bind-Value="@((context as AppointmentData).Subject)"></SfTextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="e-textlabel">Status</td>
+                        <td colspan="4">
+                            <SfDropDownList ID="EventType" DataSource="@StatusData" Placeholder="Choose status" @bind-Value="@((context as AppointmentData).EventType)">
+                                <DropDownListFieldSettings Value="Id"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="e-textlabel">From</td>
+                        <td colspan="4">
+                            <SfDateTimePicker @bind-Value="@((context as AppointmentData).StartTime)"></SfDateTimePicker>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="e-textlabel">To</td>
+                        <td colspan="4">
+                            <SfDateTimePicker @bind-Value="@((context as AppointmentData).EndTime)"></SfDateTimePicker>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="e-textlabel">Reason</td>
+                        <td colspan="4">
+                            <SfTextBox Multiline="true" @bind-Value="@((context as AppointmentData).Description)"></SfTextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="e-textlabel">Recurrence</td>
+                        <td colspan="4">
+                            <SfRecurrenceEditor @bind-Value="@((context as AppointmentData).RecurrenceRule)"></SfRecurrenceEditor>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </EditorTemplate>
+    </ScheduleTemplates>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    private DateTime CurrentDate = new DateTime(2020, 1, 31);
+    public class DDFields
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+    }
+    List<DDFields> StatusData = new List<DDFields>()
+    {
+        new DDFields(){ Id= "New", Text= "New" },
+        new DDFields(){ Id= "Requested", Text= "Requested" },
+        new DDFields(){ Id= "Confirmed", Text= "Confirmed" },
+    };
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), EventType = "Confirmed" }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+        public string Description { get; set; }
+        public string EventType { get; set; }
+    }
+}
+```
+
+## Apply validations on editor template fields
+
+In the following code example, validation has been added to the `EventType` field by importing `DataAnnotations` namespace and that field is set as `Required` and displays the validation message for this field by using the `ValidationMessage` tag.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using System.ComponentModel.DataAnnotations
+
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleTemplates>
+        <EditorTemplate>
+            <table class="custom-event-editor" width="100%" cellpadding="5">
+                <tbody>
+                    <tr>
+                        <td class="e-textlabel">Summary</td>
+                        <td colspan="4">
+                            <SfTextBox @bind-Value="@((context as AppointmentData).Subject)"></SfTextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="e-textlabel">Status</td>
+                        <td colspan="4">
+                            <SfDropDownList ID="EventType" DataSource="@StatusData" Placeholder="Choose status" @bind-Value="@((context as AppointmentData).EventType)">
+                                <DropDownListFieldSettings Value="Id"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                            <ValidationMessage For="()=>((context as AppointmentData).EventType)"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="e-textlabel">From</td>
+                        <td colspan="4">
+                            <SfDateTimePicker @bind-Value="@((context as AppointmentData).StartTime)"></SfDateTimePicker>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="e-textlabel">To</td>
+                        <td colspan="4">
+                            <SfDateTimePicker @bind-Value="@((context as AppointmentData).EndTime)"></SfDateTimePicker>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="e-textlabel">Reason</td>
+                        <td colspan="4">
+                            <SfTextBox Multiline="true" @bind-Value="@((context as AppointmentData).Description)"></SfTextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="e-textlabel">Recurrence</td>
+                        <td colspan="4">
+                            <SfRecurrenceEditor @bind-Value="@((context as AppointmentData).RecurrenceRule)"></SfRecurrenceEditor>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </EditorTemplate>
+    </ScheduleTemplates>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    private DateTime CurrentDate = new DateTime(2020, 1, 31);
+    public class DDFields
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+    }
+    List<DDFields> StatusData = new List<DDFields>() {
+        new DDFields(){ Id= "New", Text= "New" },
+        new DDFields(){ Id= "Requested", Text= "Requested" },
+        new DDFields(){ Id= "Confirmed", Text= "Confirmed" },
+    };
+    Dictionary<string, object> StartName = new Dictionary<string, object>()
+    {
+        {"data-name","StartTime"},
+    };
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), EventType = "Confirmed" }
+    };
+    public class AppointmentData
+    {
+        [Required]
+        public string EventType { get; set; }
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+        public string Description { get; set; }
+    }
+}
+```
 
 ## Quick popups
 
@@ -1177,6 +1375,48 @@ By default, the Scheduler allows the user to select multiple days. We can preven
 }
 ```
 
+### How to close quick info popup manually
+
+You can close the quick info popup in scheduler by using the `CloseQuickInfoPopup()` public method. The following code example demonstrates the how to close quick info popup manually.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Close popup" OnClick="@(e => OnBtnClick())"></SfButton>
+<SfSchedule TValue="AppointmentData" @ref="ScheduleObj" Width="100%" Height="750px" @bind-SelectedDate="@SelectedDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+
+    SfSchedule<AppointmentData> ScheduleObj;
+    private DateTime SelectedDate = new DateTime(2020, 4, 1);
+    private void OnBtnClick()
+    {
+        ScheduleObj.CloseQuickInfoPopup();
+    }
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 4, 1, 9, 30, 0) , EndTime = new DateTime(2020, 4, 1, 11, 0, 0), EventType = "Confirmed" }
+    };
+    public class AppointmentData
+    {
+
+        public string EventType { get; set; }
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+        public string Description { get; set; }
+    }
+}
+```
+
 ## More events indicator and popup
 
 When the number of appointments count that lies on a particular time range * default appointment height exceeds the default height of a cell in month view and all other timeline views, a `+ more` text indicator will be displayed at the bottom of those cells. This indicator denotes that the cell contains few more appointments in it and clicking on that will display a popup displaying all the appointments present on that day.
@@ -1224,6 +1464,53 @@ The following code example shows how to disable the display of such popups while
         public string RecurrenceRule { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
         public string RecurrenceException { get; set; }
+    }
+}
+```
+
+### How to prevent the display of popup when clicking on the more text indicator
+
+It is possible to prevent the display of popup window by passing the value `true` to `Cancel` option within the `MoreEventsClicked` event.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" @ref="ScheduleObj" Width="100%" Height="750px" @bind-SelectedDate="@SelectedDate">
+       <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+       <ScheduleViews>
+           <ScheduleView Option="View.Month"></ScheduleView>
+       </ScheduleViews>
+    <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsCliecked"></ScheduleEvents>
+</SfSchedule>
+
+@code{
+
+    SfSchedule<AppointmentData> ScheduleObj;
+
+    private DateTime SelectedDate = new DateTime(2020, 1, 31);
+
+    private void OnMoreEventsCliecked(MoreEventsClickArgs args)
+    {
+        args.Cancel = true;
+    }
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 15, 9, 30, 0) , EndTime = new DateTime(2020, 1, 15, 11, 0, 0), EventType = "Confirmed" },
+        new AppointmentData { Id = 1, Subject = "Scrum Meeting", StartTime = new DateTime(2020, 1, 15, 10, 30, 0) , EndTime = new DateTime(2020, 1, 15, 11, 0, 0), EventType = "Confirmed" }
+    };
+    public class AppointmentData
+    {
+
+        public string EventType { get; set; }
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+        public string Description { get; set; }
     }
 }
 ```

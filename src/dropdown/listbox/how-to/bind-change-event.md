@@ -13,7 +13,7 @@ To bind the change event in the listbox [`ValueChange`](https://help.syncfusion.
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" TItem="VehicleData" DataSource="@Vehicles">
-    <ListBoxEvents TValue="string[]" ValueChange="change"></ListBoxEvents>
+    <ListBoxEvents TValue="string[]" ValueChange="change" TItem="VehicleData"></ListBoxEvents>
     <ListBoxFieldSettings Text="Text" Value="Id" />
 </SfListBox>
 
@@ -35,7 +35,7 @@ To bind the change event in the listbox [`ValueChange`](https://help.syncfusion.
         public string Id  { get; set; }
     }
 
-    private void change(ListBoxChangeEventArgs args)
+    private void change(ListBoxChangeEventArgs<string[], VehicleData> args)
     {
         //Triggers when value changed
     }

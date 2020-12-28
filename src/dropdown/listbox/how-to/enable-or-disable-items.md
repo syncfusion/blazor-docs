@@ -13,8 +13,8 @@ To enable or disable items in the listbox, [`EnableItems`](https://help.syncfusi
 @using Syncfusion.Blazor.Buttons
 
 <SfListBox TValue="string[]" TItem="VehicleData" DataSource="@Vehicles" @ref="ListBoxObj">
-    <ListBoxFieldSettings Text="Text" Value="Id" />
-    <ListBoxEvents TValue="string[]" Created="created"></ListBoxEvents>
+    <ListBoxFieldSettings Text="Text" Value="Text" />
+    <ListBoxEvents TValue="string[]" Created="created" TItem="VehicleData"></ListBoxEvents>
 </SfListBox>
 <SfButton @onclick="enableData" Content="Enable Items"></SfButton>
 

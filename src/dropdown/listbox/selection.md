@@ -11,8 +11,6 @@ The ListBox provides support to select an item or a group of item by mouse or ke
 * Single -  To select single item in the ListBox.
 * Multiple -  To select multiple items in the ListBox.
 
-> On selection of each ListBox item, [`Select`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) event is triggered.
-
 ## Single selection
 
 To enable single selection in the ListBox, [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) should be set as `Single` in [`SelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property.

@@ -13,12 +13,12 @@ The following operations can be performed in dual ListBox,
 
 | Options | Description |
 |------|-------------|
-| moveUp | Move the selected item in the upward direction within the listbox. |
-| moveDown | Move the selected item in the downward direction within the listbox. |
-| moveTo |  Move the selected item to the another listbox. |
-| moveFrom | Move the selected item from one listbox to the another listbox. |
-| moveAllTo | Move all the items to the another listbox. |
-| moveAllFrom |  Move all the items from one listbox to the another listbox. |
+| MoveUp | Move the selected item in the upward direction within the listbox. |
+| MoveDown | Move the selected item in the downward direction within the listbox. |
+| MoveTo |  Move the selected item to the another listbox. |
+| MoveFrom | Move the selected item from one listbox to the another listbox. |
+| MoveAllTo | Move all the items to the another listbox. |
+| MoveAllFrom |  Move all the items from one listbox to the another listbox. |
 
 The following example illustrates how to move items from `Group A` to `Group B` listbox.
 
@@ -27,22 +27,38 @@ The following example illustrates how to move items from `Group A` to `Group B` 
 
 <div id="listbox1">
     <h4>Group A</h4>
-<SfListBox TValue="string[]" DataSource="@GroupA" Scope="#listbox" TItem="CountryCode">
-<ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
-<ListBoxToolbarSettings Items="@Items"></ListBoxToolbarSettings>
-</SfListBox>
+    <SfListBox TValue="string[]" @ref="listbox1" DataSource="@GroupA" Scope="@scope1" TItem="CountryCode">
+        <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
+        <ListBoxToolbarSettings Items="@Items"></ListBoxToolbarSettings>
+    </SfListBox>
 </div>
 <div id="listbox2">
     <h4>Group B</h4>
-<SfListBox TValue="string[]" ID="listbox" DataSource="@GroupB" TItem="CountryCode">
-<ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
-</SfListBox>
+    <SfListBox TValue="string[]" @ref="listbox2" Scope="scope2" DataSource="@GroupB" TItem="CountryCode">
+        <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
+    </SfListBox>
 </div>
 
 @code {
-    public string[] Items = new string[] { "moveUp", "moveDown", "moveTo", "moveFrom", "moveAllTo", "moveAllFrom" };
+    SfListBox<string[], CountryCode> listbox1;
+    SfListBox<string[], CountryCode> listbox2;
+    SfListBox<string[], CountryCode> scope1;
+    SfListBox<string[], CountryCode> scope2;
+
+    public string[] Items = new string[] { "MoveUp", "MoveDown", "MoveTo", "MoveFrom", "MoveAllTo", "MoveAllFrom" };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            scope1 = listbox2;
+            scope2 = listbox1;
+            StateHasChanged(); // Re-render component to update the ListBox component Scope references in each connected ListBox.
+        }
+    }
     public List<CountryCode> GroupA = new List<CountryCode>
-      {
+  {
         new CountryCode{ Name = "Australia", Code = "AU" },
         new CountryCode{ Name = "Bermuda", Code = "BM" },
         new CountryCode{ Name = "Canada", Code = "CA" },
@@ -53,7 +69,7 @@ The following example illustrates how to move items from `Group A` to `Group B` 
     };
 
     public List<CountryCode> GroupB = new List<CountryCode>
-      {
+  {
         new CountryCode{ Name = "India", Code = "IN" },
         new CountryCode{ Name = "Italy", Code = "IT" },
         new CountryCode{ Name = "Japan", Code = "JP" },
@@ -63,11 +79,12 @@ The following example illustrates how to move items from `Group A` to `Group B` 
         new CountryCode{ Name = "Switzerland", Code = "CH" }
     };
 
-    public class CountryCode {
-        public string Name  { get; set; }
-        public string Code  { get; set; }
+    public class CountryCode
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
     }
-    }
+}
 
 <style>
     #listbox1 {

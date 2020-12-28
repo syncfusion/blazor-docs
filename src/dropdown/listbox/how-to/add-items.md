@@ -6,7 +6,7 @@ description: "ListBox component supports adding of items to the listbox."
 
 # Add items to the listbox
 
-To add an item or multiple items, [`AddItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be added while clicking `Add Items` button.
+To add an item or multiple items, `AddItem` method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be added while clicking `Add Items` button.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
@@ -40,8 +40,8 @@ To add an item or multiple items, [`AddItems`](https://help.syncfusion.com/cr/bl
         new VehicleData{ Text = "McLaren P1", Id = "Vehicle-10"}
       };
 
-      private void addData() {
-        ListBoxObj.AddItems(Item);
+      private async Task addData() {
+        await ListBoxObj.AddItem(Item);
       }
 }
 ```
@@ -52,7 +52,7 @@ Output will be shown as
 
 # Remove items from the listbox
 
-To remove an item or multiple items, [`RemoveItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_RemoveItems_System_Object_System_Nullable_System_Double__) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be removed while clicking `Remove Items` button.
+To remove an item or multiple items, [`RemoveItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_RemoveItem_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be removed while clicking `Remove Items` button.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
@@ -88,8 +88,8 @@ To remove an item or multiple items, [`RemoveItems`](https://help.syncfusion.com
         new VehicleData{ Text = "McLaren P1", Id = "Vehicle-10"}
     };
 
-    private void removeData() {
-      ListBoxObj.RemoveItems(Item);
+    private async Task removeData() {
+      await ListBoxObj.RemoveItem(Item);
     }
 }
 ```

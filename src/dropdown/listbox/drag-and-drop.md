@@ -66,21 +66,29 @@ The following sample illustrates how to drag and drop an item between two listbo
 @using Syncfusion.Blazor.DropDowns
 
 <div id="listbox1">
-  <h4>Group A</h4>
-<SfListBox TValue="string[]" DataSource="@GroupA"  AllowDragAndDrop="true" Scope="combined-list" height="290px" TItem="CountryCode">
-<ListBoxFieldSettings Text="Name" Value="Code" />
-</SfListBox>
+    <h4>Group A</h4>
+    <SfListBox @ref="listbox1" TValue="string[]" DataSource="@GroupA" AllowDragAndDrop="true" Scope="@listbox2" Height="290px" TItem="CountryCode">
+        <ListBoxFieldSettings Text="Name" Value="Code" />
+    </SfListBox>
 </div>
 <div id="listbox2">
     <h4>Group B</h4>
-<SfListBox TValue="string[]" DataSource="@GroupB"  Scope="combined-list" AllowDragAndDrop="true" height="290px" TItem="CountryCode">
-<ListBoxFieldSettings Text="Name" Value="Code" />
-</SfListBox>
+    <SfListBox @ref="listbox2" TValue="string[]" DataSource="@GroupB" Scope="@listbox1" AllowDragAndDrop="true" Height="290px" TItem="CountryCode">
+        <ListBoxFieldSettings Text="Name" Value="Code" />
+    </SfListBox>
 </div>
 
 @code {
+    SfListBox<string[], CountryCode> listbox1;
+    SfListBox<string[], CountryCode> listbox2;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+            StateHasChanged(); // Re-render component to update the ListBox component Scope references in each connected ListBox.
+    }
     public List<CountryCode> GroupA = new List<CountryCode>
-      {
+  {
         new CountryCode{ Name = "Australia", Code = "AU" },
         new CountryCode{ Name = "Bermuda", Code = "BM" },
         new CountryCode{ Name = "Canada", Code = "CA" },
@@ -93,7 +101,7 @@ The following sample illustrates how to drag and drop an item between two listbo
     };
 
     public List<CountryCode> GroupB = new List<CountryCode>
-      {
+  {
         new CountryCode{ Name = "India", Code = "IN" },
         new CountryCode{ Name = "Italy", Code = "IT" },
         new CountryCode{ Name = "Japan", Code = "JP" },
@@ -105,11 +113,12 @@ The following sample illustrates how to drag and drop an item between two listbo
         new CountryCode{ Name = "United States", Code = "US" }
     };
 
-    public class CountryCode {
-        public string Name  { get; set; }
-        public string Code  { get; set; }
+    public class CountryCode
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
     }
-    }
+}
 
 <style>
     #listbox1 {

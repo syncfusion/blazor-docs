@@ -144,6 +144,10 @@ ListBox items can be customized according to the requirement using [`ItemTemplat
         top: calc(50% - 33px);
     }
 
+    .e-listbox-container .e-list-item {
+        height: auto !important;
+    }
+
     .javascript {
         background-image: url('./images/javascript.svg');
     }

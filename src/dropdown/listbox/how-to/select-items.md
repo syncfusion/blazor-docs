@@ -12,8 +12,8 @@ In the following example, `Bugatti Chiron` is selected using [`SelectItems`](htt
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" TItem="VehicleData" DataSource="@Vehicles" @ref="ListBoxObj">
-    <ListBoxEvents TValue="string[]" Created="created"></ListBoxEvents>
-    <ListBoxFieldSettings Text="Text" Value="Id" />
+    <ListBoxEvents TValue="string[]" Created="created" TItem="VehicleData"></ListBoxEvents>
+    <ListBoxFieldSettings Text="Text" Value="Text" />
 </SfListBox>
 
 @code {
@@ -34,9 +34,9 @@ In the following example, `Bugatti Chiron` is selected using [`SelectItems`](htt
       public string Id  { get; set; }
     }
     public string[] Value = new string[] { "Bugatti Chiron" };
-    private void created(object args)
+    private async Task created(object args)
     {
-        ListBoxObj.SelectItems(this.Value, true);
+        await ListBoxObj.SelectItems(this.Value, true);
     }
 }
 

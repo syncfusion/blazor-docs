@@ -1,6 +1,6 @@
 # Custom Resource Generator
 
-> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the Syncfusion Blazor library is integrated with the JavaScript Isolation feature of Blazor. So, the CRG online tool is no longer needed for your production environment and it is deprecated now. i.e. The Syncfusion Blazor library itself handles the Syncfusion interop scripts and it is no longer need to be added manually in the layout page (_Host.cshtml/index.html) for production. You can still use the [ThemeStudio](http://ej2.syncfusion.com/themestudio/) online web application to customize and generate the Syncfusion Blazor themes for a specific set of components.
+> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the Syncfusion Blazor library is integrated with the JavaScript Isolation feature of Blazor. So, the CRG online tool is no longer needed for your production environment and it is deprecated now. That is, the Syncfusion Blazor library itself handles the Syncfusion interop scripts and it is no longer needs to be added manually in the layout page (_Host.cshtml/index.html) for production. You can still use the [ThemeStudio](http://ej2.syncfusion.com/themestudio/) online web application to customize and generate the Syncfusion Blazor themes for a specific set of components.
 
 Syncfusion provides an option to generate a selective component's interop script and styles using the [`Custom Resource Generator`](https://blazor.syncfusion.com/crg) (CRG) web tool.
 
@@ -14,11 +14,11 @@ Refer to the following steps to search and select the components in CRG:
 
 1. Navigate to the Custom Resource Generator (CRG) application at [`CRG`](https://blazor.syncfusion.com/crg).
 
-2. Type the required component name in the search bar and select the checkbox. The dependency of the selected component is resolved in the application itself, so you do not need to choose each dependent component manually.
+2. Type the required component name in the search bar, and then select the checkbox. The dependency of the selected component is resolved in the application itself, so you do not need to choose each dependent component manually.
 
     ![Search and select Syncfusion Blazor UI components](images/search-non-injectable.png)
 
-3. Click the expand icon and select the required features for the specific set of components.
+3. Click the expand icon, and then select the required features for the specific set of components.
 
     ![Select feature-based script in the supported components](images/select-injectable-module.png)
 
@@ -40,7 +40,7 @@ Refer to the following steps to download the custom resources in CRG:
 
     ![Download option](images/download-option.png)
 
-2. Change the file name as needed, and click **GENERATE** button in the pop-up.
+2. Change the file name as needed, and then click **GENERATE** button in the pop-up.
 
     ![Export popup for generation custom resources](images/export-popup.png)
 
@@ -54,9 +54,9 @@ Refer to the following steps to download the custom resources in CRG:
 
 ## How to use custom resources in the Blazor application
 
-> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the below configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
+> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the following configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
 
-1. Copy/paste the downloaded custom resources in the Blazor application `~/wwwroot` folder.
+1. Copy or paste the downloaded custom resources in the Blazor application `~/wwwroot` folder.
 
 2. Set `DisableScriptManager` as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
 

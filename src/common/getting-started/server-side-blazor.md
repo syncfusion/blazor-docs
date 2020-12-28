@@ -2,7 +2,7 @@
 
 # Getting started with Syncfusion Blazor - Server App in Visual Studio 2019
 
-This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor Server application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step introduction to configure Syncfusion Blazor setup,and also to build and run a simple Blazor Server application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
 > **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
@@ -21,7 +21,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
     ![new project in aspnetcore blazor](images/new-project.png)
 
-2. Select **Blazor App** from the template and click the **Next** button.
+2. Select **Blazor App** from the template, and then click the **Next** button.
 
     ![blazor template](images/blazor-template.png)
 
@@ -33,17 +33,17 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
     ![select framework](images/blazor-select-template.png)
 
-5. Choose **Blazor Server App** from the dashboard and click the **Create** button to create a new Blazor Server application. 
+5. Choose **Blazor Server App** from the dashboard, and then click the **Create** button to create a new Blazor Server application. 
  
     ![select framework](images/blazor-server-template.png)
 
 ## Installing Syncfusion Blazor packages in the application
 
-You can use any one of the below standard to install the Syncfusion Blazor library in your application.
+You can use any one of the below standards to install the Syncfusion Blazor library in your application.
 
 ### Using Syncfusion Blazor individual NuGet Packages [New standard]
 
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) for the benefits of the individual NuGet packages.
+> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
 1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the new application using the `NuGet Package Manager`. Refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) section for the available NuGet packages.
      
@@ -65,13 +65,13 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
     </head>
     ```
 
-    > Warning: `Syncfusion.Blazor` package should not install along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+    > Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
 > Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
-1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
+1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and then select Manage NuGet Packages.
 
     ![nuget explorer](images/nuget-explorer.png)
 
@@ -127,6 +127,6 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
     <SfCalendar TValue="DateTime"></SfCalendar>
     ```
 
-4. Run the application, the Syncfusion Blazor Calendar component will render in the default web browser.
+4. Run the application. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
     ![output](images/browser-output.png)

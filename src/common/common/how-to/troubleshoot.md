@@ -138,6 +138,30 @@
 
 ## Browser console errors
 
+* **net::ERR_ABORTED 404 Error While Using Syncfusion Blazor Static CSS**
+
+    You may see the below exception in the web browser dev tool console.
+
+    > Error: GET ./_content/Syncfusion.Blazor/styles/bootstrap4.css net::ERR_ABORTED 404
+
+    **Cause:**
+
+    If you upgraded Syncfusion Blazor packages from previous versions to 18.4.0.* version or later, this issue occurred.
+
+    **Solution**
+
+    The Syncfusion Blazor library provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) from the 18.4.0.30 version. If you are using `individual NuGet Package` in your application, you have to modify the below static web assets (styles) reference from `Syncfusion.Blazor` to `Syncfusion.Blazor.Themes` in the application to resolve this issue.
+
+    ```html
+        <head>
+             ....
+             ....
+             <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        </head>
+    ```
+
+    > Note: Do not use both Syncfusion.Blazor and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
+
 * **An unhandled exception has occurred. See browser dev tools for details**
 
     You may see the below exception at the bottom of the page.

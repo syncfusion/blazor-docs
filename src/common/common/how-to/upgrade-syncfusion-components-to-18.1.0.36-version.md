@@ -83,7 +83,49 @@ In the previous version, the component names are prefixed with Ejs (example: Ejs
 
 ## Resource changes
 
-Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-interop.min.js` manually in the application, which is not required from 18.1.0.36 version. The script will be loaded from NuGet through static web assets for the components loaded on the page. We have also provided styles as static web assets to load in the application. Still, you can load the resource from CRG by disabling default script loading from static web assets by passing arguments to `AddSyncfusionBlazor` service in `~/Startup.cs` or `~/Program.cs`.
+Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-interop.min.js` manually in the application, which is not required from 18.1.0.36 version. The script will be loaded from NuGet through static web assets for the components loaded on the page. We have also provided styles as static web assets to load in the application.
+
+<!-- markdownlint-disable MD033 -->
+<table>
+<tr>
+<td>
+<b>Before v18.1.0.36</b>
+</td>
+<td>
+<b>From v18.1.0.36</b>
+</td>
+</tr>
+<tr>
+<td>
+
+```csharp
+<head>
+    ....
+    ....
+    <link href="https://cdn.syncfusion.com/ej2/17.4.55/material.css" rel="stylesheet" />
+    <script src="https://cdn.syncfusion.com/ej2/17.4.55/dist/ej2.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/17.4.55/dist/ejs.interop.min.js"></script>
+</head>
+
+```
+
+</td>
+<td>
+
+```csharp
+<head>
+    ....
+    ....
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+</head>
+
+```
+
+</td>
+</tr>
+</table>
+
+Still, you can load the resource from CRG by disabling default script loading from static web assets by passing arguments to `AddSyncfusionBlazor` service in `~/Startup.cs` or `~/Program.cs`.
 
 ## DataManager changes
 

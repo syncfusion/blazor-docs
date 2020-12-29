@@ -22,7 +22,7 @@ for y values of the series.
 ```razor
  <ChartPrimaryYAxis>
         <ChartStripLines>
-            <ChartStripLine Start="30" SizeType="SizeType.Pixel" Color="red"></ChartStripLine>
+            <ChartStripline Start="30" End="30.1" Color="red"></ChartStripline>
         </ChartStripLines>
   </ChartPrimaryYAxis>
 

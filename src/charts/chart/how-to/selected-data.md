@@ -8,11 +8,11 @@ description: "How to section explains knowledge base samples and howto access di
 
 # Chart selected data in grid
 
-By using the chart’s `OnDragComplete` event, you can get the current data.
+By using the chart’s `OnSelectionChanged` event, you can get the current data.
 
 ```razor
 
- <ChartEvents OnDragComplete="@ShowSelectedData"></ChartEvents>
+ <ChartEvents OnSelectionChanged="@ShowSelectedData"></ChartEvents>
 
   public void ShowSelectedData(IDragCompleteEventArgs Args)
     {

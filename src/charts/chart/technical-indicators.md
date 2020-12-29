@@ -117,11 +117,19 @@ by three lines (upperBand, lowerBand, signalLine). The upperBand and lowerBand v
 and [`OverSold`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartIndicator~OverSold.html)
 properties of indicator and the signalLine is calculated by RSI formula.
 
+{% aspTab template="chart/technical-indicators/rsi", sourceFiles="rsi.razor" %}
+
+{% endaspTab %}
+
 ## Simple Moving Average (SMA)
 
 Moving average Indicators are used to define the direction of the trend. To render a SMA Indicator,
 use indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartIndicator~Type.html) as
 `Sma`.
+
+{% aspTab template="chart/technical-indicators/sma", sourceFiles="sma.razor" %}
+
+{% endaspTab %}
 
 ## Stochastic
 

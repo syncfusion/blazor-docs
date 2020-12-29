@@ -10,31 +10,50 @@ description: "How to section explains knowledge base samples and howto access di
 
 # Add or remove a series from the chart dynamically
 
-You can add or remove the chart series dynamically by using the `AddSeries` or `RemoveSeries` method.
+You can add or remove the chart series dynamically by using the `<ChartSeries/>` Component.
 
 To add or remove the series dynamically, follow the given steps:
 
 **Step 1**:
 
-To add a new series to chart dynamically, pass the series value to the `AddSeries` method.
+ Initially render the series using Collection.
 
 ```razor
- public void AddChartSeries()
-    {
-        List<ChartSeries>seriesCollection = new List<ChartSeries>();
-        seriesCollection.Add(new ChartSeries { Name = nameof(MyDataModel.XValue), XName = nameof(MyDataModel.XValue), YName = nameof(MyDataModel.YValue), DataSource = this.GetData(), Fill = colors[rnd.Next(colors.Length - 1)], Animation = new ChartSeriesAnimation { Enable = false } });
-        Chartobj.AddSeries(seriesCollection);
-    }
-
+    <SfChart>
+        <ChartSeriesCollection>
+            @foreach (SeriesData series in SeriesCollection)
+            {
+                <ChartSeries XName=@series.XName YName=@series.YName DataSource=@series.Data>
+                </ChartSeries>
+            }
+        </ChartSeriesCollection>
+    </SfChart>
   ```
 
 **Step 2**:
-To remove the new series from chart dynamically, pass the series index to the `RemoveSeries` method.
+
+To add the new series from chart dynamically, using List `Add` method.
 
  ```razor
-    public void RemoveChartSeries()
+    void ChartSeriesAdd()
     {
-        Chartobj.RemoveSeries(Chartobj.Series.Count - 1);
+        SeriesCollection.Add(new SeriesData
+        {
+          XName = nameof(LineChartData.XValue),
+          YName = nameof(LineChartData.YValue),
+          Data = GetChartData()
+        });
+    }
+ ```
+
+**Step 3**:
+
+To remove the new series from chart dynamically, using List `Remove` method.
+
+ ```razor
+    void ChartSeriesRemove()
+    {
+      SeriesCollection.Remove(SeriesCollection[SeriesCollection.Count - 1]);
     }
  ```
 

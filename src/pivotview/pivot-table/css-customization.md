@@ -45,15 +45,15 @@ The visibility of row, column, value and filter axis in Field List and Grouping 
     }
 
     /* Hiding column axis in field list */
-    .e-pivotfieldlist-wrapper .e-field-list-columns {
+    .e-pivotfieldlist-container .e-field-list-columns {
         display: none;
     }
     /* Increasing value axis height to fill column axis portion */
-    .e-pivotfieldlist-wrapper .e-field-list-values {
+    .e-pivotfieldlist-container .e-field-list-values {
         margin-top: 0px !important;
         min-height: 338px !important;
     }
-    .e-pivotfieldlist-wrapper .e-values {
+    .e-pivotfieldlist-container .e-values {
         height: 310px !important;
     }
 
@@ -63,7 +63,7 @@ The visibility of row, column, value and filter axis in Field List and Grouping 
     // }
 
     /* Hiding row axis in field list */
-    // .e-pivotfieldlist-wrapper .e-field-list-rows {
+    // .e-pivotfieldlist-container .e-field-list-rows {
     //     display: none;
     // }
 
@@ -73,7 +73,7 @@ The visibility of row, column, value and filter axis in Field List and Grouping 
     // }
 
     /* Hiding value axis in field list */
-    // .e-pivotfieldlist-wrapper .e-field-list-values {
+    // .e-pivotfieldlist-container .e-field-list-values {
     //     display: none;
     // }
 
@@ -83,7 +83,7 @@ The visibility of row, column, value and filter axis in Field List and Grouping 
     // }
 
     /* Hiding filter axis in field list */
-    //.e-pivotfieldlist-wrapper .e-field-list-filters {
+    //.e-pivotfieldlist-container .e-field-list-filters {
     //    display: none;
     //}
 
@@ -133,24 +133,24 @@ The alignment of text inside row headers, column headers, value cells and summar
 
 <style>
 
-    //Value Cells
+    /*Value Cells*/
     .e-pivotview .e-valuescontent {
-         text-align: center !important;
+        text-align: center !important;
     }
 
-    //Columns Headers
+    /*Columns Headers*/
     /*.e-pivotview .e-columnsheader {
-         text-align: center !important;
-    }
-
-    //Rows Headers
-    .e-pivotview .e-rowsheader {
-         text-align: center !important;
+        text-align: center !important;
     }*/
 
-    //Summary Cells
-    /* .e-pivotview .e-summary {
-         text-align: center !important;
+    /*Rows Headers*/
+    /*.e-pivotview .e-rowsheader {
+        text-align: center !important;
+    }*/
+
+    /*Summary Cells*/
+    /*.e-pivotview .e-summary {
+        text-align: center !important;
     }*/
 
 </style>

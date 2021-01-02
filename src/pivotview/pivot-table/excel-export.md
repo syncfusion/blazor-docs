@@ -92,14 +92,15 @@ The Excel export provides an option to change colors for headers, caption and re
        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 
-    public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args) {
-        ExcelExportProperties excelExportProperties = new ExcelExportProperties()
+    public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        Syncfusion.Blazor.Grids.ExcelExportProperties excelExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties()
         {
-            Theme = new ExcelTheme()
+            Theme = new Syncfusion.Blazor.Grids.ExcelTheme()
             {
-                Header = new ExcelStyle() { FontName = "Segoe UI", FontColor = "#0fb5fc", FontSize = 15, Bold = true },
-                Record = new ExcelStyle() { FontName = "Segoe UI", FontColor = "#000000" },
-                Caption = new ExcelStyle() { FontName = "Segoe UI", FontColor = "#000000" }
+                Header = new Syncfusion.Blazor.Grids.ExcelStyle() { FontName = "Segoe UI", FontColor = "#0fb5fc", FontSize = 15, Bold = true },
+                Record = new Syncfusion.Blazor.Grids.ExcelStyle() { FontName = "Segoe UI", FontColor = "#000000" },
+                Caption = new Syncfusion.Blazor.Grids.ExcelStyle() { FontName = "Segoe UI", FontColor = "#000000" }
             }
         };
         this.pivot.ExcelExport(excelExportProperties);
@@ -149,7 +150,7 @@ The Excel export provides an option to change file name of the document before e
     }
 
     public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args) {
-        ExcelExportProperties excelExportProperties = new ExcelExportProperties()
+        Syncfusion.Blazor.Grids.ExcelExportProperties excelExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties()
         {
             FileName = "sample.xlsx"
         };

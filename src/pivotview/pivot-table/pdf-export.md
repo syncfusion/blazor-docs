@@ -93,7 +93,7 @@ The PDF export provides an option to change colors for headers, caption and reco
     }
     public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
-        PdfExportProperties pdfExportProperties = new PdfExportProperties()
+        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties()
         {
             Theme = new Syncfusion.Blazor.Grids.PdfTheme()
             {
@@ -165,7 +165,7 @@ The PDF export provides an option to change file name of the document before exp
     }
     public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
-        PdfExportProperties pdfExportProperties = new PdfExportProperties() { FileName = "sample.pdf" };
+        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() { FileName = "sample.pdf" };
         this.pivot.PdfExport(pdfExportProperties);
     }
 }
@@ -215,7 +215,7 @@ Arche, Flsa, HalfLetter, Letter11x17, Ledger.
     }
     public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
-        PdfExportProperties pdfExportProperties = new PdfExportProperties() {  PageSize = PdfPageSize.A3 };
+        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() {  PageSize = Syncfusion.Blazor.Grids.PdfPageSize.A3 };
         this.pivot.PdfExport(pdfExportProperties);
     }
 }
@@ -262,7 +262,7 @@ The PDF export provides an option to change page orientation of the document bef
     }
     public void OnPdfExport()
     {
-        PdfExportProperties pdfExportProperties = new PdfExportProperties() { PageOrientation = PageOrientation.Landscape };
+        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() { PageOrientation = Syncfusion.Blazor.Grids.PageOrientation.PageOrientation.Landscape };
         this.pivot.PdfExport(pdfExportProperties);
     }
 }

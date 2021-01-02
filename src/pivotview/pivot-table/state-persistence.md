@@ -14,7 +14,7 @@ State persistence allows user to maintain the current state of the component alo
     @using Syncfusion.Blazor.PivotView
 
 
-    <SfPivotView ID="pivot" TValue="ProductDetails" @ref="pivot" EnablePersistence="true">
+    <SfPivotView ID="pivot" TValue="ProductDetails" EnablePersistence="true">
         <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>
@@ -26,7 +26,7 @@ State persistence allows user to maintain the current state of the component alo
             </PivotViewRows>
             <PivotViewValues>
                 <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="@caption"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
             </PivotViewValues>
             <PivotViewFormatSettings>
                 <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>

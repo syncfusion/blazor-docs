@@ -1012,7 +1012,7 @@ The following example demonstrates the pivot table in **Deutsch** culture. Here 
         }
         [Inject]
         protected IJSRuntime JsRuntime { get; set; }
-        protected override void OnAfterRender()
+        protected override void OnAfterRender(bool firstRender)
         {
             this.JsRuntime.Sf().LoadLocaleData("wwwroot/ej2-locale/src/de.json").SetCulture("de");
         }
@@ -1061,7 +1061,7 @@ Internationalization library is used to globalize number, date, and time values 
         }
         [Inject]
         protected IJSRuntime JsRuntime { get; set; }
-        protected override void OnAfterRender()
+        protected override void OnAfterRender(bool firstRender)
         {
             if (firstRender)
             {
@@ -1115,7 +1115,7 @@ Right-to-left (RTL) provides an option to switch the text direction and layout o
         }
         [Inject]
         protected IJSRuntime JsRuntime { get; set; }
-        protected override void OnAfterRender()
+        protected override void OnAfterRender(bool firstRender)
         {
             this.JsRuntime.Sf().EnableRtl(true);
         }

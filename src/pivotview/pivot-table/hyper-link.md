@@ -26,7 +26,7 @@ The pivot table supports to show hyperlink option to link data for individual ce
 The pivot table has an option to show hyperlink option for all cells that are currently in display. To do so, user need to set [`ShowHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowHyperlink) to **true**.
 
 ```csharp
-    @using Syncfusion.Blazor.PivotViews
+    @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="ProductDetails" ShowFieldList="true">
         <PivotViewDataSourceSettings DataSource="@data">
@@ -52,6 +52,7 @@ The pivot table has an option to show hyperlink option for all cells that are cu
 <style>
     .e-custom-class,.e-custom-class:hover {
         text-decoration: underline !important;
+        color: blue !important;
     }
     .e-custom-class:hover {
         color: red !important;
@@ -100,6 +101,7 @@ The pivot table has an option to show hyperlink option for row header cells alon
 <style>
     .e-custom-class,.e-custom-class:hover {
         text-decoration: underline !important;
+        color: blue !important;
     }
     .e-custom-class:hover {
         color: red !important;
@@ -148,6 +150,7 @@ The pivot table has an option to show hyperlink option for column header cells a
 <style>
     .e-custom-class,.e-custom-class:hover {
         text-decoration: underline !important;
+        color: blue !important;
     }
     .e-custom-class:hover {
         color: red !important;
@@ -196,6 +199,7 @@ The pivot table has an option to show hyperlink option for value cells alone tha
 <style>
     .e-custom-class,.e-custom-class:hover {
         text-decoration: underline !important;
+        color: blue !important;
     }
     .e-custom-class:hover {
         color: red !important;
@@ -244,6 +248,7 @@ The pivot table has an option to show hyperlink option for summary cells alone t
 <style>
     .e-custom-class,.e-custom-class:hover {
         text-decoration: underline !important;
+        color: blue !important;
     }
     .e-custom-class:hover {
         color: red !important;
@@ -301,6 +306,7 @@ The pivot table has an option to show hyperlink in the cells based on specific c
 <style>
     .e-custom-class,.e-custom-class:hover {
         text-decoration: underline !important;
+        color: blue !important;
     }
     .e-custom-class:hover {
         color: red !important;
@@ -348,6 +354,7 @@ The pivot table has an option to show hyperlink in the cells based on specific r
 <style>
    .e-custom-class,.e-custom-class:hover {
         text-decoration: underline !important;
+        color: blue !important;
     }
     .e-custom-class:hover {
         color: red !important;
@@ -373,7 +380,7 @@ The event [`HyperlinkCellClicked`](https://help.syncfusion.com/cr/blazor/Syncfus
 It has following parameters - [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel) and [`CurrentCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_CurrentCell). The parameter [`CurrentCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_CurrentCell) is used to customize the host cell element by any means. Meanwhile, when the parameter [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel) is set to **true**, applied customization will not be updated to the host cell element.
 
 ```csharp
-    @using Syncfusion.Blazor.PivotViews
+    @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="ProductDetails" ShowFieldList="true">
         <PivotViewDataSourceSettings DataSource="@data">
@@ -397,6 +404,7 @@ It has following parameters - [`Cancel`](https://help.syncfusion.com/cr/blazor/S
 <style>
     .e-custom-class,.e-custom-class:hover {
         text-decoration: underline !important;
+        color: blue !important;
     }
     .e-custom-class:hover {
         color: red !important;
@@ -411,7 +419,6 @@ It has following parameters - [`Cancel`](https://help.syncfusion.com/cr/blazor/S
         }
         public void hyperlink(HyperCellClickEventArgs args)
         {
-            args.Cancel = false;
             args.CurrentCell.SetAttribute("data-url", "https://syncfusion.com/");//here we have redirected to Syncfusion on hyperlinkcell click
         }
     }

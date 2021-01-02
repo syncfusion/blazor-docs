@@ -12,7 +12,7 @@ To know more about this event, refer [here](./grouping-bar/#aggregatemenuopen).
 
 ## BeforeExport
 
-To know more about this event, refer [here](./tool-bar/#beforereport).
+To know more about this event, refer [here](./tool-bar/#beforeexport).
 
 ## BeginDrillThrough
 
@@ -198,8 +198,10 @@ The event [`ConditionalFormatting`](https://help.syncfusion.com/cr/blazor/Syncfu
 ```csharp
 
     @using Syncfusion.Blazor.PivotView
+    @using Syncfusion.Blazor.Buttons
 
-    <SfPivotView TValue="ProductDetails" AllowConditionalFormatting="true">
+    <SfButton CssClass="apply-button" IsPrimary="true" OnClick="@OnClick">Apply Format</SfButton>
+    <SfPivotView TValue="ProductDetails" @ref="@Pivot" AllowConditionalFormatting="true">
         <PivotViewDataSourceSettings DataSource="@data">
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>
@@ -223,6 +225,11 @@ The event [`ConditionalFormatting`](https://help.syncfusion.com/cr/blazor/Syncfu
         {
             this.data = ProductDetails.GetProductData().ToList();
            //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        }
+        SfPivotView<ProductDetails> Pivot;
+        public async Task OnClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+        {
+            await this.Pivot.ShowConditionalFormattingDialog();
         }
         private void conditionalFormat(ConditionalFormatSettings args)
         {
@@ -271,9 +278,7 @@ The event [`Drill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pivo
         }
         private void drill(DrillArgs<ProductDetails> args)
         {
-            //args.DrillInfo --> in this user can get which field is drilled
-            args.DrillInfo.Delimiter = "##";
-            args.DrillInfo.Action = "up";
+            //args.DrillInfo --> Here you can get drilled cell information.
         }
     }
 
@@ -287,7 +292,7 @@ The event [`DrillThrough`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
     @using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" AllowConditionalFormatting="true">
+    <SfPivotView TValue="ProductDetails" AllowConditionalFormatting="true" AllowDrillThrough="true">
         <PivotViewDataSourceSettings DataSource="@data">
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>
@@ -314,7 +319,7 @@ The event [`DrillThrough`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
         }
         private void drillThrough(DrillThroughEventArgs args)
         {
-            //args.CurrentCell --> in this user can get on which cell drillthrough is performed
+            //args --> Here you can get the information of the clicked cell.
         }
     }
 
@@ -361,7 +366,7 @@ This event will be triggered before engine framing works gets initiated and allo
         }
         private void enginePopulating(EnginePopulatingEventArgs args)
         {
-            //args.DataSourceSettings --> user can modify datasource settings before engine populates
+            //args.DataSourceSettings --> User can modify the report before engine populates.
         }
     }
 
@@ -377,7 +382,7 @@ To know more about this event, refer [here](./tool-bar/#fetchreport).
 
 ## FieldListRefreshed
 
-To know more about this event, refer [here](./field-list/#field).
+To know more about this event, refer [here](./field-list/#fieldlistrefreshed).
 
 ## FieldDragStart
 
@@ -479,6 +484,7 @@ The event [`ToolbarRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
             ToolbarItems.ConditionalFormatting,
             ToolbarItems.FieldList
         };
+        SfPivotView<ProductDetails> pivot;
         public List<ProductDetails> data { get; set; }
         protected override void OnInitialized()
         {
@@ -487,7 +493,7 @@ The event [`ToolbarRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         }
          public void toolbarRender(ToolbarArgs args)
         {
-            //args.CustomToolbar -> user can add or remove toolbar items
+            //args.CustomToolbar -> Can add or remove toolbar items.
         }
         public List<string> report = new List<string>();
         public List<string> reportName = new List<string>();
@@ -532,7 +538,7 @@ The event [`ToolbarRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
             this.pivot.LoadPersistData(this.report[j]);
         }
         //to delete a report
-        public void removereport(RemoveReportArgs args)
+        public void removeReport(RemoveReportArgs args)
         {
             var i = 0;
             for( i=0;i<this.reportName.Count; i++)
@@ -545,7 +551,7 @@ The event [`ToolbarRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
             }
         }
         // to rename a report
-        public void renamereport(RenameReportArgs args)
+        public void renameReport(RenameReportArgs args)
         {
             var i = 0;
             for( i=0;i<=(this.reportName.Count - 1); i++)

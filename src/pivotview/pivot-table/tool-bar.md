@@ -258,7 +258,7 @@ For example, you can add the header and footer for the pdf document by setting t
     @using Syncfusion.Blazor.PivotView
     @using Syncfusion.Blazor.Grids
 
-    <SfPivotView @ref="pivot" TValue="ProductDetails" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowNumberFormatting="true" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true" Height="300" Width="800">
+    <SfPivotView @ref="pivot" TValue="ProductDetails" EnableVirtualization="true" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowNumberFormatting="true" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true" Height="300" Width="800">
         <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
             <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals="true" ShowSubTotals="true">
                 <PivotViewColumns>
@@ -306,6 +306,10 @@ For example, you can add the header and footer for the pdf document by setting t
             this.data = ProductDetails.GetProductData().ToList();
            //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
         }
+        public List<PdfHeaderFooterContent> HeaderContent = new List<PdfHeaderFooterContent>
+        {
+            new PdfHeaderFooterContent() { Type = ContentType.Line, Points = new PdfPoints() { X1 = 0, Y1 = 4, X2 = 685, Y2 = 4 }, Style = new PdfContentStyle() { PenColor = "#000080", DashStyle = PdfDashStyle.Solid }}
+        };
         public void beforeExport(BeforeExportEventArgs args) {
             PdfExportProperties ExportProperties = new PdfExportProperties();
             PdfHeader Header = new PdfHeader()

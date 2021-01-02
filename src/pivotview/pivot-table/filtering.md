@@ -644,7 +644,6 @@ In the below sample, the member editor of field "Country" shows only the selecte
             <PivotViewValues>
                 <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
                 <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-                <PivotViewValue Name="Total" Caption="Total Amount"></PivotViewValue>
             </PivotViewValues>
             <PivotViewFormatSettings>
                 <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>

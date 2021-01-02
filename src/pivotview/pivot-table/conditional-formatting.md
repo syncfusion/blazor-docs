@@ -82,7 +82,7 @@ Meanwhile, user can also view conditional formatting dialog in UI by invoking [`
 
     <SfButton OnClick="@OnCondFormatting" IsPrimary="true">Conditional Formatting</SfButton>
 
-    <SfPivotView TValue="ProductDetails" AllowConditionalFormatting="true">
+    <SfPivotView TValue="ProductDetails" @ref="pivot" AllowConditionalFormatting="true">
         <PivotViewDataSourceSettings DataSource="@data">
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>

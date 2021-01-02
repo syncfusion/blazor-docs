@@ -338,7 +338,7 @@ The event [`FieldListRefreshed`](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ```csharp
     <SfPivotView TValue="ProductDetails" ID="pivotview"  @ref="pivotView" Height="530">
-        <PivotViewEvents TValue="ProductDetails" EnginePopulated="pivotenginepopulated"></PivotViewEvents>
+        <PivotViewEvents TValue="ProductDetails" FieldListRefreshed="fieldlistrefresh" EnginePopulated="pivotenginepopulated"></PivotViewEvents>
     </SfPivotView>
     <SfPivotFieldList TValue="ProductDetails" ID="fieldlist" @ref="fieldList" RenderMode="Mode.Fixed" >
         <PivotFieldListDataSourceSettings DataSource="@data" EnableSorting=true>
@@ -389,7 +389,7 @@ The event [`FieldListRefreshed`](https://help.syncfusion.com/cr/blazor/Syncfusio
         }
         private void fieldlistrefresh(FieldListRefreshedEventArgs args)
         {
-            //args.DataSourceSettings -> user can view updated datasource settings
+            //args -> Can get the report and engine.
         }
     }
 

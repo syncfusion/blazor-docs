@@ -22,10 +22,10 @@ When height and width of the Kanban are set to `auto`, it will try as hard as po
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks" Width="auto" Height="auto">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="@(new List<string>() {"Testing"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
@@ -88,10 +88,10 @@ The Kanban height and width will be rendered exactly as per the given pixel valu
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks" Width="650px" Height="550px">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="@(new List<string>() {"Testing"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
@@ -154,10 +154,10 @@ When height and width of the Kanban are given in percentage, it will make the Ka
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks" Width="100%" Height="100%">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="@(new List<string>() {"Testing"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
@@ -173,7 +173,7 @@ When height and width of the Kanban are given in percentage, it will make the Ka
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-{
+    {
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling" },

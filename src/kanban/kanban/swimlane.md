@@ -18,10 +18,10 @@ Cards can be grouped based on `KeyField` and displayed in rows, which are separa
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="@(new List<string>() {"Testing"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
     <KanbanSwimlaneSettings KeyField="Assignee"></KanbanSwimlaneSettings>
@@ -88,10 +88,10 @@ Customize the swimlane row header text by using the `TextField` property mapped 
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="@(new List<string>() {"Testing"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
     <KanbanSwimlaneSettings KeyField="Assignee" TextField="AssigneeName"></KanbanSwimlaneSettings>
@@ -152,18 +152,18 @@ You can customize the Kanban swimlane row by using `Template`, which is specifie
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="@(new List<string>() {"Testing"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
     <KanbanSwimlaneSettings KeyField="Assignee" TextField="AssigneeName">
         <Template>
             @{
-                KanbanSwimlaneSettings swimlane = (KanbanSwimlaneSettings)context;
+                SwimlaneSettingsModel swimlane = (SwimlaneSettingsModel)context;
                 <div class='swimlane-template e-swimlane-template-table'>
-                    <img src="./images/kanban/@(swimlane.KeyField).png" alt="" />
+                    <img src="https://ej2.syncfusion.com/demos/src/kanban/images/@(swimlane.KeyField).png" alt="" />
                     <span>@swimlane.TextField</span>
                 </div>
             }
@@ -178,16 +178,16 @@ You can customize the Kanban swimlane row by using `Template`, which is specifie
         font-weight: 500;
     }
 
-        .swimlane-template img {
-            height: 24px;
-            width: 24px;
-            border-radius: 50%;
-        }
+    .swimlane-template img {
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+    }
 
-        .swimlane-template span {
-            padding-left: 5px;
-            vertical-align: middle;
-        }
+    .swimlane-template span {
+        padding-left: 5px;
+        vertical-align: middle;
+    }
 
     .e-kanban .e-kanban-content .e-content-row.e-swimlane-row .e-content-cells .e-swimlane-header .e-item-count {
         padding: 4px;
@@ -206,7 +206,7 @@ You can customize the Kanban swimlane row by using `Template`, which is specifie
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-    {
+{
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio", AssigneeName = "Nancy" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller", AssigneeName = "Andrew" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling", AssigneeName = "Janet" },
@@ -245,7 +245,7 @@ Output be like the below.
 
 ## Sorting
 
-Swimlane rows are rendered on descending order when using the `SortBy` property set to `Descending` order. By default, swimlane rows are rendered by **Ascending** order.
+Swimlane rows are rendered on descending order when using the `SortDirection` property set to `Descending` order. By default, swimlane rows are rendered by **Ascending** order.
 
 ```csharp
 
@@ -253,10 +253,10 @@ Swimlane rows are rendered on descending order when using the `SortBy` property 
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="@(new List<string>() {"Testing"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
     <KanbanSwimlaneSettings KeyField="Assignee" SortDirection="SortDirection.Descending"></KanbanSwimlaneSettings>
@@ -273,7 +273,7 @@ Swimlane rows are rendered on descending order when using the `SortBy` property 
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-{
+    {
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling" },
@@ -320,10 +320,10 @@ By default, The Kanban does not allow dragging the cards across the swimlane row
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="@(new List<string>() {"Testing"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
     <KanbanSwimlaneSettings KeyField="Assignee" AllowDragAndDrop="true"></KanbanSwimlaneSettings>
@@ -340,7 +340,7 @@ By default, The Kanban does not allow dragging the cards across the swimlane row
     }
 
     public List<TasksModel> Tasks = new List<TasksModel>()
-{
+    {
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller" },
         new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "Open", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling" },
@@ -387,10 +387,10 @@ In below demo, disabled on `ShowItemCount` property on rendering swimlane row wi
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress"></KanbanColumn>
-        <KanbanColumn HeaderText="Testing" KeyField="Testing"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Testing" KeyField="@(new List<string>() {"Testing"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
     <KanbanSwimlaneSettings KeyField="Assignee" ShowItemCount="false"></KanbanSwimlaneSettings>

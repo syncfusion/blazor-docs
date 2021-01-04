@@ -39,6 +39,6 @@ Select particular cards in the Kanban board by tapping the card.
 
 ### Single Selection
 
-Single card will be selected when you tap the card once and selection will be removed when you select another card.
+Single card will be selected when you tap the card once and the selection will be removed when you select another card.
 
 ![kanban](./images/single-selection.PNG)

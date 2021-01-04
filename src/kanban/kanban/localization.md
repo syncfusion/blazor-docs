@@ -38,9 +38,9 @@ The following example demonstrates the Kanban in `Deutsch` culture.
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks" Locale="de">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open" ShowItemCount="true" MinCount="6"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress" ShowItemCount="true" MaxCount="3"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close" ShowItemCount="true"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})" ShowItemCount="true" MinCount="6"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})" ShowItemCount="true" MaxCount="3"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})" ShowItemCount="true"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
     <KanbanSwimlaneSettings KeyField="Assignee"></KanbanSwimlaneSettings>
@@ -104,9 +104,9 @@ The Kanban provides an option to switch its text direction and layout from right
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks" Locale="ar" EnableRtl="true">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="Open" ShowItemCount="true" MinCount="6"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="InProgress" ShowItemCount="true" MaxCount="3"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="Close" ShowItemCount="true"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})" ShowItemCount="true" MinCount="6"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})" ShowItemCount="true" MaxCount="3"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})" ShowItemCount="true"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
     <KanbanSwimlaneSettings KeyField="Assignee"></KanbanSwimlaneSettings>

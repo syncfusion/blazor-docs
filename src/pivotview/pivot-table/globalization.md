@@ -35,79 +35,7 @@ namespace BlazorApplication
 
 Localization library allows you to localize default text content of the pivot table. The pivot table component has static text of some features (like drop and drop region, pivot field list, etc...) that can be changed to other cultures (Arabic, Deutsch, French, etc...).The static local texts in the pivot table component can be changed to other culture by referring the Resource file. You can refer more details about localization [here](https://blazor.syncfusion.com/documentation/common/localization/).
 
-### Blazor Server Side
-
-In the following example, we have demonstrate how to enable **Localization** for pivot table in server side Blazor sample. Here, we have used Resource file to translate the static text of the pivot table.
-
 The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
-
-* Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
-
-```csharp
-using Syncfusion.Blazor;
-using System.Globalization;
-using Microsoft.AspNetCore.Localization;
-
-namespace BlazorApplication
-{
-    public class Startup
-    {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
-        {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.Configure<RequestLocalizationOptions>(options =>
-            {
-                // define the list of cultures your app will support
-                var supportedCultures = new List<CultureInfo>()
-                {
-                    new CultureInfo("de")
-                };
-                // set the default culture
-                options.DefaultRequestCulture = new RequestCulture("de");
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<IRequestCultureProvider>() {
-                 new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
-                };
-            });
-            services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
-        }
-    }
-}
-```
-
-> Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
-
-* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
-
-```csharp
-using Syncfusion.Blazor;
-
-namespace BlazorApplication
-{
-     public class SampleLocalizer : ISyncfusionStringLocalizer
-    {
-
-        public string Get(string key)
-        {
-            return this.Manager.GetString(key);
-        }
-
-        public System.Resources.ResourceManager Manager
-        {
-            get
-            {
-                return BlazorApplication.Resources.SyncfusionBlazorLocale.ResourceManager;
-            }
-        }
-    }
-}
-```
 
 * Add **.resx** file to [`Resource`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
 
@@ -368,169 +296,85 @@ PivotView_Radar | Radar
 PivotView_CalculatedField_ClearTooltipMessage | Bearbeiten Sie die bearbeiteten Feldinformationen
 PivotView_CalculatedField_EditTooltipMessage | Berechnetes Feld bearbeiten
 
-The following are the list of properties and its values used in the field list.
-
-Name |Value (in Deutsch culture)
-----|-----
-PivotFieldList_PercentageOfDifferenceFrom |% des Unterschieds von
-PivotFieldList_Add | hinzufügen
-PivotFieldList_AddFieldMessage | Feld hier hinzufügen
-PivotFieldList_After | Nach
-PivotFieldList_AfterOrEqualTo | Nach oder gleich
-PivotFieldList_Alert | warnen
-PivotFieldList_All | Alle
-PivotFieldList_AllFields | alle Felder
-PivotFieldList_And | und
-PivotFieldList_Apply | ANWENDEN
-PivotFieldList_Avg | Durchschn
-PivotFieldList_BaseField | Basisfeld
-PivotFieldList_BaseItem | Basisgegenstand
-PivotFieldList_Before | Vor
-PivotFieldList_BeforeOrEqualTo | Vorher oder gleich
-PivotFieldList_BeginWith | Beginnt mit
-PivotFieldList_Between | Zwischen
-PivotFieldList_Blank | (Leer)
-PivotFieldList_By | durch
-PivotFieldList_CalculatedField | Berechnetes Feld
-PivotFieldList_CalculatedField_ConfirmMessage | In diesem Namen ist bereits ein Berechnungsfeld vorhanden. Möchten Sie es ersetzen?
-PivotFieldList_CalculatedField_DragDropMessage | Ziehen Sie Felder in die Formel und legen Sie sie dort ab
-PivotFieldList_CalculatedField_DragMessage | Ziehen Sie das Feld in die Formel
-PivotFieldList_CalculatedField_DropMessage | Das berechnete Feld kann nur in der Werteachse in einem anderen Bereich platziert werden.
-PivotFieldList_CalculatedField_ExampleWatermark | Beispiel: ('Sum(Order_Count)' + 'Sum(In_Stock)'') * 250
-PivotFieldList_CalculatedField_ExistMessage | In diesem Namen ist bereits ein Feld vorhanden. Bitte geben Sie einen anderen Namen ein.
-PivotFieldList_CalculatedField_MobileWatermark | Fügen Sie hier Felder hinzu und bearbeiten Sie die Formel.
-PivotFieldList_CalculatedField_NameWatermark | Geben Sie den Feldnamen ein
-PivotFieldList_CalculatedField_OLAPExampleWatermark | Beispiel: [Measures].[Order Quantity] + ([Measures].[Order Quantity] * 0.10)
-PivotFieldList_CalculatedField_Tooltip | Ziehen Sie Felder per Drag &amp; Drop, um einen Ausdruck zu erstellen. Und wenn Sie die vorhandenen die berechneten Felder bearbeiten möchten! Sie können dies erreichen, indem Sie einfach das Feld unter 'Berechnete Mitglieder' auswählen.
-PivotFieldList_Cancel | Stornieren
-PivotFieldList_ChooseFieldMessage | Feld auswählen
-PivotFieldList_Clear | klar
-PivotFieldList_ClearFilter | klar
-PivotFieldList_Close | Schließen
-PivotFieldList_ColumnAxisWatermark | Spalte hier ablegen
-PivotFieldList_Columns | Säulen
-PivotFieldList_Contains | Enthält
-PivotFieldList_Copy | Kopieren
-PivotFieldList_Count | Anzahl
-PivotFieldList_CreateCalculatedField | Berechnetes Feld erstellen
-PivotFieldList_Currency | Währung
-PivotFieldList_Custom | Benutzerdefiniert
-PivotFieldList_CustomFormat | Geben Sie eine benutzerdefinierte Formatzeichenfolge ein
-PivotFieldList_Date | Datum
-PivotFieldList_DateTextMessage | Zeigen Sie die Elemente an, für die das Datum gilt
-PivotFieldList_Days | Tage
-PivotFieldList_DeferLayoutUpdate | Layoutaktualisierung verschieben
-PivotFieldList_Delete | Löschen
-PivotFieldList_DifferenceFrom | Unterschied von
-PivotFieldList_Dimension | Abmessungen
-PivotFieldList_DistinctCount | Deutliche Anzahl
-PivotFieldList_DoesNotBeginWith | Beginnt nicht mit
-PivotFieldList_DoesNotContains | Beinhaltet nicht
-PivotFieldList_DoesNotEndsWith | Endet nicht mit
-PivotFieldList_DoesNotEquals | Ist nicht gleich
-PivotFieldList_Drag | Ziehen
-PivotFieldList_DragFieldsMessage | Ziehen Sie Felder zwischen den folgenden Achsen:
-PivotFieldList_Edit | Bearbeiten
-PivotFieldList_EndsWith | Endet mit
-PivotFieldList_EnterDate | Datum eingeben
-PivotFieldList_EnterValue | Wert eingeben
-PivotFieldList_Equals | Gleich
-PivotFieldList_Error | Fehler
-PivotFieldList_Example | z.B:
-PivotFieldList_Expression | Ausdruck
-PivotFieldList_FieldCaption | Feldbeschriftung
-PivotFieldList_FieldCaptionMessage | Feldbeschriftung
-PivotFieldList_FieldDropErrorMessage | Das Feld, das Sie verschieben, kann nicht in diesem Bereich des Berichts platziert werden
-PivotFieldList_FieldList | Feldliste
-PivotFieldList_FieldName | Feldname
-PivotFieldList_FieldNameMessage | Feldname :
-PivotFieldList_FieldType | Feldtyp
-PivotFieldList_Filter | Filter
-PivotFieldList_FilterAxisWatermark | Filter hier ablegen
-PivotFieldList_Filtered | Gefiltert
-PivotFieldList_Filters | Filter
-PivotFieldList_FormatString | Zeichenfolge formatieren
-PivotFieldList_Formula | Formel
-PivotFieldList_GreaterThan | Größer als
-PivotFieldList_GreaterThanOrEqualTo | Größer als oder gleich wie
-PivotFieldList_Group | Gruppe
-PivotFieldList_Hours | Std
-PivotFieldList_Index | Index
-PivotFieldList_InvalidFormula | Ungültige Formel.
-PivotFieldList_Label | Etikette
-PivotFieldList_LabelTextMessage | Zeigen Sie die Elemente an, für die das Etikett
-PivotFieldList_LessThan | Weniger als
-PivotFieldList_LessThanOrEqualTo | Gleich oder kleiner als
-PivotFieldList_Max | Max
-PivotFieldList_Measure | Messen
-PivotFieldList_Member | Mitglied
-PivotFieldList_MemberLimitMessage | weitere Artikel. Suche, um weiter zu verfeinern.
-PivotFieldList_Min | Mindest
-PivotFieldList_Minutes | Protokoll
-PivotFieldList_Months | Monate
-PivotFieldList_MoreOption | Mehr...
-PivotFieldList_MultipleItems | Mehrere Elemente
-PivotFieldList_NoMatchesMessage | Keine Treffer
-PivotFieldList_NotBetween | Nicht zwischen
-PivotFieldList_Null | Null
-PivotFieldList_OK | okay
-PivotFieldList_OutOfRange | Außer Reichweite
-PivotFieldList_ParentHierarchy | Übergeordnete Hierarchie
-PivotFieldList_Percent | Prozent
-PivotFieldList_PercentageOfColumnTotal | % der Spalte insgesamt
-PivotFieldList_PercentageOfGrandTotal | % der Gesamtsumme
-PivotFieldList_PercentageOfParentColumnTotal | % der übergeordneten Spalte insgesamt
-PivotFieldList_PercentageOfParentRowTotal | % der Gesamtzahl der übergeordneten Zeilen
-PivotFieldList_PercentageOfParentTotal | % der Elternsumme
-PivotFieldList_PercentageOfRowTotal | % der Zeilensumme
-PivotFieldList_PopulationStDev | Population StDev
-PivotFieldList_PopulationVar | Bevölkerung Var
-PivotFieldList_Product | Produkt
-PivotFieldList_Quarters | Viertel
-PivotFieldList_QuarterYear | Vierteljahr
-PivotFieldList_Remove | Entfernen
-PivotFieldList_RowAxisWatermark | Hier eine Zeile ablegen
-PivotFieldList_Rows | Reihen
-PivotFieldList_RunningTotals | Laufende Summen
-PivotFieldList_SampleStDev | Beispiel StDev
-PivotFieldList_SampleVar | Stichprobenvarianz
-PivotFieldList_Search | Suche
-PivotFieldList_Seconds | Sekunden
-PivotFieldList_Sort | Sortieren
-PivotFieldList_Standard | Standard
-PivotFieldList_StaticFieldList | Pivot-Feldliste
-PivotFieldList_Sum | Summe
-PivotFieldList_Summaries | Werte zusammenfassen mit
-PivotFieldList_SummarizeValuesBy | Werte zusammenfassen mit
-PivotFieldList_Undefined | nicht definiert
-PivotFieldList_Value | Wert
-PivotFieldList_ValueAxisWatermark | Wert hier ablegen
-PivotFieldList_ValueFieldSettings | Wertefeldeinstellungen
-PivotFieldList_Values | Werte
-PivotFieldList_ValueTextMessage | Zeigen Sie die Elemente an, für die
-PivotFieldList_Warning | Warnung
-PivotFieldList_Years | Jahre
-PivotFieldList_CalculatedField_RemoveMessage | Möchten Sie dieses berechnete Feld wirklich löschen?
-PivotFieldList_Yes | Ja
-PivotFieldList_No | Nein
-PivotFieldList_Of | von
-PivotFieldList_NumberFormat_ExampleWatermark | Beispiel: C, P, 0000 %, ###0.##0#, etc.
-PivotFieldList_SortNone_TooltipMessage | Datenreihenfolge sortieren
-PivotFieldList_SortAscending_TooltipMessage | Aufsteigende Reihenfolge sortieren
-PivotFieldList_SortDescending_TooltipMessage | Absteigende Reihenfolge sortieren
-PivotFieldList_CalculatedField_EditTooltipMessage | Berechnetes Feld bearbeiten
-PivotFieldList_CalculatedField_ClearTooltipMessage | Bearbeiten Sie die bearbeiteten Feldinformationen
-PivotFieldList_Format | Format
-
 All locale files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale/tree/master/src) location. You can get any resource file from there and utilize it in your application.
 
-* Finally, Specify the culture for pivot table using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Locale) property.
+### Blazor Server Side
+
+In the following example, we have demonstrate how to enable **Localization** for pivot table in server side Blazor sample.
+
+* Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
+
+```csharp
+using Syncfusion.Blazor;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+
+namespace BlazorApplication
+{
+    public class Startup
+    {
+        ....
+        ....
+        public void ConfigureServices(IServiceCollection services)
+        {
+            ....
+            ....
+            services.AddSyncfusionBlazor();
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                // define the list of cultures your app will support
+                var supportedCultures = new List<CultureInfo>()
+                {
+                    new CultureInfo("de")
+                };
+                // set the default culture
+                options.DefaultRequestCulture = new RequestCulture("de");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+                options.RequestCultureProviders = new List<IRequestCultureProvider>() {
+                 new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
+                };
+            });
+            services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
+        }
+    }
+}
+```
+
+> Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
+
+* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
+
+```csharp
+using Syncfusion.Blazor;
+
+namespace BlazorApplication
+{
+     public class SampleLocalizer : ISyncfusionStringLocalizer
+    {
+
+        public string Get(string key)
+        {
+            return this.Manager.GetString(key);
+        }
+
+        public System.Resources.ResourceManager Manager
+        {
+            get
+            {
+                return BlazorApplication.Resources.SyncfusionBlazorLocale.ResourceManager;
+            }
+        }
+    }
+}
+```
 
 ```csharp
     @using Syncfusion.Blazor.PivotView;
     @using Syncfusion.Blazor
 
-    <SfPivotView TValue="ProductDetails" Locale="de">
+    <SfPivotView TValue="ProductDetails">
         <PivotViewDataSourceSettings DataSource="@data">
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>
@@ -564,425 +408,70 @@ All locale files for different cultures are available in this [GitHub](https://g
 
 ### Blazor WebAssembly
 
-The following example demonstrates the pivot table in **Deutsch** culture. Here we use **LoadLocaleData** method to load the **locale.json** file and **SetCulture** method to set the culture of the pivot table in Blazor WebAssembly sample.
+In the following examples, demonstrate how to enable **Localization** for pivot table in client side Blazor samples.
 
-For Blazor WebAssembly, we use **JSON** file which contains translated text of the culture. The following list of properties and its values are used in the pivot table.
+* Open the **Program.cs** file and add the below configuration in the **Main** function as follows.
 
-Locale Keywords |Text
------|-----
-grandTotal | Grand Total
-total | Total
-value | Value
-noValue | No value
-row | Row
-column | Column
-collapse | Collapse
-expand | Expand
-rowAxisPrompt | Drop row here
-columnAxisPrompt | Drop column here
-valueAxisPrompt | Drop value here
-filterAxisPrompt | Drop filter here
-filter | Filter
-filtered | Filtered
-sort | Sort
-filters | Filters
-rows | Rows
-columns | Columns
-values | Values
-close | Close
-cancel | Cancel
-delete | Delete
-CalculatedField | Calculated Field
-createCalculatedField | Create Calculated Field
-fieldName | Enter the field name
-error | Error
-invalidFormula | Invalid formula.
-dropText | Example: ('Sum(Order_Count)' + 'Sum(In_Stock)') * 250
-dropTextMobile | Add fields and edit formula here.
-dropAction | Calculated field cannot be place in any other region except value axis.
-alert | Alert
-warning | Warning
-ok | OK
-search | Search
-drag | Drag
-remove | Remove
-allFields | All Fields
-formula | Formula
-addToRow | Add to Row
-addToColumn | Add to Column
-addToValue | Add to Value
-addToFilter | Add to Filter
-emptyData | No records to display
-fieldExist | A field already exists in this name. Please enter a different name.
-confirmText | A calculation field already exists in this name. Do you want to replace it?
-noMatches | No matches
-format | Summaries values by
-edit | Edit
-clear | Clear
-formulaField | Drag and drop fields to formula
-dragField | Drag field to formula
-clearFilter | Clear
-by | by
-all | All
-multipleItems | Multiple items
-member | Member
-label | Label
-date | Date
-enterValue | Enter value
-chooseDate | Enter date
-Before | Before
-BeforeOrEqualTo | Before Or Equal To
-After | After
-AfterOrEqualTo | After Or Equal To
-labelTextContent | Show the items for which the label
-dateTextContent | Show the items for which the date
-valueTextContent | Show the items for which
-Equals | Equals
-DoesNotEquals | Does Not Equal
-BeginWith | Begins With
-DoesNotBeginWith | Does Not Begin With
-EndsWith | Ends With
-DoesNotEndsWith | Does Not End With
-Contains | Contains
-DoesNotContains | Does Not Contain
-GreaterThan | Greater Than
-GreaterThanOrEqualTo | Greater Than Or Equal To
-LessThan | Less Than
-LessThanOrEqualTo | Less Than Or Equal To
-Between | Between
-NotBetween | Not Between
-And | and
-Sum | Sum
-Count | Count
-DistinctCount | Distinct Count
-Product | Product
-Avg | Avg
-Min | Min
-SampleVar | Sample Var
-PopulationVar | Population Var
-RunningTotals | Running Totals
-Max | Max
-Index | Index
-SampleStDev | Sample StDev
-PopulationStDev | Population StDev
-PercentageOfRowTotal | % of Row Total
-PercentageOfParentTotal | % of Parent Total
-PercentageOfParentColumnTotal | % of Parent Column Total
-PercentageOfParentRowTotal | % of Parent Row Total
-DifferenceFrom | Difference From
-PercentageOfDifferenceFrom | % of Difference From
-PercentageOfGrandTotal | % of Grand Total
-PercentageOfColumnTotal | % of Column Total
-NotEquals | Not Equals
-AllValues | All Values
-conditionalFormating | Conditional Formatting
-apply | Apply
-condition | Add Condition
-formatLabel | Format
-valueFieldSettings | Value field settings
-baseField | Base field
-baseItem | Base item
-summarizeValuesBy | Summarize values by
-sourceName | Field name :
-sourceCaption | Field caption
-example | e.g:
-editorDataLimitMsg |  more items. Search to refine further.
-details | Details
-manageRecords | Manage Records
-Years | Years
-Quarters | Quarters
-Months | Months
-Days | Days
-Hours | Hours
-Minutes | Minutes
-Seconds | Seconds
-save | Save a report
-new | Create a new report
-load | Load
-saveAs | Save as current report
-rename | Rename a current report
-deleteReport | Delete a current report
-export | Export
-subTotals | Sub totals
-grandTotals | Grand totals
-reportName | Report Name :
-pdf | PDF
-excel | Excel
-csv | CSV
-png | PNG
-jpeg | JPEG
-svg | SVG
-mdxQuery | MDX Query
-showSubTotals | Show sub totals
-doNotShowSubTotals | Do not show sub totals
-showSubTotalsRowsOnly | Show sub totals rows only
-showSubTotalsColumnsOnly | Show sub totals columns only
-showGrandTotals | Show grand totals
-doNotShowGrandTotals | Do not show grand totals
-showGrandTotalsRowsOnly | Show grand totals rows only
-showGrandTotalsColumnsOnly | Show grand totals columns only
-fieldList | Show fieldlist
-grid | Show table
-toolbarFormatting | Conditional formatting
-chart | Chart
-reportMsg | Please enter valid report name!!!
-reportList | Report list
-removeConfirm | Are you sure you want to delete this report?
-emptyReport | No reports found!!
-bar | Bar
-line | Line
-area | Area
-scatter | Scatter
-polar | Polar
-of | of
-emptyFormat | No format found!!!
-emptyInput | Enter a value
-newReportConfirm | Do you want to save the changes to this report?
-emptyReportName | Enter a report name
-qtr | Qtr
-null | null
-undefined | undefined
-groupOutOfRange | Out of Range
-fieldDropErrorAction | The field you are moving cannot be placed in that area of the report
-MoreOption | More...
-aggregate | Aggregate
-drillThrough | Drill Through
-ascending | Ascending
-descending | Descending
-number | Number
-currency | Currency
-percentage | Percentage
-formatType | Format Type
-customText | Currency Symbol
-symbolPosition | Symbol Position
-left | Left
-right | Right
-grouping | Grouping
-true | True
-false | False
-decimalPlaces | Decimal Places
-numberFormat | Number Formatting
-memberType | Field Type
-formatString | Format
-expressionField | Expression
-customFormat | Enter custom format string
-selectedHierarchy | Parent Hierarchy
-olapDropText | Example: [Measures].[Order Quantity] + ([Measures].[Order Quantity] * 0.10)
-Percent | Percent
-Custom | Custom
-Measure | Measure
-Dimension | Dimension
-Standard | Standard
-blank | (Blank)
-fieldTooltip | Drag and drop fields to create an expression. And, if you want to edit the existing calculated fields! Then you can achieve it by simply selecting the field under calculated Members'.
-QuarterYear | Quarter Year
-fieldTitle | Field Name
-drillError | Cannot show the raw items of calculated fields.
-caption | Field Caption
-copy | Copy
-defaultReport | Sample Report
-customFormatString | Custom Format
-invalidFormat | Invalid Format.
-group | Group
-unGroup | Ungroup
-invalidSelection | Cannot group that selection.
-groupName | Enter the caption to display in header
-captionName | Enter the caption for group field
-selectedItems | Selected items
-groupFieldCaption | Field caption
-groupTitle | Group name
-startAt | Starting at
-endAt | Ending at
-groupBy | Interval by
-selectGroup | Select groups
-numberFormatString | Example: C, P, 0000 %, ###0.##0#, etc.
-stackingcolumn | Stacked Column
-stackingbar | Stacked Bar
-stackingarea | Stacked Area
-stepline | Step Line
-steparea | Step Area
-splinearea | Spline Area
-spline | Spline
-stackingcolumn100 | 100% Stacked Column
-stackingbar100 | 100% Stacked Bar
-stackingarea100 | 100% Stacked Area
-bubble | bubble
-pareto | Pareto
-radar | Radar
-chartTypeSettings | Chart type settings
-multipleAxes | Multiple Axes
-sortAscending | Sort ascending order
-sortDescending | Sort descending order
-sortNone | Sort data order
-clearCalculatedField | Clear edited field info
-editCalculatedField | Edit calculated field
-ChartType | Chart Type
-yes | Yes
-no | No
-numberFormatMenu | Number Formatting...
-conditionalFormatingMenu | Conditional Formatting...
-removeCalculatedField | Are you sure you want to delete this calculated field?
-replaceConfirmBefore | A report named
-replaceConfirmAfter |  already exists. Do you want to replace it?
+```csharp
+using Syncfusion.Blazor;
+using System.Globalization;
 
-The following are the list of properties and its values used in the field list.
+namespace ClientApplication
+{
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            var builder = WebAssemblyHostBuilder.CreateDefault(args);
+            builder.RootComponents.Add<App>("app");
 
-Locale Keywords |Text
------|-----
-staticFieldList | Pivot Field List
-fieldList | Field List
-dropFilterPrompt | Drop filter here
-dropColPrompt | Drop column here
-dropRowPrompt | Drop row here
-dropValPrompt | Drop value here
-addPrompt | Add field here
-adaptiveFieldHeader | Choose field
-centerHeader | Drag fields between axes below:
-add | add
-drag | Drag
-filter | Filter
-filtered | Filtered
-sort | Sort
-remove | Remove
-filters | Filters
-rows | Rows
-columns | Columns
-values | Values
-CalculatedField | Calculated Field
-createCalculatedField | Create Calculated Field
-fieldName | Enter the field name
-error | Error
-invalidFormula | Invalid formula.
-dropText | Example: ('Sum(Order_Count)' + 'Sum(In_Stock)'') * 250
-dropTextMobile | Add fields and edit formula here.
-dropAction | Calculated field cannot be place in any other region except value axis.
-search | Search
-close | Close
-cancel | Cancel
-delete | Delete
-alert | Alert
-warning | Warning
-ok | OK
-allFields | All Fields
-formula | Formula
-fieldExist | A field already exists in this name. Please enter a different name.
-confirmText | A calculation field already exists in this name. Do you want to replace it?
-noMatches | No matches
-format | Summaries values by
-edit | Edit
-clear | Clear
-formulaField | Drag and drop fields to formula
-dragField | Drag field to formula
-clearFilter | Clear
-by | by
-enterValue | Enter value
-chooseDate | Enter date
-all | All
-multipleItems | Multiple items
-Equals | Equals
-DoesNotEquals | Does Not Equal
-BeginWith | Begins With
-DoesNotBeginWith | Does Not Begin With
-EndsWith | Ends With
-DoesNotEndsWith | Does Not End With
-Contains | Contains
-DoesNotContains | Does Not Contain
-GreaterThan | Greater Than
-GreaterThanOrEqualTo | Greater Than Or Equal To
-LessThan | Less Than
-LessThanOrEqualTo | Less Than Or Equal To
-Between | Between
-NotBetween | Not Between
-Before | Before
-BeforeOrEqualTo | Before Or Equal To
-After | After
-AfterOrEqualTo | After Or Equal To
-member | Member
-label | Label
-date | Date
-value | Value
-labelTextContent | Show the items for which the label
-dateTextContent | Show the items for which the date
-valueTextContent | Show the items for which
-And | and
-Sum | Sum
-Count | Count
-DistinctCount | Distinct Count
-Product | Product
-Avg | Avg
-Min | Min
-Max | Max
-Index | Index
-SampleStDev | Sample StDev
-PopulationStDev | Population StDev
-SampleVar | Sample Var
-PopulationVar | Population Var
-RunningTotals | Running Totals
-DifferenceFrom | Difference From
-PercentageOfDifferenceFrom | % of Difference From
-PercentageOfGrandTotal | % of Grand Total
-PercentageOfColumnTotal | % of Column Total
-PercentageOfRowTotal | % of Row Total
-PercentageOfParentTotal | % of Parent Total
-PercentageOfParentColumnTotal | % of Parent Column Total
-PercentageOfParentRowTotal | % of Parent Row Total
-Years | Years
-Quarters | Quarters
-Months | Months
-Days | Days
-Hours | Hours
-Minutes | Minutes
-Seconds | Seconds
-apply | Apply
-valueFieldSettings | Value field settings
-sourceName | Field name :
-sourceCaption | Field caption
-summarizeValuesBy | Summarize values by
-baseField | Base field
-baseItem | Base item
-example | e.g:
-editorDataLimitMsg |  more items. Search to refine further.
-deferLayoutUpdate | Defer Layout Update
-null | null
-undefined | undefined
-groupOutOfRange | Out of Range
-fieldDropErrorAction | The field you are moving cannot be placed in that area of the report
-MoreOption | More...
-memberType | Field Type
-selectedHierarchy | Parent Hierarchy
-formatString | Format
-expressionField | Expression
-olapDropText | Example: [Measures].[Order Quantity] + ([Measures].[Order Quantity] * 0.10)
-customFormat | Enter custom format string
-Measure | Measure
-Dimension | Dimension
-Standard | Standard
-Currency | Currency
-Percent | Percent
-Custom | Custom
-blank | (Blank)
-fieldTooltip | Drag and drop fields to create an expression. And, if you want to edit the existing calculated fields! You can achieve it by simply selecting the field under 'Calculated Members'.
-fieldTitle | Field Name
-QuarterYear | Quarter Year
-caption | Field Caption
-copy | Copy
-group | Group
-numberFormatString | Example: C, P, 0000 %, ###0.##0#, etc.
-sortAscending | Sort ascending order
-sortDescending | Sort descending order
-sortNone | Sort data order
-clearCalculatedField | Clear edited field info
-editCalculatedField | Edit calculated field
-selectGroup | Select groups
-of | of
-removeCalculatedField | Are you sure you want to delete this calculated field?
+            builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddSyncfusionBlazor();
 
-The following example demonstrates the pivot table in **Deutsch** culture. Here we have used `LoadLocaleData` method to load the **wwwroot/ej2-locale/src/de.json** file and `SetCulture` method to set the culture to `de`.
+
+            // Register the Syncfusion locale service to customize the  SyncfusionBlazor component locale culture
+            builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
+
+            // Set the default culture of the application
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de");
+            CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de");
+
+            await builder.Build().RunAsync();
+        }
+    }
+}
+```
+
+* Then, create a **~/Shared/SyncfusionLocalizer.cs** file and implement **ISyncfusionStringLocalizer** interface to the class and override the ResourceManager property to get the resource file details from the application end.
+
+```csharp
+using Syncfusion.Blazor;
+
+public class SyncfusionLocalizer : ISyncfusionStringLocalizer
+{
+    // To get the locale key from mapped resources file
+    public string GetText(string key)
+    {
+        return this.ResourceManager.GetString(key);
+    }  
+
+    // To access the resource file and get the exact value for locale key
+
+    public System.Resources.ResourceManager ResourceManager
+    {
+        get
+        {
+            // Replace the ApplicationNamespace with your application name.
+            return ClientApplication.Resources.SfResources.ResourceManager;
+        }
+    }
+}
+```
+
+> **Note** ClientApplication denotes the ApplicationNameSpace of your project.
 
 ```csharp
     @using Syncfusion.Blazor.PivotView;
-    @using Syncfusion.Blazor
-    @using Microsoft.JSInterop;
 
     <SfPivotView TValue="ProductDetails">
         <PivotViewDataSourceSettings DataSource="@data">
@@ -1009,12 +498,6 @@ The following example demonstrates the pivot table in **Deutsch** culture. Here 
         {
             this.data = ProductDetails.GetProductData().ToList();
            //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in  getting started for more details.
-        }
-        [Inject]
-        protected IJSRuntime JsRuntime { get; set; }
-        protected override void OnAfterRender(bool firstRender)
-        {
-            this.JsRuntime.Sf().LoadLocaleData("wwwroot/ej2-locale/src/de.json").SetCulture("de");
         }
     }
 
@@ -1080,13 +563,12 @@ Internationalization library is used to globalize number, date, and time values 
 
 ## Right-to-left (RTL)
 
-Right-to-left (RTL) provides an option to switch the text direction and layout of the pivot table component from right to left. It improves user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc...). In the below code sample `EnableRtl` method is used to enable RTL in the pivot table.
+Right-to-left (RTL) provides an option to switch the text direction and layout of the pivot table component from right to left. It improves user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc...). In the below code sample `EnableRtl` property is used to enable RTL in the pivot table.
 
 ```csharp
-@using Microsoft.JSInterop;
 @using Syncfusion.Blazor.PivotView
 
-   <SfPivotView TValue="ProductDetails" ShowFieldList="true">
+   <SfPivotView TValue="ProductDetails" ShowFieldList="true" EnableRtl="true">
          <PivotViewDataSourceSettings DataSource="@data">
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>
@@ -1112,12 +594,6 @@ Right-to-left (RTL) provides an option to switch the text direction and layout o
         {
             this.data = ProductDetails.GetProductData().ToList();
            //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
-        [Inject]
-        protected IJSRuntime JsRuntime { get; set; }
-        protected override void OnAfterRender(bool firstRender)
-        {
-            this.JsRuntime.Sf().EnableRtl(true);
         }
     }
 

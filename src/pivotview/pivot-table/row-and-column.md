@@ -635,11 +635,11 @@ In this demo, the revenue cost for each year is represented with trend icons.
 ```csharp
 @using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="TemplateData" ModelType="@Model" Height="300" Width="800">
+    <SfPivotView TValue="TemplateData" Height="300" Width="800">
             <PivotViewTemplates>
                 <CellTemplate>
                     @{
-                        var data = (context as ValueDetails);
+                        var data = (context as AxisSet);
                         if (data.Value > 175)
                         {
                             <span class="tempwrap sb-icon-profit pv-icons"></span>
@@ -676,14 +676,6 @@ In this demo, the revenue cost for each year is represented with trend icons.
         </SfPivotView>
 
     @code{
-        public class ValueDetails
-        {
-            public string FieldName { get; set; }
-            public double Value { get; set; }
-            public string Axis { get; set; }
-            public string FormattedText { get; set; }
-        }
-        public ValueDetails Model = new ValueDetails();
 
         public List<TemplateData> dataSource { get; set; }
 

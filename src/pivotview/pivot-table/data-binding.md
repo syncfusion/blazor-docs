@@ -491,6 +491,121 @@ User can use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/
 
 ```
 
+## List binding
+
+### ExpandoObject
+
+The pivot table supports **ExpandoObject** data source when the model type is unknown. This can be set in [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. Moreover, the data source supports all the available features in the component.
+
+```csharp
+    @using Syncfusion.Blazor.PivotView
+    @using System.Dynamic
+
+    <SfPivotView TValue="ExpandoObject" Height="560" Width="100%">
+        <PivotViewDataSourceSettings DataSource="@Orders">
+            <PivotViewColumns>
+                <PivotViewColumn Name="OrderID"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="CustomerID"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="OrderDate"></PivotViewValue>
+                <PivotViewValue Name="Freight" Type="SummaryTypes.Max"></PivotViewValue>
+            </PivotViewValues>
+        </PivotViewDataSourceSettings>
+    </SfPivotView>
+
+    @code{
+        public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
+
+        protected override void OnInitialized()
+        {
+            Orders = Enumerable.Range(1, 75).Select((x) =>
+            {
+                dynamic d = new ExpandoObject();
+                d.OrderID = 1000 + x;
+                d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+                d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+                d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
+                d.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];
+                d.Verified = (new bool[] { true, false })[new Random().Next(2)];
+
+                return d;
+            }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+        }
+    }
+
+```
+
+![output](images/expando-list-binding.png)
+
+### DynamicObject
+
+The pivot table supports **DynamicObject** data source when the model type is unknown. This can be set in [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. Moreover, the data source supports all the available features in the component.
+
+```csharp
+    @using Syncfusion.Blazor.PivotView
+    @using System.Dynamic
+
+    <SfPivotView TValue="DynamicDictionary" Height="560" Width="100%">
+        <PivotViewDataSourceSettings DataSource="@Orders">
+            <PivotViewColumns>
+                <PivotViewColumn Name="OrderID"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="CustomerID"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="OrderDate"></PivotViewValue>
+                <PivotViewValue Name="Freight" Type="SummaryTypes.Max"></PivotViewValue>
+            </PivotViewValues>
+        </PivotViewDataSourceSettings>
+    </SfPivotView>
+
+    @code{
+        private List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" };
+        public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
+        protected override void OnInitialized()
+        {
+            Orders = Enumerable.Range(1, 1075).Select((x) =>
+            {
+                dynamic d = new DynamicDictionary();
+                d.OrderID = 1000 + x;
+                d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+                d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+                d.OrderDate = DateTime.Now.AddDays(-x);
+                return d;
+            }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+        }
+        public class DynamicDictionary : DynamicObject
+        {
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+
+            public override bool TryGetMember(GetMemberBinder binder, out object result)
+            {
+                string name = binder.Name;
+                return dictionary.TryGetValue(name, out result);
+            }
+            public override bool TrySetMember(SetMemberBinder binder, object value)
+            {
+                dictionary[binder.Name] = value;
+                return true;
+            }
+
+            public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+            {
+                return this.dictionary?.Keys;
+            }
+        }
+
+    }
+
+
+```
+
+![output](images/dynamic-list-binding.png)
+
 ## Mapping
 
 One can define field information like alias name (caption), data type, aggregation type, show and hide subtotals etc. using the [`FieldMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IPivotViewDataSourceSettings.html#Syncfusion_Blazor_PivotView_IPivotViewDataSourceSettings_FieldMapping) property under [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html) class. The available options are,

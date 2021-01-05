@@ -14,16 +14,14 @@ This section briefly explains about how to include a **Tree Grid** Component in 
 
 <!-- markdownlint-disable MD033 -->
 
-1. Install Syncfusion.Blazor NuGet package to the application by using the **NuGet Package Manager**. Please ensure to check the **Include prerelease** option.
+1. Install **Syncfusion.Blazor.TreeGrid** NuGet package to the application by using the **NuGet Package Manager**. Please ensure to check the **Include prerelease** option.
 2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
     <head>
         ....
         ....
-            <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-            <!---CDN--->
-            @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/fabric.css" rel="stylesheet" />*@
+            <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
 ```
 
@@ -31,7 +29,7 @@ This section briefly explains about how to include a **Tree Grid** Component in 
 
  ```html
     <head>
-           <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+           <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
     </head>
 ```

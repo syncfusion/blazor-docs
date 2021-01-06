@@ -11,637 +11,233 @@ triggered for appropriate Chart actions.
 
 The events should be provided to the Chart using [`ChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
 
-> From `v17.2.*`, we have added only the limited number of events for the Chart component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
+> From `v18.4.*`, we have added few additional following events for the Chart component
 
-Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
+Event Name|
+-----|
+[OnZoomStart](events/#onzoomstart)|
+[OnZoomEnd](events/#onzoomend)|
+[OnLegendItemRender](events/#onlegenditemrender)|
+[OnDataLabelRender](events/#ondatalabelrender)|
+[OnPointRender](events/#onpointrender)|
+[OnAxisLabelRender](events/#onaxislabelrender)|
+[OnAxisLabelClick](events/#onaxislabelclick)|
+[OnAxisActualRangeCalculated](events/#onaxisactualrangecalculated)|
+[OnAxisMultiLevelLabelRender](events/#onaxismultilevellabelrender)|
+
+> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`
+
+Event Name(`v18.3.*`) |Event Name(`v18.4.*`)
 -----|-----
-animationComplete |[OnAnimationComplete](events/#onanimationcomplete)
-beforePrint |[OnPrint](events/#onprint)
-chartMouseClick |[OnChartMouseClick](events/#onchartmouseclick)
-chartMouseDown |[OnChartMouseDown](events/#onchartmousedown)
-chartMouseLeave |[OnChartMouseLeave](events/#onchartmouseleave)
-chartMouseMove |[OnChartMouseMove](events/#onchartmousemove)
-chartMouseUp |[OnChartMouseUp](events/#onchartmouseup)
-dragComplete |[OnDragComplete](events/#ondragcomplete)
-loaded |[Loaded](events/#loaded)
-pointClick |[OnPointClick](events/#onpointclick)
-pointMove |[PointMoved](events/#pointmoved)
-resized |[Resized](events/#resized)
-scrollChanged |[ScrollChanged](events/#scrollchanged)
-scrollEnd |[OnScrollEnd](events/#onscrollstart)
-scrollStart |[OnScrollStart](events/#onscrollend)
+Resized |[SizeChanged](events/#sizechanged)
+ScrollChanged |[OnScrollChanged](events/#onscrollchanged)
+OnScrollEnd |[OnScrollChanged](events/#onscrollchanged)
+OnScrollStart |[OnScrollChanged](events/#onscrollchanged)
+AfterExport |[OnExportComplete](events/#onexportcomplete)
+OnPrint | [OnPrintComplete](events/#onprintcomplete)
+DragStart |[OnDataEdit](events/#ondataedit)
+DragEnd |[OnDataEditCompleted](events/#ondataeditcompleted)
+LegendClick |[OnLegendClick](events/#onlegendclick)
+MultiLevelLabelClick |[OnMultiLevelLabelClick](events/#onmultilevellabelclick)
+OnSelectionComplete |[OnSelectionChanged](events/#onselectionchanged)
+OnDragComplete |[OnSelectionChanged](events/#onselectionchanged)
 
-## OnAnimationComplete
+> From `v18.4.*`, we remove the following previous release events from Chart component
 
-[`OnAnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAnimationComplete) event is triggers after animation is completed for the series.
+Event Name|
+-----|
+OnAnimationComplete|
+OnChartMouseClick|
+OnChartMouseDown|
+OnChartMouseLeave|
+OnChartMouseMove|
+OnChartMouseUp|
+PointMoved|
+BeforeExport|
+Load|
+OnPointDoubleClick|
+PointMoved|
 
-```csharp
-@using Syncfusion.Blazor.Charts
+## OnZoomStart
 
-<SfChart>
-    <ChartEvents OnAnimationComplete="@AnimationHandler"></ChartEvents>
+[`OnZoomStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomStart) event is triggers, after the zoom selection is triggered.
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+{% aspTab template="chart/events", sourceFiles="zoomstart.razor" %}
 
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-{
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+{% endaspTab %}
 
-    public void AnimationHandler(IAnimationCompleteEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+## OnZoomEnd
 
-## OnPrint
+[`OnZoomEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event is triggers, after the zoom selection is triggered.
 
-[`OnPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPrint) event is triggers before the prints gets started.
+{% aspTab template="chart/events", sourceFiles="zoomend.razor" %}
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% endaspTab %}
 
-<SfChart>
-    <ChartEvents OnPrint="@PrintHandler"></ChartEvents>
+## OnLegendItemRender
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+[`OnLegendItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendItemRender) event is triggers,before the legend is rendered.
 
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-{
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+{% aspTab template="chart/events", sourceFiles="legendrender.razor" %}
 
-    public void PrintHandler(IPrintEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+{% endaspTab %}
 
-## OnChartMouseClick
+## OnDataLabelRender
 
-[`OnChartMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnChartMouseClick) event is triggers on clicking the chart.
+[`OnDataLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataLabelRender) event is triggers, before the data label for series is rendered.
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% aspTab template="chart/events", sourceFiles="datalabelrender.razor" %}
 
-<SfChart>
-    <ChartEvents OnChartMouseClick="@ChartMouseClickHandler"></ChartEvents>
+{% endaspTab %}
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+## OnPointRender
 
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-{
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+[`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event is triggers, before each points for the series is rendered.
 
-    public void ChartMouseClickHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+{% aspTab template="chart/events", sourceFiles="pointrender.razor" %}
 
-## OnChartMouseDown
+{% endaspTab %}
 
-[`OnChartMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnChartMouseDown) event is triggers on mouse down.
+## OnAxisLabelRender
 
-```csharp
-@using Syncfusion.Blazor.Charts
+[`OnAxisLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event is triggers, before each axis label is rendered.
 
-<SfChart>
-    <ChartEvents OnChartMouseDown="@ChartMouseDownHandler"></ChartEvents>
+{% aspTab template="chart/events", sourceFiles="axislabelrender.razor" %}
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+{% endaspTab %}
 
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-{
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+## OnAxisLabelClick
 
-    public void ChartMouseDownHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+[`OnAxisLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelClick) event is triggers, when x axis label clicked.
 
-## OnChartMouseLeave
+{% aspTab template="chart/events", sourceFiles="axislabelclick.razor" %}
 
-[`OnChartMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnChartMouseLeave) event is triggers when cursor leaves the chart.
+{% endaspTab %}
 
-```csharp
-@using Syncfusion.Blazor.Charts
+## OnAxisActualRangeCalculated
 
-<SfChart>
-    <ChartEvents OnChartMouseLeave="@ChartMouseLeaveHandler"></ChartEvents>
+[`OnAxisActualRangeCalculated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisActualRangeCalculated) event is triggers, before each axis range is rendered.
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+{% aspTab template="chart/events", sourceFiles="axisactualrange.razor" %}
 
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-{
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+{% endaspTab %}
 
-    public void ChartMouseLeaveHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+## OnAxisMultiLevelLabelRender
 
-## OnChartMouseMove
+[`OnAxisMultiLevelLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event is triggers, while render multilevellabels.
 
-[`OnChartMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnChartMouseMove) event is triggers on hovering the chart.
+{% aspTab template="chart/events", sourceFiles="axismultilabel.razor" %}
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% endaspTab %}
 
-<SfChart>
-    <ChartEvents OnChartMouseMove="@ChartMouseMoveHandler"></ChartEvents>
+## SizeChanged
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+[`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SizeChanged) event is triggers after resizing of chart.
 
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-{
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+{% aspTab template="chart/events", sourceFiles="sizechanged.razor" %}
 
-    public void ChartMouseMoveHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+{% endaspTab %}
 
-## OnChartMouseUp
+## OnScrollChanged
 
-[`OnChartMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnChartMouseUp) event is triggers on mouse up.
+[`OnScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event is triggers when change the scroll.
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% aspTab template="chart/events", sourceFiles="scrollchanged.razor" %}
 
-<Sfchart>
-    <ChartEvents OnChartMouseUp="@ChartMouseUpHandler"></ChartEvents>
+{% endaspTab %}
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</Sfchart>
+## OnExportComplete
 
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+[`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event is triggers after the export completed.
 
-    public void ChartMouseUpHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+{% aspTab template="chart/events", sourceFiles="exportcomplete.razor" %}
 
-## OnDragComplete
+{% endaspTab %}
 
-[`OnDragComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDragComplete) event is triggers after the drag selection is completed.
+## OnPrintComplete
 
-```csharp
-@using Syncfusion.Blazor.Charts
+`OnPrintComplete` event is triggers when after the print completed.
 
-<Sfchart>
-    <ChartEvents OnDragComplete="@DragCompleteHandler"></ChartEvents>
+{% aspTab template="chart/events", sourceFiles="printcomplete.razor" %}
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</Sfchart>
+{% endaspTab %}
 
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+## OnDataEdit
 
-    public void DragCompleteHandler(IDragCompleteEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+[`OnDataEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEdit) event is triggers, when the point drag start.
+
+{% aspTab template="chart/events", sourceFiles="dataedit.razor" %}
+
+{% endaspTab %}
+
+## OnDataEditCompleted
+
+[`OnDataEditCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEditCompleted) event is triggers  when the point drag end.
+
+{% aspTab template="chart/events", sourceFiles="dataeditcomplete.razor" %}
+
+{% endaspTab %}
+
+## OnLegendClick
+
+[`OnLegendClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendClick) event is triggers after click on legend.
+
+{% aspTab template="chart/events", sourceFiles="legendclick.razor" %}
+
+{% endaspTab %}
+
+## OnMultiLevelLabelClick
+
+[`OnMultiLevelLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event is triggers after click on multilevellabelclick.
+
+{% aspTab template="chart/events", sourceFiles="multilabelclick.razor" %}
+
+{% endaspTab %}
+
+## OnSelectionChanged
+
+[`OnSelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event is triggers after the selection is completed.
+
+{% aspTab template="chart/events", sourceFiles="selectionchanged.razor" %}
+
+{% endaspTab %}
 
 ## Loaded
 
-[`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Loaded) event is triggers after chart load.
+`Loaded` event is triggers after chart load.
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% aspTab template="chart/events", sourceFiles="loaded.razor" %}
 
-<Sfchart>
-    <ChartEvents Loaded="@LoadedHandler"></ChartEvents>
-
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</Sfchart>
-
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-
-    public void LoadedHandler(ILoadedEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+{% endaspTab %}
 
 ## OnPointClick
 
 [`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointClick) event is triggers on point click.
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% aspTab template="chart/events", sourceFiles="pointclick.razor" %}
 
-<Sfchart>
-    <ChartEvents OnPointClick="@PointClickHandler"></ChartEvents>
+{% endaspTab %}
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</Sfchart>
+## TooltipRender
 
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+[`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_TooltipRender) event is triggers, before the tooltip for series is rendered.
 
-    public void PointClickHandler(IPointEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+{% aspTab template="chart/events", sourceFiles="tooltiprender.razor" %}
 
-## PointMoved
+{% endaspTab %}
 
-[`PointMoved`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_PointMoved) event is triggers on point move.
+## SharedTooltipRender
 
-```csharp
-@using Syncfusion.Blazor.Charts
+[`SharedTooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SharedTooltipRender) event is triggers, before the sharedtooltip for series is rendered.
 
-<Sfchart>
-    <ChartEvents PointMoved="@PointMovedHandler"></ChartEvents>
+{% aspTab template="chart/events", sourceFiles="sharedtooltiprender.razor" %}
 
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</Sfchart>
+{% endaspTab %}
 
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+## OnZooming
 
-    public void PointMovedHandler(IPointEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+[`OnZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZooming) event is triggers, after the zoom selection is triggered.
 
-## Resized
+{% aspTab template="chart/events", sourceFiles="zooming.razor" %}
 
-[`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Resized) event is triggers after resizing of chart.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<Sfchart>
-    <ChartEvents Resized="@ResizeHandler"></ChartEvents>
-
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</Sfchart>
-
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-
-    public void ResizeHandler(IResizeEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
-## ScrollChanged
-
-[`ScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ScrollChanged) event is triggers when change the scroll.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<Sfchart>
-    <ChartEvents ScrollChanged="@ScrollChangeHandler"></ChartEvents>
-
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</Sfchart>
-
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-
-    public void ScrollChangeHandler(IScrollEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
-## OnScrollStart
-
-[`OnScrollStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollStart) event is triggers when start the scroll.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<Sfchart>
-    <ChartEvents OnScrollStart="@ScrollStartHandler"></ChartEvents>
-
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</Sfchart>
-
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-
-    public void ScrollStartHandler(IScrollEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
-## OnScrollEnd
-
-[`OnScrollEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollEnd) event is triggers after the scroll end.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<Sfchart>
-    <ChartEvents OnScrollEnd="@ScrollEndHandler"></ChartEvents>
-
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</Sfchart>
-
-@code{
-    public class SalesInfo
-    {
-        public string Month;
-        public double SalesValue;
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-
-    public void ScrollEndHandler(IScrollEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
+{% endaspTab %}

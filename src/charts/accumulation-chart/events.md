@@ -11,37 +11,299 @@ triggered for appropriate accumulation chart actions.
 
 The events should be provided to the Accumulation Chart using [`AccumulationChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html) component.
 
-The following are the number of events supported for Accumulation Chart component.
+> From `v18.4.*`, we have added few additional following events for the Accumulation Chart component
 
-* [Loaded](events/#loaded)
-* [OnChartMouseClick](events/#onchartmouseclick)
-* [OnChartMouseDown](events/#onchartmousedown)
-* [OnChartMouseLeave](events/#onchartmouseleave)
-* [OnChartMouseMove](events/#onchartmousemove)
-* [OnChartMouseUp](events/#onchartmouseup)
-* [OnPointClick](events/#onpointclick)
-* [PointMoved](events/#pointmoved)
-* [OnPrint](events/#onprint)
-* [Resized](events/#resized)
+Event Name|
+-----|
+[OnDataLabelRender](events/#ondatalabelrender)|
+[OnLegendItemRender](events/#onlegenditemrender)|
+[OnPointRender](events/#onpointrender)|
+
+> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`
+
+Event Name(`v18.3.*`) |Event Name(`v18.4.*`)
+-----|-----
+AfterExport |[OnExportComplete](events/#onexportcomplete)
+OnPrint |[OnPrintComplete](events/#onprintcomplete)
+Resized |[SizeChanged](events/#sizechanged)
+
+> From `v18.4.*`, we remove the following previous release events from Accumulation Chart component
+
+Event Name|
+-----|
+OnChartMouseClick|
+OnChartMouseDown|
+OnChartMouseLeave|
+OnChartMouseMove|
+OnChartMouseUp|
+PointMoved|
+
+## OnDataLabelRender
+
+[`OnDataLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnDataLabelRender) event is triggers, before datalabel for series is render.
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartEvents OnDataLabelRender="DataLabelRenderEvent"></AccumulationChartEvents>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+            <AccumulationDataLabelSettings Visible="true"></AccumulationDataLabelSettings>
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+
+    public void DataLabelRenderEvent(AccumulationTextRenderEventArgs args)
+    {
+        // Here you can customize your code
+    }
+}
+```
+
+## OnLegendItemRender
+
+[`OnLegendItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnLegendItemRender) event is triggers, before legend getting rendered.
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartEvents OnLegendItemRender="LegendRenderEvent"></AccumulationChartEvents>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+
+    public void LegendRenderEvent(AccumulationLegendRenderEventArgs args)
+    {
+        // Here you can customize your code
+    }
+}
+```
+
+## OnPointRender
+
+[`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPointRender) event is triggers, before the point rendering.
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartEvents OnPointRender="PointRenderEvent"></AccumulationChartEvents>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+
+    public void PointRenderEvent(AccumulationPointRenderEventArgs args)
+    {
+        // Here you can customize your code
+    }
+}
+```
+
+## OnExportComplete
+
+[`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnExportComplete) after the export completed.
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<button @onclick="Export" class="btn-success">Export</button>
+<SfAccumulationChart Title="Mobile Browser Statistics" @ref="AccChart">
+    <AccumulationChartEvents OnExportComplete="ExportCompleteEvent"></AccumulationChartEvents>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code{
+    SfAccumulationChart AccChart;
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+
+    public void Export()
+    {
+        AccChart.Export(ExportType.JPEG,"Charts");
+    }
+
+    public void ExportCompleteEvent(ExportEventArgs args)
+    {
+        // Here you can customize your code
+    }
+}
+```
+
+## OnPrintComplete
+
+`OnPrintComplete` event is triggers, after the print completed.
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<button @onclick="Print" class="btn-success">Print</button>
+<SfAccumulationChart Title="Mobile Browser Statistics" @ref="AccChart">
+    <AccumulationChartEvents OnPrintComplete="PrintCompleteEvent"></AccumulationChartEvents>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code{
+    SfAccumulationChart AccChart;
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+
+    public void Print()
+    {
+        AccChart.Print();
+    }
+
+    public void PrintCompleteEvent()
+    {
+        // Here you can customize your code
+    }
+}
+```
+
+## SizeChanged
+
+[`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_SizeChanged) event is triggers, after resizing of chart.
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartEvents SizeChanged="SizeChangedEvent"></AccumulationChartEvents>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+
+    public void SizeChangedEvent(AccumulationResizeEventArgs args)
+    {
+        // Here you can customize your code
+    }
+}
+```
 
 ## Loaded
 
-[`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_Loaded) event is triggers after accumulation chart loaded.
+`Loaded` event is triggers after accumulation chart loaded.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
     <AccumulationChartEvents Loaded="@LoadHandler"></AccumulationChartEvents>
-
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
+
 @code{
     public class Statistics
     {
@@ -66,249 +328,30 @@ The following are the number of events supported for Accumulation Chart componen
 }
 ```
 
-## OnChartMouseClick
-
-[`OnChartMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnChartMouseClick) event is triggers on clicking the accumulation chart.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnChartMouseClick="@MouseClickHandler"></AccumulationChartEvents>
-
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser;
-        public double Users;
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-
-    public void MouseClickHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
-## OnChartMouseDown
-
-[`OnChartMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnChartMouseDown) event is triggers on mouse down.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnChartMouseDown="@MouseDownHandler"></AccumulationChartEvents>
-
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser;
-        public double Users;
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-
-    public void MouseDownHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
-## OnChartMouseLeave
-
-[`OnChartMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnChartMouseLeave) event is triggers while cursor leaves the accumulation chart.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnChartMouseLeave="@MouseLeaveHandler"></AccumulationChartEvents>
-
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser;
-        public double Users;
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-
-    public void MouseLeaveHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
-## OnChartMouseMove
-
-[`OnChartMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnChartMouseMove) event is triggers on hovering the accumulation chart.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnChartMouseMove="@MouseMoveHandler"></AccumulationChartEvents>
-
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser;
-        public double Users;
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-
-    public void MouseMoveHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
-## OnChartMouseUp
-
-[`OnChartMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnChartMouseUp) event is triggers on mouse up.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnChartMouseUp="@MouseUpHandler"></AccumulationChartEvents>
-
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser;
-        public double Users;
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-
-    public void MouseUpHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
 ## OnPointClick
 
-[`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPointClick) event is triggers on point click.
+[`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPointClick) event is triggers, when the point click.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnPointClick="@PointClickHandler"></AccumulationChartEvents>
-
+    <AccumulationChartEvents OnPointClick="PointClick"></AccumulationChartEvents>
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
 @code{
     public class Statistics
     {
-        public string Browser;
-        public double Users;
+        public string Browser { get; set; }
+        public double Users { get; set; }
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
-{
+   {
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
@@ -317,41 +360,38 @@ The following are the number of events supported for Accumulation Chart componen
         new Statistics { Browser = "Android", Users = 12 },
     };
 
-    public void PointClickHandler(IPointEventArgs args)
+    public void PointClick(AccumulationPointEventArgs args)
     {
         // Here you can customize your code
     }
 }
 ```
 
-## PointMoved
+## TooltipRender
 
-[`PointMoved`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_PointMoved) event is triggers on point move.
+[`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_TooltipRender) event is triggers, before the tooltip for series is rendered.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents PointMoved="@PointMoveHandler"></AccumulationChartEvents>
-
+    <AccumulationChartEvents TooltipRender="TooltipRenderEvent"></AccumulationChartEvents>
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+    <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
 </SfAccumulationChart>
 
 @code{
     public class Statistics
     {
-        public string Browser;
-        public double Users;
+        public string Browser { get; set; }
+        public double Users { get; set; }
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
-{
+    {
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
@@ -360,93 +400,7 @@ The following are the number of events supported for Accumulation Chart componen
         new Statistics { Browser = "Android", Users = 12 },
     };
 
-    public void PointMoveHandler(IPointEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
-## OnPrint
-
-[`OnPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPrint) event is triggers before the prints gets started.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnPrint="@PrintHandler"></AccumulationChartEvents>
-
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser;
-        public double Users;
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-
-    public void PrintHandler(IPrintEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
-## Resized
-
-[`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_Resized) event is triggers after window resize.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents Resized="@ResizeHandler"></AccumulationChartEvents>
-
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser;
-        public double Users;
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-
-    public void ResizeHandler(IAccResizeEventArgs args)
+    public void TooltipRenderEvent(TooltipRenderEventArgs args)
     {
         // Here you can customize your code
     }

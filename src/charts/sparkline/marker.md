@@ -4,7 +4,7 @@ This section explains how to add markers to the Sparkline Charts.
 
 ## Adding marker to the Sparkline Charts
 
-To add marker to the Sparkline Charts, specify the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html) of [`SparklineMarkerSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html) as following values. The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html) will accept multiple values too.
+To add marker to the Sparkline Charts, specify the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineMarkerSettings~Visible.html) of [`SparklineMarkerSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineMarkerSettings.html) as following values. The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineMarkerSettings~Visible.html) will accept multiple values too.
 
 * All - Enables markers for all points.
 * Start - Enables marker for the start point.
@@ -53,10 +53,10 @@ In Sparkline Charts, markers can be enabled for particular points such as the st
 
 Sparkline Charts markers can be customized using following properties:
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Fill) - Specifies fill color for marker
-* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Opacity) - Specifies opacity of fill color for marker
-* [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Size) - Specifies marker size
-* [`SparklineMarkerBorder`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Charts.SparklineMarkerBorder.html) - Specifies marker border color and width
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineMarkerSettings~Fill.html) - Specifies fill color for marker
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineMarkerSettings~Opacity.html) - Specifies opacity of fill color for marker
+* [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineMarkerSettings~Size.html) - Specifies marker size
+* [`SparklineMarkerBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineMarkerBorder.html) - Specifies marker border color and width
 
 The following code example shows customizing marker's fill color, border style and size.
 

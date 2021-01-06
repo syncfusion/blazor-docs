@@ -1,6 +1,6 @@
 # Sparkline Chart Types
 
-Different types of shapes can be used to represent the Sparkline Charts. You can change the type of Sparkline Charts by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property. Sparkline Charts supports the following types:
+Different types of shapes can be used to represent the Sparkline Charts. You can change the type of Sparkline Charts by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) property. Sparkline Charts supports the following types:
 
 * Line
 * Column
@@ -12,7 +12,7 @@ The following code sample shows different types of Sparkline Charts.
 
 ## Line
 
-The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) type is used to render the Sparkline Charts series as line.
+The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) type is used to render the Sparkline Charts series as line.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -51,7 +51,7 @@ The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSp
 
 ## Column
 
-The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) type is used to render the Sparkline Charts series as column.
+The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) type is used to render the Sparkline Charts series as column.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -72,7 +72,7 @@ The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 ## Pie
 
-The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) type is used to render the Sparkline Charts series as pie.
+The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) type is used to render the Sparkline Charts series as pie.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -93,7 +93,7 @@ The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSpa
 
 ## WinLoss
 
-The [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) type is used to render the Sparkline Charts series as WinLoss.
+The [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) type is used to render the Sparkline Charts series as WinLoss.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -109,7 +109,7 @@ The [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.S
 
 ## Area
 
-The [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) type is used to render the Sparkline Charts series as area.
+The [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) type is used to render the Sparkline Charts series as area.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

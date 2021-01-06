@@ -1,7 +1,7 @@
 ---
-title: "Blazor Collapsible Splitter | Expand and collapse panes"
+title: "Blazor Splitter | Two way Binding"
 component: "Splitter"
-description: "This section explains how to create a collapsible splitter by enabling expand and collapse behavior using the Blazor Splitter component."
+description: "This section explains how to achieve two-way binding to collapsed property of Blazor Splitter that helps to collapese or expand the spiltter pane dynamically."
 ---
 
 # Two way Binding

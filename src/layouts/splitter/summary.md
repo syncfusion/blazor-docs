@@ -3,7 +3,7 @@
 * [Pane Content](splitter/pane-content.md)
 * [Split Panes](splitter/split-panes.md)
 * [Expand and Collapse](splitter/expand-and-collapse.md)
-* [Two way Binding](splitter/expand-and-collapse.md)
+* [Two way Binding](splitter/two-way-binding.md)
 * [Resize](splitter/resizing.md)
 * [Different Layouts](splitter/different-layouts.md)
 * [CSS Structure](splitter/style.md)

@@ -13,10 +13,14 @@ The `Format` feature used to customize the units of Slider values to desired for
 ```csharp
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider Value="30">
+<SfSlider @bind-Value="@CurrencyValue">
     <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Format="C2" Placement="TooltipPlacement.Before"></SliderTooltip>
     <SliderTicks Placement="Placement.Before" Format="C2" ShowSmallTicks="true" LargeStep="20" SmallStep="10"></SliderTicks>
 </SfSlider>
+
+@code {
+    int CurrencyValue = 30;
+}
 ```
 
 ![Blazor - Slider - Format](images/slider-format.gif)
@@ -28,10 +32,15 @@ Slider provides different predefined formatting styles like Numeric (N), Percent
 ```csharp
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider Min="1" Max="10" Value="3">
+<SfSlider Min="1" Max="10" @bind-Value="@PercentageValue">
     <SliderTicks Placement="Placement.After" Format="P0" ShowSmallTicks="true" LargeStep="2" SmallStep="1"></SliderTicks>
     <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Format="P0" Placement="TooltipPlacement.Before"></SliderTooltip>
 </SfSlider>
+
+@code {
+    int PercentageValue = 3;
+}
+
 ```
 
 ![Blazor - Slider - Format API](images/slider-format-api.gif)

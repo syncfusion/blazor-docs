@@ -32,21 +32,21 @@ The complete code for the above Numeric Range Slider can be found below.
     <div class="content-wrapper">
         <div class="sliderwrap">
             <label class="labeltext userselect">Default Slider</label>
-            <SfSlider Value="30">
+            <SfSlider @bind-Value="@Value1">
                 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicks>
                 <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.##km"></SliderTooltip>
             </SfSlider>
         </div>
         <div class="sliderwrap">
             <label class="labeltext userselect">MinRange Slider</label>
-            <SfSlider Value="30" Type=SliderType.MinRange>
+            <SfSlider @bind-Value="@Value2" Type=SliderType.MinRange>
                 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.#00"> </SliderTicks>
                     <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltip>
             </SfSlider>
         </div>
         <div class="sliderwrap">
             <label class="labeltext userselect">Range slider</label>
-            <SfSlider Value=@Value Type=SliderType.Range>
+            <SfSlider @bind-Value="@Value" Type=SliderType.Range>
                 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicks>
                 <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltip>
             </SfSlider>
@@ -54,6 +54,8 @@ The complete code for the above Numeric Range Slider can be found below.
     </div>
 </div>
 @code{
+    int Value1 = 30;
+    int Value2 = 30;
     public int[] Value = { 20, 50 };
 }
 <style>

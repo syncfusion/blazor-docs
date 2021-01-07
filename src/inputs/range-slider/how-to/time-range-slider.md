@@ -11,7 +11,7 @@ The time formatting can be achieved same as the date formatting using `TicksRend
 ```csharp
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider TValue="int[]" Min="MinValue()" Max="@MaxValue()" Type="SliderType.Range" Value="SliderValues">
+<SfSlider TValue="int[]" Min="MinValue()" Max="@MaxValue()" Type="SliderType.Range" @bind-Value="@SliderValues">
     <SliderEvents TValue="int[]" OnTooltipChange="@TooltipChange" TicksRendering="@TickesRendering"></SliderEvents>
     <SliderTicks Placement="Placement.Before" LargeStep="7200000" SmallStep="3600000" ShowSmallTicks="true"></SliderTicks>
     <SliderTooltip Placement="TooltipPlacement.After" IsVisible="true"></SliderTooltip>

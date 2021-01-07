@@ -12,13 +12,14 @@ The date formatting can be achieved using `TicksRendering` and `TooltipChange` e
 @using System.Globalization;
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider TValue="int" Min="MinValue()" Max="@MaxValue()" Value="15">
+<SfSlider TValue="int" Min="MinValue()" Max="@MaxValue()" @bind-Value="@value">
     <SliderEvents TicksRendering="@TickesRendering" TValue="int" OnTooltipChange="@TooltipChange"></SliderEvents>
     <SliderTicks LargeStep="1" ShowSmallTicks="true" Placement="Placement.Before"> </SliderTicks>
     <SliderTooltip Placement="TooltipPlacement.After" IsVisible="true"></SliderTooltip>
 </SfSlider>
 
 @code{
+    int value = 15;
     string MonthName = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 13).ToString("MMM", CultureInfo.InvariantCulture);
     public double MinValue()
     {

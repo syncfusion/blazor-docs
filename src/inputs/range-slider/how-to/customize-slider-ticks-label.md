@@ -30,7 +30,7 @@ Here, the color for rendered ticks has been applied through nth-child(`child_num
                 <div class="slider_container" id="slider_wrapper">
                     <div class="slider_labelText userselect">Dynamic ticks color</div>
                     <!-- Ticks slider element -->
-                    <SfSlider ID="ticks_slider" Enabled="true" Min="10" Max="60" Step="10" Type=SliderType.Default Value=50>
+                    <SfSlider ID="ticks_slider" Enabled="true" Min="10" Max="60" Step="10" Type=SliderType.Default @bind-Value="@value">
                         <SliderTicks Placement="Placement.Before"
                                          ShowSmallTicks="true"
                                          LargeStep="10"
@@ -44,6 +44,7 @@ Here, the color for rendered ticks has been applied through nth-child(`child_num
 </div>
 
 @code {
+    int value = 50;
     public void TicksRendering(SliderTickEventArgs args)
     {
        args.HtmlAttributes["class"] = args.HtmlAttributes["class"] + " e-custom";

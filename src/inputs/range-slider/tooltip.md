@@ -12,9 +12,13 @@ the Slider handle. The Tooltip position can be customized by using the `Placemen
 ```csharp
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider Min="0" Max="100" Value="30">
+<SfSlider Min="0" Max="100" @bind-Value="@value">
    <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.After"></SliderTooltip>
 </SfSlider>
+
+@code {
+    int value = 30;
+}
 ```
 
 ![Blazor - Slider - Tooltip](images/slider-tooltip.png)
@@ -31,9 +35,13 @@ and not to the button.
 ```csharp
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider Value="30" ShowButtons="true" >
+<SfSlider @bind-Value="@value" ShowButtons="true" >
     <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.After"></SliderTooltip>
 </SfSlider>
+
+@code {
+    int value = 30;
+}
 ```
 
 ![Blazor - Slider - Buttons](images/slider-buttons.png)

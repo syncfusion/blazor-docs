@@ -14,7 +14,7 @@ Allows end user to set the pivot table's height and width by using [`Height`](ht
 
 * Pixel: For example - 100, 200, "100px", "200px".
 * Percentage: For example - "100%", "200%".
-* Auto: It is applicable for [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_Height) property alone in-order to render the pivot table beyond its parent container height without vertical scrollbar. The parent container here would show its vertical scrollbar as soon as the component reaches beyond its dimension.
+* Auto: For example - "auto". This is the default value. It takes 100% of parent container's size to fit the pivot table component inside it.
 
 > The pivot table will not be displayed less than **400px**, since it's the minimum width of the component.
 

@@ -14,7 +14,7 @@ To get start quickly with Blazor Dialog component, you can check on this video:
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor` NuGet package to the application by using the `NuGet Package Manager`.
+* Install `Syncfusion.Blazor.Popups` NuGet package to the application by using the `NuGet Package Manager`.
 
 > Please ensure to check the `Include prerelease` option for our Beta release.
 
@@ -23,8 +23,7 @@ To get start quickly with Blazor Dialog component, you can check on this video:
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
 </head>
 
 ```
@@ -34,7 +33,7 @@ To get start quickly with Blazor Dialog component, you can check on this video:
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+     <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
 
@@ -101,6 +100,15 @@ The output will be as follows.
 ![Dialog Default](./images/default.png)
 
 > In the dialog control, max-height is calculated based on the dialog target element height. If the target property is not configured, the document.body is considered as a target. Therefore, to show a dialog in proper height, you need to add min-height to the target element.
+> If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, we can set the CSS style for the html and body to get the dialog height.
+
+```css
+
+html, body {
+   height: 100%;
+}
+
+```
 
 ## Modal dialog
 

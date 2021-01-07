@@ -1,5 +1,6 @@
 * [Getting Started](dialog/getting-started.md)
 * [Draggable](dialog/draggable.md)
+* [Resizing](dialog/resize.md)
 * [Positioning](dialog/positioning.md)
 * [Templates](dialog/template.md)
 * [Animation](dialog/animation.md)

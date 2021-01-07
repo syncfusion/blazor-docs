@@ -8,6 +8,10 @@ description: "Learn how to create a Tooltip control in Blazor application."
 
 This section briefly explains how to include a `Tooltip` in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/) for the introduction and configuring the common specifications.
 
+To get start quickly with Blazor Tooltip, you can check on this video
+
+`youtube:Lzpm6x6TXO8`
+
 ## Importing Syncfusion Blazor component in the application
 
 * Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.

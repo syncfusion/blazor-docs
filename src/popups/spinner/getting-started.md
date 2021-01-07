@@ -10,7 +10,7 @@ This section briefly explains how to include a Spinner component in your Blazor 
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor` NuGet package to the application by using the `NuGet Package Manager`.
+* Install `Syncfusion.Blazor.Spinner` NuGet package to the application by using the `NuGet Package Manager`.
 
 > Please ensure to check the `Include prerelease` option for our Beta release.
 
@@ -19,8 +19,7 @@ This section briefly explains how to include a Spinner component in your Blazor 
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
 </head>
 
 ```
@@ -30,7 +29,7 @@ This section briefly explains how to include a Spinner component in your Blazor 
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
 
@@ -86,19 +85,9 @@ To initialize the Spinner component, add the below code to your **Index.razor** 
 
 The Blazor Spinner component is used to display the loading indication with a specified target area while loading.
 
-### Create Spinner
+### Initialization
 
-Import the `Syncufusion.Blazor.Spinner` packages from `Syncfusion.Blazor` NuGet and initialize the Spinner component with a specified target area using the `Target` property.  This property is used to specify the target element `Id` or `Class` name and also used to specify where the Blazor Spinner component being displayed.
-
-> The `Target` property must be specified when your create the Blazor Spinner component.
-
-### Show Spinner
-
-Display the Spinner component whenever you want the Blazor Spinner component within the application using the `ShowSpinner` public method. Pass the arguments as target element `Id` or `Class` name to `ShowSpinner` public method.
-
-### Hide Spinner
-
-Hide the Blazor Spinner component after displaying the Blazor Spinner component over the target area using the `HideSpinner` pubic method. Pass the arguments as target element `Id` or `Class` name to `HideSpinner` public method.
+Import the `Syncufusion.Blazor.Spinner` NuGet package and initialize the Spinner component by adding the spinner as a child of the target element where the spinner needs to be shown.
 
 The following code explains how to initialize a simple Spinner in the Blazor Razor page.
 
@@ -109,23 +98,20 @@ The following code explains how to initialize a simple Spinner in the Blazor Raz
 
 <div>
     <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>
-
-    <div id="container"></div>
-
-    <SfSpinner @ref="SpinnerObj" Target="#container">
-    </SfSpinner>
+    <div id="container">
+        <SfSpinner @bind-Visible="@VisibleProperty">
+        </SfSpinner>
+    </div>
 </div>
 
 @code{
-    SfSpinner SpinnerObj;
-
-    private string Target { get; set; } = "#container";
+    private bool VisibleProperty { get; set; } = false;
 
     private async Task ClickHandler()
     {
-        SpinnerObj.ShowSpinner(Target);
+        this.VisibleProperty = true;
         await Task.Delay(2000);
-        SpinnerObj.HideSpinner(Target);
+        this.VisibleProperty = false;
     }
 }
 

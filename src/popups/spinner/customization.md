@@ -1,12 +1,12 @@
 ---
-title: "Blazor Spinner | Customize label, type, width, appearance"
+title: "Blazor Spinner | Customize label, type, size, appearance"
 component: "Spinner"
-description: "The tutorial explains about changing the spinner styles, width of the spinner, different types of spinner, and rendering a spinner with a label."
+description: "The tutorial explains about changing the spinner styles, size of the spinner, different types of spinner, and rendering a spinner with a label."
 ---
 
 # Customize the Spinner Component
 
-You can customize the Spinner component when initializing or after rendering the it.
+You can customize the Spinner component when initializing or after rendering it.
 
 ## Customize when initializing the Spinner component
 
@@ -15,7 +15,7 @@ Provided support to change the default Spinner appearance when initializing Spin
 * CssClass
 * Label
 * Type
-* Width
+* Size
 
 ### CssClass
 
@@ -31,23 +31,21 @@ The following code explains how to initialize a Spinner with the custom class na
 <div>
     <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>
 
-    <div id="container"></div>
-
-    <SfSpinner @ref="SpinnerObj" Target="#container" CssClass="e-customClass">
-    </SfSpinner>
+    <div id="container">
+        <SfSpinner @bind-Visible="@VisibleProperty" CssClass="e-customClass">
+        </SfSpinner>
+    </div>
 </div>
 
 
 @code{
-    SfSpinner SpinnerObj;
-
-    private string Target { get; set; } = "#container";
+    private bool VisibleProperty { get; set; } = false;
 
     private async Task ClickHandler()
     {
-        SpinnerObj.ShowSpinner(Target);
+        this.VisibleProperty = true;
         await Task.Delay(2000);
-        SpinnerObj.HideSpinner(Target);
+        this.VisibleProperty = false;
     }
 }
 
@@ -74,9 +72,9 @@ The following code explains how to render modal spinner.
 
 <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>
 
-<div id="container"></div>
-
-<SfSpinner @ref="SpinnerObj" Target="@Target" CssClass="e-spin-overlay" />
+<div id="container">
+    <SfSpinner @bind-Visible="@VisibleProperty" CssClass="e-spin-overlay" />
+</div>
 
 <style>
     #container {
@@ -86,15 +84,13 @@ The following code explains how to render modal spinner.
 </style>
 
 @code{
-    SfSpinner SpinnerObj;
-
-    private string Target { get; set; } = "#container";
+    private bool VisibleProperty { get; set; } = false;
 
     private async Task ClickHandler()
     {
-        SpinnerObj.ShowSpinner(Target);
+        this.VisibleProperty = true;
         await Task.Delay(10000);
-        SpinnerObj.HideSpinner(Target);
+        this.VisibleProperty = false;
     }
 }
 
@@ -116,22 +112,20 @@ The following code explains how to set the `Label` on Spinner in Blazor Razor pa
 <div>
     <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>
 
-    <div id="container"></div>
-
-    <SfSpinner @ref="SpinnerObj" Target="#container" Label="Loading....">
-    </SfSpinner>
+    <div id="container">
+        <SfSpinner @bind-Visible="@VisibleProperty" Label="Loading....">
+        </SfSpinner>
+    </div>
 </div>
 
 @code{
-    SfSpinner SpinnerObj;
-
-    private string Target { get; set; } = "#container";
+    private bool VisibleProperty { get; set; } = false;
 
     private async Task ClickHandler()
     {
-        SpinnerObj.ShowSpinner(Target);
+        this.VisibleProperty = true;
         await Task.Delay(2000);
-        SpinnerObj.HideSpinner(Target);
+        this.VisibleProperty = false;
     }
 }
 
@@ -141,8 +135,9 @@ The following code explains how to set the `Label` on Spinner in Blazor Razor pa
 
 ### Type
 
-By default, the Blazor Spinner is loaded based on the theme used in the application. You can also customize the type and show it on Spinner using the `Type` property. The available types are:
+By default, the `Type` is `None` where the Blazor Spinner is loaded based on the theme used in the application. You can also customize the type and show it on Spinner using the `Type` property. The available types are:
 
+* None
 * Material
 * Fabric
 * Bootstrap
@@ -153,28 +148,26 @@ The following code explains how to use the `Type` property when initializing Spi
 
 ```csharp
 
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Spinner
 
 <div>
     <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>
 
-    <div id="container"></div>
-
-    <SfSpinner @ref="SpinnerObj" Target="#container" Type="@SpinnerType.Bootstrap">
-    </SfSpinner>
+    <div id="container">
+        <SfSpinner @bind-Visible="@VisibleProperty" Type="@SpinnerType.Bootstrap">
+        </SfSpinner>
+    </div>
 </div>
 
 @code{
-    SfSpinner SpinnerObj;
-    private string Target { get; set; } = "#container";
+    private bool VisibleProperty { get; set; } = false;
 
     private async Task ClickHandler()
     {
-        SpinnerObj.ShowSpinner(Target);
+        this.VisibleProperty = true;
         await Task.Delay(2000);
-        SpinnerObj.HideSpinner(Target);
+        this.VisibleProperty = false;
     }
 }
 
@@ -182,11 +175,11 @@ The following code explains how to use the `Type` property when initializing Spi
 
 ![Spinner Type](./images/type.png)
 
-### Width
+### Size
 
-By default, the Spinner width is `30px`.  You can change the size of the Spinner based on your application using the `Width` property.
+By default, the Spinner size is `30px`.  You can change the size of the Spinner based on your application using the `Size` property.
 
-The following code explains how to use the `Width` property when initializing Spinner in Blazor Razor page.
+The following code explains how to use the `Size` property when initializing Spinner in Blazor Razor page.
 
 ```csharp
 
@@ -196,22 +189,20 @@ The following code explains how to use the `Width` property when initializing Sp
 <div>
     <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>
 
-    <div id="container"></div>
-
-    <SfSpinner @ref="SpinnerObj" Target="#container" Width="50px">
-    </SfSpinner>
+    <div id="container">
+        <SfSpinner @bind-Visible="@VisibleProperty" Size="50">
+        </SfSpinner>
+    </div>
 </div>
 
 @code{
-    SfSpinner SpinnerObj;
-
-    private string Target { get; set; } = "#container";
+    private bool VisibleProperty { get; set; } = false;
 
     private async Task ClickHandler()
     {
-        SpinnerObj.ShowSpinner(Target);
+        this.VisibleProperty = true;
         await Task.Delay(2000);
-        SpinnerObj.HideSpinner(Target);
+        this.VisibleProperty = false;
     }
 }
 
@@ -221,50 +212,46 @@ The following code explains how to use the `Width` property when initializing Sp
 
 ## Customize after creating the Spinner component
 
-Customize the Spinner component using the `SetSpinner` public method after creating the Spinner component by using the following properties:
+The Spinner component can be customized dynamically after initialize the Spinner component by using the following properties:
 
 * Type
 * CssClass
 
 ### Type
 
-You can also change the type using the `SetSpinner` public method and show it on Spinner using the `Type` property. The available types are:
-
-* Material
-* Fabric
-* Bootstrap
-* HighContrast
-* Bootstrap4
+You can dynamically change the type of the Spinner using the `Type` property.
 
 The following code explains how to use the `Type` property after creating the Spinner in Blazor Razor page.
 
 ```csharp
 
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Spinner
 
 <div>
     <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>
+    <SfButton @onclick="@ChangeType">Change Type</SfButton>
 
-    <div id="container"></div>
-
-    <SfSpinner @ref="SpinnerObj" Target="#container">
-    </SfSpinner>
+    <div id="container">
+        <SfSpinner @bind-Visible="@VisibleProperty" Type="@SpinnerType">
+        </SfSpinner>
+    </div>
 </div>
 
 @code{
-    SfSpinner SpinnerObj;
-
-    private string Target { get; set; } = "#container";
-    private SetSpinnerModel SetOptions = new SetSpinnerModel { Type = SpinnerType.HighContrast };
+    private SpinnerType SpinnerType = SpinnerType.Fabric;
+    private bool VisibleProperty { get; set; } = false;
 
     private async Task ClickHandler()
     {
-        SpinnerObj.SetSpinner(SetOptions);
-        SpinnerObj.ShowSpinner(Target);
+        this.VisibleProperty = true;
         await Task.Delay(2000);
-        SpinnerObj.HideSpinner(Target);
+        this.VisibleProperty = false;
+    }
+
+    private async Task ChangeType()
+    {
+        SpinnerType = SpinnerType.Material;
     }
 }
 
@@ -274,7 +261,7 @@ The following code explains how to use the `Type` property after creating the Sp
 
 ### CssClass
 
-Add the custom class name to Spinner using the `SetSpinner` public method after creating the Spinner component.
+Add the custom class name to Spinner after creating the Spinner component.
 
 The following code explains how to dynamically add the `CssClass` property after creating the Spinner in Blazor Razor page.
 
@@ -285,25 +272,29 @@ The following code explains how to dynamically add the `CssClass` property after
 
 <div>
     <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>
+    <SfButton @onclick="@ChangeClass">Change CSS Class</SfButton>
 
-    <div id="container"></div>
-
-    <SfSpinner @ref="SpinnerObj" Target="#container">
-    </SfSpinner>
+    <div id="container">
+        <SfSpinner @bind-Visible="@VisibleProperty" CssClass="@CssClassName">
+        </SfSpinner>
+    </div>
 </div>
 
 @code{
-    SfSpinner SpinnerObj;
-
-    private string Target { get; set; } = "#container";
-    private SetSpinnerModel SetOptions = new SetSpinnerModel { CssClass = "e-customClass" };
+    private string CssClassName { get; set; } = "";
+    private bool VisibleProperty { get; set; } = false;
 
     private async Task ClickHandler()
     {
-        SpinnerObj.SetSpinner(SetOptions);
-        SpinnerObj.ShowSpinner(Target);
+        this.VisibleProperty = true;
         await Task.Delay(2000);
-        SpinnerObj.HideSpinner(Target);
+        this.VisibleProperty = false;
+    }
+
+    private async Task ChangeClass()
+    {
+        this.CssClassName = "e-customClass";
+        StateHasChanged();
     }
 }
 

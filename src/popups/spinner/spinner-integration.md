@@ -8,7 +8,7 @@ description: "The tutorial explains how to integrate spinner within other Blazor
 
 The Spinner component rendered with other Blazor components.
 
-For example, rendered the Blazor Tab component with Spinner component.  Specify the Tab component content as a Spinner target area and show or hide the Spinner when Tab switching.
+For example, rendered the Blazor Tab component with Spinner component.  To render the spinner inside the Tab component the Spinner is set as a child of the Tab component and show or hide the Spinner when Tab switching.
 
 The following code explains the above behavior.
 
@@ -49,25 +49,24 @@ The following code explains the above behavior.
                 </TabItem>
             </TabItems>
             <TabEvents Selecting="@Selecting" Selected="@Selected"></TabEvents>
+            <SfSpinner @bind-Visible="@VisibleProperty">
+            </SfSpinner>
         </SfTab>
     </div>
-    <SfSpinner @ref="SpinnerObj" Target="#tab .e-content">
-    </SfSpinner>
 </div>
 
 @code{
-    SfSpinner SpinnerObj;
-    private string Target { get; set; } = "#tab .e-content";
+    private bool VisibleProperty { get; set; } = false;
 
     private async Task Selected(SelectEventArgs args)
     {
-        await Task.Delay(500);
-        SpinnerObj.HideSpinner(Target);
+        await Task.Delay(2000);
+        this.VisibleProperty = false;
     }
 
     private void Selecting(SelectingEventArgs args)
     {
-        SpinnerObj.ShowSpinner(Target);
+        this.VisibleProperty = true;
     }
 }
 <style>

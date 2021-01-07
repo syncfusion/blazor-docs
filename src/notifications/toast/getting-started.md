@@ -14,7 +14,7 @@ To get start quickly with Blazor Toast component, you can check on this video:
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor` NuGet package to the application by using the `NuGet Package Manager`.
+* Install `Syncfusion.Blazor.Notifications` NuGet package to the application by using the `NuGet Package Manager`.
 
 > Please ensure to check the `Include prerelease` option for our Beta release.
 
@@ -23,8 +23,7 @@ To get start quickly with Blazor Toast component, you can check on this video:
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
 </head>
 
 ```
@@ -34,7 +33,7 @@ To get start quickly with Blazor Toast component, you can check on this video:
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
 

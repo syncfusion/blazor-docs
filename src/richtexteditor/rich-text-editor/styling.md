@@ -17,20 +17,20 @@ To apply different font style for section of the content, select the text that y
 The following table, lists the default font name and width of the `FontName` dropdown and available list of font names.
 
 | Default Key | Default Value |
-|----------------|--------------------------------------|
+|-----|--------------------------------------|
 | Default | null |
 | Width | 65px|
-| Items | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-segoe-ui", Command = "Font", SubCommand = "FontName", Text = "Segoe UI", Value = "Segoe UI" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-arial", Command = "Font", SubCommand = "FontName", Text = "Arial", Value = "Arial,Helvetica,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-georgia", Command = "Font", SubCommand = "FontName", Text = "Georgia", Value = "Georgia,serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-impact", Command = "Font", SubCommand = "FontName", Text = "Impact", Value = "Impact,Charcoal,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-tahoma", Command = "Font", SubCommand = "FontName", Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-times-new-roman", Command = "Font", SubCommand = "FontName", Text = "Times New Roman", Value = "Times New Roman,Times,serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { CssClass = "e-verdana", Command = "Font", SubCommand = "FontName", Text = "Verdana", Value = "Verdana,Geneva,sans-serif"}<br>};|
+| Items | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Segoe UI", Value = "Segoe UI" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Arial", Value = "Arial,Helvetica,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Georgia", Value = "Georgia,serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Impact", Value = "Impact,Charcoal,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Times New Roman", Value = "Times New Roman,Times,serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Verdana", Value = "Verdana,Geneva,sans-serif"}<br>}; |
 
 ### Font size
 
 The following table list the default font size and width of the `FontSize` dropdown and available list of font size.
 
 | Default Key | Default Value |
-|----------------|---------|
+|-----|--------------------------------------|
 | Default | null |
 | Width | 35px.|
-| Items |new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "8 pt", Value = "8pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "10 pt", Value = "10pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "12 pt", Value = "12pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "14 pt", Value = "14pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "18 pt", Value = "18pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "24 pt", Value = "24pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "36 pt", Value = "36pt" }<br>};|
+| Items | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "8 pt", Value = "8pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "10 pt", Value = "10pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "12 pt", Value = "12pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "14 pt", Value = "14pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "18 pt", Value = "18pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "24 pt", Value = "24pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "36 pt", Value = "36pt" }<br>}; |
 
 The following sample demonstrates the option to add the font name and font size tools to the toolbar as well as modify the default `Width` of the tools.
 
@@ -134,20 +134,20 @@ If you want to add additional font names and font sizes to font drop-down, pass 
 
     private List<DropDownItemModel> FontFamilyItems = new List<DropDownItemModel>()
     {
-        new DropDownItemModel() { CssClass = "e-segoe-ui", Command = "Font", SubCommand = "FontName", Text = "Segoe UI", Value = "Arial,Helvetica,sans-serif" },
-        new DropDownItemModel() { CssClass = "e-arial", Command = "Font", SubCommand = "FontName", Text = "Arial", Value = "Roboto" },
-        new DropDownItemModel() { CssClass = "e-georgia", Command = "Font", SubCommand = "FontName", Text = "Georgia", Value = "Georgia,serif" },
-        new DropDownItemModel() { CssClass = "e-impact", Command = "Font", SubCommand = "FontName", Text = "Impact", Value = "Impact,Charcoal,sans-serif" },
-        new DropDownItemModel() { CssClass = "e-tahoma", Command = "Font", SubCommand = "FontName", Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" }
+        new DropDownItemModel() { Text = "Segoe UI", Value = "Arial,Helvetica,sans-serif" },
+        new DropDownItemModel() { Text = "Arial", Value = "Roboto" },
+        new DropDownItemModel() { Text = "Georgia", Value = "Georgia,serif" },
+        new DropDownItemModel() { Text = "Impact", Value = "Impact,Charcoal,sans-serif" },
+        new DropDownItemModel() { Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" }
     };
 
     private List<DropDownItemModel> FontSizeItems = new List<DropDownItemModel>()
     {
-        new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "8 pt", Value = "8pt" },
-        new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "10 pt", Value = "10pt" },
-        new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "12 pt", Value = "12pt" },
-        new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "14 pt", Value = "14pt" },
-        new DropDownItemModel() { Command = "Font", SubCommand = "FontSize", Text = "42 pt", Value = "42pt" }
+        new DropDownItemModel() { Text = "8 pt", Value = "8pt" },
+        new DropDownItemModel() { Text = "10 pt", Value = "10pt" },
+        new DropDownItemModel() { Text = "12 pt", Value = "12pt" },
+        new DropDownItemModel() { Text = "14 pt", Value = "14pt" },
+        new DropDownItemModel() { Text = "42 pt", Value = "42pt" }
     };
 }
 
@@ -158,6 +158,87 @@ The output will be as follows.
 ![Custom Fonts](./images/custom-font.png)
 
 ![Custom Font size](./images/custom-font-size.png)
+
+## Formats
+
+By default, the editor is initialized with default items of formats. To change it, select a different format from the drop-down in the editor’s toolbar.
+
+To apply different format style for section of the content, select a required format from the drop-down to apply the changes to the selection.
+
+The following table, lists the default format name and width of the `Format` dropdown and available list of format names.
+
+| Default Key | Default Value |
+|-----|--------------------------------------|
+| Default | null |
+| Width | 65px|
+| Items | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Paragraph", Value = "P" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Code", Value = "Pre" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Quotation", Value = "BlockQuote" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 1", Value = "H1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 2", Value = "H2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 3", Value = "H3" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 4", Value = "H4" }<br>}; |
+
+### Custom formats
+
+Rich Text Editor provides support to custom formats with existing list.
+If you want to add additional formats to format drop-down, pass the format information as `List<DropDownItemModel>` data to the `Items` field of `RichTextEditorFormat` tag.
+
+```csharp
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorFormat Items="@FormatItems" />
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+    <p><b> Key features:</b></p>
+    <ul>
+        <li><p> Provides <b>IFRAME</b> and <b>DIV</b> modes </p></li>
+        <li><p> Capable of handling markdown editing.</p></li>
+        <li><p> Contains a modular library to load the necessary functionality on demand.</p></li>
+        <li><p> Provides a fully customizable toolbar.</p></li>
+        <li><p> Provides HTML view to edit the source directly for developers.</p></li>
+        <li><p> Supports third - party library integration.</p></li>
+    </ul>
+</SfRichTextEditor>
+
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+    };
+
+    private List<DropDownItemModel> FormatItems = new List<DropDownItemModel>()
+    {
+        new DropDownItemModel() { Text = "Paragraph", Value = "P" },
+        new DropDownItemModel() { Text = "Code", Value = "Pre" },
+        new DropDownItemModel() { Text = "Quotation", Value = "BlockQuote" },
+        new DropDownItemModel() { Text = "Heading 1", Value = "H1" },
+        new DropDownItemModel() { Text = "Heading 2", Value = "H2" },
+        new DropDownItemModel() { Text = "Heading 3", Value = "H3" },
+        new DropDownItemModel() { Text = "Heading 4", Value = "H4" },
+        new DropDownItemModel() { Text = "Heading 5", Value = "H5" },
+        new DropDownItemModel() { Text = "Heading 6", Value = "H6" }
+    };
+}
+
+```
+
+The output will be as follows.
+
+![Custom Formats](./images/custom-formats.png)
 
 ## Font and Background color
 

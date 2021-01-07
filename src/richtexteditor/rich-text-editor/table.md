@@ -122,6 +122,35 @@ By default, provides `Dashed border` and `Alternate rows`.
 
 ![RTE table styles](./images/table_style.png)
 
+### Custom Styles
+
+Rich Text Editor provides support to custom styles for tables. If you want to add additional styles, pass the styles information as `List<DropDownItemModel>` data to the `Styles` field of `RichTextEditorTableSettings` tag.
+
+```csharp
+
+<SfRichTextEditor>
+    <RichTextEditorTableSettings Styles="@StyleItems" />
+    <RichTextEditorToolbarSettings Items="@Tools" />
+</SfRichTextEditor>
+
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable }
+    };
+
+    private List<DropDownItemModel> StyleItems = new List<DropDownItemModel>()
+    {
+        new DropDownItemModel() { Text = "Alternate Rows" }
+    };
+}
+
+```
+
+The output will be as follows.
+
+![Custom Table Styles](./images/custom-table-styles.png)
+
 ## Table Properties
 
 Sets the default width of the table when it is inserted in the Rich Text Editor using the width of

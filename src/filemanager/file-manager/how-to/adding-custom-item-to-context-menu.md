@@ -10,7 +10,7 @@ The `ContextMenuSettings` is used to add new menu item. The `MenuOpened` event i
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager>
+    <SfFileManager TValue="FileManagerDirectoryContent">
         <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
                                  UploadUrl="/api/SampleData/Upload"
                                  DownloadUrl="/api/SampleData/Download"

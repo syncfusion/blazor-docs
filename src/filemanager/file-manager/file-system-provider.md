@@ -43,7 +43,7 @@ After setting the root directory of the file system, just build and run the proj
 
 @* Replace the hosted port number in the place of "{port}" *@
 
-<SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="http://localhost:{port}/api/FileManager/FileOperations"
                              UploadUrl="http://localhost:{port}/api/FileManager/Upload"
                              DownloadUrl="http://localhost:{port}/api/FileManager/Download"
@@ -77,7 +77,7 @@ After setting the root directory of the file system, just build and run the proj
 
 @* Replace the hosted port number in the place of "{port}" *@
 
-<SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="http://localhost:{port}/FileManager/FileOperations"
                              UploadUrl="http://localhost:{port}/FileManager/Upload"
                              DownloadUrl="http://localhost:{port}/FileManager/Download"
@@ -126,7 +126,7 @@ After setting the blob container references, just build and run the project. Now
 
 @* Replace the hosted port number in the place of "{port}" *@
 
-<SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="http://localhost:{port}/api/AzureProvider/AzureFileOperations"
                              UploadUrl="http://localhost:{port}/api/AzureProvider/AzureUpload"
                              DownloadUrl="http://localhost:{port}/api/AzureProvider/AzureDownload"
@@ -184,7 +184,7 @@ After setting the blob container references, just build and run the project. Now
 
 @* Replace the hosted port number in the place of "{port}" *@
 
-<SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="http://localhost:{port}/AzureProvider/AzureFileOperations"
                              UploadUrl="http://localhost:{port}/AzureProvider/AzureUpload"
                              DownloadUrl="http://localhost:{port}/AzureProvider/AzureDownload"
@@ -224,7 +224,7 @@ After registering the Amazon client account details, just build and run the proj
 
 @* Replace the hosted port number in the place of "{port}" *@
 
-<SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="http://localhost:{port}/api/AmazonS3Provider/AmazonS3FileOperations"
                              UploadUrl="http://localhost:{port}/api/AmazonS3Provider/AmazonS3Upload"
                              DownloadUrl="http://localhost:{port}/api/AmazonS3Provider/AmazonS3Download"
@@ -262,7 +262,7 @@ After registering the File Transfer Protocol details, just build and run the pro
 
 @* Replace the hosted port number in the place of "{port}" *@
 
-<SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="http://localhost:{port}/api/FTPProvider/FTPFileOperations"
                              UploadUrl="http://localhost:{port}/api/FTPProvider/FTPUpload"
                              DownloadUrl="http://localhost:{port}/api/FTPProvider/FTPDownload"
@@ -320,7 +320,7 @@ After configuring the connection, just build and run the project. Now, the proje
 
 @* Replace the hosted port number in the place of "{port}" *@
 
-<SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="http://localhost:{port}/api/SQLProvider/SQLFileOperations"
                              UploadUrl="http://localhost:{port}/api/SQLProvider/SQLUpload"
                              DownloadUrl="http://localhost:{port}/api/SQLProvider/SQLDownload"
@@ -359,7 +359,7 @@ After updating the credentials, just build and run the project. Now, the project
 
 @* Replace the hosted port number in the place of "{port}" *@
 
-<SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveFileOperations"
                              UploadUrl="http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveUpload"
                              DownloadUrl="http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveDownload"
@@ -426,7 +426,7 @@ Now, just mapping the ajaxSettings property of the FileManager component to the 
 
 @* Replace the hosted port number in the place of "{port}" *@
 
-<SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="http://localhost:{port}/"
                              UploadUrl="http://localhost:{port}/Upload"
                              DownloadUrl="http://localhost:{port}/Download"
@@ -555,7 +555,7 @@ After configuring the Firebase Realtime Database service link, build and run the
 
 @* Replace the hosted port number in the place of "{port}" *@
 
-<SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeFileOperations"
                              UploadUrl="http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeUpload"
                              DownloadUrl="http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeDownload"

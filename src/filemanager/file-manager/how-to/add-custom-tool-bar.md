@@ -10,7 +10,7 @@ The new toolbar button is added using `ToolbarSettings`. The  event is used to a
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager>
+    <SfFileManager TValue="FileManagerDirectoryContent">
         <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
                                  UploadUrl="/api/SampleData/Upload"
                                  DownloadUrl="/api/SampleData/Download"

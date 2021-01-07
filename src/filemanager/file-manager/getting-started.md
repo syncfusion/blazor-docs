@@ -110,7 +110,7 @@ To render the File Manager with local service, refer to the following code snipp
 ```csharp
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager>
+    <SfFileManager TValue="FileManagerDirectoryContent">
         <FileManagerAjaxSettings Url="/api/SampleData/FileOperations">
         </FileManagerAjaxSettings>
     </SfFileManager>
@@ -212,7 +212,7 @@ To perform the download operation, initialize the `DownloadUrl` property in a Fi
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager>
+    <SfFileManager TValue="FileManagerDirectoryContent">
         <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
                                  DownloadUrl="/api/SampleData/Download">
         </FileManagerAjaxSettings>
@@ -253,7 +253,7 @@ To perform the upload operation, initialize the `UploadUrl` property in a FileMa
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager>
+    <SfFileManager TValue="FileManagerDirectoryContent">
         <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
                                  UploadUrl="/api/SampleData/Upload">
         </FileManagerAjaxSettings>
@@ -302,7 +302,7 @@ To perform image preview support in the File Manager component,  initialize the 
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager>
+    <SfFileManager TValue="FileManagerDirectoryContent">
         <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
                                  GetImageUrl="/api/SampleData/GetImage">
         </FileManagerAjaxSettings>
@@ -342,7 +342,7 @@ The following output will demonstrate the image preview of File Manager.
 
 Refer to the following sample link, which is preconfigured with above steps.
 
-[File Manager with local service](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager-806090727)
+[File Manager with local service](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager-315130224)
 
 ## See Also
 

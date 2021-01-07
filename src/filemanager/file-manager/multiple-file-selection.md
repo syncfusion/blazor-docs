@@ -12,7 +12,7 @@ The file manager allows you to select multiple files by enabling the `AllowMulti
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager AllowMultiSelection="true">
+    <SfFileManager AllowMultiSelection="true" TValue="FileManagerDirectoryContent">
         <FileManagerAjaxSettings  Url="/api/SampleData/FileOperations"
                                  UploadUrl="/api/SampleData/Upload"
                                  DownloadUrl="/api/SampleData/Download"

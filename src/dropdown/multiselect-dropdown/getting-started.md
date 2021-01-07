@@ -10,7 +10,7 @@ This section briefly explains about how to include a **MultiSelect** Component i
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor` NuGet package to the application by using the `NuGet Package Manager`.
+* Install `Syncfusion.Blazor.DropDowns` NuGet package to the application by using the `NuGet Package Manager`.
 
 > Please ensure to check the `Include prerelease` option for our Beta release.
 
@@ -18,7 +18,7 @@ This section briefly explains about how to include a **MultiSelect** Component i
 
  ```html
     <head>
-            <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+            <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
             @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
     </head>
 ```
@@ -27,7 +27,7 @@ This section briefly explains about how to include a **MultiSelect** Component i
 
  ```html
     <head>
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
         <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
     </head>
 ```

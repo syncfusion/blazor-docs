@@ -4,7 +4,7 @@ component: "ListView"
 description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
-# How to fetch selected items from ListView template sample
+# How To fetch selected items from listview template sample
 
 Single or multiple items can be selected by users in the ListView control.
 
@@ -45,11 +45,11 @@ So, we need to map id attribute to listview items using `ListViewFieldSettings` 
     ListDataModel Selected;
 
     List<ListDataModel> DataSource = new List<ListDataModel>() {
-        new ListDataModel { Name = "Nancy", Contact = "(206) 555-985774", Id = "1", Image = "./../images/1.png", Category = "Experience" },
-        new ListDataModel { Name = "Janet", Contact = "(206) 555-3412", Id = "2", Image = "./../images/3.png", Category = "Fresher" },
-        new ListDataModel { Name = "Margaret", Contact = "(206) 555-8122", Id = "4", Image = "./../images/4.png", Category = "Experience" },
-        new ListDataModel { Name = "Andrew ", Contact = "(206) 555-9482", Id = "5", Image = "./../images/2.png", Category = "Experience" },
-        new ListDataModel { Name = "Steven", Contact = "(71) 555-4848", Id = "6", Image = "./../images/5.png", Category = "Fresher" },
+        new ListDataModel { Name = "Nancy", Contact = "(206) 555-985774", Id = "1", Image = "https://ej2.syncfusion.com/demos/src/grid/images/1.png", Category = "Experience" },
+        new ListDataModel { Name = "Janet", Contact = "(206) 555-3412", Id = "2", Image = "https://ej2.syncfusion.com/demos/src/grid/images/3.png", Category = "Fresher" },
+        new ListDataModel { Name = "Margaret", Contact = "(206) 555-8122", Id = "4", Image = "https://ej2.syncfusion.com/demos/src/grid/images/4.png", Category = "Experience" },
+        new ListDataModel { Name = "Andrew ", Contact = "(206) 555-9482", Id = "5", Image = "https://ej2.syncfusion.com/demos/src/grid/images/2.png", Category = "Experience" },
+        new ListDataModel { Name = "Steven", Contact = "(71) 555-4848", Id = "6", Image = "https://ej2.syncfusion.com/demos/src/grid/images/5.png", Category = "Fresher" },
     };
 
     void OnSelect(ListDataModel listData)

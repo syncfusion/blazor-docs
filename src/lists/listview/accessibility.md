@@ -201,8 +201,6 @@ The following key shortcuts are used to access the ListView control without any 
 
 ```
 
-{% endtab %}
-
 ## ARIA attributes
 
 The following ARIA attributes are applicable for ListView control based on its state.

@@ -4,7 +4,7 @@ component: "ListView"
 description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
-# How to use dynamic templates in ListView based on device
+# How to use dynamic templates in listview based on device
 
 The Syncfusion Essential Blazor controls are desktop and mobile-friendly. So, you can use Syncfusion controls in
 both modes. The control templates are not always fixed. Applications may need to load various templates depending
@@ -76,10 +76,10 @@ two templates have been loaded for mobile and desktop modes. To check the device
     bool IsMobile;
     List<ListDataModel> DataSource = new List<ListDataModel>()
 {
-        new ListDataModel{ Name = "IBM Open-Sources Web Sphere Liberty Code", Content =  "In September, IBM announced that it would be open-sourcing the code for WebSphere...", Id =  "1", Image =  "./images/1.png", TimeStamp =  "Syncfusion Blog - October 19, 2017" },
-        new ListDataModel{ Name =  "Must Reads: 5 Big Data E-books to upend your development", Content =  "Our first e-book was published in May 2012-jQuery Succinctly was the start of over...", Id =  "2", Image =  "./../images/2.png", TimeStamp =  "Syncfusion Blog - October 18, 2017" },
-        new ListDataModel{ Name =  "The Syncfusion Global License: Your Questions, Answered ", Content =  "Syncfusion recently hosted a webinar to cover the ins and outs of the Syncfusion global...", Id =  "4", Image =  "./../images/3.png", TimeStamp =  "Syncfusion Blog - October 18, 2017" },
-        new ListDataModel{ Name =  "Know =  What is Coming from Microsoft this Fall ", Content =  "On October 17, Microsoft will release its Fall Creators Update for the Windows 10 platform...", Id =  "5", Image =  "./../images/6.png", TimeStamp =  "Syncfusion Blog - October 17, 2017"},
+        new ListDataModel{ Name = "IBM Open-Sources Web Sphere Liberty Code", Content =  "In September, IBM announced that it would be open-sourcing the code for WebSphere...", Id =  "1", Image =  "https://ej2.syncfusion.com/demos/src/listview/images/1.png", TimeStamp =  "Syncfusion Blog - October 19, 2017" },
+        new ListDataModel{ Name =  "Must Reads: 5 Big Data E-books to upend your development", Content =  "Our first e-book was published in May 2012-jQuery Succinctly was the start of over...", Id =  "2", Image =  "https://ej2.syncfusion.com/demos/src/listview/images/2.png", TimeStamp =  "Syncfusion Blog - October 18, 2017" },
+        new ListDataModel{ Name =  "The Syncfusion Global License: Your Questions, Answered ", Content =  "Syncfusion recently hosted a webinar to cover the ins and outs of the Syncfusion global...", Id =  "4", Image =  "https://ej2.syncfusion.com/demos/src/listview/images/3.png", TimeStamp =  "Syncfusion Blog - October 18, 2017" },
+        new ListDataModel{ Name =  "Know =  What is Coming from Microsoft this Fall ", Content =  "On October 17, Microsoft will release its Fall Creators Update for the Windows 10 platform...", Id =  "5", Image =  "https://ej2.syncfusion.com/demos/src/listview/images/6.png", TimeStamp =  "Syncfusion Blog - October 17, 2017"},
     };
 
     protected override void OnInitialized()

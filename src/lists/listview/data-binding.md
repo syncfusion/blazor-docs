@@ -28,6 +28,8 @@ ListView supports different kind of data services such as OData, OData V4, and W
 
 ## Bind to local data
 
+Local data can be represented in Array of JSON data:
+
 ### Array of JSON data
 
 ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the field property.
@@ -39,7 +41,7 @@ ListView can generate its list items through an array of complex data. To get it
 </SfListView>
 
 @code {
-   public string HeaderTitle = "ListView";
+   public string HeaderTitle = "Listview";
 
     List<DataModel> Data = new List<DataModel>();
 
@@ -80,8 +82,8 @@ In the following sample, first 6 products from the Product table of NorthWind da
 ```csharp
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
-<SfListView HeaderTitle="Products" ShowHeader="true" TValue="Data" Query="@query">
+
+<SfListView  HeaderTitle="Products" ShowHeader="true" TValue="Data" Query="@query">
     <ListViewFieldSettings TValue="Data" Id="ProductID" Text="ProductName"></ListViewFieldSettings>
     <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
 </SfListView>
@@ -252,14 +254,14 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
         this.List.AddItem(product, null);
     }
 
-    async Task Delete()
+    async void Delete()
     {
         var items = await this.List.GetSelectedItems();
         if (items.Data != null)
         {
             selectedItems = items.Data;
             Products list = new Products() { ProductID = selectedItems[0].ProductID, ProductName = selectedItems[0].ProductName };
-            this.List.RemoveItem(list);
+            await this.List.RemoveItem(list);
         }
     }
 }

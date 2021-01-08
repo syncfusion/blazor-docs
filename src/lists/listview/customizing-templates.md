@@ -10,11 +10,11 @@ The ListView component is designed to customize each list items and group title.
 
 ## Header Template
 
-ListView header can be customized with the help of the `HeaderTemplate` property.
+Listview header can be customized with the help of the `HeaderTemplate` property.
 
-To customize header template in your application, set your customized template string to `HeaderTemplate` property along with `ShowHeader` property as `true` to display the ListView header.
+To customize header template in your application, set your customized template string to `HeaderTemplate` property along with `ShowHeader` property as `true` to display the Listview header.
 
-In the following example, we have rendered ListView with customized header which contains search, add and sort buttons.
+In the following example, we have rendered Listview with customized header which contains search, add and sort buttons.
 
 ```csharp
 @using Syncfusion.Blazor.Lists
@@ -81,26 +81,27 @@ In the following example, we have customized list items with built-in CSS classe
 
 ```csharp
 @using Syncfusion.Blazor.Lists
-<SfListView DataSource="@ListData"
-            HeaderTitle="Contacts"
-            ShowHeader="true"
-            CssClass="e-list-template"
-            Width="350"
-            SortOrder="Syncfusion.Blazor.Lists.SortOrder.Ascending">
+<SfListView Id="List"
+             DataSource="@ListData"
+             HeaderTitle="Contacts"
+             ShowHeader="true"
+             CssClass="e-list-template"
+             Width="350"
+             SortOrder="Syncfusion.Blazor.Lists.SortOrder.Ascending">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
     <ListViewTemplates TValue="DataModel">
         <Template>
             <div class="e-list-wrapper e-list-multi-line e-list-avatar">
-                @if (context.Avatar != "")
+                @if (((context as DataModel).Avatar) != "")
                 {
-                    <span class="e-avatar e-avatar-circle">@(context.Avatar)</span>
+                <span class="e-avatar e-avatar-circle">@((context as DataModel).Avatar)</span>
                 }
                 else
                 {
-                    <span class="@context.Pic e-avatar e-avatar-circle"> </span>
+                    <span class="@((context as DataModel).Pic) e-avatar e-avatar-circle"> </span>
                 }
-                <span class="e-list-item-header">@context.Text</span>
-                <span class="e-list-content">@context.Contact</span>
+                    <span class="e-list-item-header">@((context as DataModel).Text)</span>
+            <span class="e-list-content">@((context as DataModel).Contact)</span>
             </div>
         </Template>
     </ListViewTemplates>
@@ -180,7 +181,7 @@ In the following example, we have customized list items with built-in CSS classe
 
     }
 
-    public class DataModel
+   public class DataModel
     {
         public string Id { get; set; }
         public string Text { get; set; }
@@ -196,19 +197,19 @@ In the following example, we have customized list items with built-in CSS classe
     }
 
     .pic01 {
-        background-image: url("./images/1.png");
+        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/1.png");
     }
 
     .pic02 {
-        background-image: url("./images/3.png");
+        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/3.png");
     }
 
     .pic03 {
-        background-image: url("./images/5.png");
+        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/5.png");
     }
 
     .pic04 {
-        background-image: url("./images/2.png");
+        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/2.png");
     }
 
     #List .e-list-item:nth-child(1) .e-avatar {
@@ -238,12 +239,12 @@ ListView group header can be customized with the help of the [`GroupTemplate`] p
 
 To customize the group template in your application, set your customized template string to `GroupTemplate` property.
 
-In the following example, we have grouped ListView based on the category. The category of each list item should be mapped with `GroupBy` field of the data. We have also displayed grouped list items count in the group list header.
+In the following example, we have grouped Listview based on the category. The category of each list item should be mapped with `GroupBy` field of the data. We have also displayed grouped list items count in the group list header.
 
 ```csharp
 @using Syncfusion.Blazor.Lists
 <SfListView ID="list" DataSource="@ListData" CssClass="e-list-template">
-    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name" GroupBy="Category"></ListViewFieldSettings>
+    <ListViewFieldSettings Id="Id" Text="Name" GroupBy="Category"></ListViewFieldSettings>
     <ListViewTemplates TValue="DataModel">
         <Template>
             <div class="e-list-wrapper e-list-multi-line e-list-avatar">
@@ -268,14 +269,14 @@ In the following example, we have grouped ListView based on the category. The ca
     {
         base.OnInitialized();
 
-        ListData.Add(new DataModel { Name = "Nancy", Contact = "(206) 555-985774", Id = "1", Image = "./images/1.png", Category = "Experience" });
-        ListData.Add(new DataModel { Name = "Janet", Contact = "(206) 555-3412", Id = "2", Image = "./images/3.png", Category = "Fresher" });
-        ListData.Add(new DataModel { Name = "Margaret", Contact = "(206) 555-8122", Id = "4", Image = "./images/4.png", Category = "Experience" });
-        ListData.Add(new DataModel { Name = "Andrew ", Contact = "(206) 555-9482", Id = "5", Image = "./images/2.png", Category = "Experience" });
-        ListData.Add(new DataModel { Name = "Steven", Contact = "(71) 555-4848", Id = "6", Image = "./images/5.png", Category = "Fresher" });
-        ListData.Add(new DataModel { Name = "Michael", Contact = "(71) 555-7773", Id = "7", Image = "./images/6.png", Category = "Experience" });
-        ListData.Add(new DataModel { Name = "Robert", Contact = "(71) 555-5598", Id = "8", Image = "./images/7.png", Category = "Fresher" });
-        ListData.Add(new DataModel { Name = "Laura", Contact = "(206) 555-1189", Id = "9", Image = "./images/8.png", Category = "Experience" });
+        ListData.Add(new DataModel { Name = "Nancy", Contact = "(206) 555-985774", Id = "1", Image = "https://ej2.syncfusion.com/demos/src/grid/images/1.png", Category = "Experience" });
+        ListData.Add(new DataModel { Name = "Janet", Contact = "(206) 555-3412", Id = "2", Image = "https://ej2.syncfusion.com/demos/src/grid/images/3.png", Category = "Fresher" });
+        ListData.Add(new DataModel { Name = "Margaret", Contact = "(206) 555-8122", Id = "4", Image = "https://ej2.syncfusion.com/demos/src/grid/images/4.png", Category = "Experience" });
+        ListData.Add(new DataModel { Name = "Andrew ", Contact = "(206) 555-9482", Id = "5", Image = "https://ej2.syncfusion.com/demos/src/grid/images/2.png", Category = "Experience" });
+        ListData.Add(new DataModel { Name = "Steven", Contact = "(71) 555-4848", Id = "6", Image = "https://ej2.syncfusion.com/demos/src/grid/images/5.png", Category = "Fresher" });
+        ListData.Add(new DataModel { Name = "Michael", Contact = "(71) 555-7773", Id = "7", Image = "https://ej2.syncfusion.com/demos/src/grid/images/6.png", Category = "Experience" });
+        ListData.Add(new DataModel { Name = "Robert", Contact = "(71) 555-5598", Id = "8", Image = "https://ej2.syncfusion.com/demos/src/grid/images/7.png", Category = "Fresher" });
+        ListData.Add(new DataModel { Name = "Laura", Contact = "(206) 555-1189", Id = "9", Image = "https://ej2.syncfusion.com/demos/src/grid/images/8.png", Category = "Experience" });
     }
 
     class DataModel

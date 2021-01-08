@@ -4,7 +4,7 @@ component: "ListView"
 description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
-# How to create dual list from ListView
+# How to create dual list from listview
 
 The dual list contains two ListView. This allows you to move list items from one list to another using the client-side
 events. This section explains how to integrate the ListView control to achieve dual list.
@@ -59,7 +59,7 @@ enabled when selecting an item in lists.
                 <SfTextBox Placeholder="Filter" Input="@(e => OnInput(e, 1))"></SfTextBox>
                 <SfListView DataSource="@FirstData">
                     <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
-                    <ListViewEvents TValue="ListDataModel" Clicked="@(e => OnSelected(e, 1))"></ListViewEvents>
+                    <ListViewEvents TValue="ListDataModel" Selected="@(e => OnSelected(e, 1))"></ListViewEvents>
                 </SfListView>
             </div>
             <div class="flex vertical vertical__center flex__center padding">
@@ -79,8 +79,8 @@ enabled when selecting an item in lists.
             <div class="padding">
                 <SfTextBox Placeholder="Filter" Input="@(e => OnInput(e, 2))"></SfTextBox>
                 <SfListView DataSource="@SecondData">
-                    <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
-                    <ListViewEvents TValue="ListDataModel" Clicked="@(e => OnSelected(e, 2))"></ListViewEvents>
+                    <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
+                    <ListViewEvents TValue="ListDataModel" Selected="@(e => OnSelected(e, 2))"></ListViewEvents>
                 </SfListView>
             </div>
         </div>
@@ -146,15 +146,15 @@ enabled when selecting an item in lists.
         }
     }
 
-    void OnSelected(ClickEventArgs<ListDataModel> eventArgs, int listviewIndex)
+    void OnSelected(SelectEventArgs<ListDataModel> eventArgs, int listviewIndex)
     {
         if (listviewIndex == 1)
         {
-            FirstSelected = eventArgs.ItemData;
+            FirstSelected = eventArgs.Data;
         }
         else
         {
-            SecondSelected = eventArgs.ItemData;
+            SecondSelected = eventArgs.Data;
         }
     }
 

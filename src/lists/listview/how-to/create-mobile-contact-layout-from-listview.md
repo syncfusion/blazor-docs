@@ -4,7 +4,7 @@ component: "ListView"
 description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
-# How to create mobile contact layout from ListView
+# How to create mobile contact layout from listview
 
 You can customize the ListView using the `Template` property. Refer
 to the following steps to customize ListView as mobile contact view with our `avatar`.

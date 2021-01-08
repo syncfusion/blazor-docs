@@ -4,11 +4,11 @@ component: "ListView"
 description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
-# How to implement chat window user interface using ListView
+# How to chat window user interface using listview
 
 ListView can be customized as chat window. To achieve that, use the ListView `Template` .
 
-    * The ListView template is used to showcase the ListView as chat window.
+    * The Listview template is used to showcase the ListView as chat window.
     * Avatar control is used to design the image of contact person.
 
 Refer the below template code snippet for Template of chat window.
@@ -62,7 +62,6 @@ void OnSend()
 
 ```csharp
 @using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Lists
 @using System.Collections.ObjectModel
 
 <div id="container">
@@ -325,19 +324,19 @@ void OnSend()
     }
 
     .pic01 {
-        background-image: url("./../images/1.png");
+        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/1.png");
     }
 
     .pic02 {
-        background-image: url("./../images/3.png");
+        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/3.png");
     }
 
     .pic03 {
-        background-image: url("./../images/5.png");
+        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/5.png");
     }
 
     .pic04 {
-        background-image: url("./../images/2.png");
+        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/2.png");
     }
 </style>
 

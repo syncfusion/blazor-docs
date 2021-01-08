@@ -4,9 +4,9 @@ component: "ListView"
 description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
-# How to customize ListView as grid layout
+# How to customize listview as grid layout
 
-In ListView, list items can be rendered in grid layout with following data manipulations.
+In Listview, list items can be rendered in grid layout with following data manipulations.
 
 * Add Item
 
@@ -38,14 +38,11 @@ In the below sample, we have rendered List items in grid layout.
 
 ```C#
 
-@using Syncfusion.Blazor.Lists
 <div id="container">
     <div class="sample flex">
         <div class="flex">
             <div class="padding">
-                <SfListView DataSource="@ListItems">
-                    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
-                </SfListView>
+                <SfListView DataSource="@ListItems"></SfListView>
             </div>
         </div>
     </div>
@@ -53,26 +50,7 @@ In the below sample, we have rendered List items in grid layout.
 
 @code
 {
-        List<DataModel> ListItems = new List<DataModel>() {
-            new DataModel() {Id="1", Text="1" },
-            new DataModel() {Id="2", Text="2" },
-            new DataModel() {Id="3", Text="3" },
-            new DataModel() {Id="4", Text="4" },
-            new DataModel() {Id="5", Text="5" },
-            new DataModel() {Id="6", Text="6" },
-            new DataModel() {Id="7", Text="7" },
-            new DataModel() {Id="8", Text="8" },
-            new DataModel() {Id="9", Text="9" },
-            new DataModel() {Id="10", Text="10" },
-            new DataModel() {Id="11", Text="11" },
-            new DataModel() {Id="12", Text="12" },
-
-        };
-    public class DataModel
-    {
-        public string Id { get; set; }
-        public string Text { get; set; }
-    }
+    List<int> ListItems = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 }
 
 <style>
@@ -82,22 +60,22 @@ In the below sample, we have rendered List items in grid layout.
         width: 400px;
     }
 
-        #container .e-listview .e-list-item {
-            height: 100px;
-            width: 100px;
-            float: left;
+    #container .e-listview .e-list-item {
+        height: 100px;
+        width: 100px;
+        float: left;
+    }
+
+        #container .e-listview .e-list-item .e-text-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
         }
 
-            #container .e-listview .e-list-item .e-text-content {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-            }
-
-        #container .e-listview .e-list-text {
-            width: unset;
-        }
+    #container .e-listview .e-list-text {
+        width: unset;
+    }
 
     .sample {
         justify-content: center;
@@ -136,7 +114,7 @@ In the below sample, you can remove by hovering the item which will show delete 
 
 ### Sort Items
 
-ListView can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set `SortOrder` as `Ascending` or `Descending`.
+Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set `SortOrder` as `Ascending` or `Descending`.
 
 We can also set sorting after control initialization.
 
@@ -146,7 +124,7 @@ In the below sample, we have sorted in `Ascending` order. To sort it in descendi
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Lists
-@using ListViewSort = Syncfusion.Blazor.Lists.SortOrder
+@using ListviewSort = Syncfusion.Blazor.Lists.SortOrder
 
 <div id="container">
     <div class="sample flex">
@@ -159,7 +137,7 @@ In the below sample, we have sorted in `Ascending` order. To sort it in descendi
                     <button id="sort"
                             class="e-btn e-small e-round e-primary e-icon-btn"
                             title="Sort"
-                            @onclick="@(e => ListSortOrder = (ListSortOrder == ListViewSort.Ascending) ? ListViewSort.Descending : ListViewSort.Ascending)">
+                            @onclick="@(e => ListSortOrder = (ListSortOrder == ListviewSort.Ascending) ? ListviewSort.Descending : ListviewSort.Ascending)">
                         <span class="e-btn-icon e-icons e-sort-icon-ascending"></span>
                     </button>
                     <button id="add"
@@ -169,6 +147,7 @@ In the below sample, we have sorted in `Ascending` order. To sort it in descendi
                         <span class="e-btn-icon e-icons e-add-icon"></span>
                     </button>
                     <SfDialog @ref="DialogObj"
+
                                Target="#container"
                                ShowCloseIcon="true"
                                Header="@("Add item")"
@@ -220,7 +199,7 @@ In the below sample, we have sorted in `Ascending` order. To sort it in descendi
 {
     SfDialog DialogObj;
 
-    ListViewSort ListSortOrder = ListViewSort.Ascending;
+    ListviewSort ListSortOrder = ListviewSort.Ascending;
 
     ButtonModel DialogBtn = new ButtonModel { Content = "Add", IsPrimary = true, CssClass = "e-flat" };
 

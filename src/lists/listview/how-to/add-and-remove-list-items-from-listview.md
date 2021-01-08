@@ -4,7 +4,7 @@ component: "ListView"
 description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
-# How to add and remove list items from ListView
+# How to add and remove list items from listview
 
 You can add or remove list items from the ListView control using the `ObservableCollection`.
 

@@ -4,7 +4,7 @@ component: "ListView"
 description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
-# How to get selected items from ListView
+# How to get selected items from listview
 
 Single or many items can be selected by users in the ListView control. An API is used to get selected items from the
 list items. This is called as the `GetSelectedItems` method.
@@ -24,8 +24,9 @@ list items. This is called as the `GetSelectedItems` method.
 <div style="display: flex">
     <div class="margin">
         <SfListView @ref="@SfList"
-                    DataSource="@DataSource"
-                    ShowCheckBox="true">
+
+                     DataSource="@DataSource"
+                     ShowCheckBox="true">
             <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
         </SfListView>
     </div>
@@ -54,7 +55,9 @@ list items. This is called as the `GetSelectedItems` method.
 @code
 {
     SfListView<ListDataModel> SfList;
+
     List<ListDataModel> SelectedItems = new List<ListDataModel>();
+
     List<ListDataModel> DataSource = new List<ListDataModel>()
     {
         new ListDataModel{ Id = "1", Text = "Artwork"},
@@ -67,7 +70,7 @@ list items. This is called as the `GetSelectedItems` method.
 
     async void OnSelect()
     {
-        var items = await SfList.GetCheckedItems();
+        var items = await SfList.GetSelectedItems();
         if (items.Data != null)
         {
             SelectedItems = items.Data;
@@ -80,6 +83,7 @@ list items. This is called as the `GetSelectedItems` method.
         public string Id { get; set; }
         public string Text { get; set; }
     }
+
 }
 
 <style>

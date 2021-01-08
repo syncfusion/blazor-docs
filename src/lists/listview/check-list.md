@@ -1,7 +1,7 @@
 ---
 title: 'ListView Checklist'
 component: 'ListView'
-description: 'ListView supports check-list (list-view with checkbox) feature to select single or multiple list items.'
+description: 'Listview supports check-list (list-view with checkbox) feature to select single or multiple list items.'
 ---
 
 # Checklist

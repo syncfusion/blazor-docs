@@ -13,8 +13,9 @@ This section briefly explains about how to include a `ListView` in your Blazor s
 
 ## Importing Syncfusion Blazor component in the application
 
+### Using Syncfusion.Blazor NuGet Package [Old standard]
+
 * Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
->Note:Please ensure to check the Include **prerelease** option for our Beta release.
 
 * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 >Note: You can also add the client-side style resources through CDN.
@@ -42,6 +43,24 @@ This section briefly explains about how to include a `ListView` in your Blazor s
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
 ```
+
+### Using Syncfusion.Blazor NuGet Package [New standard]
+
+* Install **Syncfusion.Blazor.Lists** NuGet package to the application by using the `NuGet Package Manager`.
+
+> Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+
+* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+
+```html
+    <head>
+        ....
+        ....
+       <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    </head>
+```
+
+> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 ## Add Syncfusion Blazor service in Startup.cs (Server-side application)
 
@@ -114,7 +133,6 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Lists` package.
 Add the Syncfusion Blazor ListView component in any web page (razor) in the `Pages` folder. For example, the ListView component is added in the **~/Pages/Index.razor** page.
 
 ```csharp
-
 @using Syncfusion.Blazor.Lists
 
 <SfListView DataSource="@Data">

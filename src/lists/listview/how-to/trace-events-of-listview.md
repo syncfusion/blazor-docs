@@ -4,7 +4,7 @@ component: "ListView"
 description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
-# How to trace events of ListView
+# How to trace events of listview
 
 The ListView control triggers events based on its actions. The events can be used as extension points to perform
 custom operations. Refer to the following steps to trace the ListView events:
@@ -31,7 +31,6 @@ select event, and display the selected list item text in the event trace panel w
             <SfListView DataSource="@DataSource">
                 <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
                 <ListViewEvents TValue="ListDataModel"
-                                Created="@(e => Events.Add("Created is selected"))"
                                 Clicked="@(e => Events.Add(e.Text +" is selected"))"
                                 OnActionBegin="@(e => Events.Add("OnActionBegin is triggered"))"
                                 OnActionComplete="@(e => Events.Add("OnActionComplete is triggered"))">
@@ -40,7 +39,7 @@ select event, and display the selected list item text in the event trace panel w
         </div>
         <div class="sample padding tracker">
             <ul style="list-style: none">
-                @for(var i = Events.Count -1; i >= 0; i--)
+                @for (var i = Events.Count - 1; i >= 0; i--)
                 {
                     <li>@Events[i]</li>
                 }

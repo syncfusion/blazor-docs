@@ -11,35 +11,52 @@ This section briefly explains about how to include a `Dashboard Layout` componen
 
 ## Importing Syncfusion Blazor component in the application
 
+### Using Syncfusion.Blazor NuGet Package [Old standard]
+
 * Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
->Note:Please ensure to check the **Include prerelease** option for our Beta release.
-
 * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+>Note: You can also add the client-side style resources through CDN.
 
- ```html
-<head>
-    ....
-    ....
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-</head>
+```html
+    <head>
+        ....
+        ....
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    </head>
 ```
 
 ```html
-<head>
-    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
-</head>
-
+    <head>
+        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+    </head>
 ```
 
 * For `Internet Explorer 11` kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```html
+```csharp
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
-
 ```
+
+### Using Syncfusion.Blazor NuGet Package [New standard]
+
+* Install **Syncfusion.Blazor.Layouts** NuGet package to the application by using the `NuGet Package Manager`.
+
+> Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+
+* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+
+```html
+    <head>
+        ....
+        ....
+       <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    </head>
+```
+
+> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 ## Add Syncfusion Blazor service in Startup.cs (Server-side application)
 

@@ -1350,24 +1350,59 @@ The following code snippet explains how to enable the delete confirmation messag
 
 You need to follow the below steps to consume data from the **Entity Framework** in the Gantt Chart component.
 
-### Create SQL database
+**Step 1:** The first step is to create a SQL database in your Blazor project. Please refer this [link](https://docs.microsoft.com/en-us/visualstudio/data-tools/create-a-sql-database-by-using-a-designer?view=vs-2019) to create SQL database.
 
-The first step is to create a SQL database in your Blazor project. Please refer this [link](https://docs.microsoft.com/en-us/visualstudio/data-tools/create-a-sql-database-by-using-a-designer?view=vs-2019) to create SQL database.
-
-Then, install the below packages for Entity Framework Support using Nuget or Package manager console using the below command.
+**Step 2:** Install the below packages for Entity Framework Support using Nuget or Package manager console using the below command.
 
 ```bash
 Install-Package Microsoft.EntityFrameworkCore.Tools -Version 3.0.0
 
 Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 3.0.0
+
 ```
 
-### Create DBContext class
+**Step 3:** Create a model class `GanttDataDetails.cs` for the existing database file.
 
-Then you need to create a DBContext class called **masterContext** to connect to a Microsoft SQL Server database using the below command in Package Manager Console.
+```csharp
+
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System;
+
+namespace MyBlazorApp.Data
+{
+
+    public class GanttDataDetails
+    {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public DateTime? Sdate { get; set; }
+        public DateTime? Edate { get; set; }
+        public string Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Duration { get; set; }
+        public string ProjectName { get; set; }
+        public DateTime? BaselineStartDate { get; set; }
+        public DateTime? BaselineEndDate { get; set; }
+        public string Predecessor { get; set; }
+        public string Notes { get; set; }
+        public string TaskType { get; set; }
+        public string ResourceId { get; set; }
+        public string ProjectId { get; set; }
+        public bool? IsExpand { get; set; }
+    }
+}
+
+```
+
+**Step 4:** Create a DB Context class to connect to the Microsoft SQL Server database using the below command in Package Manager Console.
 
 ```bash
-Scaffold-DbContext “Server=ServerName;Database=DatabaseName;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Server=(localdb)\\MSSQLLocalDB;Database=master;Integrated Security=True
+
 ```
 
 ```csharp
@@ -1423,7 +1458,23 @@ namespace GanttEF.Models
 }
 ```
 
-### Custom Adaptor
+**Step 5:** Update the connection string in the appsettings.json file.
+
+```csharp
+
+"ConnectionStrings": {
+    "EmployeeDatabase": "Data Source=(LocalDB)\\\\MSSQLLocalDB;AttachDbFilename=\\\"D:\\client-side-gantt-chart-application-with-entity-framework\\Gantt_wasm_crud_sample1804339720\\Gantt_wasm_crud_sample\\Shared\\App_DataNORTHWND.MDF\\\";Integrated Security=True"
+  }
+
+```
+
+The following sections will detail the steps needed to be followed when working with server-side and client-side applications individually. You can also find samples attached at the end of each section for server-side applications and client-side applications.
+
+### Entity Framework in Server-Side Application
+
+You need to follow the following steps when working with a server-side application.
+
+#### Custom Adaptor
 
 In Gantt Chart, we can fetch data from the SQL database using `Entity Framework` Data Model and the update
 the changes on CRUD action to the server by using `DataManager` support. To communicate with the
@@ -1475,7 +1526,7 @@ We can populate the datasource in Gantt from the SQL table using Entity Framewor
 }
 ```
 
-### Perform CRUD operation in CustomAdaptor
+#### Perform CRUD operation in CustomAdaptor
 
 All the CRUD operations in the Gantt Chart are done through DataManager. The DataManager has an option to bind all the CRUD related data in server-side.
 
@@ -1570,4 +1621,133 @@ Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "Exp
 }
 ```
 
->You can find the sample [`here`](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-with-Entity-framework).
+>You can find the sample for server-side application using entity framework [`here`](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-with-Entity-framework).
+
+### Entity Framework in Client-Side Application
+
+You need to follow the following steps when working with a client-side application.
+
+#### Custom Adaptor
+
+In Gantt Chart, we can fetch data from the SQL database using `Entity Framework` Data Model and the update
+the changes on CRUD action to the server by using `DataManager` support. To communicate with the
+remote data, we are using `CustomAdaptor` of DataManager property to call the server method. You can
+know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/).
+We can populate the datasource in Gantt from the SQL table using Entity Framework using **ReadAsync** method. Please Check the below code snippet to assign the data source to Gantt.
+
+```csharp
+@using MyBlazorApp.Shared.DataAccess
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+@using MyBlazorApp.Data
+
+<SfGantt ID="GanttExport" TValue="GanttDataDetails" HighlightWeekends="true" RowHeight="75" DurationUnit="DurationUnit.Day"
+         Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
+    <SfDataManager Adaptor="Adaptors.CustomAdaptor" DataType="GanttDataDetails">
+        <CustomDataAdaptor></CustomDataAdaptor>
+    </SfDataManager>
+    <GanttColumns>
+        <GanttColumn Field=@nameof(GanttDataDetails.Id) Width="100"></GanttColumn>
+        <GanttColumn Field=@nameof(GanttDataDetails.Name) Width="250"></GanttColumn>
+        <GanttColumn Field=@nameof(GanttDataDetails.Sdate)></GanttColumn>
+        <GanttColumn Field=@nameof(GanttDataDetails.Edate)></GanttColumn>
+        <GanttColumn Field=@nameof(GanttDataDetails.Duration)></GanttColumn>
+        <GanttColumn Field=@nameof(GanttDataDetails.Progress)></GanttColumn>
+        <GanttColumn Field=@nameof(GanttDataDetails.ParentId)></GanttColumn>
+    </GanttColumns>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttTimelineSettings>
+        <GanttTopTierSettings Unit="TimelineViewMode.Week" Format="MMM dd, y"></GanttTopTierSettings>
+        <GanttBottomTierSettings Unit="TimelineViewMode.Day"></GanttBottomTierSettings>
+    </GanttTimelineSettings>
+    <GanttTaskFields Id="Id" Name="Name" StartDate="Sdate" EndDate="Edate" ParentID="ParentId" Progress="Progress" Duration="Duration"></GanttTaskFields>
+</SfGantt>
+
+@code {
+
+    // Performs data Read operation
+    public override async Task<object> ReadAsync(DataManagerRequest dm, string key = null)
+
+    {
+        IEnumerable<object> data = await http.GetJsonAsync<IEnumerable<GanttDataDetails>>("api/GanttDataDetails") as IEnumerable<object>;
+
+        return dm.RequiresCounts ? new DataResult() { Result = data, Count = data.Count() } : (object)data;
+    }
+        .../////
+}
+
+```
+
+#### Perform CRUD operation in CustomAdaptor
+
+All the CRUD operations in the Gantt Chart are done through DataManager. The DataManager has an option to bind all the CRUD related data in server-side.
+
+The following sample code explains you about, how to implement CRUD operations for the custom bounded data.
+
+```csharp
+
+@using Newtonsoft.Json
+@using MyBlazorApp.Data
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+@using MyBlazorApp.Shared.DataAccess
+@inject HttpClient http
+
+
+@inherits DataAdaptor<GanttDataContext>
+
+@code {
+
+
+    // Performs data Read operation
+    public override async Task<object> ReadAsync(DataManagerRequest dm, string key = null)
+
+    {
+        IEnumerable<object> data = await http.GetJsonAsync<IEnumerable<GanttDataDetails>>("api/GanttDataDetails") as IEnumerable<object>;
+
+        return dm.RequiresCounts ? new DataResult() { Result = data, Count = data.Count() } : (object)data;
+    }
+
+    // Performs CRUD operation
+    public override async Task<object> BatchUpdateAsync(DataManager dm, object changedRecords, object addedRecords, object deletedRecords, string keyField, string key, int? dropIndex)
+
+    {
+
+        List<GanttDataDetails> addRecord = addedRecords as List<GanttDataDetails>;
+        List<GanttDataDetails> changed = changedRecords as List<GanttDataDetails>;
+        List<GanttDataDetails> deleteRecord = deletedRecords as List<GanttDataDetails>;
+        if (changed != null)
+        {
+            for (var i = 0; i < changed.Count(); i++)
+            {
+
+                var value = changed[i];
+                await http.SendJsonAsync(HttpMethod.Put, "/api/GanttDataDetails/" + changed[i].Id, changed[i] as GanttDataDetails);
+            }
+        }
+        if (deleteRecord != null)
+        {
+            for (var i = 0; i < deleteRecord.Count(); i++)
+            {
+                await http.DeleteAsync("api/GanttDataDetails/" + deleteRecord[i].Id);
+            }
+        }
+        if (addRecord != null)
+        {
+
+
+            for (var i = 0; i < addRecord.Count(); i++)
+            {
+                await http.SendJsonAsync(HttpMethod.Post, "/api/GanttDataDetails", addRecord[i] as GanttDataDetails);
+            }
+        }
+        return (new { addedRecords = addRecord, changedRecords = changed, deletedRecords = deleteRecord });
+    }
+}
+
+```
+
+You can find the sample for client-side application using entity framework [`here`](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-Client-Side-Application-with-EF).

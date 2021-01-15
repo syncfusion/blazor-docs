@@ -10,10 +10,12 @@ Yon can customize the navigation line color, dashArray, width and angle by modif
 Refer the below code snippet to navigate line between two cities in World map.
 
 ```csharp
+@using Syncfusion.Blazor.Maps
+
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
-            <MapsNavigationLineSettings>
+            <MapsNavigationLines>
                 <MapsNavigationLine Visible="true"
                                     Color="black"
                                     Angle="90"
@@ -22,7 +24,7 @@ Refer the below code snippet to navigate line between two cities in World map.
                                     Latitude="new double[]{ 40.7128, 36.7783 }"
                                     Longitude="new double[]{ -74.0060, -119.4179 }">
                 </MapsNavigationLine>
-            </MapsNavigationLineSettings>
+            </MapsNavigationLines>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>

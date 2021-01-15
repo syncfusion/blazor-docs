@@ -58,6 +58,8 @@ The following properties in the [`MapsLayer`](https://help.syncfusion.com/cr/asp
 The [`ShapePropertyPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) property is used to refer the field name in the [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData) property of shape layers to identify the shape.
 
 ```csharp
+@using Syncfusion.Blazor.Maps
+
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
@@ -90,10 +92,12 @@ The [`ShapeDataPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ma
 For example, following population data contains field 'Name', 'Population' and 'Density'. Here the 'Name' field is set to the `ShapeDataPath` to map the corresponding name field value of shape data.
 
 ```csharp
+@using Syncfusion.Blazor.Maps
+
 <SfMaps>
     <MapsLayers>
-        <MapsLayer
-            DataSource="PopulationDetails"
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
+            DataSource="PopulationDetails" ShapePropertyPath='new string[] {"name"}'
             ShapeDataPath="Name" TValue="PopulationDetail">
         </MapsLayer>
     </MapsLayers>
@@ -106,7 +110,7 @@ For example, following population data contains field 'Name', 'Population' and '
         public double Population { get; set; }
         public double Density { get; set; }
     };
-    private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
+    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
         new PopulationDetail {
             Name= "Afghanistan",
             Population= 29863010,
@@ -147,7 +151,7 @@ Refer both shape data and data source as demonstrated in the following code exam
         public double Population { get; set; }
         public double Density { get; set; }
     };
-    private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
+    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
         new PopulationDetail {
             Code = "AF",
             Value= 53,
@@ -189,7 +193,7 @@ The `Http.GetJsonAsync` is used in the 'OnInitAsync' lifecycle method to load JS
 @inject HttpClient Http;
 @using Syncfusion.Blazor.Maps
 
-@if (populationDensity == null)
+@if (PopulationDensity == null)
 {
     <p><em>Loading Maps component...</em></p>
 }
@@ -200,20 +204,20 @@ else
             <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                        DataSource="PopulationDensity"
                        ShapeDataPath="Name"
-                       ShapePropertyPath='new string[] {"name"}' TValue="PopulationDensity">
+                       ShapePropertyPath='new string[] {"name"}' TValue="PopulationData">
                 <MapsDataLabelSettings Visible="true" LabelPath="Name"></MapsDataLabelSettings>
             </MapsLayer>
         </MapsLayers>
     </SfMaps>
 }
 @code{
-    PopulationDensity[] populationDensity;
+    PopulationData[] PopulationDensity;
     protected override async Task OnInitAsync()
     {
         PopulationDensity = await Http.GetJsonAsync<PopulationDensity[]>("sample-data/PopulationDensity.json");
     }
 
-    public class PopulationDensity
+    public class PopulationData
     {
         public string Code { get; set; }
         public double Value { get; set; }

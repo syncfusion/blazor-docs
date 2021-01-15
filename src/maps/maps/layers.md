@@ -13,17 +13,17 @@ In this example, the United States map shape is used as shape data by utilizing 
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' Tvalue="string">
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             <MapsShapeSettings Fill="#E5E5E5">
                 <MapsShapeBorder Color="black" Width="0.1"></MapsShapeBorder>
             </MapsShapeSettings>
         </MapsLayer>
-        <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/texas.json"}' Type="Syncfusion.Blazor.Maps.Type.SubLayer" Tvalue="string">
+        <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/texas.json"}' Type="Syncfusion.Blazor.Maps.Type.SubLayer" TValue="string">
             <MapsShapeSettings Fill="rgba(141, 206, 255, 0.6)">
                 <MapsShapeBorder Color="#1a9cff" Width="0.25"></MapsShapeBorder>
             </MapsShapeSettings>
         </MapsLayer>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/california.json"}' Type="Syncfusion.Blazor.Maps.Type.SubLayer" Tvalue="string">
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/california.json"}' Type="Syncfusion.Blazor.Maps.Type.SubLayer" TValue="string">
             <MapsShapeSettings Fill="rgba(141, 206, 255, 0.6)">
                 <MapsShapeBorder Color="#1a9cff" Width="0.25"></MapsShapeBorder>
             </MapsShapeSettings>
@@ -48,10 +48,8 @@ In this example, we have loaded two layers with the World map and the United Sta
 @*  To switch the layer, set `BaseLayerIndex`  *@
 <SfMaps BaseLayerIndex="1">
     <MapsLayers>
-        <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/world-map.json" }'>
-        </MapsLayer>
-        <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/usa.json" }'>
-        </MapsLayer>
+        <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/world-map.json" }' TValue="string"/>
+        <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/usa.json" }'TValue="string"/>
     </MapsLayers>
 </SfMaps>
 ```

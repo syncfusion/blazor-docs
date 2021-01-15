@@ -163,22 +163,18 @@ The following shapes are used for the marker object.
 
 ```csharp
 @using Syncfusion.Blazor.Maps
+
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker Visible='true' DataSource='MarkerDataSource' ShapeValuePath="shape" ColorValuePath="color" TValue="TValue="MarkerData"">
+                <MapsMarker Visible='true' DataSource='MarkerDataSource' ShapeValuePath="shape" ColorValuePath="color" TValue="MapMarkerDataSource">
                 </MapsMarker>
             </MapsMarkerSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
 @code {
-    public class MapMarker
-    {
-        public double latitude { get; set; }
-        public double longitude { get; set; }
-    };
     public class MapMarkerDataSource
     {
         public double latitude { get; set; }
@@ -203,11 +199,12 @@ The map is initially scaled to the center value based on the marker distance. Th
 
 ```csharp
 @using Syncfusion.Blazor.Maps
+
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker Visible='true' DataSource='MarkerDataSource' TValue="MapMarker">
+                <MapsMarker Visible='true' DataSource='MarkerDataSource' TValue="MapMarkerDataSource">
                 </MapsMarker>
             </MapsMarkerSettings>
         </MapsLayer>
@@ -215,11 +212,6 @@ The map is initially scaled to the center value based on the marker distance. Th
     <MapsZoomSettings Enable='true' HorizontalAlignment="Syncfusion.Blazor.Maps.Alignment.Near" ShouldZoomInitially="true"></MapsZoomSettings>
 </SfMaps>
 @code {
-    public class MapMarker
-    {
-        public double latitude { get; set; }
-        public double longitude { get; set; }
-    };
     public class MapMarkerDataSource
     {
         public double latitude { get; set; }
@@ -242,12 +234,12 @@ The cluster is formed by grouping an identical and non-identical marker from the
 
 ```csharp
 @using Syncfusion.Blazor.Maps
+
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker Visible='true' DataSource='MarkerDataSource' TValue="MapMarker"
-                </MapsMarker>
+                <MapsMarker Visible="true" DataSource='MarkerDataSource' TValue="MapMarkerDataSource"/>
             </MapsMarkerSettings>
             <MapsMarkerClusterSettings AllowClustering="true" AllowClusterExpand="true" Shape="MarkerType.Circle" Height="40" Width="40">
                 <MapsLayerMarkerClusterLabelStyle Color="white"></MapsLayerMarkerClusterLabelStyle>
@@ -257,11 +249,6 @@ The cluster is formed by grouping an identical and non-identical marker from the
     <MapsZoomSettings Enable='true' MouseWheelZoom="true"></MapsZoomSettings>
 </SfMaps>
 @code {
-    public class MapMarker
-    {
-        public double latitude { get; set; }
-        public double longitude { get; set; }
-    };
     public class MapMarkerDataSource
     {
         public double latitude { get; set; }

@@ -13,7 +13,7 @@ You can enable this feature by setting the `LayerType` property value as “OSM�
 ```csharp
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType='@ShapeLayerType.OSM' UrlTemplate='http://a.tile.openstreetmap.org/level/tileX/tileY.png'></MapsLayer>
+        <MapsLayer LayerType='@ShapeLayerType.OSM' UrlTemplate='http://a.tile.openstreetmap.org/level/tileX/tileY.png' TValue="string" />
     </MapsLayers>
 </SfMaps>
 ```
@@ -35,13 +35,10 @@ You can enable this feature by defining the `LayerType` as “bing”. To get th
 ```csharp
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType='ShapeLayerType.Bing' BingMapType="AerialWithLabel"
-        Key="// …bingMapKey"></MapsLayer>
+        <MapsLayer LayerType='ShapeLayerType.Bing' BingMapType="AerialWithLabel" TValue="string"
+        Key="// …bingMapKey" />
     </MapsLayers>
 </SfMaps>
-
-@code {
-}
 ```
 
 #### Key

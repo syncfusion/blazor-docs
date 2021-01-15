@@ -13,7 +13,7 @@ You can enable this feature by setting [`LayerType`](https://help.syncfusion.com
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.Bing" Key=""></MapsLayer>
+        <MapsLayer LayerType="ShapeLayerType.Bing" TValue="string" Key=""></MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```

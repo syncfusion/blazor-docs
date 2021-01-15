@@ -15,7 +15,7 @@ To add bubbles to the maps, bind data source to [`MapsBubble`](https://help.sync
                    ShapePropertyPath='new string[] {"name"}' TValue="Country">
             @* To add bubbles based on population count *@
             <MapsBubbleSettings>
-                <MapsBubble Visible="true" ValuePath="Population" DataSource="PopulationDetails" TValue="Country">
+                <MapsBubble Visible="true" ValuePath="Population" ColorValuePath="Color" DataSource="PopulationDetails" TValue="Country">
                 </MapsBubble>
             </MapsBubbleSettings>
         </MapsLayer>
@@ -27,22 +27,26 @@ To add bubbles to the maps, bind data source to [`MapsBubble`](https://help.sync
     {
         public string Name { get; set; }
         public double Population { get; set; }
+        public string Color { get; set; }
     };
     private List<Country> PopulationDetails = new List<Country> {
        new Country
        {
            Name ="United States",
-           Population = 325020000
+           Population = 325020000,
+           Color = "#b5e485"
        },
        new Country
        {
            Name = "Russia",
-           Population = 142905208
+           Population = 142905208,
+           Color = "#7bc1e8"
        },
        new Country
         {
            Name="India",
-           Population=1198003000
+           Population=1198003000,
+           Color = "#df819c"
         }
     };
 }
@@ -60,24 +64,55 @@ Using the [`MinRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='new string[] {"name"}'
                    DataSource="PopulationDetails"
-                   ShapeDataPath="Name" TValue="Country">
-            @* To add different size of bubbles based on population density *@
+                   ShapeDataPath="Name"
+                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             <MapsBubbleSettings>
                 <MapsBubble Visible="true"
+                            ValuePath="Density"
+                            ColorValuePath="Color"
                             MinRadius="5"
-                            MaxRadius="80"
-                            ValuePath="PopulationDensity"
-                            DataSource="@populationDetails" TValue="Country">
+                            MaxRadius="20"
+                            DataSource="PopulationDetails" TValue="PopulationDetail">
                 </MapsBubble>
             </MapsBubbleSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-```
 
-> Refer [code block](#bubbles) to know the property value of `PopulationDetails`.
+@code {
+    public class PopulationDetail
+    {
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
+        public string Color { get; set; }
+    };
+    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
+       new PopulationDetail
+       {
+           Name ="United States",
+           Population = 325020000,
+           Density = 33,
+           Color="yellow"
+       },
+       new PopulationDetail
+       {
+           Name = "Russia",
+           Population = 142905208,
+           Density = 8.3,
+           Color="red"
+       },
+       new PopulationDetail
+        {
+           Name="India",
+           Population=1198003000,
+           Density=364,
+           Color="blue"
+        }
+    };
+}
+```
 
 ![Maps with different size bubbles](./images/Bubble/population-density.png)
 
@@ -180,12 +215,12 @@ The following code example demonstrates how to enable the legends for bubbles wi
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="PopulationDetails"
                    ShapeDataPath="Name"
-                   ShapePropertyPath='new string[] {"name"}' TValue="City">
+                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             <MapsBubbleSettings>
                 <MapsBubble Visible="true"
                             ValuePath="Population"
                             ColorValuePath="Color"
-                            DataSource="PopulationDetails" TValue="City">
+                            DataSource="PopulationDetails" TValue="PopulationDetail">
                 </MapsBubble>
             </MapsBubbleSettings>
         </MapsLayer>
@@ -193,7 +228,7 @@ The following code example demonstrates how to enable the legends for bubbles wi
 </SfMaps>
 ```
 
-> Refer [code block](#bubbles) to know the property value of `PopulationDetails`.
+> Refer [code block](#bubble-sizing) to know the property value of `PopulationDetails`.
 
 ![Maps with bubble and legend](./images/Bubble/bubblelegend.png)
 

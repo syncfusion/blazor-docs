@@ -13,7 +13,7 @@ You can enable this feature by setting the value of [`LayerType`](https://help.s
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM"></MapsLayer>
+        <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string"></MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
@@ -99,7 +99,7 @@ You can render any GeoJSON shape as a sublayer on top of an OSM maps layer for h
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM">
+        <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
         </MapsLayer>
         @* To add geometry shape as sublayer *@
         <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'

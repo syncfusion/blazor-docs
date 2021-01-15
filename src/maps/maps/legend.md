@@ -32,8 +32,8 @@ The legends can be made interactive with an arrow mark that indicates the exact 
                    ShapeDataPath="Name" TValue="UNCouncilCountry">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='@("#316DB5")' />
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
+                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#316DB5"}' />
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -100,8 +100,8 @@ The above four positions can be aligned with combination of 'Near', 'Center', an
                    ShapeDataPath="Name" TValue="UNCouncilCountry">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='@("#316DB5")' />
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
+                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#316DB5"}' />
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -143,11 +143,11 @@ To enable equal color mapping, refer to the [`MapsShapeSettings`](https://help.s
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="MembershipDetails"
                    ShapeDataPath="Country"
-                   ShapePropertyPath='new string[] {"name"}'>
-            <MapsShapeSettings ColorValuePath="Membership" TValue="UNCouncilCountry">
+                   ShapePropertyPath='new string[] {"name"}' TValue="UNCouncilCountry">
+            <MapsShapeSettings ColorValuePath="Membership" >
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='@("#316DB5")' />
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
+                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#316DB5"}' />
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -184,7 +184,7 @@ To get the legend shape value for [`MapsLegendSettings`](https://help.syncfusion
 <SfMaps>
     @*  To customize the legend  *@
     <MapsLegendSettings Visible="true"
-                        Shape="LegendShape.Star"
+                        Shape="MarkerType.Star"
                         ShapeHeight="30"
                         ShapeWidth="30"
                         ShapePadding="10">
@@ -199,8 +199,8 @@ To get the legend shape value for [`MapsLegendSettings`](https://help.syncfusion
                    ShapePropertyPath='new string[] {"name"}' TValue="UNCouncilCountry">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='@("#316DB5")' />
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
+                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#316DB5"}' />
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -247,9 +247,9 @@ Bind the `populationDetails` value to the [`DataSource`](https://help.syncfusion
                    ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             <MapsShapeSettings ColorValuePath="Density">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping From="0.0001" To="100" Color='@("yellow")' />
-                    <MapsShapeColorMapping From="101" To="200" Color='@("orange")' />
-                    <MapsShapeColorMapping Color='@("blue")' />
+                    <MapsShapeColorMapping StartRange="0.0001" EndRange="100" Color='new string[] {"yellow"}' />
+                    <MapsShapeColorMapping StartRange="101" EndRange="200" Color='new string[] {"orange"}' />
+                    <MapsShapeColorMapping Color='new string[] {"blue"}' />
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -307,19 +307,19 @@ To enable or disable the desired legend for each color mapping, set the [`ShowLe
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
                    DataSource="populationDetails"
                    ShapeDataPath="Name"
-                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetails">
+                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             <MapsShapeSettings ColorValuePath="Density">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping From="0.0001"
-                                      To="100"
-                                      Color='@("yellow")'
+                    <MapsShapeColorMapping StartRange="0.0001"
+                                      EndRange="100"
+                                      Color='new string[] {"yellow"}'
                                       ShowLegend="true" />
                     @*  hide legend for this range  *@
-                    <MapsShapeColorMapping From="101"
-                                      To="200"
-                                      Color='@("orange")'
+                    <MapsShapeColorMapping StartRange="101"
+                                      EndRange="200"
+                                      Color='new string[] {"orange"}'
                                       ShowLegend="false" />
-                    <MapsShapeColorMapping Color='@("blue")'
+                    <MapsShapeColorMapping Color='new string[] {"blue"}'
                                       ShowLegend="true" />
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
@@ -343,12 +343,10 @@ The following code example demonstrates how to hide the legend items based data 
 
 <SfMaps>
     @*  To hide legend based in data source fields  *@
-    <MapsLegendSettings Visible="true"
-                        LegendPath="LegendVisibility">
-    </MapsLegendSettings>
+    <MapsLegendSettings Visible="true" ShowLegendPath="LegendVisibility"/>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="PopulationDetails"
+                   DataSource="populationDetails"
                    ShapeDataPath="Name"
                    ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             <MapsShapeSettings ColorValuePath="Color">
@@ -434,7 +432,7 @@ To show the legend text based on binding, the field name in the data source shou
         public double Density { get; set; }
         public string Color { get; set; }
     };
-    private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
+    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
        new PopulationDetail
        {
            Name ="United States",

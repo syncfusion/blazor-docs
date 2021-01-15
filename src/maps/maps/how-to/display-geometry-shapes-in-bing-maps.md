@@ -31,7 +31,7 @@ Add geometry shape in the Bing Maps using sublayer concept. To add geometry shap
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.Bing"
+        <MapsLayer LayerType="ShapeLayerType.Bing" TValue="string"
                    Key="">
         </MapsLayer>
         @* To add geometry shape as sublayer *@

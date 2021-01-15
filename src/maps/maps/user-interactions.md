@@ -85,7 +85,7 @@ Use the [`ZoomOnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 <SfMaps>
     <MapsZoomSettings Enable="true" ZoomOnClick="true"></MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}'>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -185,8 +185,8 @@ The following code example demonstrates how to add interactive legend along with
                    ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='@("#316DB5")' />
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
+                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#316DB5"}' />
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
             <MapsLayerSelectionSettings Enable="true" Fill="#a7f047">
@@ -315,8 +315,8 @@ The following code example demonstrates how to add interactive legend along with
                    ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='@("#D84444")' />
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='@("#316DB5")' />
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
+                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#316DB5"}' />
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
             <MapsLayerHighlightSettings Enable="true" Fill="#a7f047">
@@ -367,20 +367,20 @@ The following code snippet demonstrates how to enable tooltip for layer to show 
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='@("name")'
+                   ShapePropertyPath='new string[] {"name"}'
                    DataSource='PerformanceReport'
-                   ShapeDataPath='new string[] {"Name"}' TValue="Country">
+                   ShapeDataPath="Name" TValue="Country">
             <MapsLayerTooltipSettings Visible="true"
                                   ValuePath="CountryName"
                                   Format="<b>${CountryName}</b><br>Finalist: <b>${Winner}</b><br>Win: <b>${Finalist}">
             </MapsLayerTooltipSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Finalist">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="1" Color='@("#acaed8")'></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="2" Color='@("#80c1ff")'></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="3" Color='@("#1a90ff")'></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="4" Color='@("#005cb3")'></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="7" Color='@("#0b0d35")'></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="1" Color='new string[] {"#acaed8"}'></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="2" Color='new string[] {"#80c1ff"}'></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="3" Color='new string[] {"#1a90ff"}'></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="4" Color='new string[] {"#005cb3"}'></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="7" Color='new string[] {"#0b0d35"}'></MapsShapeColorMapping>
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -424,7 +424,7 @@ You can also provide tooltips for other elements such as markers and bubbles usi
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker Visible="true"
                             DataSource="OfficeLocations"
@@ -446,7 +446,7 @@ You can also provide tooltips for other elements such as markers and bubbles usi
         public double Longitude { get; set; }
         public string Name { get; set; }
     }
-    private List<OfficeLocation> officeLocations = new List<OfficeLocation> {
+    private List<OfficeLocation> OfficeLocations = new List<OfficeLocation> {
         new OfficeLocation{ Latitude= 37.6276571, Longitude= -122.4276688, Name= "San Bruno" },
         new OfficeLocation{ Latitude= 33.5302186, Longitude= -117.7418381, Name= "Laguna Niguel" },
         new OfficeLocation{ Latitude= 40.7424509, Longitude= -74.0081468, Name= "New York" },

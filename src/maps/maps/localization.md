@@ -52,8 +52,8 @@ To load data related to toolbar items, use the `LoadLocaleData` method, and set 
             <MapsLayerTooltipSettings Visible="true" Format="${CountryName} - ${Membership}"></MapsLayerTooltipSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color="@("#EDB46F")"></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="Nicht-Permanent" Color="@("#F1931B")"></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="Nicht-Permanent" Color='new string[] {"#F1931B"}'></MapsShapeColorMapping>
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -89,9 +89,9 @@ To load data related to toolbar items, use the `LoadLocaleData` method, and set 
 
     public class UNCouncilCountry
     {
-        public string Name;
-        public string CountryName;
-        public string Membership;
+        public string Name { get; set; }
+        public string CountryName { get; set; }
+        public string Membership { get; set; }
     };
 }
 ```

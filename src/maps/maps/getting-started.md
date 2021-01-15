@@ -127,11 +127,10 @@ You should also specify the field names in the shape data and data source to the
 
 <SfMaps>
     <MapsLayers>
+        @*To map shape data name field and data source field*@
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   @* To map shape data name field *@
-                   ShapePropertyPath='@("name")'
+                   ShapePropertyPath='new string[] {"name"}'
                    DataSource="SecurityCouncilDetails"
-                   @* To map data source field *@
                    ShapeDataPath="Name" TValue="UNCouncilCountry">
         </MapsLayer>
     </MapsLayers>
@@ -152,14 +151,14 @@ Specify color and value in [`MapsShapeColorMapping`](https://help.syncfusion.com
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='@("name")'
+                   ShapePropertyPath='new string[] {"name"}'
                    DataSource="SecurityCouncilDetails"
                    ShapeDataPath="Name" TValue="UNCouncilCountry">
             @* color mapping related configuration *@
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color="@("#EDB46F")"></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="Non-Permanent" Color="@("#F1931B")"></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {("#F1931B"}'></MapsShapeColorMapping>
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -181,15 +180,15 @@ You can add label text to the shapes in the Maps component using [`MapsDataLabel
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='@("name")'
+                   ShapePropertyPath='new string[] {"name"}'
                    DataSource="SecurityCouncilDetails"
                    ShapeDataPath="Name" TValue="UNCouncilCountry">
             @* To add data labels *@
             <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color="@("#EDB46F")"></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="Non-Permanent" Color="@("#F1931B")"></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#F1931B"}'></MapsShapeColorMapping>
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -213,14 +212,14 @@ You can add a title using [`MapsTitleSettings`](https://help.syncfusion.com/cr/a
     <MapsTitleSettings Text="Members of the UN Security Council"></MapsTitleSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='@("name")'
+                   ShapePropertyPath='new string[] {"name"}'
                    DataSource="SecurityCouncilDetails"
                    ShapeDataPath="Name" TValue="UNCouncilCountry">
             <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color="@("#EDB46F")"></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="Non-Permanent" Color="@("#F1931B")"></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#F1931B"}'></MapsShapeColorMapping>
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -245,14 +244,14 @@ The legend items are used to denote color mapping categories, and you can show l
     <MapsLegendSettings Visible="true"></MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='@("name")'
+                   ShapePropertyPath='new string[] {"name"}'
                    DataSource="SecurityCouncilDetails"
                    ShapeDataPath="Name" TValue="UNCouncilCountry">
             <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color="@("#EDB46F")"></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="Non-Permanent" Color="@("#F1931B")"></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
+                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#F1931B"}'></MapsShapeColorMapping>
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>

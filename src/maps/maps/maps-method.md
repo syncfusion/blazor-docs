@@ -5,6 +5,8 @@
 You can create an object for the maps component using `@ref` and call the `Print` method as demonstrated in the following example.
 
 ```csharp
+@using Syncfusion.Blazor.Maps
+
 <button @onclick="PrintMap">Print</button>
 <SfMaps @ref="maps" @ref:suppressField>
     <MapsLayers>

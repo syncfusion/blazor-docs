@@ -19,10 +19,9 @@ In this sample, first check the male value and click the submit button to post t
     <DataAnnotationsValidator></DataAnnotationsValidator>
     <div class="form-group">
         <SfRadioButton Label="Male" Name="Gender" Value="male" @bind-Checked="@Annotate.Gender"></SfRadioButton>
-        <SfRadioButton Label="Female" Name="Gender" Value="female"></SfRadioButton>
+        <SfRadioButton Label="Female" Name="Gender" Value="female" @bind-Checked="@Annotate.Gender"></SfRadioButton>
         <ValidationMessage For="@(() => Annotate.Gender)" />
     </div>
-    <SfButton HtmlAttributes="@Submit" Content="Submit" IsPrimary="true"></SfButton>
 </EditForm>
 
 @code {
@@ -31,13 +30,9 @@ In this sample, first check the male value and click the submit button to post t
 
     public class Annotation
     {
-        [Range(typeof(bool), "true", "true", ErrorMessage = "Male gender is required.")]
-        public bool Gender { get; set; }
+        [Range(typeof(string), "male", "male", ErrorMessage = "Male gender is required.")]
+        public string Gender { get; set; } = "male";
     }
-    public Dictionary<string, object> Submit = new Dictionary<string, object>()
-    {
-        { "type", "submit"}
-    };
 }
 
 ```

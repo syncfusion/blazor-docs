@@ -176,7 +176,7 @@ By default, datagrid searches all visible columns. You can search specific colum
 
 @{
     var Tool = (new List<string>() { "Search" });
-    var SpecificCols = (new string[] { "CustomerID","ShipName"});
+    var SpecificCols = (new string[] { "CustomerID","ShipCountry"});
 }
 <SfGrid DataSource="@Orders" Toolbar=@Tool>
     <GridSearchSettings Fields=@SpecificCols></GridSearchSettings>
@@ -185,6 +185,7 @@ By default, datagrid searches all visible columns. You can search specific colum
                 <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
                 <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
                 <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+                <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
             </GridColumns>
 </SfGrid>
 
@@ -199,6 +200,7 @@ By default, datagrid searches all visible columns. You can search specific colum
             CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
             Freight = 2.1 * x,
             OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
         }).ToList();
     }
 
@@ -207,6 +209,7 @@ By default, datagrid searches all visible columns. You can search specific colum
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
     }
 }
 ```

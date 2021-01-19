@@ -65,6 +65,8 @@ The following screenshot represents Editing with Default Mode.
 [`AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) to **false**.
 >* You can disable adding for a particular column, by specifying
 [`AllowAdding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) to **false**.
+>* You can disable editing of a record on double click, by specifying
+[`EditSettings.AllowEditOnDblClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowEditOnDblClick) to **false**.
 
 ## Toolbar with edit option
 
@@ -274,6 +276,56 @@ To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/
 
 The following screenshot represents Editing in Batch mode.
 ![Batch Editing](./images/batch-editing.png)
+
+## Edit next row or previous row from the current row
+
+You can continue editing the next row or previous row from the current record in batch mode
+by enabling [`EditSettings.AllowNextRowEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowNextRowEdit) to **true**.
+
+Pressing TAB from the last cell of the current record allows to edit the next row and Pressing SHIFT + TAB from the first cell of the current record allows to edit the previous row.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" ValidationRules="@(new ValidationRules { Required = true })" Type="ColumnType.Number" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
+
+The following GIF represents Editing in Batch mode.
+![AllowNextRowEdit](./images/nextrow-edit.gif)
 
 ## Cell edit type
 
@@ -616,7 +668,7 @@ The following sample code demonstrates the customization applied to DatePicker c
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
         public double Freight { get; set; }
-        public DateTime OrderDate { get; set; } = DateTime.Now;
+        public DateTime? OrderDate { get; set; } = DateTime.Now;
         public string ShipName { get; set; }
         public bool Verified { get; set; }
     }
@@ -1363,6 +1415,10 @@ The following GIF represent the datagrid with Custom External form editing,
 
 > Before adding dialog template to the datagrid, we strongly recommend you to go through the [`Template`](./templates/#templates) section topic to configure the template.
 
+To know about customizing the  **Dialog Template** in Blazor DataGrid Component, you can check this video.
+
+`youtube:Cfj476xT2ao`
+
 The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your own editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
 > Custom components inside the Dialog Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
@@ -1459,7 +1515,7 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
         public string CustomerID { get; set; }
         public double? Freight { get; set; }
         public string ShipCity { get; set; }
-        public DateTime OrderDate { get; set; }
+        public DateTime? OrderDate { get; set; }
         public string ShipName { get; set; }
         public string ShipCountry { get; set; }
         public string ShipAddress { get; set; }
@@ -1581,7 +1637,7 @@ This is demonstrated in the below sample code where if the `RequestType` argumen
         public string CustomerID { get; set; }
         public double Freight { get; set; }
         public string ShipCity { get; set; }
-        public DateTime OrderDate { get; set; }
+        public DateTime? OrderDate { get; set; }
         public string ShipName { get; set; }
         public string ShipCountry { get; set; }
         public string ShipAddress { get; set; }
@@ -1743,7 +1799,7 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
         public string CustomerID { get; set; }
         public double? Freight { get; set; }
         public string ShipCity { get; set; }
-        public DateTime OrderDate { get; set; }
+        public DateTime? OrderDate { get; set; }
         public string ShipName { get; set; }
         public string ShipCountry { get; set; }
         public string ShipAddress { get; set; }
@@ -1809,6 +1865,8 @@ The following sample code demonstrates changing the position of the new row that
 
 The following image represents the new row added at the bottom of the DataGrid,
 ![New Row Position](./images/new-row-position.png)
+
+>* In Batch mode while in edit mode, you can add a new row at bottom using the TAB key when you are on the last cell of the last row.
 
 ## Confirmation messages
 

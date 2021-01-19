@@ -25,7 +25,7 @@ The following table shows built-in tool bar items and its actions.
 | Print | Prints the datagrid.|
 | ExcelExport | Exports the datagrid to Excel.|
 | PdfExport | Exports the datagrid to PDF.|
-| WordExport | Exports the datagrid to Word.|
+| CsvExport | Exports the datagrid to CSV.|
 
 ```csharp
 

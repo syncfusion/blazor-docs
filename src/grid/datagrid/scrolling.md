@@ -167,9 +167,9 @@ the [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.G
 ```csharp
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenColumns="2" FrozenRows="3" Width="100%" >
+<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenRows="3" Width="100%" >
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsFrozen="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" IsFrozen="true" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>

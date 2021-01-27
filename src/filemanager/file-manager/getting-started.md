@@ -11,6 +11,27 @@ This section briefly explains how to include a `File Manager` in your Blazor Ser
 
 ## Importing Syncfusion Blazor component in the application
 
+### Using Syncfusion.Blazor NuGet Package [New standard]
+
+1. Install **Syncfusion.Blazor.FileManager** NuGet package to the application by using the `NuGet Package Manager`.. Refer to the Individual NuGet Packages section for the available NuGet packages.
+![nuget explorer](images/nuget-explorer.png)
+2. Search Syncfusion.Blazor.FileManager keyword in the Browse tab and install Syncfusion.Blazor.FileManager NuGet package in the application.
+![nuget-filemanager](images/nuget-filemanager.png)
+3. Once the installation process is completed, the Syncfusion Blazor FileManager package will be installed in the project.
+> Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+
+* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+
+```html
+    <head>
+        ....
+        ....
+       <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    </head>
+```
+
+> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.Right-click the project and then select Manage NuGet Packages.
@@ -44,27 +65,6 @@ This section briefly explains how to include a `File Manager` in your Blazor Ser
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
 ```
-
-### Using Syncfusion.Blazor NuGet Package [New standard]
-
-1. Install **Syncfusion.Blazor.FileManager** NuGet package to the application by using the `NuGet Package Manager`.. Refer to the Individual NuGet Packages section for the available NuGet packages.
-![nuget explorer](images/nuget-explorer.png)
-2. Search Syncfusion.Blazor.FileManager keyword in the Browse tab and install Syncfusion.Blazor.FileManager NuGet package in the application.
-![nuget-filemanager](images/nuget-filemanager.png)
-3. Once the installation process is completed, the Syncfusion Blazor FileManager package will be installed in the project.
-> Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
-
-* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-
-```html
-    <head>
-        ....
-        ....
-       <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    </head>
-```
-
-> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 ## Add Syncfusion Blazor service in Startup.cs (Server-side application)
 

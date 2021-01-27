@@ -14,7 +14,8 @@ The following file providers are added in Syncfusion Blazor File Manager compone
 * [ASP.NET MVC 5 file system provider](#aspnet-mvc-5-file-system-provider)
 * [ASP.NET Core Azure cloud file system Provider](#aspnet-core-azure-cloud-file-system-provider)
 * [ASP.NET Core MVC 5 Azure cloud file system Provider](#aspnet-mvc-5-azure-cloud-file-system-provider)
-* [Amazon S3 cloud file system provider](#amazon-s3-cloud-file-system-provider)
+* [ASP.NET Core Amazon S3 cloud file provider](#aspnet-core-amazon-s3-cloud-file-provider)
+* [ASP.NET MVC Amazon S3 cloud file provider](#aspnet-mvc-amazon-s3-cloud-file-provider)
 * [File Transfer Protocol file system provider](#file-transfer-protocol-file-system-provider)
 * [SQL database file system provider](#sql-database-server-file-system-provider)
 * [NodeJS file system provider](#nodejs-file-system-provider)
@@ -196,9 +197,9 @@ After setting the blob container references, just build and run the project. Now
 
 > **Note:** To learn more about file actions that can be performed with ASP.NET MVC Azure cloud file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider#key-features)
 
-## Amazon S3 cloud file system provider
+## ASP.NET Core Amazon S3 cloud file provider
 
-In ASP.NET Core, Amazon ***S3*** (*Simple Storage Service*) cloud file system provider allows the users to access and manage a server hosted file system as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [ej2-amazon-s3-aspcore-file-provider](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider) using the following command
+In ASP.NET Core, Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted file system as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [ej2-amazon-s3-aspcore-file-provider](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider) using the following command
 
 ```typescript
 
@@ -220,7 +221,7 @@ After registering the Amazon client account details, just build and run the proj
 
 ```csharp
 
-@*Initializing File Manager with SQL database file system service*@
+@*Initializing File Manager with ASP.NET Core Amazon service*@
 
 @* Replace the hosted port number in the place of "{port}" *@
 
@@ -234,7 +235,47 @@ After registering the Amazon client account details, just build and run the proj
 
 ```
 
-> **Note:** To learn more about the file actions that can be performed with Amazon S3 Cloud File System provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider.git#key-features)
+> **Note:** To learn more about the file actions that can be performed with Amazon S3 Cloud File provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider.git#key-features)
+
+## ASP.NET MVC Amazon S3 cloud file provider
+
+In ASP.NET MVC, Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted files as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [ej2-amazon-s3-aspmvc-file-provider](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspmvc-file-provider) using the following command
+
+```typescript
+
+git clone https://github.com/SyncfusionExamples/ej2-amazon-s3-aspmvc-file-provider.git  ej2-amazon-s3-aspmvc-file-provider.git
+
+```
+
+> **Note:** To learn more about creating and configuring an Amazon S3 bucket, refer to this [link](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html).
+
+After cloning, open the project in Visual Studio and restore the NuGet packages. Now, register Amazon S3 client account details like *awsAccessKeyId*, *awsSecretKeyId* and *awsRegion* details in **RegisterAmazonS3** method in the FileManager controller to perform the file operations.
+
+```typescript
+
+ void RegisterAmazonS3(string bucketName, string awsAccessKeyId, string awsSecretAccessKey, string bucketRegion)
+
+```
+
+After registering the Amazon client account details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Amazon ***S3*** (*Simple Storage Service*) bucket's objects storage.
+
+```csharp
+
+@*Initializing File Manager with ASP.NET MVC Amazon service*@
+
+@* Replace the hosted port number in the place of "{port}" *@
+
+<SfFileManager>
+    <FileManagerAjaxSettings Url="http://localhost:{port}/FileManager/FileOperations"
+                             UploadUrl="http://localhost:{port}/FileManager/Upload"
+                             DownloadUrl="http://localhost:{port}/FileManager/Download"
+                             GetImageUrl="http://localhost:{port}/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+```
+
+> **Note:** To learn more about the file actions that can be performed with ASP.NET MVC Amazon S3 Cloud File Provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspmvc-file-provider.git#key-features)
 
 ## File Transfer Protocol file system provider
 
@@ -258,7 +299,7 @@ After registering the File Transfer Protocol details, just build and run the pro
 
 ```csharp
 
-@*Initializing File Manager with SQL database file system service*@
+@*Initializing File Manager with File Transfer Protocol service*@
 
 @* Replace the hosted port number in the place of "{port}" *@
 

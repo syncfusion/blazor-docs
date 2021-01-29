@@ -35,19 +35,23 @@ Output be like the below.
 
 ## Multiple
 
-Default [ExpandMode](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfAccordion~ExpandMode.html) of the Accordion is `Multiple`. It enables you to expand more than one Accordion item at a time. Expand/collapse action can also be toggled by clicking on it again. For example, expanded item is collapsed when you click on it again.
+Default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandMode) of the Accordion is `Multiple`. It enables you to expand more than one Accordion item at a time. Expand/collapse action can also be toggled by clicking on it again. For example, expanded item is collapsed when you click on it again.
 
 ```csharp
 
 @using Syncfusion.Blazor.Navigations
 
-<SfAccordion ExpandMode="ExpandMode.Multiple" ExpandedIndices="new double[] { 0, 2 }">
+<SfAccordion ExpandMode="ExpandMode.Multiple" @bind-ExpandedIndices=ExpandItems>
     <AccordionItems>
         <AccordionItem Header="ASP.NET" Content="Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services."></AccordionItem>
         <AccordionItem Header="ASP.NET MVC" Content="The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller."></AccordionItem>
         <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."></AccordionItem>
     </AccordionItems>
 </SfAccordion>
+
+@code {
+    public int[] ExpandItems = new int[] { 0, 2 };
+}
 
 ```
 
@@ -62,24 +66,27 @@ By default, accordion items were in collapsed state on initial load. To expand p
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfAccordion DataSource="@AccordionItems" ExpandedIndices="new int[] { 1, 2 }">
-    <AccordionTemplates>
-        <HeaderTemplate>
-            <div>@((context as AccordionData).EmployeeName)</div>
-        </HeaderTemplate>
-        <ItemTemplate>
-            @{
-                AccordionData ContextData = context as AccordionData;
-                <div>
-                    <div><b>Employee ID: </b>@ContextData.EmployeeId</div>
-                    <div><b>Designation: </b>@ContextData.Designation</div>
-                </div>
-            }
-        </ItemTemplate>
-    </AccordionTemplates>
+<SfAccordion @bind-ExpandedIndices=ExpandItems>
+    <AccordionItems>
+        @foreach (AccordionData Item in AccordionItems)
+        {
+            <AccordionItem>
+                <HeaderTemplate>
+                    <div>@(Item.EmployeeName)</div>
+                </HeaderTemplate>
+                <ContentTemplate>
+                    <div>
+                        <div><b>Employee ID: </b>@Item.EmployeeId</div>
+                        <div><b>Designation: </b>@Item.Designation</div>
+                    </div>
+                </ContentTemplate>
+            </AccordionItem>
+        }
+    </AccordionItems>
 </SfAccordion>
 
 @code{
+    public int[] ExpandItems = new int[] { 1, 2 };
     List<AccordionData> AccordionItems = new List<AccordionData>()
     {
         new AccordionData
@@ -115,4 +122,9 @@ By default, accordion items were in collapsed state on initial load. To expand p
         public string Designation { get; set; }
     }
 }
+
 ```
+
+Output be like the below.
+
+![Accordion Control with expanding the items](./images/acrdnExpandingItems.png)

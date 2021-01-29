@@ -6,35 +6,35 @@ description: "This example demonstrates how to bind any data object to accordion
 
 # DataBinding
 
-Accordion component provides an option to get accordion items from the local data. It can be done through `DataSource` property. The `DataSource` property supports list of objects.
+Accordion component provides an option to get accordion items from the local data. It can be done through iteration of Accordion Items using conditional **foreach** loop. Accordion only supports the local data for data binding.
 
-You can use `HeaderTemplate` and `ItemTemplate` properties to render accordion header and content respectively.
+You can use `HeaderTemplate` and `ContentTemplate` properties to render accordion header and content respectively.
 
-> If you use `DataSource` property, It is mandatory to define `HeaderTemplate` and `ContentTemplate` to render accordion header and content. Accordion only supports the local data for data binding.
-
-The below sample explains how to initialize accordion items through `DataSource` and `templates`.
+The below sample explains how to initialize accordion items through `templates`.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfAccordion DataSource="@AccordionItems">
-    <AccordionTemplates>
-        <HeaderTemplate>
-            <div>@((context as AccordionData).EmployeeName)</div>
-        </HeaderTemplate>
-        <ItemTemplate>
-            @{
-                AccordionData ContextData = context as AccordionData;
-                <div>
-                    <div><b>Employee ID: </b>@ContextData.EmployeeId</div>
-                    <div><b>Designation: </b>@ContextData.Designation</div>
-                </div>
-            }
-        </ItemTemplate>
-    </AccordionTemplates>
+<SfAccordion>
+    <AccordionItems>
+        @foreach (AccordionData Item in AccordionItems)
+        {
+            <AccordionItem>
+                <HeaderTemplate>
+                    <div>@(Item.EmployeeName)</div>
+                </HeaderTemplate>
+                <ContentTemplate>
+                    <div>
+                        <div><b>Employee ID: </b>@Item.EmployeeId</div>
+                        <div><b>Designation: </b>@Item.Designation</div>
+                    </div>
+                </ContentTemplate>
+            </AccordionItem>
+        }
+    </AccordionItems>
 </SfAccordion>
 
-@code{
+@code {
     List<AccordionData> AccordionItems = new List<AccordionData>()
     {
         new AccordionData
@@ -74,4 +74,4 @@ The below sample explains how to initialize accordion items through `DataSource`
 
 Output be like the below.
 
-![Load Accordion items using datasource](./images/acrdnDatasource.png)
+![Load Accordion items using datasource](./images/acrdnDatabinding.png)

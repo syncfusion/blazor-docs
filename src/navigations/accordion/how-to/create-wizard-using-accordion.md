@@ -6,7 +6,7 @@ description: "This online shopping example demonstrates how to create multiple c
 
 # Create wizard
 
-Accordion items can be disabled dynamically by passing the index and boolean value with the EnableItem method.
+Accordion items can be disabled and expanded dynamically using accordion item **Disabled** and **Expanded** property.
 
 In the below demo, designed for simple payment module that Enable/Disable Accordion based on sequential validation of each Accordion content.
 
@@ -21,7 +21,7 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
 <SfAccordion ID="AccordionElement" @ref="@Accordion">
     <AccordionEvents Created="OnCreate"></AccordionEvents>
     <AccordionItems>
-        <AccordionItem>
+        <AccordionItem Disabled=@DisableSignInItem @bind-Expanded="ExpandSignInItem">
             <HeaderTemplate>Sign In</HeaderTemplate>
             <ContentTemplate>
                 <div id="Sign_In_Form" style="padding:10px">
@@ -45,7 +45,7 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
                 </div>
             </ContentTemplate>
         </AccordionItem>
-        <AccordionItem>
+        <AccordionItem Disabled=@DisableDeliveryItem @bind-Expanded="ExpandDeliveryItem">
             <HeaderTemplate>Delivery Address</HeaderTemplate>
             <ContentTemplate>
                 <div>
@@ -76,7 +76,7 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
                 </div>
             </ContentTemplate>
         </AccordionItem>
-        <AccordionItem>
+        <AccordionItem Disabled=@DisableCardItem @bind-Expanded="ExpandCardItem">
             <HeaderTemplate> Card Details</HeaderTemplate>
             <ContentTemplate>
                 <div id="Card_Fill" style="padding:10px">
@@ -121,8 +121,7 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
         <Content><div>Your payment successfully processed</div></Content>
     </DialogTemplates>
     <DialogButtons>
-        <DialogButton OnClick="@OnSubmit" >
-        <DialogButtonModel Content="OK" IsPrimary="true" ></DialogButtonModel>
+        <DialogButton OnClick="@OnSubmit" Content="OK" IsPrimary="true"></DialogButton>
     </DialogButtons>
 </SfDialog>
 
@@ -138,11 +137,17 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
     public SfNumericTextBox<int> MobileNumberTextbox { get; set; }
     public SfNumericTextBox<int> CvvTextbox { get; set; }
     public Boolean EmptyField { get; set; } = false;
+    public Boolean DisableSignInItem { get; set; }
+    public Boolean DisableDeliveryItem { get; set; }
+    public Boolean DisableCardItem { get; set; }
+    public Boolean ExpandSignInItem { get; set; }
+    public Boolean ExpandDeliveryItem { get; set; }
+    public Boolean ExpandCardItem { get; set; }
 
     public void OnCreate()
     {
-        Accordion.EnableItem(1, false);
-        Accordion.EnableItem(2, false);
+        DisableDeliveryItem = true;
+        DisableCardItem = true;
     }
 
     public void OnSignIn()
@@ -154,10 +159,10 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
         else
         {
             EmptyField = false;
-            Accordion.EnableItem(1, true);
+            DisableDeliveryItem = false;
             Accordion.Select(1);
-            Accordion.ExpandItem(false, 0);
-            Accordion.ExpandItem(true, 1);
+            ExpandSignInItem = false;
+            ExpandDeliveryItem = true;
         }
     }
     public void OnContinue()
@@ -168,17 +173,17 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
         }
         else
         {
-            Accordion.EnableItem(2, true);
+            DisableCardItem = false;
             Accordion.Select(2);
-            Accordion.ExpandItem(false, 1);
-            Accordion.ExpandItem(true, 2);
+            ExpandDeliveryItem = false;
+            ExpandCardItem = true;
         }
     }
     public void GoBack()
     {
         Accordion.Select(1);
-        Accordion.ExpandItem(false, 2);
-        Accordion.ExpandItem(true, 1);
+        ExpandCardItem = false;
+        ExpandDeliveryItem = true;
     }
     public void SaveDetails()
     {
@@ -200,9 +205,10 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
     {
 
         AlertDialog.Hide();
-        Accordion.EnableItem(0, true);
-        Accordion.EnableItem(1, false);
-        Accordion.EnableItem(2, false);
+        ExpandCardItem = false;
+        DisableSignInItem = false;
+        DisableDeliveryItem = true;
+        DisableCardItem = true;
         Accordion.Select(0);
     }
 }

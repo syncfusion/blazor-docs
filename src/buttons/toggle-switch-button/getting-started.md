@@ -99,6 +99,24 @@ After successful compilation of your application, simply press F5 to run the app
 
 ![Switch Sample](./images/switch.png)
 
+## Set text on Switch
+
+This section explains how to set `OnLabel` and `OffLabel` texts on Switch. In the following example, `onLabel` is set as `ON` and `offLabel` is set as `OFF`.
+
+```csharp
+<SfSwitch @bind-Checked="isChecked" OnLabel="On" OffLabel="Off"></SfSwitch>
+
+@code {
+    private bool isChecked = true;
+}
+```
+
+> Switch does not have text support for material themes, and does not support long custom text.
+
+Output be like
+
+![Switch Sample](./images/switch-label.png)
+
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)

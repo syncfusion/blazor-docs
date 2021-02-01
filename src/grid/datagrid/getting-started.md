@@ -74,16 +74,6 @@ namespace BlazorApplication
 }
 ```
 
-**Note**: To enable custom client side resource loading from CRG or CDN, you need to disable resource loading by  `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
-
-```html
-    <head>
-        <environment include="Development">
-            <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
-        </environment>
-    </head>
-```
-
 ## Add DataGrid Component
 
 To initialize the DataGrid component add the below code to your **Index.razor** view page which is present under **~/Pages** folder.

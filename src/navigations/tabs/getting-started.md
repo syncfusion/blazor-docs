@@ -190,7 +190,7 @@ Output be like the below.
 
 ## Two way binding of SelectedItem
 
-The property `SelectedItem` supports two way property binding, in the following code example if either the value is changed in numeric text box or selected tab item is changed, it will reflect in both the value of numeric text box and selected tab item.
+The property [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) supports two way property binding, in the following code example if either the value is changed in numeric text box or selected tab item is changed, it will reflect in both the value of numeric text box and selected tab item.
 
 ```csharp
 @using Syncfusion.Blazor.Inputs
@@ -233,6 +233,10 @@ Selected Tab
     private int SelectedTab = 0;
 }
 ```
+
+Output be like the below.
+
+![Tabs with Two way binding](./images/two-way-binding.png)
 
 ## See Also
 

@@ -128,7 +128,7 @@ In the following code example, there are two tabs. The first tab have a login pa
 
 ## On Demand rendering or lazy loading
 
-You can set this mode to our Tabs by setting `ContentLoad.Demand` to the property `LoadOn`. In this mode, the content of the selected tab alone will be loaded initially. The content of the selected tab will be rendered on selection. The content of the tabs which were loaded once will be maintained in the DOM. In this mode, since the selected tab content alone rendered on initial load and maintained the other tabs on selection in the DOM, state of the tabs like scroller position, form values etc.., will be maintained. The `OnInitialized` life cycle method will trigger whenever the tab is switched.
+You can set this mode to our Tabs by setting `ContentLoad.Demand` to the property `LoadOn`. In this mode, the content of the selected tab alone will be loaded initially. The content of the selected tab will be rendered on selection. The content of the tabs which were loaded once will be maintained in the DOM. In this mode, since the selected tab content alone rendered on initial load and maintained the other tabs on selection in the DOM, state of the tabs like scroller position, form values etc.., will be maintained.
 
 In the following code example, Calendar and Scheduler have been rendered in first and second tab respectively. Initially, Scheduler is not available once the second tab is selected, scheduler will be rendered. Both calendar and scheduler will be maintained in DOM, changing the date either in calendar or scheduler will change the date in other.
 
@@ -190,7 +190,7 @@ In the following code example, Calendar and Scheduler have been rendered in firs
                     <form id="formId">
                         <div class="form-group">
                             <div class="e-float-input">
-                                <SfTextBox Placeholder="Enetr name" @bind-Value="UserName"></SfTextBox>
+                                <SfTextBox Placeholder="Enter name" @bind-Value="UserName"></SfTextBox>
                             </div>
                             <div class="e-float-input">
                                 <SfTextBox Placeholder="Email" @bind-Value="MailAddress" Type="InputType.Email"></SfTextBox>

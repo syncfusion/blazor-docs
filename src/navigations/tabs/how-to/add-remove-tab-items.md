@@ -1,10 +1,95 @@
 ---
 title: "Add or Remove Tab Items"
 component: "Tabs"
-description: "This example demonstrates how to add or remove a tab item in the Blazor Tab component."
+description: "This example demonstrates how to add or remove a tab item in the Blazor Tabs component."
 ---
 
 # Add/Remove Tab Items
+
+Tabs provides a support to Add/Remove the specified tab item using following ways.
+
+* Using conditional rendering.
+* Using public methods.
+
+## Using conditional rendering
+
+Tab items can be added/removed dynamically by iteration of Tab Items using conditional **foreach** loop.
+
+In the following demo, initially we have three tabs as the **TabItems** has three items. On `Add Item` button click, new item is added to **TabItems** results in adding fourth tab to the Tabs component. On clicking the `Remove Item`, the first item of **TabItems** has been removed which results in removing first tab of our Tabs component.
+
+```csharp
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
+
+<SfButton @onclick="AddItemClick" Content="Add Item"></SfButton>
+<SfButton @onclick="RemoveItemClick" Content="Remove Item"></SfButton>
+<br />
+<br />
+
+<SfTab>
+    <TabItems>
+        @foreach (TabData Item in TabItems)
+        {
+            <TabItem>
+                <HeaderTemplate>
+                    <div>@(Item.Header)</div>
+                </HeaderTemplate>
+                <ContentTemplate>
+                    <div>@(Item.Content)</div>
+                </ContentTemplate>
+            </TabItem>
+        }
+    </TabItems>
+</SfTab>
+
+
+@code {
+    List<TabData> TabItems = new List<TabData>()
+    {
+        new TabData
+        {
+        Header = "ASP.NET",
+        Content = "Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services. ASP.NET pages execute on the server and generate markup such as HTML, WML, or XML that is sent to a desktop or mobile browser. ASP.NET pages use a compiled,event-driven programming model that improves performance and enables the separation of application logic and user interface."
+        },
+        new TabData
+        {
+        Header = "ASP.NET MVC",
+        Content = "The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller. The ASP.NET MVC framework provides an alternative to the ASP.NET Web Forms pattern for creating Web applications. The ASP.NET MVC framework is a lightweight, highly testable presentation framework that (as with Web Forms-based applications) is integrated with existing ASP.NET features, such as master pages and membership-based authentication."
+        },
+        new TabData
+        {
+        Header = "ASP.NET Razor",
+        Content = "Razor is an ASP.NET programming syntax used to create dynamic web pages with the C# or Visual Basic .NET programming languages. Razor was in development in June 2010 and was released for Microsoft Visual Studio 2010 in January 2011. Razor is a simple-syntax view engine and was released as part of MVC 3 and the WebMatrix tool set. Side Code content"
+        }
+    };
+    public class TabData
+    {
+        public string Header { get; set; }
+        public string Content { get; set; }
+    }
+    void AddItemClick()
+    {
+        TabItems.Add(new TabData
+        {
+            Header = "JavaScript",
+            Content = "JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."
+        });
+    }
+    void RemoveItemClick()
+    {
+        if (TabItems.Count > 0)
+        {
+            TabItems.RemoveAt(0);
+        }
+    }
+}
+```
+
+Output be like the below.
+
+![Dynamic Add/Remove TabItems using loop](../images/addRemoveItemUsingConditioalRendering.gif)
+
+## Using public methods
 
 Tabs can be added dynamically by passing list of items and index value to the `AddTab` method. You can remove the tab items by passing the specified item through `RemoveTab` method. Tab items can also be removed by clicking the close icon which appears on the tab header on setting true to `ShowCloseButton` property.
 
@@ -65,4 +150,4 @@ In the following demo, you can add a tab item as first tab and remove the last t
 
 Output be like the below.
 
-![Add and remove tabs](../images/addRemoveTab.png)
+![Dynamic Add/Remove TabItems using method](../images/addRemoveItemUsingMethod.png)

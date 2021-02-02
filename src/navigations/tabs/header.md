@@ -108,7 +108,7 @@ Output be like the below.
 
 ## Icon positions
 
-You can customize the position of the Tab header icons using the `IconPosition` property.  This property depends on the header items `IconCSS` property.  By default, Tab header icon is placed on left position.  The position values are as follows:
+You can customize the position of the Tab header icons using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconPosition) property. This property depends on the header items [IconCSS](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconCss) property. By default, Tab header icon is placed on left position. The position values are as follows:
 
 * **Left**: Icon is placed on the left of the Tab header item.
 * **Right**: Icon is placed on the right of the Tab header item.

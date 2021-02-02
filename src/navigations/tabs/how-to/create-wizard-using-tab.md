@@ -6,16 +6,16 @@ description: "This online reservation example demonstrates how to create multipl
 
 # Create wizard
 
-Tab items can be disabled during initial control rendering by passing the boolean value and tab index to the[`EnableTab`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfTab~EnableTab.html) public method of [`TabItem`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.TabItem.html) class.
+Tab items can be disabled during initial control rendering by passing the boolean value and tab index to the [`EnableTab`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnableTab_System_Int32_System_Boolean_) public method.
 
 In the below Wizard sample, each tab is integrated with required components to complete the reservation. Each field is provided with validation for all mandatory option to proceed to next tabs. Using tab item's template property the components are added into content.
 
 Create the following contents for each tab in the wizard.
 1. **Search tab:**
-   Created with [`DropDownList`] to select the source, destination and type of ticket. A [`DatePicker`] for choosing the date of journey.
+   Created with `DropDownList` to select the source, destination and type of ticket. A `DatePicker` for choosing the date of journey.
 2. **Train tab:**
    Based on the selected start and end point, populated Grid with random list of available seats and train list. Initially define the columns
-    and row selected event for validating, after the source and destination chosen update the [`DataSource`] for the Grid.
+    and row selected event for validating, after the source and destination chosen update the `DataSource` for the Grid.
 3. **Passenger tab:**
    A table with Textbox, Numeric, DropDownList for adding passenger name, age, gender and preferred berth/seat. Add validation on entering
    passenger details to proceed.
@@ -242,8 +242,8 @@ You can go back on each tab using buttons available in it and tabs are disabled 
                 <Content><div>Your payment successfully processed</div></Content>
             </DialogTemplates>
             <DialogButtons>
-                    <DialogButton OnClick="@OnSubmit">
-                    <DialogButtonModel Content="OK" IsPrimary="true"></DialogButtonModel>
+                <DialogButton OnClick="@OnSubmit" Content="OK" IsPrimary="true">
+                </DialogButton>
             </DialogButtons>
         </SfDialog>
     </div>

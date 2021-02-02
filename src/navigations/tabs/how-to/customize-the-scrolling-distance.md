@@ -6,14 +6,14 @@ description: "This example demonstrates how to customize the scrolling distance 
 
 # Customize the Scrolling distance
 
-The `ScrollStep` property supports to customize the scrolling distance when you click the left and right side navigation icons. You can pass a required value through `ScrollStep` property to customize tab scrolling distance.
+The [ScrollStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_ScrollStep) property supports to customize the scrolling distance when you click the left and right side navigation icons. You can pass a required value through `ScrollStep` property to customize tab scrolling distance.
 
 Refer to the following code example.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfTab Height="250px" OverflowMode="OverflowMode.Scrollable" ScrollStep="150">
+<SfTab Width="400px" OverflowMode="OverflowMode.Scrollable" ScrollStep="150">
     <TabItems>
         <TabItem Content="@Content0">
             <ChildContent>
@@ -69,3 +69,7 @@ Refer to the following code example.
     public string Content7 = "JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part ofweb browsers so that client - side scripts could interact with the user, control the browser, communicateasynchronously, and alter the document content that was displayed.[5] More recently, however, it has become common inboth game development and the creation of desktop applications.";
 }
 ```
+
+Output be like the below.
+
+![Tab ScrollStep](../images/tabScrollStep.gif)

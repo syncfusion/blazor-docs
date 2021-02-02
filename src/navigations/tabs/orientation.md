@@ -8,14 +8,14 @@ description: "This sample demonstrates the header orientation of the Tabs. Selec
 
 This section explains about modifying the position and modes of Tab header.
 
-It allows placing the header section inside the Tabs component at different positions by using the  [`HeaderPlacement`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfTab~HeaderPlacement.html) property. The available positions are as follows:
+It allows placing the header section inside the Tabs component at different positions by using the [`HeaderPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_HeaderPlacement) property. The available positions are as follows:
 
 * **Top**: Tab header items can be arranged horizontally, and their content can be placed after the header.
 * **Bottom**: Tab header items can be arranged horizontally, and their content can be placed before the header.
 * **Left**: Tab header items can be arranged vertically, and their content can be placed after the header.
 * **Right**: Tab header items can be arranged vertically, and their content can be placed before the header.
 
-It is also adaptable to the available space when the tab items exceed the view space. You can customize the modes by using `OverflowMode` property. The available modes are as follows:
+It is also adaptable to the available space when the tab items exceed the view space. You can customize the modes by using [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_OverflowMode) property. The available modes are as follows:
 
 * Scrollable
 * Popup
@@ -81,7 +81,7 @@ It is also adaptable to the available space when the tab items exceed the view s
                         <td style="width: 50%;">
                             <div>
                                 <SfDropDownList DataSource="@OrientationData" @bind-Value="@HeaderValue" TValue="string" TItem="DropdownFields">
-                                    <DropDownListEvents ValueChange="OnHeaderPositionChange" TValue="string"></DropDownListEvents TItem="DropdownFields">
+                                    <DropDownListEvents ValueChange="OnHeaderPositionChange" TValue="string" TItem="DropdownFields"></DropDownListEvents>
                                     <DropDownListFieldSettings Value="Value" Text="Text"></DropDownListFieldSettings>
                                 </SfDropDownList>
                             </div>
@@ -135,7 +135,7 @@ It is also adaptable to the available space when the tab items exceed the view s
     {
         Header = (HeaderPosition)Enum.Parse(typeof(HeaderPosition), (args.Value as string));
     }
-        public void OnChangeMode(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropdownFields> args)
+    public void OnChangeMode(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropdownFields> args)
     {
         Mode = (OverflowMode)Enum.Parse(typeof(OverflowMode), (args.Value as string));
     }

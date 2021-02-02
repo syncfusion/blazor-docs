@@ -1,13 +1,13 @@
 ---
 title: "Set state persistence of the Tab component"
-component: "Tab"
+component: "Tabs"
 description: "This example demonstrates how to retain the current model value in the browser cookies for state maintenance of the Blazor Tab component."
 ---
 
 # Set state persistence
 
-State persistence allows the Tab to retain the current modal value in the browser cookies for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfTab~EnablePersistence.html) property which is set to false by default.
-When it is set to true, some of the Tab component model values will be retained even after refreshing the page.
+State persistence allows the Tab to retain the current [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property value in the browser cookies for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnablePersistence) property which is set to false by default.
+When it is set to true, [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property value of the Tab component will be retained even after refreshing the page.
 
 > Tab **ID** is essential to set state persistence .
 

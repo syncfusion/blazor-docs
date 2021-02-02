@@ -7,7 +7,7 @@ description: "Tabs localization section explains how to localize the tabs based 
 # Localization
 
 Localization library allows to localize the default text content of
-Tab. In Tab, The close button's tooltip text alone will be localize based on culture.
+Tab. In Tab, the close button's tooltip text alone will be localize based on culture.
 
 | Locale key | en-US (default) |
 |------|------|

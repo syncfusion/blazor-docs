@@ -12,6 +12,8 @@ Syncfusion provides **Visual Studio Scaffolding** for the Syncfusion Blazor plat
 
 The following steps explain how to add a scaffolded item to your Blazor application.
 
+> Before use the Syncfusion Blazor Scaffolding, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
+
 1. If the project type is **Blazor ServerSide**, right-click the **Pages** folder in the Solution Explorer, click **Add**, and then select **New Scaffolded Item..**
 
     ![Scaffolded add-in from server project](../images/Add_scaffold_Serverside.png)

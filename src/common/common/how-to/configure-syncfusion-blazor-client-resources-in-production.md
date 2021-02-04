@@ -6,7 +6,7 @@
 
 ## Adding Syncfusion Blazor init interop script in the production application
 
-> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the below configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
+> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the below configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
 
 * Set `DisableScriptManager` as true to the `AddSyncfusionBlazor` service in the `~/Startup.cs` file for Blazor server app or `~/Program.cs` file for Blazor WebAssembly app.
 

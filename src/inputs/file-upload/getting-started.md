@@ -6,7 +6,7 @@ description: "Explains how to get started with the file upload control with its 
 
 # Getting Started
 
-This section briefly explains how to include a **Uploader** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly/) page for introduction and configure the common specifications.
+This section briefly explains how to include a **Uploader** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 

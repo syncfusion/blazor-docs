@@ -54,7 +54,7 @@ Refer to the following steps to download the custom resources in CRG:
 
 ## How to use custom resources in the Blazor application
 
-> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the following configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
+> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the following configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
 
 1. Copy or paste the downloaded custom resources in the Blazor application `~/wwwroot` folder.
 

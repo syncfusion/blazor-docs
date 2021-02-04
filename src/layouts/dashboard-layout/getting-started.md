@@ -7,7 +7,7 @@ description: "Learn how to create a Dashboard Layout component in Blazor."
 
 # Getting Started
 
-This section briefly explains about how to include a `Dashboard Layout` component in your `Blazor server-side application`. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/) page for introduction and configuring the common specifications.
+This section briefly explains about how to include a `Dashboard Layout` component in your `Blazor server-side application`. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -367,6 +367,6 @@ https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 
-* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly/)
+* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

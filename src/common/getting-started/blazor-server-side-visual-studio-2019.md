@@ -33,8 +33,8 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
     ![select framework](images/blazor-select-template.png)
 
-5. Choose **Blazor Server App** from the dashboard, and then click the **Create** button to create a new Blazor Server application. 
- 
+5. Choose **Blazor Server App** from the dashboard, and then click the **Create** button to create a new Blazor Server application.
+
     ![select framework](images/blazor-server-template.png)
 
 ## Installing Syncfusion Blazor packages in the application
@@ -46,7 +46,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 > Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
 1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the new application using the `NuGet Package Manager`. Refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) section for the available NuGet packages.
-     
+
     ![nuget explorer](images/nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor.Calendars** keyword in the Browse tab and install **Syncfusion.Blazor.Calendars** NuGet package in the application.
@@ -92,7 +92,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
     ```
 
     > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
-    
+
 ## Adding Syncfusion Blazor component and running the application
 
 1. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.

@@ -28,16 +28,38 @@ gulp.task('ship-to-gitlap', function (done) {
     
     console.log('--is_temp----' + is_temp);
     
-    var cloneRepos = [];
-    for (var i = 0; i < changedFileNames.length; i++) {
-        var curentRootRepo = changedFileNames[i].split('/')[1];
-//         if(curentRootRepo !='workflows'){
-//             return
-//            }
-        if (curentRootRepo != undefined && curentRootRepo !='workflows') {
-            cloneRepos.push(curentRootRepo);
-        }
-    }
+    var cloneRepos = ['buttons',
+                      'calendars',
+                      'charts',
+                      'common',
+                      'diagrams',
+                      'dropdown',
+                      'filemanager',
+                      'gantt',
+                      'grid',
+                     'heatmap',
+                     'inplace-editor',
+                     'inputs',
+                     'kanban',
+                     'layouts',
+                     'lists',
+                     'navigations',
+                     'notifications',
+                     'pivotview',
+                     'popups',
+                     'querybuilder',
+                     'richtexteditor',
+                     'scheduler',
+                     'treemap'];
+//     for (var i = 0; i < changedFileNames.length; i++) {
+//         var curentRootRepo = changedFileNames[i].split('/')[1];
+// //         if(curentRootRepo !='workflows'){
+// //             return
+// //            }
+//         if (curentRootRepo != undefined && curentRootRepo !='workflows') {
+//             cloneRepos.push(curentRootRepo);
+//         }
+//     }
     
     console.log('--cloneRepos----' + cloneRepos);    
     
@@ -49,8 +71,8 @@ gulp.task('ship-to-gitlap', function (done) {
         });
         if (clone.code !== 0) {
             console.log(clone.stderr);
-            done();
-            return;
+//             done();
+//             return;
         } else {
             console.log('Clone has been completed...!');
             shelljs.cp('-rf', `./src/${cloneRepos[j]}/*`, `./gitlapRepo/ej2-${cloneRepos[j]}-razor-docs/src`);

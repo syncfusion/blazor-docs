@@ -8,7 +8,7 @@ description: "Learn how to create an Blazor DataGrid component and enable featur
 
 # Getting Started
 
-This section briefly explains about how to include a DataGrid Component in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains about how to include a DataGrid Component in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/) for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor DataGrid component, you can check on this video.
 

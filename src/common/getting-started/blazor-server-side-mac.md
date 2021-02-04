@@ -114,7 +114,6 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
         }
     }
     ```
-    
 3. Now, add the Syncfusion Blazor components in any .razor file in the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
 
     ```csharp

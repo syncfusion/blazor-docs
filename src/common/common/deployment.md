@@ -1,12 +1,12 @@
 # Deployment
 
-This section provides information about deploying applications with the Syncfusion Blazor components.
+This section provides information about deploying Blazor applications with the Syncfusion Blazor components.
 
 You can get more information about deploying Blazor applications [Here](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/).
 
 ## Publish Blazor Application with Visual Studio 2019
 
-* Create the Blazor server Application with [Syncfusion Blazor Components](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/).
+* Create the Blazor application with [Syncfusion Blazor Components](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019).
 
 > **Note:** You have to change the base path of the application. Refer to the [MSDN](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio#app-base-path) for more details.
 
@@ -22,7 +22,7 @@ You can get more information about deploying Blazor applications [Here](https://
 
 ![Release Configuration](./images/config.png)
 
->Note: For `Blazor Server Application`, Deployment Mode is set to
+>Note: For `Blazor Server side application`, Deployment Mode is set to
 `Self-Contained`.
 ![Deploy Mode](./images/deploy.png)
 Because some dependencies are not loaded properly when we host the published folder.

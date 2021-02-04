@@ -1,8 +1,8 @@
 # Icons Library
 
-The Syncfusion Blazor library provides the set of `base64` formatted font icons, that can be utilized in the web application.
+The Syncfusion Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion Blazor components. These can be utilized in your web application also as needed.
 
-## Steps to Use Icon
+## Steps to use Icon
 
 1. Add a class `e-icons` to the HTML element that shows the icon. This class contains the font-family and common property of the font icons.
 
@@ -51,7 +51,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons,
         </style>
     ```
 
-## Customization
+## Customize Icon
 
 The Syncfusion Blazor icon library can customize its color, size by overriding the `e-icons` class.
 
@@ -82,7 +82,7 @@ The Syncfusion Blazor icon library can customize its color, size by overriding t
 
 ## Available Icons
 
-The complete pack of Syncfusion Blazor icons is listed in the below table. The corresponding icon content can be referred to in the content section.
+The complete pack of Syncfusion Blazor icons is listed in the below table. The corresponding icon content can be referred to the content section.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -98,7 +98,7 @@ The complete pack of Syncfusion Blazor icons is listed in the below table. The c
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/material/demo.html" style="height:1000px;"></iframe>
 
-### Fabric
+### Office Fabric
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fabric/demo.html" style="height:1000px;"></iframe>
 

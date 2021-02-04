@@ -8,7 +8,7 @@ description: "This section briefly explains how to create the Card component and
 
 # Getting Started in Blazor Card
 
-This section briefly explains about how to include a `Card` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Card` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Card component, you can check on this video.
 `youtube:k8KSZIf5VPs`

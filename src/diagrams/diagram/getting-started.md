@@ -6,29 +6,27 @@ description: "This section briefly explains how to create the Diagram component 
 
 # Getting Started
 
-This section briefly explains about how to include a Diagram in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a Diagram in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
- 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**. Note: Please ensure to check the **Include prerelease** option.
+ 1. Install **Syncfusion.Blazor.Diagrams** NuGet package to the application by using the **NuGet Package Manager**.
  2. You can add the client-side style resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
     <environment include="Development">
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-        <!---CDN--->
-        <!-- <link href="https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css" rel="stylesheet" /> -->
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
      </environment>
 </head>
 ```
 
-For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```html
 <head>
     <environment include="Development">
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
         <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
     </environment>
 </head>
@@ -238,8 +236,6 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
 
 ## See Also
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)
-
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor/)
-
-* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor-server/)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

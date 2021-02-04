@@ -1,12 +1,12 @@
 ---
-title: "How to enable/disable toolbar items"
+title: "How to show/hide toolbar items"
 component: "Toolbar"
-description: "This example demonstrates how to enable/disable the specific toolbar item based on the condition."
+description: "This example demonstrates how to show/hide the specific toolbar item in the Blazor Toolbar component."
 ---
 
-# Enable/Disable Toolbar Items
+# Show/Hide Toolbar Items
 
-The `Disabled` property of the Toolbar item is used to enable/disable the item by setting false/true value to the property. In the following code example initially paste action will be disabled. On clicking the cut button, the paste button will be enabled.
+The `Visible` property of the Toolbar item is used to show/hide the item by setting true/false value to the property. In the following code example initially paste action will be hide. On clicking the cut button, the paste button will be show.
 
 ```csharp
 
@@ -15,7 +15,7 @@ The `Disabled` property of the Toolbar item is used to enable/disable the item b
 <SfToolbar>
     <ToolbarItems>
         <ToolbarItem PrefixIcon="e-cut-icon tb-icons" OnClick="@OnItemClick" Text="Cut" TooltipText="Cut"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-paste-icon tb-icons" Disabled="@ShowIcon" Text="Paste" TooltipText="Paste"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-paste-icon tb-icons" Visible="@ShowItem" Text="Paste" TooltipText="Paste"></ToolbarItem>
         <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
         <ToolbarItem PrefixIcon="e-bold-icon tb-icons" Text="Bold" TooltipText="Bold"></ToolbarItem>
         <ToolbarItem PrefixIcon="e-underline-icon tb-icons" Text="Underline" TooltipText="Underline"></ToolbarItem>
@@ -29,10 +29,10 @@ The `Disabled` property of the Toolbar item is used to enable/disable the item b
 </SfToolbar>
 
 @code{
-    public bool ShowIcon { get; set; } = true;
+    public bool ShowItem { get; set; } = false;
     public void OnItemClick()
     {
-        ShowIcon = !ShowIcon;
+        ShowItem = !ShowItem;
     }
 }
 
@@ -183,4 +183,4 @@ The `Disabled` property of the Toolbar item is used to enable/disable the item b
 
 Output be like the below.
 
-![Enable/Disable item](../images/disable_item.gif)
+![Dynamic Show/Hide ToolbarItems](../images/showHideItem.gif)

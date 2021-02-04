@@ -13,6 +13,7 @@ When style attributes are added, if the same attributes were already present, th
 Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item `CssClass` property.
 
 ```csharp
+
 @using Syncfusion.Blazor.Navigations
 
 <SfToolbar Width="500">
@@ -42,6 +43,7 @@ Single or multiple CSS classes can be added to the Toolbar commands using the To
         font-variant: small-caps;
     }
 </style>
+
 ```
 
 Output be like the below.

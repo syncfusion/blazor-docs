@@ -54,7 +54,7 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
 3. Search **Syncfusion.Blazor.Calendars** keyword in the Browse tab and install **Syncfusion.Blazor.Calendars** NuGet package in the application.
 
     ![select nuget](images/individual-nuget.png)
-    
+
 4. The Syncfusion Blazor Calendars package will be included in the newly created project once the installation process is completed.
 
 5. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
@@ -93,7 +93,6 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
     </head>
     ```
     > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
-    
 
 ## Adding Syncfusion Blazor component and running the application
 

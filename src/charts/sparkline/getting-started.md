@@ -6,7 +6,7 @@ description: "This section explains you the steps required to create a simple Sp
 
 # Getting Started
 
-This section briefly explains how to include a **Sparkline** in your Blazor server-side application. Refer to this [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor/) documentation for introduction and configuring common specifications.
+This section briefly explains how to include a **Sparkline** in your Blazor server-side application. Refer to this [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) documentation for introduction and configuring common specifications.
 
 ## Importing Syncfusion Blazor component in an application
 

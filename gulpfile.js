@@ -28,17 +28,17 @@ gulp.task('ship-to-gitlap', function (done) {
     
     console.log('--is_temp----' + is_temp);
     
-     var cloneRepos = [];
-     for (var i = 0; i < changedFileNames.length; i++) {
-         var curentRootRepo = changedFileNames[i].split('/')[1];
-//          if(curentRootRepo ==='workflows'){
-//              return
+//      var cloneRepos = [];
+//      for (var i = 0; i < changedFileNames.length; i++) {
+//          var curentRootRepo = changedFileNames[i].split('/')[1];
+// //          if(curentRootRepo ==='workflows'){
+// //              return
+// //          }
+//          if (curentRootRepo != undefined && curentRootRepo !='workflows') {
+//              cloneRepos.push(curentRootRepo);
 //          }
-         if (curentRootRepo != undefined && curentRootRepo !='workflows') {
-             cloneRepos.push(curentRootRepo);
-         }
-   }
-    
+//    }
+    var cloneRepos = ["calendars","calendars","calendars","calendars","calendars","charts","circulargauge","dropdown","dropdown","dropdown","dropdown","grid","inputs","inputs","inputs","inputs","kanban","layouts","lineargauge","maps","navigations","notifications","pivotview","smithchart","sparkline","treemap"];
     console.log('--cloneRepos----' + cloneRepos);    
     
     for (var j = 0; j < cloneRepos.length; j++) {

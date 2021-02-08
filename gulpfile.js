@@ -31,7 +31,7 @@ gulp.task('ship-to-gitlap', function (done) {
      var cloneRepos = [];
      for (var i = 0; i < changedFileNames.length; i++) {
          var curentRootRepo = changedFileNames[i].split('/')[1];
-         if(curentRootRepo !='workflows'){
+         if(curentRootRepo ==='workflows'){
              return
             }
          if (curentRootRepo != undefined && curentRootRepo !='workflows') {

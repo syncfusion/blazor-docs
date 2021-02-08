@@ -8,7 +8,7 @@ description: "Learn how to create an Badge control and use different types of Ba
 
 # Getting Started
 
-This section briefly explains about how to include a `Badge` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Badge` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../../getting-started/vs-blazor/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 

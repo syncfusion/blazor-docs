@@ -4,12 +4,11 @@ component: "Toolbar"
 description: "This example demonstrates how to enable/disable the specific toolbar item based on the condition."
 ---
 
-# Enable/Disable Toolbar Items
+# How to enable/disable toolbar items
 
 The `Disabled` property of the Toolbar item is used to enable/disable the item by setting false/true value to the property. In the following code example initially paste action will be disabled. On clicking the cut button, the paste button will be enabled.
 
 ```csharp
-
 @using Syncfusion.Blazor.Navigations
 
 <SfToolbar>
@@ -178,7 +177,6 @@ The `Disabled` property of the Toolbar item is used to enable/disable the item b
         font-size: 16px;
     }
 </style>
-
 ```
 
 Output be like the below.

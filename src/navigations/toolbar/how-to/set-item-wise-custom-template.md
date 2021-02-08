@@ -9,7 +9,6 @@ description: "This example demonstrates how to create custom template into the B
 The Toolbar supports adding template commands using the  `Template` property. Template property can be given as the `HTML element` or `RenderFragment`.
 
 ```csharp
-
 @using Syncfusion.Blazor.Navigations
 
 <SfToolbar Width="300">
@@ -33,9 +32,4 @@ The Toolbar supports adding template commands using the  `Template` property. Te
         </ToolbarItem>
     </ToolbarItems>
 </SfToolbar>
-
 ```
-
-Output be like the below.
-
-![Toolbar Item Custom Template](../images/toolbar_custom_template.png)

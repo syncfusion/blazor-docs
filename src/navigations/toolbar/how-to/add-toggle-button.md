@@ -20,7 +20,6 @@ Toolbar supports to add a toggle Button by using the `Template` property. Refer 
 On clicking the toggle Button, change the required icon and content based on current active state.
 
 ```csharp
-
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
@@ -197,9 +196,4 @@ On clicking the toggle Button, change the required icon and content based on cur
         }
     }
 }
-
 ```
-
-Output be like the below.
-
-![Toolbar Item Toggle Button](../images/item_toggle_button.gif)

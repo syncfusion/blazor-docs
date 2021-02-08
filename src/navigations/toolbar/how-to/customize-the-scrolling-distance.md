@@ -11,7 +11,6 @@ Toolbar `ScrollStep` property supports to customize the scrolling distance when 
 Refer to the following code example.
 
 ```csharp
-
 @using Syncfusion.Blazor.Navigations
 
 <SfToolbar Width="600" ScrollStep="50">
@@ -202,9 +201,4 @@ Refer to the following code example.
         content: "\e708"
     }
 </style>
-
 ```
-
-Output be like the below.
-
-![Toolbar ScrollStep](../images/toolbar_ScrollStep.gif)

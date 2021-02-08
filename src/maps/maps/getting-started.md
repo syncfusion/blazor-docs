@@ -2,7 +2,7 @@
 
 Syncfusion Blazor Maps component is ideal for rendering maps from GeoJSON data or from other map providers such as OpenStreetMap and Bing Maps. For example, you can render the World map or the United States map and customize it to the desired look using built-in options in the Blazor Maps component.
 
-This section briefly explains how to include maps in your Blazor Server-side application to demonstrate the permanent and non-permanent countries in the United Nations Security council. Refer to the [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor/) documentation for introduction and configuring common specifications.
+This section briefly explains how to include maps in your Blazor Server-side application to demonstrate the permanent and non-permanent countries in the United Nations Security council. Refer to the [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) documentation for introduction and configuring common specifications.
 
 ## Importing Syncfusion Blazor component in an application
 
@@ -304,6 +304,6 @@ You can enable tooltip by setting the [`Visible`](https://help.syncfusion.com/cr
 
 * [Getting Started with Syncfusion Blazor for client-side application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor/)
 
-* [Getting Started with Syncfusion Blazor for server-side application in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor-server/)
+* [Getting Started with Syncfusion Blazor for server-side application in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 
 * [Getting Started with Syncfusion Blazor for server-side application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)

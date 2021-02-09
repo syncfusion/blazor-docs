@@ -38,7 +38,7 @@ gulp.task('ship-to-gitlap', function (done) {
 //              cloneRepos.push(curentRootRepo);
 //          }
 //    }
-    var cloneRepos = ["calendars","calendars","calendars","calendars","calendars","charts","circulargauge","dropdown","dropdown","dropdown","dropdown","grid","inputs","inputs","inputs","inputs","kanban","layouts","lineargauge","maps","navigations","notifications","pivotview","smithchart","sparkline","treemap"];
+    var cloneRepos = [];
     console.log('--cloneRepos----' + cloneRepos);    
     
     for (var j = 0; j < cloneRepos.length; j++) {

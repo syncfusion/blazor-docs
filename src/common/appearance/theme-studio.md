@@ -4,7 +4,7 @@ Theme Studio for Syncfusion Blazor can be used to customize a new theme from an 
 
 ## Customizing theme color from theme studio
 
-The Syncfusion Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion Blazor components. All Syncfusion Blazor component styles are derived from these [theme-based common variables](theme#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
+The Syncfusion Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion Blazor components. All Syncfusion Blazor component styles are derived from these [theme-based common variables](themes#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
 
 **Step 1:** Navigate to the Theme Studio application from this link: [Theme Studio](https://ej2.syncfusion.com/themestudio/).
 

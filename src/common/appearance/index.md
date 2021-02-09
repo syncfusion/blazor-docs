@@ -4,7 +4,7 @@ The Syncfusion Blazor library styles are developed under the SCSS environment wi
 
 ## Key Features
 
-* [Theming](./theme)
+* [Theming](./themes)
 * [Theme Studio](./theme-studio)
 * [Icons](./icons)
 * [Bootstrap 4](./icons/bootstrap4)

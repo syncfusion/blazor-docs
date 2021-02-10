@@ -8,7 +8,7 @@ description: "Learn how to create an Blazor DataGrid component and enable featur
 
 # Getting Started
 
-This section briefly explains about how to include a DataGrid Component in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/server-side-blazor/) for the introduction and configuring the common specifications.
+This section briefly explains about how to include a DataGrid Component in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor DataGrid component, you can check on this video.
 
@@ -124,7 +124,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
 
-The DataGrid has an option to define columns using [`GridColumns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In [`GridColumns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumns.html) component we have properties to customize columns.
+The DataGrid has an option to define columns using [`GridColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In [`GridColumns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumns.html) component we have properties to customize columns.
 
 Let’s check the properties used here:
 * We have added [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) to map with a property name in IEnumerable object.
@@ -384,8 +384,9 @@ The following sample code demonstrates notifying user when server-side exception
 
 ## See Also
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](./how-to/server-side-using-cli)
+* [Getting started with Syncfusion Data Grid in Blazor Server Side App using .NET Core CLI]](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](./how-to/client-side-using-cli)
 
-* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](./how-to/client-side-using-visual-studio)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
+
+* [Getting Started with Syncfusion DataGrid in Blazor WebAssembly using Visual Studio 2019](./how-to/blazor-webassembly-datagrid-using-visual-studio)

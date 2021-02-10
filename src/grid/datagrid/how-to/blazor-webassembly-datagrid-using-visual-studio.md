@@ -1,14 +1,14 @@
 ---
 title: "Getting Started"
 component: "DataGrid"
-description: "Learn how to create an Blazor DataGrid component and enable features like paging, filtering, sorting, and grouping in Blazor Client side using Visual Studio."
+description: "Learn how to add a Blazor DataGrid component and enable features like paging, filtering, sorting, and grouping in Blazor WebAssembly project using Visual Studio."
 ---
 
  <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor - WebAssembly App in Visual Studio 2019
+# Getting started with Syncfusion DataGrid in Blazor WebAssembly App using Visual Studio 2019
 
-This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions to configure Syncfusion Blazor DataGrid in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
 > **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
@@ -149,7 +149,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
 
-The DataGrid has an option to define columns using [`GridColumns`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
+The DataGrid has an option to define columns using [`GridColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
 
 Let’s check the properties used here:
 
@@ -284,8 +284,8 @@ Output be like the below.
 
 ## See Also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](./client-side-using-cli)
+* [Getting Started with Syncfusion Data Grid in Blazor WebAssembly using .NET Core CLI](./blazor-webassembly-data-grid-using-cli)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started)
+* [Getting Started with Syncfusion DataGrid in Blazor Server-Side using Visual Studio 2019](../getting-started)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](./server-side-using-cli)
+* [Getting Started with Syncfusion Data Grid in Blazor Server-Side using .NET Core CLI](./server-side-using-cli)

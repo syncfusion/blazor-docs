@@ -1,12 +1,12 @@
 ---
 title: "Getting Started"
 component: "DataGrid"
-description: "Learn how to create an Blazor DataGrid component and enable features like paging, filtering, sorting, and grouping in Blazor Client side using CLI."
+description: "Learn how to add a Blazor DataGrid component and enable features like paging, filtering, sorting, and grouping in Blazor WebAssembly project using .NET Core CLI."
 ---
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor - WebAssembly App in .NET Core CLI
+# Getting started with Syncfusion Data Grid in Blazor WebAssembly App using .NET Core CLI
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor WebAssembly application using [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
@@ -266,8 +266,8 @@ Output be like the below.
 
 ## See Also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](./client-side-using-visual-studio)
+* [Getting Started with Syncfusion DataGrid in Blazor WebAssembly using Visual Studio 2019](./blazor-webassembly-datagrid-using-visual-studio)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started)
+* [Getting Started with Syncfusion DataGrid in Blazor Server-Side using Visual Studio 2019](../getting-started)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](./server-side-using-cli)
+* [Getting Started with Syncfusion DataGrid in Blazor Server-Side using .NET Core CLI](./server-side-using-cli)

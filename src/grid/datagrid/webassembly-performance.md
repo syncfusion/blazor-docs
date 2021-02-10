@@ -6,7 +6,7 @@ description: "Tips to use Blazor DataGrid component in Blazor WebAssembly applic
 
 # WebAssembly performance
 
-This section provides guidelines for using grid component in Blazor WebAssembly application. The guidelines for the Blazor WebAssembly performance best practice can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
+This section provides performance guidelines for using Syncfusion data grid component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
 
 ## Avoid unnecessary component renders
 

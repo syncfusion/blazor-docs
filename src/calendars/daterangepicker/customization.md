@@ -6,7 +6,7 @@ description: "Explains how to achieve UI level customization in the date range p
 
 # Customization
 
-The DateRangePicker is available for UI customization that can be achieved by using the available properties and events in the component.
+The DateRangePicker is available for UI customization that can be achieved by using the available properties and events in the component test.
 
 ## First day of week
 

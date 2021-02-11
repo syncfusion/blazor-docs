@@ -53,3 +53,4 @@
 * [Hide DataGrid Header](datagrid/how-to/hide-grid-header.md)
 * [Display Custom Tooltip in DataGrid cell](datagrid/how-to/display-custom-tool-tip-in-grid-cell.md)
 * [Styling and appearance](datagrid/how-to/grid-styling.md)
+* [Customize empty grid display message](datagrid/how-to/customize-empty-grid-display-message.md)

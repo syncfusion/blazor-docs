@@ -190,8 +190,11 @@ The following sample code demonstrates injecting service into Custom Adaptor,
     public class CustomAdaptor : DataAdaptor
     {
         //here you can inject your service
-        [Inject]
         public OrderDataAccessLayer context { get; set; };
+        public CustomAdaptor(OrderDataAccessLayer _context)
+        {
+            context = _context;
+        }
         // Performs data Read operation
         public override object Read(DataManagerRequest dm, string key = null)
         {

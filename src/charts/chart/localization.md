@@ -1,9 +1,7 @@
 ---
-title: " Chart Localization | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "Localization library allows to localize the default text content of Chart."
 ---
 
 # Localization

@@ -1,7 +1,5 @@
 ---
-title: "Data Annotation"
 component: "DataGrid"
-description: "Learn how to use data annotation in Blazor DataGrid to customize column options such as header and set validation using various attributes."
 ---
 
 # Data Annotation

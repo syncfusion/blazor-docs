@@ -1,7 +1,5 @@
 ---
-title: "Position popup open"
 component: "DropDownButton"
-description: "DropDownButton how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
 ---
 
 # Position popup open

@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Avatar"
-description: "Learn how to create an Avatar control and use different types of Avatar in Blazor application."
 ---
 
 <!-- markdownlint-disable MD024 -->

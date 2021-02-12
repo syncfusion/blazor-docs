@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Web accessibility ARIA attributes"
 component: "Rich Text Editor"
-description: "This section describes the roles and attributes of web accessibility standard (ARIA attributes based on w3c) for the Blazor Rich Text Editor."
 ---
 
 # Accessibility

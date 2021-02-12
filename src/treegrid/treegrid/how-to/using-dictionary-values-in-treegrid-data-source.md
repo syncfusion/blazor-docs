@@ -1,7 +1,5 @@
 ---
-title: "Using dictionary values in Tree Grid data source"
 component: "TreeGrid"
-description: "Learn how to assign dictionary values to the data source of the Blazor Tree Grid component"
 ---
 
 # Using dictionary values in Tree Grid data source

@@ -1,7 +1,5 @@
 ---
-title: "Blazor In-place Editor | List of native events"
 component: "In-place Editor"
-description: "This section demonstrates the native events supported by Blazor In-place Editor and how to initialize them in Blazor client-side application."
 ---
 
 # Overview

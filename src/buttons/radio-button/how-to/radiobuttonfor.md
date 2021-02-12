@@ -1,7 +1,5 @@
 ---
-title: "Radio ButtonFor and Model Binding"
 component: "Radio ButtonFor"
-description: "This section helps you to learn how to use Radio ButtonFor and Model Binding"
 ---
 
 # Radio ButtonFor and Model Binding

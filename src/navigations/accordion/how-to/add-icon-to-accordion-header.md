@@ -1,7 +1,5 @@
 ---
-title: "Add icon to Accordion header"
 component: "Accordion"
-description: "This example demonstrates how to add icons to the accordion header in the Blazor Accordion component."
 ---
 
 # Add Icon to Header

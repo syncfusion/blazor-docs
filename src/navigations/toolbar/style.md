@@ -1,7 +1,5 @@
 ---
-title: "Syncfusion Blazor Toolbar CSS Structure"
 component: "Toolbar"
-description: "Learn about customizing Blazor Toolbar control."
 ---
 
 # CSS Structure

@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Toggle Switch Button"
-description: "This section helps to learn how to create the Toggle Switch Button in Blazor application with its basic features in step-by-step procedure."
 ---
 
 <!-- markdownlint-disable MD024 -->

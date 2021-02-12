@@ -1,7 +1,5 @@
 ---
-title: "Date Views"
 component: "DatePicker"
-description: "Explains how to specify start and depth view options in the date picker component to restrict the calendar view navigation (month picker or year picker)."
 ---
 
 # Start and Depth View

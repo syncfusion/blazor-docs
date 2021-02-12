@@ -1,9 +1,7 @@
 ---
-title: " Chart Technical Indicators | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "Indicators represent a statistical approach to technical analysis as opposed to a subjective approach. we have different types of indicators."
 ---
 
 <!-- markdownlint-disable MD036 -->

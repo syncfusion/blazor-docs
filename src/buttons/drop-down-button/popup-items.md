@@ -1,7 +1,5 @@
 ---
-title: "DropDownButton Popup Items"
 component: "DropDownButton"
-description: "DropDownButton allows the end user to customize the whole popup or action items in popup using templates, navigate to other pages on action item click."
 ---
 
 # Popup items

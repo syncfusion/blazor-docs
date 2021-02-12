@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "Chart"
-description: "Learn how to use events in Blazor Data Chart component."
 ---
 
 # Events

@@ -1,7 +1,5 @@
 ---
-title: "Rendering mode"
 component: "Heatmap"
-description: "This section describes on how to switch the cell rendering mode between SVG and canvas in heatmap."
 ---
 
 # Rendering mode

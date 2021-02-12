@@ -1,7 +1,5 @@
 ---
-title: "Text Markup Annotation"
 component: "PDF Viewer"
-description: "Learn about the Text Markup Annotation support in PDF Viewer."
 ---
 
 # Text Markup Annotation

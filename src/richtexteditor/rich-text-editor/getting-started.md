@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Get started with use case example"
 component: "Rich Text Editor"
-description: "This section describes the step-by-step process to get started with the Blazor Rich Text Editor based on real-time use case application in Visual Studio 2019."
 ---
 
 <!-- markdownlint-disable MD024 -->

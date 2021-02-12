@@ -1,7 +1,5 @@
 ---
-title: "Node Appearance"
 component: "Diagram"
-description: "How to change the appearance of the node"
 ---
 
 # Appearance

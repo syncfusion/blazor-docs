@@ -1,7 +1,5 @@
 ---
-title: "Create right-to-left Split Button"
 component: "Split Button"
-description: "Split Button how to section, group popup items using list view component, dialog open on popup item click."
 ---
 
 # Create right-to-left Split Button

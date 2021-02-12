@@ -1,7 +1,5 @@
 ---
-title: 'ListView Grouping'
 component: 'ListView'
-description: 'ListView component supports grouping feature that helps group the logically related items under a category.'
 ---
 
 # Grouping

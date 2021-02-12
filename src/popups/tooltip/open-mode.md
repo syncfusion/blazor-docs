@@ -1,7 +1,5 @@
 ---
-title: "Tooltip Open Mode"
 component: "Tooltip"
-description: "Tooltip supports the mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements."
 ---
 
 # Open Mode

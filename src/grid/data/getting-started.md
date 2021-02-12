@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Data manager"
-description: "Learn how to connect the Blazor DataManager to a data source and perform queries against it. Also learn how to use DataManager with the Blazor DataGrid component"
 ---
 
 <!-- markdownlint-disable MD024 -->

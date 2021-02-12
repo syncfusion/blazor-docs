@@ -1,7 +1,5 @@
 ---
-title: "Selection"
 component: "DataGrid"
-description: "Learn how to select rows and cells, use range selection and check box selection in the Blazor DataGrid."
 ---
 
 # Selection

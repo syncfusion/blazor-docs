@@ -1,7 +1,5 @@
 ---
-title: "File Operations"
 component: "File Manager"
-description: "File Operations supported in file manager Component"
 ---
 
 # File Operations

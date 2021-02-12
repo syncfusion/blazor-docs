@@ -1,7 +1,5 @@
 ---
-title: "How to enable/disable toolbar items"
 component: "Toolbar"
-description: "This example demonstrates how to enable/disable the specific toolbar item based on the condition."
 ---
 
 # How to enable/disable toolbar items

@@ -1,7 +1,5 @@
 ---
-title: "Filtering"
 component: "Gantt Chart"
-description: "Learn how to filter rows in the Gantt Chart using the menu filtering. Also learn how to use custom filter components in the Blazor Gantt Chart component."
 ---
 
 # Filtering

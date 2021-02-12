@@ -1,7 +1,5 @@
 ---
-title: "BPMN Connectors"
 component: "Diagram"
-description: "BPMN connector are used to connection between BPMN flow objects."
 ---
 
 # BPMN Connectors

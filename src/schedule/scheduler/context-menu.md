@@ -1,7 +1,5 @@
 ---
-title: "Context menu"
 component: "Scheduler"
-description: "This section explains how to integrate the context menu manually to a Scheduler and use it with required options."
 ---
 
 # Context Menu

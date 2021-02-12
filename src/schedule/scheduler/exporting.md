@@ -1,7 +1,5 @@
 ---
-title: "Exporting and importing of events"
 component: "Scheduler"
-description: "Learn how to export Scheduler events to an excel/ICS file and import events from ICS."
 ---
 
 # Exporting

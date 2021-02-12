@@ -1,7 +1,5 @@
 ---
-title: "Blazor Scheduler Views"
 component: "Scheduler"
-description: "This article demonstrates the types of views available in Scheduler, and explains the way to customize and configure each view with different options."
 ---
 
 # Views

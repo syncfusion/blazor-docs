@@ -1,7 +1,5 @@
 ---
-title: "Localization"
 component: "Query Builder"
-description: "Learn how to give localization support to rules and conditions"
 ---
 
 # Localization

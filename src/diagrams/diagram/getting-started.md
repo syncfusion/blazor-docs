@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Diagram"
-description: "This section briefly explains how to create the Diagram component and configure its available functionalities in a Blazor application and also how to include a simple Diagram in your ASP.NET Core Blazor application."
 ---
 
 # Getting Started

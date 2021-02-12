@@ -1,7 +1,5 @@
 ---
-title: "HandWritten Signature"
 component: "PDF Viewer"
-description: "Learn about HandWritten Signature in PDF Viewer"
 ---
 
 # Handwritten Signature

@@ -1,7 +1,5 @@
 ---
-title: "Slider Localization"
 component: "Slider"
-description: "This section explains how to enable localization for Slider on both the server and the client side of the Blazor samples."
 ---
 
 # Localization

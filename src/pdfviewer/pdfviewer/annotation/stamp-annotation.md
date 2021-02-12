@@ -1,7 +1,5 @@
 ---
-title: "Stamp annotation"
 component: "PDF Viewer"
-description: "Learn about stamp annotations in PDF Viewer"
 ---
 
 # Stamp annotation

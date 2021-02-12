@@ -1,7 +1,5 @@
 ---
-title: "Kanban Globalization"
 component: "Kanban"
-description: "This section explains how to apply localization (l10n) based on culture file and right-to-left (RTL) in Kanban board."
 ---
 
 # Globalization

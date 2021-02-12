@@ -1,7 +1,5 @@
 ---
-title: "Customization | ASP.NET Core Blazor "
 component: "ProgressBar"
-description: "The progressBar can  be customized in various ways "
 ---
 
 # Customization

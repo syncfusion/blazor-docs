@@ -1,7 +1,5 @@
 ---
-title: "Customize selected tab styles"
 component: "Tabs"
-description: "This example demonstrates how to customize selected tab header styles in the Blazor Tab component."
 ---
 
 # Style Customization for active Item

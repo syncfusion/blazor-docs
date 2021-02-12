@@ -1,7 +1,5 @@
 ---
-title: "ListView how to fetch selected items from listview template sample"
 component: "ListView"
-description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
 # How To fetch selected items from listview template sample

@@ -1,7 +1,5 @@
 ---
-title: "Group"
 component: "Diagram"
-description: "Diagram supports grouping feature to group two or more nodes."
 ---
 
 # Group

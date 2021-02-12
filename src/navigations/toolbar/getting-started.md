@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Toolbar"
-description: "Rendering Toolbar using Blazor."
 ---
 
 # Getting Started

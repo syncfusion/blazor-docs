@@ -1,7 +1,5 @@
 ---
-title: "Calculated Field"
 component: "Pivot Table"
-description: "Calculated field allows the user to add a new field (user-defined) dynamically based on a simple mathematical formula."
 ---
 
 # Calculated Field

@@ -1,7 +1,5 @@
 ---
-title: "CssClass"
 component: "TimePicker"
-description: "Explains how to achieve UI level customization in the time picker component using custom CSS styles and classes."
 ---
 
 # CSS customization

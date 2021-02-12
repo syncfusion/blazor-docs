@@ -1,7 +1,5 @@
 ---
-title: "Bubble HeatMap"
 component: "Heatmap"
-description: "This section describes about the bubble heatmap, its types and its key features"
 ---
 
 # Bubble heat map

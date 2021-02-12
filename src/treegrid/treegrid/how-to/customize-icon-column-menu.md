@@ -1,7 +1,5 @@
 ---
-title: "Customize column menu icon"
 component: "TreeGrid"
-description: "Learn how to customize the column menu icon in Blazor Tree Grid component"
 ---
 
 # Customize column menu icon

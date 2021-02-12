@@ -1,9 +1,7 @@
 ---
-title: "StockChart Trendlines  | ASP.NET Core Blazor "
 
 component: "Stock Chart"
 
-description: "Trendlines are used to show the direction and speed of price. StockChart supports 6 types of trendlines and also provides trendlines customization"
 ---
 
 # Trendlines

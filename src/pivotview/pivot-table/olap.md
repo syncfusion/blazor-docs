@@ -1,7 +1,5 @@
 ---
-title: "Pivot Table connecting OLAP cube | Getting Started"
 component: "Pivot Table"
-description: "Learn here about getting started with Blazor Pivot Table connected to OLAP cube and more details. Also, slice and dice your multidimensional data efficiently."
 ---
 
 <!-- markdownlint-disable MD024 -->

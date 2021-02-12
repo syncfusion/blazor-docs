@@ -1,7 +1,5 @@
 ---
-title: "Access public method in DataGrid"
 component: "DataGrid"
-description: "Learn how to access public methods in the Blazor DataGrid component"
 ---
 
 # Access public method in datagrid

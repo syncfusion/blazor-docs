@@ -1,7 +1,5 @@
 ---
-title: "Select items to the listbox"
 component: "ListBox"
-description: "ListBox component supports select of items to the listbox."
 ---
 
 # Select items to the listbox

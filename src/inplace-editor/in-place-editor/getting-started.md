@@ -1,7 +1,5 @@
 ---
-title: "Blazor In-place Editor | Get started from server-side"
 component: "In-place Editor"
-description: "Get started with Blazor In-place Editor using Blazor server-side application by rendering datepicker and dropdown component, and submit data to the server."
 ---
 <!-- markdownlint-disable MD024 -->
 

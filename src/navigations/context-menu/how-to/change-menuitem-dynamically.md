@@ -1,7 +1,5 @@
 ---
-title: "Change Menu Item Dynamically"
 component: "Context Menu"
-description: "This section helps to learn how to Change Menu Item Dynamically"
 ---
 
 # Change Menu Item Dynamically

@@ -1,7 +1,5 @@
 ---
-title: "Scheduler Interactions"
 component: "Schedule"
-description: "This section lists out the user interactions that are handled through the mouse and touch gestures on Scheduler."
 ---
 
 # Scheduler interactions

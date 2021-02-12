@@ -1,7 +1,5 @@
 ---
-title: "Events available in Blazor Scheduler"
 component: "Scheduler"
-description: "In this topic, the list of events and their usage with code example for Blazor Scheduler Component has been provided."
 ---
 
 # Events

@@ -1,7 +1,5 @@
 ---
-title: "Axis"
 component: "Heatmap"
-description: "This section describes the axis types available in heatmap and other axis customizations available in heatmap like inversed axis, opposed axis and axis label formatting"
 ---
 
 # Axis

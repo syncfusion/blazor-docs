@@ -1,7 +1,5 @@
 ---
-title: "Globalization"
 component: "NumericTextBox"
-description: "Globalization support in numeric textbox"
 ---
 
 # Globalization

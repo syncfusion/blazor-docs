@@ -1,7 +1,5 @@
 ---
-title: "BPMN Shapes"
 component: "Diagram"
-description: "Diagram BPMN shapes allow you to graphically notate the internal business procedure."
 ---
 
 # Shapes

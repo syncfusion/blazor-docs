@@ -1,7 +1,5 @@
 ---
-title: "Time range slider"
 component: "Slider"
-description: "Learn how to create time range slider in Blazor Slider Component."
 ---
 
 # Time Range Slider

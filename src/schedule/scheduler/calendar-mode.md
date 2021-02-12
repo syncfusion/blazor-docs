@@ -1,7 +1,5 @@
 ---
-title: "Calendar Mode in Blazor Scheduler"
 component: "Scheduler"
-description: "This section explains how to change the default calendar mode on Scheduler to display it either on Gregorian or Islamic mode."
 ---
 
 # Calendar mode

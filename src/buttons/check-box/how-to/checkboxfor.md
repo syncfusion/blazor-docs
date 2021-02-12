@@ -1,7 +1,5 @@
 ---
-title: "CheckboxFor and Model Binding"
 component: "Checkbox"
-description: "CheckboxFor and Model Binding"
 ---
 
 # CheckboxFor and Model Binding

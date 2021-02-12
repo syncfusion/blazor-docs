@@ -1,9 +1,7 @@
 ---
-title: "Accumulation Chart Tooltip | ASP.NET Core Blazor "
 
 component: "Accumulation Chart"
 
-description: "Accumulation chart tooltip represents the x and y values of the current mouse pointer point."
 ---
 
 # Tooltip

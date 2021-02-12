@@ -1,7 +1,5 @@
 ---
-title: "ListView Getting Started"
 component: "ListView"
-description: "Learn how to create ListView control in Blazor application."
 ---
 
 <!-- markdownlint-disable MD024 -->

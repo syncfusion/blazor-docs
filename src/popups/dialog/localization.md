@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Localize to French culture"
 component: "Dialog"
-description: "This section explains how to localize the static strings (built-in text) of the Blazor Modal Dialog component to French culture."
 ---
 
 # Localization

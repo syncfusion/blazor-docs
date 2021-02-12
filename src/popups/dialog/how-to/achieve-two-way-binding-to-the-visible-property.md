@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Two-way binding to Visible property"
 component: "Dialog"
-description: "This section explains how to achieve two-way binding to visible property of Blazor Modal Dialog that helps to open or show the dialog dynamically."
 ---
 
 # Achieve two-way binding to the visible property

@@ -1,7 +1,5 @@
 ---
-title: "Range | ASP.NET Core Blazor "
 component: "ProgressBar"
-description: "The ProgressBar Visualize the ProgressBar range"
 ---
 
 # Range

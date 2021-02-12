@@ -1,7 +1,5 @@
 ---
-title: "Cell"
 component: "DataGrid"
-description: "Learn how to customize the DataGrid cells with styling, text wrapping, adding custom attributes and tooltips."
 ---
 
 # Cell

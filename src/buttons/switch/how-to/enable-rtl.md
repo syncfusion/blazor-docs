@@ -1,7 +1,5 @@
 ---
-title: "Enable RTL"
 component: "Switch"
-description: "Switch how to section, customization of Switch bar and handle, change size, name and value in form submit."
 ---
 
 # Enable RTL

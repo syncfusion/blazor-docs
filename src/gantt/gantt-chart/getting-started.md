@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Gantt Chart"
-description: "Learn how to create an Blazor Gantt Chart component in Blazor."
 ---
 
 # Getting Started

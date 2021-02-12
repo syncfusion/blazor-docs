@@ -1,7 +1,5 @@
 ---
-title: "Trace Events of Progress Button"
 component: "Progress Button"
-description: "This Section shows the event trace of progress button"
 ---
 
 # Trace Events of Progress Button

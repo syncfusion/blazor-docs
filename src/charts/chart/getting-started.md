@@ -1,7 +1,5 @@
 ---
-title: "Getting Started with ASP.NET Core Blazor server-side in Visual Studio 2019"
 component: "Chart"
-description: "This section briefly explains how to create the Chart component and configure its available functionalities in Blazor client-side web application and also how to include a simple Chart in your Blazor client-side web application "
 ---
 
 <!-- markdownlint-disable MD040 -->

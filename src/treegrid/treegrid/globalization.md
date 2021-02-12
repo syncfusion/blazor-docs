@@ -1,7 +1,5 @@
 ---
-title: "Globalization"
 component: "Tree Grid"
-description: "Learn how to apply localization (l10n), internationalization (i18n), and right-to-left (RTL) in Essential JS 2 Tree Grid control."
 ---
 
 # Globalization

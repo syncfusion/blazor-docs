@@ -1,7 +1,5 @@
 ---
-title: "Change Tree Grid data source dynamically"
 component: "TreeGrid"
-description: "Learn how to dynamically change data source in the Blazor Tree Grid component"
 ---
 
 # Change Tree Grid data source dynamically

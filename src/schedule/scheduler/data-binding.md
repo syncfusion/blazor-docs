@@ -1,7 +1,5 @@
 ---
-title: "Blazor Scheduler"
 component: "Scheduler"
-description: "This section includes the data binding topics explaining how to bind various data sources to Scheduler using DataManager adaptors."
 ---
 
 # Data binding

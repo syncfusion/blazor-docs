@@ -1,9 +1,7 @@
 ---
-title: "Accumulation Chart Legend | ASP.NET Core Blazor "
 
 component: "Accumulation Chart"
 
-description: "Accumulation chart legend is used to give additional information about the chart series."
 ---
 
 # Legend

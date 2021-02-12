@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Image handling with upload"
 component: "Rich Text Editor"
-description: "This section explains how to handle images in the Blazor Rich Text Editor with upload image from local and server, the image resizes, an image with a link, and more."
 ---
 
 # Image

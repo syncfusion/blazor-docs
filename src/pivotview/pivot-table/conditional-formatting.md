@@ -1,7 +1,5 @@
 ---
-title: "Conditional Formatting"
 component: "Pivot Table"
-description: "Conditional formatting allowing the users to highlighting the value cells based on its value."
 ---
 
 # Conditional Formatting

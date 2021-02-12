@@ -1,7 +1,5 @@
 ---
-title: "Dashboard Layout Accessibility"
 component: "Dashboard Layout"
-description: "This section explains the WAI-ARIA accessibility support of the Syncfusion Blazor dashboard layout control."
 ---
 
 # Accessibility

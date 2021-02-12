@@ -1,7 +1,5 @@
 ---
-title: "Native Event"
 component: "TimePicker"
-description: "Explains how to work with native events and pass event data to the event handler in your Blazor applications."
 ---
 
 # Overview

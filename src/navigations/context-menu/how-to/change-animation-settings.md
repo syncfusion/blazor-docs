@@ -1,7 +1,5 @@
 ---
-title: "Animation Settings"
 component: "Context Menu"
-description: "This section helps to learn how to change the animation of context menu."
 ---
 
 # Change animation settings

@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Integrate action buttons"
 component: "Toast"
-description: "This section describes how to integrate the action buttons such as ignore, reply, and more with Blazor toast notification component."
 ---
 
 # Action Buttons

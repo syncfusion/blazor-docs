@@ -1,7 +1,5 @@
 ---
-title: "Disable a Dropdown Menu"
 component: "Dropdown Menu"
-description: "Dropdown Menu how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
 ---
 
 # Disable a Dropdown Menu

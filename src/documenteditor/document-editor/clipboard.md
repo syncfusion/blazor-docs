@@ -1,7 +1,5 @@
 ---
-title: "Clipboard"
 component: "DocumentEditor"
-description: "Learn how cut, copy, or paste can be done in Blazor Word processor using clipboard."
 ---
 
 # Clipboard

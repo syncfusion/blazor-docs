@@ -1,7 +1,5 @@
 ---
-title: "Orientation"
 component: "Tabs"
-description: "This sample demonstrates the header orientation of the Tabs. Select option from drop-downs to switch header placement and changing the header style in properties panel."
 ---
 
 # Orientation

@@ -1,7 +1,5 @@
 ---
-title: "Excel Export"
 component: "Pivot Table"
-description: "Documentation on exporting Pivot table content to Excel and customizing the exported document with multi-export, headers and footers, and file name changes in the Blazor Pivot Table Component."
 ---
 
 # Excel Export

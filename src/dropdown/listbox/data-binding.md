@@ -1,7 +1,5 @@
 ---
-title: "ListBox data binding and initialization through HTML tags"
 component: "ListBox"
-description: "ListBox supports databinding with local data source, and remote data source"
 ---
 
 # Data Binding

@@ -1,9 +1,7 @@
 ---
-title: " RangeNavigator Grid and Tick lines | ASP.NET Core Blazor "
 
 component: "RangeNavigator"
 
-description: "RangeNavigator supports customization of width, color, and dashArray of the major grid lines using the majorGridLines property."
 ---
 
 # Grid and Tick Lines

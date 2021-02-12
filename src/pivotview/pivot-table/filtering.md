@@ -1,7 +1,5 @@
 ---
-title: "Member Filtering"
 component: "Pivot Table"
-description: "Member filtering allows user to view pivot table with particular records based on selected members."
 ---
 
 <!-- markdownlint-disable MD012 -->

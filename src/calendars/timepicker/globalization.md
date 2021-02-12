@@ -1,7 +1,5 @@
 ---
-title: "Globalization"
 component: "TimePicker"
-description: "Explains how to render the time picker with various culture and customize the localized text for static text present in components like a button text."
 ---
 
 # Globalization

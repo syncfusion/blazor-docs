@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "DropDownButton"
-description: "This section helps to learn how to create the DropDownButton in ASP.NET Core Razor application with its basic features in step-by-step procedure."
 ---
 
 <!-- markdownlint-disable MD024 -->

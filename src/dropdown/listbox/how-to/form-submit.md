@@ -1,7 +1,5 @@
 ---
-title: "Form submit to the listbox"
 component: "ListBox"
-description: "ListBox component supports form submit to the listbox."
 ---
 
 # Form submit to the listbox

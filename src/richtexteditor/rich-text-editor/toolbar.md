@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Floating, inline, quick toolbar"
 component: "Rich Text Editor"
-description: "This section explains all the toolbar related configurations such as floating, inline, multirow, quick toolbar in the Blazor Rich Text editor."
 ---
 
 # Toolbar

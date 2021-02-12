@@ -1,7 +1,5 @@
 ---
-title: "Blazor Splitter | HTML element or Blazor components"
 component: "Splitter"
-description: "This section explains how to integrate other Blazor components, HTML element, or plain content inside the split panes of Blazor Splitter."
 ---
 
 # Pane Content

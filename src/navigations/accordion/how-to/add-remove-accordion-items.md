@@ -1,7 +1,5 @@
 ---
-title: "Add or Remove Accordion Items"
 component: "Accordion"
-description: "This example demonstrates how to add or remove a accordion item in the Blazor Accordion component."
 ---
 
 # Add/Remove Accordion Items

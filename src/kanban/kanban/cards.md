@@ -1,7 +1,5 @@
 ---
-title: "Cards in Kanban"
 component: "Kanban"
-description: "This article demonstrates how to use the cards in Kanban board and demonstrate and customize the card layout."
 ---
 
 # Cards

@@ -1,7 +1,5 @@
 ---
-title: "DataGrid Customization"
 component: "DataGrid"
-description: "Learn how to customize the style of Blazor DataGrid component"
 ---
 
 # DataGrid customization

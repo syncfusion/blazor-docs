@@ -1,7 +1,5 @@
 ---
-title: "Columns Binding"
 component: "Query Builder"
-description: "This section helps to learn how to bind the columns in the Query Builder in Blazor application in step-by-step procedure."
 ---
 
 # Column Binding

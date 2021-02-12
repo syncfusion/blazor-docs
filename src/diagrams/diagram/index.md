@@ -1,9 +1,7 @@
 ---
-title: " Diagram | Blazor "
 
 component: "Diagran"
 
-description: "Index page defines over view and and interactive features of the diagram."
 ---
 
 # Overview

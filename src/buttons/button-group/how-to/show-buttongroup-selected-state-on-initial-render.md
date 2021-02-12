@@ -1,7 +1,5 @@
 ---
-title: "Show ButtonGroup selected state on initial render"
 component: "ButtonGroup"
-description: "ButtonGroup how to section, create ButtonGroup using util function, icons, form submit, show selected state on initial render."
 ---
 
 # Show ButtonGroup selected state on initial render

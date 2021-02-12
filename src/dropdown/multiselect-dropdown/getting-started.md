@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "MultiSelect"
-description: "This section explains how to create a simple Syncfusion ASP.NET Core Razor multiselect control and configure its functionalities in ASP.NET Core Razor application."
 ---
 
 # Getting Started

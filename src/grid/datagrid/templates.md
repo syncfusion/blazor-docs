@@ -1,7 +1,5 @@
 ---
-title: "Templates"
 component: "DataGrid"
-description: "Learn the various templates in Blazor DataGrid component and how to use templates to customize the DataGrid view."
 ---
 
 # Templates

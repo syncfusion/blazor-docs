@@ -1,7 +1,5 @@
 ---
-title: "Menu Bar with rounded corner"
 component: "Menu Bar"
-description: "This section helps to learn customise the menu bar with rounded corners."
 ---
 
 # Menu Bar with rounded corner

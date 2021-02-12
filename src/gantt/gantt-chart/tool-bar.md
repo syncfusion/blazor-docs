@@ -1,7 +1,5 @@
 ---
-title: "Tool Bar"
 component: "Gantt Chart"
-description: "Learn how to use the toolbar and add custom toolbar items in the Blazor Gantt Chart component"
 ---
 
 # Toolbar

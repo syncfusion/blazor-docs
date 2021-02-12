@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | CSS Structures"
 component: "Dialog"
-description: "This section explains the details of the CSS structures in the Blazor Modal Dialog."
 ---
 
 # CSS structures

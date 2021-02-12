@@ -1,7 +1,5 @@
 ---
-title: "Split Button Popup Items"
 component: "Split Button"
-description: "Split Button allows the end user to customize the whole popup or action items in popup using templates, and to place icons in popup items."
 ---
 
 # Popup Items

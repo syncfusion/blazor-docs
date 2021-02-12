@@ -1,9 +1,7 @@
 ---
-title: "Accumulation Chart Tooltip | ASP.NET Core Blazor "
 
 component: "Accumulation Chart"
 
-description: "Accumulation chart provide title and subtitle and also gives their customization like font size and color."
 ---
 # Title
 

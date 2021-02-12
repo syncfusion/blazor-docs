@@ -1,7 +1,5 @@
 ---
-title: "Appearance customization"
 component: "Gantt Chart"
-description: "The overview section describes how to customize the taskbar and task labels in Gantt Chart"
 ---
 
 # Appearance And Customization

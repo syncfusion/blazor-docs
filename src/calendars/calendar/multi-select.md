@@ -1,7 +1,5 @@
 ---
-title: "Multi Selection"
 component: Calendar
-description: "Explains how to achieve the multiple date selection in the calendar component to select single or multiple date values (sequence or random date selection)."
 ---
 
 # Multi Selection

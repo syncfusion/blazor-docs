@@ -1,7 +1,5 @@
 ---
-title: "Custom Binding"
 component: "DataGrid"
-description: "Implementing custom data binding using custom adaptor in the Blazor DataGrid component"
 ---
 
 # Custom Binding

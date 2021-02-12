@@ -1,7 +1,5 @@
 ---
-title: "Set the rounded corner"
 component: "Textbox"
-description: "Explains how to render the text box component with a rounded corner."
 ---
 
 # Set the rounded corner

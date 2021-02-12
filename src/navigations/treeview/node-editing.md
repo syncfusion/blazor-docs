@@ -1,7 +1,5 @@
 ---
-title: "Node Editing"
 component: "TreeView"
-description: "Editing nodes in treeview"
 ---
 
 # Node Editing

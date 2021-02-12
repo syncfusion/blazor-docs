@@ -1,7 +1,5 @@
 ---
-title: "Radio Button How To sections"
 component: "Radio Button"
-description: "Radio Button how to section, name and value in form submit, customize Radio Button appearance."
 ---
 
 # Set the disabled state

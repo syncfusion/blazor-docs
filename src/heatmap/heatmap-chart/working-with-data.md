@@ -1,7 +1,5 @@
 ---
-title: "Working with data"
 component: "Heatmap"
-description: "This section describes the data binding options available in heatmap. User can bind either two-dimensional array or JSON data to the heatmap."
 ---
 
 # Working with data

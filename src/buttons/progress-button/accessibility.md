@@ -1,7 +1,5 @@
 ---
-title: "Progress Button Accessibility"
 component: "Progress Button"
-description: "Progress Button control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
 ---
 
 # Accessibility

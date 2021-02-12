@@ -1,7 +1,5 @@
 ---
-title: "Comments"
 component: "PDF Viewer"
-description: "Learn about adding comments to the annotations in PDF Viewer"
 ---
 
 # Comments

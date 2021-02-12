@@ -1,7 +1,5 @@
 ---
-title: "Getting Started with Blazor Scheduler"
 component: "Schedule"
-description: "This section briefly explains the overview of creating and configuring the functionalities of Scheduler component in a Blazor application using Visual Studio 2019."
 ---
 
 # Getting Started

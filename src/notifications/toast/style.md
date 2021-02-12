@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | CSS Structure"
 component: "Toast"
-description: "This section explains the details of the CSS structures in the Blazor toast notification."
 ---
 
 # CSS structures

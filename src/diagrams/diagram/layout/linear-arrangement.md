@@ -1,7 +1,5 @@
 ---
-title: "Linear Arrangement"
 component: "Diagram"
-description: "Linear arrangement is used to linearly arrange the child nodes in layout."
 ---
 
 # Linear Arrangement

@@ -1,7 +1,5 @@
 ---
-title: "Diagram Native Events"
 component: "Diagram"
-description: "The diagram control supports native events in blazor. We listed the native events and also explained how to trigger an native event"
 ---
 
 # Native events

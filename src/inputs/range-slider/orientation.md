@@ -1,7 +1,5 @@
 ---
-title: "Slider Orientation"
 component: "Slider"
-description: "Slider supports horizontal and vertical orientations. The tooltip and ticks are also displayed in both orientations."
 ---
 
 # Orientation

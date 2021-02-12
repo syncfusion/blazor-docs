@@ -1,7 +1,5 @@
 ---
-title: "State Persistence"
 component: "Pivot Table"
-description: "Describes about persistence in pivot table"
 ---
 
 # State Persistence

@@ -1,7 +1,5 @@
 ---
-title: "Blazor Collapsible Splitter | Different layouts"
 component: "Splitter"
-description: "This section explains how to construct different layouts using mulitple and nested panes."
 ---
 
 # Different layouts

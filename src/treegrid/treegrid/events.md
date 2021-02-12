@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "TreeGrid"
-description: "Learn how to use events in Blazor Tree Grid component."
 ---
 
 # Events

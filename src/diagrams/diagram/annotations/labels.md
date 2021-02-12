@@ -1,7 +1,5 @@
 ---
-title: "Labels"
 component: "Diagram"
-description: "Labels provide support to add text annotations to the diagram objects to textually describe the nodes and connectors."
 ---
 
 # Annotation

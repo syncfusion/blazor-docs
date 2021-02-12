@@ -1,7 +1,5 @@
 ---
-title: "Date Formats"
 component: "DatePicker"
-description: "Explains how to represent date value in the different string format in the date input to improve readability or to enter the date properly."
 ---
 
 # Date Format

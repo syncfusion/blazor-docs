@@ -1,7 +1,5 @@
 ---
-title: "Tree Grid Customization"
 component: "TreeGrid"
-description: "Learn how to customize the style of Blazor Tree Grid component"
 ---
 
 # Tree Grid customization

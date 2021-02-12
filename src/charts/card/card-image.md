@@ -1,9 +1,7 @@
 ---
-title: "Card | ASP.NET Core Blazor "
 
 component: "Card"
 
-description: "Images and Divider"
 ---
 <!-- markdownlint-disable MD036 -->
 

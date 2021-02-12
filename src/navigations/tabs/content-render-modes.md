@@ -1,7 +1,5 @@
 ---
-title: "Content Render Modes"
 component: "Tabs"
-description: "In this section, we have discussed about the different ways of rendering the tab content."
 ---
 
 # Content Render Modes

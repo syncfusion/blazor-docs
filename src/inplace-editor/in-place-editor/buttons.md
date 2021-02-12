@@ -1,7 +1,5 @@
 ---
-title: "Blazor In-place Editor | Save and remove button config"
 component: "In-place Editor"
-description: "This section explains how to configure, save, and remove button with its properties, template, and customize its behavior for Blazor In-place Editor."
 ---
 
 # Buttons

@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Prevent modal from closing"
 component: "Dialog"
-description: "This section explains how to prevent the Blazor Modal Dialog from closing when there is unsaved content inside the dialog or dialog form is not valid."
 ---
 
 # Prevent closing of modal dialog

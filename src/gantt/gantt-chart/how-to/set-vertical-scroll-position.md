@@ -1,7 +1,5 @@
 ---
-title: "How-To"
 component: "Gantt Chart"
-description: "Learn how to update vertical scroll position in Gantt Chart."
 ---
 
 # Set vertical scroll position

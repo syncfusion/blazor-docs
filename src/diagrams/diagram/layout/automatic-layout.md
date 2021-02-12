@@ -1,7 +1,5 @@
 ---
-title: "Automatic Layout"
 component: "Diagram"
-description: "Diagram automatic layout allows you to arrange the nodes in the diagram area."
 ---
 
 # Automatic Layout

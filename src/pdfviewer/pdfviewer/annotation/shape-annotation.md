@@ -1,7 +1,5 @@
 ---
-title: "Shape annotation"
 component: "PDF Viewer"
-description: "Learn available shape annotations in PDF Viewer"
 ---
 
 # Shape annotation

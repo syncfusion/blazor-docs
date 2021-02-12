@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "TimePicker"
-description: "Learn how to use events in Blazor TimePicker component."
 ---
 
 # Events

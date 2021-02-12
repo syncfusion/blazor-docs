@@ -1,7 +1,5 @@
 ---
-title: "Row and Column"
 component: "Pivot Table"
-description: "Miscellaneous aspects of customizing the pivot table."
 ---
 
 <!-- markdownlint-disable MD012 -->

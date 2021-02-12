@@ -1,7 +1,5 @@
 ---
-title: "Selection"
 component: "Heatmap"
-description: "This section describes the cell selection in heat map"
 ---
 
 # Selection

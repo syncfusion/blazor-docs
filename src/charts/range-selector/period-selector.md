@@ -1,9 +1,7 @@
 ---
-title: " RangeNavigator Period Selector | ASP.NET Core Blazor "
 
 component: "RangeNavigator"
 
-description: "The period selector allows to select a range with specified periods."
 ---
 
 # Period selector

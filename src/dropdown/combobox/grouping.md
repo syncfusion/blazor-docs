@@ -1,7 +1,5 @@
 ---
-title: "Combo box Grouping"
 component: "ComboBox"
-description: "This section Syncfusion ASP.NET combo box control demonstrates the grouping with individual header and it's header customization."
 ---
 
 # Grouping

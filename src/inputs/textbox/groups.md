@@ -1,7 +1,5 @@
 ---
-title: "Groups"
 component: "TextBox"
-description: "Explains how to add icons and clear button to the floating text box that is achieved with or without the required attribute."
 ---
 
 # Groups

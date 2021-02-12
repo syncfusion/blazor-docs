@@ -1,7 +1,5 @@
 ---
-title: "Combo box Template"
 component: "ComboBox"
-description: "This section for Syncfusion ASP.NET combo box control shows on how to customize the appearance of each item in the pop-up list using template option."
 ---
 
 # Templates

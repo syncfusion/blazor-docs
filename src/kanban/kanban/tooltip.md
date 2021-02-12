@@ -1,7 +1,5 @@
 ---
-title: "Tooltip of Kanban"
 component: "Kanban"
-description: "This article demonstrates how to show the tooltip when hovering card elements and also explained how to use template."
 ---
 
 # Tooltip

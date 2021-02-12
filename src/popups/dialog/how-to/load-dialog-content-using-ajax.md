@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Content from external sources"
 component: "Dialog"
-description: "This section explains how to load the content of the Blazor Modal Dialog from external sources such as other website or database using AJAX library. "
 ---
 
 # Load dialog content using AJAX

@@ -1,7 +1,5 @@
 ---
-title: "Data Binding"
 component: "TreeView"
-description: "Binding local, remote, hirarchical data for treeview"
 ---
 
 # Data Binding

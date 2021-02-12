@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | HTML Editor | Two-way binding"
 component: "Rich Text Editor"
-description: "This section explains how to achieve one-way, two-way, and dynamic value binding using Value property of the Blazor Rich Text Editor (Blazor HTML Editor)."
 ---
 
 # Data Binding

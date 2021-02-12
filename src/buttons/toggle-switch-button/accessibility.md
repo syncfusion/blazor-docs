@@ -1,7 +1,5 @@
 ---
-title: "Toggle Switch Button Accessibility"
 component: "Toggle Switch Button"
-description: "Toggle Switch Button control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
 ---
 
 # Accessibility

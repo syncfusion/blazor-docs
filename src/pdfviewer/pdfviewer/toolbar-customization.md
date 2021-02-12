@@ -1,7 +1,5 @@
 ---
-title: "Customize the toolbar of Blazor PDF Viewer"
 component: "PDF Viewer"
-description: "Customize the PDF Viewer toolbar by showing or hiding the top toolbar and navigation toolbar. Also, customize it to display the desired toolbar item only."
 ---
 
 # Toolbar customization of Blazor PDF Viewer

@@ -1,7 +1,5 @@
 ---
-title: "Toolbar"
 component: "DataGrid"
-description: "Learn how to use the toolbar and add custom toolbar items in the Blazor DataGrid Component."
 ---
 # Toolbar
 

@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Change toast content dynamically"
 component: "Toast"
-description: "This section explains how to change the toast content dynamically."
 ---
 
 # Change toast content dynamically

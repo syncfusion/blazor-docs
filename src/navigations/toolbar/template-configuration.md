@@ -1,7 +1,5 @@
 ---
-title: "Template Configuration"
 component: "Toolbar"
-description: "This section explains how to customize the toolbar items and also popup items based on different needs."
 ---
 
 # Template Configuration

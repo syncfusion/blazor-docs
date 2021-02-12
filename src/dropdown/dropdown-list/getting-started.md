@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "DropDownList"
-description: "This section explains how to create a simple Syncfusion ASP.NET Core Razor drop-down list control and configure it's functionalities in ASP.NET Core Razor application."
 ---
 
 # Getting Started

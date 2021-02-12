@@ -1,7 +1,5 @@
 ---
-title: "FreeText annotation"
 component: "PDF Viewer"
-description: "Learn about free text  annotations in PDF Viewer"
 ---
 
 # Free text annotation

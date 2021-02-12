@@ -1,7 +1,5 @@
 ---
-title: "CSS Customization "
 component: "Pivot Table"
-description: "CSS Customization for Pivot Table."
 ---
 
 # CSS Customization

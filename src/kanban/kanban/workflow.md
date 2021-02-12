@@ -1,7 +1,5 @@
 ---
-title: "Workflow"
 component: "Kanban"
-description: "This section explains how to restrict or allow the flow of cards between one column to another column."
 ---
 
 # Workflow

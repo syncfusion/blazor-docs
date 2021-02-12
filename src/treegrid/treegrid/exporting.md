@@ -1,7 +1,5 @@
 ---
-title: "PDF Export"
 component: "Tree Grid"
-description: "Documentation on exporting Tree Grid content to PDF format and customizing the exported document with multi-export, headers and footers, and file name changes."
 ---
 
 # PDF Export

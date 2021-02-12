@@ -1,7 +1,5 @@
 ---
-title: "Feature modules"
 component: "PDF Viewer"
-description: "Learn the feature-wise modules in ASP.NET CORE PDF Viewer and how to integrate it in your application."
 ---
 
 # Feature modules

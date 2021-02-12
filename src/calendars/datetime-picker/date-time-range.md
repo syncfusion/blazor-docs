@@ -1,7 +1,5 @@
 ---
-title: "Date Time Range"
 component: "DateTimePicker"
-description: "Explains how to specify min and max datetime options in the date time picker to restrict the users from selecting a value out of given min/max datetime range."
 ---
 
 # DateTime Range

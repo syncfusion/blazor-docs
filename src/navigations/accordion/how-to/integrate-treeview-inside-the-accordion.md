@@ -1,7 +1,5 @@
 ---
-title: "Integrate Blazor TreeView inside the Accordion"
 component: "Accordion"
-description: "This example demonstrates how to integrate the Blazor TreeView component inside the  Blazor Accordion component."
 ---
 
 # TreeView Integration

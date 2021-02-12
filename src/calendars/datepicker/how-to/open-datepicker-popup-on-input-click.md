@@ -1,7 +1,5 @@
 ---
-title: "Open popup"
 component: "DatePicker"
-description: "Explains how to open the DatePicker popup when the input is focused"
 ---
 
 # Open the DatePicker popup upon focusing input of DatePicker

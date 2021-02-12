@@ -1,7 +1,5 @@
 ---
-title: "Aggregates"
 component: "Tree Grid"
-description: "Learn how to aggregate rows, apply custom aggregates, and format the aggregate values in the Tree Grid control."
 ---
 
 # Aggregates

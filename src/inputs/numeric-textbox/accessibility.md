@@ -1,7 +1,5 @@
 ---
-title: "Accessibility"
 component: "NumericTextBox"
-description: "Accessibility support in numeric textbox"
 ---
 
 # Accessibility

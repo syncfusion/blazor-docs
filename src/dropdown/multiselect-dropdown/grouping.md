@@ -1,7 +1,5 @@
 ---
-title: "Multiselect Grouping"
 component: "MultiSelect"
-description: "This section for Syncfusion ASP.NET multiselect control demonstrates the grouping with indivIDual header and it's header customization."
 ---
 
 # Grouping

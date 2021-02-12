@@ -1,7 +1,5 @@
 ---
-title: "Validation"
 component: "Uploader"
-description: "Explains how to validate the files before uploading them to a server such as valid file extensions, min and max file size, and duplicate files."
 ---
 
 # Validation

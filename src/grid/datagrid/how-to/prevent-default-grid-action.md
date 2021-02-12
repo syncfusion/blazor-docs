@@ -1,7 +1,5 @@
 ---
-title: "Preventing Default DataGrid Action"
 component: "DataGrid"
-description: "Learn how to prevent the default action in the Blazor DataGrid component"
 ---
 
 # Prevent default datagrid action

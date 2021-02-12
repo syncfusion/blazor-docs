@@ -1,7 +1,5 @@
 ---
-title: "Auto row height in Blazor Scheduler"
 component: "Scheduler"
-description: "This section shows the way to auto-adjust the height of the work-cells of Scheduler based on the number of appointments present in those time ranges."
 ---
 
 # Row Auto Height

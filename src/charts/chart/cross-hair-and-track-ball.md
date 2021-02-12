@@ -1,9 +1,7 @@
 ---
-title: " Chart Crosshair and Trackball | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "Crosshair has a vertical and horizontal line to view the value of the axis at mouse position.The trackball used to display data collections"
 ---
 
 # Crosshair

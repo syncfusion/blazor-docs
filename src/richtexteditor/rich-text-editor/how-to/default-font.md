@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | how to | Change the default font family"
 component: "Rich Text Editor"
-description: "This section explains on how to change the default `fontFamily`."
 ---
 
 # Change default font-family

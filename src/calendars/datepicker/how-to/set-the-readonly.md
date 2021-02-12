@@ -1,7 +1,5 @@
 ---
-title: "Readonly"
 component: "DatePicker"
-description: "Explains how to control the read-only state of the date picker component."
 ---
 
 # Set the Readonly

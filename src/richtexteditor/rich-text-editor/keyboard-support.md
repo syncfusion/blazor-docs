@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Keyboard for accessibility"
 component: "Rich Text Editor"
-description: "This section explains the formatting and styling of Blazor Rich Text Editor through keyboard interactions with custom key configurations."
 ---
 
 # Keyboard support

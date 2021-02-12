@@ -1,7 +1,5 @@
 ---
-title: "data bindig"
 component: "Accordion"
-description: "This example demonstrates how to bind any data object to accordion items in the Blazor Accordion component."
 ---
 
 # DataBinding

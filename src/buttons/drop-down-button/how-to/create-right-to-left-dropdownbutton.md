@@ -1,7 +1,5 @@
 ---
-title: "Create right-to-left DropDownButton"
 component: "DropDownButton"
-description: "DropDownButton how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
 ---
 
 # Create right-to-left DropDownButton

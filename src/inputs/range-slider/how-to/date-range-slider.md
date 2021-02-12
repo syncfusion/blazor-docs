@@ -1,7 +1,5 @@
 ---
-title: "Date range slider"
 component: "Slider"
-description: "Learn how to create date range slider in Blazor Slider Component."
 ---
 
 # Date Range Slider

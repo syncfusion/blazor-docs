@@ -1,7 +1,5 @@
 ---
-title: "Multiselect Custom value"
 component: "MultiSelect"
-description: "This section for Syncfusion ASP.NET multiselect control demonstrates the addition of a new value that is not present in the predefined list."
 ---
 
 # CustomValue

@@ -1,7 +1,5 @@
 ---
-title: "State Management"
 component: "DataGrid"
-description: "Learn how to perform state management in Blazor DataGrid component."
 ---
 
 # State Management

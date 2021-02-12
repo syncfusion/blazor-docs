@@ -1,7 +1,5 @@
 ---
-title: "Provide custom data source and enable filter option for DropDownList"
 component: "DataGrid"
-description: "Learn how to provide custom data source and enable filter option for DropDownList"
 ---
 
 # Provide custom data source and enable filter option for DropDownList

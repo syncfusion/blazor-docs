@@ -1,7 +1,5 @@
 ---
-title: "Interaction"
 component: "Diagram"
-description: "Diagram interaction allows how to select and edit nodes and connectors during runtime."
 ---
 
 # Interaction

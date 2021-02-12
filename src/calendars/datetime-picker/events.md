@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "DateTimePicker"
-description: "Learn how to use events in Blazor DateTimePicker component."
 ---
 
 # Events

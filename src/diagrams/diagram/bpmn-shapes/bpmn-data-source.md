@@ -1,7 +1,5 @@
 ---
-title: "BPMN Event"
 component: "Diagram"
-description: "Datasource is used to store or access data associated with a business process"
 ---
 
 # BPMN Datasource

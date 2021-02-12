@@ -1,7 +1,5 @@
 ---
-title: "Globalization"
 component: "Calendar"
-description: "Explains how to render the calendar component with various culture and customize the localized text for static text present in components like a button text."
 ---
 
 # Globalization

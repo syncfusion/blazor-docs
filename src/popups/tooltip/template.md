@@ -1,7 +1,5 @@
 ---
-title: "Tooltip Template"
 component: "Tooltip"
-description: "Tooltip control's template can be assigned with static text or content."
 ---
 
 # Tooltip template

@@ -1,7 +1,5 @@
 ---
-title: "Toolbar Accessibility"
 component: "Toolbar"
-description: "Toolbar component has accessibility support to access the features via keyboard, screen readers, or other assistive technology devices."
 ---
 
 # Accessibility

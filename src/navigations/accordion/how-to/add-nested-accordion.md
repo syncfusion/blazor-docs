@@ -1,7 +1,5 @@
 ---
-title: "Set the nested accordion"
 component: "Accordion"
-description: "This example demonstrates how to create an Blazor Accordion component inside another Accordion component."
 ---
 
 # Add Nested Accordion

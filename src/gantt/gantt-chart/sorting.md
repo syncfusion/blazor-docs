@@ -1,7 +1,5 @@
 ---
-title: "Sorting"
 component: "Gantt Chart"
-description: "Learn how to order the records in the Blazor Gantt Chart component."
 ---
 
 # Sorting

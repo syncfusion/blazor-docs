@@ -1,7 +1,5 @@
 ---
-title: "Context Menu"
 component: "Diagram"
-description: "Diagram context menu describes how to execute frequently used commands by using the context menu items."
 ---
 
 # Context Menu

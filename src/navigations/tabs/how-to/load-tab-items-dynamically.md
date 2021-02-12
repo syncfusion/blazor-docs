@@ -1,7 +1,5 @@
 ---
-title: "Load Tab items dynamically"
 component: "Tab"
-description: "This example demonstrates how to dynamically load or add a tab item in the Blazor Tab component."
 ---
 
 # Load Tab items dynamically

@@ -1,9 +1,7 @@
 ---
-title: "Accumulation Chart Grouping | ASP.NET Core Blazor "
 
 component: "Accumulation Chart"
 
-description: "By using point and value in pie chart,you can group collection of points into the single slice"
 ---
 
 <!-- markdownlint-disable MD036 -->

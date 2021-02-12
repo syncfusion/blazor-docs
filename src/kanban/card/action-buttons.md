@@ -1,7 +1,5 @@
 ---
-title: "Action Buttons"
 component: "Card"
-description: "This section explains how to customizes the card using action buttons and changes the vertical or horizontal alignment of the card element."
 ---
 
 # Action Buttons

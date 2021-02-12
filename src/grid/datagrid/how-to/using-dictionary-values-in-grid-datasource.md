@@ -1,7 +1,5 @@
 ---
-title: "Using dictionary values in datagrid data source"
 component: "DataGrid"
-description: "Learn how to assign dictionary values to the data source of the Blazor DataGrid component"
 ---
 
 # Using dictionary values in datagrid data source

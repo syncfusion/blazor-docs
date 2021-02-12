@@ -1,9 +1,7 @@
 ---
-title: "Card | ASP.NET Core Blazor "
 
 component: "Card"
 
-description: "Horizontal Card"
 ---
 <!-- markdownlint-disable MD036 -->
 

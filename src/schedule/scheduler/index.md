@@ -1,7 +1,5 @@
 ---
-title: "Scheduler - Overview"
 component: "Scheduler"
-description: "This section includes the overview of overall features available in Syncfusion Scheduler."
 ---
 
 # Overview

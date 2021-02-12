@@ -1,9 +1,7 @@
 ---
-title: "Pyramid | ASP.NET Core Blazor "
 
 component: "Accumulation Chart"
 
-description: "The pyramid chart displays series value as progressively decreasing amount to hundred percent in total"
 ---
 
 # Pyramid Chart

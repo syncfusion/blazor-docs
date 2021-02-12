@@ -1,7 +1,5 @@
 ---
-title: "FileManager Accessibility"
 component: "FileManager"
-description: "This section explains the WAI-ARIA accessibility support of the Syncfusion JavaScript filemanager control."
 ---
 
 # Accessibility

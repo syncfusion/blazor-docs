@@ -1,7 +1,5 @@
 ---
-title: "Positioning and Panel Sizing"
 component: "Dashboard Layout"
-description: "This section explains about positioning and sizing of panels in Blazor Dashboard Layout component"
 ---
 
 # Panels

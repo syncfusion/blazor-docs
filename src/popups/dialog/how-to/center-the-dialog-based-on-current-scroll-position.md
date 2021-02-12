@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Center the dialog"
 component: "Dialog"
-description: "This section explains how to center the dialog based on the current scroll position."
 ---
 
 # Center the dialog based on the current scroll position

@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Render fullscreen modal"
 component: "Dialog"
-description: "This section explains how to render a fullscreen modal using the Blazor Dialog by extending its scale 100% to the document's width and height."
 ---
 
 # Show dialog with fullscreen

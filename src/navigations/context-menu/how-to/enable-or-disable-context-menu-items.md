@@ -1,7 +1,5 @@
 ---
-title: "Enable or disable context menu items"
 component: "Context Menu"
-description: "This section helps to learn how to Enable or disable context menu items"
 ---
 
 # Enable or disable context menu items

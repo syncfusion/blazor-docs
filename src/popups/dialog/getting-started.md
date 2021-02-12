@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Get started from server-side"
 component: "Dialog"
-description: "This section helps to get started with Blazor Modal Dialog by applying header, action buttons, draggable, positioning in Blazor server-side application."
 ---
 <!-- markdownlint-disable MD024 -->
 

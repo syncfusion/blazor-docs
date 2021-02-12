@@ -1,7 +1,5 @@
 ---
-title: "Radial tree layout"
 component: "Diagram"
-description: "The radial tree layout arranges nodes on a virtual concentric circle around a root node."
 ---
 
 # Radial tree layout

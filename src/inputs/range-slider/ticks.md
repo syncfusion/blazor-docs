@@ -1,7 +1,5 @@
 ---
-title: "Slider Ticks"
 component: "Slider"
-description: "Slider visually represents the slider values with small and large ticks placed before, after, or both, of the slider bar."
 ---
 
 # Ticks

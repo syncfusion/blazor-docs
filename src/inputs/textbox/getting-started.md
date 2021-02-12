@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "TextBox"
-description: "Helps to get started with the text box component along with its key features such as a floating label, adding icons (input group), and ripple effect."
 ---
 
 # Getting Started

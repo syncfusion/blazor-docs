@@ -1,7 +1,5 @@
 ---
-title: "Aggregates"
 component: "DataGrid"
-description: "Learn how to aggregate rows, apply custom aggregates, and format the aggregate values in the Blazor DataGrid Component."
 ---
 
 # Aggregates

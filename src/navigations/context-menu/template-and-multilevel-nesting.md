@@ -1,7 +1,5 @@
 ---
-title: "Multilevel Nesting"
 component: "Context Menu"
-description: "This section helps to learn how to provide nesting support in Context Menu."
 ---
 
 # Multilevel nesting

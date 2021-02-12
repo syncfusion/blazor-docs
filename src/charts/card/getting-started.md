@@ -1,7 +1,5 @@
 ---
-title: "Getting Started with ASP.NET Core Blazor server-side in Visual Studio 2019"
 component: "Card"
-description: "This section briefly explains how to create the Card component and configure its available functionalities in Blazor server-side web application and also how to include a simple Card in your Blazor server-side web application"
 ---
 
 <!-- markdownlint-disable MD040 -->

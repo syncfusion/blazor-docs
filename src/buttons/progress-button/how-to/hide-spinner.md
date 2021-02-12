@@ -1,7 +1,5 @@
 ---
-title: "Hide spinner"
 component: "Progress Button"
-description: "Progress Button how to section, change text content and styles, hide spinner, customize progress."
 ---
 
 # Hide spinner

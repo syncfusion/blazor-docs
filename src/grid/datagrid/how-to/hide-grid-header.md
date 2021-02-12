@@ -1,7 +1,5 @@
 ---
-title: "Hide Blazor DataGrid header"
 component: "DataGrid"
-description: "Learn how to hide the header in Blazor Data DataGrid component"
 ---
 
 # Hide DataGrid header

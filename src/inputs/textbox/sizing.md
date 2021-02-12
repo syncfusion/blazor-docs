@@ -1,7 +1,5 @@
 ---
-title: "Sizing"
 component: "TextBox"
-description: "Explains how to render text box with different sizes such as small and normal, which is applicable for both touch and mouse mode."
 ---
 
 # Sizing

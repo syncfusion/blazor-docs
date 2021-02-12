@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Built-in and Custom Positioning"
 component: "Dialog"
-description: "This section explains how to position a dialog at different positions based on the built-in values and custom coordinates (X and Y)."
 ---
 
 # Positioning

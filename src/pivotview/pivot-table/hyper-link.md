@@ -1,7 +1,5 @@
 ---
-title: "Hyperlink"
 component: "Pivot Table"
-description: "User allows to show hyperlink option to the link data for individual cells."
 ---
 
 # Hyperlink

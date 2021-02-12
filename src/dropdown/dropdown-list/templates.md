@@ -1,7 +1,5 @@
 ---
-title: "Drop-down list Template"
 component: "DropDownList"
-description: "This section shows on how to customize the appearance of each item in the pop-up list of Syncfusion ASP.NET drop-down list control using template option."
 ---
 
 # Templates

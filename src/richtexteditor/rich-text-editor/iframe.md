@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Iframe mode rendering (classic)"
 component: "Rich Text Editor"
-description: "This section explains how to render the Blazor Rich Text Editor using iframe element that helps classic customers use the HTML editor."
 ---
 
 # Iframe

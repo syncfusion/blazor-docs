@@ -1,7 +1,5 @@
 ---
-title: "WeekNumber"
 component: "Calendar"
-description: "Explains how to enable week number option in the calendar component to show the week number of a selected date."
 ---
 
 # Render the Calendar with WeekNumber

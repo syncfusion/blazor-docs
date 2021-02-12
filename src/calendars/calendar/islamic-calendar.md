@@ -1,7 +1,5 @@
 ---
-title: "Islamic Calendar"
 component: "Calendar"
-description: "Explains how to display the Islamic calendar or Hijri calendar instead of Gregorian calendar."
 ---
 
 # Islamic-Calendar

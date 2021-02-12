@@ -1,9 +1,7 @@
 ---
-title: " RangeNavigator Selecting Range | ASP.NET Core Blazor "
 
 component: "RangeNavigator"
 
-description: "The range navigator provides RTL (right-to-left) support. Axis labels, series types are rendered right to left when we enabled rtl property."
 ---
 
 # RTL

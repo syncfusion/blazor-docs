@@ -1,7 +1,5 @@
 ---
-title: "Editing with template column"
 component: "DataGrid"
-description: "Learn how to perform editing with a template column."
 ---
 
 # Editing with template column

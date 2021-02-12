@@ -1,9 +1,7 @@
 ---
-title: "Stock Chart Range Selector | ASP.NET Core Blazor "
 
 component: "Stock Chart"
 
-description: "we can able to select the particular range data by dragging thumbs or by tapping on the labels or by setting the start and end value properties. "
 ---
 
 # Range selector

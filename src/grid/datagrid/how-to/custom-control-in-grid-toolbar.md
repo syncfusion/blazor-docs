@@ -1,7 +1,5 @@
 ---
-title: "Custom Control in DataGrid Toolbar"
 component: "DataGrid"
-description: "Learn how to render a custom control in the toolbar of Blazor DataGrid component"
 ---
 
 # Custom control in datagrid toolbar

@@ -1,7 +1,5 @@
 ---
-title: "Mask Configuration"
 component: "MaskedTextBox"
-description: "Different mask configuration in masked textbox"
 ---
 
 # Mask Configuration

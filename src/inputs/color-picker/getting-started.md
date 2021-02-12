@@ -1,7 +1,5 @@
 ---
-title: "Getting Started with Blazor Color Picker Component"
 component: "Color Picker"
-description: "This section helps to learn how to create the Color Picker in Blazor application with its basic features in step-by-step procedure."
 ---
 
 # Getting Started with Blazor Color Picker Component

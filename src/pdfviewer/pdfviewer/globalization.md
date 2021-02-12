@@ -1,7 +1,5 @@
 ---
-title: "Localization and RTL"
 component: "PDF Viewer"
-description: "Learn how to localize the text content used in our PDF Viewer based on culture settings and Enable righ-to-left in PDF Viewer"
 ---
 
 # Globalization and RTL

@@ -1,7 +1,5 @@
 ---
-title: "Data Binding"
 component: "Contex tMenu"
-description: "This section helps to learn how to bind data"
 ---
 
 # Data Binding

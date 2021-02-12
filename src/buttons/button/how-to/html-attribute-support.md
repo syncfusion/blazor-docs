@@ -1,7 +1,5 @@
 ---
-title: "HTML attribute support"
 component: "Button"
-description: "This section explains the HTML attribute support given for buttons."
 ---
 
 # HTML Attribute Support

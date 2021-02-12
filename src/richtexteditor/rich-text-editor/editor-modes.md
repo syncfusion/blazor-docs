@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | HTML editor | Markdown editor"
 component: "Rich Text Editor"
-description: "This section explains how to render HTML editor (WYSIWYG) and markdown editor (MD editor) using the Blazor Rich Text Editor."
 ---
 
 # Editor modes

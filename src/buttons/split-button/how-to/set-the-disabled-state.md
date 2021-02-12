@@ -1,7 +1,5 @@
 ---
-title: "Set the disabled state"
 component: "Split Button"
-description: "Split Button how to section, group popup items using list view component, dialog open on popup item click."
 ---
 
 # Set the disabled state

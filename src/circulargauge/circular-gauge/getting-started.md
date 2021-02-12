@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Circular Gauge"
-description: "This section explains you the steps required to create a simple Blazor Circular Gauge."
 ---
 
 # Getting Started

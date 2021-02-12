@@ -1,7 +1,5 @@
 ---
-title: "Height and Width of Kanban"
 component: "Kanban"
-description: "This article demonstrates how to set the height and width of Kanban in pixels, percentage or auto values."
 ---
 
 # Kanban dimensions

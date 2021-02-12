@@ -1,7 +1,5 @@
 ---
-title: "Drill Down"
 component: "Pivot Table"
-description: "Expand or collapse headers displayed in rows and columns."
 ---
 
 <!-- markdownlint-disable MD034 -->

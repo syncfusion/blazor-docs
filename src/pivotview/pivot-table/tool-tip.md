@@ -1,7 +1,5 @@
 ---
-title: "Tooltip"
 component: "Pivot Table"
-description: "Describes about enabling and disabling tooltip in pivot table"
 ---
 
 # Tooltip

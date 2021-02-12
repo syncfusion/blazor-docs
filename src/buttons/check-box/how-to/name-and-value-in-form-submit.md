@@ -1,7 +1,5 @@
 ---
-title: "Name and Value in form submit"
 component: "CheckBox"
-description: "CheckBox how to section, name and value in form submit, and customization of CheckBox appearance, frame & check icon."
 ---
 
 # Name and Value in form submit

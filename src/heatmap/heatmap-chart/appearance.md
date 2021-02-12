@@ -1,7 +1,5 @@
 ---
-title: "Appearance"
 component: "Heatmap"
-description: "This section describes on how to customize the overall apperance of the Heatmap, like adding borders for heatmap cells or data points, adding margin and title for heatmap layout, mouse hover highligting options for the cells and formatting options for the data labels"
 ---
 
 # Appearance

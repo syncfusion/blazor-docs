@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "TimePicker"
-description: "Explains how to get started with the time picker component with its key features such as restrict the time selection, validation, strict mode, and more."
 ---
 
 # Getting Started

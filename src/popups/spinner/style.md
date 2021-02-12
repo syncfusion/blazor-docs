@@ -1,7 +1,5 @@
 ---
-title: "Blazor Spinner | CSS Structures"
 component: "Spinner"
-description: "The tutorial explains the details of the CSS structures in the Blazor Spinner with different themes."
 ---
 
 # CSS structures

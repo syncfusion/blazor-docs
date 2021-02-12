@@ -1,7 +1,5 @@
 ---
-title: "Color Picker Accessibility"
 component: "Color Picker"
-description: "Blazor Color Picker component has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
 ---
 
 # Accessibility

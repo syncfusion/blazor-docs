@@ -1,9 +1,7 @@
 ---
-title: "Stock Chart Tooltip   | ASP.NET Core Blazor "
 
 component: "Stock Chart"
 
-description: "Tooltip is used to show the data value when mouse hover on the stockchart.We can able to customize format,template and appearance."
 ---
 
 # Tooltip

@@ -1,7 +1,5 @@
 ---
-title: "Row"
 component: "DataGrid"
-description: "Learn how to use Row Template and Detail Template in Blazor DataGrid Component to customize the DataGrid view."
 ---
 
 # Row

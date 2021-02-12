@@ -1,7 +1,5 @@
 ---
-title: "Line Distribution"
 component: "Diagram"
-description: "Line distribution is used to arrange the connectors without overlapping in automatic layout."
 ---
 
 # Line Distribution

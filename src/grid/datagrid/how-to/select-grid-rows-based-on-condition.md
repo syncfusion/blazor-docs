@@ -1,7 +1,5 @@
 ---
-title: "Select datagrid rows based on certain condition"
 component: "DataGrid"
-description: "Learn how to select datagrid rows based on certain condition in the Blazor DataGrid component"
 ---
 
 # Select datagrid rows based on certain condition

@@ -1,7 +1,5 @@
 ---
-title: "Context Menu"
 component: "TreeGrid"
-description: "Learn how to use the context menu and add custom context menu items in the Blazor Tree Grid component"
 ---
 
 # Context menu

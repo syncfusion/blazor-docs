@@ -1,7 +1,5 @@
 ---
-title: "Add, Edit and Delete Scheduler Events"
 component: "Blazor Scheduler"
-description: "This section demonstrates all possible methods available on Scheduler to perform CRUD actions on the events."
 ---
 
 # CRUD Actions

@@ -1,7 +1,5 @@
 ---
-title: "Overview"
 component: "Word processor"
-description: "Word processor component for Blazor is used to compose, edit, view, and print Word (DOC, DOCX, and RTF) documents."
 ---
 
 # Overview

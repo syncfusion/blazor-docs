@@ -1,7 +1,5 @@
 ---
-title: "Syncfusion Blazor Accordion CSS Structure"
 component: "Accordion"
-description: "Learn about customizing Blazor Accordion control."
 ---
 
 # CSS Structure

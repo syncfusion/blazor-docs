@@ -1,7 +1,5 @@
 ---
-title: "Load tab with DataSource"
 component: "Tab"
-description: "This example demonstrates how to bind any data object to tab Items in the Essential JS 2 Tab component."
 ---
 
 # Load tab with DataSource

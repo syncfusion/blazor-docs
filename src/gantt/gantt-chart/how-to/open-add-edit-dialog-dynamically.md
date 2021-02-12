@@ -1,7 +1,5 @@
 ---
-title: "How-To"
 component: "Gantt Chart"
-description: "Learn how to dynamically open the Add and Edit Dialog's in Gantt Chart component."
 ---
 
 # Open Add Edit Dialog Dynamically

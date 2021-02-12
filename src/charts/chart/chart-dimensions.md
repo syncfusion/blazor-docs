@@ -1,9 +1,7 @@
 ---
-title: " Chart Appearance | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "We can set chart size manually by using width and height properties. We can set percentage or pixel size values to the chart."
 ---
 
 # Chart Dimensions

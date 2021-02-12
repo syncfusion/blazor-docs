@@ -1,7 +1,5 @@
 ---
-title: "Dashboard Layout Style"
 component: "Dashboard Layout"
-description: "This section explains the details of the CSS structures in the Blazor Modal Dashboard Layout."
 ---
 
 # CSS structures

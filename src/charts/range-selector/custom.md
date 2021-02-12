@@ -1,9 +1,7 @@
 ---
-title: " RangeNavigator Customization | ASP.NET Core Blazor "
 
 component: "RangeNavigator"
 
-description: "Range navigator can be customized using the navigatorBorder, navigatorStyleSettings, seleced or unselected region color properties."
 ---
 
 # Customization

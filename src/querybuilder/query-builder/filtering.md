@@ -1,7 +1,5 @@
 ---
-title: "Filtering"
 component: "Query Builder"
-description: "Learn how to delete/create conditions and group"
 ---
 
 # Filtering

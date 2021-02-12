@@ -1,7 +1,5 @@
 ---
-title: "Aggregation"
 component: "Pivot Table"
-description: "Aggregation allows user to summarize the measure values."
 ---
 
 # Aggregation

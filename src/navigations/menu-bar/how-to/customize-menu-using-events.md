@@ -1,8 +1,6 @@
 ---
-title: "Customize Menu Bar Using Events"
-component: "Menu Bar"
-description: "This section helps to learn how to Customize Menu Bar Using Events."
----
+=component: "Menu Bar"
+=---
 
 # Customize Menu Bar Using Events
 

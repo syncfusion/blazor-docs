@@ -1,7 +1,5 @@
 ---
-title: "How-To"
 component: "Gantt Chart"
-description: "Learn how to change schedule start date and end date values dynamically in the Gantt Chart component."
 ---
 # Change schedule start and end dates
 

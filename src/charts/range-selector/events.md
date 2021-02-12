@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "Range Navigator"
-description: "Learn how to use events in Blazor Range Navigator component."
 ---
 
 # Events

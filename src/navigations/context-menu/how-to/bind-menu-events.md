@@ -1,7 +1,5 @@
 ---
-title: "Bind Menu Events"
 component: "Context Menu"
-description: "This section helps to learn how to Bind Menu Events"
 ---
 
 # Bind Menu Events

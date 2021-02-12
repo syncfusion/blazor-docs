@@ -1,7 +1,5 @@
 ---
-title: "Node Positioning"
 component: "Diagram"
-description: "How to position the node in a diagram"
 ---
 
 # Position

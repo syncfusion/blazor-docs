@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Header, footer, and content template"
 component: "Dialog"
-description: "This section explains how to customize the Blazor Modal Dialog's user interface (UI) elements such as header, footer, and content using a template."
 ---
 
 # Template

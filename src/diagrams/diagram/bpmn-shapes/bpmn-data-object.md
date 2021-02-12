@@ -1,7 +1,5 @@
 ---
-title: "BPMN Data object"
 component: "Diagram"
-description: "BPMN data object represents information flowing through the process"
 ---
 
 # BPMN data object

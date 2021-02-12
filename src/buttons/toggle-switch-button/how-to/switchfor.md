@@ -1,7 +1,5 @@
 ---
-title: "Data Annotations for Toggle Switch Button"
 component: "Toggle Switch Button"
-description: "This section helps you to learn how to use Data Annotations"
 ---
 
 # Data Annotations for Toggle Switch Button

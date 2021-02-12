@@ -1,7 +1,5 @@
 ---
-title: "Open a dialog on item click"
 component: "Context Menu"
-description: "This section helps to learn how to open a dialog on context menu item click"
 ---
 
 # Open a dialog on Context Menu item click

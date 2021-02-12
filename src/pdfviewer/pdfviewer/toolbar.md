@@ -1,7 +1,5 @@
 ---
-title: "Toolbar"
 component: "PDF Viewer"
-description: "Learn about the built-in Toolbar in PDF Viewer."
 ---
 
 # Built-in toolbar

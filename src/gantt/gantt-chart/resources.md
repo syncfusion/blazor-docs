@@ -1,7 +1,5 @@
 ---
-title: "Resources"
 component: "Gantt Chart"
-description: "Learn how to assign the resource for the task's in the Blazor Gantt Chart component."
 ---
 
 # Resources

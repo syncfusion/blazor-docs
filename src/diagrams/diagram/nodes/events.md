@@ -1,7 +1,5 @@
 ---
-title: "Node Events"
 component: "Diagram"
-description: "Events triggered while node interaction"
 ---
 
 # Events

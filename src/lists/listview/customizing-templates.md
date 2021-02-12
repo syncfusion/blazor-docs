@@ -1,7 +1,5 @@
 ---
-title: "ListView Customizing Templates"
 component: "ListView"
-description: "ListView allows customization of list item, header, and category group header using template and group header API."
 ---
 
 # Customizing templates

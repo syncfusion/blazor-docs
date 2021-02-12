@@ -1,7 +1,5 @@
 ---
-title: "Multiselect Accessibility"
 component: "MultiSelect"
-description: "This section for Syncfusion ASP.NET multiselect control explains the WAI-ARIA accessibility support."
 ---
 
 # Accessibility

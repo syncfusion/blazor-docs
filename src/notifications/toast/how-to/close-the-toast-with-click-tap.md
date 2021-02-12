@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Toast with a click or tap operation"
 component: "Toast"
-description: "This section explains Toaster component with a click or tap operation."
 ---
 
 # Close the toast with click/tap

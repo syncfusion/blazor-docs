@@ -1,9 +1,7 @@
 ---
-title: "BulletChart Tooltip | ASP.NET Core Blazor "
 
 component: "BulletChart"
 
-description: "Tooltip is used to show the data value when mouse hover on the chart.We can able to customize format,template and appearance."
 ---
 
 # Tooltip

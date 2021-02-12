@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Sparkline"
-description: "This section explains you the steps required to create a simple Sparkline component."
 ---
 
 # Getting Started

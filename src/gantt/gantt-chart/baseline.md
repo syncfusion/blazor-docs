@@ -1,7 +1,5 @@
 ---
-title: "BaseLine"
 component: "Gantt Chart"
-description: "Learn how to render the baseline in the Blazor Gantt Chart component."
 ---
 
 # BaseLine

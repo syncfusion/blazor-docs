@@ -1,7 +1,5 @@
 ---
-title: "Methods"
 component: "Diagram"
-description: "Public methods in the diagram"
 ---
 
 # Methods

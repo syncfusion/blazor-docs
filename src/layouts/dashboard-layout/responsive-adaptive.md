@@ -1,7 +1,5 @@
 ---
-title: Responsive Dashboard"
 component: "Dashboard Layout"
-description: "This section explains about responsiveness and adaptivity of Blazor Dashboard Layout component"
 ---
 
 # Responsive and adaptive layout

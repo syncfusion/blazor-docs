@@ -1,7 +1,5 @@
 ---
-title: "Right to Leftr"
 component: "Query Builder"
-description: "RTL support in Blazor Query Builder control."
 ---
 
 # Right to left (RTL)

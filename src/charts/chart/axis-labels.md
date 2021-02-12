@@ -1,9 +1,7 @@
 ---
-title: "Chart Axis Labels | ASP.NET Core Blazor"
 
 component: "Chart"
 
-description: "Chart contains smart axis labels, label positioning, multilevelabels, text customization and sorting properties "
 ---
 
 # Axis Labels

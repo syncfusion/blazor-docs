@@ -1,7 +1,5 @@
 ---
-title: "Working days and Hours in Blazor Scheduler"
 component: "Scheduler"
-description: "This section shows the way to set different working days and hours, start and end hours, and start day of the week on Scheduler."
 ---
 
 # Setting working days and hours

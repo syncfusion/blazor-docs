@@ -1,7 +1,5 @@
 ---
-title: "Data Binding"
 component: "Gantt Chart"
-description: "Learn how to bind local and remote data in the Blazor Gantt Chart component."
 ---
 
 # Data Binding

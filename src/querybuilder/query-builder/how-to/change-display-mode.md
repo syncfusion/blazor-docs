@@ -1,7 +1,5 @@
 ---
-title: "Display Options"
 component: "Query Builder"
-description: "Display support in Blazor Query Builder control."
 ---
 
 # Display Options

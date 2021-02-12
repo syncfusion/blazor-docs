@@ -1,7 +1,5 @@
 ---
-title: "Getting Started with Blazor Context Menu Component"
 component: "Context Menu"
-description: "This section helps to learn how to create the Context Menu in Blazor application with its basic features in step-by-step procedure."
 ---
 
 # Getting Started with Blazor Context Menu Component

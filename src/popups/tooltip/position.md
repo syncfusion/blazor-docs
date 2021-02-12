@@ -1,7 +1,5 @@
 ---
-title: "Tooltip Position"
 component: "Tooltip"
-description: "Tooltip can be displayed in 12 (twelve) different positions of target element that automatically collide based on view port."
 ---
 
 # Tooltip Positioning

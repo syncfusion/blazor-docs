@@ -1,7 +1,5 @@
 ---
-title: "DropDownButton Icons"
 component: "DropDownButton"
-description: "DropDownButton allows the end user to place the icons/sprite images in DropDownButton."
 ---
 
 # Icons and Styles

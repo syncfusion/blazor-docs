@@ -1,7 +1,5 @@
 ---
-title: "CSS Structure"
 component: "Sidebar"
-description: "This section explains the details of the CSS structures in the Blazor Sidebar."
 ---
 
 # CSS structures

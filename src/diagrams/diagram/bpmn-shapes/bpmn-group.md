@@ -1,7 +1,5 @@
 ---
-title: "BPMN Group"
 component: "Diagram"
-description: "A group is used to frame a part of the diagram, shows that elements included in it are logically belong together"
 ---
 
 # BPMN group

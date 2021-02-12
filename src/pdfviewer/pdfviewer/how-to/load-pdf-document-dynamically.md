@@ -1,7 +1,5 @@
 ---
-title: "How to load PDF documents dynamically in Blazor PDF Viewer?"
 component: "PDF Viewer"
-description: "Learn How to load the PDF Document dynamicaly in Blazor PDF Viewer."
 ---
 
 # How to load PDF documents dynamically in Blazor PDF Viewer

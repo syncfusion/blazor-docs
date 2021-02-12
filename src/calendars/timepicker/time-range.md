@@ -1,7 +1,5 @@
 ---
-title: "Time Range"
 component: "TimePicker"
-description: "Explains how to specify min and max time options in the time picker component to restrict the users from selecting a value out of given min/max time range."
 ---
 
 # Time Range

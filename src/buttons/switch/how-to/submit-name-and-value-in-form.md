@@ -1,7 +1,5 @@
 ---
-title: "Submit name and value in form"
 component: "Switch"
-description: "Switch how to section, customization of Switch bar and handle, change size, name and value in form submit."
 ---
 
 # Submit name and value in form

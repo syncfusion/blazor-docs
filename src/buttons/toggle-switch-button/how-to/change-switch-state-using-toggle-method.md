@@ -1,7 +1,5 @@
 ---
-title: "Toggle between the states"
 component: "Toggle Switch Button"
-description: "This section explains how to toggle between the states using toggle method in Blazor."
 ---
 
 # Change Toggle Switch Button state using toggle method

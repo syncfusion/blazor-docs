@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "DataGrid"
-description: "Learn how to use events in Blazor DataGrid component."
 ---
 
 # Events

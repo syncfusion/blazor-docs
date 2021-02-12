@@ -1,7 +1,5 @@
 ---
-title: "Template"
 component: "TreeView"
-description: "Customize treeview nodes using template"
 ---
 
 # Template

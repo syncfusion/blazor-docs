@@ -1,7 +1,5 @@
 ---
-title: "Set disabled state"
 component: "Switch"
-description: "Switch how to section, customization of Switch bar and handle, change size, name and value in form submit."
 ---
 
 # Set disabled state

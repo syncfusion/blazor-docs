@@ -1,7 +1,5 @@
 ---
-title: "Calculate column value based on other column values"
 component: "DataGrid"
-description: "Learn how to calculate column value based on other column values in the Blazor DataGrid component"
 ---
 
 # Calculate column value based on other column values

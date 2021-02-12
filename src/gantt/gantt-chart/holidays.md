@@ -1,7 +1,5 @@
 ---
-title: "Holidays"
 component: "Gantt Chart"
-description: "Learn how to highlight the non-working days in the Blazor Gantt Chart component."
 ---
 
 # Holidays

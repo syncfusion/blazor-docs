@@ -1,7 +1,5 @@
 ---
-title: "Connectors"
 component: "Diagram"
-description: "Diagram connector allows you to draw a line to connect two points, nodes or ports."
 ---
 
 # Connector

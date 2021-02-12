@@ -1,7 +1,5 @@
 ---
-title: "Symbol Palette"
 component: "Diagram"
-description: "The symbol palette displays a collection of palettes which shows a set of nodes and connectors."
 ---
 
 # Symbol Palette

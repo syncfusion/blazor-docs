@@ -1,7 +1,5 @@
 ---
-title: "Add nested Tabs"
 component: "Tabs"
-description: "This example demonstrates how to create the Blazor Tab component inside another Blazor Tab component."
 ---
 
 # Add nested Tabs

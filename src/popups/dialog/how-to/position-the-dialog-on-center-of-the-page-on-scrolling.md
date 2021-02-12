@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Static Center position"
 component: "Dialog"
-description: "This section explains how to position the Blazor Modal Dialog at center when there is scrollable content on the page."
 ---
 
 # Position the Dialog on center of the page on scrolling

@@ -1,7 +1,5 @@
 ---
-title: "Virtual scrolling in Blazor Scheduler"
 component: "Scheduler"
-description: "This section demonstrtes how to dynamically load the resources and events as you scroll through the scheduler"
 ---
 
 # Virtual scrolling

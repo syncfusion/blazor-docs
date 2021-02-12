@@ -1,7 +1,5 @@
 ---
-title: "Single click editing with Batch mode"
 component: "TreeGrid"
-description: "Learn how to make a cell editable on a single click with batch mode of editing"
 ---
 
 # Single click editing with Batch mode

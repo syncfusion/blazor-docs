@@ -1,7 +1,5 @@
 ---
-title: "State Persistence"
 component: "Query Builder"
-description: "State Persistence in the Blazor Query Builder control."
 ---
 
 # State Persistence

@@ -1,7 +1,5 @@
 ---
-title: "Custom Context"
 component: "Sidebar"
-description: "Sidebar can set to be initialized , target to any HTML element alongside of the main content of a web page."
 ---
 
 <!-- markdownlint-disable MD009 -->

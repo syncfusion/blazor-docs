@@ -1,7 +1,5 @@
 ---
-title: "Name and Value in form submit"
 component: "RadioButton"
-description: "RadioButton how to section, name and value in form submit, customize RadioButton appearance."
 ---
 
 # Name and Value in form submit

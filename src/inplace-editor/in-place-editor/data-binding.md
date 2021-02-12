@@ -1,7 +1,5 @@
 ---
-title: "Blazor In-place Editor | Bind data using data manager"
 component: "In-place Editor"
-description: "This section explains how to bind data to the dependent component of Blazor In-place Editor from the local and remote sources using data manager."
 ---
 
 # Data Binding

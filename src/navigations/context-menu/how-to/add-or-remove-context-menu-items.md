@@ -1,7 +1,5 @@
 ---
-title: "Add or remove context menu items"
 component: "Context Menu"
-description: "This section helps to learn how to add or remove context menu items"
 ---
 
 # Add or remove context menu items

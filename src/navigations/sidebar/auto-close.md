@@ -1,7 +1,5 @@
 ---
-title: "Responsive Sidebar"
 component: "Sidebar"
-description: "Sidebar can be initialized in expand or collapsed state in user specified resolutions."
 ---
 
 <!-- markdownlint-disable MD009 -->

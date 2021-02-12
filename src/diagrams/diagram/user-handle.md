@@ -1,7 +1,5 @@
 ---
-title: "UserHandle"
 component: "Diagram"
-description: "Learn how to add or remove userhandles, userhandles customization, and its event handle in the diagram blazor component"
 ---
 
 # User Handles

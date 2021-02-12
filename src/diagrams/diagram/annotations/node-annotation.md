@@ -1,7 +1,5 @@
 ---
-title: "Node's Label"
 component: "Diagram"
-description: "How to position the lable for node"
 ---
 
 # How to position node’s annotation

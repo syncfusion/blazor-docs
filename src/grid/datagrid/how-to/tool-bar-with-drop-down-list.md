@@ -1,7 +1,5 @@
 ---
-title: "Create custom toolbar with drop-down list "
 component: "DataGrid"
-description: "Learn how to create custom toolbar with drop-down list in Blazor DataGrid Component."
 ---
 
 # Create custom toolbar with drop-down list

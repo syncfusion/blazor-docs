@@ -1,9 +1,7 @@
 ---
-title: " Bullet Chart Axis Customization | ASP.NET Core Blazor "
 
 component: "Bullet Chart"
 
-description: "Bullet Chart axis contains different customization like majortick and minortick, axis label, axis range customizations"
 ---
 
 # Axis Customization

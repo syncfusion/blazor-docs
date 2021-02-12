@@ -1,9 +1,7 @@
 ---
-title: " Bullet Chart Value Bar | ASP.NET Core Blazor "
 
 component: "Bullet Chart"
 
-description: "The main data value is encoded by a length of the main bar in the middle of the chart, known as the Feature Measure. "
 ---
 <!-- markdownlint-disable MD036 -->
 

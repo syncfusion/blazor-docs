@@ -1,7 +1,5 @@
 ---
-title: "Enable Ripple for Toggle Switch Button Label"
 component: "Toggle Switch Button"
-description: "Enable Ripple for Toggle Switch Button Label"
 ---
 
 # Enable Ripple for Toggle Switch Button Label

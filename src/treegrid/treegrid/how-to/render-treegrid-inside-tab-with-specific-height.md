@@ -1,7 +1,5 @@
 ---
-title: "Render Tree Grid inside the Tab with specific height"
 component: "TreeGrid"
-description: "Learn how to Render Blazor Tree Grid inside the Tab with specific height"
 ---
 
 # Render Tree Grid inside the Tab with specific height

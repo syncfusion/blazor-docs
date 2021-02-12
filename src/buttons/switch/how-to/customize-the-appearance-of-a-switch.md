@@ -1,7 +1,5 @@
 ---
-title: "Customize the appearance of a Switch"
 component: "Switch"
-description: "Switch how to section, customization of Switch bar and handle, change size, name and value in form submit."
 ---
 
 # Customize the appearance of a Switch

@@ -1,7 +1,5 @@
 ---
-title: "Render model dialog with Rich Text Editor"
 component: "Dialog"
-description: "This section for Syncfusion Blazor Dialog control explains about, how to Render the model dialog with Rich Text Editor."
 ---
 
 # Render model dialog with Rich Text Editor

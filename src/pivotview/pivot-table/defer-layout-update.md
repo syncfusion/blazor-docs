@@ -1,7 +1,5 @@
 ---
-title: "Defer Layout Update"
 component: "Pivot Table"
-description: "Defer update allows users to update the pivot table only on demand."
 ---
 <!-- markdownlint-disable MD012 -->
 

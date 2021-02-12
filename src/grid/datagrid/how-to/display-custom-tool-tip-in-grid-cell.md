@@ -1,7 +1,5 @@
 ---
-title: "Display Custom Tooltip in DataGrid Cell"
 component: "DataGrid"
-description: "Learn how to display custom tooltip in cells of the Blazor DataGrid component"
 ---
 
 # Display Custom Tooltip in DataGrid cell

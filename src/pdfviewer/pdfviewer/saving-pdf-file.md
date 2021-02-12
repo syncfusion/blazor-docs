@@ -1,7 +1,5 @@
 ---
-title: "Save PDF files through Blazor PDF Viewer"
 component: "PDF Viewer"
-description: "Learn how to save the updated PDF files through Blazor PDF Viewer to local file system. You can modify the PDF files through various annotation tools."
 ---
 
 # Saving PDF file

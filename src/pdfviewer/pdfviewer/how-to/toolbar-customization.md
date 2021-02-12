@@ -1,7 +1,5 @@
 ---
-title: "Toolbar Customization"
 component: "PDF Viewer"
-description: "Learn about the steps for creating custom toolbar for PDF Viewer control."
 ---
 
 # Customize the toolbar

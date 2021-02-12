@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Custom Font name, size, and color"
 component: "Rich Text Editor"
-description: "This section describes the list of default font names and sizes supported by default and how to customize them in the Blazor Rich Text editor."
 ---
 
 # Styling

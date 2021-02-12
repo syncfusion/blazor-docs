@@ -1,7 +1,5 @@
 ---
-title: "FileManager File System Provider"
 component: "FileManager"
-description: "File System Provider allow the File Manager to provide service for different platform."
 ---
 
 # File System Provider

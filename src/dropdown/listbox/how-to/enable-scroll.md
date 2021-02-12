@@ -1,7 +1,5 @@
 ---
-title: "ListBox scroller"
 component: "ListBox"
-description: "ListBox component has support to scroll the list items."
 ---
 
 # Enable scroller

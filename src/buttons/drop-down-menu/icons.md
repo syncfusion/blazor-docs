@@ -1,7 +1,5 @@
 ---
-title: "Dropdown Menu Icons"
 component: "Dropdown Menu"
-description: "Dropdown Menu allows the end user to place the icons/sprite images in Dropdown Menu."
 ---
 
 # Icons and Styles

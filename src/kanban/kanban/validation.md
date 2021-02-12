@@ -1,7 +1,5 @@
 ---
-title: "WIP validation of Kanban"
 component: "Kanban"
-description: "This article demonstrates how to set the column or cell validation on Kanban board based on total card count."
 ---
 
 # Validation

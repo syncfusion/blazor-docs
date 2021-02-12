@@ -1,7 +1,5 @@
 ---
-title: "Slider Formatting"
 component: "Slider"
-description: "Slider supports formatting to customize slider values like time, currency & km, values, also displayed in ticks & tooltip."
 ---
 
 # Formatting

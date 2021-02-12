@@ -1,7 +1,5 @@
 ---
-title: "Autocomplete Data binding"
 component: "AutoComplete"
-description: "This section for Essential JS2 Syncfusion ASP.NET autocomplete control shows how to bind with local data source and how to fetch data from remote data service."
 ---
 
 # Data Source

@@ -1,7 +1,5 @@
 ---
-title: "Slider Style"
 component: "Slider"
-description: "This section explains the details of the CSS structures in the Blazor Modal Slider."
 ---
 
 # CSS structures

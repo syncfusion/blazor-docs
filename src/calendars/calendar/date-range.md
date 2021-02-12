@@ -1,7 +1,5 @@
 ---
-title: "Date Range"
 component: "Calendar"
-description: "Explains how to specify the minimum and maximum date options in the calendar to restrict the users from selecting a value out of given min/max date range."
 ---
 
 # Date Range

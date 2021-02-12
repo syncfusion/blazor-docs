@@ -1,7 +1,5 @@
 ---
-title: "Scheduling Tasks"
 component: "Gantt Chart"
-description: "Learn about duration values in the Blazor Gantt Chart component."
 ---
 
 # Scheduling Tasks

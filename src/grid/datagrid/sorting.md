@@ -1,7 +1,5 @@
 ---
-title: "Sorting"
 component: "DataGrid"
-description: "Learn how to sort rows in the Blazor DataGrid component and perform initial sorting."
 ---
 
 # Sorting

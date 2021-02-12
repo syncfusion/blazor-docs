@@ -1,7 +1,5 @@
 ---
-title: "Create wizard using Tab"
 component: "Tabs"
-description: "This online reservation example demonstrates how to create multiple components inside the Blazor component."
 ---
 
 # Create wizard

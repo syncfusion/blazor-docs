@@ -1,7 +1,5 @@
 ---
-title: "ButtonGroup Types and Styles"
 component: "ButtonGroup"
-description: "ButtonGroup control supports different types, predefined styles, sizes and also has support for icons."
 ---
 
 # Types and Styles

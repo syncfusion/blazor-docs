@@ -1,7 +1,5 @@
 ---
-title: "Navigation in PDF Viewer in Blazor server-side"
 component: "PDF Viewer"
-description: "Learn about the available options of page navigations in PDF Viewer"
 ---
 
 # Navigation

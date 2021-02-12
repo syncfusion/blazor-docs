@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "HeatMap Chart"
-description: "This section describes on how to visualize a two-dimensional data by enabling the basic features in heatmap"
 ---
 
 # Getting Started

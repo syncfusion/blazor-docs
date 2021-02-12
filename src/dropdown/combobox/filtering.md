@@ -1,7 +1,5 @@
 ---
-title: "Combo box Filtering"
 component: "ComboBox"
-description: "This section for Syncfusion ASP.NET combo box control shows the built-in filtering support with a rich set of filtering configurations."
 ---
 
 # Filtering

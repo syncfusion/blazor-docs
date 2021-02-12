@@ -1,7 +1,5 @@
 ---
-title: "Tabs Responsive Modes"
 component: "Tabs"
-description: "Tabs component has an adaptive support to adapt the Tabs component width based on devices like mobile and tablet."
 ---
 
 # Responsive Modes

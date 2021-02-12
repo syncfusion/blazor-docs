@@ -1,7 +1,5 @@
 ---
-title: "How to show/hide tab items"
 component: "Tabs"
-description: "This example demonstrates how to show/hide the specific tab item in the Blazor Tabs component."
 ---
 
 # Show/Hide Tab Items

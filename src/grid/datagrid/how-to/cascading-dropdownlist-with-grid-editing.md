@@ -1,7 +1,5 @@
 ---
-title: "Cascading DropDownList with DataGrid editing"
 component: "DataGrid"
-description: "Learn how to render cascading dropdownlist with editing in the Blazor DataGrid component"
 ---
 
 # Cascading DropDownList with DataGrid editing

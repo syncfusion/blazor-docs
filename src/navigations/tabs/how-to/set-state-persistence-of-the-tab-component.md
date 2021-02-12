@@ -1,7 +1,5 @@
 ---
-title: "Set state persistence of the Tab component"
 component: "Tabs"
-description: "This example demonstrates how to retain the current model value in the browser cookies for state maintenance of the Blazor Tab component."
 ---
 
 # Set state persistence

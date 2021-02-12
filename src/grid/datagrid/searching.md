@@ -1,7 +1,5 @@
 ---
-title: "Search"
 component: "DataGrid"
-description: "Learn how to search DataGrid content, change search operators, perform searches using external buttons, and search in particular fields."
 ---
 
 # Search

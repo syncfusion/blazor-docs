@@ -1,7 +1,5 @@
 ---
-title: "Port Appearance and Positioning"
 component: "Diagram"
-description: "How to provide appearance and positioning for Port"
 ---
 
 # Port appearance and positioning

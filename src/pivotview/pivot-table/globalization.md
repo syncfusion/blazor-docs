@@ -1,7 +1,5 @@
 ---
-title: "Globalization"
 component: "Pivot Table"
-description: "Learn about how to globalize the pivot table and how to localize the culture related content."
 ---
 
 # Globalization

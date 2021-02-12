@@ -1,7 +1,5 @@
 ---
-title: "Set item-wise custom template"
 component: "Toolbar"
-description: "This example demonstrates how to create custom template into the Blazor Toolbar component items."
 ---
 
 # Set item-wise custom template

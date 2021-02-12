@@ -1,7 +1,5 @@
 ---
-title: "Paging"
 component: "DataGrid"
-description: "Learn how to add and customize the pager in the Blazor DataGrid component."
 ---
 
 # Paging

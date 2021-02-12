@@ -1,7 +1,5 @@
 ---
-title: "Clipboard"
 component: "DataGrid"
-description: "Learn how to use the copy to clipboard functionality in the Blazor Data DataGrid Component."
 ---
 
 # Clipboard

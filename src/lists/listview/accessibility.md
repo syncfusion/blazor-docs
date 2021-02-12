@@ -1,7 +1,5 @@
 ---
-title: "ListView Accessibility"
 component: "ListView"
-description: "Learn JavaScript listview control WAI-ARIA & WGCA accessibility standards, that helps to access listview via keyboard on-screen readers or assistive technology devices."
 ---
 
 # Accessibility

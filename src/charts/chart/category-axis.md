@@ -1,9 +1,7 @@
 ---
-title: " Chart Category Axis | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "Category axis are used to represent, the string values instead of numbers.It contains range, label placement customizations."
 ---
 
 # Category Axis

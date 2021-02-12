@@ -1,7 +1,5 @@
 ---
-title: "Accordion Accessibility"
 component: "Accordion"
-description: "The Accordion component has accessibility support to access the features via keyboard, screen readers, or other assistive technology devices."
 ---
 
 # Accessibility

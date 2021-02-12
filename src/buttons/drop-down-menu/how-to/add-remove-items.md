@@ -1,7 +1,5 @@
 ---
-title: "Add and Remove Items"
 component: "DropDown Menu"
-description: "Dropdown Menu how to section, Add and Remove items in Dropdown Menu Componenet."
 ---
 
 # Add and Remove Items

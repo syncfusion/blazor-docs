@@ -1,7 +1,5 @@
 ---
-title: "WebAssembly performance"
 component: "DataGrid"
-description: "Tips to use Blazor DataGrid component in Blazor WebAssembly application without performance degradation."
 ---
 
 # WebAssembly performance

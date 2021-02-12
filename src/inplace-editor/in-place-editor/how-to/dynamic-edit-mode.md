@@ -1,7 +1,5 @@
 ---
-title: "Blazor In-place Editor | Edit mode on page load"
 component: "In-place Editor"
-description: "This how-to section explains changing the default mode to edit mode in the Blazor In-place Editor component on the page load itself."
 ---
 
 # Dynamically move input to edit mode

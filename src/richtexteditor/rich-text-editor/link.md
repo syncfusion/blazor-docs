@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Hyperlink - Insert/remove link"
 component: "Rich Text Editor"
-description: "This section explains how to handle hyperlinks within the Blazor Rich Text Editor with insert link, remove a link, auto-link conversion, and more."
 ---
 
 # Link

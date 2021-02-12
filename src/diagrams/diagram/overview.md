@@ -1,7 +1,5 @@
 ---
-title: "Overview Control"
 component: "Diagram"
-description: "Overview control allows you to see a preview or an overall view of the entire content of a diagram."
 ---
 
 # Overview Control

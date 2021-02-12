@@ -1,7 +1,5 @@
 ---
-title: "ListView how To create mobile contact layout from listview"
 component: "ListView"
-description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
 # How to create mobile contact layout from listview

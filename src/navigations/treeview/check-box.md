@@ -1,7 +1,5 @@
 ---
-title: "CheckBox"
 component: "TreeView"
-description: "Checkbox functionality in treeview"
 ---
 
 # CheckBox

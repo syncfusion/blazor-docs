@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "MaskedTextBox"
-description: "Rendering maskedTextBox using ASP.NET Core Blazor."
 ---
 
 # Getting Started

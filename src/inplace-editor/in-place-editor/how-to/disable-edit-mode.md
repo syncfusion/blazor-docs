@@ -1,7 +1,5 @@
 ---
-title: "Blazor In-place Editor | Disable edit mode"
 component: "In-place Editor"
-description: "This how-to section explains disabling or enabling the edit mode of the Blazor In-place Editor component dynamically."
 ---
 
 # Disable the edit mode specifically

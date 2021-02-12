@@ -1,7 +1,5 @@
 ---
-title: "Custom Control in Tree Grid Toolbar"
 component: "TreeGrid"
-description: "Learn how to render a custom control in the toolbar of Blazor Tree Grid component"
 ---
 
 # Custom control in Tree Grid toolbar

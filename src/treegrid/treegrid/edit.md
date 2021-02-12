@@ -1,7 +1,5 @@
 ---
-title: "Editing"
 component: "Tree Grid"
-description: "Learn how to perform CRUD operations in various edit modes, and use different cell editors in the Tree Grid control."
 ---
 
 # Editing

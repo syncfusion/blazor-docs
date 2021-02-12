@@ -1,7 +1,5 @@
 ---
-title: "Render textbox component dynamically"
 component: "Textbox"
-description: "Explains how to render the TextBox Component in the dynamic manner."
 ---
 
 # Create TextBox component dynamically

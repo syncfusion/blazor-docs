@@ -1,7 +1,5 @@
 ---
-title: "Managing Tasks"
 component: "Gantt Chart"
-description: "Learn how to perform CRUD operations in various edit modes, and use different cell editors in the Blazor Gantt Chart component."
 ---
 
 # Managing Tasks

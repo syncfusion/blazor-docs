@@ -1,7 +1,5 @@
 ---
-title: "Connector's Label"
 component: "Diagram"
-description: "How to position the lable for connector"
 ---
 
 # How to position connector’s annotation

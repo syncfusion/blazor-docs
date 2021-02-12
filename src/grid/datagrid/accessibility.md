@@ -1,7 +1,5 @@
 ---
-title: "Accessibility"
 component: "DataGrid"
-description: "Documentation on accessibility in the Blazor DataGrid Component, featuring WAI-ARIA standards and keyboard navigation."
 ---
 
 # Accessibility

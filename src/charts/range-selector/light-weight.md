@@ -1,9 +1,7 @@
 ---
-title: " RangeNavigator Lightweight | ASP.NET Core Blazor "
 
 component: "RangeNavigator"
 
-description: "Lightweight rangenavigator is getting intialized when the datasource for series property is empty."
 ---
 
 # Lightweight range navigator

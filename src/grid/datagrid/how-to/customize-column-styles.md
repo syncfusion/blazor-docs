@@ -1,7 +1,5 @@
 ---
-title: "Customize Column Styles"
 component: "DataGrid"
-description: "Learn how to Customize Column Styles in Blazor DataGrid Component."
 ---
 
 # Customize Column Styles

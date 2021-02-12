@@ -1,7 +1,5 @@
 ---
-title: "Blazor In-place Editor | featured components list"
 component: "In-place Editor"
-description: "This section provides the list of Blazor components supported by Blazor In-place Editor as a built-in and injectable module."
 ---
 
 # List of components

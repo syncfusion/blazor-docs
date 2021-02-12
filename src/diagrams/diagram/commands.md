@@ -1,7 +1,5 @@
 ---
-title: "Commands"
 component: "Diagram"
-description: "Diagram commands allow you to arrange or resize the selected objects or defined objects in the diagram area."
 ---
 
 # Commands

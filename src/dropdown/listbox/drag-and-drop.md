@@ -1,7 +1,5 @@
 ---
-title: "ListBox drag and drop"
 component: "ListBox"
-description: " ListBox supports drag and drop with in single listbox and between two listboxes."
 ---
 
 # Drag and drop

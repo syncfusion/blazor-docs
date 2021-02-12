@@ -1,7 +1,5 @@
 ---
-title: "Native Event"
 component: "Button"
-description: "This section helps to learn how to trigger the native events in ASP.NET Core Razor application"
 ---
 
 # Overview

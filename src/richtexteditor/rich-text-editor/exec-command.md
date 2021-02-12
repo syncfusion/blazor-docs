@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Execute Commands for formatting"
 component: "Rich Text Editor"
-description: "This section explains the list of executing commands supported by the Blazor Rich Text Editor, which helps to make the formatting from application."
 ---
 
 # ExecCommand in Rich Text Editor

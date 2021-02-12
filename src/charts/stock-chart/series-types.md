@@ -1,9 +1,7 @@
 ---
-title: "Series Types  | ASP.NET Core Blazor "
 
 component: "Stock Chart"
 
-description: "Syncfusion Blazor StockChart supports differernt types of series and also supports customizations for each type of StockChart."
 ---
 
 # Stock Chart Series Types

@@ -1,7 +1,5 @@
 ---
-title: "Multi Selection"
 component: "TreeView"
-description: "Multiple node selection in treeview"
 ---
 
 # Multi Selection

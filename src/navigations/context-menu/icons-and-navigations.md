@@ -1,7 +1,5 @@
 ---
-title: "Icons and Navigation"
 component: "Context Menu"
-description: "This section helps to learn how to provide icon/image and navigations to the Context Menu items."
 ---
 
 # Icons and Navigation

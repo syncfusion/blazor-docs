@@ -1,7 +1,5 @@
 ---
-title: "Custom toolbar items with text name same as default toolbar items"
 component: "TreeGrid"
-description: "Learn how to render custom toolbar items with text name same as default toolbar items"
 ---
 
 # Custom toolbar items with text name same as default toolbar items

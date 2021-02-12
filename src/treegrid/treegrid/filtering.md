@@ -1,7 +1,5 @@
 ---
-title: "Filtering"
 component: "Tree Grid"
-description: "Learn how to filter rows in the Tree Grid using the filter bar, and menu filtering. Also learn how to use custom filter components in the Tree Grid control."
 ---
 
 # Filtering

@@ -1,7 +1,5 @@
 ---
-title: "Create Dropdown Menu with rounded corner"
 component: "Dropdown Menu"
-description: "Dropdown Menu how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
 ---
 
 # Create Dropdown Menu with rounded corner

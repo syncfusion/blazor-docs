@@ -1,9 +1,7 @@
 ---
-title: " Bullet Chart Title and Subtitle | ASP.NET Core Blazor "
 
 component: "Bullet Chart"
 
-description: "The title and sub-title is very useful to understand the bullet chart in efficient way. It describes what kind of data which represtend by the bullet-chart. "
 ---
 <!-- markdownlint-disable MD036 -->
 

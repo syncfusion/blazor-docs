@@ -1,7 +1,5 @@
 ---
-title: "Web Accessibility in Blazor Scheduler"
 component: "Scheduler"
-description: "This section describes how the Scheduler has been built keeping web accessibility in mind, thus allowing to interact with assistive technologies."
 ---
 
 # Accessibility

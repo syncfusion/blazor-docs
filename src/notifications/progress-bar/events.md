@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "ProgressBar"
-description: "Visualize progress events"
 ---
 
 # Events

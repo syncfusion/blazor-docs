@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Uploader"
-description: "Explains how to get started with the file upload control with its key features such as asynchronous mode, handle success, fail action, and more."
 ---
 
 # Getting Started

@@ -1,7 +1,5 @@
 ---
-title: "CssClass"
 component: "DateRangePicker"
-description: "Explains how to achieve UI level customization in the date range picker component using custom CSS styles and classes"
 ---
 
 # Customization using CssClass

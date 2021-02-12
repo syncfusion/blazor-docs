@@ -1,7 +1,5 @@
 ---
-title: "Repeat Button"
 component: "Button"
-description: Repeat Button"
 ---
 
 # Repeat Button

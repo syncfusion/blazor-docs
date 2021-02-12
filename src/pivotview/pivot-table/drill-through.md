@@ -1,7 +1,5 @@
 ---
-title: "Drill Through"
 component: "Pivot Table"
-description: "Drill Through allows to view the detailed data of the summarized cell."
 ---
 
 # Drill Through

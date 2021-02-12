@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Accordion"
-description: "Rendering Accordion using Blazor."
 ---
 
 # Getting Started

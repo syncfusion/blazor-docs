@@ -1,7 +1,5 @@
 ---
-title: "Unload PDF document from Blazor PDF Viewer"
 component: "PDF Viewer"
-description: "Learn when the PDF document are unloaded by default and how to unload the PDF document from Blazor PDF Viewer programmatically."
 ---
 # How to unload PDF document from Blazor PDF Viewer programmatically
 

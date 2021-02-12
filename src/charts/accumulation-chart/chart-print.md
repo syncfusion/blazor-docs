@@ -1,9 +1,7 @@
 ---
-title: " Accumulation Chart Print and Export | ASP.NET Core Blazor "
 
 component: "Accumulation Chart"
 
-description: "Accumultion chart have a public methods for print or export the rendered chart"
 ---
 
 # Print and Export

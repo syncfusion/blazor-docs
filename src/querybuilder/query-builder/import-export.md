@@ -1,7 +1,5 @@
 ---
-title: "Import and Export"
 component: "Query Builder"
-description: "Learn how to import end export the rules in the Blazor Query Builder control."
 ---
 
 # Importing

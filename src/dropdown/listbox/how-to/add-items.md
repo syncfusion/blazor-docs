@@ -1,7 +1,5 @@
 ---
-title: "Adding items to the listbox"
 component: "ListBox"
-description: "ListBox component supports adding of items to the listbox."
 ---
 
 # Add items to the listbox

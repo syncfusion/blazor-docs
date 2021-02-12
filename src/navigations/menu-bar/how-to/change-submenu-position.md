@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Menu Bar"
-description: "This section helps to learn how to Change SubMenu Position."
 ---
 
 # Change SubMenu Position

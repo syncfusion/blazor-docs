@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "Accumulation Chart"
-description: "Learn how to use events in Blazor Accumulation Chart component."
 ---
 
 # Events

@@ -1,7 +1,5 @@
 ---
-title: "Accessibility"
 component: "DocumentEditor"
-description: "Learn the keyboard shortcuts supported in Blazor Word processor."
 ---
 
 # Accessibility

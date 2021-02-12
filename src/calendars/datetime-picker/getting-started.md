@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "DateTimePicker"
-description: "Explains how to get started with the date time picker component with its key features such as restrict the date time selection, validation, strict mode, etc."
 ---
 
 # Getting Started

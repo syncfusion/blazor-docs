@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Custom show/hide animations"
 component: "Toast"
-description: "This section explains the list of animation effects that can be applied to show or hide the Blazor toast notification popup by customize them."
 ---
 
 # Animations

@@ -1,9 +1,7 @@
 ---
-title: " RangeNavigator Labels | ASP.NET Core Blazor "
 
 component: "RangeNavigator"
 
-description: "RangeNavigator supports Multilevel label and enable grouping properties to customize axis labels."
 ---
 
 # Labels

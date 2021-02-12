@@ -1,7 +1,5 @@
 ---
-title: "Palette"
 component: "Heatmap"
-description: "This section describes the gradient and solid cell coloring options available in heatmap and also defining the custom color stops for data value"
 ---
 
 # Palette

@@ -1,7 +1,5 @@
 ---
-title: "Show or Hide columns in dialog editing"
 component: "TreeGrid"
-description: "Learn how to show or hide columns in dialog editing in Blazor Tree Grid Component."
 ---
 
 # Show or Hide columns in dialog editing

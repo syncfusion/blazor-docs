@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Show toast in various positions"
 component: "Toast"
-description: "This section explains the Blazor Toast component at various positions."
 ---
 
 # Show multiple toasts in various positions

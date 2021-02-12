@@ -1,7 +1,5 @@
 ---
-title: "BPMN Event"
 component: "Diagram"
-description: "Event is notated with a circle and it represents an event in a business process"
 ---
 
 # BPMN text annotation

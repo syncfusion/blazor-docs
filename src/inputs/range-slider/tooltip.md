@@ -1,7 +1,5 @@
 ---
-title: "Slider Tooltip"
 component: "Slider"
-description: "Slider displays the currently selected slider value using tooltip before or after of slider bar."
 ---
 
 # Tooltip

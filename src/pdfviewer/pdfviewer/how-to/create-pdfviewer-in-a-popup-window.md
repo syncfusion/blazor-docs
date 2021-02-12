@@ -1,7 +1,5 @@
 ---
-title: "Display PDF in a popup window | Blazor"
 component: "PDF Viewer"
-description: "Learn how to view or display PDF file in a popup window using Syncfusion Blazor components: PDF Viewer and popup."
 ---
 # How to display PDF file in a popup or dialog window
 

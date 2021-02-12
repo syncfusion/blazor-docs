@@ -1,7 +1,5 @@
 ---
-title: "Grouping"
 component: "Pivot Table"
-description: "Grouping allows the user to group the data at runtime."
 ---
 
 # Grouping

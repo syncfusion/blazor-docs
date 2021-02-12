@@ -1,9 +1,7 @@
 ---
-title: " Chart | Razor "
 
 component: "Chart"
 
-description: "Index page defines over view and and interactive features of the chart."
 ---
 
 # Overview

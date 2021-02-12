@@ -1,7 +1,5 @@
 ---
-title: "Add or Remove Tab Items"
 component: "Tabs"
-description: "This example demonstrates how to add or remove a tab item in the Blazor Tabs component."
 ---
 
 # Add/Remove Tab Items

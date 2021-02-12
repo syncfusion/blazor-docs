@@ -1,7 +1,5 @@
 ---
-title: "Syncfusion Blazor Tab CSS Structure"
 component: "Tabs"
-description: "Learn about customizing Blazor Tab control."
 ---
 
 # CSS Structure

@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | how to | Add google web fonts"
 component: "Rich Text Editor"
-description: "This section explains how to add Google web fonts 'robotto' to the font family group in the Blazor Rich Text Editor component."
 ---
 
 # Add Google fonts

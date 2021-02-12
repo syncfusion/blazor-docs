@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "ComboBox"
-description: "This section explains how to create a simple Syncfusion ASP.NET MVC combo box control and configure its functionalities in ASP.NET MVC application."
 ---
 
 # Getting Started

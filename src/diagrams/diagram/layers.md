@@ -1,7 +1,5 @@
 ---
-title: "Layers"
 component: "Diagram"
-description: "Nodes visually represents the geometrical information and process flows"
 ---
 
 # Layers

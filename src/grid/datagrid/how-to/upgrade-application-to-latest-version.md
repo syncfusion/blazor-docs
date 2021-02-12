@@ -1,7 +1,5 @@
 ---
-title: "Upgrade Application To Latest Version"
 component: "DataGrid"
-description: "Documentation on how to upgrade an application to latest Syncfusion version"
 ---
 
 # Upgrade Application To Latest Version

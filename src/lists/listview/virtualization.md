@@ -1,7 +1,5 @@
 ---
-title: "ListView UI Virtualization"
 component: "ListView"
-description: "ListView allows UI virtualization by loading viewable items in view port to improves listview performance when loading large data."
 ---
 
 # UI Virtualization

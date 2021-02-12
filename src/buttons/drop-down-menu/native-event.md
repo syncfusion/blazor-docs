@@ -1,7 +1,5 @@
 ---
-title: "Event"
 component: "Dropdown Menu"
-description: "This section helps to learn how to trigger the events in ASP.NET Core Blazor application"
 ---
 
 # Overview

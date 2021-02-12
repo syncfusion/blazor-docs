@@ -1,7 +1,5 @@
 ---
-title: "Downloading option in PDF Viewer in Blazor server-side"
 component: "PDF Viewer"
-description: "Learn about the available options for download the modified document in PDF Viewer"
 ---
 
 # Download

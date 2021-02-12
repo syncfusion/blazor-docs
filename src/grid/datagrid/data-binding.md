@@ -1,7 +1,5 @@
 ---
-title: "Data Binding"
 component: "DataGrid"
-description: "Learn how to bind local and remote data in the Blazor DataGrid component."
 ---
 
 # Data Binding

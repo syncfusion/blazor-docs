@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Dialog Resizing"
 component: "Dialog"
-description: "This section explains about resizeable dialog which allows changing its size dynamically."
 ---
 
 # Resizing

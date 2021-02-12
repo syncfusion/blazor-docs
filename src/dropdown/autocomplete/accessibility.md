@@ -1,7 +1,5 @@
 ---
-title: "Autocomplete Accessibility"
 component: "AutoComplete"
-description: "This section explains the WAI-ARIA accessibility support of the Syncfusion ASP.NET autocomplete control."
 ---
 
 # Accessibility

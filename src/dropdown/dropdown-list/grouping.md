@@ -1,7 +1,5 @@
 ---
-title: "Drop-down list Grouping"
 component: "DropDownList"
-description: "This section for Syncfusion ASP.NET drop-down list control demonstrates the grouping with individual header and it's header customization."
 ---
 
 # Grouping

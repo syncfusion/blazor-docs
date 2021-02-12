@@ -1,7 +1,5 @@
 ---
-title: "Autocomplete Filtering"
 component: "AutoComplete"
-description: "This section for Syncfusion ASP.NET autocomplete control shows the built-in filtering support with a rich set of filtering configurations."
 ---
 
 # Filtering

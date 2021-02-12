@@ -1,7 +1,5 @@
 ---
-title: "Constraints"
 component: "Diagram"
-description: "Diagram constraints allow you to enable or disable certain behaviors of the diagram, nodes, and connectors."
 ---
 
 # Constraints

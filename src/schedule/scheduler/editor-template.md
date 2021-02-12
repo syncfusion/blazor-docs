@@ -1,7 +1,5 @@
 ---
-title: "Editor Window and Quick Popup of Blazor Scheduler"
 component: "Scheduler"
-description: "This topic demonstrates how to customize the default event editor and quick pop-up using templates and also explains how to design the custom modal popup."
 ---
 
 # Editor window and quick popups

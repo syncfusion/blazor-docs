@@ -1,7 +1,5 @@
 ---
-title: "Styling and appearance"
 component: "TreeGrid"
-description: "Learn how to change default styling of the Tree Grid."
 ---
 
 # Styling

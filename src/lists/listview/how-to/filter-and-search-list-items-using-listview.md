@@ -1,7 +1,5 @@
 ---
-title: "ListView How to filter and search list items using listview"
 component: "ListView"
-description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
 ---
 
 # How To filter and search list items using listview

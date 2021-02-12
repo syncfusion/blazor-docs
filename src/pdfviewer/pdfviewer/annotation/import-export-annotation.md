@@ -1,7 +1,5 @@
 ---
-title: "Import And Export"
 component: "PDF Viewer"
-description: "Learn about importing and exporting annotations in PDF Viewer"
 ---
 
 # Import and export annotation

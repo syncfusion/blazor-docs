@@ -1,7 +1,5 @@
 ---
-title: "Grouping"
 component: "DataGrid"
-description: "Learn how to group rows, apply initial groups, customize caption templates, and group by format in the Blazor DataGrid component."
 ---
 
 # Grouping

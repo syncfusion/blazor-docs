@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "DateRangePicker"
-description: "Learn how to use events in Blazor DateRangePicker component."
 ---
 
 # Events

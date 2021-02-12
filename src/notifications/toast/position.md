@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Predefined and custom position"
 component: "Toast"
-description: "This section explains how to position the Blazor toast notification popup in various built-in position and custom position (X, Y)."
 ---
 
 # Positions

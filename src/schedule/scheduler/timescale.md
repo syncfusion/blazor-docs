@@ -1,7 +1,5 @@
 ---
-title: "Timescale Customization | Blazor Scheduler"
 component: "Scheduler"
-description: "This section demonstrates how to set different time slot duration on Scheduler and also to customize the major and minor time slots using templates."
 ---
 
 # TimeScale Customization

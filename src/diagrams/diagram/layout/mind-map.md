@@ -1,7 +1,5 @@
 ---
-title: "Mind map Layout"
 component: "Diagram"
-description: "A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept."
 ---
 
 # Mind map Layout

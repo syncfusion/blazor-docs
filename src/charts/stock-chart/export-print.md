@@ -1,9 +1,7 @@
 ---
-title: "Stock Chart Print and Export | ASP.NET Core Blazor "
 
 component: "Stock Chart"
 
-description: "The rendered stock chart can be printed or exported directly using print and export button in period selector."
 ---
 
 # Print and Export

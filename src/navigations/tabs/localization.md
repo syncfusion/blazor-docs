@@ -1,7 +1,5 @@
 ---
-title: "Tabs Localization"
 component: "Tabs"
-description: "Tabs localization section explains how to localize the tabs based on culture and set close button's tooltip text."
 ---
 
 # Localization

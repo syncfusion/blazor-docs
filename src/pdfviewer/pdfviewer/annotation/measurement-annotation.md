@@ -1,7 +1,5 @@
 ---
-title: "Calibrate annotation"
 component: "PDF Viewer"
-description: "Learn available calibrate annotations in PDF Viewer"
 ---
 
 # Measurement annotation

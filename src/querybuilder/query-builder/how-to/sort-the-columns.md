@@ -1,7 +1,5 @@
 ---
-title: "Sort the Columns"
 component: "Query Builder"
-description: "Learn how to set the sorting in the Blazor Query Builder control."
 ---
 
 # Sort the columns

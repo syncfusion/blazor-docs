@@ -1,7 +1,5 @@
 ---
-title: "Selection"
 component: "Tree Grid"
-description: "Learn how to select rows and cells, use range selection, and use check box selection in the Blazor Tree Grid component."
 ---
 
 # Selection

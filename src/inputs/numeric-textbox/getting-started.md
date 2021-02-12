@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "NumericTextBox"
-description: "Rendering numeric textbox using ASP.NET Core Blazor."
 ---
 
 # Getting Started

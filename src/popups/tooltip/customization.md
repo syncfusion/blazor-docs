@@ -1,7 +1,5 @@
 ---
-title: "Tooltip Customization"
 component: "Tooltip"
-description: "Tooltip control's content can be assigned with static text, template, or loaded dynamically via AJAX."
 ---
 
 # Customization

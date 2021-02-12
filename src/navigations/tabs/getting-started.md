@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Tabs"
-description: "Rendering Tab using Blazor."
 ---
 
 # Getting Started

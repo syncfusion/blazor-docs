@@ -1,7 +1,5 @@
 ---
-title: "Checkbox Label and Size"
 component: "Checkbox"
-description: "Checkbox control supports different sizes and label."
 ---
 
 # Label and Size

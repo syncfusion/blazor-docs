@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Progress Button"
-description: "This section helps to learn how to create the Progress Button in Blazor application with its basic features in step-by-step procedure."
 ---
 
 <!-- markdownlint-disable MD024 -->

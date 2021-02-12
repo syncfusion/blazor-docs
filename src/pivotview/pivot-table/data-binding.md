@@ -1,7 +1,5 @@
 ---
-title: "Data Binding"
 component: "Pivot Table"
-description: "Learn about how to bind local and remote data source to the pivot table."
 ---
 
 # Data Binding

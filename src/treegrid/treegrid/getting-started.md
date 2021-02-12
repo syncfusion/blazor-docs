@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Tree Grid"
-description: "Learn how to create a Blazor Tree Grid component and enable features like paging, sorting."
 ---
 
 <!-- markdownlint-disable MD024 -->

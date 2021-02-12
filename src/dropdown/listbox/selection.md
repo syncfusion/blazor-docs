@@ -1,7 +1,5 @@
 ---
-title: "ListBox selection"
 component: "ListBox"
-description: "ListBox supports selection of single item or multiple item, and checkbox selection which supports selection of more than one items."
 ---
 
 # Selection

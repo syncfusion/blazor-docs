@@ -1,9 +1,7 @@
 ---
-title: "Card | ASP.NET Core Blazor "
 
 component: "Card"
 
-description: "CSS Structure for Card component"
 ---
 <!-- markdownlint-disable MD036 -->
 

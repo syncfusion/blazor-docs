@@ -1,7 +1,5 @@
 ---
-title: "Select Tree Grid rows based on certain condition"
 component: "TreeGrid"
-description: "Learn how to select Tree Grid rows based on certain condition in the Blazor Tree Grid component"
 ---
 
 # Select Tree Grid rows based on certain condition

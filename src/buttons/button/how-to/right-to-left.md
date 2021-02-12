@@ -1,7 +1,5 @@
 ---
-title: "Right-To-Left"
 component: "Button"
-description: "Button how to section, block button, repeat button, tooltip for Button, customization of button appearance, input and anchor elements."
 ---
 
 # Right-To-Left

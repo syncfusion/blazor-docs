@@ -1,7 +1,5 @@
 ---
-title: "Accordion Content Render mode"
 component: "Accordion"
-description: "The Blazor Accordion component supports to render contents at initial load and on demand basis."
 ---
 
 # Content Render Mode

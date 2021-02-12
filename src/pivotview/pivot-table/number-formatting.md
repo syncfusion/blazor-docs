@@ -1,7 +1,5 @@
 ---
-title: "Number Formatting"
 component: "Pivot Table"
-description: "Number Formatting allows user to formatting numeric values in pivot table."
 ---
 
 # Number Formatting

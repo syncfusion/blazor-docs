@@ -1,7 +1,5 @@
 ---
-title: "Syncfusion Blazor Kanban CSS Structure"
 component: "Kanban"
-description: "Learn about customizing Blazor Kanban control."
 ---
 
 # Styling And Appearance in Blazor Kanban component

@@ -1,7 +1,5 @@
 ---
-title: "Set Blazor Tooltip to the commands"
 component: "Toolbar"
-description: "This example demonstrates how to set the Blazor Tooltip component to the Blazor Toolbar component commands."
 ---
 
 # Set Blazor Tooltip to the commands

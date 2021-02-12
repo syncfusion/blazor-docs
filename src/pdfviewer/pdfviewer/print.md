@@ -1,7 +1,5 @@
 ---
-title: "Print in PDF Viewer in Blazor server-side"
 component: "PDF Viewer"
-description: "Learn about the available options for print the modified document from PDF Viewer"
 ---
 
 # Print

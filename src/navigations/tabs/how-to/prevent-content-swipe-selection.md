@@ -1,7 +1,5 @@
 ---
-title: "Prevent content swipe selection"
 component: "Tab"
-description: "This example demonstrates how to prevent the tab selection on touch swipe action in the Blazor Tab component."
 ---
 
 # Prevent content swipe selection

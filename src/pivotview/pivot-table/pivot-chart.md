@@ -1,7 +1,5 @@
 ---
-title: "Pivot Chart"
 component: "Pivot Table"
-description: "It allows the user to display a pivot chart component based on the pivot report bound on it. And the UI of the pivot chart component can be customized."
 ---
 
 # Pivot Chart

@@ -1,7 +1,5 @@
 ---
-title: "Toolbar"
 component: "Tree Grid"
-description: "Learn how to use the toolbar and add custom toolbar items in the Blazor Tree Grid."
 ---
 
 # Toolbar

@@ -1,7 +1,5 @@
 ---
-title: "Scroll Settings"
 component: "Diagram"
-description: "Scroll settings allow you to scroll the diagram by using the vertical and horizontal scroll bars"
 ---
 
 # Scroll Settings

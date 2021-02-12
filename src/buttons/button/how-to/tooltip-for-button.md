@@ -1,7 +1,5 @@
 ---
-title: "Set the disabled state"
 component: "Button"
-description: "This section explains how to add tooltip for blazor button."
 ---
 
 # Tooltip For Button

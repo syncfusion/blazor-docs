@@ -1,7 +1,5 @@
 ---
-title: "Data binding"
 component: "Tree Grid"
-description: "Learn how to bind list and remote service data in the Blazor Tree Grid component."
 ---
 
 # Data binding

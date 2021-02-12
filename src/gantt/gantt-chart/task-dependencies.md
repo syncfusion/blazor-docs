@@ -1,7 +1,5 @@
 ---
-title: "Dependency"
 component: "Gantt Chart"
-description: "Learn how to provide dependency support for a task in Blazor Gantt Chart component."
 ---
 
 # Task Dependencies

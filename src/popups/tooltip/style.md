@@ -1,7 +1,5 @@
 ---
-title: "Tooltip Style"
 component: "Tooltip"
-description: "This section explains the details of the CSS structures in the Blazor Modal Tooltip."
 ---
 
 # CSS structures

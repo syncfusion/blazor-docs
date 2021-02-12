@@ -1,7 +1,5 @@
 ---
-title: "Binding Change Event in the listbox"
 component: "ListBox"
-description: "This section explains how to bind change event in listbox"
 ---
 
 # Binding Change Event

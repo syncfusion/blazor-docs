@@ -1,9 +1,7 @@
 ---
-title: "Stock Chart Appearance | ASP.NET Core Blazor "
 
 component: "Stock Chart"
 
-description: "We can customize stock chart appearance by using title and tooltip customizations."
 ---
 
 # Appearance

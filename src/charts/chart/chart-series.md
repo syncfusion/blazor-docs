@@ -1,9 +1,7 @@
 ---
-title: " Chart Series | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "Chart supports to render collection of series like multiple series or combination series."
 ---
 
 # Chart Series

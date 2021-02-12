@@ -1,7 +1,5 @@
 ---
-title: "Accessibility"
 component: "TreeView"
-description: "Accessibility support in TreeView"
 ---
 
 # Accessibility

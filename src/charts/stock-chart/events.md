@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "Stock Chart"
-description: "Learn how to use events in Blazor Stock Chart component."
 ---
 
 # Events

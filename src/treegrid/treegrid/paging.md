@@ -1,7 +1,5 @@
 ---
-title: "Paging"
 component: "Tree Grid"
-description: "Learn how to add and customize the pager in the Blazor Tree Grid component."
 ---
 
 # Paging

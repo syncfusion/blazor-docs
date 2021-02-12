@@ -1,7 +1,5 @@
 ---
-title: "Interaction Mode"
 component: "PDF Viewer"
-description: "Learn about the interaction in PDF Viewer."
 ---
 
 # Interaction Mode

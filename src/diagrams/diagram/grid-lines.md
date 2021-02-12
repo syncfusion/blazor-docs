@@ -1,7 +1,5 @@
 ---
-title: "Gridlines"
 component: "Diagram"
-description: "Diagram gridlines are the lines that are draw behind the nodes and connectors."
 ---
 
 # Gridlines

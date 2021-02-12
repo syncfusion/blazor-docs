@@ -1,7 +1,5 @@
 ---
-title: "Accessibility"
 component: "TimePicker"
-description: "Explains the web accessibility support that helps to access all the features using keyboard, on-screen readers, or other assertive technology devices."
 ---
 
 # Accessibility

@@ -1,9 +1,7 @@
 ---
-title: " Chart Scaffolding | ASP.NET MVC "
 
 component: "Chart"
 
-description: "Scaffolding provides an easier way to create Views and Controller action methods for Syncfusion ASP.NET MVC  Chart controls."
 ---
 
 # ASP.NET MVC Scaffolding

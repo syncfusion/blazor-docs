@@ -1,7 +1,5 @@
 ---
-title: "Blazor Resizable Splitter | CSS Structure"
 component: "Splitter"
-description: "This section explains about the details of the CSS structures in the Blazor Splitter component."
 ---
 
 # CSS structures

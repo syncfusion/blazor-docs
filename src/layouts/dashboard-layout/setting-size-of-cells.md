@@ -1,7 +1,5 @@
 ---
-title: "Setting size of cells"
 component: "Dashboard Layout"
-description: "This section explains how to adjust the size of the cells of Blazor Dashboard Layout component"
 ---
 
 # Configuring the grid layout

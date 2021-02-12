@@ -1,7 +1,5 @@
 ---
-title: "Excel Export"
 component: "Gantt Chart"
-description: "Learn how to export Gantt Chart data to Excel and CSV documents in the Essential JS 2 Gantt Chart component."
 ---
 
 # Excel Export

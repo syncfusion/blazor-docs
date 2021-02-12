@@ -1,7 +1,5 @@
 ---
-title: "Segments"
 component: "Diagram"
-description: "The path of the connector is defined with a collection of segments"
 ---
 
 # Segments

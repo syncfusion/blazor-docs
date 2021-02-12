@@ -1,7 +1,5 @@
 ---
-title: "Multiple Selection"
 component: "File Manager"
-description: "Multiple Selection present in file manager"
 ---
 
 # Multiple Selection

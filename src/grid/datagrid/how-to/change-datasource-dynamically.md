@@ -1,7 +1,5 @@
 ---
-title: "Change DataGrid data source dynamically"
 component: "DataGrid"
-description: "Learn how to dynamically change data source in the Blazor DataGrid component"
 ---
 
 # Change datagrid data source dynamically

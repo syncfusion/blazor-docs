@@ -1,7 +1,5 @@
 ---
-title: "ListBox sorting and grouping"
 component: "ListBox"
-description: " ListBox supports sorting of items in the alphabetical order and group items based on its category."
 ---
 
 # sorting and grouping

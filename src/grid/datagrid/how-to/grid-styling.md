@@ -1,7 +1,5 @@
 ---
-title: "Styling and appearance"
 component: "Grid"
-description: "Learn how to change default styling of the grid."
 ---
 
 # Styling

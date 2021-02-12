@@ -1,7 +1,5 @@
 ---
-title: "Multiselect Filtering"
 component: "MultiSelect"
-description: "This section shows the built-in filtering support with a rich set of filtering configurations in Syncfusion ASP.NET multiselect control."
 ---
 
 # Filtering

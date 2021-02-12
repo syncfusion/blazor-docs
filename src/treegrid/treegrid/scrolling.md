@@ -1,7 +1,5 @@
 ---
-title: "Scrolling"
 component: "Tree Grid"
-description: "Learn how to set width and height for Tree Grid content, display a scrollbar and make the Tree Grid responsive with a parent container."
 ---
 
 # Scrolling

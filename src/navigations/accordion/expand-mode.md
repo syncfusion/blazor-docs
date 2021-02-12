@@ -1,7 +1,5 @@
 ---
-title: "Accordion Expand mode"
 component: "Accordion"
-description: "The Blazor Accordion component supports expand mode options, that specify the types of expand mode while expanding or collapsing an item."
 ---
 
 # Expand Mode

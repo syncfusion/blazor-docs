@@ -1,7 +1,5 @@
 ---
-title: "Stop Progress Indicator"
 component: "Progress Button"
-description: "This Section explains how to stop progress indicator"
 ---
 
 # Stop Progress Indicator

@@ -1,7 +1,5 @@
 ---
-title: "Label Appearance"
 component: "Diagram"
-description: "How to change the appearance of the lable"
 ---
 
 # Appearance

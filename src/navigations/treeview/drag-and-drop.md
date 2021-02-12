@@ -1,7 +1,5 @@
 ---
-title: "Drag and Drop"
 component: "TreeView"
-description: "Drag and drop functionality in treeview"
 ---
 
 # Drag and Drop

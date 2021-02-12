@@ -1,7 +1,5 @@
 ---
-title: "Diagram Accessibility"
 component: "Diagram"
-description: "Diagram Accessibility represents the support that are available in the diagram."
 ---
 
 # Accessibility

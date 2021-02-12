@@ -1,7 +1,5 @@
 ---
-title: "Customize icon and width"
 component: "Dropdown Menu"
-description: "Dropdown Menu how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
 ---
 
 # Customize icon and width

@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "Calendar"
-description: "Learn how to use events in Blazor Calendar component."
 ---
 
 # Events

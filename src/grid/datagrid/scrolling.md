@@ -1,7 +1,5 @@
 ---
-title: "Scrolling"
 component: "DataGrid"
-description: "Learn how to set width and height for Blazor DataGrid Component content, display a scrollbar, freeze rows and columns."
 ---
 
 # Scrolling

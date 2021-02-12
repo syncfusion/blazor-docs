@@ -1,7 +1,5 @@
 ---
-title: "Tooltip"
 component: "Heatmap"
-description: "This section describes on how to define tooltip in heatmap and the customization options available for the tooltip"
 ---
 
 # Tooltip

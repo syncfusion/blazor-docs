@@ -1,7 +1,5 @@
 ---
-title: "Placeholder"
 component: "DateRangePicker"
-description: "Explains how to control read-only state of the date range picker component."
 ---
 
 # Set the Placeholder

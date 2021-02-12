@@ -1,7 +1,5 @@
 ---
-title: "Disabled State"
 component: "DateRangePicker"
-description: "Explains how to disable the user interaction on date range picker component."
 ---
 
 # Disable the component

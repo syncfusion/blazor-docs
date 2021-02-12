@@ -1,7 +1,5 @@
 ---
-title: "Accessibility"
 component: "Tabs"
-description: "The Tabs component has accessibility support to access the features via keyboard, screen readers, or other assistive technology devices."
 ---
 
 # Accessibility

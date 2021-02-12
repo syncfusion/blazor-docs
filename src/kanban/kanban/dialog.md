@@ -1,7 +1,5 @@
 ---
-title: "Add, Edit and Remove (CRUD) a Card in Kanban"
 component: "Kanban"
-description: "This section explains how to add, edit, and remove a card using built-in dialog, and template in a Kanban."
 ---
 
 # Card Editing

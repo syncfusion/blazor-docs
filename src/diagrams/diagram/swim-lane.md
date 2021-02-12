@@ -1,7 +1,5 @@
 ---
-title: "Swimlane"
 component: "Diagram"
-description: "Nodes visually represents the geometrical information and process flows."
 ---
 
 # Swimlane

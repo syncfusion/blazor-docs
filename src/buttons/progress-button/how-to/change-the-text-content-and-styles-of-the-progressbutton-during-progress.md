@@ -1,7 +1,5 @@
 ---
-title: "Change the text content and styles of the Progress Button during progress"
 component: "Progress Button"
-description: "Progress Button how to section, change text content and styles, hide spinner, customize progress."
 ---
 
 # Change the text content and styles of the Progress Button during progress

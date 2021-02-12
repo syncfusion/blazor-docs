@@ -1,7 +1,5 @@
 ---
-title: "Undo and redo"
 component: "Diagram"
-description: "Undo and redo provide support to reverse and restore the performed changes."
 ---
 
 # History List

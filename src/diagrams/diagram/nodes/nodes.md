@@ -1,7 +1,5 @@
 ---
-title: "Node"
 component: "Diagram"
-description: "Nodes visually represents the geometrical information and process flows."
 ---
 
 # Node

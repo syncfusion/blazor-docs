@@ -1,7 +1,5 @@
 ---
-title: "Overview"
 component: "Heatmap"
-description: "The overview section describes the usage of Heatmap and the key features available in Heatmap"
 ---
 
 # Overview

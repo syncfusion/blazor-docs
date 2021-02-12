@@ -1,7 +1,5 @@
 ---
-title: "Print"
 component: "Tree Grid"
-description: "Learn how to print Tree Grid content, set up pages for printing, perform external print, and print visible pages in the Blazor Tree Grid."
 ---
 
 # Print

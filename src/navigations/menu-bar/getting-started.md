@@ -1,7 +1,5 @@
 ---
-title: "Getting Started with Blazor Menu Bar Component"
 component: "Menu Bar"
-description: "This section helps to learn how to create the Menu Bar in Blazor application with its basic features in step-by-step procedure."
 ---
 
 # Getting Started with Blazor Menu Bar Component

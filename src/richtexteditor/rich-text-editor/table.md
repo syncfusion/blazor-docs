@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Table, row, and column properties"
 component: "Rich Text Editor"
-description: "This section demonstrates the table element of the Blazor Rich Text editor that consists of how to insert a table, row, column with the quick toolbar."
 ---
 
 # Table

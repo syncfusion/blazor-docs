@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Show different types of toast"
 component: "Toast"
-description: "This section explains creating different types of Blazor Toast component is displayed on a screen."
 ---
 
 # Show different types of toast

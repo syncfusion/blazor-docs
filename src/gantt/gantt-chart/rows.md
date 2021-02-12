@@ -1,7 +1,5 @@
 ---
-title: "Rows"
 component: "Gantt Chart"
-description: "Documentation for row customizations in Gantt Chart"
 ---
 
 # Rows

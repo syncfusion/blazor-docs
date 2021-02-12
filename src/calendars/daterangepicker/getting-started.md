@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "DateRangePicker"
-description: "Explains how to get started with the date range picker component with its key features such as restrict the date range selection, validation, strict mode, etc."
 ---
 
 # Getting Started

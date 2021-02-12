@@ -1,7 +1,5 @@
 ---
-title: "How to enable/disable tab items"
 component: "Tabs"
-description: "This example demonstrates how to enable/disable the specific tab item based on the condition."
 ---
 
 # Enable/Disable Tab Items

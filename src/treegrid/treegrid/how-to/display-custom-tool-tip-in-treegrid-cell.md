@@ -1,7 +1,5 @@
 ---
-title: "Display Custom Tooltip in Tree Grid Cell"
 component: "TreeGrid"
-description: "Learn how to display custom tooltip in cells of the Blazor Tree Grid component"
 ---
 
 # Display Custom Tooltip in Tree Grid cell

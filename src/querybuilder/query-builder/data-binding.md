@@ -1,7 +1,5 @@
 ---
-title: "Data Binding"
 component: "Query Builder"
-description: "Learn how to bind local data in the Blazor Query Builder control."
 ---
 
 # Data binding

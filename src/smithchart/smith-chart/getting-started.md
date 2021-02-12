@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Smith chart"
-description: "This section give you an introduction about the Blazor Smith chart."
 ---
 
 # Getting Started

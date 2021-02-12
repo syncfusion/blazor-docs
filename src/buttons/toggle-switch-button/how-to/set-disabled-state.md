@@ -1,7 +1,5 @@
 ---
-title: "Set disabled state"
 component: "Toggle Switch Button"
-description: "Toggle Switch Button how to section, customization of Toggle Switch Button bar and handle, change size, name and value in form submit."
 ---
 
 # Set disabled state

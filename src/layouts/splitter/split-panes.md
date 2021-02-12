@@ -1,7 +1,5 @@
 ---
-title: "Blazor Splitter | Horizontal, Vertical, Nested Split panes"
 component: "Splitter"
-description: "This section explains how to configure vertical and horizontal split panes and create nested splitter using the Blazor Splitter component."
 ---
 
 # Split Panes

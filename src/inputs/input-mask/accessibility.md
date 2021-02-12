@@ -1,7 +1,5 @@
 ---
-title: "Accessibility"
 component: "MaskedTextBox"
-description: "Accessibility support in masked textbox"
 ---
 
 # Accessibility

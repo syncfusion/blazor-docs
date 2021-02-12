@@ -1,7 +1,5 @@
 ---
-title: "Tool Tip"
 component: "Diagram"
-description: ""
 ---
 
 # Tooltip

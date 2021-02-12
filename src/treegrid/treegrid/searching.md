@@ -1,7 +1,5 @@
 ---
-title: "Search"
 component: "Tree Grid"
-description: "Learn how to search Tree Grid content, change search operators, perform searches using external buttons, and search particular fields."
 ---
 
 # Search

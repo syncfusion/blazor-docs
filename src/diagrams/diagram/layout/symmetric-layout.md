@@ -1,7 +1,5 @@
 ---
-title: "Symmetric layout"
 component: "Diagram"
-description: "The symmetric layout has been formed using nodes position by closer together or pushing them further apart."
 ---
 
 # Symmetric layout

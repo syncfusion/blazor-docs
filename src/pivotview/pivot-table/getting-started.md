@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Pivot Table"
-description: "Learn how to create a Pivot Table component in Blazor."
 ---
 
 <!-- markdownlint-disable MD024 -->

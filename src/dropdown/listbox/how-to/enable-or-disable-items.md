@@ -1,7 +1,5 @@
 ---
-title: "Enable or disable items in listbox"
 component: "ListBox"
-description: "ListBox component supports customization of menu items so that the items can be enabled or disabled."
 ---
 
 # Enable or disable items

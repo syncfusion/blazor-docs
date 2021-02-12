@@ -1,7 +1,5 @@
 ---
-title: "Chunk Upload"
 component: "Uploader"
-description: "Explains how to manage large file upload that slice large files as chunks and upload it to a server in an asynchronous mode."
 ---
 
 # Chunk Upload

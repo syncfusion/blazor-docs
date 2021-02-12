@@ -1,7 +1,5 @@
 ---
-title: "Right-To-Left"
 component: "Checkbox"
-description: "Checkbox how to section, name and value in form submit, and customization of Checkbox appearance, frame & check icon."
 ---
 
 # Right-To-Left

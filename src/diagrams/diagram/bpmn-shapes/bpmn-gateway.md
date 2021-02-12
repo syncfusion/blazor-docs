@@ -1,7 +1,5 @@
 ---
-title: "BPMN Gateway"
 component: "Diagram"
-description: "BPMN Gateway is used to control the flow of a business process"
 ---
 
 # BPMN gateway

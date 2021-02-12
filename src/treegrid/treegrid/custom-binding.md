@@ -1,7 +1,5 @@
 ---
-title: "Custom Binding"
 component: "Tree Grid"
-description: "Implementing custom data binding using custom adaptor in the Blazor Tree Grid component"
 ---
 
 # Custom Binding

@@ -1,7 +1,5 @@
 ---
-title: 'ListView Nested List'
 component: 'ListView'
-description: 'ListView supports nested listview used to display a set of nested list items in different layouts.'
 ---
 
 # Nested List

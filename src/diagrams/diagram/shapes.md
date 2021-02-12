@@ -1,7 +1,5 @@
 ---
-title: "Shapes"
 component: "Diagram"
-description: "Shapes provides the option to determine the type of node among the predefined nodes."
 ---
 
 # Shapes

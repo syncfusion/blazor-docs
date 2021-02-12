@@ -1,7 +1,5 @@
 ---
-title: "Access public method in Tree Grid"
 component: "TreeGrid"
-description: "Learn how to access public methods in the Blazor Tree Grid component"
 ---
 
 # Access public method in Tree Grid

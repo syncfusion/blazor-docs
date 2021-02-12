@@ -1,7 +1,5 @@
 ---
-title: "Change orientation"
 component: "Menu Bar"
-description: "This section helps to learn how to Change orientation."
 ---
 
 # Change orientation

@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Add dynamic template"
 component: "Toast"
-description: "This section explains how to dynamically change a template for display in multiple Blazor Toaster component."
 ---
 
 # Add dynamic template

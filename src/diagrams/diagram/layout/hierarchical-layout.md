@@ -1,7 +1,5 @@
 ---
-title: "Hierarchical layout"
 component: "Diagram"
-description: "The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents."
 ---
 
 # Hierarchical layout

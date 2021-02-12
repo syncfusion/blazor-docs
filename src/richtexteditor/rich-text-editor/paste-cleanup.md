@@ -1,7 +1,5 @@
 ---
-title: "Blazor Rich Text Editor | Paste from MS word | Paste cleanup"
 component: "Rich Text Editor"
-description: "TThis section explains how to handle paste from Microsoft Word and Microsoft Outlook, and cleanup on paste in the Blazor Rich Text Editor."
 ---
 
 # Paste from MS Word

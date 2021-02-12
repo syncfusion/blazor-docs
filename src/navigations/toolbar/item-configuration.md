@@ -1,7 +1,5 @@
 ---
-title: "Toolbar Item configuration"
 component: "Toolbar"
-description: "Toolbar items are constructed with built-in command types or item templates such as separator, button, and input."
 ---
 
 # Item Configuration

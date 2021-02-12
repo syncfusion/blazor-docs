@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Changing the position using Draggable"
 component: "Dialog"
-description: "This section explains about draggable modal dialog which allows changing its position dynamically using drag-and-drop through its header."
 ---
 
 # Draggable

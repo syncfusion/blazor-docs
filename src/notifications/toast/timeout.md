@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Static Toast and Timeout"
 component: "Toast"
-description: "This section explains how to create static toast notification and how to use the timeout functionalities using Blazor Toast component."
 ---
 
 # Time out

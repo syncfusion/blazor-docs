@@ -1,7 +1,5 @@
 ---
-title: "Toolbar"
 component: "Pivot Table"
-description: "Learn how to use the toolbar in the Blazor Pivot Table control."
 ---
 
 # Toolbar

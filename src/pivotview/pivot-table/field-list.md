@@ -1,7 +1,5 @@
 ---
-title: "Field List"
 component: "Pivot Table"
-description: "Field list allows the user to add or remove fields and also re-arrange them between different axes."
 ---
 
 # Field List

@@ -1,7 +1,5 @@
 ---
-title: "Drop-down list Data binding"
 component: "DropDownList"
-description: "This section for Syncfusion ASP.NET drop-down list control shows how to bind with local data source and how to fetch data from remote data service."
 ---
 
 # Data Source

@@ -1,7 +1,5 @@
 ---
-title: "Drop-down list Filtering"
 component: "DropDownList"
-description: "This section explains the built-in filtering support with a rich set of filtering configurations in Syncfusion ASP.NET drop-down list control."
 ---
 
 # Filtering

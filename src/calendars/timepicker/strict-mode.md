@@ -1,7 +1,5 @@
 ---
-title: "Strict Mode"
 component: "TimePicker"
-description: "Explains how to allow the users to enter only the valid time value within the specified min/max range in time input."
 ---
 
 # Strict Mode

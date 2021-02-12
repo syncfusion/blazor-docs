@@ -1,7 +1,5 @@
 ---
-title: "Formats"
 component: "NumericTextBox"
-description: "Custom formats in numeric textbox"
 ---
 
 # Number Formats

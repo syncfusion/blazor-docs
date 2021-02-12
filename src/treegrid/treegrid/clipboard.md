@@ -1,7 +1,5 @@
 ---
-title: "Clipboard"
 component: "Tree Grid"
-description: "Learn how to use the copy to clipboard functionality in the Blazor Tree Grid Control."
 ---
 
 # Clipboard

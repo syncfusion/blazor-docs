@@ -1,7 +1,5 @@
 ---
-title: "Resizing panels"
 component: "Dashboard Layout"
-description: "This section explains how to enable resizing and the dynamic resizing of panels within the layout in Blazor DashboardLayout component"
 ---
 
 # Resizing panels

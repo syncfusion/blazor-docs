@@ -1,7 +1,5 @@
 ---
-title: "Hierarchical Binding"
 component: "DataGrid"
-description: "Learn how to display master-detail data in the Essential JS 2 DataGrid control in a hierarchical manner."
 ---
 
 <!-- # Hierarchical Binding

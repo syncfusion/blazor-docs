@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Linear Gauge"
-description: "This section explains you the steps required to create a simple Blazor Linear Gauge."
 ---
 
 # Getting Started

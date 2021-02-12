@@ -1,7 +1,5 @@
 ---
-title: "Open documents in Blazor Word processor"
 component: "Word processor"
-description: "Learn how to open documents in Blazor Word processor from URL, Cloud storage, database, and local file system."
 ---
 
 # Open documents in Blazor Word processor from various storage location

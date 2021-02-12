@@ -1,7 +1,5 @@
 ---
-title: "Timeline header rows in Blazor Scheduler"
 component: "Scheduler"
-description: "This section explains how to display the additional header rows on timeline view of Scheduler."
 ---
 
 # Timeline header rows

@@ -1,7 +1,5 @@
 ---
-title: "Magnification in PDF Viewer in Blazor server-side"
 component: "PDF Viewer"
-description: "Learn about the available options of magnification or zooming in PDF Viewer"
 ---
 # Magnification
 

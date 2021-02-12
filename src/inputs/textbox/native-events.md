@@ -1,7 +1,5 @@
 ---
-title: "Native Event"
 component: "TextBox"
-description: "This section helps to learn how to trigger the native events in ASP.NET Core Blazor application"
 ---
 
 # Overview

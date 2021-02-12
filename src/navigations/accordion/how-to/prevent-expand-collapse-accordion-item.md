@@ -1,7 +1,5 @@
 ---
-title: "To prevent expand and collapse of accordion item"
 component: "Accordion"
-description: "This example demonstrates how to prevent the expand and collapse of accordion item in the Blazor Accordion component."
 ---
 
 # Prevent expand and collapse of accordion item

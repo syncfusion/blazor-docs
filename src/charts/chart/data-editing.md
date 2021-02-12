@@ -1,7 +1,5 @@
 ---
-title: "Chart Data Editing | ASP.NET Core Blazor"
 component: "Chart"
-description: "Data editing is one of the user interaction feature. It provides the chart data that to change their value by using mouse cursor"
 ---
 
 <!-- markdownlint-disable MD036 -->

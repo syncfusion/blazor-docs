@@ -1,7 +1,5 @@
 ---
-title: "Create custom toolbar with drop-down list "
 component: "TreeGrid"
-description: "Learn how to create custom toolbar with drop-down list in Blazor Tree Grid Component."
 ---
 
 # Create custom toolbar with drop-down list

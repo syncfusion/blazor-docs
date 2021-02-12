@@ -1,7 +1,5 @@
 ---
-title: "Customize the textbox background-color and text-color"
 component: "Textbox"
-description: "Covers customization of the text box component such as background color and font color."
 ---
 
 # Customize the textbox background-color and text-color

@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Access specific Toast"
 component: "Toast"
-description: "This section explains how to access the specific toast and hide it using showModels Key property"
 ---
 
 # Access Specific Toast

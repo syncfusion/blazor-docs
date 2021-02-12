@@ -1,7 +1,5 @@
 ---
-title: "Animation | ASP.NET Core Blazor "
 component: "ProgressBar"
-description: "ProgressBar support to animate the track."
 ---
 
 # Animation

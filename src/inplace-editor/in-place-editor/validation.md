@@ -1,7 +1,5 @@
 ---
-title: "Blazor In-place Editor | Custom form validation with rules"
 component: "In-place Editor"
-description: "This section demonstrates how to apply custom validation rules and error message to the Blazor In-place Editor component. "
 ---
 
 # Validation

@@ -1,7 +1,5 @@
 ---
-title: "Templates"
 component: "Tree Grid"
-description: "Learn the various templates in Blazor Tree Grid component and how to use templates to customize the Tree Grid."
 ---
 
 # Templates

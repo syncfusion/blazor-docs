@@ -1,9 +1,7 @@
 ---
-title: " Accumulation Chart Empty Points | ASP.NET Core Blazor "
 
 component: "Accumulation Chart"
 
-description: "Empty data points are useful for controlling the appearance and structure the chart's data as well as handling points whose data is a null value"
 ---
 
 # Empty Points

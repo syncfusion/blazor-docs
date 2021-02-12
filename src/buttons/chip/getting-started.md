@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Chip"
-description: "Learn how to create an Blazor Chip control in ASP.NET Razor application."
 ---
 
 # Getting Started

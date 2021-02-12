@@ -1,7 +1,5 @@
 ---
-title: "Grouping Bar"
 component: "Pivot Table"
-description: "Grouping bar allows user to drag and drop fields between different axes at runtime."
 ---
 
 # Grouping Bar

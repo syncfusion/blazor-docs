@@ -1,7 +1,5 @@
 ---
-title: "Timeline"
 component: "Gantt Chart"
-description: "Learn about timeline modes and customizations in the Blazor Gantt Chart component."
 ---
 
 # Timeline

@@ -1,7 +1,5 @@
 ---
-title: "Event Marker"
 component: "Gantt Chart"
-description: "Learn how to highlight the important event in Gantt Chart chart part in the Blazor Gantt Chart component."
 ---
 
 # Event Markers

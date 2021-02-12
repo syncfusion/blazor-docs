@@ -1,7 +1,5 @@
 ---
-title: "Selection"
 component: "Gantt Chart"
-description: "Learn how to select the row in the Blazor Gantt Chart component."
 ---
 
 # Selection

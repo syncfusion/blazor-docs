@@ -1,7 +1,5 @@
 ---
-title: "Kanban Sort"
 component: "Kanban"
-description: "This section explains how to sort the cards in a particular column and drag and drop the cards in the Kanban board."
 ---
 
 # Sort

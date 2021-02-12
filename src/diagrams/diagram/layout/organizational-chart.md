@@ -1,7 +1,5 @@
 ---
-title: "Organizational Chart"
 component: "Diagram"
-description: "An organizational chart is a diagram that displays the structure of an organization and relationships."
 ---
 
 # Organizational Chart

@@ -1,9 +1,7 @@
 ---
-title: " Chart Lazy Loading | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "Chart can be rendered by using different types of data source. Lazy loading explains that allows you to load data for chart on demand"
 ---
 
 # Lazy loading

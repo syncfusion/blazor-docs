@@ -1,9 +1,7 @@
 ---
-title: " RangeNavigator Series Types | ASP.NET Core Blazor "
 
 component: "RangeNavigator"
 
-description: "Essential JS 2 Range navigator supports 3 types of series, to render the data."
 ---
 
 # Series Types

@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Web Accessibility and Keyboard"
 component: "Dialog"
-description: "This section describes the web accessibility standard (ARIA attributes) and keyboard interactions of the Blazor Modal Dialog component."
 ---
 
 # Accessibility

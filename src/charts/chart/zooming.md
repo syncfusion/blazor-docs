@@ -1,9 +1,7 @@
 ---
-title: " Chart Zooming | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "Chart have zooming and panning properties. Chart contains different  zoom modes, zoom toolbar items, scrollbar and auto interval zooming. "
 ---
 
 # Zooming  and Panning

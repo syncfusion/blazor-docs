@@ -1,7 +1,5 @@
 ---
-title: "How to customize tab scrollStep"
 component: "Tabs"
-description: "This example demonstrates how to customize the scrolling distance of Blazor Tab component items when clicking left or right navigation icons."
 ---
 
 # Customize the Scrolling distance

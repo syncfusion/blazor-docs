@@ -1,7 +1,5 @@
 ---
-title: "Customize Column Styles"
 component: "TreeGrid"
-description: "Learn how to Customize Column Styles in Blazor Tree Grid Component."
 ---
 
 # Customize Column Styles

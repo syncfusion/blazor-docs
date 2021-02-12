@@ -1,7 +1,5 @@
 ---
-title: "Animation Settings"
 component: "Menu Bar"
-description: "This section helps to learn how to change the animations of menu bar."
 ---
 
 # Change animation settings

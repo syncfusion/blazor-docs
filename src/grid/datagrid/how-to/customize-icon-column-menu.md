@@ -1,7 +1,5 @@
 ---
-title: "Customize column menu icon"
 component: "DataGrid"
-description: "Learn how to customize the column menu icon in Blazor DataGrid component"
 ---
 
 # Customize column menu icon

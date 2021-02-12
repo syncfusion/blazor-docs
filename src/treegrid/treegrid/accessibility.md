@@ -1,7 +1,5 @@
 ---
-title: "Accessibility"
 component: "Tree Grid"
-description: "Documentation on accessibility in the Blazor Tree Grid, featuring WAI-ARIA standards and keyboard navigation."
 ---
 
 # Accessibility

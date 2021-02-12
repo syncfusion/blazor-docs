@@ -1,7 +1,5 @@
 ---
-title: "Strict Mode"
 component: "DateTimePicker"
-description: "Explains how to allow the users to enter only the valid date and time value within the specified min/max range in date time input."
 ---
 
 # Strict Mode

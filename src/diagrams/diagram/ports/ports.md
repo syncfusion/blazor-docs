@@ -1,7 +1,5 @@
 ---
-title: "Ports"
 component: "Diagram"
-description: "Diagram provides support to define custom ports for making connections."
 ---
 
 # Ports

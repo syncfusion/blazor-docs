@@ -1,7 +1,5 @@
 ---
-title: "File Manager UI"
 component: "File Manager"
-description: "Structure of file manager UI"
 ---
 
 # User Interface Structure

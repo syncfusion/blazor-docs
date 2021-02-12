@@ -1,7 +1,5 @@
 ---
-title: "Multiple Resources and Grouping | Blazor Scheduler"
 component: "Scheduler"
-description: "This article demonstrates how to assign a single or multiple resources to events and also shows how to group them in both hierarchical and vertical mode."
 ---
 
 # Multiple resources and grouping

@@ -1,7 +1,5 @@
 ---
-title: "Blazor In-place Editor | Custom Animation for a popup"
 component: "In-place Editor"
-description: "This how-to section explains applying animation to the popup by customizing it dynamically in the Blazor In-place Editor component."
 ---
 
 # Set custom animation for popup mode

@@ -1,7 +1,5 @@
 ---
-title: "Preventing Default Tree Grid Action"
 component: "TreeGrid"
-description: "Learn how to prevent the default action in the Blazor Tree Grid component"
 ---
 
 # Prevent default Tree Grid action

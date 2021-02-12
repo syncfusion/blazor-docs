@@ -1,7 +1,5 @@
 ---
-title: "Overview"
 component: "DataGrid"
-description: "Documentation on the rich features of the Blazor DataGrid component, including built-in support for editing, filtering, grouping, paging, sorting, and exporting to Excel."
 ---
 
 # Overview

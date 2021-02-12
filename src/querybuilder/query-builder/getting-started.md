@@ -1,7 +1,5 @@
 ---
-title: "Getting Started with Blazor Query Builder Component"
 component: "Query Builder"
-description: "This section helps to learn how to create the Query Builder in Blazor application with its basic features in step-by-step procedure."
 ---
 
 # Getting Started with Blazor Query Builder Component

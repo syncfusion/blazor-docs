@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Switch"
-description: "This section helps to learn how to create the Switch in ASP.NET Core Razor application with its basic features in step-by-step procedure."
 ---
 
 <!-- markdownlint-disable MD024 -->

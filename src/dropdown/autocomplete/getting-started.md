@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "AutoComplete"
-description: "This section explains how to create a simple Syncfusion ASP.NET Core Blazor autocomplete control and configure it's functionalities in ASP.NET Core Blazor application."
 ---
 
 # Getting Started

@@ -1,7 +1,5 @@
 ---
-title: "Customizing Scheduler Cells"
 component: "Blazor Scheduler"
-description: "This topic demonstrates how to customize the cells of Scheduler using template option, methods and events available in Scheduler."
 ---
 
 # Cell Customization

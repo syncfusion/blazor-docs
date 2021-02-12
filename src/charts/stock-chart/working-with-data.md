@@ -1,9 +1,7 @@
 ---
-title: "Stock Chart Working With Data | ASP.NET Core Blazor "
 
 component: "Stock Chart"
 
-description: "Stock Chart can be rendered by using different types of data source. They are called local data, remote data and empty points. "
 ---
 
 <!-- markdownlint-disable MD036 -->

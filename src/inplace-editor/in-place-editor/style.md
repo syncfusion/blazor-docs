@@ -1,7 +1,5 @@
 ---
-title: "Blazor In-place Editor | CSS Structures"
 component: "In-place Editor"
-description: "This section explains the details of the CSS structures in the Blazor In-place Editor."
 ---
 
 # CSS structures

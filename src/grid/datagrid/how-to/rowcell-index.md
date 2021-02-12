@@ -1,7 +1,5 @@
 ---
-title: "Get the index value of selected rowcell"
 component: "DataGrid"
-description: "Learn how to get the index value of a selected rowcell in the Blazor DataGrid component"
 ---
 
 # Get the index value of selected rowcell

@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Tooltip"
-description: "Learn how to create a Tooltip control in Blazor application."
 ---
 
 # Getting Started

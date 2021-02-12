@@ -1,7 +1,5 @@
 ---
-title: "Render DataGrid inside the Tab with specific height"
 component: "DataGrid"
-description: "Learn how to Render Blazor DataGrid inside the Tab with specific height"
 ---
 
 # Render DataGrid inside the Tab with specific height

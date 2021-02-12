@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Tree Map"
-description: "This section explains you the steps required to create a simple Blazor TreeMap."
 ---
 
 # Getting Started

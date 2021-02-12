@@ -1,7 +1,5 @@
 ---
-title: "Globalization"
 component: "DateRangePicker"
-description: "Explains how to render date range picker with various culture and customize the localized text for static text present in components like a button text."
 ---
 
 # Globalization

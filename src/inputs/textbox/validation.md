@@ -1,7 +1,5 @@
 ---
-title: "Validation"
 component: "TextBox"
-description: "Covers how to apply different validation styles to the text box (input) control such as error, warning, and success with a ripple effect."
 ---
 
 # Validation

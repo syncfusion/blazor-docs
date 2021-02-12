@@ -1,7 +1,5 @@
 ---
-title: "Key feature of PDF Viewer for Blazor"
 component: "PDF Viewer"
-description: "Learn about the key features of Syncfusion's PDF Viewer component for Blazor. It is used to display, print and annotate PDF files in Blazor applications."
 ---
 
 # Key features of PDF Viewer for Blazor

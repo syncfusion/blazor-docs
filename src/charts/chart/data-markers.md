@@ -1,9 +1,7 @@
 ---
-title: " Chart Marker | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point."
 ---
 
 # Data Markers

@@ -1,7 +1,5 @@
 ---
-title: "How To"
 component: "Query Builder"
-description: "Learn how to enable summary view in the Blazor Query Builder control."
 ---
 
 # Summary View

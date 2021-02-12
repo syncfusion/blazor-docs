@@ -1,7 +1,5 @@
 ---
-title: "Blazor Spinner | Integrate spinner into Blazor components"
 component: "Spinner"
-description: "The tutorial explains how to integrate spinner within other Blazor components such as Tabs, DataGrid, and more by dynamically showing and hiding it."
 ---
 
 # Integrate Spinner into Blazor UI components

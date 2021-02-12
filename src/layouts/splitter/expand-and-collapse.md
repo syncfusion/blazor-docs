@@ -1,7 +1,5 @@
 ---
-title: "Blazor Collapsible Splitter | Expand and collapse panes"
 component: "Splitter"
-description: "This section explains how to create a collapsible splitter by enabling expand and collapse behavior using the Blazor Splitter component."
 ---
 
 # Expand and Collapse

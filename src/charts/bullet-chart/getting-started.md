@@ -1,7 +1,5 @@
 ---
-title: "Getting Started with Essential JS 2 for Blazor client-side in Visual Studio 2019"
 component: "BulletChart"
-description: "This section briefly explains how to create the BulletChart component and configure its available functionalities in Blazor client-side web application  and also how to include a simple BulletChart in your Blazor client-side web application "
 ---
 
 <!-- markdownlint-disable MD040 -->

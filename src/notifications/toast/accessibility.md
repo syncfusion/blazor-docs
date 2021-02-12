@@ -1,7 +1,5 @@
 ---
-title: "Blazor Toast Notification | Web Accessibility Standard"
 component: "Toast"
-description: "This section describes the web accessibility standard (ARIA attributes based on w3c) of the Blazor toast notification component."
 ---
 
 # Accessibility

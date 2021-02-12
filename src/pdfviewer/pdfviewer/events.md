@@ -1,7 +1,5 @@
 ---
-title: "Supported events in PDF Viewer server-side Blazor"
 component: "PDF Viewer"
-description: "Learn about the supported events in PDF Viewer"
 ---
 
 # Events

@@ -1,7 +1,5 @@
 ---
-title: "Restrict the groups"
 component: "Query Builder"
-description: "Restrict the group support in Blazor Query Builder control."
 ---
 
 # Restrict the groups

@@ -1,7 +1,5 @@
 ---
-title: "Placeholder"
 component: "DateTimePicker"
-description: "Explains how to control read-only state of the date time picker component."
 ---
 
 # Set the Placeholder

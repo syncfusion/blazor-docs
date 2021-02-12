@@ -1,7 +1,5 @@
 ---
-title: "Blazor Spinner | Get started with client and server-side"
 component: "Spinner"
-description: "In this tutorial, you can get started with the Blazor spinner component by creating and showing or hiding it based on specified target using public utility functions."
 ---
 
 # Getting Started

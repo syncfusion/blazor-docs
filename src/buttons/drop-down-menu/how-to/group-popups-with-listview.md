@@ -1,7 +1,5 @@
 ---
-title: "Group popup items with ListView component"
 component: "Dropdown Menu"
-description: " This section explains how to group popup items using list view component in Blazor."
 ---
 
 # Group popup items with ListView component

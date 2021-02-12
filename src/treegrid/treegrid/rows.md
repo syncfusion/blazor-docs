@@ -1,7 +1,5 @@
 ---
-title: "Row"
 component: "Tree Grid"
-description: "Documentation for row customizations in Tree Grid."
 ---
 
 # Row

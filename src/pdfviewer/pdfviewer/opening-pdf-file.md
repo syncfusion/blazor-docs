@@ -1,7 +1,5 @@
 ---
-title: "Open PDF files in PDF Viewer for Blazor"
 component: "PDF Viewer"
-description: "Learn how to open PDF files in Blazor PDF Viewer from URL, Cloud storage, database, location file system and base64 string."
 ---
 # Open PDF files in PDF Viewer for Blazor from various storage location
 

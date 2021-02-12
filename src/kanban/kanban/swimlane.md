@@ -1,7 +1,5 @@
 ---
-title: "Swimlane rows in Kanban board"
 component: "Kanban"
-description: "This section explains how to grouping of cards with swimlane rows, template, sorting, swimlane across drag and drop and show empty rows."
 ---
 
 # Swimlane

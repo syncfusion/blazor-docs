@@ -1,7 +1,5 @@
 ---
-title: "How To"
 component: "Sidebar"
-description: "Miscellaneous aspects of customizing the sidebar"
 ---
 
 <!-- markdownlint-disable MD009 -->

@@ -1,7 +1,5 @@
 ---
-title: "Overview"
 component: "Data Manager"
-description: "Documentation on the usage features of the Blazor SfDataManager component with other components"
 ---
 
 # Overview

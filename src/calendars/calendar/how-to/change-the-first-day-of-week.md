@@ -1,7 +1,5 @@
 ---
-title: "FirstDayWeek"
 component: "Calendar"
-description: "Explains how to change the first day of a week in the calendar component."
 ---
 
 # Change the first day of the week

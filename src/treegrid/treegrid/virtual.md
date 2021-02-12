@@ -1,7 +1,5 @@
 ---
-title: "Virtualization"
 component: "Tree Grid"
-description: "Learn how to improve performance in the Blazor Tree Grid control by using row with virtualization. Also learn about the limitations of virtualization."
 ---
 
 # Virtualization

@@ -1,9 +1,7 @@
 ---
-title: " Chart Multiple-panes | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "Chart can be divided multiple rows and columns. Axes are rendering based on row index or column index in pane."
 ---
 
 # Multiple Panes

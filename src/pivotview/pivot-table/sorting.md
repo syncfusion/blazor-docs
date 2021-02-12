@@ -1,7 +1,5 @@
 ---
-title: "Member Sorting"
 component: "Pivot Table"
-description: "Member Sorting allows user to order the field headers either in ascending or descending."
 ---
 
 <!-- markdownlint-disable MD012 -->

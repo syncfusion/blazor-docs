@@ -1,7 +1,5 @@
 ---
-title: "Set the disabled state"
 component: "Button"
-description: "Button how to section, block button, repeat button, tooltip for Button, customization of button appearance, input and anchor elements."
 ---
 
 # Set the disabled state

@@ -1,7 +1,5 @@
 ---
-title: "Data-Binding"
 component: "NumericTextBox"
-description: "This section helps to learn how to bind the value in ASP.NET Core Blazor application"
 ---
 
 # Data Binding

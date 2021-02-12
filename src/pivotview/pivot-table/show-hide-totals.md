@@ -1,7 +1,5 @@
 ---
-title: "Show or hide totals"
 component: "Pivot Table"
-description: "Show/hide sub-totals and grand totals for the pivot table"
 ---
 
 # Show or hide totals

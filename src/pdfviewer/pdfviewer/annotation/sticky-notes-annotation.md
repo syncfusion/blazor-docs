@@ -1,7 +1,5 @@
 ---
-title: "Sticky Note Annotations"
 component: "PDF Viewer"
-description: "Learn about stickynote annotations in PDF Viewer"
 ---
 
 # Sticky note annotations

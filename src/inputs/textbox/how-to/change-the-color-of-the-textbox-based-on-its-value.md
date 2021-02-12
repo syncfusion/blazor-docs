@@ -1,7 +1,5 @@
 ---
-title: "Change the color of the TextBox based on its value"
 component: "Textbox"
-description: "Explains how to change color of the text box by validating the text box value using a regular expression."
 ---
 
 # Change the color of the TextBox based on its value

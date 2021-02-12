@@ -1,7 +1,5 @@
 ---
-title: "Events"
 component: "Pivot Table"
-description: "Describes about available events in the Pivot Table."
 ---
 
 # Events

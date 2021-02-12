@@ -1,7 +1,5 @@
 ---
-title: "Tooltip"
 component: "Gantt Chart"
-description: "Learn how to enable the tooltip and customize the default toolitp for the tasks in the Blazor Gantt Chart component."
 ---
 
 # Tooltip

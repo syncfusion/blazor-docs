@@ -1,7 +1,5 @@
 ---
-title: "Filtering"
 component: "DataGrid"
-description: "Learn how to filter rows in the DataGrid using the filter bar, menu, and Excel-like filtering."
 ---
 
 # Filtering

@@ -1,7 +1,5 @@
 ---
-title: "Open and close Context Menu"
 component: "Context Menu"
-description: "This section helps to learn how to Open and close Context Menu"
 ---
 
 # Open and close Context Menu

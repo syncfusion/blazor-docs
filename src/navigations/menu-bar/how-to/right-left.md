@@ -1,7 +1,5 @@
 ---
-title: "Right to left"
 component: "Menu Bar"
-description: "This section helps to learn how to give RTL support to menu bar component."
 ---
 
 # Right-To-Left

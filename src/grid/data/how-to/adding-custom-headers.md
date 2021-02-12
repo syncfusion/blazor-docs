@@ -1,7 +1,5 @@
 ---
-title: "Adding Custom Headers"
 component: "Data Manager"
-description: "Documentation on how to add custom headers in the Blazor Data Manager"
 ---
 
 <!-- markdownlint-disable MD024 -->

@@ -1,9 +1,7 @@
 ---
-title: "Funnel | ASP.NET Core Blazor "
 
 component: "Accumulation Chart"
 
-description: "The funnel chart displays series value as progressively decreasing amount to hundred percent in total"
 ---
 
 # Funnel Chart

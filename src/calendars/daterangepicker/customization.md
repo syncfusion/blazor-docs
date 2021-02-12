@@ -1,7 +1,5 @@
 ---
-title: "Customization"
 component: "DateRangePicker"
-description: "Explains how to achieve UI level customization in the date range picker component such as day cell format, preset ranges, and more."
 ---
 
 # Customization

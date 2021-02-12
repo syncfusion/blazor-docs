@@ -1,7 +1,5 @@
 ---
-title: "Set command customization"
 component: "Toolbar"
-description: "This example demonstrates how to set the HTML attribute commands to Blazor Toolbar component items."
 ---
 
 # Set command customization

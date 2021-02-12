@@ -1,7 +1,5 @@
 ---
-title: "Height and Width of Blazor Scheduler"
 component: "Scheduler"
-description: "This article demonstrates how to set the height and width of Scheduler in pixels, percentage or auto values."
 ---
 
 # Scheduler dimensions

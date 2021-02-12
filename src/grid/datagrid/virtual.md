@@ -1,7 +1,5 @@
 ---
-title: "Virtualization"
 component: "DataGrid"
-description: "Learn how to improve performance in the Blazor DataGrid Component by using row and column virtualization and grouping with virtualization. Also learn about the limitations of virtualization."
 ---
 
 # Virtualization

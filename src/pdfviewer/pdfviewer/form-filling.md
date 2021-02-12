@@ -1,7 +1,5 @@
 ---
-title: "FormFilling"
 component: "PDF Viewer"
-description: "Learn about displaying form fields in PDF Viewer"
 ---
 
 # Form filling and signature fields

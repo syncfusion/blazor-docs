@@ -1,7 +1,5 @@
 ---
-title: "ListView Data Binding"
 component: "ListView"
-description: "ListView supports data binding to display the list of items from local array/JSON data or server-side data source using DataManager."
 ---
 
 # Data binding

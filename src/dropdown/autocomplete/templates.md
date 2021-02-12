@@ -1,7 +1,5 @@
 ---
-title: "Autocomplete Template"
 component: "AutoComplete"
-description: "This section for Syncfusion ASP.NET autocomplete component shows how to customize the appearance of each item in the pop-up list using template option."
 ---
 
 # Templates

@@ -1,7 +1,5 @@
 ---
-title: "Scheduler Header customization"
 component: "Blazor Scheduler"
-description: "This section explains how to customize the header bar of Scheduler."
 ---
 
 # Header customization

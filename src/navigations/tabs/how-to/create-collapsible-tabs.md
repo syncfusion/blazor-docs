@@ -1,7 +1,5 @@
 ---
-title: "Create collapsible Tabs"
 component: "Tab"
-description: "This example demonstrates how to create tabs in a collapsible state when they are initially rendered in the ASP.NET Core Razor Tab component."
 ---
 
 # Create collapsible Tabs

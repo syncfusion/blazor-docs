@@ -1,7 +1,5 @@
 ---
-title: "ListBox toolbar support"
 component: "ListBox"
-description: "ListBox supports dual list (i.e) reordering of items within the listbox and between two listboxes."
 ---
 
 # Dual ListBox

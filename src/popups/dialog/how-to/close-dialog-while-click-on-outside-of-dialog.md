@@ -1,7 +1,5 @@
 ---
-title: "Blazor Modal Dialog | Close on document click"
 component: "Dialog"
-description: "This section explains how to customize the closing behavior of Blazor Modal Dialog such as close it while clicking on the document."
 ---
 
 # Close dialog while click on outside of dialog

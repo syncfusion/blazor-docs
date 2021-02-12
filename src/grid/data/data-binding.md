@@ -1,7 +1,5 @@
 ---
-title: "Data Binding"
 component: "Data Manager"
-description: "Learn how to bind local and remote data sources in Syncfusion Blazor components using the Blazor Data Manager"
 ---
 
 <!-- markdownlint-disable MD024 -->

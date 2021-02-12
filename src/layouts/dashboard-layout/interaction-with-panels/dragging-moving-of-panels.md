@@ -1,7 +1,5 @@
 ---
-title: "Dragging and moving of panels"
 component: "Dashboard Layout"
-description: "This section explains how to adjust the panels within the layout in Blazor Dashboard Layout component"
 ---
 
 # Dragging of panels

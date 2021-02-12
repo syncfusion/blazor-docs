@@ -1,7 +1,5 @@
 ---
-title: "Set the read-only TextBox"
 component: "Textbox"
-description: "Explains how to control the read-only state of the text box component."
 ---
 
 # Set the read-only TextBox

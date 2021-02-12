@@ -1,7 +1,5 @@
 ---
-title: "Columns in Kanban board"
 component: "Kanban"
-description: "This section explains how to create a columns in Kanban board with header template, toggle columns and validation."
 ---
 
 # Columns in Kanban Board

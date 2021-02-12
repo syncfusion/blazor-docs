@@ -1,7 +1,5 @@
 ---
-title: "animations"
 component: "Accordion"
-description: "This example demonstrates how to set custom animation for expand and collapse actions in the Blazor Accordion component."
 ---
 
 # Animations

@@ -1,7 +1,5 @@
 ---
-title: "Columns"
 component: "DataGrid"
-description: "Documentation on column reordering, resizing, header templates (custom header content), and column templates (custom cell content) in the Blazor DataGrid."
 ---
 
 # Columns

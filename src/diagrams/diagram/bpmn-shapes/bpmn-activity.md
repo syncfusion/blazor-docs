@@ -1,7 +1,5 @@
 ---
-title: "BPMN Activity"
 component: "Diagram"
-description: "BPMN Activity is the task that is performed in a business process."
 ---
 
 # BPMN activity

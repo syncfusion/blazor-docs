@@ -1,7 +1,5 @@
 ---
-title: "Event"
 component: "Split Button"
-description: "This section helps to learn how to trigger events in ASP.NET Core Blazor application"
 ---
 
 # Overview

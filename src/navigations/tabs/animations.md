@@ -1,7 +1,5 @@
 ---
-title: "Animations"
 component: "Tabs"
-description: "This example demonstrates how to set custom animation for both previous and next actions on Blazor Tabs component when the tab select."
 ---
 
 # Animations

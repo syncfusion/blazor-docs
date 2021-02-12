@@ -1,7 +1,5 @@
 ---
-title: "Getting Started"
 component: "Sidebar"
-description: "This section explains you the steps required to create a simple Sidebar Component."
 ---
 
 <!-- markdownlint-disable MD009 -->

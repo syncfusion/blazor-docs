@@ -1,7 +1,5 @@
 ---
-title: "Create Dropdown List in Popup"
 component: "DropDown Menu"
-description: "Dropdown Menu how to section, render the DropDownList Component in DropDownMenu popup."
 ---
 
 # Create Dropdown List in Popup

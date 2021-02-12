@@ -1,7 +1,5 @@
 ---
-title: "Accessibility"
 component: "Pivot Table"
-description: "Pivot Table provides access to all the features through keyboard, on-screen reader, or other assertive technology devices."
 ---
 
 # Accessibility

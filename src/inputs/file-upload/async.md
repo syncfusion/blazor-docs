@@ -1,7 +1,5 @@
 ---
-title: "Asynchronous upload"
 component: "Uploader"
-description: "Explains how to upload single or multiple files using asynchronous mode with auto-upload, preload, and additional HTTP headers."
 ---
 
 # Asynchronous upload

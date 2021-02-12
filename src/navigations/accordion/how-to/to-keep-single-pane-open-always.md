@@ -1,7 +1,5 @@
 ---
-title: "To keep single pane open always"
 component: "Accordion"
-description: "This example demonstrates how to keep a single pane in an expanded state in the Blazor Accordion component."
 ---
 
 # To keep single pane open always

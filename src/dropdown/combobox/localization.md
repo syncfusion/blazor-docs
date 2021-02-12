@@ -1,7 +1,5 @@
 ---
-title: "Combo box Localization"
 component: "ComboBox"
-description: "This section explains the localization support of the Syncfusion ASP.NET combo box control."
 ---
 
 # Localization

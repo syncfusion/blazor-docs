@@ -1,9 +1,7 @@
 ---
-title: " Chart Selection | ASP.NET Core Blazor "
 
 component: "Chart"
 
-description: "Strip Lines are vertical or horizontal lines used to highlight/mark a certain region on the plot area."
 ---
 
 <!-- markdownlint-disable MD036 -->

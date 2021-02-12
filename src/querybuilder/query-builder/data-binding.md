@@ -6,50 +6,52 @@ description: "Learn how to bind local data in the Blazor Query Builder control."
 
 # Data binding
 
-The Query Builder uses `DataManager` to bind the dataSource which supports both RESTful JSON data services binding and local object binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property can be assigned either with the instance of `DataManager` or object collection.
+The Query Builder uses `DataManager` to bind the dataSource which supports both RESTful JSON data services binding and local object binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property can be assigned either with the instance of `DataManager` or data type of array.
 
 ## Local data
 
-To bind local data to the Query Builder, you can assign the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property  with a list of object.
+To bind local data to the Query Builder, you can assign the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property  with a list of data type.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder DataSource="@EmployeeDetails" Rule="@ImportRules">
-                <QueryBuilderColumns>
-                    <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="number"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="FirstName" Label="First Name" Type="string"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title Of Courtesy" Type="boolean"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="date" Format = "MM/dd/yyyy"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="Country" Label="Country" Type="string"></QueryBuilderColumn>
-                </QueryBuilderColumns>
-            </SfQueryBuilder>
+<SfQueryBuilder TValue="EmployeeDetails" DataSource="@EmployeeData">
+    <QueryBuilderRule Condition="or" Rules="@Rules"></QueryBuilderRule>
+    <QueryBuilderColumns>
+        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.String"></QueryBuilderColumn>
+    </QueryBuilderColumns>
+</SfQueryBuilder>
 
 @code {
-    public List<Employee> EmployeeDetails = new List<Employee>
-        {
-        new Employee{ FirstName = "Martin", EmployeeID = "1001", Country = "England", City = "Manchester", HireDate = "23/04/2014" },
-        new Employee{ FirstName = "Benjamin", EmployeeID = "1002", Country = "England", City = "Birmingham", HireDate = "19/06/2014" },
-        new Employee{ FirstName = "Stuart", EmployeeID = "1003", Country = "England", City = "London", HireDate = "04/07/2014"},
-        new Employee{ FirstName = "Ben", EmployeeID = "1004", Country = "USA", City = "California", HireDate = "15/08/2014" },
-        new Employee{ FirstName = "Joseph", EmployeeID = "1005", Country = "Spain", City = "Madrid", HireDate = "29/08/2014" }
+    //Rules binding
+    List<RuleModel> Rules = new List<RuleModel>()
+    {
+            new RuleModel { Field="Country", Label="Country", Type="String", Operator="equal", Value = "England" },
+            new RuleModel { Field="EmployeeID", Label="EmployeeID",  Type="Number", Operator="notequal", Value = 1001 }
     };
 
-    public class Employee {
+    public List<EmployeeDetails> EmployeeData = new List<EmployeeDetails>
+    {
+        new EmployeeDetails{ FirstName = "Martin", EmployeeID = 1001, Country = "England", City = "Manchester", HireDate = new DateTime(2014, 4, 23) },
+        new EmployeeDetails{ FirstName = "Benjamin", EmployeeID = 1002, Country = "England", City = "Birmingham", HireDate = new DateTime(2014, 6, 19) },
+        new EmployeeDetails{ FirstName = "Stuart", EmployeeID = 1003, Country = "England", City = "London", HireDate = new DateTime(2014, 7, 4) },
+        new EmployeeDetails{ FirstName = "Ben", EmployeeID = 1004, Country = "USA", City = "California", HireDate = new DateTime(2014, 8, 15) },
+        new EmployeeDetails{ FirstName = "Joseph", EmployeeID = 1005, Country = "Spain", City = "Madrid", HireDate = new DateTime(2014, 8, 29) }
+    };
+
+    public class EmployeeDetails
+    {
         public string FirstName { get; set; }
-        public string EmployeeID { get; set; }
+        public int EmployeeID { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
-        public string HireDate { get; set; }
+        public DateTime HireDate { get; set; }
     }
-
-    public QueryBuilderRule ImportRules = new QueryBuilderRule
-    {
-        Condition = "or",
-        Rules = new List<RuleModel> { new RuleModel { Field = "EmployeeID", Value = "1001", Operator = "notequal" },
-        new RuleModel { Field = "Country", Value = "England", Operator = "equal" } }
-    };
 }
+
 ```
 
 Output will be shown as
@@ -65,19 +67,27 @@ To bind remote data to Query Builder component, assign service data as an instan
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.Data
 
-<SfQueryBuilder>
-    <QueryBuilderColumns>
-        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="number">
-        </QueryBuilderColumn>
-        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="string"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title Of Courtesy" Type="boolean">
-        </QueryBuilderColumn>
-        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="date" Format="MM/dd/yyyy">
-        </QueryBuilderColumn>
-        <QueryBuilderColumn Field="Country" Label="Country" Type="string"></QueryBuilderColumn>
-    </QueryBuilderColumns>
-    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Employees" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
+<SfQueryBuilder TValue="OrderDetails" Width="70%">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
 </SfQueryBuilder>
+
+
+@code {
+    public class OrderDetails
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public int? EmployeeID { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public bool Verified { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public string ShipAddress { get; set; }
+    }
+}
 
 ```
 

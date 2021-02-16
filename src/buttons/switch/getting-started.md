@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "Switch"
-description: "This section helps to learn how to create the Switch in ASP.NET Core Razor application with its basic features in step-by-step procedure."
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Essential JS 2 for ASP.NET Core Razor Switch Component in Visual Studio 2019

@@ -1,9 +1,3 @@
----
-title: "Height and Width of Blazor Scheduler"
-component: "Scheduler"
-description: "This article demonstrates how to set the height and width of Scheduler in pixels, percentage or auto values."
----
-
 # Scheduler dimensions
 
 The Scheduler dimensions refers to both height and width of the entire layout and it accepts 3 types of values.

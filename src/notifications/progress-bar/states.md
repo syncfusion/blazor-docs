@@ -1,9 +1,3 @@
----
-title: "States | ASP.NET Core Blazor "
-component: "ProgressBar"
-description: "Visualize progress in different states."
----
-
 # States
 
 Visualize progress in different states.

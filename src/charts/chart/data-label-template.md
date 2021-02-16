@@ -1,11 +1,3 @@
----
-title: " Chart DataLabel Template| ASP.NET Core Blazor  "
-
-component: "Chart"
-
-description: "How to section explains knowledge base samples and howto access different types properties and events of the chart."
----
-
 <!-- markdownlint-disable MD036 -->
 
 # DataLabel Template

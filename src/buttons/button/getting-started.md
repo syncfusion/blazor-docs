@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "Button"
-description: "This section helps you to learn how to create a EJ2 button in Blazor application with its basic features in step-by-step procedure."
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Button Component

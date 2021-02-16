@@ -1,8 +1,4 @@
----
-title: "Blazor Toast Notification | Get started from client-side"
-component: "Toast"
-description: "This section explains the step-by-step process to get started with Blazor toast notification using Blazor client-side application in Visual Studio 2019."
----
+------
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

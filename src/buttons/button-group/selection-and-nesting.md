@@ -1,9 +1,3 @@
----
-title: "ButtonGroup Selection and Nesting"
-component: "ButtonGroup"
-description: "ButtonGroup supports single selection, multiple selection, nesting with dropdownbutton and splitbutton components."
----
-
 # Selection and Nesting
 
 ## Single selection

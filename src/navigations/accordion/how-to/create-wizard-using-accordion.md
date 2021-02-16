@@ -1,9 +1,3 @@
----
-title: "Create wizard using Accordion"
-component: "Accordion"
-description: "This online shopping example demonstrates how to create multiple components inside the Blazor Accordion component."
----
-
 # Create wizard
 
 Accordion items can be disabled and expanded dynamically using accordion item **Disabled** and **Expanded** property.

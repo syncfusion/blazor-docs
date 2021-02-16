@@ -1,9 +1,3 @@
----
-title: "Blazor Spinner | Customize label, type, size, appearance"
-component: "Spinner"
-description: "The tutorial explains about changing the spinner styles, size of the spinner, different types of spinner, and rendering a spinner with a label."
----
-
 # Customize the Spinner Component
 
 You can customize the Spinner component when initializing or after rendering it.

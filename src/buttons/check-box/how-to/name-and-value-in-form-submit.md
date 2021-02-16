@@ -1,9 +1,3 @@
----
-title: "Name and Value in form submit"
-component: "CheckBox"
-description: "CheckBox how to section, name and value in form submit, and customization of CheckBox appearance, frame & check icon."
----
-
 # Name and Value in form submit
 
 The name attribute of the CheckBox is used to group Checkboxes. When the Checkboxes are grouped in form, the checked items value attribute

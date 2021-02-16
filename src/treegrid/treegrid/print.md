@@ -1,9 +1,3 @@
----
-title: "Print"
-component: "Tree Grid"
-description: "Learn how to print Tree Grid content, set up pages for printing, perform external print, and print visible pages in the Blazor Tree Grid."
----
-
 # Print
 
 To print the Tree Grid, use the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method from tree grid instance. The print option can be displayed on the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) by adding the **Print** toolbar item.

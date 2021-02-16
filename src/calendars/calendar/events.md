@@ -1,9 +1,3 @@
----
-title: "Events"
-component: "Calendar"
-description: "Learn how to use events in Blazor Calendar component."
----
-
 # Events
 
 This section explains the list of events of the Calendar component which will be

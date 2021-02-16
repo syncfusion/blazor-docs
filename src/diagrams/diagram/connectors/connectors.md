@@ -1,9 +1,3 @@
----
-title: "Connectors"
-component: "Diagram"
-description: "Diagram connector allows you to draw a line to connect two points, nodes or ports."
----
-
 # Connector
 
 Connectors are objects used to create link between two points, nodes or ports to represent the relationships between them.

@@ -1,9 +1,3 @@
----
-title: "Toolbar Responsive"
-component: "Toolbar"
-description: "Toolbar has responsive support to adapt toolbar component’s width based on the devices like mobile and tablet."
----
-
 # Responsive Mode
 
 This section explains the supported display modes of the Toolbar when the content exceeds the viewing area. Possible modes are:

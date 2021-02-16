@@ -1,9 +1,3 @@
----
-title: "Set command customization"
-component: "Toolbar"
-description: "This example demonstrates how to set the HTML attribute commands to Blazor Toolbar component items."
----
-
 # Set command customization
 
 The `HtmlAttributes` property of the Toolbar item is used to set the HTML attributes ('ID', 'class', 'style' ,'role') for the commands.

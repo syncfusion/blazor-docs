@@ -1,9 +1,3 @@
----
-title: "Blazor In-place Editor | Configure the basic properties"
-component: "In-place Editor"
-description: "This section explains how to configure various render modes, display modes, and actions on editing and focus out in the Blazor In-place Editor."
----
-
 # Configuration
 
 ## Rendering modes

@@ -1,9 +1,3 @@
----
-title: "Change the text content and styles of the Progress Button during progress"
-component: "Progress Button"
-description: "Progress Button how to section, change text content and styles, hide spinner, customize progress."
----
-
 # Change the text content and styles of the Progress Button during progress
 
 You can change the text content and styles of the Progress Button during progress state by changing the text content and the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property at

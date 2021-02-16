@@ -1,9 +1,3 @@
----
-title: "Chart Rendering | ASP.NET Core Blazor"
-component: "Chart"
-description: "It describes the various rendering methods of the chart"
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Rendering Types

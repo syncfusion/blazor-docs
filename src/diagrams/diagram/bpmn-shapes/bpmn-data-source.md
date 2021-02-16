@@ -1,9 +1,3 @@
----
-title: "BPMN Event"
-component: "Diagram"
-description: "Datasource is used to store or access data associated with a business process"
----
-
 # BPMN Datasource
 
 Datasource is used to store or access data associated with a business process. To create a datasource, set the shape to **DataSource**. The following code example explains how to create a datasource.

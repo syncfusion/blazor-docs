@@ -1,9 +1,3 @@
----
-title: "Create right-to-left DropDownButton"
-component: "DropDownButton"
-description: "DropDownButton how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
----
-
 # Create right-to-left DropDownButton
 
 DropDownButton component has RTL support. This can be achieved by setting [`enableRtl`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsDropDownButton~EnableRtl.html) as true.

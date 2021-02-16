@@ -1,9 +1,3 @@
----
-title: "Load content through Ajax"
-component: "Accordion"
-description: "This example demonstrates how to load the external content into the ASP.NET Core Razor Accordion content through Ajax post."
----
-
 # Load content through Ajax
 
 Accordion supports to load external contents through `AJAX` library. Refer the below steps.

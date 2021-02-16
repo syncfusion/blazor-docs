@@ -1,9 +1,3 @@
----
-title: "Native Event"
-component: "DatePicker"
-description: "Explains how to work with native events and pass event data to the event handler in your Blazor applications."
----
-
 # Overview
 
 This section explains the steps to include native events and pass data to event handler in the DatePicker component.

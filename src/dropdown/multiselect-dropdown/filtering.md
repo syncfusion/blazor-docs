@@ -1,9 +1,3 @@
----
-title: "Multiselect Filtering"
-component: "MultiSelect"
-description: "This section shows the built-in filtering support with a rich set of filtering configurations in Syncfusion ASP.NET multiselect control."
----
-
 # Filtering
 
 The MultiSelect has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) is enabled. The filter

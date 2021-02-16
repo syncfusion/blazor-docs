@@ -1,9 +1,3 @@
----
-title: "UserHandle"
-component: "Diagram"
-description: "Learn how to add or remove userhandles, userhandles customization, and its event handle in the diagram blazor component"
----
-
 # User Handles
 
 User handles are customizable handles that can be used to perform custom actions and default clipboard actions.

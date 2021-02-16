@@ -1,9 +1,3 @@
----
-title: "Sorting"
-component: "DataGrid"
-description: "Learn how to sort rows in the Blazor DataGrid component and perform initial sorting."
----
-
 # Sorting
 
 Sorting enables you to sort data in the **Ascending** or **Descending** order.

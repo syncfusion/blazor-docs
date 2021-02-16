@@ -1,9 +1,3 @@
----
-title: "Disabled State"
-component: "DateTimePicker"
-description: "Explains how to disable the user interaction on date time picker component."
----
-
 # Disable the component
 
 To disable the DateTimePicker, set its

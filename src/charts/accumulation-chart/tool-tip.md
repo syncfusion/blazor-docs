@@ -1,11 +1,3 @@
----
-title: "Accumulation Chart Tooltip | ASP.NET Core Blazor "
-
-component: "Accumulation Chart"
-
-description: "Accumulation chart tooltip represents the x and y values of the current mouse pointer point."
----
-
 # Tooltip
 
 Tooltip for the accumulation chart can be enabled by using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property.

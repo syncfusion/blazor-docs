@@ -1,8 +1,4 @@
----
-title: "Text Selection and Panning options in PDF Viewer in Blazor server-side"
-component: "PDF Viewer"
-description: "Learn about the available Interaction options in PDF Viewer"
----
+------
 # Interaction mode
 
 The built-in toolbar of PDF Viewer contains the following two interaction options:

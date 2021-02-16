@@ -1,9 +1,3 @@
----
-title: "How to customize toolbar scroll step"
-component: "Toolbar"
-description: "This example demonstrates how to customize the scrolling distance of Blazor Toolbar component items when clicking left or right navigation icons."
----
-
 # Customize the Scrolling distance
 
 Toolbar `ScrollStep` property supports to customize the scrolling distance when you click the left and right side navigation icons. You can pass a required value through `ScrollStep` property to customize toolbar scrolling distance.

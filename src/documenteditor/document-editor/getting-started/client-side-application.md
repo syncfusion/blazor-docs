@@ -1,9 +1,3 @@
----
-title: "Create a Blazor Word processing application with web assembly"
-component: "Word processor"
-description: "Learn how to create a Blazor WebAssembly Word processing app step by step to compose, edit, and print files using Syncfusion's Word processor component."
----
-
 # Create a Word processing application with Blazor WebAssembly app
 
 This article provides the step-by-step instructions to integrate the Word processor component in Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).

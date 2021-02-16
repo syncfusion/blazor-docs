@@ -1,9 +1,3 @@
----
-title: "Disable a DropDownButton"
-component: "DropDownButton"
-description: "DropDownButton how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
----
-
 # Disable a DropDownButton
 
 DropdownButton component can be enabled/disabled by giving [`disabled`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsDropDownButton~Disabled.html) property.

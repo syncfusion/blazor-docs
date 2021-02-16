@@ -1,9 +1,3 @@
----
-title: "Upgrade Application To Latest Version"
-component: "DataGrid"
-description: "Documentation on how to upgrade an application to latest Syncfusion version"
----
-
 # Upgrade Application To Latest Version
 
 **Step 1:** Update the latest Syncfusion blazor [`nuget`](https://www.nuget.org/packages/Syncfusion.Blazor/) from Nuget package manager in your application.

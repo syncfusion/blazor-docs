@@ -1,9 +1,3 @@
----
-title: "Accessibility"
-component: "MaskedTextBox"
-description: "Accessibility support in masked textbox"
----
-
 # Accessibility
 
 The MaskedTextBox is characterized with complete ARIA Accessibility support that helps to access

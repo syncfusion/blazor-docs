@@ -1,9 +1,3 @@
----
-title: "Set the nested accordion"
-component: "Accordion"
-description: "This example demonstrates how to create an Blazor Accordion component inside another Accordion component."
----
-
 # Add Nested Accordion
 
 Accordion supports to render the nested level of Accordion by using `ContentTemplate` property. To render the nested Accordion, you can define nested Accordion elements within the `ContentTemplate` property of the parent Accordion.

@@ -1,9 +1,3 @@
----
-title: "Styling and appearance"
-component: "TreeGrid"
-description: "Learn how to change default styling of the Tree Grid."
----
-
 # Styling
 
 To modify the Tree Grid appearance, you need to override the default CSS of Tree Grid. Please find the list of CSS classes and its corresponding section in Tree Grid.

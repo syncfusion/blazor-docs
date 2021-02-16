@@ -1,9 +1,3 @@
----
-title: "Events"
-component: "Diagram"
-description: "Events for Connectors."
----
-
 # Events
 
 ## Selection change

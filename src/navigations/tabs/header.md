@@ -1,9 +1,3 @@
----
-title: "Tab Header"
-component: "Tabs"
-description: "This section explains how to create Blazor tab header with different styles in Blazor application."
----
-
 # Header
 
 This section explains about modifying the style of Tab header.

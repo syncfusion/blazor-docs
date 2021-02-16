@@ -1,9 +1,3 @@
----
-title: "Custom Binding"
-component: "DataGrid"
-description: "Implementing custom data binding using custom adaptor in the Blazor DataGrid component"
----
-
 # Custom Binding
 
 The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the DataGrid component.

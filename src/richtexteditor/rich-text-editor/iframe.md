@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | Iframe mode rendering (classic)"
-component: "Rich Text Editor"
-description: "This section explains how to render the Blazor Rich Text Editor using iframe element that helps classic customers use the HTML editor."
----
-
 # Iframe
 
 When the `RichTextEditorIframeSettings` option is enabled, the Rich Text Editor creates the iframe element as the content area on component initialization, it is used to display and edit the content. In content area, the editor displays only the body tag of a `<iframe>` document.

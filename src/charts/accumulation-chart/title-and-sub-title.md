@@ -1,10 +1,4 @@
 ---
-title: "Accumulation Chart Tooltip | ASP.NET Core Blazor "
-
-component: "Accumulation Chart"
-
-description: "Accumulation chart provide title and subtitle and also gives their customization like font size and color."
----
 # Title
 
 Accumulation chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_Title) property, to show the information

@@ -1,9 +1,3 @@
----
-title: "Group items in Popup"
-component: "Split Button"
-description: "This section explains how to group popup items using list view component in Blazor."
----
-
 # Group items in Popup
 
 Items in popup can be grouped in Split Button by templating entire popup with ListView. To achieve grouping in ListView,

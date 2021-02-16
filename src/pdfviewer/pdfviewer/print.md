@@ -1,9 +1,3 @@
----
-title: "Print in PDF Viewer in Blazor server-side"
-component: "PDF Viewer"
-description: "Learn about the available options for print the modified document from PDF Viewer"
----
-
 # Print
 
 The PDF Viewer supports printing the loaded PDF file by default. You can enable or disable printing by setting the `EnablePrint` property.

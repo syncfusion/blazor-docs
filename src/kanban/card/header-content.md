@@ -1,9 +1,3 @@
----
-title: "Header and Content"
-component: "Card"
-description: "This section explains how to create the Card component with header, title, subtitle, images, and content."
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Header and Content

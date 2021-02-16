@@ -1,9 +1,3 @@
----
-title: "Split Button Icons and Separator"
-component: "Split Button"
-description: "Split Button allows the end user to place the icons and separate popup items in Split Button."
----
-
 # Icons
 
 ## Split Button Icons

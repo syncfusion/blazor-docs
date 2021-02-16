@@ -1,10 +1,4 @@
 ---
-title: " Bullet Chart Ranges | ASP.NET Core Blazor "
-
-component: "Bullet Chart"
-
-description: "Bullet Chart scale can be rendered by using different types of end values. They are used to represnt the status of each data. "
----
 <!-- markdownlint-disable MD036 -->
 
 # Ranges

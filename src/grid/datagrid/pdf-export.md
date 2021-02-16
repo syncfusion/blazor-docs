@@ -1,9 +1,3 @@
----
-title: "PDF Export"
-component: "DataGrid"
-description: "Documentation on exporting DataGrid content to PDF format and customizing the exported document with multi-export, headers and footers, and file name changes."
----
-
 <!-- markdownlint-disable MD033 -->
 
 # PDF Export

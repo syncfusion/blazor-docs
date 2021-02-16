@@ -1,11 +1,3 @@
----
-title: " Accumulation Chart Data Label | ASP.NET Core Blazor "
-
-component: "Accumulation Chart"
-
-description: "Data labels are names of the data points that are displayed on the x-axis of a chart and also used to highlight important data points"
----
-
 # Data Label
 
 Data label can be added to a point by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationDataLabelSettingsModel~Visible.html)

@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | CSS Structures"
-component: "Rich Text Editor"
-description: "This section for Blazor Rich Text editor describes the details of the CSS structures in the Rich Text editor."
----
-
 # CSS structures
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.

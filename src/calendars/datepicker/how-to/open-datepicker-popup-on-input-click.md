@@ -1,9 +1,3 @@
----
-title: "Open popup"
-component: "DatePicker"
-description: "Explains how to open the DatePicker popup when the input is focused"
----
-
 # Open the DatePicker popup upon focusing input of DatePicker
 
 You can open the DatePicker popup on input focus by calling the `show` method in the input `focus` event.

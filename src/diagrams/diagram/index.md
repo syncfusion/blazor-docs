@@ -1,11 +1,3 @@
----
-title: " Diagram | Blazor "
-
-component: "Diagran"
-
-description: "Index page defines over view and and interactive features of the diagram."
----
-
 # Overview
 
 The diagram component visually represents information. It is also used to create diagrams like flow charts, organizational charts, mind maps, and BPMN either through code or a visual interface.

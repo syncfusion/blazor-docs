@@ -1,9 +1,3 @@
----
-title: "Blazor Toast Notification | Basic configuration APIs"
-component: "Toast"
-description: "This section explains the list of the fundamental configurations of the Blazor toast such as progress bar to toast, newest on top, close button, and more."
----
-
 # Configuring Options
 
 This section explains the steps required to customize the appearance of the toast using built-in APIs.

@@ -1,9 +1,3 @@
----
-title: "Holidays"
-component: "Gantt Chart"
-description: "Learn how to highlight the non-working days in the Blazor Gantt Chart component."
----
-
 # Holidays
 
 Non-working days in a project can be displayed in the Gantt Chart component using the `Holidays` property. Each holiday can be defined with the following properties:

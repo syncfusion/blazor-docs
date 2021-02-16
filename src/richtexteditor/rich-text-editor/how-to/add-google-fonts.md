@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | how to | Add google web fonts"
-component: "Rich Text Editor"
-description: "This section explains how to add Google web fonts 'robotto' to the font family group in the Blazor Rich Text Editor component."
----
-
 # Add Google fonts
 
 To use web fonts in Rich Text Editor, the web fonts need not to be present in the local machine. To add the web fonts to Rich Text Editor, refer to the web font links and add the font names in the `RichTextEditorFontFamily` tag.

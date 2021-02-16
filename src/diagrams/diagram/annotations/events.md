@@ -1,9 +1,3 @@
----
-title: "Label Events"
-component: "Diagram"
-description: "Events will notify the actions like editing, double click, keydown, and keyup for label"
----
-
 # Events
 
 ## Text edit

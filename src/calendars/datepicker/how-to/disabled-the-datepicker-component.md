@@ -1,9 +1,3 @@
----
-title: "Disabled State"
-component: "DatePicker"
-description: "Explains how to disable the user interaction on date picker component"
----
-
 # Disabled State
 
 To disable the DatePicker, use its

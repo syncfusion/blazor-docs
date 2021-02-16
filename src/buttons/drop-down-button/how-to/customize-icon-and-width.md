@@ -1,9 +1,3 @@
----
-title: "Customize icon and width"
-component: "DropDownButton"
-description: "DropDownButton how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
----
-
 # Customize icon and width
 
 Width of the DropDownButton can be customized by setting required width to the dropdown element.

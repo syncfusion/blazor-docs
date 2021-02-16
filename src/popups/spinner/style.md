@@ -1,9 +1,3 @@
----
-title: "Blazor Spinner | CSS Structures"
-component: "Spinner"
-description: "The tutorial explains the details of the CSS structures in the Blazor Spinner with different themes."
----
-
 # CSS structures
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.

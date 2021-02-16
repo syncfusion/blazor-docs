@@ -1,9 +1,3 @@
----
-title: "Data Annotation"
-component: "DataGrid"
-description: "Learn how to use data annotation in Blazor DataGrid to customize column options such as header and set validation using various attributes."
----
-
 # Data Annotation
 
 Data Annotations helps us to define rules to the model classes or properties to perform data validation and display suitable messages to end users.

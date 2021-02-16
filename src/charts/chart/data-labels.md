@@ -1,11 +1,3 @@
----
-title: " Chart DataLabel | ASP.NET Core Blazor "
-
-component: "Chart"
-
-description: "Data labels are names of the data points that are displayed on the x-axis of a chart and also used to highlight important data points"
----
-
 # Data Labels
 
 Data label can be added to a chart series by enabling the `Visible` option in the data label. By default, the labels will arrange smartly without overlapping.

@@ -1,9 +1,3 @@
----
-title: "Time range slider"
-component: "Slider"
-description: "Learn how to create time range slider in Blazor Slider Component."
----
-
 # Time Range Slider
 
 The time formatting can be achieved same as the date formatting using `TicksRendering` and `TooltipChange` events. The process of time formatting is explained in the below sample.

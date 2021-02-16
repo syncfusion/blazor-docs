@@ -1,9 +1,3 @@
----
-title: "Node"
-component: "Diagram"
-description: "Nodes visually represents the geometrical information and process flows."
----
-
 # Node
 
 Nodes are graphical objects that are used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data and it represents the functions of a complete system in regards to how it interacts with external entities.

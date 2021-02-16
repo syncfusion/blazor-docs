@@ -1,9 +1,3 @@
----
-title: "Columns"
-component: "Tree Grid"
-description: "Documentation on column reordering, resizing, header templates (custom header content), and column templates (custom cell content) in the Blazor Tree Grid."
----
-
 # Columns
 
 The column definitions are used as the datasource schema in the Tree Grid. This plays a vital role in rendering column values in the required format.

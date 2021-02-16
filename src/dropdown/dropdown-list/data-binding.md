@@ -1,9 +1,3 @@
----
-title: "Data-Binding"
-component: "DropDownList"
-description: "This section helps to learn how to bind the value in ASP.NET Core Blazor application"
----
-
 # Data Binding
 
 Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum and bool types. If component value has been changed, it will affect the all places where you bind the variable for the **bind-value** attribute.

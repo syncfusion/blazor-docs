@@ -1,9 +1,3 @@
----
-title: "Enable or disable context menu items"
-component: "Context Menu"
-description: "This section helps to learn how to Enable or disable context menu items"
----
-
 # Enable or disable context menu items
 
 You can enable and disable the menu items using the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in [`MenuItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html). To disable menuItems, set the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in each item to `true` and vice-versa.

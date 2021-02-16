@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "Tabs"
-description: "Rendering Tab using Blazor."
----
-
 # Getting Started
 
 This section briefly explains about how to include a `Tabs` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.

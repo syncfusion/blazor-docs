@@ -1,11 +1,3 @@
----
-title: "Series Types  | ASP.NET Core Blazor "
-
-component: "Stock Chart"
-
-description: "Syncfusion Blazor StockChart supports differernt types of series and also supports customizations for each type of StockChart."
----
-
 # Stock Chart Series Types
 
 Stock Chart supports 6 major types of series namely `Line`, `Spline`, `Hilo`, `HiloOpenClose`, `Hollow Candle` and `Candle`. By using the series dropdown button you can navigate between the above listed series types.

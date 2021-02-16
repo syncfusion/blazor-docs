@@ -1,9 +1,3 @@
----
-title: "Blazor In-place Editor | Server actions through AJAX"
-component: "In-place Editor"
-description: "This section explains how to handle server actions (save the modified value in server) by handling success and failure events in the Blazor In-place Editor."
----
-
 # Server actions
 
 By passing In-place Editor component value to the server, the `PrimaryKey` property value must require, otherwise action not performed for remote data.

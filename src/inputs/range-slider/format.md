@@ -1,9 +1,3 @@
----
-title: "Slider Formatting"
-component: "Slider"
-description: "Slider supports formatting to customize slider values like time, currency & km, values, also displayed in ticks & tooltip."
----
-
 # Formatting
 
 The `Format` feature used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways of achieving formatting in slider.

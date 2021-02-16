@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "Dropdown Menu"
-description: "This section helps to learn how to create the Dropdown Menu in Blazor application with its basic features in step-by-step procedure."
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Dropdown Menu Component

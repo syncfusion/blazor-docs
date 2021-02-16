@@ -1,9 +1,3 @@
----
-title: "Getting Started with ASP.NET Core Blazor server-side in Visual Studio 2019"
-component: "Progress Bar"
-description: "This section briefly explains how to create the Progress Bar component and configure its available functionalities in Blazor server-side web application and also how to include a simple Progress Bar in your Blazor server-side web application"
----
-
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started in Blazor Progress Bar

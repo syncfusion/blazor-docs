@@ -1,9 +1,3 @@
----
-title: "Create a PDF Viewer in Blazor server-side"
-component: "PDF Viewer"
-description: "Learn how to create a PDF Viewer in Blazor server-side application step by step, you can use of this viewer control to display, print and annotate PDF files."
----
-
 # Create a PDF Viewer in Blazor server-side application
 
 This section briefly explains how to include a PDF Viewer in your  Blazor server-side application.

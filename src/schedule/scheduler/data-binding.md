@@ -1,9 +1,3 @@
----
-title: "Blazor Scheduler"
-component: "Scheduler"
-description: "This section includes the data binding topics explaining how to bind various data sources to Scheduler using DataManager adaptors."
----
-
 # Data binding
 
 The Scheduler uses `DataManager`, which supports both RESTful data service binding and datasource collections. The `DataSource` property of Scheduler can be assigned either with the instance of `DataManager` or List of datasource collection, as it supports the following two kind of data binding methods:

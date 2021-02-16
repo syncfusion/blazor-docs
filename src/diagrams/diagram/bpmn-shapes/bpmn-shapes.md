@@ -1,9 +1,3 @@
----
-title: "BPMN Shapes"
-component: "Diagram"
-description: "Diagram BPMN shapes allow you to graphically notate the internal business procedure."
----
-
 # Shapes
 
 BPMN(Business Process Model and Notation) shapes are used to represent the internal business procedure in a graphical notation and enable you to communicate the procedures in a standard manner. To create a BPMN shape, in the node property shape, type should be set to “Bpmn” and its shape should be set as any one of the built-in shapes.

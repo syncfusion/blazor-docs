@@ -1,9 +1,3 @@
----
-title: "Clipboard"
-component: "DocumentEditor"
-description: "Learn how cut, copy, or paste can be done in Blazor Word processor using clipboard."
----
-
 # Clipboard
 
 Word processor component (a.k.a Document Editor) provides built-in support for clipboard operations such as cut, copy, and paste. You can perform the clipboard operations using keyboard shortcuts, touch, and keyboard interactions. Also, the same functionalities can be invoked programmatically.

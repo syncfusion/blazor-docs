@@ -1,9 +1,3 @@
----
-title: "Blazor In-place Editor | featured components list"
-component: "In-place Editor"
-description: "This section provides the list of Blazor components supported by Blazor In-place Editor as a built-in and injectable module."
----
-
 # List of components
 
 In-place Editor renders various components based on the `Type` property and the Editor components should be rendered inside the In-place Editor. Also, need to configure the two-way binding between the In-place Editor and its EditorComponent. It is used to update the EditorComponent value into the In-place Editor component.

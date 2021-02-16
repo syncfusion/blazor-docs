@@ -1,9 +1,3 @@
----
-title: "Calendar Views"
-component: "Calendar"
-description: "Explains how to specify start and depth view options in the calendar component to restrict the calendar view navigation (month picker or year picker)."
----
-
 # Calendar Views
 
 A Calendar has the following predefined views

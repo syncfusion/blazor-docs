@@ -1,9 +1,3 @@
----
-title: "Bubble HeatMap"
-component: "Heatmap"
-description: "This section describes about the bubble heatmap, its types and its key features"
----
-
 # Bubble heat map
 
 Data points represent the data source values with `Gradient` or `Fixed` colors in the heat map.

@@ -1,8 +1,4 @@
----
-title: "Horizontal Card"
-component: "Card"
-description: "This section explains how to align the Essential JS 2 cards vertically and differentiate from horizontal layout."
----
+------
 <!-- markdownlint-disable MD036 -->
 
 # Horizontal Card

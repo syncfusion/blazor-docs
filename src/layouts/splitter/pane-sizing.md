@@ -1,9 +1,3 @@
----
-title: "Blazor Splitter | Fixed and auto-size split panes"
-component: "Splitter"
-description: "This section explains how to prevent resize and make static splitter and auto-size panes based on the content using Blazor Splitter."
----
-
 # Pane Sizing
 
 Splitter allows you to provide pane sizes either in `Pixel` or `Percentage` formats.

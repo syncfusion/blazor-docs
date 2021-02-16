@@ -1,9 +1,3 @@
----
-title: "Tooltip Template"
-component: "Tooltip"
-description: "Tooltip control's template can be assigned with static text or content."
----
-
 # Tooltip template
 
 Tooltip Template property can be used to customize the tooltip layout or to add any custom elements within the tooltip. You can add any content or HTML elements as tooltip content by specifying them in the `<content>` tag of the tooltip templates.

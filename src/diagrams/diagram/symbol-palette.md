@@ -1,9 +1,3 @@
----
-title: "Symbol Palette"
-component: "Diagram"
-description: "The symbol palette displays a collection of palettes which shows a set of nodes and connectors."
----
-
 # Symbol Palette
 
 The **SymbolPalette** displays a collection of palettes. The palette shows a set of nodes and connectors. It allows to drag and drop the nodes and connectors into the diagram.

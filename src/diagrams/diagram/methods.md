@@ -1,9 +1,3 @@
----
-title: "Methods"
-component: "Diagram"
-description: "Public methods in the diagram"
----
-
 # Methods
 
 The following methods are used to perform the diagram functionalities.

@@ -1,9 +1,3 @@
----
-title: "Animations"
-component: "Tabs"
-description: "This example demonstrates how to set custom animation for both previous and next actions on Blazor Tabs component when the tab select."
----
-
 # Animations
 
 The Tabs component supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The animation property also allows you to set `Easing`, `Duration` and various other effects.

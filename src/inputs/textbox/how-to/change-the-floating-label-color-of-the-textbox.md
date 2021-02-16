@@ -1,9 +1,3 @@
----
-title: "Change the floating label color of the TextBox"
-component: "Textbox"
-description: "Explains how to change floating label color of the text box for both success and warning validation states."
----
-
 # Change the floating label color of the TextBox
 
 You can change the floating label color of the TextBox for both `success` and `warning` validation states by applying the following CSS styles.

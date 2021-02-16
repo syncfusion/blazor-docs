@@ -1,9 +1,3 @@
----
-title: "Icons and Submenu Items"
-component: "Menu Bar"
-description: "This section helps you to learn how to create the icons and Submenu Bar items in Menu Bar in Blazor application in step-by-step procedure."
----
-
 # Icons and Sub Menu items
 
 ## Icons

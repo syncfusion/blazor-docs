@@ -1,9 +1,3 @@
----
-title: "Other month dates"
-component: "Calendar"
-description: "Explains how to show other month dates in the calendar component."
----
-
 # Show Dates of Other Months
 
 The following code demonstrates how to show dates of other months.

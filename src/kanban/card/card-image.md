@@ -1,9 +1,3 @@
----
-title: "Images and Divider"
-component: "Card"
-description: "This section explains how to create the Essential JS 2 Card component with different images, title, and divider."
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Images and Divider

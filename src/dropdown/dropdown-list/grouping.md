@@ -1,9 +1,3 @@
----
-title: "Drop-down list Grouping"
-component: "DropDownList"
-description: "This section for Syncfusion ASP.NET drop-down list control demonstrates the grouping with individual header and it's header customization."
----
-
 # Grouping
 
 The DropDownList supports wrapping nested elements into a group based on different categories. The category

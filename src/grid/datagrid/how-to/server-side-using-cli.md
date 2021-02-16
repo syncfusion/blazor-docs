@@ -1,14 +1,8 @@
----
-title: "Getting Started"
-component: "DataGrid"
-description: "Learn how to create an Blazor Data Grid component and enable features like paging, filtering, sorting, and grouping in Blazor Server side app using .NET Core CLI."
----
-
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Data Grid in Blazor Server Side App using .NET Core CLI
+# Getting started with Syncfusion Blazor - Server App in .NET Core CLI
 
-This article provides a step-by-step instructions to configure Syncfusion Blazor Data Grid in Blazor Server side application using [`.NET Core CLI`](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor Server application using the [`.NET Core CLI`](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
 > **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [`help topic`](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
@@ -16,7 +10,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 * [`.NET Core SDK 3.1.3`](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-## Create a Blazor Server side project using .NET Core CLI
+## Create a Blazor Server project using .NET Core CLI
 
 1. Run the following command line to create a new Blazor Server application.
 
@@ -272,8 +266,8 @@ Output be like the below.
 
 ## See Also
 
-* [Getting Started with Syncfusion DataGrid in Blazor Server-Side using Visual Studio 2019](../getting-started)
+* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started)
 
-* [Getting started with Syncfusion Data Grid in Blazor WebAssembly App using .NET Core CLI](./blazor-webassembly-data-grid-using-cli)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](./client-side-using-cli)
 
-* [Getting Started with Syncfusion DataGrid in Blazor WebAssembly using Visual Studio 2019](./blazor-webassembly-datagrid-using-visual-studio)
+* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](./client-side-using-visual-studio)

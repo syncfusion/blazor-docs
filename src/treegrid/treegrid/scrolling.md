@@ -1,9 +1,3 @@
----
-title: "Scrolling"
-component: "Tree Grid"
-description: "Learn how to set width and height for Tree Grid content, display a scrollbar and make the Tree Grid responsive with a parent container."
----
-
 # Scrolling
 
 The scrollbar will be displayed in the tree grid when content exceeds the element [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Width.html) or [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Height.html). The vertical and horizontal scrollbars will be displayed based on the following criteria:

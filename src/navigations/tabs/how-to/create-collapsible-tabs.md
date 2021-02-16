@@ -1,9 +1,3 @@
----
-title: "Create collapsible Tabs"
-component: "Tab"
-description: "This example demonstrates how to create tabs in a collapsible state when they are initially rendered in the ASP.NET Core Razor Tab component."
----
-
 # Create collapsible Tabs
 
 You can achieve collapse and expand functionality in Tab by adding/removing a custom CSS class in the click event handler for each tab.

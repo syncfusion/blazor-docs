@@ -1,9 +1,3 @@
----
-title: "Globalization and Localization in Blazor Scheduler"
-component: "Scheduler"
-description: "This section explains how the Scheduler adapts to various languages and culture by parsing and formatting the date or number appropriately."
----
-
 # Globalization and Localization
 
 The Scheduler integrates different date-time formats and cultures, which allows it to function globally, thus meeting the diverse needs of different regions.

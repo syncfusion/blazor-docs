@@ -1,9 +1,3 @@
----
-title: "Node's Port"
-component: "Diagram"
-description: "How to position the port in node"
----
-
 # How to position node’s port
 
 Diagram allows you to customize the position and appearance of the port efficiently.

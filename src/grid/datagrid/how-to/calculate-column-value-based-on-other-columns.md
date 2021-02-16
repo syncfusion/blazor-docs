@@ -1,9 +1,3 @@
----
-title: "Calculate column value based on other column values"
-component: "DataGrid"
-description: "Learn how to calculate column value based on other column values in the Blazor DataGrid component"
----
-
 # Calculate column value based on other column values
 
 You can calculate the values for a datagrid column based on other column values by using the **context** parameter in the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. Inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template), you can access the column values using the implicit named parameter **context** and then calculate the values for the new column as required.

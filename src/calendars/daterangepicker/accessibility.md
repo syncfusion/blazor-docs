@@ -1,9 +1,3 @@
----
-title: "Accessibility"
-component: "DateRangePicker"
-description: "Explain the web accessibility support that helps to access all the features using keyboard, on-screen readers, or other assertive technology devices."
----
-
 # Accessibility
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.

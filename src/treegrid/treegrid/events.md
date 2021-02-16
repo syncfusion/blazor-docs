@@ -1,9 +1,3 @@
----
-title: "Events"
-component: "TreeGrid"
-description: "Learn how to use events in Blazor Tree Grid component."
----
-
 # Events
 
 In this section, we have provided the list of events of the Tree Grid component which will be

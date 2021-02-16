@@ -1,9 +1,3 @@
----
-title: "Tool Bar"
-component: "Gantt Chart"
-description: "Learn how to use the toolbar and add custom toolbar items in the Blazor Gantt Chart component"
----
-
 # Toolbar
 
 The Gantt Chart component provides the toolbar support to handle Gantt Chart actions. The `Toolbar` property accepts the collection of built-in toolbar items and `ItemModel` objects for custom toolbar items.

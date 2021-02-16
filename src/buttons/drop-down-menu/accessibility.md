@@ -1,9 +1,3 @@
----
-title: "Dropdown Menu Accessibility"
-component: "Dropdown Menu"
-description: "Dropdown Menu control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
----
-
 # Accessibility
 
 ## ARIA attributes

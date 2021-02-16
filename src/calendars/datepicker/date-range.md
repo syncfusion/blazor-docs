@@ -1,9 +1,3 @@
----
-title: "Choose a date in range"
-component: "DatePicker"
-description: "Explains how to specify min and max date options in the date picker component to restrict the users from selecting a value out of given min/max date range."
----
-
 # Date Range
 
 The DatePicker provides an option to select a date value within a specified range by using the

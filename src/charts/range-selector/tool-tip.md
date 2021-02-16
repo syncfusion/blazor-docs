@@ -1,11 +1,3 @@
----
-title: " RangeNavigator Tooltip | ASP.NET Core Blazor "
-
-component: "RangeNavigator"
-
-description: "The range navigator supports tooltips for sliders.Tooltips  display the selected start and end values."
----
-
 # Tooltip
 
 <!-- markdownlint-disable MD036 -->

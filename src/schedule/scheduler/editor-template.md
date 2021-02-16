@@ -1,9 +1,3 @@
----
-title: "Editor Window and Quick Popup of Blazor Scheduler"
-component: "Scheduler"
-description: "This topic demonstrates how to customize the default event editor and quick pop-up using templates and also explains how to design the custom modal popup."
----
-
 # Editor window and quick popups
 
 Scheduler makes use of popups and dialog to display the required notifications, as well as includes an editor window with event fields for making the appointment creation and editing process easier. You can also easily customize the editor window and the fields present in it, and can also apply validations on those fields.

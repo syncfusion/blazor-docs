@@ -1,9 +1,3 @@
----
-title: "Chunk Upload"
-component: "Uploader"
-description: "Explains how to manage large file upload that slice large files as chunks and upload it to a server in an asynchronous mode."
----
-
 # Chunk Upload
 
 The Uploader sends the large file split into small chunks and transmits to the server using AJAX. You can also pause, resume, and retry the failed chunk file.

@@ -1,9 +1,3 @@
----
-title: "Add Toggle Button"
-component: "Toolbar"
-description: "This example demonstrates how to add the Blazor Toggle Button into Blazor Toolbar items."
----
-
 # Add Toggle Button
 
 Toolbar supports to add a toggle Button by using the `Template` property. Refer below steps

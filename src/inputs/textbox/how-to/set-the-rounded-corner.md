@@ -1,9 +1,3 @@
----
-title: "Set the rounded corner"
-component: "Textbox"
-description: "Explains how to render the text box component with a rounded corner."
----
-
 # Set the rounded corner
 
 Render the TextBox with `rounded corner` by adding the `e-corner` class to the input parent element.

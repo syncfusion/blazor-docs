@@ -1,9 +1,3 @@
----
-title: "Excel Export"
-component: "Tree Grid"
-description: "Documentation on exporting DataGrid content to Excel and customizing the exported document with multi-export, headers and footers, and file name changes in the Blazor Data Tree Grid Component."
----
-
 # Excel export
 
 The excel export allows exporting Tree Grid data to Excel document. You need to use the

@@ -1,9 +1,3 @@
----
-title: "Change caret icon"
-component: "Dropdown Menu"
-description: "Dropdown Menu how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
----
-
 # Change caret icon
 
 Dropdown arrow can be customized on popup open and close. It can be handled in

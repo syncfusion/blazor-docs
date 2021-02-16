@@ -1,9 +1,3 @@
----
-title: "Events"
-component: "Range Navigator"
-description: "Learn how to use events in Blazor Range Navigator component."
----
-
 # Events
 
 In this section, we have provided the list of events of Range Navigator component which will be

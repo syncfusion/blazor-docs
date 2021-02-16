@@ -1,9 +1,3 @@
----
-title: "How-To"
-component: "Gantt Chart"
-description: "Learn how to dynamically open the Add and Edit Dialog's in Gantt Chart component."
----
-
 # Open Add Edit Dialog Dynamically
 
 Gantt Chart add and edit dialogs can be opened dynamically by using `OpenAddDialog` and `OpenEditDialog` methods. The following code example shows how to open add and edit dialog on separate button click actions.

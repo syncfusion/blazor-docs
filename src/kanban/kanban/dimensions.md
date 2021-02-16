@@ -1,9 +1,3 @@
----
-title: "Height and Width of Kanban"
-component: "Kanban"
-description: "This article demonstrates how to set the height and width of Kanban in pixels, percentage or auto values."
----
-
 # Kanban dimensions
 
 The Kanban dimensions refers to both height and width of the entire layout and it accepts three types of values.

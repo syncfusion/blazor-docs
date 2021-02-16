@@ -1,11 +1,3 @@
----
-title: "  Stock Chart Axis Types  | ASP.NET Core Blazor "
-
-component: "Stock Chart"
-
-description: "Date time axis uses date time scale and displays the date time values as axis labels in the specified format"
----
-
 # DateTime and Logarithmic Axis
 
 ## DateTime Axis

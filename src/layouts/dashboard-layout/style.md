@@ -1,9 +1,3 @@
----
-title: "Dashboard Layout Style"
-component: "Dashboard Layout"
-description: "This section explains the details of the CSS structures in the Blazor Modal Dashboard Layout."
----
-
 # CSS structures
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.

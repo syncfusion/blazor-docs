@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | Image handling with upload"
-component: "Rich Text Editor"
-description: "This section explains how to handle images in the Blazor Rich Text Editor with upload image from local and server, the image resizes, an image with a link, and more."
----
-
 # Image
 
 Rich Text Editor allows inserting images from online sources and local computer where you want to insert the image in your content. For inserting the image to the Rich Text Editor, the following list of options have been provided in the `RichTextEditorImageSettings`.

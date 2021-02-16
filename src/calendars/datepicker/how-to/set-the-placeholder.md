@@ -1,9 +1,3 @@
----
-title: "Placeholder"
-component: "DatePicker"
-description: "Explains how to set placeholder in the date picker component to provide a hint to the users on how to fill the input field."
----
-
 # Set the Placeholder
 
 The following example demonstrates how to set `Placeholder` in the DatePicker component.

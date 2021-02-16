@@ -1,9 +1,3 @@
----
-title: "Columns"
-component: "DataGrid"
-description: "Documentation on column reordering, resizing, header templates (custom header content), and column templates (custom cell content) in the Blazor DataGrid."
----
-
 # Columns
 
 The column definitions are used as the **DataSource** schema in the DataGrid. This plays a vital role in rendering column values in the required format.

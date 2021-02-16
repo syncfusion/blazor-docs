@@ -1,10 +1,4 @@
----
-title: "Style and Appearance "
-component: "Pivot Table"
-description: "CSS Customization for Pivot Table."
----
-
-# Style and Appearance
+# CSS Customization
 
 ## Hiding Axis
 

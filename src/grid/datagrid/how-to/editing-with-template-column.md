@@ -1,9 +1,3 @@
----
-title: "Editing with template column"
-component: "DataGrid"
-description: "Learn how to perform editing with a template column."
----
-
 # Editing with template column
 
 You can edit a template column value by defining the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property for that particular [`GridColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component

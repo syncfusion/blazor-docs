@@ -1,9 +1,3 @@
----
-title: "How-To"
-component: "Gantt Chart"
-description: "Learn how to update vertical scroll position in Gantt Chart."
----
-
 # Set vertical scroll position
 
 In the Gantt Chart component, you can set the vertical scroller position dynamically by clicking the custom button using the `SetScrollTop` method.

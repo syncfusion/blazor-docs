@@ -1,9 +1,3 @@
----
-title: "Data-Binding"
-component: "TextBox"
-description: "Explains how to bind the value to the text box component in different ways such as one-way, two-way, and dynamic value binding."
----
-
 # Data Binding
 
 This section briefly explains how to bind the value to the TextBox component in the following different ways.

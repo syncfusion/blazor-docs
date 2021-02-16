@@ -1,9 +1,3 @@
----
-title: "Render textbox component dynamically"
-component: "Textbox"
-description: "Explains how to render the TextBox Component in the dynamic manner."
----
-
 # Create TextBox component dynamically
 
 You can render the TextBox component at runtime in the following ways:

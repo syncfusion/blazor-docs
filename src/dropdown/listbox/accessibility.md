@@ -1,8 +1,4 @@
----
-title: "ListBox Accessibility"
-component: "ListBox"
-description: "ListBox component has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
----
+------
 # Accessibility
 
 ## ARIA Attributes

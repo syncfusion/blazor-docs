@@ -1,9 +1,3 @@
----
-title: "Timeline header rows in Blazor Scheduler"
-component: "Scheduler"
-description: "This section explains how to display the additional header rows on timeline view of Scheduler."
----
-
 # Timeline header rows
 
 The Timeline views can have additional header rows other than its default date and time header rows. It is possible to show individual header rows for displaying year, month and week separately using the `ScheduleHeaderRow` which is applicable only on the timeline views. The possible rows which can be added using `ScheduleHeaderRow` are as follows.

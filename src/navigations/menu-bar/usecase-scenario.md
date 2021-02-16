@@ -1,9 +1,3 @@
----
-title: "Scrollable Menu Bar"
-component: "Menu Bar"
-description: "This section helps to learn how to Scrollable Menu Bar."
----
-
 # Use Case Scenario
 
 ## Scrollable Menu Bar

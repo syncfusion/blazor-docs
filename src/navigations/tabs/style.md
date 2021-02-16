@@ -1,9 +1,3 @@
----
-title: "Syncfusion Blazor Tab CSS Structure"
-component: "Tabs"
-description: "Learn about customizing Blazor Tab control."
----
-
 # CSS Structure
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.

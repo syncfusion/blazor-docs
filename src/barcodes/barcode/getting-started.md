@@ -22,7 +22,7 @@ This section briefly explains about how to include a BarcodeGenerator in your Bl
 ```html
 <head>
     <environment include="Development">
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
         <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
     </environment>
 </head>

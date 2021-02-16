@@ -1,12 +1,12 @@
 ---
-title: "Getting Started"
+title: "Blazor WebAssembly DataGrid Using Visual Studio – Syncfusion"
 component: "DataGrid"
-description: "Learn how to add a Blazor DataGrid component and enable features like paging, filtering, sorting, and grouping in Blazor WebAssembly project using Visual Studio."
+description: "Learn how to get started with the Syncfusion Blazor WebAssembly DataGrid using Visual Studio, in detail."
 ---
 
  <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion DataGrid in Blazor WebAssembly App using Visual Studio 2019
+# Getting Started with Blazor WebAssembly DataGrid Using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor DataGrid in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 

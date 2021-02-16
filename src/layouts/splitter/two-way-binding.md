@@ -1,9 +1,3 @@
----
-title: "Blazor Splitter | Two way Binding"
-component: "Splitter"
-description: "This section explains how to achieve two-way binding to collapsed property of Blazor Splitter that helps to collapese or expand the spiltter pane dynamically."
----
-
 # Two way Binding
 
 The splitter `PaneSettings` `Collapsed` property supports the two-way binding and it can be achieved by using the `bind-Collapsed` attribute. If the component value has been changed, it will affect all the places where we bind the variable for the bind-value attribute.

@@ -1,9 +1,3 @@
----
-title: "Swimlane"
-component: "Diagram"
-description: "Nodes visually represents the geometrical information and process flows."
----
-
 # Swimlane
 
 Swimlane is a type of diagram nodes, which is typically used to visualize the relationship between a business process and the department responsible for it by focusing on the logical relationships between activities.

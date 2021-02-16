@@ -1,9 +1,3 @@
----
-title: "Filtering"
-component: "DataGrid"
-description: "Learn how to filter rows in the DataGrid using the filter bar, menu, and Excel-like filtering."
----
-
 # Filtering
 
 Filtering allows you to view particular records based on filter criteria. To enable filtering in the DataGrid, set the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) to true. Filtering options can be configured through [`GridFilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component.

@@ -1,9 +1,3 @@
----
-title: "Toggle Switch Button Accessibility"
-component: "Toggle Switch Button"
-description: "Toggle Switch Button control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
----
-
 # Accessibility
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.

@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "DateRangePicker"
-description: "Explains how to get started with the date range picker component with its key features such as restrict the date range selection, validation, strict mode, etc."
----
-
 # Getting Started
 
 This section briefly explains how to include a **DateRangePicker** Component in your Blazor client-side application. You can refer [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
@@ -116,5 +110,5 @@ The output will be as follows.
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/dotnet-cli-blazor/)
-* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019](../getting-started/vs-blazor-server/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/dotnet-cli-blazor-server/)

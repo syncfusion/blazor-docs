@@ -1,9 +1,3 @@
----
-title: "Selection"
-component: "DataGrid"
-description: "Learn how to select rows and cells, use range selection and check box selection in the Blazor DataGrid."
----
-
 # Selection
 
 Selection provides an option to highlight a row or a cell. It can be done through simple mouse down or arrow keys. To disable selection in the DataGrid, set the [`AllowSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSelection) property to false.

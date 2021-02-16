@@ -1,11 +1,3 @@
----
-title: " RangeNavigator Data | ASP.NET Core Blazor "
-
-component: "RangeNavigator"
-
-description: "Range navigator supports double, datetime and logarithmic data values for rendering.Also supports labels and range Customization."
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Types of data

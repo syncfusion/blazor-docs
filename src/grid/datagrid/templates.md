@@ -1,9 +1,3 @@
----
-title: "Templates"
-component: "DataGrid"
-description: "Learn the various templates in Blazor DataGrid component and how to use templates to customize the DataGrid view."
----
-
 # Templates
 
 Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. DataGrid is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allow you to render custom components or content based on your own logic.

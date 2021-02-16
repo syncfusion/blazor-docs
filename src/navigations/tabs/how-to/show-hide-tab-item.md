@@ -1,9 +1,3 @@
----
-title: "How to show/hide tab items"
-component: "Tabs"
-description: "This example demonstrates how to show/hide the specific tab item in the Blazor Tabs component."
----
-
 # Show/Hide Tab Items
 
 The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_Visible) property of the Tab item is used to show/hide the item by setting true/false value to the property. In the following demo, specified tab item are Show/Hide dynamically when you click **Show/Hide Item** button.

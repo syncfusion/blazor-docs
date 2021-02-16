@@ -1,9 +1,3 @@
----
-title: "Events"
-component: "DataGrid"
-description: "Learn how to use events in Blazor DataGrid component."
----
-
 # Events
 
 In this section, we have provided the list of events of the datagrid component which will be

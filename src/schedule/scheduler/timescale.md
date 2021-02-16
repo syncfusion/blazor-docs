@@ -1,9 +1,3 @@
----
-title: "Timescale Customization | Blazor Scheduler"
-component: "Scheduler"
-description: "This section demonstrates how to set different time slot duration on Scheduler and also to customize the major and minor time slots using templates."
----
-
 # TimeScale Customization
 
 The time slots are usually the time cells that are displayed on the Day, Week and Work Week views of both the calendar (to the left most position) and timeline views (at the top position). The `ScheduleTimeScale` allows you to control and set the required time slot duration for the work cells displayed on Scheduler. It includes the following sub-options such as,

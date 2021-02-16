@@ -1,8 +1,4 @@
----
-title: "Toolbar"
-component: "DataGrid"
-description: "Learn how to use the toolbar and add custom toolbar items in the Blazor DataGrid Component."
----
+------
 # Toolbar
 
 The DataGrid provides tool bar support to handle datagrid actions. The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar)

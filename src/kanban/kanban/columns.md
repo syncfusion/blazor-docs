@@ -1,9 +1,3 @@
----
-title: "Columns in Kanban board"
-component: "Kanban"
-description: "This section explains how to create a columns in Kanban board with header template, toggle columns and validation."
----
-
 # Columns in Kanban Board
 
 The **Kanban** columns represent the each stage of the process. The column definitions are used as the **DataSource** schema in the Kanban. The Kanban operations such as drag-and-drop, swimlane, and toggle columns are performed based on column definitions.

@@ -1,9 +1,3 @@
----
-title: "Clipboard"
-component: "DataGrid"
-description: "Learn how to use the copy to clipboard functionality in the Blazor Data DataGrid Component."
----
-
 # Clipboard
 
 The clipboard provides an option to copy selected rows or cells data into the clipboard.

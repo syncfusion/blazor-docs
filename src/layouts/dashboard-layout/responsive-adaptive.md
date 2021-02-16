@@ -1,9 +1,3 @@
----
-title: Responsive Dashboard"
-component: "Dashboard Layout"
-description: "This section explains about responsiveness and adaptivity of Blazor Dashboard Layout component"
----
-
 # Responsive and adaptive layout
 
 The control is provided with built-in responsive support, where panels within the layout get adjusted based on their parent element's dimensions to accommodate any resolution, which relieves the burden of building responsive dashboards.

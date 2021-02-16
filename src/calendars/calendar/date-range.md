@@ -1,9 +1,3 @@
----
-title: "Date Range"
-component: "Calendar"
-description: "Explains how to specify the minimum and maximum date options in the calendar to restrict the users from selecting a value out of given min/max date range."
----
-
 # Date Range
 
 A calendar provides an option to select a date value within a specified range by defining the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) properties. The Min date should always be lesser than the Max date.

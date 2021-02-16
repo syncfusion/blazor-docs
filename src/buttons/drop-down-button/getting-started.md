@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "DropDownButton"
-description: "This section helps to learn how to create the DropDownButton in ASP.NET Core Razor application with its basic features in step-by-step procedure."
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Essential JS 2 for ASP.NET Core Razor DropDownButton Component in Visual Studio 2019

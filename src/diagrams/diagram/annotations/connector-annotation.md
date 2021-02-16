@@ -1,9 +1,3 @@
----
-title: "Connector's Label"
-component: "Diagram"
-description: "How to position the lable for connector"
----
-
 # How to position connector’s annotation
 
 Annotations of a connector can be positioned using the following properties of AnnotationEditorViewModel class.

@@ -1,9 +1,3 @@
----
-title: "Editing"
-component: "Pivot Table"
-description: "Editing allows to perform CRUD operation in the raw items of any cells of the pivot table."
----
-
 # Editing
 
 > This feature is applicable only for relational data source.

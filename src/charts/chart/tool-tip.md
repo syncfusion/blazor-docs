@@ -1,11 +1,3 @@
----
-title: " Chart Tooltip | ASP.NET Core Blazor "
-
-component: "Chart"
-
-description: "Tooltip is used to show the data value when mouse hover on the chart.We can able to customize format,template and appearance."
----
-
 # Tooltip
 
 <!-- markdownlint-disable MD036 -->

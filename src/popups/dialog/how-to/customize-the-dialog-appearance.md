@@ -1,9 +1,3 @@
----
-title: "Blazor Modal Dialog | Customize the appearance"
-component: "Dialog"
-description: "This section explains how to customize the content of Blazor Modal Dialog as error window using the content property."
----
-
 # Customize the dialog appearance
 
 You can customize the dialog appearance by providing dialog template as string or HTML element to the `Content` template property. In the following code block, dialog is customized as error window appearance.

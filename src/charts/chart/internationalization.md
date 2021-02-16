@@ -1,11 +1,3 @@
----
-title: " Chart Internationalization | ASP.NET Core Blazor "
-
-component: "Chart"
-
-description: "Chart provides the support for internationalization for dataLabel, axis label and tooltip elements."
----
-
 # Internationalization
 
 Chart provide supports for internationalization for below chart elements.

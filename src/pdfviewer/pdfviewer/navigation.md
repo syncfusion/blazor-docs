@@ -1,9 +1,3 @@
----
-title: "Navigation in PDF Viewer in Blazor server-side"
-component: "PDF Viewer"
-description: "Learn about the available options of page navigations in PDF Viewer"
----
-
 # Navigation
 
 You can navigate between pages in Syncfusion PDF Viewer in the following ways:

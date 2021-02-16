@@ -1,9 +1,3 @@
----
-title: "Add and Remove Items"
-component: "Split Button"
-description: "Split Button how to section, Add and Remove items in Split Button Componenet."
----
-
 # Add and Remove Items
 
 Split Button component can be dynamically add or remove items using  `AddItems`, `RemoveItems` method.

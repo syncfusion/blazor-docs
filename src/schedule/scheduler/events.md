@@ -1,9 +1,3 @@
----
-title: "Events available in Blazor Scheduler"
-component: "Scheduler"
-description: "In this topic, the list of events and their usage with code example for Blazor Scheduler Component has been provided."
----
-
 # Events
 
 In this section, we have provided the list of events of the Scheduler component which will be

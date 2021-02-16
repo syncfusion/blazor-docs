@@ -1,9 +1,3 @@
----
-title: "Customize Radio Button Appearance"
-component: "Radio Button"
-description: "Radio Button how to section, name and value in form submit, customize Radio Button appearance."
----
-
 # Customize Radio Button Appearance
 
 You can customize the appearance of the Radio Button component by using the CSS rules.

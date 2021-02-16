@@ -1,9 +1,3 @@
----
-title: 'ListView Checklist'
-component: 'ListView'
-description: 'Listview supports check-list (list-view with checkbox) feature to select single or multiple list items.'
----
-
 # Checklist
 
 The ListView supports checkbox in default and group-lists which is used to select multiple items.

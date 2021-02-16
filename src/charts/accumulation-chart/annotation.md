@@ -1,11 +1,3 @@
----
-title: " Accumulation Chart Annotation | ASP.NET Core Blazor "
-
-component: "Accumulation Chart"
-
-description: "The annotations are used to mark the specific area of interest in the chart area with texts, shapes or images."
----
-
 # Annotation
 
 The annotations are used to mark the specific area of interest in the chart  with texts, shapes or images. By using the `content` option of annotation property, you can specify the Id of the HTML element that needs to be displayed in the chart.

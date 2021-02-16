@@ -1,9 +1,3 @@
----
-title: "Name and Value in form submit"
-component: "RadioButton"
-description: "RadioButton how to section, name and value in form submit, customize RadioButton appearance."
----
-
 # Name and Value in form submit
 
 The name attribute of the RadioButton is used to group RadioButton. When the RadioButton are grouped in form, the checked items value attribute

@@ -1,9 +1,3 @@
----
-title: "Customize Menu Bar Using Events"
-component: "Menu Bar"
-description: "This section helps to learn how to Customize Menu Bar Using Events."
----
-
 # Customize Menu Bar Using Events
 
 The Menu Bar provides a set of events to enable users to customize it.

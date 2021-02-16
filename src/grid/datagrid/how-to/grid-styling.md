@@ -1,9 +1,3 @@
----
-title: "Styling and appearance"
-component: "Grid"
-description: "Learn how to change default styling of the grid."
----
-
 # Styling
 
 To modify the Grid appearance, you need to override the default CSS of grid. Please find the list of CSS classes and its corresponding section in grid. Also, you have an option to create your own custom theme for all the Syncfusion Blazor components using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).

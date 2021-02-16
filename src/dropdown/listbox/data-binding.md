@@ -1,9 +1,3 @@
----
-title: "ListBox data binding and initialization through HTML tags"
-component: "ListBox"
-description: "ListBox supports databinding with local data source, and remote data source"
----
-
 # Data Binding
 
 The ListBox loads the data from local data sources using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.

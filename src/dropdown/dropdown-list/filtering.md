@@ -1,9 +1,3 @@
----
-title: "Drop-down list Filtering"
-component: "DropDownList"
-description: "This section explains the built-in filtering support with a rich set of filtering configurations in Syncfusion ASP.NET drop-down list control."
----
-
 # Filtering
 
 The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter

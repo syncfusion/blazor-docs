@@ -1,9 +1,3 @@
----
-title: "Blazor Modal Dialog | Render popup without header"
-component: "Dialog"
-description: "This section explains how to render a simple popup using the Blazor Modal Dialog by hiding its header (without header)."
----
-
 # Render a dialog header dynamically
 
 By default, the dialog is rendered without header. You can update its header dynamically using the `Header` property.

@@ -1,9 +1,3 @@
----
-title: "Adding items to the listbox"
-component: "ListBox"
-description: "ListBox component supports adding of items to the listbox."
----
-
 # Add items to the listbox
 
 To add an item or multiple items, `AddItem` method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be added while clicking `Add Items` button.

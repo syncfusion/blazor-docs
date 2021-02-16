@@ -1,9 +1,3 @@
----
-title: "Aggregation"
-component: "Pivot Table"
-description: "Aggregation allows user to summarize the measure values."
----
-
 # Aggregation
 
 > This feature is applicable only for relational data source.

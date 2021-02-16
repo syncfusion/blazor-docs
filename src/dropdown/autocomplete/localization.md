@@ -1,9 +1,3 @@
----
-title: "Autocomplete Localization"
-component: "AutoComplete"
-description: "This section explains the Localization support of Syncfusion ASP.NET autocomplete control."
----
-
 # Localization
 
 ## Blazor server side

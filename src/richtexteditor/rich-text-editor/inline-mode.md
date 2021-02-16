@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | inline editor with customization"
-component: "Rich Text Editor"
-description: "This section explains how to create an inline editor using the Blazor Rich Text Editor that helps to display the editor on demand (dynamically)."
----
-
 # Inline Mode
 
 This is the inline example for the Rich Text Editor. For this, you must set the `RichTextEditorInlineMode` property.

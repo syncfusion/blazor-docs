@@ -1,9 +1,3 @@
----
-title: "Rich Text Editor How To capture ctrl+s"
-component: "Rich Text Editor"
-description: "This section for Syncfusion Blazor Rich Text Editor component explains how to capture the ctrl+s to update the value."
----
-
 # Capture ctrl+s to update the value
 
 To achieve this, we need to bind the `keydown` event to the Rich Text Editor content and capture the `ctrl + s` key press using its `keyCode`.

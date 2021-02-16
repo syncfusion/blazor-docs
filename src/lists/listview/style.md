@@ -1,9 +1,3 @@
----
-title: "CSS Structure"
-component: "ListView"
-description: "This section explains the details of the CSS structures in the ListView component."
----
-
 # CSS Structure
 
 The following content provides the exact CSS structure that can be used to modify the component’s appearance based on  user preference.

@@ -1,9 +1,3 @@
----
-title: "Blazor Toast Notification | Static Toast and Timeout"
-component: "Toast"
-description: "This section explains how to create static toast notification and how to use the timeout functionalities using Blazor Toast component."
----
-
 # Time out
 
 The toast can be expired based on the `Timeout` property. The toast can live till the time out reaches without user interaction, a time out value is considered as a millisecond.

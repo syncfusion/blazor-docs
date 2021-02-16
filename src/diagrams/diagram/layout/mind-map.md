@@ -1,9 +1,3 @@
----
-title: "Mind map Layout"
-component: "Diagram"
-description: "A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept."
----
-
 # Mind map Layout
 
 A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) of layout should be set as `MindMap`.

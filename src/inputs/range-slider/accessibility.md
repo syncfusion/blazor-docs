@@ -1,9 +1,3 @@
----
-title: "Slider Accessibility"
-component: "Slider"
-description: "Slider control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
----
-
 # Accessibility
 
 The Slider is characterized with complete ARIA Accessibility support that helps to access by on-screen readers and other assistive technology devices. This control is designed with the reference of guidelines document given in the [WAI ARAI Accessibility Practices](https://www.w3.org/TR/wai-aria-practices/#slider).

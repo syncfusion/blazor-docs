@@ -1,9 +1,3 @@
----
-title: "Blazor Modal Dialog | Custom positioning"
-component: "Dialog"
-description: "This section explains how to position the Blazor Modal Dialog with different built-in and custom positioning using X, Y coordinates."
----
-
 # Display a dialog with custom position
 
 By default, the dialog is displayed in the center of the target container. The dialog position can be set using the `DialogPositionData` property by providing custom `X` and `Y` coordinates.

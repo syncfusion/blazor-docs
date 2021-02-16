@@ -1,9 +1,3 @@
----
-title: "DropDownButton Accessibility"
-component: "DropDownButton"
-description: "DropDownButton control has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
----
-
 # Accessibility
 
 ## ARIA attributes

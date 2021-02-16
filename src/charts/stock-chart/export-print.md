@@ -1,11 +1,3 @@
----
-title: "Stock Chart Print and Export | ASP.NET Core Blazor "
-
-component: "Stock Chart"
-
-description: "The rendered stock chart can be printed or exported directly using print and export button in period selector."
----
-
 # Print and Export
 
 The rendered stock chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the export dropdown button in the period selector toolbar. You can choose the required format using the export dropdown button in stock-chart.

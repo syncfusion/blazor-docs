@@ -1,9 +1,3 @@
----
-title: "Getting Started with Blazor ListBox Component"
-component: "ListBox"
-description: "This section helps to learn how to create the ListBox in Blazor application with its basic features in step-by-step procedure."
----
-
 # Getting Started with Blazor ListBox Component
 
 This section briefly explains about how to include ListBox Component in your Blazor server-side  application.

@@ -1,9 +1,3 @@
----
-title: "Positioning and Panel Sizing"
-component: "Dashboard Layout"
-description: "This section explains about positioning and sizing of panels in Blazor Dashboard Layout component"
----
-
 # Panels
 
 Panels are the basic building blocks of the dashboard layout component. They act as a container for the data to be visualized or presented.

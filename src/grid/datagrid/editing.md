@@ -1,9 +1,3 @@
----
-title: "Editing"
-component: "DataGrid"
-description: "Learn how to perform CRUD operations in various edit modes, use different cell editors in the Blazor DataGrid component."
----
-
 # Editing
 
 The DataGrid component has options to dynamically insert, delete and update records.

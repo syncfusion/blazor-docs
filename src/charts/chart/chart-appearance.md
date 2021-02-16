@@ -1,11 +1,3 @@
----
-title: " Chart Appearance | ASP.NET Core Blazor "
-
-component: "Chart"
-
-description: "We can customize chart appearance by using color palette, point level customization, chart area cutomization, title and margin customizations."
----
-
 # Appearance
 
 ## Custom Color Palette

@@ -1,9 +1,3 @@
----
-title: "Blazor Resizable Splitter | CSS Structure"
-component: "Splitter"
-description: "This section explains about the details of the CSS structures in the Blazor Splitter component."
----
-
 # CSS structures
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
@@ -55,8 +49,7 @@ Use the following CSS to customize the split bar resize handle.
 }
 
 /* default split bar resize handle color in hover and active state */
-.e-splitter .e-split-bar.e-split-bar-horizontal.e-split-bar-hover .e-resize-handler,
-.e-splitter .e-split-bar.e-split-bar-horizontal.e-split-bar-active .e-resize-handler {
+.e-splitter .e-split-bar.e-split-bar-horizontal.e-split-bar-hover .e-resize-handler {
     color: green;
 }
 ```
@@ -70,8 +63,7 @@ Use the following CSS to customize the split bar resize handle.
 }
 
 /* default split bar resize handle color in hover and active state */
-.e-splitter .e-split-bar.e-split-bar-vertical.e-split-bar-hover .e-resize-handler,
-.e-splitter .e-split-bar.e-split-bar-vertical.e-split-bar-active .e-resize-handler {
+.e-splitter .e-split-bar.e-split-bar-vertical.e-split-bar-hover .e-resize-handler {
     color: green;
 }
 ```

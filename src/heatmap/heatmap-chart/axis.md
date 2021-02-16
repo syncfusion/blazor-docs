@@ -1,9 +1,3 @@
----
-title: "Axis"
-component: "Heatmap"
-description: "This section describes the axis types available in heatmap and other axis customizations available in heatmap like inversed axis, opposed axis and axis label formatting"
----
-
 # Axis
 
 Heat map consists of two axes namely, `X-axis` and `Y-axis` that displays the row headers and column headers to plot the data points respectively. You can define the type, format, and other customizing options for both axes in the heat map.

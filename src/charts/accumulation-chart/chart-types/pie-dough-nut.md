@@ -1,11 +1,3 @@
----
-title: "Pie and Doughnut | ASP.NET Core Blazor "
-
-component: "Accumulation Chart"
-
-description: "Pie and doughnut charts are used to presents the relationship of different parts of data and also known biggest data easily"
----
-
 # Pie & Doughnut
 
 ## Pie Chart

@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "DataGrid"
-description: "Learn how to create an Blazor DataGrid component and enable features like paging, filtering, sorting, and grouping in Blazor Client side using CLI."
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Essential JS 2 for Blazor client-side in .NET Core CLI

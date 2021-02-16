@@ -1,9 +1,3 @@
----
-title: "Accessibility"
-component: "Tree Grid"
-description: "Documentation on accessibility in the Blazor Tree Grid, featuring WAI-ARIA standards and keyboard navigation."
----
-
 # Accessibility
 
 Accessibility is achieved in the Tree Grid component through WAI-ARIA standard and keyboard navigations.  The Tree Grid features can be effectively accessed through assistive technologies such as screen readers.

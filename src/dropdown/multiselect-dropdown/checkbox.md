@@ -1,9 +1,3 @@
----
-title: "Multiselect Checkbox"
-component: "MultiSelect"
-description: "This sample for Syncfusion ASP.NET multiselect control demonstrates the built-in support to select the multiple values through checkbox."
----
-
 # CheckBox
 
 The MultiSelect has built-in support to select multiple values through checkbox,

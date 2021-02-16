@@ -1,9 +1,3 @@
----
-title: "Blazor Toast Notification | Template as a child content"
-component: "Toast"
-description: "This section explains how to customize the Blazor toast notification as needed using templated content."
----
-
 # Template
 
 Configure templates to display within a header, content, and footer section of Toast.

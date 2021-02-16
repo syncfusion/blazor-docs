@@ -1,9 +1,3 @@
----
-title: "Menu Bar Accessibility"
-component: "Menu Bar"
-description: "Menu Bar component has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
----
-
 # Accessibility
 
 ## ARIA attributes

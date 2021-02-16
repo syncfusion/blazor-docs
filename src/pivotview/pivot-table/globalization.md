@@ -1,9 +1,3 @@
----
-title: "Globalization"
-component: "Pivot Table"
-description: "Learn about how to globalize the pivot table and how to localize the culture related content."
----
-
 # Globalization
 
 Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.

@@ -1,9 +1,3 @@
----
-title: "Multiline"
-component: "Textbox"
-description: "Explains about multiple lines of text like address and feedback are allows to fill in the multiline textbox and it can be editable or can copy the text."
----
-
 # Multiline TextBox
 
 This feature allows the textbox to accept one or more lines of text like address, description, comments, and more.

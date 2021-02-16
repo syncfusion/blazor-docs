@@ -1,9 +1,3 @@
----
-title: "Trace Events of Progress Button"
-component: "Progress Button"
-description: "This Section shows the event trace of progress button"
----
-
 # Trace Events of Progress Button
 
 The Progress Button component triggers events based on its actions. The events can be used as extension points to perform custom operations.

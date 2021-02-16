@@ -1,9 +1,3 @@
----
-title: "Radio Button Label and Size"
-component: "Radio Button"
-description: "Radio Button control supports different sizes and label."
----
-
 # Label and Size
 
 This section explains the different sizes and labels.

@@ -1,9 +1,3 @@
----
-title: "Submit name and value in form"
-component: "Switch"
-description: "Switch how to section, customization of Switch bar and handle, change size, name and value in form submit."
----
-
 # Submit name and value in form
 
 The name attribute of the Switch is used to group Switches. When the Switches are grouped in form, the checked items value attribute will post to the server on form submit. The disabled and unchecked Switch values will not be sent to the server on form submit.

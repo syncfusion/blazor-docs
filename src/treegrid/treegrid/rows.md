@@ -1,9 +1,3 @@
----
-title: "Row"
-component: "Tree Grid"
-description: "Documentation for row customizations in Tree Grid."
----
-
 # Row
 
 The row represents record details fetched from data source.

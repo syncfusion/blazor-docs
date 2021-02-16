@@ -1,9 +1,3 @@
----
-title: "Blazor In-place Editor | List of native events"
-component: "In-place Editor"
-description: "This section demonstrates the native events supported by Blazor In-place Editor and how to initialize them in Blazor client-side application."
----
-
 # Overview
 
 You can define the native event using on `<event>` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.

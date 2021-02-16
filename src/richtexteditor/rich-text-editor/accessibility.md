@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | Web accessibility ARIA attributes"
-component: "Rich Text Editor"
-description: "This section describes the roles and attributes of web accessibility standard (ARIA attributes based on w3c) for the Blazor Rich Text Editor."
----
-
 # Accessibility
 
 The Rich Text Editor component has been designed, keeping in mind the WAI-ARIA specifications, and applies the WAI-ARIA roles, states, and properties. This component is characterized by complete ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.

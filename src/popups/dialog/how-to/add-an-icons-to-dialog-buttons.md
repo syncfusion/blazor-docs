@@ -1,9 +1,3 @@
----
-title: "Blazor Modal Dialog | Action buttons with an icon"
-component: "Dialog"
-description: "This section explains how to customize the action buttons and footer of Blazor Modal Dialog using icons and template."
----
-
 # Add an icons to dialog buttons
 
 You can add icons to the dialog buttons using the `DialogButton` property or `FooterTemplate` property.

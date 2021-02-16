@@ -1,9 +1,3 @@
----
-title: "Slider Ticks"
-component: "Slider"
-description: "Slider visually represents the slider values with small and large ticks placed before, after, or both, of the slider bar."
----
-
 # Ticks
 
 The Ticks in Slider supports you to easily identify the current value/values of the Slider. It contains `SmallStep` and `LargeStep`. The value of the major ticks alone will be displayed in the slider. In order to enable/disable the small ticks, use the `ShowSmallTicks` property.

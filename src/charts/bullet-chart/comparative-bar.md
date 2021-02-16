@@ -1,10 +1,4 @@
 ---
-title: " Bullet Chart Target Bar | ASP.NET Core Blazor "
-
-component: "Bullet Chart"
-
-description: "The line marker that runs perpendicular to the orientation of the graph is known as the `Comparative Measure`. "
----
 <!-- markdownlint-disable MD036 -->
 
 # Target Bar

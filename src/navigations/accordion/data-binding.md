@@ -1,9 +1,3 @@
----
-title: "data bindig"
-component: "Accordion"
-description: "This example demonstrates how to bind any data object to accordion items in the Blazor Accordion component."
----
-
 # DataBinding
 
 Accordion component provides an option to get accordion items from the local data. It can be done through iteration of Accordion Items using conditional **foreach** loop. Accordion only supports the local data for data binding.

@@ -1,9 +1,3 @@
----
-title: "Sorting"
-component: "Tree Grid"
-description: "Learn how to sort rows in the Tree Grid component and perform initial sorting."
----
-
 # Sorting
 
 Sorting enables you to sort data in the **Ascending** or **Descending** order.

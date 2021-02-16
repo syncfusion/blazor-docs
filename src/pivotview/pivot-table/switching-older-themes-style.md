@@ -1,9 +1,3 @@
----
-title: "Switching to older themes style"
-component: "Pivot Table"
-description: "This section allows the user to switch the older theme"
----
-
 <!-- markdownlint-disable MD012 -->
 <!-- markdownlint-disable MD009 -->
 

@@ -1,9 +1,3 @@
----
-title: "Node Interaction"
-component: "Diagram"
-description: "How to provide the interaction support like drag, rotate, resize, and select for node"
----
-
 # Interaction
 
 Diagram provides the support to drag, resize, or rotate the node interactively.

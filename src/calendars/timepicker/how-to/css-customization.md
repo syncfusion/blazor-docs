@@ -1,9 +1,3 @@
----
-title: "CssClass"
-component: "TimePicker"
-description: "Explains how to achieve UI level customization in the time picker component using custom CSS styles and classes."
----
-
 # CSS customization
 
 TimePicker allows you to customize the text box and popup list appearance to suit your

@@ -1,9 +1,3 @@
----
-title: "Customize the appearance of a Switch"
-component: "Switch"
-description: "Switch how to section, customization of Switch bar and handle, change size, name and value in form submit."
----
-
 # Customize the appearance of a Switch
 
 You can customize the appearance of the Switch component using the CSS rules. Define your own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.Buttons.EjsSwitch~CssClass.html) property.

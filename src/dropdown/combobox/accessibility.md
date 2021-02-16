@@ -1,9 +1,3 @@
----
-title: "Combo box Accessibility"
-component: "ComboBox"
-description: "This section for Syncfusion ASP.NET combo box component explains the WAI-ARIA accessibility support."
----
-
 # Accessibility
 
 The ComboBox component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies

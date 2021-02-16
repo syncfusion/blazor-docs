@@ -1,9 +1,3 @@
----
-title: "Layers"
-component: "Diagram"
-description: "Nodes visually represents the geometrical information and process flows"
----
-
 # Layers
 
 **Layer** is used to organize related shapes on a diagram control. A layer is a named category of shapes. By assigning shapes to different layers, you can selectively view, remove, and lock different categories of shapes.

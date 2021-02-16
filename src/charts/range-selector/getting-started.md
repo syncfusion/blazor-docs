@@ -1,14 +1,8 @@
----
-title: "Getting Started"
-component: "Range Selector"
-description: "This section briefly explains how to create the RangeNavigator component and configure its available functionalities in a Razor application and also how to include a simple RangeNavigator in your Blazor client-side in Visual Studio 2019 Preview application."
----
-
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started
 
-This section briefly explains about how to include a `RangeNavigator` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `RangeNavigator` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 

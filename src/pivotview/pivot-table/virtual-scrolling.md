@@ -1,9 +1,3 @@
----
-title: "Virtual Scrolling"
-component: "Pivot Table"
-description: "Virtual Scrolling allows user to load large amount of data without performance degradation."
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Virtual Scrolling

@@ -1,9 +1,3 @@
----
-title: "Strict Mode"
-component: "DatePicker"
-description: "Explains how to allow the users to enter only the valid date value within the specified min/max range in date input."
----
-
 # Strict Mode
 
 The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode)

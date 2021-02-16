@@ -1,9 +1,3 @@
----
-title: "Localization and RTL"
-component: "PDF Viewer"
-description: "Learn how to localize the text content used in our PDF Viewer based on culture settings and Enable righ-to-left in PDF Viewer"
----
-
 # Globalization and RTL
 
 The PDF Viewer component allows you to localize the static text on formatting pane, toolbar, dialog and more. It can be achieved by setting the `Locale` property and providing the localized text through the `LoadLocaleData()` method.

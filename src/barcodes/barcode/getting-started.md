@@ -1,22 +1,18 @@
----
-title: "getting-started"
-component: "BarcodeGenerator"
-description: "BarcodeGenerator component is a pure JavaScript library which will convert a string to Barcode and show it to the user. This supports major 1D and 2D barcodes including coda bar, code 128, QR Code."
----
-
 # Getting Started
 
-This section briefly explains about how to include a BarcodeGenerator in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a BarcodeGenerator in your Blazor Server-Side application. You can refer [`Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019`](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor-server/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
- 1. Install the **Syncfusion.Blazor.BarcodeGenerator**  NuGet package to the application by using the **NuGet Package Manager**.
+ 1. Install the **Syncfusion.Blazor**  NuGet package to the application by using the **NuGet Package Manager**. Please ensure to check the Include prerelease option for our Beta release.
  2. You can add the client-side resources through CDN or from Nuget package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
     <environment include="Development">
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <!---CDN--->
+        <!-- <link href="https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css" rel="stylesheet" /> -->
     </environment>
 </head>
 ```
@@ -26,7 +22,7 @@ This section briefly explains about how to include a BarcodeGenerator in your Bl
 ```html
 <head>
     <environment include="Development">
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
         <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
     </environment>
 </head>

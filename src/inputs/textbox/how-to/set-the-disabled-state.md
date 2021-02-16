@@ -1,9 +1,3 @@
----
-title: "Set the disabled state"
-component: "Textbox"
-description: "Explains how to disable the user interaction on the text box component."
----
-
 # Set the disabled state
 
 To disable the TextBox, use its

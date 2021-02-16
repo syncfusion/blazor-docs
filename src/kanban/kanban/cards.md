@@ -1,9 +1,3 @@
----
-title: "Cards in Kanban"
-component: "Kanban"
-description: "This article demonstrates how to use the cards in Kanban board and demonstrate and customize the card layout."
----
-
 # Cards
 
 The cards are main elements in Kanban board, which represent the task information with header and content. The header and content of a card is fetched from the corresponding mapping fields. The card layout can be customized with template also.

@@ -1,9 +1,3 @@
----
-title: "Legend"
-component: "Heatmap"
-description: "The legend section describes the legend types available in heatmap and other display options like legend placement, alignment and defining dimensions for legend in heatmap"
----
-
 # Legend
 
 The legend is used to provide the information about the heat map cell. You can enable the legend by setting the `Visible` property to true.

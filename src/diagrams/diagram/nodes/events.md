@@ -1,9 +1,3 @@
----
-title: "Node Events"
-component: "Diagram"
-description: "Events triggered while node interaction"
----
-
 # Events
 
 Diagram provides some events support for node that triggers when interacting the node.

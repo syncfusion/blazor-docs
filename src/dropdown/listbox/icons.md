@@ -1,9 +1,3 @@
----
-title: "ListBox with icons and customization"
-component: "ListBox"
-description: "ListBox supports icons, images and customization of each list elements."
----
-
 # Icons and Customization
 
 ## Icons

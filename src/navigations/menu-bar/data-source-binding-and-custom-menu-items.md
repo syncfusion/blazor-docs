@@ -1,9 +1,3 @@
----
-title: "Data source binding"
-component: "Menu Bar"
-description: "This section helps to learn how to bind data source and custom Menu Bar items"
----
-
 # Data source binding
 
 ## Data binding

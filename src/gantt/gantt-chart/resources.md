@@ -1,9 +1,3 @@
----
-title: "Resources"
-component: "Gantt Chart"
-description: "Learn how to assign the resource for the task's in the Blazor Gantt Chart component."
----
-
 # Resources
 
 In Gantt Chart, the resources are represented by staff, equipment and materials etc. In Gantt Chart component you can show or allocate the resources (human resources) for each task.

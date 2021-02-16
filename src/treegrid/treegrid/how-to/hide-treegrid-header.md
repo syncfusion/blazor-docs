@@ -1,9 +1,3 @@
----
-title: "Hide Blazor Tree Grid header"
-component: "TreeGrid"
-description: "Learn how to hide the header in Blazor Data Tree Grid component"
----
-
 # Hide Tree Grid header
 
 You can hide the Tree Grid header by applying the below styles to Tree Grid component.

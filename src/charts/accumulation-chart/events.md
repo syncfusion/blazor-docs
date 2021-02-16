@@ -1,9 +1,3 @@
----
-title: "Events"
-component: "Accumulation Chart"
-description: "Learn how to use events in Blazor Accumulation Chart component."
----
-
 # Events
 
 In this section, we have provided the list of events of Accumulation Chart component which will be

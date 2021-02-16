@@ -1,11 +1,3 @@
----
-title: " Bullet Chart DataBinding | ASP.NET Core Blazor "
-
-component: "Bullet Chart"
-
-description: "Bullet Chart can be rendered by using different types of data source. They are called local data, remote data."
----
-
 # Working with Data
 
 Bullet Chart can visualise data bound from local or remote data.

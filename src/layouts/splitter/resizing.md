@@ -1,9 +1,3 @@
----
-title: "Blazor Resizable Splitter | Resizable split panes"
-component: "Splitter"
-description: "This section explains how to create resizable panes using the Blazor Splitter component that helps to adjust its panes dimension dynamically."
----
-
 # Resize
 
 By default, resizing will be enabled for split panes. Resizing gripper element will be added to the separator to makes the resize easy.

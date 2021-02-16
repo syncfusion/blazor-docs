@@ -1,9 +1,3 @@
----
-title: "Multiselect Custom value"
-component: "MultiSelect"
-description: "This section for Syncfusion ASP.NET multiselect control demonstrates the addition of a new value that is not present in the predefined list."
----
-
 # CustomValue
 
 The MultiSelect allows the users to add a new non-present option to the component value when [AllowCustomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_AllowCustomValue) is enabled. while selecting the new custom value, the `CustomValueSelection` event will be triggered.

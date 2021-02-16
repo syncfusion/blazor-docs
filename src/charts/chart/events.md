@@ -1,9 +1,3 @@
----
-title: "Events"
-component: "Chart"
-description: "Learn how to use events in Blazor Data Chart component."
----
-
 # Events
 
 In this section, we have provided the list of events of the Chart component which will be

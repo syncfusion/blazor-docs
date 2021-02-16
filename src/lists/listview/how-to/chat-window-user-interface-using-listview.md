@@ -1,9 +1,3 @@
----
-title: "ListView how to chat window user interface using listview"
-component: "ListView"
-description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
----
-
 # How to chat window user interface using listview
 
 ListView can be customized as chat window. To achieve that, use the ListView `Template` .

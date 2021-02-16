@@ -1,9 +1,3 @@
----
-title: "Port Appearance and Positioning"
-component: "Diagram"
-description: "How to provide appearance and positioning for Port"
----
-
 # Interaction
 
 The port can be dragged in the diagram area and create the connector over the port by using the [`port constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html).

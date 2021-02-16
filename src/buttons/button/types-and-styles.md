@@ -1,9 +1,3 @@
----
-title: "ButtonGroup Types and Styles"
-component: "Button"
-description: "Button control supports different types, predefined styles, sizes and also has support for icons."
----
-
 # Types and Styles
 
 This section explains the different styles and types of Buttons.

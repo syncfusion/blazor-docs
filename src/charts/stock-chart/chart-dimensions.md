@@ -1,11 +1,3 @@
----
-title: "Stock Chart Appearance | ASP.NET Core Blazor "
-
-component: "Stock Chart"
-
-description: "We can set stock chart size manually by using width and height properties. We can set percentage or pixel size values to the stock chart."
----
-
 # Stock Chart Dimensions
 
 ## Size for Container

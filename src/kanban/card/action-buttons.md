@@ -1,9 +1,3 @@
----
-title: "Action Buttons"
-component: "Card"
-description: "This section explains how to customizes the card using action buttons and changes the vertical or horizontal alignment of the card element."
----
-
 # Action Buttons
 
 You can include Action buttons within the Card and customize them. Action button is a `div` element with `CardFooter` component followed by button tag or anchor tag within the card root element.

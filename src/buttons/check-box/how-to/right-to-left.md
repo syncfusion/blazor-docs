@@ -1,9 +1,3 @@
----
-title: "Right-To-Left"
-component: "Checkbox"
-description: "Checkbox how to section, name and value in form submit, and customization of Checkbox appearance, frame & check icon."
----
-
 # Right-To-Left
 
 Checkbox component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) as `true`.

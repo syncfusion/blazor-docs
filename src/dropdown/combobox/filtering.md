@@ -1,9 +1,3 @@
----
-title: "Combo box Filtering"
-component: "ComboBox"
-description: "This section for Syncfusion ASP.NET combo box control shows the built-in filtering support with a rich set of filtering configurations."
----
-
 # Filtering
 
 The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) is enabled. The filter

@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "Pivot Table"
-description: "Learn how to create a Pivot Table component in Blazor."
----
-
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD012 -->
 <!-- markdownlint-disable MD029 -->
@@ -11,7 +5,7 @@ description: "Learn how to create a Pivot Table component in Blazor."
 
 # Getting Started with Blazor Pivot Table component
 
-This section briefly explains about how to include a **Pivot Table** in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a **Pivot Table** in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor-server/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Pivot Table component, you can check out this video.
 

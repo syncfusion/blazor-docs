@@ -1,9 +1,3 @@
----
-title: " Rich Text Editor Globalization"
-component: "Rich Text Editor"
-description: "This section explains the rtl support of Syncfusion Blazor Rich Text Editor component."
----
-
 # RTL support
 
 ## RTL

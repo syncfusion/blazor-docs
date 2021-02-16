@@ -1,9 +1,3 @@
----
-title: "Label Interaction"
-component: "Diagram"
-description: "How to provide the interaction support like drag, rotate, resize, and select for label"
----
-
 # Interaction
 
 Basic interactions of selecting and resizing can be applied over an annotation. These interactions can be controlled by annotation and its parent node or connector.

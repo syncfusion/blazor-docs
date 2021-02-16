@@ -1,9 +1,3 @@
----
-title: "FirstDayWeek"
-component: "Calendar"
-description: "Explains how to change the first day of a week in the calendar component."
----
-
 # Change the first day of the week
 
 The Calendar provides an option to change the first day of the week by using the [FirstDayOfWeek](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_FirstDayOfWeek)

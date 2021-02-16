@@ -1,9 +1,3 @@
----
-title: "Connector Interaction"
-component: "Diagram"
-description: "How to provide the interaction support like drag and select for connector"
----
-
 # Interaction
 
 Connectors can be selected, dragged, and routed over the diagram page.

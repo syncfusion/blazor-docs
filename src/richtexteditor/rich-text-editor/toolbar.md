@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | Floating, inline, quick toolbar"
-component: "Rich Text Editor"
-description: "This section explains all the toolbar related configurations such as floating, inline, multirow, quick toolbar in the Blazor Rich Text editor."
----
-
 # Toolbar
 
 The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs.

@@ -1,11 +1,3 @@
----
-title: "Bullet Chart Appearance | ASP.NET Core Blazor "
-
-component: "Bullet Chart"
-
-description: "We can set bullet chart size manually by using width and height properties. We can set percentage or pixel size values to the bullet chart."
----
-
 # Chart Dimensions
 
 ## Size for Container

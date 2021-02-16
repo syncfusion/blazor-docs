@@ -1,9 +1,3 @@
----
-title: "Blazor Toast Notification | Access specific Toast"
-component: "Toast"
-description: "This section explains how to access the specific toast and hide it using showModels Key property"
----
-
 # Access Specific Toast
 
 In the toast, we can access the particular toast by passing the `Key` value in `ShowModels`, and the `Key` should be unique in `ShowModels`. To close the specific toast, you also need to pass the corresponding toast `Key` value in the `Hide` method.

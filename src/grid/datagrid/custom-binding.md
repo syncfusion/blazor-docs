@@ -1,9 +1,3 @@
----
-title: "Custom Binding"
-component: "DataGrid"
-description: "Implementing custom data binding using custom adaptor in the Blazor DataGrid component"
----
-
 # Custom Binding
 
 The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the DataGrid component.
@@ -190,11 +184,8 @@ The following sample code demonstrates injecting service into Custom Adaptor,
     public class CustomAdaptor : DataAdaptor
     {
         //here you can inject your service
+        [Inject]
         public OrderDataAccessLayer context { get; set; };
-        public CustomAdaptor(OrderDataAccessLayer _context)
-        {
-            context = _context;
-        }
         // Performs data Read operation
         public override object Read(DataManagerRequest dm, string key = null)
         {

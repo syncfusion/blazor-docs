@@ -1,9 +1,3 @@
----
-title: "Blazor Modal Dialog | Dialog Resizing"
-component: "Dialog"
-description: "This section explains about resizeable dialog which allows changing its size dynamically."
----
-
 # Resizing
 
 The Dialog supports resizing feature. To resize the dialog, we have to select and resize it by using its handle (grip) or hovering on any of the edges or borders of the dialog within the sample container.

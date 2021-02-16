@@ -1,9 +1,3 @@
----
-title: "Drag and Drop"
-component: "TreeView"
-description: "Drag and drop functionality in treeview"
----
-
 # Drag and Drop
 
 The TreeView component allows you to drag and drop any node by setting `AllowDragAndDrop` &nbsp;to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.

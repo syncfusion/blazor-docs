@@ -1,9 +1,3 @@
----
-title: "Event"
-component: "Split Button"
-description: "This section helps to learn how to trigger events in ASP.NET Core Blazor application"
----
-
 # Overview
 
 You can define the split button event using on [`SplitButtonEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SplitButtonEvents.html) in component. The value of event is treated as an event handler. The event specific data will be available in event arguments.

@@ -1,9 +1,3 @@
----
-title: "Customize Menu Items"
-component: "Menu Bar"
-description: "This section helps to learn how to Customize Menu Items."
----
-
 # Customize Menu Items
 
 ## Add or Remove Menu Items

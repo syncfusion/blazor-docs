@@ -1,9 +1,3 @@
----
-title: "Slider Limits"
-component: "Slider"
-description: "Slider control supports limits feature that restricts thumb movement in min & max values and also supports interval dragging between range values."
----
-
 # Movement Limits and Drag Interval
 
 The slider limits restrict the slider thumb between a particular range. This is used if higher or lower value affects the process

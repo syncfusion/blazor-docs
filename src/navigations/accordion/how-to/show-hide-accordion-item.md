@@ -1,9 +1,3 @@
----
-title: "How to show/hide accordion items"
-component: "Accordion"
-description: "This example demonstrates how to show/hide the specific accordion item in the Blazor Accordion component."
----
-
 # Show/Hide Accordion Items
 
 Accordion provides a support to Show/Hide the specified accordion item using following ways.

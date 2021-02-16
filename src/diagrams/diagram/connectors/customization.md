@@ -1,9 +1,3 @@
----
-title: "Customization"
-component: "Diagram"
-description: "How to change the appearance of the connector"
----
-
 # Customization
 
 ## Decorator

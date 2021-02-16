@@ -1,14 +1,8 @@
----
-title: "Getting Started with ASP.NET Core Blazor client-side in Visual Studio 2019"
-component: "AccumulationChart"
-description: "This section briefly explains how to create the AccumulationChart component and configure its available functionalities in Blazor client-side web application  and also how to include a simple AccumulationChart in your Blazor client-side web application "
----
-
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started
 
-This section briefly explains about how to include a `Accumulation Chart` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Accumulation Chart` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 

@@ -1,9 +1,3 @@
----
-title: "Drop-down list Accessibility"
-component: "DropDownList"
-description: "This section for Syncfusion ASP.NET drop-down list control explains the WAI-ARIA accessibility supports."
----
-
 # Accessibility
 
 The DropDownList component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies

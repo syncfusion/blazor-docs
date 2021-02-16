@@ -1,9 +1,3 @@
----
-title: "BPMN Activity"
-component: "Diagram"
-description: "BPMN Activity is the task that is performed in a business process."
----
-
 # BPMN activity
 
 The [`Activity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle.

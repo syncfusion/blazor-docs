@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "PDF Viewer"
-description: "Learn how to get started using ASP.NET Core Razor PDF Viewer component through simple steps."
----
-
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD009 -->
 

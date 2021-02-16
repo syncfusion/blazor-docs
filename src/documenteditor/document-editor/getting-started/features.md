@@ -1,9 +1,3 @@
----
-title: "Key features of Word processor for Blazor"
-component: "Word processor"
-description: "Learn about the key features of Syncfusion's Word processor component for Blazor. It is used to compose, edit and print Word, RTF, SFDT files in Blazor apps."
----
-
 # Key features of Word processor component for Blazor
 
 The Word processor component for Blazor is used to compose, edit, view, and print Word (DOC, DOCX, and RTF) documents in Blazor applications.

@@ -1,9 +1,3 @@
----
-title: "WIP validation of Kanban"
-component: "Kanban"
-description: "This article demonstrates how to set the column or cell validation on Kanban board based on total card count."
----
-
 # Validation
 
 Validate particular column using the `MinCount` or `MaxCount` properties. The corresponding columns gets different appearance when validation fails. In default layout, `ConstraintType` property accept only `Column` type. In swimlane layout, accept both `Column` and `Swimlane` constraint type.

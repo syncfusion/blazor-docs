@@ -1,9 +1,3 @@
----
-title: "Content Render Modes"
-component: "Tabs"
-description: "In this section, we have discussed about the different ways of rendering the tab content."
----
-
 # Content Render Modes
 
 In Blazor Tabs, you can render the content of the Tabs based on the scenario. The content rendering of tabs can be done by the following three different ways.

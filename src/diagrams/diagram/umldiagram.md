@@ -1,9 +1,3 @@
----
-title: "Uml Diagram Shapes"
-component: "Diagram"
-description: "Class diagram describes the attributes and operations of a class and also the constraints imposed on the system"
----
-
 # UML Diagram Shapes
 
 ## Uml Class Diagram Shapes

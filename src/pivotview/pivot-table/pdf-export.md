@@ -1,9 +1,3 @@
----
-title: "PDF Export"
-component: "Pivot Table"
-description: "Documentation on exporting PivotTable content to PDF format and customizing the exported document with multi-export, headers and footers, and file name changes."
----
-
 # PDF Export
 
 The PDF export allows Pivot Table data to be exported as PDF document. To enable PDF export in the pivot table, set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowPdfExport) in [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) as **true**. Once the API is set, user needs to call the [`PdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_PdfExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting, on external button click.

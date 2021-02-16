@@ -1,9 +1,3 @@
----
-title: "Data Adaptors"
-component: "Data Manager"
-description: "Documentation on how to interact with a variety of services by using data adaptors like, UrlAdaptor, ODataAdaptor, ODataV4Adaptor and WebApiAdaptor. Also explains on how to write custom adaptors"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Data Adaptors

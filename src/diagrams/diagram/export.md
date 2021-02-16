@@ -1,9 +1,3 @@
----
-title: "Export"
-component: "Diagram"
-description: "Diagram exporting supports to export the diagram content as image/svg."
----
-
 # Exporting
 
 Diagram provides support to export its content as image/svg files.

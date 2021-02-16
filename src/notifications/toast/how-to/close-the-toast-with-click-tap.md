@@ -1,9 +1,3 @@
----
-title: "Blazor Toast Notification | Toast with a click or tap operation"
-component: "Toast"
-description: "This section explains Toaster component with a click or tap operation."
----
-
 # Close the toast with click/tap
 
 By default, the toasts are expired based on the `Timeout` value. You can customize the toast hiding process with click/tap action by setting the `ToastClickEventArgs` in the clicked callback function with static Toast.

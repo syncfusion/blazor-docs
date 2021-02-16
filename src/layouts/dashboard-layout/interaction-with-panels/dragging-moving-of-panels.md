@@ -1,9 +1,3 @@
----
-title: "Dragging and moving of panels"
-component: "Dashboard Layout"
-description: "This section explains how to adjust the panels within the layout in Blazor Dashboard Layout component"
----
-
 # Dragging of panels
 
 The Dashboard Layout component is provided with dragging functionality to drag and reorder the panels within the layout. While dragging a panel, a holder will be highlighted below the panel indicating the panel placement on panel drop. This helps the users to decide whether to place the panel in the current position or revert to previous position without disturbing the layout.

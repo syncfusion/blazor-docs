@@ -1,11 +1,3 @@
----
-title: " Stock Chart Technical Indicators  | ASP.NET Core Blazor "
-
-component: "Stock Chart"
-
-description: "Indicators represent a statistical approach to technical analysis as opposed to a subjective approach. we have different types of indicators."
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Technical Indicators

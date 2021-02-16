@@ -1,9 +1,3 @@
----
-title: "Custom Binding"
-component: "Data Manager"
-description: "Learn how to implement custom adaptor in the Blazor Data Manager to bind data in Syncfusion Blazor components"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Custom Binding

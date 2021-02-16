@@ -1,9 +1,3 @@
----
-title: "Node's Label"
-component: "Diagram"
-description: "How to position the lable for node"
----
-
 # How to position node’s annotation
 
 Diagram allows you to customize the position and appearance of the annotation efficiently.

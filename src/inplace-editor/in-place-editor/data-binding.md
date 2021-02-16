@@ -1,9 +1,3 @@
----
-title: "Blazor In-place Editor | Bind data using data manager"
-component: "In-place Editor"
-description: "This section explains how to bind data to the dependent component of Blazor In-place Editor from the local and remote sources using data manager."
----
-
 # Data Binding
 
 The Razor components load the data either from local data sources or remote data services using the `DataSource` property and it supports the data type of an array or `DataManager`. Also supports different kind of data services such as OData, OData V4, Web API, and data formats such as XML, JSON, JSONP with the help of `DataManager` adaptors.

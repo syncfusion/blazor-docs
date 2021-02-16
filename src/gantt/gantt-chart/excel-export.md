@@ -1,9 +1,3 @@
----
-title: "Excel Export"
-component: "Gantt Chart"
-description: "Learn how to export Gantt Chart data to Excel and CSV documents in the Essential JS 2 Gantt Chart component."
----
-
 # Excel Export
 
 Gantt Chart supports client-side exporting, which allows you to export its data to the Excel and CSV formats. Use the `ExcelExport` and `CsvExport` methods for exporting. To enable Excel export in the Gantt Chart, set the `AllowExcelExport` to true.

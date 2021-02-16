@@ -1,9 +1,3 @@
----
-title: "Accessibility"
-component: "NumericTextBox"
-description: "Accessibility support in numeric textbox"
----
-
 # Accessibility
 
 The NumericTextBox characterized with complete ARIA Accessibility support that helps to accessible

@@ -1,9 +1,3 @@
----
-title: "Groups"
-component: "TextBox"
-description: "Explains how to add icons and clear button to the floating text box that is achieved with or without the required attribute."
----
-
 # Groups
 
 The following section explains you the steps required to create TextBox with `icon` and `floating label`.

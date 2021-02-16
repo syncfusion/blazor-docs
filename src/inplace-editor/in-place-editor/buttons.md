@@ -1,9 +1,3 @@
----
-title: "Blazor In-place Editor | Save and remove button config"
-component: "In-place Editor"
-description: "This section explains how to configure, save, and remove button with its properties, template, and customize its behavior for Blazor In-place Editor."
----
-
 # Buttons
 
 The In-place Editor has an option to save and cancel using buttons. The `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` tags accept the button properties for customizing the save and cancel button.

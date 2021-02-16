@@ -1,9 +1,3 @@
----
-title: "ListView how to trace events of listview"
-component: "ListView"
-description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
----
-
 # How to trace events of listview
 
 The ListView control triggers events based on its actions. The events can be used as extension points to perform

@@ -1,9 +1,3 @@
----
-title: "Change Tree Grid data source dynamically"
-component: "TreeGrid"
-description: "Learn how to dynamically change data source in the Blazor Tree Grid component"
----
-
 # Change Tree Grid data source dynamically
 
 You can change the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) of the Tree Grid component dynamically through an external button.

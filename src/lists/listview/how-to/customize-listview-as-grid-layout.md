@@ -1,9 +1,3 @@
----
-title: "ListView how to customize listview as grid layout"
-component: "ListView"
-description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
----
-
 # How to customize listview as grid layout
 
 In Listview, list items can be rendered in grid layout with following data manipulations.

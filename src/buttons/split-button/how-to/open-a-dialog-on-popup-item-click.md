@@ -1,9 +1,3 @@
----
-title: "Open a dialog on popup item click"
-component: "Split Button"
-description: "This section explains how to open a dialog on popup item click in Blazor."
----
-
 # Open a dialog on popup item click
 
 This section explains about how to open a dialog on Split Button popup item click. This can be achieved by

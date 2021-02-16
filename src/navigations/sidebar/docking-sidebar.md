@@ -1,9 +1,3 @@
----
-title: "Docking Sidebar"
-component: "Sidebar"
-description: "Docking lets the sidebar occupy a small vertical area in a page always and typically contains shortened view of navigation options."
----
-
 <!-- markdownlint-disable MD009 -->
 
 # Dock

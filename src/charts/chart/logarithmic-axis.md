@@ -1,11 +1,3 @@
----
-title: " Chart Logarithmic Axis | ASP.NET Core Blazor "
-
-component: "Chart"
-
-description: "Logarithmic axis uses logarithmic scale is defined as one where the units on an axis are powers, or logarithms, of a base number, usually 10."
----
-
 # Logarithmic Axis
 
 <!-- markdownlint-disable MD033 -->

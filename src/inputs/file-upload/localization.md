@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "Uploader"
-description: "Localization support in Uploader"
----
-
 # Localization
 
 ## Blazor server side

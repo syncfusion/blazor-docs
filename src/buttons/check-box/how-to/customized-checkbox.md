@@ -1,9 +1,3 @@
----
-title: "Customized Checkbox"
-component: "Checkbox"
-description: "Checkbox how to section, name and value in form submit, and customization of Checkbox appearance, frame & check icon."
----
-
 # Customized Checkbox
 
 ## Customize Checkbox Appearance

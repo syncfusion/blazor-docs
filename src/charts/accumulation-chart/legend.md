@@ -1,11 +1,3 @@
----
-title: "Accumulation Chart Legend | ASP.NET Core Blazor "
-
-component: "Accumulation Chart"
-
-description: "Accumulation chart legend is used to give additional information about the chart series."
----
-
 # Legend
 
 As like a chart, the legend is also available for accumulation charts, which gives information about the points. By default, the legend will be placed on the right, if the width of the chart is high or will be placed on the bottom, if the height of the chart is high. Here, the legend for a point can be collapsed by giving the empty string to the x value of the point.

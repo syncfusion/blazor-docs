@@ -1,9 +1,3 @@
----
-title: "Stamp annotation"
-component: "PDF Viewer"
-description: "Learn about stamp annotations in PDF Viewer"
----
-
 # Stamp annotation
 
 The PDF Viewer control provides options to add, edit, delete and rotate the following stamp annotation in the PDF documents:

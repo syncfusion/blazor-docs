@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | Rich Text Editor Form support"
-component: "Rich Text Editor"
-description: "This section for Blazor Rich Text Editor component demonstrates that how to work with form and it's validation."
----
-
 # Form validation
 
 This following sample demonstrate how to get the Rich Text Editor validation error message in button click.

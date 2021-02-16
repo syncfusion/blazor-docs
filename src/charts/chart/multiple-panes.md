@@ -1,11 +1,3 @@
----
-title: " Chart Multiple-panes | ASP.NET Core Blazor "
-
-component: "Chart"
-
-description: "Chart can be divided multiple rows and columns. Axes are rendering based on row index or column index in pane."
----
-
 # Multiple Panes
 
 Chart area can be divided into multiple panes using [`Rows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) and

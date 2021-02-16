@@ -1,9 +1,3 @@
----
-title: "Print"
-component: "DataGrid"
-description: "Learn how to print the DataGrid content, set up pages for printing, perform external print, and print visible pages in the Blazor DataGrid component."
----
-
 <!-- markdownlint-disable MD033 -->
 
 # Print

@@ -1,9 +1,3 @@
----
-title: "ListView Customizing Templates"
-component: "ListView"
-description: "ListView allows customization of list item, header, and category group header using template and group header API."
----
-
 # Customizing templates
 
 The ListView component is designed to customize each list items and group title. It uses Blazor `Template engine` to render the elements.

@@ -1,11 +1,3 @@
----
-title: " RangeNavigator Export and Print | ASP.NET Core Blazor "
-
-component: "RangeNavigator"
-
-description: "The rendered rangenavigator can be printed or exported directly from the browser by calling the public method print and export."
----
-
 # Print and Export
 
 ## Print

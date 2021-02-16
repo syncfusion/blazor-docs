@@ -1,9 +1,3 @@
----
-title: "Tooltip of Kanban"
-component: "Kanban"
-description: "This article demonstrates how to show the tooltip when hovering card elements and also explained how to use template."
----
-
 # Tooltip
 
 The tooltip is used to show the card information when the cursor hover over the card elements using the `EnableTooltip` property. Tooltip content is dynamically set based on hovering over the card elements.

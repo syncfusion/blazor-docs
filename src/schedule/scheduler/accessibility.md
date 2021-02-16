@@ -1,9 +1,3 @@
----
-title: "Web Accessibility in Blazor Scheduler"
-component: "Scheduler"
-description: "This section describes how the Scheduler has been built keeping web accessibility in mind, thus allowing to interact with assistive technologies."
----
-
 # Accessibility
 
 Accessibility is achieved in the Scheduler component through WAI-ARIA standard and keyboard navigation. The Scheduler features can be effectively accessed through assistive technologies such as screen readers.

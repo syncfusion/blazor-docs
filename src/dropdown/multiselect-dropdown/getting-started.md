@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "MultiSelect"
-description: "This section explains how to create a simple Syncfusion ASP.NET Core Razor multiselect control and configure its functionalities in ASP.NET Core Razor application."
----
-
 # Getting Started
 
 This section briefly explains about how to include a **MultiSelect** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.

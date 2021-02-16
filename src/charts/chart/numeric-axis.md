@@ -1,11 +1,3 @@
----
-title: " Chart Numeric Axis | ASP.NET Core "
-
-component: "Chart"
-
-description: "Numeric axis used to represent numeric values data in chart. we can customize the range, label format and ranga padding in numeric axis. "
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Numeric Axis

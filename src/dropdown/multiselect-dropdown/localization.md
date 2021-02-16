@@ -1,9 +1,3 @@
----
-title: "Multiselect Localization"
-component: "MultiSelect"
-description: "This section explains the localization support of Syncfusion ASP.NET multiselect control."
----
-
 # Localization
 
 ## Blazor server side

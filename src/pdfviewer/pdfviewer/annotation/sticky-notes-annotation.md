@@ -1,9 +1,3 @@
----
-title: "Sticky Note Annotations"
-component: "PDF Viewer"
-description: "Learn about stickynote annotations in PDF Viewer"
----
-
 # Sticky note annotations
 
 The PDF Viewer control provides the options to add, edit, and delete the sticky note annotations in the PDF document.

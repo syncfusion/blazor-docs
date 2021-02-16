@@ -1,9 +1,3 @@
----
-title: "Customize column menu icon"
-component: "DataGrid"
-description: "Learn how to customize the column menu icon in Blazor DataGrid component"
----
-
 # Customize column menu icon
 
 You can customize the column menu icon by overriding the default icon class `.e-icons.e-columnmenu` with the `content` property.

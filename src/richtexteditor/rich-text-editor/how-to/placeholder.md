@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | how to | Customize the placeholder"
-component: "Rich Text Editor"
-description: "This section explains how to customize the font style of placeholder to monospace in the Blazor Rich Text Editor component."
----
-
 # Customize placeholder style
 
 By using `e-rte-placeholder` class, you can customize the placeholder style.

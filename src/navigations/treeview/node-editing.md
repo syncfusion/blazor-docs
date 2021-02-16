@@ -1,9 +1,3 @@
----
-title: "Node Editing"
-component: "TreeView"
-description: "Editing nodes in treeview"
----
-
 # Node Editing
 
 The TreeView allows you to edit nodes by setting the `AllowEditing` property to **true**.

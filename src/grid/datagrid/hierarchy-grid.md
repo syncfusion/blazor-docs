@@ -1,9 +1,3 @@
----
-title: "Hierarchical Binding"
-component: "DataGrid"
-description: "Learn how to display master-detail data in the Essential JS 2 DataGrid control in a hierarchical manner."
----
-
 <!-- # Hierarchical Binding
 
 The DataGrid allows display of table data in a hierarchical structure to visualize relations between parent and child records. This feature is enabled by defining the [`ChildGrid`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) and

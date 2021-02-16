@@ -1,9 +1,3 @@
----
-title: "Data Binding"
-component: "Contex tMenu"
-description: "This section helps to learn how to bind data"
----
-
 # Data Binding
 
 To bind local data source to the Context Menu, menu items are populated from data source and mapped to `Items` property. In the following example, custom data with different data type is mapped to `Items` property.

@@ -1,9 +1,3 @@
----
-title: "Right-To-Left"
-component: "Radio Button"
-description: "Radio Button how to section, name and value in form submit, customize Radio Button appearance."
----
-
 # Right-To-Left
 
 Radio Button component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) as `true`.

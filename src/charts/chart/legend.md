@@ -1,11 +1,3 @@
----
-title: " Chart Legend | ASP.NET Core Blazor "
-
-component: "Chart"
-
-description: "Chart legend provides information about the series rendered in the chart.It has different alignment, shapes and customization properties. "
----
-
 # Legend
 
 Legend provides information about the series rendered in the chart.

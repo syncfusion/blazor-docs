@@ -1,9 +1,3 @@
----
-title: "How to load PDF documents dynamically in Blazor PDF Viewer?"
-component: "PDF Viewer"
-description: "Learn How to load the PDF Document dynamicaly in Blazor PDF Viewer."
----
-
 # How to load PDF documents dynamically in Blazor PDF Viewer
 
 At times, you might need to switch or load the PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or file path in PDF Viewer control using the `Load()` method dynamically.

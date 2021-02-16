@@ -1,9 +1,3 @@
----
-title: "Islamic Calendar"
-component: "Calendar"
-description: "Explains how to display the Islamic calendar or Hijri calendar instead of Gregorian calendar."
----
-
 # Islamic-Calendar
 
 In addition to the Gregorian calendar, the Calendar component supports displaying the Islamic calendar (Hijri calendar). **Islamic calendar** or **Hijri calendar** is a `lunar calendar` consisting of 12 months in a year of 354 or 355 days. To know more about Islamic calendar, refer to this [wikipedia](https://en.wikipedia.org/wiki/Islamic_calendar).

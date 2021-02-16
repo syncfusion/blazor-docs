@@ -1,9 +1,3 @@
----
-title: "Grouping"
-component: "DataGrid"
-description: "Learn how to group rows, apply initial groups, customize caption templates, and group by format in the Blazor DataGrid component."
----
-
 # Grouping
 
 The DataGrid has options to group records by dragging and dropping the column header to the group drop area. When grouping is applied, datagrid records are organized into a hierarchical structure to facilitate easier expansion and collapse of records.

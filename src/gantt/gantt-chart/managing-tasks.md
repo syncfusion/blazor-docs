@@ -1,9 +1,3 @@
----
-title: "Managing Tasks"
-component: "Gantt Chart"
-description: "Learn how to perform CRUD operations in various edit modes, and use different cell editors in the Blazor Gantt Chart component."
----
-
 # Managing Tasks
 
 The Gantt Chart component has options to dynamically insert, delete, and update tasks in a project. The primary key column is necessary to manage the tasks and perform CRUD operations in Gantt Chart. To define the primary key, set the `Columns.IsPrimaryKey` property to `true` in the column.

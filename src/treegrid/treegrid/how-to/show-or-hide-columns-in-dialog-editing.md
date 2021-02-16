@@ -1,9 +1,3 @@
----
-title: "Show or Hide columns in dialog editing"
-component: "TreeGrid"
-description: "Learn how to show or hide columns in dialog editing in Blazor Tree Grid Component."
----
-
 # Show or Hide columns in dialog editing
 
 You can show hidden columns or hide visible column’s editor in the dialog while editing the Tree Grid record. This can be achieved by **Template**.

@@ -1,9 +1,3 @@
----
-title: "Multi Selection"
-component: "TreeView"
-description: "Multiple node selection in treeview"
----
-
 # Multi Selection
 
 Selection provides an interactive support and highlights the node that you select. Selection can be done through simple mouse down or keyboard interaction.

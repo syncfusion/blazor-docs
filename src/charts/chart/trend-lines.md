@@ -1,11 +1,3 @@
----
-title: " Chart Trendlines | ASP.NET Core Blazor "
-
-component: "Chart"
-
-description: "Trendlines are used to show the direction and speed of price. Chart supports 6 types of trendlines and also provides trendlines customization."
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Trendlines

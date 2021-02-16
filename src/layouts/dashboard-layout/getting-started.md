@@ -1,8 +1,4 @@
----
-title: "Getting Started"
-component: "Dashboard Layout"
-description: "Learn how to create a Dashboard Layout component in Blazor."
----
+------
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

@@ -1,11 +1,3 @@
----
-title: " RangeNavigator Selecting Range | ASP.NET Core Blazor "
-
-component: "RangeNavigator"
-
-description: "we can able to select the particular range data by dragging thumbs or by tapping on the labels or by setting the start and end value properties. "
----
-
 # Selecting Range
 
 The left and right thumb of RangeNavigator are used to indicate the selected range in the large collection of data. Through following ways you can select a range.

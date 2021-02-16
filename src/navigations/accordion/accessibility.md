@@ -1,9 +1,3 @@
----
-title: "Accordion Accessibility"
-component: "Accordion"
-description: "The Accordion component has accessibility support to access the features via keyboard, screen readers, or other assistive technology devices."
----
-
 # Accessibility
 
 The Accordion component has been designed keeping in mind the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications, by applying the prompt WAI-ARIA roles, states and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes like `aria-multiselectable`, `aria-disabled`, `aria-expanded`, `aria-selected` and `aria-hidden`.

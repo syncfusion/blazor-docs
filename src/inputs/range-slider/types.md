@@ -1,9 +1,3 @@
----
-title: "Slider Types"
-component: "Slider"
-description: "Slider contrl provides three(3) types of sliders namely default, min range, and range."
----
-
 # Types
 
 The types of Slider are as follows:

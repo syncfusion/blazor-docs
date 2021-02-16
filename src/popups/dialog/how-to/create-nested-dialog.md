@@ -1,9 +1,3 @@
----
-title: "Blazor Modal Dialog | Nested modal dialogs"
-component: "Dialog"
-description: "This section describes how to create nested Blazor Modal Dialogs (parent-child dialogs)."
----
-
 # Create Nested Dialog
 
 A Dialog can be nested within another Dialog. The following sample contains parent and child Dialog (inner Dialog).

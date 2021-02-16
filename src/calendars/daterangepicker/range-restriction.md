@@ -1,9 +1,3 @@
----
-title: "Range Restriction"
-component: "DateRangePicker"
-description: "Explains how to specify min and max options in the date range picker to restrict the users from selecting a date range value out of given min/max date range."
----
-
 # Range Restriction
 
 Range selection in a DateRangePicker can be made-to-order with desired restrictions based on the application needs.

@@ -1,9 +1,3 @@
----
-title: "Show or Hide columns in dialog editing"
-component: "DataGrid"
-description: "Learn how to show or hide columns in dialog editing in Blazor DataGrid Component."
----
-
 # Show or Hide columns in dialog editing
 
 You can show hidden columns or hide visible column’s editor in the dialog while editing the datagrid record. This can be achieved by **Template**.

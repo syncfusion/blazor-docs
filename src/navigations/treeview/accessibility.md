@@ -1,9 +1,3 @@
----
-title: "Accessibility"
-component: "TreeView"
-description: "Accessibility support in TreeView"
----
-
 # Accessibility
 
 The TreeView control has been designed keeping in mind the `WAI-ARIA` specifications, and applies WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized

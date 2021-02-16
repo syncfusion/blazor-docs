@@ -1,9 +1,3 @@
----
-title: "Set item-wise custom template"
-component: "Toolbar"
-description: "This example demonstrates how to create custom template into the Blazor Toolbar component items."
----
-
 # Set item-wise custom template
 
 The Toolbar supports adding template commands using the  `Template` property. Template property can be given as the `HTML element` or `RenderFragment`.

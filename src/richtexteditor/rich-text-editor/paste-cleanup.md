@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | Paste from MS word | Paste cleanup"
-component: "Rich Text Editor"
-description: "TThis section explains how to handle paste from Microsoft Word and Microsoft Outlook, and cleanup on paste in the Blazor Rich Text Editor."
----
-
 # Paste from MS Word
 
 The Rich Text Editor allows you to reduce the effort while converting the Microsoft Word content to HTML format with format and styles.

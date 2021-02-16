@@ -1,11 +1,3 @@
----
-title: "Getting Started"
-component: "StockChart"
-description: "This section briefly explains how to create the StockChart component and configure its available functionalities in a Razor application and also how to include a simple StockChart in Blazor client-side in Visual Studio 2019 Preview application."
----
-
-<!-- markdownlint-disable MD040 -->
-
 # Getting Started
 
 This section briefly explains about how to include a `StockChart` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.

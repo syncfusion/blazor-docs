@@ -1,9 +1,3 @@
----
-title: "BPMN Event"
-component: "Diagram"
-description: "Event is notated with a circle and it represents an event in a business process"
----
-
 # BPMN text annotation
 
 * A BPMN object can be associated with a text annotation that does not affect the flow but gives details about objects within a flow. The annotation property of the node is used to connect an annotation element to the BPMN node.

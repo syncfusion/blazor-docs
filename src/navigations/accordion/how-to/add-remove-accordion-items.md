@@ -1,9 +1,3 @@
----
-title: "Add or Remove Accordion Items"
-component: "Accordion"
-description: "This example demonstrates how to add or remove a accordion item in the Blazor Accordion component."
----
-
 # Add/Remove Accordion Items
 
 Accordion can be added/removed dynamically by iteration of Accordion Items using conditional **foreach** loop.

@@ -1,9 +1,3 @@
----
-title: "Tools"
-component: "Diagram"
-description: "Drawing tool allows you to draw any kind of node/connector during runtime by clicking and dragging on the diagram page."
----
-
 # Tools
 
 ## Drawing tools

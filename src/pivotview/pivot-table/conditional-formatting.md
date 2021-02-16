@@ -1,9 +1,3 @@
----
-title: "Conditional Formatting"
-component: "Pivot Table"
-description: "Conditional formatting allowing the users to highlighting the value cells based on its value."
----
-
 # Conditional Formatting
 
 Allows end user to change the appearance of the pivot table value cells with its background color, font color, font family, and font size based on specific conditions.

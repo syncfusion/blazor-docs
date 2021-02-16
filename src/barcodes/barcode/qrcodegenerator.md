@@ -1,9 +1,3 @@
----
-title: "QR Code generator"
-component: "BarcodeGenerator"
-description: "BarcodeGenerator component is a pure JavaScript library which will convert a string to Barcode and show it to the user. This supports major 1D and 2D barcodes including coda bar, code 128, QR Code."
----
-
 # QR Code generator
 
 # QR Code

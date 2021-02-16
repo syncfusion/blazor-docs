@@ -1,9 +1,3 @@
----
-title: "Dimensions"
-component: "Heatmap"
-description: "This section describes on how to define the size for the heatmap layout"
----
-
 # Dimensions
 
 ## Size for heat map

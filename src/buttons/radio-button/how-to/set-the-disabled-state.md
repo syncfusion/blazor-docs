@@ -1,9 +1,3 @@
----
-title: "Radio Button How To sections"
-component: "Radio Button"
-description: "Radio Button how to section, name and value in form submit, customize Radio Button appearance."
----
-
 # Set the disabled state
 
 Radio Button component can be enabled/disabled by giving [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) property. To disable Radio Button component,

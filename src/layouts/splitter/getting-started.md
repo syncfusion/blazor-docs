@@ -1,8 +1,3 @@
----
-title: "Blazor Splitter | Getting Started with split panes"
-component: "Splitter"
-description: "This section describes a step-by-step process on how to get started with Blazor Splitter with different orientations (vertical and horizontal)."
----
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

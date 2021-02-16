@@ -1,9 +1,3 @@
----
-title: "Strict Mode"
-component: "TimePicker"
-description: "Explains how to allow the users to enter only the valid time value within the specified min/max range in time input."
----
-
 # Strict Mode
 
 The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfTimePicker%601~StrictMode.html)

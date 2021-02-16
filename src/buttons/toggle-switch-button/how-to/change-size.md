@@ -1,9 +1,3 @@
----
-title: "Change Size"
-component: "Toggle Switch Button"
-description: "Toggle Switch Button how to section, customization of Toggle Switch Button bar and handle, change size, name and value in form submit."
----
-
 # Change Size
 
 The different Toggle Switch Button sizes available are default and small. To reduce the size of default Toggle Switch Button to small,

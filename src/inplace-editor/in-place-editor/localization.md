@@ -1,9 +1,3 @@
----
-title: "Blazor In-place Editor | Globalization and Localization"
-component: "In-place Editor"
-description: "This section explains how to achieve localization using l10n localization library and right-to-left (RTL) in the Blazor In-place Editor."
----
-
 # Globalization
 
 ## Localization

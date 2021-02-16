@@ -1,9 +1,3 @@
----
-title: "Swimlane rows in Kanban board"
-component: "Kanban"
-description: "This section explains how to grouping of cards with swimlane rows, template, sorting, swimlane across drag and drop and show empty rows."
----
-
 # Swimlane
 
 Swimlanes are horizontal categorizations of cards on the Kanban board.  It is used for grouping of cards, which brings transparency to the workflow process.

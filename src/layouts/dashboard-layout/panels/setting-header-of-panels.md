@@ -1,9 +1,3 @@
----
-title: "Header and Content of Panels"
-component: "Dashboard Layout"
-description: "This section explains how to add header for the panels in Blazor DashboardLayout component"
----
-
 # Header and content of panels
 
 Basically, Dashboard layout Component have two templates to render the data in panels.

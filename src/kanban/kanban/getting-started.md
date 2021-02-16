@@ -1,8 +1,4 @@
----
-title: "Blazor Kanban | Get started from server-side"
-component: "Kanban"
-description: "This section explains the step-by-step process to get started with Blazor Kanban using Blazor server-side application in Visual Studio 2019."
----
+------
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

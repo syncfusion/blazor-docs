@@ -1,9 +1,3 @@
----
-title: "Load content through Ajax"
-component: "Tab"
-description: "This example demonstrates how to load external content into the Essential JS 2 Tab component through an AJAX post."
----
-
 # Load content through Ajax
 
 The Tab supports to load external contents through AJAX library. Refer to the following steps.

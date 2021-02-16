@@ -1,9 +1,3 @@
----
-title: "animations"
-component: "Accordion"
-description: "This example demonstrates how to set custom animation for expand and collapse actions in the Blazor Accordion component."
----
-
 # Animations
 
 Accordion supports custom animations for both expand and collapse actions from the provided animation option of `Animation` library.  The animation property also allows you to set [`Easing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Easing), [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Duration), and various other effects of your choice.

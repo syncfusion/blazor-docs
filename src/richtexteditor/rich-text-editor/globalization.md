@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | Localize to German culture and RTL"
-component: "Rich Text Editor"
-description: "This section explains how to localize the Blazor Rich Text Editor to German language (culture) and Right-to-left support for RTL languages."
----
-
 # Globalization
 
 ## Localization

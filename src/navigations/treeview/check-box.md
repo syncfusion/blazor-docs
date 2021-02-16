@@ -1,9 +1,3 @@
----
-title: "CheckBox"
-component: "TreeView"
-description: "Checkbox functionality in treeview"
----
-
 # CheckBox
 
 The TreeView component allows you to check more than one node in TreeView without affecting the UI's appearance by enabling the `ShowCheckBox` property. When this property is enabled, checkbox appears before each TreeView node text.

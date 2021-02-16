@@ -1,9 +1,3 @@
----
-title: "Feature modules"
-component: "PDF Viewer"
-description: "Learn the feature-wise modules in ASP.NET CORE PDF Viewer and how to integrate it in your application."
----
-
 # Feature modules
 
 The PDF Viewer features are segregated into individual feature-wise modules to enable selectively referencing in the application. The required modules should be injected to extend its functionality. The following are the selective modules of PDF Viewer that can be included as required:

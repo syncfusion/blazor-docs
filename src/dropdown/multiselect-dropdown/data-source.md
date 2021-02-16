@@ -1,9 +1,3 @@
----
-title: "Multiselect Data binding"
-component: "MultiSelect"
-description: "This section for Syncfusion ASP.NET multiselect control shows how to bind with local data source and how to fetch data from remote data service."
----
-
 # Data Source
 
 The MultiSelect loads the data either from local data sources or

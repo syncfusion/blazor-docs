@@ -1,9 +1,3 @@
----
-title: "Animation Settings"
-component: "Context Menu"
-description: "This section helps to learn how to change the animation of context menu."
----
-
 # Change animation settings
 
 To change the animation of the Context Menu, [`MenuAnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettings.html) component is used to initialize the animation properties.

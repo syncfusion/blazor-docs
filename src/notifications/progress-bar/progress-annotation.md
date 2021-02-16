@@ -1,9 +1,3 @@
----
-title: "Annotation and Label | ASP.NET Core Blazor "
-component: "ProgressBar"
-description: "The Blazor ProgressBar component  supports the annotation and label."
----
-
 # Annotation and Label
 
 ## Annotation

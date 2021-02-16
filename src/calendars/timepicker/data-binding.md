@@ -1,9 +1,3 @@
----
-title: "Data-Binding"
-component: "TimePicker"
-description: "This section helps to learn how to bind the value in ASP.NET Core Blazor application"
----
-
 # Data Binding
 
 This section briefly explains how to bind the value to the TimePicker component in the below different ways.

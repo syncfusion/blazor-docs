@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "AutoComplete"
-description: "This section explains how to create a simple Syncfusion ASP.NET Core Blazor autocomplete control and configure it's functionalities in ASP.NET Core Blazor application."
----
-
 # Getting Started
 
 This section briefly explains how to include a **AutoComplete** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.

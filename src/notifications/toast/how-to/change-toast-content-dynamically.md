@@ -1,9 +1,3 @@
----
-title: "Blazor Toast Notification | Change toast content dynamically"
-component: "Toast"
-description: "This section explains how to change the toast content dynamically."
----
-
 # Change toast content dynamically
 
 The Toast component supports to change its content dynamically while displaying in newest toasts. You can change the toast content by updating property value, before calling in the `show` method.

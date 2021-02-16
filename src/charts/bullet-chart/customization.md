@@ -1,10 +1,4 @@
 ---
-title: " Bullet Chart Customization | ASP.NET Core Blazor "
-
-component: "Bullet Chart"
-
-description: "Bullet Chart have different customizable features like different orientation, flow directions and animation features"
----
 <!-- markdownlint-disable MD036 -->
 
 # Orientation

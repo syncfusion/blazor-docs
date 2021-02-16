@@ -1,11 +1,3 @@
----
-title: "Chart Axis Customization | ASP.NET Core Blazor"
-
-component: "Chart"
-
-description: "Chart axis contains different customization and types like axis crossing, multiple axis, inversed axis, tick and grid, title customizations"
----
-
 # Axis Customization
 
 ## Axis Crossing

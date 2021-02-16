@@ -1,9 +1,3 @@
----
-title: "Kanban Responsive"
-component: "Kanban"
-description: "This section explains how kanban has the responsive support to adapt kanban component’s width based on the devices."
----
-
 # Responsive mode
 
 The Kanban component has support for responsive behavior based on the client browser's width and height.

@@ -1,9 +1,3 @@
----
-title: "How-To"
-component: "Gantt Chart"
-description: "Learn how to hide the chart part from the Gantt Chart component."
----
-
 # Hide Chart part
 
 In the Gantt Chart component, you can hide chart part and display Tree Grid part alone by setting the value of `SplitterSettings.View` property as `Grid`.

@@ -1,9 +1,3 @@
----
-title: "Blazor Modal Dialog | Prevent modal from opening"
-component: "Dialog"
-description: "This section explains how to prevent the Blazor Modal Dialog from opening, which helps to open the Modal Dialog with condition-based."
----
-
 # Prevent opening of the dialog
 
 You can prevent opening of  the dialog by setting the `OnOpen` event argument cancel value to true.

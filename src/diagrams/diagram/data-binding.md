@@ -1,9 +1,3 @@
----
-title: "Data Binding"
-component: "Diagram"
-description: "Diagram supports data binding to display the list of items from local array/JSON data or server-side data source using DataManager."
----
-
 # Data Binding
 
 * Diagram can be populated with the `Nodes` and `Connectors` based on the information provided from an external data source.

@@ -1,9 +1,3 @@
----
-title: "Toggle between the states"
-component: "Toggle Switch Button"
-description: "This section explains how to toggle between the states using toggle method in Blazor."
----
-
 # Change Toggle Switch Button state using toggle method
 
 This section explains about how to toggle between the Toggle Switch Button states using [`Toggle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) method.

@@ -1,9 +1,3 @@
----
-title: "Columns Binding"
-component: "Query Builder"
-description: "This section helps to learn how to bind the columns in the Query Builder in Blazor application in step-by-step procedure."
----
-
 # Column Binding
 
 The column definitions are used as the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) schema in the Query Builder. This plays a vital role in rendering column values. The Query Builder operations such as create or delete conditions and create or delete groups are performed based on the column definitions. The [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) property of the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) is necessary to map the data source values in the query builder columns.
@@ -17,26 +11,24 @@ The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBui
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder TValue="EmployeeDetails" DataSource="@EmployeeData"></SfQueryBuilder>
+<SfQueryBuilder DataSource="@EmployeeDetails"></SfQueryBuilder>
 
 @code {
-    //Local datasource
-    public List<EmployeeDetails> EmployeeData = new List<EmployeeDetails>
+    public List<Employee> EmployeeDetails = new List<Employee>
     {
-        new EmployeeDetails{ FirstName = "Martin", EmployeeID = 1001, Country = "England", City = "Manchester", HireDate = new DateTime(2014, 4, 23) },
-        new EmployeeDetails{ FirstName = "Benjamin", EmployeeID = 1002, Country = "England", City = "Birmingham", HireDate = new DateTime(2014, 6, 19) },
-        new EmployeeDetails{ FirstName = "Stuart", EmployeeID = 1003, Country = "England", City = "London", HireDate = new DateTime(2014, 7, 4) },
-        new EmployeeDetails{ FirstName = "Ben", EmployeeID = 1004, Country = "USA", City = "California", HireDate = new DateTime(2014, 8, 15) },
-        new EmployeeDetails{ FirstName = "Joseph", EmployeeID = 1005, Country = "Spain", City = "Madrid", HireDate = new DateTime(2014, 8, 29) }
+        new Employee{ FirstName = "Martin", EmployeeID = "1001", Country = "England", City = "Manchester", HireDate = "23/04/2014" },
+        new Employee{ FirstName = "Benjamin", EmployeeID = "1002", Country = "England", City = "Birmingham", HireDate = "19/06/2014" },
+        new Employee{ FirstName = "Stuart", EmployeeID = "1003", Country = "England", City = "London", HireDate = "04/07/2014"},
+        new Employee{ FirstName = "Ben", EmployeeID = "1004", Country = "USA", City = "California", HireDate = "15/08/2014" },
+        new Employee{ FirstName = "Joseph", EmployeeID = "1005", Country = "Spain", City = "Madrid", HireDate = "29/08/2014" }
     };
 
-    public class EmployeeDetails
-    {
+    public class Employee {
         public string FirstName { get; set; }
-        public int EmployeeID { get; set; }
+        public string EmployeeID { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
-        public DateTime HireDate { get; set; }
+        public string HireDate { get; set; }
     }
 }
 
@@ -70,40 +62,12 @@ The available operators and its supported data types are:
 | notbetween | Checks whether the value is not between the two-specific value. | Date/Number |
 | in | Checks whether the value is one of the specific values. | String/Number |
 | notin | Checks whether the value is not in the specific values. | String/Number |
-| isempty | Checks whether the value is empty in the specific values. | String |
-| isnotempty | Checks whether the value is not empty in the specific values. | String |
-| isnull | Checks whether the value is null in the specific values. | String/Number |
-| isnotnull | Checks whether the value is not null in the specific values. | String/Number |
+| isempty | Checks whether the value is empty in the specific values. | String/Number |
+| isnotempty | Checks whether the value is not empty in the specific values. | String/Number |
 
 ## Step
 
-The Query Builder allows you to set the step values to the number fields. It allows you to increase or decrease the numeric value with the predefined Step value using the [`Step`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Step) property.
-
-```csharp
-@using Syncfusion.Blazor.QueryBuilder
-
-<SfQueryBuilder TValue="EmployeeDetails">
-    <QueryBuilderColumns>
-        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number" Step="5"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="Title" Label="Title" Type="ColumnType.String"></QueryBuilderColumn>
-    </QueryBuilderColumns>
-</SfQueryBuilder>
-
-@code {
-    public class EmployeeDetails
-    {
-        public int EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public bool TitleOfCourtesy { get; set; }
-        public string Title { get; set; }
-        public DateTime HireDate { get; set; }
-        public string Country { get; set; }
-        public string City { get; set; }
-    }
-}
-
-```
+The Query Builder allows you to set the step values to the number fields. So that, you can easily access the numeric textbox. Use the [`Step`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Step) property, to set the step value for number values.
 
 ## Format
 
@@ -112,27 +76,38 @@ The Query Builder formats date and number values. Use the [`Format`](https://hel
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder TValue="EmployeeDetails">
+<SfQueryBuilder DataSource="@EmployeeDetails" @ref="QueryBuilderObj">
     <QueryBuilderColumns>
-        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date" Format="MM-yyyy-dd"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="Title" Label="Title" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="number">
+        </QueryBuilderColumn>
+        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="string"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title Of Courtesy" Type="boolean">
+        </QueryBuilderColumn>
+        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="date" Format = "MM/dd/yyyy">
+        </QueryBuilderColumn>
+        <QueryBuilderColumn Field="Country" Label="Country" Type="string"></QueryBuilderColumn>
     </QueryBuilderColumns>
 </SfQueryBuilder>
 
 @code {
-    public class EmployeeDetails
-    {
-        public int EmployeeID { get; set; }
+        SfQueryBuilder QueryBuilderObj;
+        public List<Employee> EmployeeDetails = new List<Employee>
+        {
+        new Employee{ FirstName = "Martin", EmployeeID = "1001", Country = "England", City = "Manchester", HireDate = "23/04/2014" },
+        new Employee{ FirstName = "Benjamin", EmployeeID = "1002", Country = "England", City = "Birmingham", HireDate = "19/06/2014" },
+        new Employee{ FirstName = "Stuart", EmployeeID = "1003", Country = "England", City = "London", HireDate = "04/07/2014"},
+        new Employee{ FirstName = "Ben", EmployeeID = "1004", Country = "USA", City = "California", HireDate = "15/08/2014" },
+        new Employee{ FirstName = "Joseph", EmployeeID = "1005", Country = "Spain", City = "Madrid", HireDate = "29/08/2014" }
+    };
+
+    public class Employee {
         public string FirstName { get; set; }
-        public bool TitleOfCourtesy { get; set; }
-        public string Title { get; set; }
-        public DateTime HireDate { get; set; }
+        public string EmployeeID { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
+        public string HireDate { get; set; }
     }
 }
-
 ```
 
 Output will be shown as
@@ -141,36 +116,48 @@ Output will be shown as
 
 ## Validations
 
-Validation allows you to validate the conditions and it display errors for invalid fields. To enable validation in the Query Builder, set [`AllowValidation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true. Column fields are validated after setting [`AllowValidation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true.
+Validation allows you to validate the conditions and it display errors for invalid fields while using the [`ValidateFields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_ValidateFields) method. To enable validation in the Query Builder, set [`AllowValidation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true. Column fields are validated after setting [`AllowValidation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true. So, you should manually configure the validation for Operator and Value fields through `Validation`.
 
+> Set `IsRequired` validation for Operator and Value fields.
 > Set `Min`, `Max` values for number values.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
+@using Syncfusion.Blazor.Buttons
 
-<SfQueryBuilder TValue="EmployeeDetails" AllowValidation="true">
-    <QueryBuilderColumns>
-        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title of Courtesy" Type="ColumnType.Boolean" Values="Values"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="Title" Label="Title" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
-    </QueryBuilderColumns>
+<SfQueryBuilder DataSource="@EmployeeDetails" AllowValidation="true" @ref="QueryBuilderObj">
+                <QueryBuilderColumns>
+                    <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="number"></QueryBuilderColumn>
+                    <QueryBuilderColumn Field="FirstName" Label="First Name" Type="string"></QueryBuilderColumn>
+                    <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title Of Courtesy" Type="boolean"></QueryBuilderColumn>
+                    <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="date" Format = "MM/dd/yyyy"></QueryBuilderColumn>
+                    <QueryBuilderColumn Field="Country" Label="Country" Type="string"></QueryBuilderColumn>
+                </QueryBuilderColumns>
 </SfQueryBuilder>
+<SfButton CssClass="e-primary" @onclick="validate" >Validation</SfButton>
 
 @code {
-    private string[] Values = new string[] { "Mr.", "Mrs." };
-    public class EmployeeDetails
+    SfQueryBuilder QueryBuilderObj;
+    public List<Employee> EmployeeDetails = new List<Employee>
     {
-        public int EmployeeID { get; set; }
+        new Employee{ FirstName = "Martin", EmployeeID = "1001", Country = "England", City = "Manchester", HireDate = "23/04/2014" },
+        new Employee{ FirstName = "Benjamin", EmployeeID = "1002", Country = "England", City = "Birmingham", HireDate = "19/06/2014" },
+        new Employee{ FirstName = "Stuart", EmployeeID = "1003", Country = "England", City = "London", HireDate = "04/07/2014"},
+        new Employee{ FirstName = "Ben", EmployeeID = "1004", Country = "USA", City = "California", HireDate = "15/08/2014" },
+        new Employee{ FirstName = "Joseph", EmployeeID = "1005", Country = "Spain", City = "Madrid", HireDate = "29/08/2014" }
+    };
+
+    public class Employee {
         public string FirstName { get; set; }
-        public bool TitleOfCourtesy { get; set; }
-        public string Title { get; set; }
-        public DateTime HireDate { get; set; }
+        public string EmployeeID { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
+        public string HireDate { get; set; }
+    }
+
+    private void validate()
+    {
+        QueryBuilderObj.ValidateFields();
     }
 }
 

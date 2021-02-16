@@ -1,8 +1,4 @@
----
-title: "Open PDF files in PDF Viewer for Blazor"
-component: "PDF Viewer"
-description: "Learn how to open PDF files in Blazor PDF Viewer from URL, Cloud storage, database, location file system and base64 string."
----
+------
 # Open PDF files in PDF Viewer for Blazor from various storage location
 
 You might need to open and view the PDF files from various location. In this section, you can find information about how to open PDF files from URL, Cloud, database, local file system, and as base64 string.

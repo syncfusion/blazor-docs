@@ -1,9 +1,3 @@
----
-title: "Data Annotations for Toggle Switch Button"
-component: "Toggle Switch Button"
-description: "This section helps you to learn how to use Data Annotations"
----
-
 # Data Annotations for Toggle Switch Button
 
 This section demonstrates the Strongly typed extension support in Toggle Switch Button. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view. You can access model properties on that view. You can use data associated with model to render the component.

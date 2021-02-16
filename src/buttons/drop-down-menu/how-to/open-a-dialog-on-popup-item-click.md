@@ -1,9 +1,3 @@
----
-title: "Open a dialog on popup item click"
-component: "Dropdown Menu"
-description: " This section explains how to open dialog on popup item click in Blazor."
----
-
 # Open a dialog on popup item click
 
 This section explains about how to open a dialog on Dropdown Menu popup item click. This can be achieved by

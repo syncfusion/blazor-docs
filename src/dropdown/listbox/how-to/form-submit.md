@@ -1,9 +1,3 @@
----
-title: "Form submit to the listbox"
-component: "ListBox"
-description: "ListBox component supports form submit to the listbox."
----
-
 # Form submit to the listbox
 
 In the following code snippet, the value that is in selected state will be sent on form submit.

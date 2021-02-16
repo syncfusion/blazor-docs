@@ -1,9 +1,3 @@
----
-title: "Excel Export"
-component: "DataGrid"
-description: "Documentation on exporting DataGrid content to Excel and customizing the exported document with multi-export, headers and footers, and file name changes in the Blazor DataGrid Component."
----
-
 <!-- markdownlint-disable MD033 -->
 
 # Excel export

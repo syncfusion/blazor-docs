@@ -1,9 +1,3 @@
----
-title: "Page Settings"
-component: "Diagram"
-description: "Page settings enable you to customize the appearance, width, and height of the diagram page."
----
-
 # Page Settings
 
 Page settings enable to customize the appearance, width, and height of the diagram page.

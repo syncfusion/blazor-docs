@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "DataGrid"
-description: "Learn how to create an Blazor Data Grid component and enable features like paging, filtering, sorting, and grouping in Blazor Server side app using .NET Core CLI."
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting started with Syncfusion Data Grid in Blazor Server Side App using .NET Core CLI

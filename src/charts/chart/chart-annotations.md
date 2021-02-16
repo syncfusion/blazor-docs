@@ -1,11 +1,3 @@
----
-title: " Chart Annotations | ASP.NET Core Blazor "
-
-component: "Chart"
-
-description: "Chart annotations are used to mark the specific area of interest in the chart area with texts, shapes or images."
----
-
 # Annotation
 
 Annotations are used to mark the specific area of interest in the chart area with texts, shapes or images.

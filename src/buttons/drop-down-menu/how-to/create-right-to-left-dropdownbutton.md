@@ -1,9 +1,3 @@
----
-title: "Create right-to-left Dropdown Menu"
-component: "Dropdown Menu"
-description: "Dropdown Menu how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
----
-
 # Create right-to-left Dropdown Menu
 
 Dropdown Menu component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_EnableRtl) as true.

@@ -1,9 +1,3 @@
----
-title: "Enable or Disable the accordion item"
-component: "Accordion"
-description: "This example demonstrates how to enable or disable an accordion item in the Blazor Accordion component."
----
-
 # Enable/Disable Accordion Items
 
 Accordion provides a support to Enable/Disable the specified accordion item using accordion item **Disabled** property.

@@ -1,9 +1,3 @@
----
-title: "Access public method in DataGrid"
-component: "DataGrid"
-description: "Learn how to access public methods in the Blazor DataGrid component"
----
-
 # Access public method in datagrid
 
 You can access the public methods available in the DataGrid component by using its reference defined in the component initialization.

@@ -1,9 +1,3 @@
----
-title: "ListBox selection"
-component: "ListBox"
-description: "ListBox supports selection of single item or multiple item, and checkbox selection which supports selection of more than one items."
----
-
 # Selection
 
 The ListBox provides support to select an item or a group of item by mouse or keyboard action. There are two selection modes available in ListBox,

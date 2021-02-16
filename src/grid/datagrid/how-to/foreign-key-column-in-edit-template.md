@@ -1,9 +1,3 @@
----
-title: "Access Foreign key column in edit template"
-component: "DataGrid"
-description: "Learn how to access the foreign key column value in the dialog edit template of the Blazor DataGrid component"
----
-
 <!-- Access foreign key column in edit template
 
 You can define the **ForeignKeyColumn** in the grid and access it's value in the edit template property.

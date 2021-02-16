@@ -1,9 +1,3 @@
----
-title: "Ports"
-component: "Diagram"
-description: "Diagram provides support to define custom ports for making connections."
----
-
 # Ports
 
 Port is a special connection point in a Node that you can glue the connectors. When you glue a connector to a node or port, they stay connected, even if one of the node is moved.

@@ -1,9 +1,3 @@
----
-title: "Setting Dimension for Tooltip"
-component: "Tooltip"
-description: "Tooltip control's dimension can either be assigned auto height and width values or specific pixel values."
----
-
 # Setting Dimension
 
 ## Height and width

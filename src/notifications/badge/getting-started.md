@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "Badge"
-description: "Learn how to create an Badge control and use different types of Badge in Blazor application."
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

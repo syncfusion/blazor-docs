@@ -1,8 +1,4 @@
----
-title: "Magnification in PDF Viewer in Blazor server-side"
-component: "PDF Viewer"
-description: "Learn about the available options of magnification or zooming in PDF Viewer"
----
+------
 # Magnification
 
 The built-in toolbar of PDF Viewer contains the following zooming options:

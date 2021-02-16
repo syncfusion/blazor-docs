@@ -1,9 +1,3 @@
----
-title: "Globalization"
-component: "Calendar"
-description: "Explains how to render the calendar component with various culture and customize the localized text for static text present in components like a button text."
----
-
 # Globalization
 
 Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.

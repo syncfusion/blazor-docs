@@ -1,9 +1,3 @@
----
-title: "Save document through Blazor Word processor"
-component: "Word processor"
-description: "Learn how to save the composed or edited document through Blazor Word processor to server, database, and local file system."
----
-
 # Save documents to server, database and local file system
 
 After composing or editing the document, you will need to save the document to the server, database, or local file system.

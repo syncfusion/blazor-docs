@@ -1,11 +1,3 @@
----
-title: " Chart Print and Export | ASP.NET Core Blazor "
-
-component: "Chart"
-
-description: "The rendered chart can be printed or exported directly from the browser by calling the public method print and export."
----
-
 # Print
 
 ## Print

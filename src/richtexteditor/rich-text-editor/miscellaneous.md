@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | Code view, undo/redo manager"
-component: "Rich Text Editor"
-description: "This section describes how to configure the undo and redo manager, code view, placeholder, character count in the Blazor Rich Text Editor."
----
-
 # Miscellaneous
 
 ## Placeholder

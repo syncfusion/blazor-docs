@@ -1,9 +1,3 @@
----
-title: "Interaction Mode"
-component: "PDF Viewer"
-description: "Learn about the interaction in PDF Viewer."
----
-
 # Interaction Mode
 
 The PDF Viewer provides interaction mode for easy interaction with the loaded PDF document.  Selection mode and panning mode are the two interactions modes.

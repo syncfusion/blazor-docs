@@ -1,9 +1,3 @@
----
-title: "Hide dropdown arrow"
-component: "DropDownButton"
-description: "DropDownButton how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
----
-
 # Hide dropdown arrow
 
 You can hide the dropdown arrow from the DropDownButton by adding class `e-caret-hide`

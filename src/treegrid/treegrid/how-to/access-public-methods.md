@@ -1,9 +1,3 @@
----
-title: "Access public method in Tree Grid"
-component: "TreeGrid"
-description: "Learn how to access public methods in the Blazor Tree Grid component"
----
-
 # Access public method in Tree Grid
 
 You can access the public methods available in the Tree Grid component by using its reference defined in the component initialization.

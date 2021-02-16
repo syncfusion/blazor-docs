@@ -1,9 +1,3 @@
----
-title: "Hyperlink"
-component: "Pivot Table"
-description: "User allows to show hyperlink option to the link data for individual cells."
----
-
 # Hyperlink
 
 The pivot table supports to show hyperlink option to link data for individual cells that are displayed in the component. Also, the hyperlink can be enabled separately for row headers, column headers, value cells, and summary cells using the [`PivotViewHyperlinkSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. It can be configured through code behind, during initial rendering and the settings available to show hyperlink are:

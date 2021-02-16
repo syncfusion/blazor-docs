@@ -1,9 +1,3 @@
----
-title: "Selection"
-component: "Gantt Chart"
-description: "Learn how to select the row in the Blazor Gantt Chart component."
----
-
 # Selection
 
 Selection provides an option to highlight a row or a cell. It can be done using arrow keys or by scrolling down the mouse. To disable selection in the Gantt Chart component, set the `AllowSelection` to false.

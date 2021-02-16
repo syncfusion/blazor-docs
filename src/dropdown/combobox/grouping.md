@@ -1,9 +1,3 @@
----
-title: "Combo box Grouping"
-component: "ComboBox"
-description: "This section Syncfusion ASP.NET combo box control demonstrates the grouping with individual header and it's header customization."
----
-
 # Grouping
 
 The ComboBox supports wrapping nested elements into a group based on different categories. The category

@@ -1,9 +1,3 @@
----
-title: "Blazor Modal Dialog | Customize Animation Popup"
-component: "Dialog"
-description: "This section explains how to open or close the Blazor Modal Dialog component by applying various animation effects by customizing duration and delay."
----
-
 # Animation
 
 The Dialog can be animated during the open and close actions. Also, users can

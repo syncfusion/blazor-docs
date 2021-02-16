@@ -1,11 +1,3 @@
----
-title: "Stock Chart Period Selector | ASP.NET Core Blazor "
-
-component: "Stock Chart"
-
-description: "The period selector allows to select a range with specified periods."
----
-
 # Period selector
 
 The period selector allows to select a range with specified periods. By default the period selector is enabled in stock chart.

@@ -1,9 +1,3 @@
----
-title: "Globalization"
-component: "DateRangePicker"
-description: "Explains how to render date range picker with various culture and customize the localized text for static text present in components like a button text."
----
-
 # Globalization
 
 Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.

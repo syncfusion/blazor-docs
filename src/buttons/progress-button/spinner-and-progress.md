@@ -1,9 +1,3 @@
----
-title: "Progress Button Spinner and Progress"
-component: "Progress Button"
-description: "Progress Button allows the user to change size & position of the spinner, customize spinner using template and to change the progress."
----
-
 <!-- markdownlint-disable MD002 MD022 -->
 ## Spinner
 

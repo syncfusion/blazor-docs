@@ -1,11 +1,3 @@
----
-title: "Pyramid | ASP.NET Core Blazor "
-
-component: "Accumulation Chart"
-
-description: "The pyramid chart displays series value as progressively decreasing amount to hundred percent in total"
----
-
 # Pyramid Chart
 
 To render a pyramid series, use the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type)

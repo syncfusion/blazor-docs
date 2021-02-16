@@ -1,9 +1,3 @@
----
-title: "ListView Data Binding"
-component: "ListView"
-description: "ListView supports data binding to display the list of items from local array/JSON data or server-side data source using DataManager."
----
-
 # Data binding
 
 ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the dataSource property that supports the data type of array or DataManager.

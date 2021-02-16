@@ -1,9 +1,3 @@
----
-title: "ListView how to ListView with hyper-link navigation"
-component: "ListView"
-description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
----
-
 # How to ListView with hyper-link navigation
 
 We can use `anchor` tag along with `href` attribute in our ListView `Template` property for navigation.

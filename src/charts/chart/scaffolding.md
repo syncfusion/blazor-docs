@@ -1,11 +1,3 @@
----
-title: " Chart Scaffolding | ASP.NET MVC "
-
-component: "Chart"
-
-description: "Scaffolding provides an easier way to create Views and Controller action methods for Syncfusion ASP.NET MVC  Chart controls."
----
-
 # ASP.NET MVC Scaffolding
 
 Syncfusion includes an extension for **Visual Studio Scaffolding** for the Syncfusion ASP.NET MVC platform to quickly add code that interacts with data models and reduce the amount of time to develop with data operation in your project. Scaffolding provides an easier way to create Views and Controller action methods for Syncfusion ASP.NET MVC  Chart controls.

@@ -1,9 +1,3 @@
----
-title: "Search"
-component: "Tree Grid"
-description: "Learn how to search Tree Grid content, change search operators, perform searches using external buttons, and search particular fields."
----
-
 # Search
 
 You can search records in a Tree Grid, by using the [`Search`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Search.html) method with search key as a parameter. This also provides an option to integrate search text box in tree grid's toolbar by adding **Search** item to the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html).

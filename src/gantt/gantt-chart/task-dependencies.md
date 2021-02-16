@@ -1,9 +1,3 @@
----
-title: "Dependency"
-component: "Gantt Chart"
-description: "Learn how to provide dependency support for a task in Blazor Gantt Chart component."
----
-
 # Task Dependencies
 
 Task dependency or task relationship can be established between two tasks in Gantt Chart. This dependency affects the project schedule. If you change the predecessor of a task, it will affect the successor task, which will affect the next task, and so on.

@@ -1,9 +1,3 @@
----
-title: "Label Appearance"
-component: "Diagram"
-description: "How to change the appearance of the lable"
----
-
 # Appearance
 
 ## Customize the size for an annotation

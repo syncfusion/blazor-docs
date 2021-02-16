@@ -1,9 +1,3 @@
----
-title: "Accessibility"
-component: "Pivot Table"
-description: "Pivot Table provides access to all the features through keyboard, on-screen reader, or other assertive technology devices."
----
-
 # Accessibility
 
 Accessibility is achieved in the pivot table component through WAI-ARIA standard and keyboard navigation. The pivot table features can be effectively accessed through assistive technologies such as screen readers.

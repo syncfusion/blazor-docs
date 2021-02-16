@@ -1,8 +1,4 @@
----
-title: "View DOCX file in Blazor application"
-component: "PDF Viewer"
-description: "Learn the different ways about how to view DOCX file in Blazor app. Load it using Word processor control or Convert DOCX to PDF and load it in PDF Viewer."
----
+------
 # How to view or display DOCX file in Blazor application
 
 You can achieve this requirement of viewing DOCX file in two ways:.

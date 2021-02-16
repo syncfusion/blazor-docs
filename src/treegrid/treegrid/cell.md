@@ -1,9 +1,3 @@
----
-title: "Cell"
-component: "Tree Grid"
-description: "Learn how to customize the Tree Grid cells with styling, text wrapping, and tooltips."
----
-
 # Cell
 
 ## Displaying the HTML content

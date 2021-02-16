@@ -1,9 +1,3 @@
----
-title: "Types | ASP.NET Core Blazor "
-component: "ProgressBar"
-description: "The ProgressBar Visualize the progress in different shapes"
----
-
 # Types
 
 Visualize progress in different shapes (rectangle, circle, and semi-circle) to give a unique appearance to your app design.

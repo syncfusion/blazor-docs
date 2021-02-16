@@ -1,9 +1,3 @@
----
-title: "Number Formatting"
-component: "Pivot Table"
-description: "Number Formatting allows user to formatting numeric values in pivot table."
----
-
 # Number Formatting
 
 Allows you to specify the required display format that should be used in values of the pivot table. Supported display formats are:

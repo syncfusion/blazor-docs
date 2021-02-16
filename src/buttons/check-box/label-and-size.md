@@ -1,9 +1,3 @@
----
-title: "Checkbox Label and Size"
-component: "Checkbox"
-description: "Checkbox control supports different sizes and label."
----
-
 # Label and Size
 
 This section explains the different sizes and labels.

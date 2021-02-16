@@ -1,9 +1,3 @@
----
-title: "Tabs Responsive Modes"
-component: "Tabs"
-description: "Tabs component has an adaptive support to adapt the Tabs component width based on devices like mobile and tablet."
----
-
 # Responsive Modes
 
 The following section explains about rendering Tab when its width exceeds the viewable area or particularly in a given width. The available modes are as follows:

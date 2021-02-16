@@ -1,9 +1,3 @@
----
-title: "Native Event"
-component: "ComboBox"
-description: "This section helps to learn how to trigger the native events in ASP.NET Core Blazor application"
----
-
 # Overview
 
 The following section explains the steps to include native events and pass data to event handler in ComboBox component.

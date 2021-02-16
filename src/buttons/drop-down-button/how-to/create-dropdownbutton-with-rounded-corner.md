@@ -1,9 +1,3 @@
----
-title: "Create DropDownButton with rounded corner"
-component: "DropDownButton"
-description: "DropDownButton how to section, hide drop down arrow, group popup items using list view component, dialog open on popup item click."
----
-
 # Create DropDownButton with rounded corner
 
 DropDownButton with rounded corner can be achieved by adding `border-radius` CSS property to button element.

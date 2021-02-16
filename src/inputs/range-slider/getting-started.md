@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "Range Slider"
-description: "Learn how to create an Blazor Slider control and enable features like ticks, tooltip, limits in Blazor."
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

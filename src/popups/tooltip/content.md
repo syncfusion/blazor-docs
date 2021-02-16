@@ -1,9 +1,3 @@
----
-title: "Tooltip Content"
-component: "Tooltip"
-description: "Tooltip control's content can be assigned with static text, template, or loaded dynamically via AJAX."
----
-
 # Content
 
 A text or a piece of information assigned to the Tooltip's `Content` property will be displayed as the main text stream of the Tooltip.

@@ -1,9 +1,3 @@
----
-title: "Change the color of the TextBox based on its value"
-component: "Textbox"
-description: "Explains how to change color of the text box by validating the text box value using a regular expression."
----
-
 # Change the color of the TextBox based on its value
 
 You can change the color of the TextBox by validating its value using regular expression in the `Input` event for predicting the numeric values as demonstrated in the following code sample.

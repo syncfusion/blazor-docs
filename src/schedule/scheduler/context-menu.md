@@ -1,9 +1,3 @@
----
-title: "Context menu"
-component: "Scheduler"
-description: "This section explains how to integrate the context menu manually to a Scheduler and use it with required options."
----
-
 # Context Menu
 
 You can display context menu on work cells and appointments of Scheduler by making use of the `ContextMenu` control manually from the application end. In the following code example, context menu control is being added from sample end and set its target as `Scheduler` and the target element is get by using `GetTargetElement` public method in Blazor.

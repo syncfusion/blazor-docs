@@ -1,9 +1,3 @@
----
-title: "CSS Structure"
-component: "Diagram"
-description: "CSS Structure is used to customize the style in diagram component"
----
-
 # CSS Structure
 
 ## Customizing the connector end point handle

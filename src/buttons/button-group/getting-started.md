@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "ButtonGroup"
-description: "This section helps to learn how to create the ButtonGroup in Blazor application with its basic features in step-by-step procedure."
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor ButtonGroup Component

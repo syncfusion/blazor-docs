@@ -1,9 +1,3 @@
----
-title: "Scheduler - Overview"
-component: "Scheduler"
-description: "This section includes the overview of overall features available in Syncfusion Scheduler."
----
-
 # Overview
 
 The **Scheduler** component is an event calendar which facilitates user with the common Outlook-calendar features,

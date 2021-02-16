@@ -1,9 +1,3 @@
----
-title: "Events"
-component: "TimePicker"
-description: "Learn how to use events in Blazor TimePicker component."
----
-
 # Events
 
 This section explains the list of events of the TimePicker component which will be

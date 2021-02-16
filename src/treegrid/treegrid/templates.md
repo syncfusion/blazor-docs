@@ -1,9 +1,3 @@
----
-title: "Templates"
-component: "Tree Grid"
-description: "Learn the various templates in Blazor Tree Grid component and how to use templates to customize the Tree Grid."
----
-
 # Templates
 
 Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Tree Grid is a templated razor component, that allow you to customize various part of the UI using template parameters. It allow you to render custom components or content based on your own logic.

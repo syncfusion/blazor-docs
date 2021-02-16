@@ -1,9 +1,3 @@
----
-title: "Paging"
-component: "DataGrid"
-description: "Learn how to add and customize the pager in the Blazor DataGrid component."
----
-
 # Paging
 
 Paging provides an option to display DataGrid data in page segments. To enable paging, set the [`AllowPaging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) to true. When paging is enabled, pager component renders at the bottom of the datagrid.

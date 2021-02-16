@@ -1,9 +1,3 @@
----
-title: "Work in offline mode"
-component: "Data Manager"
-description: "Documentation on enabling offline mode in the Blazor Data Manager"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Work in offline mode

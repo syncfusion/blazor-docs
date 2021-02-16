@@ -1,9 +1,3 @@
----
-title: "ListView how To create dual list from listview"
-component: "ListView"
-description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
----
-
 # How to create dual list from listview
 
 The dual list contains two ListView. This allows you to move list items from one list to another using the client-side

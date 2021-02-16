@@ -1,8 +1,3 @@
----
-title: "Getting Started"
-component: "File Manager"
-description: "Learn how to create a File Manager component in Blazor."
----
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

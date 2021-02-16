@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | Table, row, and column properties"
-component: "Rich Text Editor"
-description: "This section demonstrates the table element of the Blazor Rich Text editor that consists of how to insert a table, row, column with the quick toolbar."
----
-
 # Table
 
 Rich Text Editor allows you to insert table of content in edit panel and provide options to add, edit, and remove the table as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the `RichTextEditorTableSettings`

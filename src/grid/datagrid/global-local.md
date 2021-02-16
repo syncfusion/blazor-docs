@@ -1,9 +1,3 @@
----
-title: "Globalization"
-component: "DataGrid"
-description: "Learn how to apply localization (l10n), internationalization (i18n), and right-to-left (RTL) in Blazor DataGrid Component."
----
-
 # Globalization
 
 Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.

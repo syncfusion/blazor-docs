@@ -1,9 +1,3 @@
----
-title: "Add, Edit and Delete Scheduler Events"
-component: "Blazor Scheduler"
-description: "This section demonstrates all possible methods available on Scheduler to perform CRUD actions on the events."
----
-
 # CRUD Actions
 
 Events, a.k.a. Appointments, play an important role in Scheduler with which the users mostly interact. You can easily manipulate (add/edit/delete) the desired appointments as and when required either using the editor window or through the drag and resize action.

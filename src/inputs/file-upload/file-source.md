@@ -1,9 +1,3 @@
----
-title: "File source"
-component: "Uploader"
-description: "Explains various sources to file upload such as drag and drop (customizable), paste the images, folder selection (directory upload)."
----
-
 # File source
 
 ## Directory upload

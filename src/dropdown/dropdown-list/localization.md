@@ -1,9 +1,3 @@
----
-title: "Drop-down list Localization"
-component: "DropDownList"
-description: "This section explains the localization support of the Syncfusion ASP.NET drop-down list control."
----
-
 # Localization
 
 ## Blazor server side

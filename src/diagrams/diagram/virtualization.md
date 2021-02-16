@@ -1,9 +1,3 @@
----
-title: "Virtualization"
-component: "Diagram"
-description: "Virtualization loads the objects available in the visible area of diagram control"
----
-
 # Virtualization
 
 ## Virtualization in Diagram

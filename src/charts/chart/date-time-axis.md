@@ -1,11 +1,3 @@
----
-title: " Chart Datetime Axis | ASP.NET Core Blazorss "
-
-component: "Chart"
-
-description: "Date time axis uses date time scale and displays the date time values as axis labels in the specified format."
----
-
 <!-- markdownlint-disable MD036 -->
 
 # DateTime and DateTimeCategory Axis

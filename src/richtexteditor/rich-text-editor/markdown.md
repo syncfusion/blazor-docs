@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | Markdown Editor | Markdown to HTML"
-component: "Rich Text Editor"
-description: "This section describes the markdown editor using the Blazor Rich Text Editor with markdown to HTML, supported elements in markdown mode, and more."
----
-
 # Markdown
 
 In Rich Text Editor, click the toolbar buttons to format the words and the changes are visible immediately.

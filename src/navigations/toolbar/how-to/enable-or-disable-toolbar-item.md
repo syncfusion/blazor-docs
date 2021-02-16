@@ -1,9 +1,3 @@
----
-title: "How to enable/disable toolbar items"
-component: "Toolbar"
-description: "This example demonstrates how to enable/disable the specific toolbar item based on the condition."
----
-
 # How to enable/disable toolbar items
 
 The `Disabled` property of the Toolbar item is used to enable/disable the item by setting false/true value to the property. In the following code example initially paste action will be disabled. On clicking the cut button, the paste button will be enabled.

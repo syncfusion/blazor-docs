@@ -1,9 +1,3 @@
----
-title: "Blazor In-place Editor | Integrate HTML5 components"
-component: "In-place Editor"
-description: "This section describes how to integrate native HTML5 components (input, date, and more) to the Blazor In-place Editor through a selector and HTML element."
----
-
 # Integrate HTML5 components (Template)
 
 The In-place Editor supports adding HTML5 input components using the `InPlaceEditorTemplate` property. The Template property can be given as follows.

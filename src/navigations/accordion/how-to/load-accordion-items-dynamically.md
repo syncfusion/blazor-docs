@@ -1,9 +1,3 @@
----
-title: "Load accordion items dynamically"
-component: "Accordion"
-description: "This example demonstrates how to dynamically load or add an accordion item in the Blazor Accordion component."
----
-
 # Load items dynamically
 
 Accordion provides support to add/remove items dynamically by iteration of Accordion items using looping.

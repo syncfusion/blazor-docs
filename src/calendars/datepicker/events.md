@@ -1,9 +1,3 @@
----
-title: "Events"
-component: "DatePicker"
-description: "Learn how to use events in Blazor DatePicker component."
----
-
 # Events
 
 This section explains the list of events of the DatePicker component which will be

@@ -1,9 +1,3 @@
----
-title: "How to get selected items from listview"
-component: "ListView"
-description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
----
-
 # How to get selected items from listview
 
 Single or many items can be selected by users in the ListView control. An API is used to get selected items from the

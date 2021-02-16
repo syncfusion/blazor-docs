@@ -1,9 +1,3 @@
----
-title: "ListView how to use dynamic templates in listview based on device"
-component: "ListView"
-description: "Blazor ListView how to section, get selected item, dual list, listview filtering, add & remove items from listview, grid layout using listview, listview drag & drop."
----
-
 # How to use dynamic templates in listview based on device
 
 The Syncfusion Essential Blazor controls are desktop and mobile-friendly. So, you can use Syncfusion controls in

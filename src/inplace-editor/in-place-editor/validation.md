@@ -1,9 +1,3 @@
----
-title: "Blazor In-place Editor | Custom form validation with rules"
-component: "In-place Editor"
-description: "This section demonstrates how to apply custom validation rules and error message to the Blazor In-place Editor component. "
----
-
 # Validation
 
 Now, validation can be done by using the  EditForm validation on the server-side. We need to handle the validation from the application level and the custom validation can also be achieved by using this.

@@ -1,9 +1,3 @@
----
-title: "Getting Started"
-component: "Calendar"
-description: "Explains how to get started with the calendar component with its key features such as restrict the date selection, validation, strict mode, and more."
----
-
 # Getting Started
 
 This section briefly explains how to include a **Calendar** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.

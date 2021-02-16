@@ -1,9 +1,3 @@
----
-title: "Date range slider"
-component: "Slider"
-description: "Learn how to create date range slider in Blazor Slider Component."
----
-
 # Date Range Slider
 
 The date formatting can be achieved using `TicksRendering` and `TooltipChange` events. The process of date formatting is explained in the below sample.

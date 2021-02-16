@@ -1,9 +1,3 @@
----
-title: "Blazor Rich Text Editor | how to | Format code block using toolbar button"
-component: "Rich Text Editor"
-description: "This section explains about, how to format code block using toolbar button click in Blazor Rich Text Editor component."
----
-
 # Format code block using toolbar button
 
 You can configure code block formatting as a separate toolbar button by adding the **InsertCode** Command within the `RichTextEditorToolbarSettings` - `Items` property.

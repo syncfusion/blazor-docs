@@ -28,17 +28,17 @@ gulp.task('ship-to-gitlap', function(done) {
 
     console.log('--is_temp----' + is_temp);
 
-    //      var cloneRepos = [];
-    //      for (var i = 0; i < changedFileNames.length; i++) {
-    //          var curentRootRepo = changedFileNames[i].split('/')[1];
-    // //          if(curentRootRepo ==='workflows'){
-    // //              return
-    // //          }
-    //          if (curentRootRepo != undefined && curentRootRepo !='workflows') {
-    //              cloneRepos.push(curentRootRepo);
-    //          }
-    //    }
     var cloneRepos = [];
+    for (var i = 0; i < changedFileNames.length; i++) {
+        var curentRootRepo = changedFileNames[i].split('/')[1];
+        //         if(curentRootRepo !='workflows'){
+        //             return
+        //            }
+        if (curentRootRepo != undefined && curentRootRepo != 'workflows') {
+            cloneRepos.push(curentRootRepo);
+        }
+    }
+
     console.log('--cloneRepos----' + cloneRepos);
 
     for (var j = 0; j < cloneRepos.length; j++) {
@@ -49,8 +49,8 @@ gulp.task('ship-to-gitlap', function(done) {
         });
         if (clone.code !== 0) {
             console.log(clone.stderr);
-            //             done();
-            //             return;
+            done();
+            return;
         } else {
             console.log('Clone has been completed...!');
             shelljs.cp('-rf', `./src/${cloneRepos[j]}/*`, `./gitlapRepo/ej2-${cloneRepos[j]}-razor-docs/src`);
@@ -63,10 +63,20 @@ gulp.task('ship-to-gitlap', function(done) {
         }
     }
 })
+gulp.task('remove-md', function() {
+        fs.readdirSync('src/**/*.md', function(files) {
 
-/**
- * Lint md files in src location
- */
+            files.forEach(function(file) {
+                if (file.existsSync(/(.*)\n+component:(.*)+\n(.*)/)) {
+                    file.replace(/(.*)\n+component:(.*)+\n(.*)/, '');
+                    console.log('successfully replaced');
+                }
+            });
+        })
+    })
+    /**
+     * Lint md files in src location
+     */
 gulp.task('lint', function(done) {
     var markdownlint = require('markdownlint');
     components = controlsList();

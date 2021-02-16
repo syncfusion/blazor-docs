@@ -241,7 +241,7 @@ The following GIF represent a datagrid with Mask row virtualization.
 * While using column virtualization, column width should be in the pixel. Percentage values are not accepted.
 * Due to the element height limitation in browsers, the maximum number of records loaded by the datagrid is limited by the browser capability.
 * Cell selection will not be persisted in both row and column virtualization.
-* Virtual scrolling is not compatible with detail template and hierarchy features.
+* Virtual scrolling is not compatible with detail template, frozen rows, frozen columns and hierarchy features
 * Group expand and collapse state will not be persisted.
 * Since data is virtualized in datagrid, the aggregated information and total group items are displayed based on the current view items.
 * The page size provided must be two times larger than the number of visible rows in the datagrid. If the page size is failed to meet this condition then the size will be determined by datagrid.

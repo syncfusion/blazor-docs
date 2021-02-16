@@ -1,7 +1,3 @@
----
-component: "Data manager"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

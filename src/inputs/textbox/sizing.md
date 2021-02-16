@@ -1,7 +1,3 @@
----
-component: "TextBox"
----
-
 # Sizing
 
 You can render the TextBox in two different sizes:

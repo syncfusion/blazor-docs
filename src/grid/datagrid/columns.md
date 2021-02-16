@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Columns
 
 The column definitions are used as the **DataSource** schema in the DataGrid. This plays a vital role in rendering column values in the required format.

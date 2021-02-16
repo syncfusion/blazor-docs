@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Keyboard support
 
 The editor has full keyboard accessibility that includes shortcuts to open and other actions with toolbar items, drop-down lists, and dialogs.

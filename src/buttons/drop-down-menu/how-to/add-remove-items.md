@@ -1,7 +1,3 @@
----
-component: "DropDown Menu"
----
-
 # Add and Remove Items
 
 Dropdown Menu component can be dynamically add or remove items using  `AddItems`, `RemoveItems` method.

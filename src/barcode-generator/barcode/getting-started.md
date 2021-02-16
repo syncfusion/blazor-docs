@@ -1,7 +1,3 @@
----
-component: "BarcodeGenerator"
----
-
 # Getting Started
 
 This section briefly explains about how to include a BarcodeGenerator in your Blazor Server-Side application. You can refer [`Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019`](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor-server/) page for the introduction and configuring the common specifications.

@@ -1,6 +1,4 @@
----
-component: "Splitter"
----
+------
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

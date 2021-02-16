@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Methods
 
 The following methods are used to perform the diagram functionalities.

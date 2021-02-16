@@ -1,7 +1,3 @@
----
-component: "TreeGrid"
----
-
 # Access public method in Tree Grid
 
 You can access the public methods available in the Tree Grid component by using its reference defined in the component initialization.

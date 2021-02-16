@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Category Axis
 
 <!-- markdownlint-disable MD036 -->

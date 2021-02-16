@@ -1,7 +1,3 @@
----
-component: "Range Slider"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

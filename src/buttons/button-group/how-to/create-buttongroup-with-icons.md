@@ -1,7 +1,3 @@
----
-component: "ButtonGroup"
----
-
 # Create ButtonGroup with icons
 
 ButtonGroup with icons can be achieved by `IconCss` property of the Button component.

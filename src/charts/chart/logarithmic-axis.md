@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Logarithmic Axis
 
 <!-- markdownlint-disable MD033 -->

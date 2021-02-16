@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Load dialog content using AJAX
 
 You can load the dialog's content dynamically from external source like external file using AJAX library.

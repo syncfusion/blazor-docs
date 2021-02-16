@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How To filter and search list items using listview
 
 The filtered data can be displayed in the ListView control depending upon on user inputs. Refer to the

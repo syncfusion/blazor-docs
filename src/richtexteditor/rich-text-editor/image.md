@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Image
 
 Rich Text Editor allows inserting images from online sources and local computer where you want to insert the image in your content. For inserting the image to the Rich Text Editor, the following list of options have been provided in the `RichTextEditorImageSettings`.

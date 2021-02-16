@@ -1,7 +1,3 @@
----
-component: "Kanban"
----
-
 # Workflow
 
 Kanban workflow allows to set the flow of cards between the columns. It provides restriction on columns when the card is moved from one column to another column. It provides support to prevent the drag and drop action on the column.

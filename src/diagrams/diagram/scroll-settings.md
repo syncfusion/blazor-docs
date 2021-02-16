@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Scroll Settings
 
 The diagram can be scrolled by using the vertical and horizontal ScrollBars. In addition to the ScrollBars, mousewheel can be used to scroll the diagram.

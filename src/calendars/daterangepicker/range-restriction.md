@@ -1,7 +1,3 @@
----
-component: "DateRangePicker"
----
-
 # Range Restriction
 
 Range selection in a DateRangePicker can be made-to-order with desired restrictions based on the application needs.

@@ -1,7 +1,3 @@
----
-component: "Slider"
----
-
 # Orientation
 
 The Slider can be displayed, either in horizontal or vertical orientation. By default, the Slider renders in horizontal orientation.

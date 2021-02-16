@@ -1,7 +1,3 @@
----
-component: "Menu Bar"
----
-
 # Accessibility
 
 ## ARIA attributes

@@ -1,7 +1,3 @@
----
-component: "Scheduler"
----
-
 # Editor window and quick popups
 
 Scheduler makes use of popups and dialog to display the required notifications, as well as includes an editor window with event fields for making the appointment creation and editing process easier. You can also easily customize the editor window and the fields present in it, and can also apply validations on those fields.

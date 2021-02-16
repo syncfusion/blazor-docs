@@ -1,7 +1,3 @@
----
-component: "Calendar"
----
-
 # Calendar Views
 
 A Calendar has the following predefined views

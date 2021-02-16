@@ -1,7 +1,3 @@
----
-component: "TextBox"
----
-
 # Validation
 
 The TextBox supports three types of validation styles namely `error`, `warning`, and `success`. These states are

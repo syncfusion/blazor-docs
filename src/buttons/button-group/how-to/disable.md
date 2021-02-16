@@ -1,7 +1,3 @@
----
-component: "ButtonGroup"
----
-
 # Disable
 
 ## Particular button

@@ -1,7 +1,3 @@
----
-component: "DatePicker"
----
-
 # Date Range
 
 The DatePicker provides an option to select a date value within a specified range by using the

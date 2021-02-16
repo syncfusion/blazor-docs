@@ -1,7 +1,3 @@
----
-component: "Pivot Table"
----
-
 # Aggregation
 
 > This feature is applicable only for relational data source.

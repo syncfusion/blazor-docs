@@ -1,7 +1,3 @@
----
-component: "Progress Button"
----
-
 <!-- markdownlint-disable MD002 MD022 -->
 ## Spinner
 

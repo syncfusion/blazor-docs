@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Globalization
 
 Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.

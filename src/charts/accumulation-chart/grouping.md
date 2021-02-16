@@ -1,9 +1,3 @@
----
-
-component: "Accumulation Chart"
-
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Grouping

@@ -1,7 +1,3 @@
----
-component: "Context Menu"
----
-
 # Multilevel nesting
 
 The Multiple level nesting supports in Context Menu. It can be achieved by mapping the [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~Items.html)

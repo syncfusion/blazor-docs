@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Custom toolbar items with text name same as default toolbar items
 
 You can create the Custom toolbar items with text name same as default toolbar items (Add,Edit,Delete,etc.). But while creating them, they will be considered as default toolbar items which will cause some issues while clicking on it. To overcome this behavior, we suggest you to define the **Id** property for custom toolbar items.

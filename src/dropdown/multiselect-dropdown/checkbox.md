@@ -1,7 +1,3 @@
----
-component: "MultiSelect"
----
-
 # CheckBox
 
 The MultiSelect has built-in support to select multiple values through checkbox,

@@ -1,7 +1,3 @@
----
-component: "AutoComplete"
----
-
 # Templates
 
 The AutoComplete has been provided with several options to customize each list items, group title, header,

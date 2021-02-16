@@ -1,7 +1,3 @@
----
-component: "Dropdown Menu"
----
-
 # Popup items
 
 ## Icons

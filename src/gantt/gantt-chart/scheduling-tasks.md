@@ -1,7 +1,3 @@
----
-component: "Gantt Chart"
----
-
 # Scheduling Tasks
 
 ## Duration units

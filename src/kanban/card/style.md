@@ -1,8 +1,4 @@
 ---
-
-component: "Card"
-
----
 <!-- markdownlint-disable MD036 -->
 
 # CSS Structure

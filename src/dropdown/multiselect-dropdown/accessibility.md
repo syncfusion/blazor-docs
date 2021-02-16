@@ -1,7 +1,3 @@
----
-component: "MultiSelect"
----
-
 # Accessibility
 
 The MultiSelect component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies

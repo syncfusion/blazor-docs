@@ -1,7 +1,3 @@
----
-component: "Word processor"
----
-
 # Open documents in Blazor Word processor from various storage location
 
 You might need to open and view Word documents from various location. In this section, you can find the information about how to open Word documents from URL, cloud, database, and local file system and also how to load a document during control initialization.

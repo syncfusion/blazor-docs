@@ -1,7 +1,3 @@
----
-component: "Switch"
----
-
 # Change Size
 
 The different Switch sizes available are default and small. To reduce the size of default Switch to small,

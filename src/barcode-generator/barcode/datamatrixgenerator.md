@@ -1,7 +1,3 @@
----
-component: "BarcodeGenerator"
----
-
 # Data Matrix generator
 
 # Data Matrix

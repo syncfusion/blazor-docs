@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Achieve two-way binding to the visible property
 
 ## Two-way binding

@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Table
 
 Rich Text Editor allows you to insert table of content in edit panel and provide options to add, edit, and remove the table as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the `RichTextEditorTableSettings`

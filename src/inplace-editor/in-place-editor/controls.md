@@ -1,7 +1,3 @@
----
-component: "In-place Editor"
----
-
 # List of components
 
 In-place Editor renders various components based on the `Type` property and the Editor components should be rendered inside the In-place Editor. Also, need to configure the two-way binding between the In-place Editor and its EditorComponent. It is used to update the EditorComponent value into the In-place Editor component.

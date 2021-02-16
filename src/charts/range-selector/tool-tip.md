@@ -1,9 +1,3 @@
----
-
-component: "RangeNavigator"
-
----
-
 # Tooltip
 
 <!-- markdownlint-disable MD036 -->

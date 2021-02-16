@@ -1,7 +1,3 @@
----
-component: "ComboBox"
----
-
 # Grouping
 
 The ComboBox supports wrapping nested elements into a group based on different categories. The category

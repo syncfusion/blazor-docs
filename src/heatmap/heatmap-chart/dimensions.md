@@ -1,7 +1,3 @@
----
-component: "Heatmap"
----
-
 # Dimensions
 
 ## Size for heat map

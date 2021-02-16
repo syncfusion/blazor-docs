@@ -1,7 +1,3 @@
----
-component: "ComboBox"
----
-
 # Overview
 
 The following section explains the steps to include native events and pass data to event handler in ComboBox component.

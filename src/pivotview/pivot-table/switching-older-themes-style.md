@@ -1,7 +1,3 @@
----
-component: "Pivot Table"
----
-
 <!-- markdownlint-disable MD012 -->
 <!-- markdownlint-disable MD009 -->
 

@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Data Annotation
 
 Data Annotations helps us to define rules to the model classes or properties to perform data validation and display suitable messages to end users.

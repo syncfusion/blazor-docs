@@ -1,7 +1,3 @@
----
-component: "Radio Button"
----
-
 # Set the disabled state
 
 Radio Button component can be enabled/disabled by giving [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) property. To disable Radio Button component,

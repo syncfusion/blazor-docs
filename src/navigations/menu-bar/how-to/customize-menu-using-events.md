@@ -1,7 +1,3 @@
----
-=component: "Menu Bar"
-=---
-
 # Customize Menu Bar Using Events
 
 The Menu Bar provides a set of events to enable users to customize it.

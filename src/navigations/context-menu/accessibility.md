@@ -1,7 +1,3 @@
----
-component: "Context Menu"
----
-
 # Accessibility
 
 ## ARIA attributes

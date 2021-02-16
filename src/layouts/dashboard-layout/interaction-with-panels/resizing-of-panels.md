@@ -1,7 +1,3 @@
----
-component: "Dashboard Layout"
----
-
 # Resizing panels
 
 The DashboardLayout component is also provided with the panel resizing functionality, which can be enabled or disabled using the `AllowResizing` property. This functionality allows you to resize the panels dynamically through UI interactions using the resizing handlers, which controls the panel resizing in various directions.

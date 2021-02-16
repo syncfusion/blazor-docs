@@ -1,7 +1,3 @@
----
-component: "Radio Button"
----
-
 # Label and Size
 
 This section explains the different sizes and labels.

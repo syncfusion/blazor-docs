@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Print
 
 ## Print

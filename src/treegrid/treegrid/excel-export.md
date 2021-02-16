@@ -1,7 +1,3 @@
----
-component: "Tree Grid"
----
-
 # Excel export
 
 The excel export allows exporting Tree Grid data to Excel document. You need to use the

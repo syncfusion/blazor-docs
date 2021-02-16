@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD009 -->
 

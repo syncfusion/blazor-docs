@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # DataBinding
 
 Accordion component provides an option to get accordion items from the local data. It can be done through iteration of Accordion Items using conditional **foreach** loop. Accordion only supports the local data for data binding.

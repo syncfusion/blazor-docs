@@ -1,7 +1,3 @@
----
-component: "Word processor"
----
-
 # Create a Word processing application with Blazor WebAssembly app
 
 This article provides the step-by-step instructions to integrate the Word processor component in Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).

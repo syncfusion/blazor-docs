@@ -1,7 +1,3 @@
----
-component: "Radio ButtonFor"
----
-
 # Radio ButtonFor and Model Binding
 
 This section demonstrates the Strongly typed extension support in Radio Button. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view. You can access model properties on that view. You can use data associated with model to render the component.

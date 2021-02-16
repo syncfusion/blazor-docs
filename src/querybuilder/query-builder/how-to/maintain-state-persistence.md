@@ -1,7 +1,3 @@
----
-component: "Query Builder"
----
-
 # State Persistence
 
 State persistence allows you to maintain the current state in the browser’s `LocalStorage` even if the browser is refreshed or if you move to the next page within the browser. State persistence stores the Query Builder’s [`Rule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Rule) object in the local storage when the [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_EnablePersistence) is defined to `true`.

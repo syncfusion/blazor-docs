@@ -1,7 +1,3 @@
----
-component: "Splitter"
----
-
 # Different layouts
 
 By using splitter control, you can create the different layouts with multiple and nested panes.

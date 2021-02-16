@@ -1,7 +1,3 @@
----
-component: "Tabs"
----
-
 # Add nested Tabs
 
 The Tabs control supports to render the nested level of Tabs by using `ContentTemplate` property. To render the nested Tabs, you can define nested tab elements within the `ContentTemplate` property of the parent tab.

@@ -1,7 +1,3 @@
----
-component: "Heatmap"
----
-
 # Appearance
 
 ## Cell customizations

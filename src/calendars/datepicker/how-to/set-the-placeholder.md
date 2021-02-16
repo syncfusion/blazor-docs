@@ -1,7 +1,3 @@
----
-component: "DatePicker"
----
-
 # Set the Placeholder
 
 The following example demonstrates how to set `Placeholder` in the DatePicker component.

@@ -1,7 +1,3 @@
----
-component: "Pivot Table"
----
-
 # Show or hide totals
 
 ## Show or hide grand totals

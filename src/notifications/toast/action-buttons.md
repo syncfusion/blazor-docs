@@ -1,7 +1,3 @@
----
-component: "Toast"
----
-
 # Action Buttons
 
 You can include action buttons to the toast control by adding the `ToastButton` property. You can also include the click event callback function for each button.

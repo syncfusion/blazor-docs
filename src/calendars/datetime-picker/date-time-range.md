@@ -1,7 +1,3 @@
----
-component: "DateTimePicker"
----
-
 # DateTime Range
 
 DateTimePicker provides an option to select a date and time value within a specified range

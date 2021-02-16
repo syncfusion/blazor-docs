@@ -1,7 +1,3 @@
----
-component: "Toast"
----
-
 # Template
 
 Configure templates to display within a header, content, and footer section of Toast.

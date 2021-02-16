@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Serialization
 
 **Serialization** is the process of saving and loading for state persistence of the diagram.

@@ -1,9 +1,3 @@
----
-
-component: "BulletChart"
-
----
-
 # Tooltip
 
 <!-- markdownlint-disable MD036 -->

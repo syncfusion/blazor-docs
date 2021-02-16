@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Virtualization
 
 ## Virtualization in Diagram

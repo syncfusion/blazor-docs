@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Close dialog while click on outside of dialog
 
 By default, dialog can be closed by pressing `Esc` key and clicking the close icon at the right of dialog header. It can also be closed by clicking outside of the dialog using `Visible` property.

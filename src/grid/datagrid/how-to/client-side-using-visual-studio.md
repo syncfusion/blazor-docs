@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
  <!-- markdownlint-disable MD024 -->
 
 # Getting started with Syncfusion Blazor - WebAssembly App in Visual Studio 2019

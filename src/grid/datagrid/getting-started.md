@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

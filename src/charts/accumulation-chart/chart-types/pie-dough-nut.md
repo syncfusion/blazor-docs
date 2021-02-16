@@ -1,9 +1,3 @@
----
-
-component: "Accumulation Chart"
-
----
-
 # Pie & Doughnut
 
 ## Pie Chart

@@ -1,9 +1,3 @@
----
-
-component: "Stock Chart"
-
----
-
 # Add Crosshair
 
 Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position.

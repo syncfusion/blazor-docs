@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Add an icons to dialog buttons
 
 You can add icons to the dialog buttons using the `DialogButton` property or `FooterTemplate` property.

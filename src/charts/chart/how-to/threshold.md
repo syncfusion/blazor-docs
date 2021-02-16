@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Mark a threshold in chart

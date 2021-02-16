@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # BPMN Connectors
 
 The `BPMN Connectors` are lines that used to connection between BPMN flow objects.

@@ -1,7 +1,3 @@
----
-component: "DatePicker"
----
-
 # Disabled State
 
 To disable the DatePicker, use its

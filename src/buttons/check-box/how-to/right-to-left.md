@@ -1,7 +1,3 @@
----
-component: "Checkbox"
----
-
 # Right-To-Left
 
 Checkbox component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) as `true`.

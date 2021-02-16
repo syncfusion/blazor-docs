@@ -1,7 +1,3 @@
----
-component: "Radio Button"
----
-
 # Customize Radio Button Appearance
 
 You can customize the appearance of the Radio Button component by using the CSS rules.

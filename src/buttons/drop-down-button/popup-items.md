@@ -1,7 +1,3 @@
----
-component: "DropDownButton"
----
-
 # Popup items
 
 ## Icons

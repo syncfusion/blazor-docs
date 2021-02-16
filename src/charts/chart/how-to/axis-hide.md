@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Hide axis line when clicking the legend

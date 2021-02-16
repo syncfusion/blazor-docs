@@ -1,7 +1,3 @@
----
-component: "Sidebar"
----
-
 <!-- markdownlint-disable MD009 -->
 
 # Getting Started

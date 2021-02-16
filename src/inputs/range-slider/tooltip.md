@@ -1,7 +1,3 @@
----
-component: "Slider"
----
-
 # Tooltip
 
 The Slider displays the tooltip to indicate the current value by clicking the Slider bar or drag

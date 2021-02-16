@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How to customize listview as grid layout
 
 In Listview, list items can be rendered in grid layout with following data manipulations.

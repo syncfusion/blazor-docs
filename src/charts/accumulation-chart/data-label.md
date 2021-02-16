@@ -1,9 +1,3 @@
----
-
-component: "Accumulation Chart"
-
----
-
 # Data Label
 
 Data label can be added to a point by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationDataLabelSettingsModel~Visible.html)

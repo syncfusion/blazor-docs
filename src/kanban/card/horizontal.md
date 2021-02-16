@@ -1,6 +1,4 @@
----
-component: "Card"
----
+------
 <!-- markdownlint-disable MD036 -->
 
 # Horizontal Card

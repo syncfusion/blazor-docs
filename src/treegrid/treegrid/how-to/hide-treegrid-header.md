@@ -1,7 +1,3 @@
----
-component: "TreeGrid"
----
-
 # Hide Tree Grid header
 
 You can hide the Tree Grid header by applying the below styles to Tree Grid component.

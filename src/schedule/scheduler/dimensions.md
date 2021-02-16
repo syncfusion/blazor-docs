@@ -1,7 +1,3 @@
----
-component: "Scheduler"
----
-
 # Scheduler dimensions
 
 The Scheduler dimensions refers to both height and width of the entire layout and it accepts 3 types of values.

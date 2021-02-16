@@ -1,7 +1,3 @@
----
-component: "Radio Button"
----
-
 # Right-To-Left
 
 Radio Button component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) as `true`.

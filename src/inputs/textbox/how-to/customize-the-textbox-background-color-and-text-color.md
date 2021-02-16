@@ -1,7 +1,3 @@
----
-component: "Textbox"
----
-
 # Customize the textbox background-color and text-color
 
 You can customize the text box styles such as background-color, text-color and border-color by overriding its default styles.

@@ -1,7 +1,3 @@
----
-component: "Pivot Table"
----
-
 # Editing
 
 > This feature is applicable only for relational data source.

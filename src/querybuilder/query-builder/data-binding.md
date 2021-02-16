@@ -1,7 +1,3 @@
----
-component: "Query Builder"
----
-
 # Data binding
 
 The Query Builder uses `DataManager` to bind the dataSource which supports both RESTful JSON data services binding and local object binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property can be assigned either with the instance of `DataManager` or object collection.

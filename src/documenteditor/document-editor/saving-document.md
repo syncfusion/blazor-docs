@@ -1,7 +1,3 @@
----
-component: "Word processor"
----
-
 # Save documents to server, database and local file system
 
 After composing or editing the document, you will need to save the document to the server, database, or local file system.

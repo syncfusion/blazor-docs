@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # CSS Structure
 
 ## Customizing the connector end point handle

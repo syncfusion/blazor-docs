@@ -1,7 +1,3 @@
----
-component: "Splitter"
----
-
 # Resize
 
 By default, resizing will be enabled for split panes. Resizing gripper element will be added to the separator to makes the resize easy.

@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Accessibility
 
 The Dialog characterized with complete ARIA Accessibility support which helps to accessible

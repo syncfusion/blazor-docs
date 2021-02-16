@@ -1,7 +1,3 @@
----
-component: "Toast"
----
-
 # Configuring Options
 
 This section explains the steps required to customize the appearance of the toast using built-in APIs.

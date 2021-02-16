@@ -1,7 +1,3 @@
----
-component: "Splitter"
----
-
 # Two way Binding
 
 The splitter `PaneSettings` `Collapsed` property supports the two-way binding and it can be achieved by using the `bind-Collapsed` attribute. If the component value has been changed, it will affect all the places where we bind the variable for the bind-value attribute.

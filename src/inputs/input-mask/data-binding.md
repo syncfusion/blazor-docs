@@ -1,7 +1,3 @@
----
-component: "MaskedTextBox"
----
-
 # Data Binding
 
 Data binding can be achieved by using the `bind-Value` attribute and it supports string type. If component value has been changed, it will affect the all places where you bind the variable for the **bind-Value** attribute.

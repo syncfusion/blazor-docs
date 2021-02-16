@@ -1,7 +1,3 @@
----
-component: "TreeGrid"
----
-
 # Events
 
 In this section, we have provided the list of events of the Tree Grid component which will be

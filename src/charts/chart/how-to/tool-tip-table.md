@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Create a table in tooltip
 
 You can show the tooltip as table by using Template property in tooltip.

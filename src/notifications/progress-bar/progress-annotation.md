@@ -1,7 +1,3 @@
----
-component: "ProgressBar"
----
-
 # Annotation and Label
 
 ## Annotation

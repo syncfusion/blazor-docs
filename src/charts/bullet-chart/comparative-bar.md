@@ -1,8 +1,4 @@
 ---
-
-component: "Bullet Chart"
-
----
 <!-- markdownlint-disable MD036 -->
 
 # Target Bar

@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # User Handles
 
 User handles are customizable handles that can be used to perform custom actions and default clipboard actions.

@@ -1,7 +1,3 @@
----
-component: "Dashboard Layout"
----
-
 # Header and content of panels
 
 Basically, Dashboard layout Component have two templates to render the data in panels.

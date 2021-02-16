@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Legend
 
 Legend provides information about the series rendered in the chart.

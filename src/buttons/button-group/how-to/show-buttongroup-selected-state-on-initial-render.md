@@ -1,7 +1,3 @@
----
-component: "ButtonGroup"
----
-
 # Show ButtonGroup selected state on initial render
 
 To show selected state on initial render, `checked` property should to added to the corresponding

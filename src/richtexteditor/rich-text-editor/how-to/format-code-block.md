@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Format code block using toolbar button
 
 You can configure code block formatting as a separate toolbar button by adding the **InsertCode** Command within the `RichTextEditorToolbarSettings` - `Items` property.

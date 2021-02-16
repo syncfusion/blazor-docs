@@ -1,7 +1,3 @@
----
-component: "StockChart"
----
-
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started

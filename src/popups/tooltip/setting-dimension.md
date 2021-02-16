@@ -1,7 +1,3 @@
----
-component: "Tooltip"
----
-
 # Setting Dimension
 
 ## Height and width

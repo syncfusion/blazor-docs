@@ -1,7 +1,3 @@
----
-component: "File Manager"
----
-
 # User Interface Structure
 
 The file manager UI is comprised of several sections like view, toolbar, breadcrumb, context menu, and so on. The UI of the file manager is enhanced with  `Details View` for browsing files and folders in a grid, `Navigation Pane` for folder navigation, and `Toolbar` for file operations. The file manager with all feature have the following sections in its UI.

@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Layers
 
 **Layer** is used to organize related shapes on a diagram control. A layer is a named category of shapes. By assigning shapes to different layers, you can selectively view, remove, and lock different categories of shapes.

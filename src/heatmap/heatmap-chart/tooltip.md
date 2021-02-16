@@ -1,7 +1,3 @@
----
-component: "Heatmap"
----
-
 # Tooltip
 
 Tooltip is used to provide the details of the heatmap cell, and this can be displayed, while hovering the cursor over the cell or performing tap action in touch devices.

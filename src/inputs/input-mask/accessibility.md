@@ -1,7 +1,3 @@
----
-component: "MaskedTextBox"
----
-
 # Accessibility
 
 The MaskedTextBox is characterized with complete ARIA Accessibility support that helps to access

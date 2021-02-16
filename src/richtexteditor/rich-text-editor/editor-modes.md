@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Editor modes
 
 The Rich Text Editor component is used to create and edit the content and return valid HTML markup or markdown (MD) of the content. It supports the following two editing formations:

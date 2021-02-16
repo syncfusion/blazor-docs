@@ -1,7 +1,3 @@
----
-component: "Tooltip"
----
-
 # Customization
 
 The Tooltip can be customized by using the `CssClass` property, which accepts custom CSS class names that define specific user-defined

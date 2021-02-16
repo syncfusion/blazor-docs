@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Accessibility
 
 Diagram provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA Accessibility supports are achieved through the attributes like `aria-label`. It helps to provides information about elements

@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

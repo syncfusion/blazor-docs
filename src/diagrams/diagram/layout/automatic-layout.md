@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Automatic Layout
 
 Diagram provides support to auto-arrange the nodes in the diagram area that is referred as [`Layout`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html). It includes the following layout modes:

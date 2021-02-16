@@ -1,7 +1,3 @@
----
-component: "DatePicker"
----
-
 # Date Format
 
 Date format is a way of representing the date value in different string formats in text box.

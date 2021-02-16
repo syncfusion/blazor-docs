@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How to add and remove list items from listview
 
 You can add or remove list items from the ListView control using the `ObservableCollection`.

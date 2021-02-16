@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # Load items dynamically
 
 Accordion provides support to add/remove items dynamically by iteration of Accordion items using looping.

@@ -1,7 +1,3 @@
----
-component: "DropDownList"
----
-
 # Grouping
 
 The DropDownList supports wrapping nested elements into a group based on different categories. The category

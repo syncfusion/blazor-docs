@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Globalization and RTL
 
 The PDF Viewer component allows you to localize the static text on formatting pane, toolbar, dialog and more. It can be achieved by setting the `Locale` property and providing the localized text through the `LoadLocaleData()` method.

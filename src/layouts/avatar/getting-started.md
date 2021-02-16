@@ -1,7 +1,3 @@
----
-component: "Avatar"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

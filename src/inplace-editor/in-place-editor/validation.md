@@ -1,7 +1,3 @@
----
-component: "In-place Editor"
----
-
 # Validation
 
 Now, validation can be done by using the  EditForm validation on the server-side. We need to handle the validation from the application level and the custom validation can also be achieved by using this.

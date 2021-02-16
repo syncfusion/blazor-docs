@@ -1,7 +1,3 @@
----
-component: "TreeView"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

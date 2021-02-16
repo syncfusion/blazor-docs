@@ -1,7 +1,3 @@
----
-component: "Toast"
----
-
 # Time out
 
 The toast can be expired based on the `Timeout` property. The toast can live till the time out reaches without user interaction, a time out value is considered as a millisecond.

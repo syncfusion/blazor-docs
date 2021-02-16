@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Interaction
 
 Connectors can be selected, dragged, and routed over the diagram page.

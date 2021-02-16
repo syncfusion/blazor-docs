@@ -1,9 +1,3 @@
----
-
-component: "RangeNavigator"
-
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Types of data

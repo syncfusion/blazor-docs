@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Chart Dimensions
 
 ## Size for Container

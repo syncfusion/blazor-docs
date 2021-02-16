@@ -1,7 +1,3 @@
----
-component: "ProgressBar"
----
-
 # Events
 
 In this section, we have provided the list of events of Progress bar component which will be

@@ -1,7 +1,3 @@
----
-component: "Gantt Chart"
----
-
 # Resources
 
 In Gantt Chart, the resources are represented by staff, equipment and materials etc. In Gantt Chart component you can show or allocate the resources (human resources) for each task.

@@ -1,7 +1,3 @@
----
-component: "Menu Bar"
----
-
 # Change animation settings
 
 To change the animation of the Menu Bar, [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~AnimationSettings.html) property is used. The supported effects for Menu Bar are,

@@ -1,7 +1,3 @@
----
-component: "Dashboard Layout"
----
-
 # Responsive and adaptive layout
 
 The control is provided with built-in responsive support, where panels within the layout get adjusted based on their parent element's dimensions to accommodate any resolution, which relieves the burden of building responsive dashboards.

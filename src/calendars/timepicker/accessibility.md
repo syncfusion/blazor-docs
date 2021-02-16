@@ -1,7 +1,3 @@
----
-component: "TimePicker"
----
-
 # Accessibility
 
 The web accessibility makes web applications and its content more accessible to people with disabilities

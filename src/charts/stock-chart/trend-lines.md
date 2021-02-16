@@ -1,9 +1,3 @@
----
-
-component: "Stock Chart"
-
----
-
 # Trendlines
 
 Trendlines are used to show the direction and speed of price.

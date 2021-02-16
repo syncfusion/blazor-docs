@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Axis Customization
 
 ## Axis Crossing

@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Customize placeholder style
 
 By using `e-rte-placeholder` class, you can customize the placeholder style.

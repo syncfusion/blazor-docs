@@ -1,7 +1,3 @@
----
-component: "Button"
----
-
 # HTML Attribute Support
 
 HTML attribute support is given for button using [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property.

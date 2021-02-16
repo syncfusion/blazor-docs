@@ -1,7 +1,3 @@
----
-component: "AutoComplete"
----
-
 # Localization
 
 ## Blazor server side

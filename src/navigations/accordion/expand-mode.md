@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # Expand Mode
 
  The Accordion supports the two listed types of expand modes while expanding or collapsing the item.

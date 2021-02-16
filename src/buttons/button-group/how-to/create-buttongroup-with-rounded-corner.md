@@ -1,7 +1,3 @@
----
-component: "ButtonGroup"
----
-
 # Create ButtonGroup with rounded corner
 
 The ButtonGroup with rounded corner has round edges on both sided. To ButtonGroup with rounded corner, `e-round-corner` class is to be

@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How to create mobile contact layout from listview
 
 You can customize the ListView using the `Template` property. Refer

@@ -1,7 +1,3 @@
----
-component: "Toolbar"
----
-
 # Customize the Scrolling distance
 
 Toolbar `ScrollStep` property supports to customize the scrolling distance when you click the left and right side navigation icons. You can pass a required value through `ScrollStep` property to customize toolbar scrolling distance.

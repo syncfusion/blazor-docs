@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Data Labels
 
 Data label can be added to a chart series by enabling the `Visible` option in the data label. By default, the labels will arrange smartly without overlapping.

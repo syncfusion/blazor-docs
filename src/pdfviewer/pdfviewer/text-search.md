@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Text search
 
 You can find the specified text content in the PDF document using the built-in options provided with the toolbar. On initiating the search operation, the control searches for the specified text and highlights all the occurrences in the pages.

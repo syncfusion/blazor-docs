@@ -1,7 +1,3 @@
----
-component: "DropDownButton"
----
-
 # Hide dropdown arrow
 
 You can hide the dropdown arrow from the DropDownButton by adding class `e-caret-hide`

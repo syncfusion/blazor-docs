@@ -1,7 +1,3 @@
----
-component: "ProgressBar"
----
-
 # Animation
 
 <!-- markdownlint-disable MD033 -->

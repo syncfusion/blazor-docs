@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # How to position connector’s annotation
 
 Annotations of a connector can be positioned using the following properties of AnnotationEditorViewModel class.

@@ -1,7 +1,3 @@
----
-component: "Gantt Chart"
----
-
 # Data Binding
 
 The Gantt Chart component uses `DataManager` for binding the data source, which supports both RESTful JSON data services and local JavaScript object array. The `DataSource` property can be assigned either with the instance of DataManager or JavaScript object array collection. The Gantt Chart component supports binding two types of data:

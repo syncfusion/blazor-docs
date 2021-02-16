@@ -1,7 +1,3 @@
----
-component: "Tooltip"
----
-
 # Open Mode
 
 You can decide the mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements.

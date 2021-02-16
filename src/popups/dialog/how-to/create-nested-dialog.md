@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Create Nested Dialog
 
 A Dialog can be nested within another Dialog. The following sample contains parent and child Dialog (inner Dialog).

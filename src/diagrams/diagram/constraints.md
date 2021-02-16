@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Constraints
 
 Constraints are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators (&, |, ~, <<, etc.).

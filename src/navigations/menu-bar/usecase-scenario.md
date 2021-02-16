@@ -1,7 +1,3 @@
----
-component: "Menu Bar"
----
-
 # Use Case Scenario
 
 ## Scrollable Menu Bar

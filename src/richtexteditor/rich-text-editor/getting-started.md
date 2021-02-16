@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

@@ -1,7 +1,3 @@
----
-component: 'ListView'
----
-
 # Nested List
 
 The ListView component supports Nested list. For that, the child property should be defined for the nested list in the array of JSON.

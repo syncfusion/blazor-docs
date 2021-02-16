@@ -1,7 +1,3 @@
----
-component: "Range Selector"
----
-
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started

@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Gridlines
 
 Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface.

@@ -1,7 +1,3 @@
----
-component: "Toolbar"
----
-
 # Item Configuration
 
 The Toolbar can be rendered by defining an array of items. Items can be constructed with the following built-in command types or item template.

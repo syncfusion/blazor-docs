@@ -1,7 +1,3 @@
----
-component: "Calendar"
----
-
 # Accessibility
 
 The web accessibility makes web content and web applications more accessible for disabled people. It especially helps in dynamic content change and development of advanced user interface components with AJAX, HTML, JavaScript, and related technologies.

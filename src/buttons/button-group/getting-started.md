@@ -1,7 +1,3 @@
----
-component: "ButtonGroup"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor ButtonGroup Component

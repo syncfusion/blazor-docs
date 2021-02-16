@@ -1,7 +1,3 @@
----
-component: "Uploader"
----
-
 # File source
 
 ## Directory upload

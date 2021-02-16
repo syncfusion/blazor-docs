@@ -1,7 +1,3 @@
----
-component: "ButtonGroup"
----
-
 # Enable RTL
 
 ButtonGroup supports RTL functionality. This can be achieved by adding `e-rtl` class to the target element.

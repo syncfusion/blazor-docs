@@ -1,9 +1,3 @@
----
-
-component: "RangeNavigator"
-
----
-
 # Customization
 
 ## Navigator appearance

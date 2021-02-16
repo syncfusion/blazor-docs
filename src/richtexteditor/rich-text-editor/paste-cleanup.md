@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Paste from MS Word
 
 The Rich Text Editor allows you to reduce the effort while converting the Microsoft Word content to HTML format with format and styles.

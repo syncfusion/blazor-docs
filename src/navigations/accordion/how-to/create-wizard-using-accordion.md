@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # Create wizard
 
 Accordion items can be disabled and expanded dynamically using accordion item **Disabled** and **Expanded** property.

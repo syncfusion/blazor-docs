@@ -1,7 +1,3 @@
----
-component: "Tree Grid"
----
-
 # Sorting
 
 Sorting enables you to sort data in the **Ascending** or **Descending** order.

@@ -1,7 +1,3 @@
----
-component: "Toast"
----
-
 # Change toast content dynamically
 
 The Toast component supports to change its content dynamically while displaying in newest toasts. You can change the toast content by updating property value, before calling in the `show` method.

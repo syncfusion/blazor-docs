@@ -1,7 +1,3 @@
----
-component: "Toggle Switch Button"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Toggle Switch Button Component

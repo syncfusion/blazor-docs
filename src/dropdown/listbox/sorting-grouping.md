@@ -1,7 +1,3 @@
----
-component: "ListBox"
----
-
 # sorting and grouping
 
 ## Sorting

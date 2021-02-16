@@ -1,9 +1,3 @@
----
-
-component: "Bullet Chart"
-
----
-
 # Working with Data
 
 Bullet Chart can visualise data bound from local or remote data.

@@ -1,7 +1,3 @@
----
-component: "DateTimePicker"
----
-
 # Accessibility
 
 The web accessibility defines a way to make web content and web applications

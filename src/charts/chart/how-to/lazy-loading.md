@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Lazy loading
 
 Lazy loading allows you to load data for chart on demand. Chart will fire the `OnScrollChanged` event, in that we can get the minimum and maximum range of the axis, based on this, we can upload the data to chart.

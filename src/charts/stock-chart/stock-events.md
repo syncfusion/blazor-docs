@@ -1,8 +1,4 @@
 ---
-
-component: "Stock Chart"
-
----
 <!-- markdownlint-disable MD013 -->
 
 # Stock Events

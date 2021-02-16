@@ -1,7 +1,3 @@
----
-component: "DropDownButton"
----
-
 # Create right-to-left DropDownButton
 
 DropDownButton component has RTL support. This can be achieved by setting [`enableRtl`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsDropDownButton~EnableRtl.html) as true.

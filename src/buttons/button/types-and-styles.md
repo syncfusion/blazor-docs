@@ -1,7 +1,3 @@
----
-component: "Button"
----
-
 # Types and Styles
 
 This section explains the different styles and types of Buttons.

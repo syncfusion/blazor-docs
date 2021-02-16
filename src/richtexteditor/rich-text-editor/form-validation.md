@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Form validation
 
 This following sample demonstrate how to get the Rich Text Editor validation error message in button click.

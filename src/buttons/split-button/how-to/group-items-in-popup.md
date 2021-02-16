@@ -1,7 +1,3 @@
----
-component: "Split Button"
----
-
 # Group items in Popup
 
 Items in popup can be grouped in Split Button by templating entire popup with ListView. To achieve grouping in ListView,

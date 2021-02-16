@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # State Management
 
 State management allows users to save and load grid state. The grid will use user-provided state to render instead of its properties provided declaratively.

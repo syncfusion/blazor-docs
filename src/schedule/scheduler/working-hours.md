@@ -1,7 +1,3 @@
----
-component: "Scheduler"
----
-
 # Setting working days and hours
 
 The Scheduler can be customized on various aspects as well as it inherits almost all the calendar-specific features such as options,

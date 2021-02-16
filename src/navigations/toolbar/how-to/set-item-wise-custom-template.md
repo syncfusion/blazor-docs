@@ -1,7 +1,3 @@
----
-component: "Toolbar"
----
-
 # Set item-wise custom template
 
 The Toolbar supports adding template commands using the  `Template` property. Template property can be given as the `HTML element` or `RenderFragment`.

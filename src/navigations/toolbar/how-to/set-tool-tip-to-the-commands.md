@@ -1,7 +1,3 @@
----
-component: "Toolbar"
----
-
 # Set Blazor Tooltip to the commands
 
 The `TooltipText` property of the Toolbar item is used to set the HTML Tooltip to the commands that can be viewed as hint texts on mouse hover.

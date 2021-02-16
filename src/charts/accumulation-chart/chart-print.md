@@ -1,9 +1,3 @@
----
-
-component: "Accumulation Chart"
-
----
-
 # Print and Export
 
 ## Print

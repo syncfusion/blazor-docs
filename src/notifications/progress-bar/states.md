@@ -1,7 +1,3 @@
----
-component: "ProgressBar"
----
-
 # States
 
 Visualize progress in different states.

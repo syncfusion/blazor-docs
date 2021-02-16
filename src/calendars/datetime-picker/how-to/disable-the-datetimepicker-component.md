@@ -1,7 +1,3 @@
----
-component: "DateTimePicker"
----
-
 # Disable the component
 
 To disable the DateTimePicker, set its

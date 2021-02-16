@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Multiple Panes
 
 Chart area can be divided into multiple panes using [`Rows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) and

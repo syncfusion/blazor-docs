@@ -1,7 +1,3 @@
----
-component: "DateTimePicker"
----
-
 # Events
 
 This section explains the list of events of the DateTimePicker component which will be

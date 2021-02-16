@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Events
 
 ## Text edit

@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Upgrade Application To Latest Version
 
 **Step 1:** Update the latest Syncfusion blazor [`nuget`](https://www.nuget.org/packages/Syncfusion.Blazor/) from Nuget package manager in your application.

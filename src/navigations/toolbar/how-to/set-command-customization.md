@@ -1,7 +1,3 @@
----
-component: "Toolbar"
----
-
 # Set command customization
 
 The `HtmlAttributes` property of the Toolbar item is used to set the HTML attributes ('ID', 'class', 'style' ,'role') for the commands.

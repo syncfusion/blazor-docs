@@ -1,7 +1,3 @@
----
-component: "Chart"
----
-
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started in Blazor Charts

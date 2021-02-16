@@ -1,7 +1,3 @@
----
-component: "AutoComplete"
----
-
 # Grouping
 
 The AutoComplete supports wrapping nested elements into a group based on different categories. The

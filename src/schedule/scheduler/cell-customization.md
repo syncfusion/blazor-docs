@@ -1,7 +1,3 @@
----
-component: "Blazor Scheduler"
----
-
 # Cell Customization
 
 The cells of the Scheduler can be easily customized using the cell template.

@@ -1,7 +1,3 @@
----
-component: "Scheduler"
----
-
 # Calendar mode
 
 The Scheduler supports the following two types of calendar mode.

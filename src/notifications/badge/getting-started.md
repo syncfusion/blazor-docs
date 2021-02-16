@@ -1,7 +1,3 @@
----
-component: "Badge"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

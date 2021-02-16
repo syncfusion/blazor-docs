@@ -1,7 +1,3 @@
----
-component: "ComboBox"
----
-
 # Localization
 
 ## Blazor server side

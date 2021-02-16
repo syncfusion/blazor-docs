@@ -1,7 +1,3 @@
----
-component: "Accumulation Chart"
----
-
 # Events
 
 In this section, we have provided the list of events of Accumulation Chart component which will be

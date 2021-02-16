@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Internationalization
 
 Chart provide supports for internationalization for below chart elements.

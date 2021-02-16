@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 <!-- markdownlint-disable MD036 -->
 
 # DateTime and DateTimeCategory Axis

@@ -1,7 +1,3 @@
----
-component: "Switch"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Essential JS 2 for ASP.NET Core Razor Switch Component in Visual Studio 2019

@@ -1,7 +1,3 @@
----
-component: "Textbox"
----
-
 # Create TextBox component dynamically
 
 You can render the TextBox component at runtime in the following ways:

@@ -1,9 +1,3 @@
----
-
-component: "RangeNavigator"
-
----
-
 # Period selector
 
 The period selector allows to select a range with specified periods.

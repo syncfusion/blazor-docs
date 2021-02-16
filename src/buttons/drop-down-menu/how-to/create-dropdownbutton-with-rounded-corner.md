@@ -1,7 +1,3 @@
----
-component: "Dropdown Menu"
----
-
 # Create Dropdown Menu with rounded corner
 
 Dropdown Menu with rounded corner can be achieved by adding `border-radius` CSS property to button element.

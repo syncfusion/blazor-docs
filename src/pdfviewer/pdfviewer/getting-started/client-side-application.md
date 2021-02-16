@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Create a PDF Viewer in Blazor client-side application
 
 >Note: There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.

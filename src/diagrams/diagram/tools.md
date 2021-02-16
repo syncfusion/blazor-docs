@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Tools
 
 ## Drawing tools

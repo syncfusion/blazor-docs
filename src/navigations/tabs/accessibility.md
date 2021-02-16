@@ -1,7 +1,3 @@
----
-component: "Tabs"
----
-
 # Accessibility
 
 ## ARIA attributes

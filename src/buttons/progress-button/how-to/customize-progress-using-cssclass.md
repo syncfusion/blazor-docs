@@ -1,7 +1,3 @@
----
-component: "Progress Button"
----
-
 # Customize progress using cssClass
 
 You can customize the background filler UI using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.

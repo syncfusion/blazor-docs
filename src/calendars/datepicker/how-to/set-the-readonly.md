@@ -1,7 +1,3 @@
----
-component: "DatePicker"
----
-
 # Set the Readonly
 
 ## Enabled

@@ -1,7 +1,3 @@
----
-component: "ProgressBar"
----
-
 # Range
 
 <!-- markdownlint-disable MD033 -->

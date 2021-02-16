@@ -1,7 +1,3 @@
----
-component: "Word processor"
----
-
 # Key features of Word processor component for Blazor
 
 The Word processor component for Blazor is used to compose, edit, view, and print Word (DOC, DOCX, and RTF) documents in Blazor applications.

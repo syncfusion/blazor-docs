@@ -1,7 +1,3 @@
----
-component: "TreeGrid"
----
-
 # Custom control in Tree Grid toolbar
 
 You can render custom controls inside the Tree Grid's toolbar area. This can be achieved by initializing the custom controls within the Template property of the Toolbar component. This toolbar component is defined inside the Tree Grid component.

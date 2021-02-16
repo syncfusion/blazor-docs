@@ -1,7 +1,3 @@
----
-component: "Tree Grid"
----
-
 # Editing
 
 The Tree Grid component has options to dynamically insert, delete and update records.

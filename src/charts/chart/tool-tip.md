@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Tooltip
 
 <!-- markdownlint-disable MD036 -->

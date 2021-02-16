@@ -1,7 +1,3 @@
----
-component: "DateRangePicker"
----
-
 # Customization
 
 The DateRangePicker is available for UI customization that can be achieved by using the available properties and events in the component.

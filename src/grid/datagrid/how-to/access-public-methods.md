@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Access public method in datagrid
 
 You can access the public methods available in the DataGrid component by using its reference defined in the component initialization.

@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Overview
 
 The Chart control is used to visualize the data with user interactivity and provides customizing options to configure the data visually.

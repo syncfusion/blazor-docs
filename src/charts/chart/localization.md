@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Localization
 
 We have used Resource file (**.resx**) to translate the static text of the Chart.

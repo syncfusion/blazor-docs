@@ -1,7 +1,3 @@
----
-component: "TimePicker"
----
-
 # Time Range
 
 TimePicker provides an option to select a time value within a specified range by using the

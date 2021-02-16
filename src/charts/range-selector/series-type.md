@@ -1,9 +1,3 @@
----
-
-component: "RangeNavigator"
-
----
-
 # Series Types
 
 Essential JS 2 Range navigator supports 3 types of series, to render the data.

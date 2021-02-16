@@ -1,7 +1,3 @@
----
-component: "DropDownList"
----
-
 # Accessibility
 
 The DropDownList component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies

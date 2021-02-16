@@ -1,7 +1,3 @@
----
-component: "Spinner"
----
-
 # Customize the Spinner Component
 
 You can customize the Spinner component when initializing or after rendering it.

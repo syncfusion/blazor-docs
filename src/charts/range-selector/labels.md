@@ -1,9 +1,3 @@
----
-
-component: "RangeNavigator"
-
----
-
 # Labels
 
 ## Multilevel labels

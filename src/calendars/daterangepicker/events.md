@@ -1,7 +1,3 @@
----
-component: "DateRangePicker"
----
-
 # Events
 
 This section explains the list of events of the DateRangePicker component which will be

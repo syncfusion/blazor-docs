@@ -1,9 +1,3 @@
----
-
-component: "Stock Chart"
-
----
-
 # Tooltip
 
 <!-- markdownlint-disable MD036 -->

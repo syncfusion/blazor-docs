@@ -1,7 +1,3 @@
----
-component: "Uploader"
----
-
 # Localization
 
 ## Blazor server side

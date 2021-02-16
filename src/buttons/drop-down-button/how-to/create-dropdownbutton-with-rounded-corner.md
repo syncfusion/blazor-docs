@@ -1,7 +1,3 @@
----
-component: "DropDownButton"
----
-
 # Create DropDownButton with rounded corner
 
 DropDownButton with rounded corner can be achieved by adding `border-radius` CSS property to button element.

@@ -1,7 +1,3 @@
----
-component: "Tabs"
----
-
 # Add/Remove Tab Items
 
 Tabs provides a support to Add/Remove the specified tab item using following ways.

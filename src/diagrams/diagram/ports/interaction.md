@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Interaction
 
 The port can be dragged in the diagram area and create the connector over the port by using the [`port constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html).

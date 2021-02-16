@@ -1,7 +1,3 @@
----
-component: "Calendar"
----
-
 # Render the Calendar with WeekNumber
 
 You can enable `WeekNumber` in the Calendar by using the [WeekNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekNumber) property.

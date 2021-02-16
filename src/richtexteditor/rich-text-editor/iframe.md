@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Iframe
 
 When the `RichTextEditorIframeSettings` option is enabled, the Rich Text Editor creates the iframe element as the content area on component initialization, it is used to display and edit the content. In content area, the editor displays only the body tag of a `<iframe>` document.

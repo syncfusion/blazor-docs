@@ -1,7 +1,3 @@
----
-component: "Menu Bar"
----
-
 # Right-To-Left
 
 Menu Bar component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~EnableRtl.html) as `true`.

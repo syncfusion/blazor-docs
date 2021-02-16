@@ -1,7 +1,3 @@
----
-component: "AccumulationChart"
----
-
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started

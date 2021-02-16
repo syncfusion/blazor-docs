@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Measurement annotation
 
 The PDF Viewer provides the options to add measurement annotations. You can measure the page annotations with the help of measurement annotation. The supported measurement annotations in the PDF Viewer control are:

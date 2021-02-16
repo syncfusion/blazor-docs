@@ -1,7 +1,3 @@
----
-component: "Toast"
----
-
 # Positions
 
 The toast position can be updated based on predefined positions or customizable positions. The predefined position combinations are updated in the `X` and `Y` position properties.

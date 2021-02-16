@@ -1,7 +1,3 @@
----
-component: "Tree Grid"
----
-
 # PDF Export
 
 PDF export allows exporting Tree Grid data to PDF document. You need to use the

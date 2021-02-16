@@ -1,7 +1,3 @@
----
-component: "Slider"
----
-
 # Date Range Slider
 
 The date formatting can be achieved using `TicksRendering` and `TooltipChange` events. The process of date formatting is explained in the below sample.

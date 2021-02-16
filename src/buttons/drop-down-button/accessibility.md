@@ -1,7 +1,3 @@
----
-component: "DropDownButton"
----
-
 # Accessibility
 
 ## ARIA attributes

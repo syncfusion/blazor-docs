@@ -1,7 +1,3 @@
----
-component: "Split Button"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Split Button Component

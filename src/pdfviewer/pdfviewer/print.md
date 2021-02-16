@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Print
 
 The PDF Viewer supports printing the loaded PDF file by default. You can enable or disable printing by setting the `EnablePrint` property.

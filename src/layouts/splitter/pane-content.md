@@ -1,7 +1,3 @@
----
-component: "Splitter"
----
-
 # Pane Content
 
 This section explains how to provide plain text content or HTML markup to splitter pane.

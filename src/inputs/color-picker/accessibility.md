@@ -1,7 +1,3 @@
----
-component: "Color Picker"
----
-
 # Accessibility
 
 ## ARIA attributes

@@ -1,7 +1,3 @@
----
-component: "DocumentEditor"
----
-
 # Accessibility
 
 ## Keyboard Shortcuts

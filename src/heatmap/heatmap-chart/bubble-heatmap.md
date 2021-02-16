@@ -1,7 +1,3 @@
----
-component: "Heatmap"
----
-
 # Bubble heat map
 
 Data points represent the data source values with `Gradient` or `Fixed` colors in the heat map.

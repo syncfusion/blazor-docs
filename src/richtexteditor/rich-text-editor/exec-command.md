@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # ExecCommand in Rich Text Editor
 
 In Rich Text Editor, the ExecuteCommand is used to perform commands for the modification of content in editable area.

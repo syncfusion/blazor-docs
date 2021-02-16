@@ -1,7 +1,3 @@
----
-component: "Kanban"
----
-
 # Globalization
 
 The localization library allows you to localize the default text content of the Kanban to different cultures using the `Locale` property.

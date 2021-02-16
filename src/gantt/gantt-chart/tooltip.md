@@ -1,7 +1,3 @@
----
-component: "Gantt Chart"
----
-
 # Tooltip
 
 The Gantt Chart component has a support to display a tooltip for various UI elements like taskbar, timeline cells, and grid cells

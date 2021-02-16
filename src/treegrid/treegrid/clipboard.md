@@ -1,7 +1,3 @@
----
-component: "Tree Grid"
----
-
 # Clipboard
 
 The clipboard provides an option to copy selected rows or cells data into the clipboard.

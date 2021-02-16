@@ -1,7 +1,3 @@
----
-component: "TreeView"
----
-
 # Template
 
 The TreeView component allows you to customize the look of TreeView nodes using the `NodeTemplate` property.

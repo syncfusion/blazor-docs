@@ -1,7 +1,3 @@
----
-component: "Tree Grid"
----
-
 # Filtering
 
 Filtering allows you to view specific or related records based on filter criteria. To enable filtering in the Tree Grid, set the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowFiltering.html) to true. Filtering options can be configured through [`FilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~FilterSettings.html).

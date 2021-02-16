@@ -1,7 +1,3 @@
----
-component: "Context Menu"
----
-
 # Open a dialog on Context Menu item click
 
 This section explains about how to open a dialog on Context Menu item click. This can be achieved by handling dialog open in [`ItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) event of the Context Menu.

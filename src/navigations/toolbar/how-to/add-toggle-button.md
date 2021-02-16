@@ -1,7 +1,3 @@
----
-component: "Toolbar"
----
-
 # Add Toggle Button
 
 Toolbar supports to add a toggle Button by using the `Template` property. Refer below steps

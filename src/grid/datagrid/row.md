@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Row
 
 The row represents record details fetched from data source.

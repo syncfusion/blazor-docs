@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Display a dialog with custom position
 
 By default, the dialog is displayed in the center of the target container. The dialog position can be set using the `DialogPositionData` property by providing custom `X` and `Y` coordinates.

@@ -1,7 +1,3 @@
----
-component: "Splitter"
----
-
 # Split Panes
 
 This section explain split-panes behaviours.

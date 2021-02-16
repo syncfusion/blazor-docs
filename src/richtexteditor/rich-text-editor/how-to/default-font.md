@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Change default font-family
 
 By using `Default` property, you can change the default font-family of the Rich Text Editor. To change the font-family of the Rich Text Editor content while loading, we need to give the `RichTextEditorFontFamily` in the style section with the help of `CssClass` property.

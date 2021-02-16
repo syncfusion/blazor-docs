@@ -1,7 +1,3 @@
----
-component: "BarcodeGenerator"
----
-
 # BarcodeGenerator
 
 ## Code39

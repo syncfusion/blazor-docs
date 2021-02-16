@@ -1,7 +1,3 @@
----
-component: "Calendar"
----
-
 # Data Binding
 
 This section briefly explains how to bind the value to the Calendar component in the below different ways.

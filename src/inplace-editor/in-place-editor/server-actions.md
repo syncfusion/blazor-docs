@@ -1,7 +1,3 @@
----
-component: "In-place Editor"
----
-
 # Server actions
 
 By passing In-place Editor component value to the server, the `PrimaryKey` property value must require, otherwise action not performed for remote data.

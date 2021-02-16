@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Chart Series
 
 ## Multiple Series

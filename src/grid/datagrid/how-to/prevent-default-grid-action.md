@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Prevent default datagrid action
 
 The default datagrid actions can be prevented by cancelling them in the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) event.

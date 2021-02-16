@@ -1,7 +1,3 @@
----
-component: "AutoComplete"
----
-
 # Filtering
 
 The AutoComplete has built-in support to filter data items. The filter operation

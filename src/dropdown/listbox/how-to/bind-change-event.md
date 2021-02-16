@@ -1,7 +1,3 @@
----
-component: "ListBox"
----
-
 # Binding Change Event
 
 To bind the change event in the listbox [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) event is used and the event is triggered when the value in the listbox changes.

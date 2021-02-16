@@ -1,7 +1,3 @@
----
-component: "Checkbox"
----
-
 # Label and Size
 
 This section explains the different sizes and labels.

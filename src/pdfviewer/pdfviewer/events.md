@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Events
 
 The following section list out the events provided in PDF Viewer component:

@@ -1,7 +1,3 @@
----
-component: "Query Builder"
----
-
 # Localization
 
 The `Localization` library allows you to localize default text content of the Query Builder. The Query Builder has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.). In the following sample the text is changed to `German` culture.

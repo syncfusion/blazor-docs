@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # Customizing templates
 
 The ListView component is designed to customize each list items and group title. It uses Blazor `Template engine` to render the elements.

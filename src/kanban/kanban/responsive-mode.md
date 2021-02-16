@@ -1,7 +1,3 @@
----
-component: "Kanban"
----
-
 # Responsive mode
 
 The Kanban component has support for responsive behavior based on the client browser's width and height.

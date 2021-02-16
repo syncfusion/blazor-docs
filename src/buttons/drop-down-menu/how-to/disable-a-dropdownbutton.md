@@ -1,7 +1,3 @@
----
-component: "Dropdown Menu"
----
-
 # Disable a Dropdown Menu
 
 Dropdown Menu component can be enabled/disabled by giving [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_Disabled) property.

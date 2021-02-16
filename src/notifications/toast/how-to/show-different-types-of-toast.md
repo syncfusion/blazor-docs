@@ -1,7 +1,3 @@
----
-component: "Toast"
----
-
 # Show different types of toast
 
 The Blazor toast has the following predefined styles that can be defined using the `CssClass` property for achieving different types of toast:

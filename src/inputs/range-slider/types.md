@@ -1,7 +1,3 @@
----
-component: "Slider"
----
-
 # Types
 
 The types of Slider are as follows:

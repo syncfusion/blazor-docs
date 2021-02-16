@@ -1,7 +1,3 @@
----
-component: "NumericTextBox"
----
-
 # Globalization
 
 ## Blazor server side

@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How to trace events of listview
 
 The ListView control triggers events based on its actions. The events can be used as extension points to perform

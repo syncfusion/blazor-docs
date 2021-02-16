@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Annotation
 
 Annotations are used to mark the specific area of interest in the chart area with texts, shapes or images.

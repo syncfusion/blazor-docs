@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Inline Mode
 
 This is the inline example for the Rich Text Editor. For this, you must set the `RichTextEditorInlineMode` property.

@@ -1,7 +1,3 @@
----
-component: "Tooltip"
----
-
 # Tooltip Positioning
 
 Tooltips can be attached to 12 static locations around the target.

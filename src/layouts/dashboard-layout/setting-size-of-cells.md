@@ -1,7 +1,3 @@
----
-component: "Dashboard Layout"
----
-
 # Configuring the grid layout
 
 The **Dashboard Layout** is a grid structured component, which can be split into subsections of equal size known as cells.

@@ -1,7 +1,3 @@
----
-component: "Menu Bar"
----
-
 # Change orientation
 
 Orientation in menu items can be changed horizontally or vertically using the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~Orientation.html) property. By default, it is horizontally aligned.

@@ -1,7 +1,3 @@
----
-component: "DropDownList"
----
-
 # Templates
 
 The DropDownList has been provided with several options to customize each list item, group title,

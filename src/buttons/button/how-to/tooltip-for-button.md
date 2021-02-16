@@ -1,7 +1,3 @@
----
-component: "Button"
----
-
 # Tooltip For Button
 
 Tooltip can be shown on Button hover and it can be achieved by [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property.

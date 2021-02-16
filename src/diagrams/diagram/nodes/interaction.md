@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Interaction
 
 Diagram provides the support to drag, resize, or rotate the node interactively.

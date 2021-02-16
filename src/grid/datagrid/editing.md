@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Editing
 
 The DataGrid component has options to dynamically insert, delete and update records.

@@ -1,7 +1,3 @@
----
-component: "Menu Bar"
----
-
 # Data source binding
 
 ## Data binding

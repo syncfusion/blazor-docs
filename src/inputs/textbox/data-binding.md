@@ -1,7 +1,3 @@
----
-component: "TextBox"
----
-
 # Data Binding
 
 This section briefly explains how to bind the value to the TextBox component in the following different ways.

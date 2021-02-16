@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Form filling and signature fields
 
 PDF Viewer component allows you to display the form fields available in the PDF document. By using this you can edit and download the form fields.

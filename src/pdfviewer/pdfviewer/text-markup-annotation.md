@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Text Markup Annotation
 
 The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, and strikethrough annotations in the PDF document.

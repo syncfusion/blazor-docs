@@ -1,7 +1,3 @@
----
-component: "Query Builder"
----
-
 # Summary View
 
 Summary view allows you to view the filtered query in a compact view. And you can switch to builder mode by clicking `Edit` button. By default, the value is false. You can enable this feature by setting the [`SummaryView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SummaryView) property to `true`.

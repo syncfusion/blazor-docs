@@ -1,7 +1,3 @@
----
-component: "ListBox"
----
-
 # Icons and Customization
 
 ## Icons

@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Handwritten Signature
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. The handwritten signature reduces the paper work of reviewing the content and verifies it digitally.

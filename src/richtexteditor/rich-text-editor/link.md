@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Link
 
 A hyperlink can be inserted into the editor for quick access to the related information. The hyperlink itself can be a text or an image.

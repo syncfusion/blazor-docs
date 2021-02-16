@@ -1,7 +1,3 @@
----
-component: "Spinner"
----
-
 # Integrate Spinner into Blazor UI components
 
 The Spinner component rendered with other Blazor components.

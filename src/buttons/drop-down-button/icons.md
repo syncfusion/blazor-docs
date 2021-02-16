@@ -1,7 +1,3 @@
----
-component: "DropDownButton"
----
-
 # Icons and Styles
 
 ## DropDownButton icons

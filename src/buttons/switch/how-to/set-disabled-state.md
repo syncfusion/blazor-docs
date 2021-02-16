@@ -1,7 +1,3 @@
----
-component: "Switch"
----
-
 # Set disabled state
 
 Switch can be disabled by setting the [`disabled`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.Buttons.EjsSwitch~Disabled.html) property to true.

@@ -1,7 +1,3 @@
----
-component: "Heatmap"
----
-
 # Overview
 
 The HeatMap control is used to visualize a two-dimensional data in which the values are represented in gradient or fixed colors.

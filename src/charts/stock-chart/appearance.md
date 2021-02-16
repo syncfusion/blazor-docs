@@ -1,9 +1,3 @@
----
-
-component: "Stock Chart"
-
----
-
 # Appearance
 
 ## Stock Chart Title

@@ -1,7 +1,3 @@
----
-component: "DateRangePicker"
----
-
 # Overview
 
 The following section explains steps to include native events and pass data to event handler in the DateRangePicker component.

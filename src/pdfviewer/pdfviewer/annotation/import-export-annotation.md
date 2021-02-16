@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Import and export annotation
 
 The PDF Viewer control provides the support to import and export annotations using JSON object in the PDF document.

@@ -1,7 +1,3 @@
----
-component: "ProgressBar"
----
-
 # Customization
 
 ## Segments

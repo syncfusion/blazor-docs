@@ -1,7 +1,3 @@
----
-component: "Tree Grid"
----
-
 # Virtualization
 
 Tree Grid allows you to load large amount of data without performance degradation.

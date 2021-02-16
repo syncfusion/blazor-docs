@@ -1,7 +1,3 @@
----
-component: "Textbox"
----
-
 # Set the disabled state
 
 To disable the TextBox, use its

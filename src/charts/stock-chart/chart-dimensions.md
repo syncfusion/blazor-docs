@@ -1,9 +1,3 @@
----
-
-component: "Stock Chart"
-
----
-
 # Stock Chart Dimensions
 
 ## Size for Container

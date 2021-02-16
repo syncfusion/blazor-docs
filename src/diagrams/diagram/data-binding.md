@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Data Binding
 
 * Diagram can be populated with the `Nodes` and `Connectors` based on the information provided from an external data source.

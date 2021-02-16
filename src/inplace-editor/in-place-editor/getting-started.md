@@ -1,6 +1,4 @@
----
-component: "In-place Editor"
----
+------
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

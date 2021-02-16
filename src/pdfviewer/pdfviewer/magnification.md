@@ -1,6 +1,4 @@
----
-component: "PDF Viewer"
----
+------
 # Magnification
 
 The built-in toolbar of PDF Viewer contains the following zooming options:

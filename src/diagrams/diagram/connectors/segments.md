@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Segments
 
 The path of the connector is defined with a collection of segments. There are three types of segments.

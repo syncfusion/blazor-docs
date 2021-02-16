@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How to ListView with hyper-link navigation
 
 We can use `anchor` tag along with `href` attribute in our ListView `Template` property for navigation.

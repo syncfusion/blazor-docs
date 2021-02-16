@@ -1,7 +1,3 @@
----
-component: "Tab"
----
-
 # Load Tab items dynamically
 
 Tabs can be added dynamically by list of items and index value to the `AddTab` method.

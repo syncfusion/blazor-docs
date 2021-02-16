@@ -1,7 +1,3 @@
----
-component: "Uploader"
----
-
 # Chunk Upload
 
 The Uploader sends the large file split into small chunks and transmits to the server using AJAX. You can also pause, resume, and retry the failed chunk file.

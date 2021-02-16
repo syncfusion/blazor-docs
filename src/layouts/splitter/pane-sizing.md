@@ -1,7 +1,3 @@
----
-component: "Splitter"
----
-
 # Pane Sizing
 
 Splitter allows you to provide pane sizes either in `Pixel` or `Percentage` formats.

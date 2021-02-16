@@ -1,7 +1,3 @@
----
-component: 'ListView'
----
-
 # Checklist
 
 The ListView supports checkbox in default and group-lists which is used to select multiple items.

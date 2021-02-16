@@ -1,7 +1,3 @@
----
-component: "Gantt Chart"
----
-
 # Excel Export
 
 Gantt Chart supports client-side exporting, which allows you to export its data to the Excel and CSV formats. Use the `ExcelExport` and `CsvExport` methods for exporting. To enable Excel export in the Gantt Chart, set the `AllowExcelExport` to true.

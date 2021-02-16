@@ -1,7 +1,3 @@
----
-component: "Tabs"
----
-
 # Responsive Modes
 
 The following section explains about rendering Tab when its width exceeds the viewable area or particularly in a given width. The available modes are as follows:

@@ -1,7 +1,3 @@
----
-component: "MultiSelect"
----
-
 # Data Source
 
 The MultiSelect loads the data either from local data sources or

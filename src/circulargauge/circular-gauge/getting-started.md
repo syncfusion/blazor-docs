@@ -1,7 +1,3 @@
----
-component: "Circular Gauge"
----
-
 # Getting Started
 
 This section briefly explains how to include a Circular Gauge in your Blazor Server-side application. Refer to this [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor/) documentation for the introduction and configuring the common specifications.

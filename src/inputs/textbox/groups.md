@@ -1,7 +1,3 @@
----
-component: "TextBox"
----
-
 # Groups
 
 The following section explains you the steps required to create TextBox with `icon` and `floating label`.

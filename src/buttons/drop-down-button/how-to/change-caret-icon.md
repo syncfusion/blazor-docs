@@ -1,7 +1,3 @@
----
-component: "DropDownButton"
----
-
 # Change caret icon
 
 Dropdown arrow can be customized on popup open and close. It can be handled in

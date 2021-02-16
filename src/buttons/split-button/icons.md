@@ -1,7 +1,3 @@
----
-component: "Split Button"
----
-
 # Icons
 
 ## Split Button Icons

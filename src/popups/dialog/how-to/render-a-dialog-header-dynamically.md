@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Render a dialog header dynamically
 
 By default, the dialog is rendered without header. You can update its header dynamically using the `Header` property.

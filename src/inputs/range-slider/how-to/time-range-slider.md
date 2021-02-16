@@ -1,7 +1,3 @@
----
-component: "Slider"
----
-
 # Time Range Slider
 
 The time formatting can be achieved same as the date formatting using `TicksRendering` and `TooltipChange` events. The process of time formatting is explained in the below sample.

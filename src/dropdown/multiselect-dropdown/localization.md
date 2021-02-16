@@ -1,7 +1,3 @@
----
-component: "MultiSelect"
----
-
 # Localization
 
 ## Blazor server side

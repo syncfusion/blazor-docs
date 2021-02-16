@@ -1,7 +1,3 @@
----
-component: "NumericTextBox"
----
-
 # Overview
 
 This section explains the steps to include native events and pass data to event handler in the NumericTextBox component.

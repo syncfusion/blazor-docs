@@ -1,9 +1,3 @@
----
-
-component: "Bullet Chart"
-
----
-
 # Axis Customization
 
 ## MajorTickLines and MinorTickLines Customization

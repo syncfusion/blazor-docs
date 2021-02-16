@@ -1,7 +1,3 @@
----
-component: "Split Button"
----
-
 # Accessibility
 
 ## ARIA attributes

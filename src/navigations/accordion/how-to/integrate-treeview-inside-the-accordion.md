@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # TreeView Integration
 
 Accordion supports to render other blazor Components by using `ContentTemplate` property. You can give other components as an accordion content like below, for initializing the component.

@@ -1,7 +1,3 @@
----
-component: "Gantt Chart"
----
-
 # Appearance And Customization
 
 ## Taskbar customization

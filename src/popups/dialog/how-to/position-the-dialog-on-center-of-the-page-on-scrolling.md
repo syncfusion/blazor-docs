@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Position the Dialog on center of the page on scrolling
 
 By default, when you scroll the page/container, Dialog will also scroll along with the page/container.

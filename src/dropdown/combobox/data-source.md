@@ -1,7 +1,3 @@
----
-component: "ComboBox"
----
-
 # Data Source
 
 The ComboBox loads the data either from local data sources or

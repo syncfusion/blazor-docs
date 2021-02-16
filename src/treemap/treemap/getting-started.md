@@ -1,7 +1,3 @@
----
-component: "Tree Map"
----
-
 # Getting Started
 
 This section briefly explains how to include a TreeMap in your Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor/) documentation for the introduction and configuring the common specifications.

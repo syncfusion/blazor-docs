@@ -1,7 +1,3 @@
----
-component: "Uploader"
----
-
 # Asynchronous upload
 
 The uploader component allows you to upload the files asynchronously.

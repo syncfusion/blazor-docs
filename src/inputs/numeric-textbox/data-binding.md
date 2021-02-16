@@ -1,7 +1,3 @@
----
-component: "NumericTextBox"
----
-
 # Data Binding
 
 This section briefly explains how to bind the value to the NumericTextBox component in the following different ways:

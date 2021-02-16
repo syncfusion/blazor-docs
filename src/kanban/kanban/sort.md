@@ -1,7 +1,3 @@
----
-component: "Kanban"
----
-
 # Sort
 
 The Kanban provides built-in support to arrange the cards in their columns based on the JSON data order and drop the cards in the columns based on the dropped clone.

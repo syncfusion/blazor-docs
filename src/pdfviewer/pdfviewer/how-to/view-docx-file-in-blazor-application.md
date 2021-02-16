@@ -1,6 +1,4 @@
----
-component: "PDF Viewer"
----
+------
 # How to view or display DOCX file in Blazor application
 
 You can achieve this requirement of viewing DOCX file in two ways:.

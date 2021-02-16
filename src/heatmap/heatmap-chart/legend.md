@@ -1,7 +1,3 @@
----
-component: "Heatmap"
----
-
 # Legend
 
 The legend is used to provide the information about the heat map cell. You can enable the legend by setting the `Visible` property to true.

@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Customize the dialog appearance
 
 You can customize the dialog appearance by providing dialog template as string or HTML element to the `Content` template property. In the following code block, dialog is customized as error window appearance.

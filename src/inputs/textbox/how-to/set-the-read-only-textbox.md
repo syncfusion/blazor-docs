@@ -1,7 +1,3 @@
----
-component: "Textbox"
----
-
 # Set the read-only TextBox
 
 The following example demonstrates how to set `Readonly` in TextBox Component.

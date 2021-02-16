@@ -1,7 +1,3 @@
----
-component: "Chart"
----
-
 # Events
 
 In this section, we have provided the list of events of the Chart component which will be

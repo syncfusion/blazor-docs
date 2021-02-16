@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Appearance
 
 ## Custom Color Palette

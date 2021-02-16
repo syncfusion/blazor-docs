@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Customize Column Styles
 
 You can customise the appearance of the header and content of a particular column using the [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.

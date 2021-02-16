@@ -1,7 +1,3 @@
----
-component: "TimePicker"
----
-
 # CSS customization
 
 TimePicker allows you to customize the text box and popup list appearance to suit your

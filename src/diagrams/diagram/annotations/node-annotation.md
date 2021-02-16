@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # How to position node’s annotation
 
 Diagram allows you to customize the position and appearance of the annotation efficiently.

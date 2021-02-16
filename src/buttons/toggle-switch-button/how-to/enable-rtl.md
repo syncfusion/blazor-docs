@@ -1,7 +1,3 @@
----
-component: "Toggle Switch Button"
----
-
 # Enable RTL
 
 Toggle Switch Button component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) as `true`.

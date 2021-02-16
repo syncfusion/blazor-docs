@@ -1,7 +1,3 @@
----
-component: "In-place Editor"
----
-
 # Integrate HTML5 components (Template)
 
 The In-place Editor supports adding HTML5 input components using the `InPlaceEditorTemplate` property. The Template property can be given as follows.

@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Prevent closing of modal dialog
 
 You can prevent closing of modal dialog by setting the `OnClose` event argument cancel value to true.

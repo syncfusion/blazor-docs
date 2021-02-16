@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Rename uploaded images in server before inserting it in the Rich Text Editor
 
 By using the `RichTextEditorImageSettings` property, we can specify the server handler to upload and rename the selected image. Then we can bind the `OnImageUploadSuccess` event, to receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.

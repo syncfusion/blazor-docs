@@ -1,7 +1,3 @@
----
-component: "Tree Grid"
----
-
 # Toolbar
 
 The Tree Grid provides Toolbar support to handle tree grid actions.

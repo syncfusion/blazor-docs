@@ -1,7 +1,3 @@
----
-component: "Calendar"
----
-
 # Events
 
 This section explains the list of events of the Calendar component which will be

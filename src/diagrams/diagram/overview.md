@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Overview Control
 
 Overview control allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and to navigate, pan, or zoom, on a particular position of the page.

@@ -1,7 +1,3 @@
----
-component: "Gantt Chart"
----
-
 # Timeline
 
 In the Gantt Chart component, timeline is used to represent the project duration as individual cells with defined unit and formats.

@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Axis Labels
 
 ## Smart Axis Labels

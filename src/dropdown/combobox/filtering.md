@@ -1,7 +1,3 @@
----
-component: "ComboBox"
----
-
 # Filtering
 
 The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) is enabled. The filter

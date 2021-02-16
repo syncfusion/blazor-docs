@@ -1,7 +1,3 @@
----
-component: "Splitter"
----
-
 # Expand and Collapse
 
 ## Collapsible panes

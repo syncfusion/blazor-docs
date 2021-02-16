@@ -1,7 +1,3 @@
----
-component: "Card"
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Header and Content

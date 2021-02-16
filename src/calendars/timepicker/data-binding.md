@@ -1,7 +1,3 @@
----
-component: "TimePicker"
----
-
 # Data Binding
 
 This section briefly explains how to bind the value to the TimePicker component in the below different ways.

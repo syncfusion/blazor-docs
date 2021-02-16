@@ -1,7 +1,3 @@
----
-component: "ListBox"
----
-
 # Selection
 
 The ListBox provides support to select an item or a group of item by mouse or keyboard action. There are two selection modes available in ListBox,

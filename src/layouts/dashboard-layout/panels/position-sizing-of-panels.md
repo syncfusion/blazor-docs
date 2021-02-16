@@ -1,7 +1,3 @@
----
-component: "Dashboard Layout"
----
-
 # Panels
 
 Panels are the basic building blocks of the dashboard layout component. They act as a container for the data to be visualized or presented.

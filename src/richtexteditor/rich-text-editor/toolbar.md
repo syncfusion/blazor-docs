@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Toolbar
 
 The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs.

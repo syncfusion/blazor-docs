@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Data Markers
 
 Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point.

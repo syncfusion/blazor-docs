@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # Accessibility
 
 ## Keyboard interaction

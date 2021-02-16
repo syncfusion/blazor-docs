@@ -1,7 +1,3 @@
----
-component: "Checkbox"
----
-
 # Customized Checkbox
 
 ## Customize Checkbox Appearance

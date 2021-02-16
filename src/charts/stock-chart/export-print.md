@@ -1,9 +1,3 @@
----
-
-component: "Stock Chart"
-
----
-
 # Print and Export
 
 The rendered stock chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the export dropdown button in the period selector toolbar. You can choose the required format using the export dropdown button in stock-chart.

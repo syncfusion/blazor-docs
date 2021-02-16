@@ -1,6 +1,4 @@
----
-component: "ListBox"
----
+------
 # Accessibility
 
 ## ARIA Attributes

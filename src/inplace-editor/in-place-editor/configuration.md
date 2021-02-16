@@ -1,7 +1,3 @@
----
-component: "In-place Editor"
----
-
 # Configuration
 
 ## Rendering modes

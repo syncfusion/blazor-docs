@@ -1,7 +1,3 @@
----
-component: "BarcodeGenerator"
----
-
 # QR Code generator
 
 # QR Code

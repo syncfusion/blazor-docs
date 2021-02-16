@@ -1,7 +1,3 @@
----
-component: "MultiSelect"
----
-
 # Templates
 
 The MultiSelect has been provided with several options to customize each list item, group title,

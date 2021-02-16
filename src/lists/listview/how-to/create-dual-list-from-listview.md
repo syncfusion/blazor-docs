@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How to create dual list from listview
 
 The dual list contains two ListView. This allows you to move list items from one list to another using the client-side

@@ -1,7 +1,3 @@
----
-component: "In-place Editor"
----
-
 # Dynamically move input to edit mode
 
 At component initial load, you can open the editor state without interacting with the In-place Editor input element by configuring the `EnableEditMode` property to `true`.

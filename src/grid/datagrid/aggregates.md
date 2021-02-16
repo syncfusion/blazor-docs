@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Aggregates
 
 Aggregate values are displayed in the footer, group footer, or group caption of the Grid. It can be configured through [`GridAggregates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Aggregates) component.

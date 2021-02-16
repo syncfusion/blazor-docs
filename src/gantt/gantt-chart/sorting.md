@@ -1,7 +1,3 @@
----
-component: "Gantt Chart"
----
-
 # Sorting
 
 Sorting enables you to sort data in the ascending or descending order. To sort a column, click the column header.

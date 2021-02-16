@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # Add Icon to Header
 
 You can add the icon custom css class to the Accordion header using `IconCss` property and also add css styles to the defined class.  The accordion icon element is rendered before the header text in the DOM element.

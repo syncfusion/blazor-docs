@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Essential JS 2 for Blazor client-side in Visual Studio 2019

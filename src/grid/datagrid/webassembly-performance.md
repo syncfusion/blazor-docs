@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # WebAssembly performance
 
 This section provides guidelines for using grid component in Blazor WebAssembly application. The guidelines for the Blazor WebAssembly performance best practice can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).

@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Context menu
 
 The DataGrid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [`ContextMenuItems`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property.

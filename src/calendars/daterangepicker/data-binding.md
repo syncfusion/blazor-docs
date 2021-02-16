@@ -1,7 +1,3 @@
----
-component: "DateRangePicker"
----
-
 # Data Binding
 
 This section briefly explains how to bind the value to the DateRangePicker component in the below different ways.

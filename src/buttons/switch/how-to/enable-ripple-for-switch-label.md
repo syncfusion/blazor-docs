@@ -1,7 +1,3 @@
----
-component: "Switch"
----
-
 # Enable ripple for Switch label
 
 By default, label with ripple effect is not available in Switch. You can achieve this using `EnableRipple`

@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Styling
 
 ## Font name and size

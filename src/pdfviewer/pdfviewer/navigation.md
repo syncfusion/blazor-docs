@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Navigation
 
 You can navigate between pages in Syncfusion PDF Viewer in the following ways:

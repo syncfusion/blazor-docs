@@ -1,7 +1,3 @@
----
-component: "Toolbar"
----
-
 # Responsive Mode
 
 This section explains the supported display modes of the Toolbar when the content exceeds the viewing area. Possible modes are:

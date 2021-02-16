@@ -1,7 +1,3 @@
----
-component: "Dropdown Menu"
----
-
 # Accessibility
 
 ## ARIA attributes

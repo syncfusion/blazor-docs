@@ -1,7 +1,3 @@
----
-component: "ButtonGroup"
----
-
 # Selection and Nesting
 
 ## Single selection

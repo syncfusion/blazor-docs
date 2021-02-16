@@ -1,7 +1,3 @@
----
-component: "Heatmap"
----
-
 # Rendering mode
 
 Heat map can be displayed using `Canvas` or `Scalable Vector Graphics (SVG)` rendering logic to improve the initial load performance and scalability. Heat map can also be automatically switched between `Canvas` and `SVG` modes based on dataset size. You can enable this mode by setting the `RenderingMode` property to `Auto`.

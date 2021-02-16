@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # To keep single pane open always
 
 By default, all Accordion panels are collapsible. You can customize the Accordion to keep one panel as expanded state always. This is applicable for `Single` expand mode.

@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Globalization
 
 ## Localization

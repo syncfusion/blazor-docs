@@ -1,7 +1,3 @@
----
-component: "Tab"
----
-
 # Load content through Ajax
 
 The Tab supports to load external contents through AJAX library. Refer to the following steps.

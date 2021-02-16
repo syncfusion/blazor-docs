@@ -1,9 +1,3 @@
----
-
-component: "Stock Chart"
-
----
-
 # Axis Customization
 
 <!-- markdownlint-disable MD034 -->

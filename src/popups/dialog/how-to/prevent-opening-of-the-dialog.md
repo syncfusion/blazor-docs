@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Prevent opening of the dialog
 
 You can prevent opening of  the dialog by setting the `OnOpen` event argument cancel value to true.

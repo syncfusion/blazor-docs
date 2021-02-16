@@ -1,7 +1,3 @@
----
-component: "AutoComplete"
----
-
 # Accessibility
 
 The AutoComplete component has been designed, keeping in mind the `WAI-ARIA` specifications,

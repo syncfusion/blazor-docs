@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Symmetric layout
 
 The symmetric layout has been formed using nodes position by closer together or pushing them further apart. This is repeated iteratively until the system comes to an equilibrium state.

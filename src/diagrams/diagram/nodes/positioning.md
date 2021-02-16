@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Position
 
 ## Arrange the nodes

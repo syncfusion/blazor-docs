@@ -1,7 +1,3 @@
----
-component: "DropDown Menu"
----
-
 # Create Dropdown List in Popup
 
 We have render the `DropDownList` component in `DropDownMenu` popup using `PopupContent` property.

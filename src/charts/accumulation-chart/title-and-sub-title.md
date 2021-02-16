@@ -1,8 +1,4 @@
 ---
-
-component: "Accumulation Chart"
-
----
 # Title
 
 Accumulation chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_Title) property, to show the information

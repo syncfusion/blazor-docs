@@ -1,7 +1,3 @@
----
-component: "Context Menu"
----
-
 # Icons and Navigation
 
 ## Icons

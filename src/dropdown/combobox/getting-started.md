@@ -1,7 +1,3 @@
----
-component: "ComboBox"
----
-
 # Getting Started
 
 This section briefly explains how to include a **ComboBox** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.

@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # Add/Remove Accordion Items
 
 Accordion can be added/removed dynamically by iteration of Accordion Items using conditional **foreach** loop.

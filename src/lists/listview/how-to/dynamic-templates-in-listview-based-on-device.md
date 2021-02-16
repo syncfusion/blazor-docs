@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How to use dynamic templates in listview based on device
 
 The Syncfusion Essential Blazor controls are desktop and mobile-friendly. So, you can use Syncfusion controls in

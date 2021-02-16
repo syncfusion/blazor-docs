@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting started with Syncfusion Blazor - Server App in .NET Core CLI

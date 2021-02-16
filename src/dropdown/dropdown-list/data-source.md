@@ -1,7 +1,3 @@
----
-component: "DropDownList"
----
-
 # Data Source
 
 The DropDownList loads the data either from local data sources or

@@ -1,7 +1,3 @@
----
-component: "ListBox"
----
-
 # Getting Started with Blazor ListBox Component
 
 This section briefly explains about how to include ListBox Component in your Blazor server-side  application.

@@ -1,7 +1,3 @@
----
-component: "CheckBox"
----
-
 # Name and Value in form submit
 
 The name attribute of the CheckBox is used to group Checkboxes. When the Checkboxes are grouped in form, the checked items value attribute

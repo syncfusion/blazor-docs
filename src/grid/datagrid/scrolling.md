@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Scrolling
 
  The scrollbar will be displayed in the datagrid when content exceeds the element [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) or [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height). The vertical and horizontal scrollbars will be displayed based on the following criteria:

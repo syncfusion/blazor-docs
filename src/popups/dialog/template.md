@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Template
 
 In Dialog, the template support is provided to the header and footer sections. So any text or HTML content can be appended in these sections.

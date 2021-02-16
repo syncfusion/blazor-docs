@@ -1,7 +1,3 @@
----
-component: "Pivot Table"
----
-
 # CSS Customization
 
 ## Hiding Axis

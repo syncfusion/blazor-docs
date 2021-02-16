@@ -1,7 +1,3 @@
----
-component: "Toggle Switch Button"
----
-
 # Change Size
 
 The different Toggle Switch Button sizes available are default and small. To reduce the size of default Toggle Switch Button to small,

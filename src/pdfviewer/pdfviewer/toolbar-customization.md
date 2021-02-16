@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Toolbar customization of Blazor PDF Viewer
 
 The PDF Viewer comes with a powerful built-in toolbar with the following important options:,

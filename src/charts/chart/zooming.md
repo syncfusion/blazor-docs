@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Zooming  and Panning
 
 ## Enable Zooming

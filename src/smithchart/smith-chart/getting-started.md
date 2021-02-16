@@ -1,7 +1,3 @@
----
-component: "Smith chart"
----
-
 # Getting Started
 
 This section briefly explains how to include a [`Smithchart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSmithchart.html) in your Blazor client-side application. Refer to this [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor/) documentation for introduction and configuring the common specifications.

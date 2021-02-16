@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How to chat window user interface using listview
 
 ListView can be customized as chat window. To achieve that, use the ListView `Template` .

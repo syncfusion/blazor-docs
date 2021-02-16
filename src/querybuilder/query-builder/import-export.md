@@ -1,7 +1,3 @@
----
-component: "Query Builder"
----
-
 # Importing
 
 Importing allows you to view or edit the predefined conditions which is available in JSON or SQL. You can import the conditions either initial rendering or post rendering.

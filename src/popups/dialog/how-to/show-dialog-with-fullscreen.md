@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Show dialog with fullscreen
 
 You can show the dialog in fullscreen by passing `true` as argument to the dialog `Show` method. By using `Visible` property you can prevent the dialog from showing initially.

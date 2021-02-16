@@ -1,7 +1,3 @@
----
-component: "ListBox"
----
-
 # Dual ListBox
 
 The dual ListBox allows the user to move items between two listbox by clicking the toolbar buttons. Dual ListBox can be created by listing items in the

@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Add Google fonts
 
 To use web fonts in Rich Text Editor, the web fonts need not to be present in the local machine. To add the web fonts to Rich Text Editor, refer to the web font links and add the font names in the `RichTextEditorFontFamily` tag.

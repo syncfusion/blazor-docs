@@ -1,7 +1,3 @@
----
-component: "Tabs"
----
-
 # Orientation
 
 This section explains about modifying the position and modes of Tab header.

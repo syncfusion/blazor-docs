@@ -1,7 +1,3 @@
----
-component: "BarcodeGenerator"
----
-
 # Export
 
 ## Export

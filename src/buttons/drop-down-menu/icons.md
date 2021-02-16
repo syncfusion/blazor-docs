@@ -1,7 +1,3 @@
----
-component: "Dropdown Menu"
----
-
 # Icons and Styles
 
 ## Dropdown Menu icons

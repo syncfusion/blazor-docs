@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Native events
 
 The Diagram control provides event support, which triggers while interacting with the diagram. Also, Syncfusion provides native event support in blazor for the following events

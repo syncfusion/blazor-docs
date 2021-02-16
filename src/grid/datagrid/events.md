@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Events
 
 In this section, we have provided the list of events of the datagrid component which will be

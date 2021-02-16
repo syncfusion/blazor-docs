@@ -1,7 +1,3 @@
----
-component: "Scheduler"
----
-
 # Events
 
 In this section, we have provided the list of events of the Scheduler component which will be

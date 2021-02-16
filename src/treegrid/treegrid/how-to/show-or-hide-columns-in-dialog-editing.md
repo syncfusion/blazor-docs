@@ -1,7 +1,3 @@
----
-component: "TreeGrid"
----
-
 # Show or Hide columns in dialog editing
 
 You can show hidden columns or hide visible column’s editor in the dialog while editing the Tree Grid record. This can be achieved by **Template**.

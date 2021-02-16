@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # History List
 
 Diagram tracks the history of actions that are performed after initializing the diagram and provides support to reverse and restore those changes.

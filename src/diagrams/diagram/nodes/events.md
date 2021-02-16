@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Events
 
 Diagram provides some events support for node that triggers when interacting the node.

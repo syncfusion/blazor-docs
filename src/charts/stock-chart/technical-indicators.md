@@ -1,9 +1,3 @@
----
-
-component: "Stock Chart"
-
----
-
 <!-- markdownlint-disable MD036 -->
 
 # Technical Indicators

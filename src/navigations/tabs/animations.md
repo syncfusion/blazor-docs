@@ -1,7 +1,3 @@
----
-component: "Tabs"
----
-
 # Animations
 
 The Tabs component supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The animation property also allows you to set `Easing`, `Duration` and various other effects.

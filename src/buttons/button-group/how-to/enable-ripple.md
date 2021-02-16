@@ -1,7 +1,3 @@
----
-component: "ButtonGroup"
----
-
 # Enable ripple
 
 The following example illustrates how to enable ripple for ButtonGroup.

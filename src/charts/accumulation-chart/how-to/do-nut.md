@@ -1,9 +1,3 @@
----
-
-component: "Chart"
-
----
-
 # Text placing center of the doughnut
 
 The annotations are used to mark the specific area of interest in the chart area with texts, shapes or images.

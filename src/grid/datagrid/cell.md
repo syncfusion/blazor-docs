@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Cell
 
 ## Displaying the HTML content

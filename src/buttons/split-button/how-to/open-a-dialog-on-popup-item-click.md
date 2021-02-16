@@ -1,7 +1,3 @@
----
-component: "Split Button"
----
-
 # Open a dialog on popup item click
 
 This section explains about how to open a dialog on Split Button popup item click. This can be achieved by

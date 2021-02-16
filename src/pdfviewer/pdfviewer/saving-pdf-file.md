@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Saving PDF file
 
 After editing the PDF file with various annotation tools, you will need to save the updated PDF to the server, database, or local file system.

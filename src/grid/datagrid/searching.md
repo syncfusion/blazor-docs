@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Search
 
 You can search records in a DataGrid, by using the **Search** method with search key as a parameter. This also provides an option to integrate search text box in datagrid's toolbar by adding **Search** item to the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Toolbar.html).

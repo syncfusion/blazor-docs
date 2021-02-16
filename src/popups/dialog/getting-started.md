@@ -1,6 +1,4 @@
----
-component: "Dialog"
----
+------
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

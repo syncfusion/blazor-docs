@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Comments
 
 The PDF Viewer control provides options to add, edit, and delete the comments to the following annotation in the PDF documents:

@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Change datagrid data source dynamically
 
 You can change the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) of the datagrid component dynamically through an external button.

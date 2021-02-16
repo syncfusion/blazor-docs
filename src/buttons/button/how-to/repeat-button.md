@@ -1,7 +1,3 @@
----
-component: "Button"
----
-
 # Repeat Button
 
 The Repeat button is a type of Button in that the click event is triggered at regular time interval from the pressed state till the released state.

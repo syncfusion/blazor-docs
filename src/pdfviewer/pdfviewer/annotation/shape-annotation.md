@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Shape annotation
 
 The PDF Viewer control provides the options to add, edit and delete the shape annotations. The shape annotation types supported in the PDF Viewer control are:

@@ -1,7 +1,3 @@
----
-component: "Checkbox"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Checkbox Component

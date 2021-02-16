@@ -1,7 +1,3 @@
----
-component: "Tab"
----
-
 # Create collapsible Tabs
 
 You can achieve collapse and expand functionality in Tab by adding/removing a custom CSS class in the click event handler for each tab.

@@ -1,7 +1,3 @@
----
-component: "Data Manager"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Data Adaptors

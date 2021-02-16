@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # UML Diagram Shapes
 
 ## Uml Class Diagram Shapes

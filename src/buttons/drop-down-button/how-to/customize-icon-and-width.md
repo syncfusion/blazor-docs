@@ -1,7 +1,3 @@
----
-component: "DropDownButton"
----
-
 # Customize icon and width
 
 Width of the DropDownButton can be customized by setting required width to the dropdown element.

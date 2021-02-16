@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Context Menu
 
 <!-- markdownlint-disable MD010 -->

@@ -1,7 +1,3 @@
----
-component: "Tabs"
----
-
 # Localization
 
 Localization library allows to localize the default text content of

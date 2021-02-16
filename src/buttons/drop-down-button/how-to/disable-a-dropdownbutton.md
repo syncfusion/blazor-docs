@@ -1,7 +1,3 @@
----
-component: "DropDownButton"
----
-
 # Disable a DropDownButton
 
 DropdownButton component can be enabled/disabled by giving [`disabled`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.EJ2.RazorComponents~Syncfusion.EJ2.RazorComponents.SplitButtons.EjsDropDownButton~Disabled.html) property.

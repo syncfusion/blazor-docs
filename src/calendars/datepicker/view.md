@@ -1,7 +1,3 @@
----
-component: "DatePicker"
----
-
 # Start and Depth View
 
 The DatePicker has the following predefined views

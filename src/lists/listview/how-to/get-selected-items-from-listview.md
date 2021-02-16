@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How to get selected items from listview
 
 Single or many items can be selected by users in the ListView control. An API is used to get selected items from the

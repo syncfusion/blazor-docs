@@ -1,7 +1,3 @@
----
-component: "ListBox"
----
-
 # Data Binding
 
 The ListBox loads the data from local data sources using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.

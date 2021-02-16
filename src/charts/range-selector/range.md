@@ -1,9 +1,3 @@
----
-
-component: "RangeNavigator"
-
----
-
 # Selecting Range
 
 The left and right thumb of RangeNavigator are used to indicate the selected range in the large collection of data. Through following ways you can select a range.

@@ -1,7 +1,3 @@
----
-component: "In-place Editor"
----
-
 # Buttons
 
 The In-place Editor has an option to save and cancel using buttons. The `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` tags accept the button properties for customizing the save and cancel button.

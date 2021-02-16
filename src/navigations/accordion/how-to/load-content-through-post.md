@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # Load content through Ajax
 
 Accordion supports to load external contents through `AJAX` library. Refer the below steps.

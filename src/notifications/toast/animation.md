@@ -1,7 +1,3 @@
----
-component: "Toast"
----
-
 # Animations
 
 The toast component supports custom animations for both show and hide actions from the provided `ToastHideAnimationSettings` and  `ToastShowAnimationSettings` option of the `Animation` library.

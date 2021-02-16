@@ -1,6 +1,4 @@
----
-component: "Dashboard Layout"
----
+------
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

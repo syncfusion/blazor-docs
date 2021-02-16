@@ -1,7 +1,3 @@
----
-component: "Textbox"
----
-
 # Multiline TextBox
 
 This feature allows the textbox to accept one or more lines of text like address, description, comments, and more.

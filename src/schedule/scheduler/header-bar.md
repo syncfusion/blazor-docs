@@ -1,7 +1,3 @@
----
-component: "Blazor Scheduler"
----
-
 # Header customization
 
 The header part of Scheduler can be customized easily with the built-in options available.

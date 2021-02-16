@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Customize column menu icon
 
 You can customize the column menu icon by overriding the default icon class `.e-icons.e-columnmenu` with the `content` property.

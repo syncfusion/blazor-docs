@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Accessibility
 
 Accessibility is achieved in the DataGrid component through WAI-ARIA standard and keyboard navigations. The DataGrid features can be effectively accessed through assistive technologies such as screen readers.

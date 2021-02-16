@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Get the index value of selected rowcell
 
 You can get the index value of a selected rowcell or row by using the [`GetSelectedRowCellIndexes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowCellIndexes) method of the DataGrid component.

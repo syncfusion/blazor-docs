@@ -1,7 +1,3 @@
----
-component: "Sidebar"
----
-
 # CSS structures
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user's preference.

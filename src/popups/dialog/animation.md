@@ -1,7 +1,3 @@
----
-component: "Dialog"
----
-
 # Animation
 
 The Dialog can be animated during the open and close actions. Also, users can

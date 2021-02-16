@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Appearance
 
 ## Customize the size for an annotation

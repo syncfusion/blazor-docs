@@ -1,9 +1,3 @@
----
-
-component: "RangeNavigator"
-
----
-
 # Print and Export
 
 ## Print

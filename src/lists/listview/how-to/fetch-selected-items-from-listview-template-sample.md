@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # How To fetch selected items from listview template sample
 
 Single or multiple items can be selected by users in the ListView control.

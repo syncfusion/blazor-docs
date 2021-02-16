@@ -1,7 +1,3 @@
----
-component: "Pivot Table"
----
-
 # Events
 
 ## AggregateMenuOpen

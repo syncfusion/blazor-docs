@@ -1,7 +1,3 @@
----
-component: "Dropdown Menu"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Dropdown Menu Component

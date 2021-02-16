@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 <!-- Access foreign key column in edit template
 
 You can define the **ForeignKeyColumn** in the grid and access it's value in the edit template property.

@@ -1,7 +1,3 @@
----
-component: "Tabs"
----
-
 # Header
 
 This section explains about modifying the style of Tab header.

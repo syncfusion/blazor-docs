@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Restrict the image uploading while uploading with large size
 
 By using the Rich text editor's `OnImageUploading` event, you can get the image size before uploading and restrict the image to upload, when the given image size is greater than the allowed size.

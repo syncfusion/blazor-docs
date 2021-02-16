@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Customize the toolbar
 
 The PDF Viewer provides API for user interactions options provided in it's built-in toolbar. Using this we can create our own User Interface for toolbar actions in application level by hiding the default toolbar. The following steps are used to create the custom toolbar for PDF Viewer,

@@ -1,7 +1,3 @@
----
-component: "Button"
----
-
 # Set the disabled state
 
 Button component can be enabled/disabled by giving [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Disabled)

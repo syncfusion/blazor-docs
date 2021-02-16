@@ -1,9 +1,3 @@
----
-
-component: "Bullet Chart"
-
----
-
 # Chart Dimensions
 
 ## Size for Container

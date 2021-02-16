@@ -1,6 +1,4 @@
----
-component: "Pivot Table"
----
+------
 <!-- markdownlint-disable MD012 -->
 
 # Defer Layout Update

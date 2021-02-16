@@ -1,7 +1,3 @@
----
-component: "Progress Bar"
----
-
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started in Blazor Progress Bar

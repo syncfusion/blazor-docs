@@ -1,7 +1,3 @@
----
-component: "TimePicker"
----
-
 # Events
 
 This section explains the list of events of the TimePicker component which will be

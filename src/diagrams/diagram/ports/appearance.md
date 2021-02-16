@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Port appearance and positioning
 
 ## Appearance

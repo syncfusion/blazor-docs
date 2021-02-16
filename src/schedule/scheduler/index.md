@@ -1,7 +1,3 @@
----
-component: "Scheduler"
----
-
 # Overview
 
 The **Scheduler** component is an event calendar which facilitates user with the common Outlook-calendar features,

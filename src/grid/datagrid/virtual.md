@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Virtualization
 
 DataGrid allows you to load large amount of data without performance degradation.

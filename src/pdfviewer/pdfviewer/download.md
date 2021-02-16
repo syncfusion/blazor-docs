@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Download
 
 The PDF Viewer supports downloading the loaded PDF file from the toolbar by default. You can enable or disable the download option by setting the `EnableDownload` API.

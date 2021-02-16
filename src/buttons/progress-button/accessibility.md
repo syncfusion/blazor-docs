@@ -1,7 +1,3 @@
----
-component: "Progress Button"
----
-
 # Accessibility
 
 ## ARIA attributes

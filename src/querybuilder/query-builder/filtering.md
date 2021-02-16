@@ -1,7 +1,3 @@
----
-component: "Query Builder"
----
-
 # Filtering
 
 Query Builder allows you to create or delete conditions and groups. You can use [`ShowButtons`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_ShowButtons) to enable/disable these buttons.

@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # Show/Hide Accordion Items
 
 Accordion provides a support to Show/Hide the specified accordion item using following ways.

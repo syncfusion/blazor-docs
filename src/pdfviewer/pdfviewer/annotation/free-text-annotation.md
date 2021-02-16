@@ -1,7 +1,3 @@
----
-component: "PDF Viewer"
----
-
 # Free text annotation
 
 The PDF Viewer control provides the options to add, edit and delete the free text annotations.

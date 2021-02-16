@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Commands
 
 <!-- markdownlint-disable MD010 -->

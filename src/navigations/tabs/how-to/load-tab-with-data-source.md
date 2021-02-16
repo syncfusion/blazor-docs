@@ -1,7 +1,3 @@
----
-component: "Tab"
----
-
 # Load tab with DataSource
 
 You can bind any data object to Tab items, by mapping it to a [header](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.Navigations.TabHeader.html ) and [content](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Navigations.TabTabItem.html#Syncfusion_EJ2_Navigations_TabTabItem_Content)&nbsp; property.

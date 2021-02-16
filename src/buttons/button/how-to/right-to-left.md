@@ -1,7 +1,3 @@
----
-component: "Button"
----
-
 # Right-To-Left
 
 Button component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_EnableRtl) as true.

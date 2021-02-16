@@ -1,7 +1,3 @@
----
-component: "Tooltip"
----
-
 # Content
 
 A text or a piece of information assigned to the Tooltip's `Content` property will be displayed as the main text stream of the Tooltip.

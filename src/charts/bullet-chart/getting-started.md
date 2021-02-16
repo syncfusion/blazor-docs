@@ -1,7 +1,3 @@
----
-component: "BulletChart"
----
-
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started

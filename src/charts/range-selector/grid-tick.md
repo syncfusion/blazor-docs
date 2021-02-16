@@ -1,9 +1,3 @@
----
-
-component: "RangeNavigator"
-
----
-
 # Grid and Tick Lines
 
 ## Grid line customization

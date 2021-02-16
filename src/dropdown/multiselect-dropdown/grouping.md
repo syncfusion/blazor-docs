@@ -1,7 +1,3 @@
----
-component: "MultiSelect"
----
-
 # Grouping
 
 The MultiSelect supports wrapping nested elements into a group based on different categories. The category

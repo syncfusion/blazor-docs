@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Capture ctrl+s to update the value
 
 To achieve this, we need to bind the `keydown` event to the Rich Text Editor content and capture the `ctrl + s` key press using its `keyCode`.

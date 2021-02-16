@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Interaction
 
 Basic interactions of selecting and resizing can be applied over an annotation. These interactions can be controlled by annotation and its parent node or connector.

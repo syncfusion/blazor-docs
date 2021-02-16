@@ -1,7 +1,3 @@
----
-component: "ComboBox"
----
-
 # Accessibility
 
 The ComboBox component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies

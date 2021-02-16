@@ -1,7 +1,3 @@
----
-component: "Accordion"
----
-
 # Enable/Disable Accordion Items
 
 Accordion provides a support to Enable/Disable the specified accordion item using accordion item **Disabled** property.

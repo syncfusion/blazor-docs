@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 # Hide DataGrid header
 
 You can hide the DataGrid header by applying the below styles to DataGrid component.

@@ -1,7 +1,3 @@
----
-component: "Pivot Table"
----
-
 # Data Binding
 
 ## JSON

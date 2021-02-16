@@ -1,7 +1,3 @@
----
-component: "Gantt Chart"
----
-
 # Managing Tasks
 
 The Gantt Chart component has options to dynamically insert, delete, and update tasks in a project. The primary key column is necessary to manage the tasks and perform CRUD operations in Gantt Chart. To define the primary key, set the `Columns.IsPrimaryKey` property to `true` in the column.

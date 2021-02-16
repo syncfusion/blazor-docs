@@ -1,7 +1,3 @@
----
-component: "Pivot Table"
----
-
 # Field List
 
 The pivot table provides a built-in Field List similar to Microsoft Excel. It allows to add or remove fields and also rearrange them between different axes, including column, row, value, and filter along with sort and filter options dynamically at runtime.

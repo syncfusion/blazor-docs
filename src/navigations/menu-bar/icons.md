@@ -1,7 +1,3 @@
----
-component: "Menu Bar"
----
-
 # Icons and Sub Menu items
 
 ## Icons

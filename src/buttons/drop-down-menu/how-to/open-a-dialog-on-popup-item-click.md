@@ -1,7 +1,3 @@
----
-component: "Dropdown Menu"
----
-
 # Open a dialog on popup item click
 
 This section explains about how to open a dialog on Dropdown Menu popup item click. This can be achieved by

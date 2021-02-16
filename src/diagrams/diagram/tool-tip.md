@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Tooltip
 
 In Graphical User Interface (GUI), the tooltip is a message that is displayed when mouse hovers over an element. The diagram provides tooltip support while dragging, resizing, rotating a node, and when the mouse hovers any diagram element.

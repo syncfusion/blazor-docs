@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Exporting
 
 Diagram provides support to export its content as image/svg files.

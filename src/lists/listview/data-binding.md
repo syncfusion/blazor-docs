@@ -1,7 +1,3 @@
----
-component: "ListView"
----
-
 # Data binding
 
 ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the dataSource property that supports the data type of array or DataManager.

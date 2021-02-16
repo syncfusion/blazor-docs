@@ -1,7 +1,3 @@
----
-component: "Menu Bar"
----
-
 # Customize Menu Items
 
 ## Add or Remove Menu Items

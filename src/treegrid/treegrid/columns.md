@@ -1,7 +1,3 @@
----
-component: "Tree Grid"
----
-
 # Columns
 
 The column definitions are used as the datasource schema in the Tree Grid. This plays a vital role in rendering column values in the required format.

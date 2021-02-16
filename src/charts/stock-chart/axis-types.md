@@ -1,9 +1,3 @@
----
-
-component: "Stock Chart"
-
----
-
 # DateTime and Logarithmic Axis
 
 ## DateTime Axis

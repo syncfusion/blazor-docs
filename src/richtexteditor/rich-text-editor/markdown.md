@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Markdown
 
 In Rich Text Editor, click the toolbar buttons to format the words and the changes are visible immediately.

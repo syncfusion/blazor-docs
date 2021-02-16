@@ -1,7 +1,3 @@
----
-component: "Rich Text Editor"
----
-
 # Data Binding
 
 This section explains how to bind the `Value` to the Rich Text Editor component that can be achieved in the following ways:

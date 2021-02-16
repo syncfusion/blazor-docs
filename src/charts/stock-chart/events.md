@@ -1,7 +1,3 @@
----
-component: "Stock Chart"
----
-
 # Events
 
 In this section, we have provided the list of events of Stock Chart component which will be

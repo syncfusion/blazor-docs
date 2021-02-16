@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Shapes
 
 Diagram provides support to add different kind of nodes. They are as follows:

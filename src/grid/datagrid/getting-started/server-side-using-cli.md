@@ -1,7 +1,3 @@
----
-component: "DataGrid"
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Essential JS 2 for Blazor server-side in .NET Core CLI

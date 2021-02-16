@@ -1,9 +1,3 @@
----
-
-component: "Accumulation Chart"
-
----
-
 # Pyramid Chart
 
 To render a pyramid series, use the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type)

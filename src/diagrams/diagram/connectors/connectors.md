@@ -1,7 +1,3 @@
----
-component: "Diagram"
----
-
 # Connector
 
 Connectors are objects used to create link between two points, nodes or ports to represent the relationships between them.

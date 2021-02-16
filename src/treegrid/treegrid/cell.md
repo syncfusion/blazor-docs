@@ -1,7 +1,3 @@
----
-component: "Tree Grid"
----
-
 # Cell
 
 ## Displaying the HTML content

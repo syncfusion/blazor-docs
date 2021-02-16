@@ -1,7 +1,3 @@
----
-component: "Word processor"
----
-
 # Create a Word processing application in Blazor server app
 
 This article provides the step-by-step instructions to integrate the Word processor in Blazor server app using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).

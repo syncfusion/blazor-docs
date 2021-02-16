@@ -1,7 +1,3 @@
----
-component: "In-place Editor"
----
-
 # Overview
 
 You can define the native event using on `<event>` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.

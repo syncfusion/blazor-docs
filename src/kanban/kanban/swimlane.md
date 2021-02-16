@@ -1,7 +1,3 @@
----
-component: "Kanban"
----
-
 # Swimlane
 
 Swimlanes are horizontal categorizations of cards on the Kanban board.  It is used for grouping of cards, which brings transparency to the workflow process.

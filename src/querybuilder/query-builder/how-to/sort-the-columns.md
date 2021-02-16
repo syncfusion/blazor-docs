@@ -1,7 +1,3 @@
----
-component: "Query Builder"
----
-
 # Sort the columns
 
 SortDirection allows you to sort the columns bounded to the Query Builder to view the columns by `ascending` or `descending` order. You can set [`SortDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SortDirection) property to sort the fields.

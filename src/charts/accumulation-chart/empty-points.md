@@ -1,9 +1,3 @@
----
-
-component: "Accumulation Chart"
-
----
-
 # Empty Points
 
 Data points that contains `NaN` value are considered as empty points. The empty data points

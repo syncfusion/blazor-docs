@@ -1,7 +1,3 @@
----
-component: "ComboBox"
----
-
 # Templates
 
 The ComboBox has been provided with several options to customize each list item, group title,

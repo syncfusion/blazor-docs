@@ -1,7 +1,3 @@
----
-component: "ListBox"
----
-
 # Enable scroller
 
 The ListBox supports scrolling and it can be achieved by restricting the height of the listbox using [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Height) property.

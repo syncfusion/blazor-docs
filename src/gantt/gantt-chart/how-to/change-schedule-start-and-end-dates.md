@@ -1,6 +1,4 @@
----
-component: "Gantt Chart"
----
+------
 # Change schedule start and end dates
 
 In the Gantt Chart component, you can change the schedule start and end dates by clicking the custom button programmatically using the `UpdateProjectDates` method. You can pass the start and end dates as method arguments to the `UpdateProjectDates` method. You can also pass the Boolean value as an additional parameter, which is used to round-off the schedule start and end dates displayed in Gantt Chart timeline.

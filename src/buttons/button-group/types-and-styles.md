@@ -1,7 +1,3 @@
----
-component: "ButtonGroup"
----
-
 # Types and Styles
 
 This section explains about different types and styles of ButtonGroup.

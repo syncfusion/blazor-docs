@@ -1,7 +1,3 @@
----
-component: "ProgressBar"
----
-
 # Types
 
 Visualize progress in different shapes (rectangle, circle, and semi-circle) to give a unique appearance to your app design.

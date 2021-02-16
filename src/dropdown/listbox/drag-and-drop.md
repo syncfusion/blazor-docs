@@ -1,7 +1,3 @@
----
-component: "ListBox"
----
-
 # Drag and drop
 
 The ListBox has support to drag an item or a group of selected items and drop it within the same listbox or into another listbox.

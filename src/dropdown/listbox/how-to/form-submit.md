@@ -1,7 +1,3 @@
----
-component: "ListBox"
----
-
 # Form submit to the listbox
 
 In the following code snippet, the value that is in selected state will be sent on form submit.

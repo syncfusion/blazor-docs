@@ -1,7 +1,3 @@
----
-component: "Card"
----
-
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started in Blazor Card

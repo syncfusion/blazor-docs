@@ -1,7 +1,3 @@
----
-component: "Linear Gauge"
----
-
 # Getting Started
 
 This section briefly explains how to include a Linear Gauge in your Blazor Server-Side application. Refer to this [Getting Started with Syncfusion Blazor for Serve-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/vs-blazor/) documentation for the introduction and configuring the common specifications.

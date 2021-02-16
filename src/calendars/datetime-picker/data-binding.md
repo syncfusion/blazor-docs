@@ -1,7 +1,3 @@
----
-component: "DateTimePicker"
----
-
 # Data Binding
 
 This section briefly explains how to bind the value to the DateTimePicker component in the below different ways.

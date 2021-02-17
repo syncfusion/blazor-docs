@@ -16,31 +16,28 @@ var is_temp = process.env.IS_TEMP;
 gulp.task('ship-to-gitlap', function (done) {
     console.log('---check----' + user_mail);
     console.log('---user---' + user);
-    
+
     shelljs.exec(`git config --global user.email "${user_mail}"`);
     shelljs.exec(`git config --global user.name "${user}"`);
-    
+
     var changes = shelljs.exec(`git diff --name-only HEAD^ HEAD`);
-    console.log('--changes----' + changes);
-    
+
     var changedFileNames = changes.stdout.split('\n');
     console.log('--changedFileNames----' + changedFileNames);
-    
-    console.log('--is_temp----' + is_temp);
-    
-     var cloneRepos = ['barcodes','buttons','calendars','charts','circulargauage','common','diagrams','documenteditor','dropdown','filemanager','gantt','grid','heatmap','inplace-editor','inputs','kanban','layouts','lineargauge','lists','maps','navigations','notifications','pdfviewer','pivotview','popups','querybuilder','richtexteditor','schedule','smithchart','sparkline','treegrid','treemap'];
-     for (var i = 0; i < changedFileNames.length; i++) {
-         var curentRootRepo = changedFileNames[i].split('/')[1];
-         if(curentRootRepo ==='workflows'){
-             return
-         }
-         if (curentRootRepo != undefined && curentRootRepo !='workflows') {
-             cloneRepos.push(curentRootRepo);
-         }
-   }
-    
-    console.log('--cloneRepos----' + cloneRepos);    
-    
+
+    var cloneRepos = [];
+    for (var i = 0; i < changedFileNames.length; i++) {
+        var curentRootRepo = changedFileNames[i].split('/')[1];
+        if (curentRootRepo === 'workflows') {
+            return
+        }
+        if (curentRootRepo != undefined && curentRootRepo != 'workflows') {
+            cloneRepos.push(curentRootRepo);
+        }
+    }
+
+    console.log('--cloneRepos----' + cloneRepos);
+
     for (var j = 0; j < cloneRepos.length; j++) {
         var gitPath = 'https://' + user + ':' + token + `@gitlab.syncfusion.com/essential-studio/ej2-${cloneRepos[j]}-razor-docs`;
         console.log('Clone has been started...!');
@@ -49,8 +46,6 @@ gulp.task('ship-to-gitlap', function (done) {
         });
         if (clone.code !== 0) {
             console.log(clone.stderr);
-//             done();
-//             return;
         } else {
             console.log('Clone has been completed...!');
             shelljs.cp('-rf', `./src/${cloneRepos[j]}/*`, `./gitlapRepo/ej2-${cloneRepos[j]}-razor-docs/src`);

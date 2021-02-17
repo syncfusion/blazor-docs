@@ -1,6 +1,3 @@
----
-<!-- markdownlint-disable MD036 -->
-
 # Ranges
 
 ' Ranges ' represent the quality of a specific range as 'Good', 'Bad', and 'Satisfactory' in the 'Bullet-chart scale.' The 'Ending' point of the qualitative range is specified by the property `End.` The ' Minimum value ' of a quantitative scale is considered as the starting point for the 'First range' and the 'Previous range' end points are considered as the starting point for other ranges.

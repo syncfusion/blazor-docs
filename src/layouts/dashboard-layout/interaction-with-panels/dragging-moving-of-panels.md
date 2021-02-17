@@ -42,7 +42,7 @@ The following output demonstrates the dragging functionality of dashboard compon
 
 ![Dashboard Layout Sample](../images/drag-and-drop.gif)
 
-# Customizing the dragging handler
+## Customizing the dragging handler
 
 The dragging handler for the panels can be customized using the `DraggableHandle` property to restrict the dragging action within a particular element in the panel.
 

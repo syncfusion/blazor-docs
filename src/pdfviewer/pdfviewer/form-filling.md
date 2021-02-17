@@ -27,7 +27,7 @@ The PDF Viewer control provides an option to disable the form fields feature . T
 }
 ```
 
-# How to draw handwritten signature in the signature field
+## How to draw handwritten signature in the signature field
 
 Signature can be added to the Signature field by using the following steps:
 
@@ -49,7 +49,7 @@ You can also delete the signature in the signature field by using Delete Option 
 
 ![DeleteSign](../pdfviewer/images/deletesign.png)
 
-# Import and export FormFields
+## Import and export FormFields
 
 The PDF Viewer control provides the support to import and export formfields using a JSON object in the PDF document.
 

@@ -167,7 +167,7 @@ Output will be shown as
 
 ![Query Builder Sample](./images/qb-sql.png)
 
-# Exporting
+## Exporting
 
 Exporting allows you to save or maintain the created conditions through the Query Builder. You can export the defined conditions by the following ways.
 

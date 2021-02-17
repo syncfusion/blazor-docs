@@ -1,6 +1,3 @@
----
-<!-- markdownlint-disable MD036 -->
-
 # Feature Bar
 
 The main data value is encoded by a length of the main bar in the middle of the chart, known as the `Feature Measure`. This is also called as `Value Bar`. Also, if you want to display the target bar you should map the `ValueField` name from the dataSource.

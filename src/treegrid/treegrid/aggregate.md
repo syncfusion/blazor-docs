@@ -56,6 +56,6 @@ To calculate the aggregate value with your own aggregate functions, use the cust
 
 -->
 
-# Limitations
+## Limitations
 
 * By default, Footer Aggregate or total aggregate will be shown only for the current page records and not for the dataSource. To aggregate for all page records, set adaptor in **SfDataManager**.

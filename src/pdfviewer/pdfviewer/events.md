@@ -18,7 +18,7 @@ The following section list out the events provided in PDF Viewer component:
 |AnnotationResized|Triggers when an annotation is resized.|
 |AnnotationSelected|Triggers when an annotation is selected.|
 
-# Adding PDF Viewer events to Blazor component
+## Adding PDF Viewer events to Blazor component
 
 The Syncfusion PDF Viewer events has to be wrapped inside the `PdfViewerEvents` tag. Refer to the following code snippet to use the DocumentLoaded event.
 

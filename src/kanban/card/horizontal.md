@@ -1,6 +1,3 @@
-------
-<!-- markdownlint-disable MD036 -->
-
 # Horizontal Card
 
 By default, all the card elements are aligned vertically one after the other as in the DOM. You can achieve the element to align horizontally as well by using Orientation property..

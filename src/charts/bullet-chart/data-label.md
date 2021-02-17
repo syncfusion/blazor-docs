@@ -1,6 +1,3 @@
----
-<!-- markdownlint-disable MD036 -->
-
 # Data Label
 
 Data label can be added to a bullet-chart feature bars by enabling the `Enable` option in the DataLabel. By default,the labels will arrange smartly without overlapping.

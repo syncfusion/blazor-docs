@@ -1,4 +1,3 @@
-------
 # Accessibility
 
 ## ARIA Attributes

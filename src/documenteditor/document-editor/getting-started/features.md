@@ -23,7 +23,7 @@ The Word processor component for Blazor is used to compose, edit, view, and prin
 * Contains Intuitive UI options through context menu, dialogs, and navigation pane.
 * Localizes all the static text to any desired language.
 
-# Prerequisites
+## Prerequisites
 
 * [Visual Studio 2019 Preview](https://visualstudio.microsoft.com/vs/preview/)
 * [.NET Core SDK 3.1.2](https://dotnet.microsoft.com/download/dotnet-core/3.1)

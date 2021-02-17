@@ -1,4 +1,3 @@
-------
 # Interaction mode
 
 The built-in toolbar of PDF Viewer contains the following two interaction options:

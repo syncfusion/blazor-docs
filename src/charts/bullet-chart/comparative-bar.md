@@ -1,6 +1,3 @@
----
-<!-- markdownlint-disable MD036 -->
-
 # Target Bar
 
 The line marker that runs perpendicular to the orientation of the graph is known as the `Comparative Measure` and is used as a target marker to compare against the Feature Measure value. This is also called as `Target Bar` of the bullet chart. Also, if you want to display the target bar you should map the `TargetField` name from the dataSource.

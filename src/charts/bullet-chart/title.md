@@ -1,6 +1,3 @@
----
-<!-- markdownlint-disable MD036 -->
-
 # Title
 
 A title can be given to a bullet chart using the `Title` property to show information about the data plotted.

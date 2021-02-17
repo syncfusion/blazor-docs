@@ -1,6 +1,3 @@
-------
-<!-- markdownlint-disable MD024 -->
-
 # Getting Started
 
 This section briefly explains about how to include a `Dashboard Layout` component in your `Blazor server-side application`. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring the common specifications.

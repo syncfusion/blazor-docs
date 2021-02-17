@@ -1,6 +1,3 @@
----
-<!-- markdownlint-disable MD036 -->
-
 # Orientation
 
 Bullet Chart can be rendered in different mode as `Horizontal` or `Vertical` by using `Orientation` property of the bullet-chart. By default bullet-chart rendered in horizontal mode.

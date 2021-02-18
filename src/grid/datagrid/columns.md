@@ -2238,3 +2238,5 @@ The following sample code demonstrates [`DisplayAsCheckBox`](https://help.syncfu
 
 The following image represents the DisplayAsCheckBox enabled for a DataGrid column,
 ![Display as checkbox](./images/checkbox-boolean-values.png)
+
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

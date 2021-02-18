@@ -299,3 +299,5 @@ The following sample code demonstrates the above,
 
 The following screenshot represents a DataGrid with customized group caption,
 ![Custom group caption](./images/custom-group-caption.png)
+
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

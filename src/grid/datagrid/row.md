@@ -1075,3 +1075,5 @@ In the below example, the row height for the row with OrderID as '1003' is set a
 The output will be as follows.
 
 ![Row Customization](./images/specific-row_height.png)
+
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

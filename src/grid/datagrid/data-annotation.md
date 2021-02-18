@@ -71,3 +71,5 @@ The following sample code demonstrates data annotations implemented in the DataG
 
 The following image represents data annotations enabled in the DataGrid columns,
 ![Data Annotations](./images/data-annotations.png)
+
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

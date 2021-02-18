@@ -537,3 +537,5 @@ The following sample code demonstrates implementing CRUD operations for the cust
 
 The following GIF displays the CRUD operations performed on the custom bounded data displayed in the DataGrid component,
 ![Editing custom bound data](./images/custom-binding-editing.gif)
+
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

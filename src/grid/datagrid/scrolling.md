@@ -220,3 +220,5 @@ The following features are not supported in frozen rows and columns:
 * Detail Template
 * Hierarchy DataGrid
 * Virtualization
+
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

@@ -41,5 +41,5 @@
 * [Editing with template column](treegrid/how-to/editing-with-template-column.md)
 * [Hide Tree Grid Header](treegrid/how-to/hide-treegrid-header.md)
 * [Display Custom Tooltip in Tree Grid cell](treegrid/how-to/display-custom-tool-tip-in-treegrid-cell.md)
-* [Styling and Appearance](treegrid/how-to/custom-style.md)
+* [Styling and Appearance](treegrid/custom-style.md)
 * [Events](treegrid/events.md)

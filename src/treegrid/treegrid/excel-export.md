@@ -47,6 +47,14 @@ You can assign the file name for the exported document by defining **fileName** 
 
 {% endaspTab %}
 
+### To persist collapsed state
+
+You can persist the collapsed state in the exported document by defining **IsCollapsedStatePersist** property as true in **TreeGridExcelExportProperties** parameter of [`ExcelExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExcelExport_Syncfusion_Blazor_Grids_ExcelExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method.
+
+{% aspTab template="tree-grid/excel-export/collapsedstate", sourceFiles="index.razor,treegriddata.cs" %}
+
+{% endaspTab %}
+
 ### Limitations
 
 Microsoft Excel permits up to seven nested levels in outlines. So that in the Tree Grid we can able to provide only up to seven nested levels and if it exceeds more than seven levels then the document will be exported without outline option. Please refer the [Microsoft Limitation](https://docs.microsoft.com/en-us/sql/reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs?view=sql-server-2017#ExcelLimitations)

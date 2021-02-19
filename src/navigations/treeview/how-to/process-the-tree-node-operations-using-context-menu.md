@@ -6,18 +6,16 @@ Following is an example which demonstrates the above cases which are used to man
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
-@using Newtonsoft.Json;
 
-
-    <div id="treeview">
-        <SfTreeView TValue="EmployeeData" @ref="tree" AllowDragAndDrop="true" SelectedNodes="@selectedNodes.ToArray()">
-            <TreeViewFieldsSettings Id="Id" ParentID="Pid" DataSource="@ListData" Text="Name" HasChildren="HasChild"></TreeViewFieldsSettings>
-            <TreeViewEvents TValue="EmployeeData" NodeSelected="OnSelect" NodeClicked="nodeClicked"></TreeViewEvents>
-            <SfContextMenu TValue="MenuItem" @ref="menu" Target="#treeview" Items="@MenuItems">
-                 <MenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></MenuEvents>
-            </SfContextMenu>
-        </SfTreeView>
-    </div>
+<div id="treeview">
+    <SfTreeView TValue="EmployeeData" @ref="tree" AllowDragAndDrop="true" @bind-SelectedNodes="@selectedNodes">
+        <TreeViewFieldsSettings Id="Id" ParentID="Pid" DataSource="@ListData" Text="Name" HasChildren="HasChild"></TreeViewFieldsSettings>
+        <TreeViewEvents TValue="EmployeeData" NodeSelected="OnSelect" NodeClicked="nodeClicked"></TreeViewEvents>
+        <SfContextMenu TValue="MenuItem" @ref="menu" Target="#treeview" Items="@MenuItems">
+            <MenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></MenuEvents>
+        </SfContextMenu>
+    </SfTreeView>
+</div>
 
 @code
 {
@@ -27,7 +25,7 @@ Following is an example which demonstrates the above cases which are used to man
     // Reference for context menu
     SfContextMenu<MenuItem> menu;
     string selectedId;
-    public List<string> selectedNodes = new List<string>();
+    public string[] selectedNodes = Array.Empty<string>();
     int index = 100;
 
     // Datasource for menu items
@@ -52,15 +50,14 @@ Following is an example which demonstrates the above cases which are used to man
     }
 
     // Triggers when TreeView node is clicked
-    public async void nodeClicked(NodeClickEventArgs args)
+    public void nodeClicked(NodeClickEventArgs args)
     {
-        selectedNodes.Clear();
         selectedId = args.NodeData.Id;
-        selectedNodes.Add(selectedId);
+        selectedNodes = new string[] { args.NodeData.Id };
     }
 
     // To add a new node
-    void AddNodes()
+    async Task AddNodes()
     {
         string NodeId = "tree_" + this.index.ToString();
         ListData.Add(new EmployeeData
@@ -69,7 +66,7 @@ Following is an example which demonstrates the above cases which are used to man
             Name = "NewItem",
             Pid = this.selectedId
         });
-        this.tree.BeginEdit(NodeId);
+        await this.tree.BeginEdit(NodeId);
         this.index = this.index + 1;
 
     }
@@ -82,19 +79,19 @@ Following is an example which demonstrates the above cases which are used to man
     }
 
     // To edit a tree node
-    void RenameNodes()
+    async Task RenameNodes()
     {
-        this.tree.BeginEdit(this.selectedId);
+        await this.tree.BeginEdit(this.selectedId);
     }
 
     // Triggers when context menu is selected
-    public void MenuSelect(MenuEventArgs<MenuItem> args)
+    public async Task MenuSelect(MenuEventArgs<MenuItem> args)
     {
         string selectedText;
         selectedText = args.Item.Text;
         if (selectedText == "Edit")
         {
-            this.RenameNodes();
+            await this.RenameNodes();
         }
         else if (selectedText == "Remove")
         {
@@ -102,7 +99,7 @@ Following is an example which demonstrates the above cases which are used to man
         }
         else if (selectedText == "Add")
         {
-            this.AddNodes();
+            await this.AddNodes();
         }
     }
 
@@ -112,7 +109,7 @@ Following is an example which demonstrates the above cases which are used to man
 
     protected override void OnInitialized()
     {
-        selectedNodes.Add("1");
+        selectedNodes = new string[] { "1" };
         base.OnInitialized();
         ListData = new List<EmployeeData>();
         ListData.Add(new EmployeeData

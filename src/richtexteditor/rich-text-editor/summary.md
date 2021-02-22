@@ -13,7 +13,7 @@
 * [Globalization](rich-text-editor/globalization.md)
 * [ExecCommand in Rich Text Editor](rich-text-editor/exec-command.md)
 * [IFrame Rendering](rich-text-editor/iframe.md)
-* [CSS Structure](rich-text-editor/style.md)
+* [Style and appearance](rich-text-editor/style.md)
 * [Keyboard support](rich-text-editor/keyboard-support.md)
 * [Miscellaneous](rich-text-editor/miscellaneous.md)
 * [Accessibility](rich-text-editor/accessibility.md)

@@ -56,7 +56,7 @@ You can customize the shape of the target bar or comparative bar using the `Targ
 
 ## Customization
 
-**Color Customization**
+### Color Customization
 
 Using the `TargetColor` property of the bullet chart, you can customize the fill color of the target bar.
 
@@ -85,7 +85,7 @@ Using the `TargetColor` property of the bullet chart, you can customize the fill
 
 ![Target Bar](images/target-color.png)
 
-**Width Customization**
+### Width Customization
 
 You can customize the width of the target bar using the `TargetWidth` property of the bullet chart.
 

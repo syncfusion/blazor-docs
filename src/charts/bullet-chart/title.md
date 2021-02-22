@@ -62,7 +62,7 @@ A subtitle can also be given to a bullet chart using the `Subtitle` property to 
 
 You can place the title and subtitle in different positions. By using the `TitlePosition` property of the bullet chart, you can place the title and subtitles in different positions like `Left`, `Right`, `Top`, and `Bottom`.
 
-**Position as Left**
+### Position as Left
 
 By setting the `TitlePosition` to `Left`, you can display the title and subtitle at the left side of the chart.
 
@@ -92,7 +92,7 @@ By setting the `TitlePosition` to `Left`, you can display the title and subtitle
 
 ![Title](images/title-left.png)
 
-**Position as Right**
+### Position as Right
 
 By setting the `TitlePosition` to `Right`, you can display the title and subtitle at the right side of the chart.
 
@@ -122,7 +122,7 @@ By setting the `TitlePosition` to `Right`, you can display the title and subtitl
 
 ![Title](images/title-right.png)
 
-**Position as Top**
+### Position as Top
 
 By setting the `TitlePosition` to `Top`, you can display the title and subtitle at the top of the chart. The default title and subtitle positions of the bullet chart is `Top`.
 
@@ -152,7 +152,7 @@ By setting the `TitlePosition` to `Top`, you can display the title and subtitle 
 
 ![Title](images/title-top.png)
 
-**Position as Bottom**
+### Position as Bottom
 
 By setting the `TitlePosition` to `Bottom`, you can display the title and subtitle at the bottom of the chart.
 

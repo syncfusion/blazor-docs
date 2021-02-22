@@ -57,6 +57,29 @@ namespace BlazorApplication
 }
 ```
 
+On Chart initial loading, we gather text measure information for rendering purposes. Since its size exceeds the default SignalR buffer size 32 KB, the server will be disconnected. So you need to add the following service to increase the buffer size to 64 KB over the SignalR connection.
+
+```csharp
+using Syncfusion.Blazor;
+namespace BlazorApplication
+{
+    public class Startup
+    {
+        ....
+        ....
+        public void ConfigureServices(IServiceCollection services)
+        {
+            ....
+            ....
+            services.AddSyncfusionBlazor();
+            services.AddSignalR(e => {
+              e.MaximumReceiveMessageSize = 65536;
+            });
+        }
+    }
+}
+```
+
 **Note:** To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```csharp
@@ -69,7 +92,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor components in any web page (razor) in the Pages folder. For example, the Chart component is added in the **~/Pages/Index.razor** page.
 
-**Note:** For smooth user interaction with chart, please load the ***lodash*** script,
+**Note:** Adding the lodash script is mandatory since we have used it in our chart’s interactive features. The absence of the script will result in console errors.
 
 ```csharp
 <head>

@@ -58,7 +58,7 @@ You can customize the shape of the feature bar or value bar using the `Type` pro
 
 ## Customization
 
-**Border customization**
+### Border customization
 
 Using the `ValueBorder` property of the bullet chart, you can customize the border `Color` and `Width` of the feature bar.
 
@@ -85,7 +85,7 @@ Using the `ValueBorder` property of the bullet chart, you can customize the bord
 }
 ```
 
-**Fill Color and Height customization**
+### Fill Color and Height customization
 
 You can customize the fill color and height of the feature bar using the `ValueFill` and `ValueHeight` properties of the bullet chart.
 

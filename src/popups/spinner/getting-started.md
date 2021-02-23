@@ -63,16 +63,6 @@ namespace BlazorApplication
 
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by  `AddSyncfusionBlazor(true)` and load the scripts in the `<head>` element of the **~/Pages/_Host.cshtml** page.
-
-```html
-
-<head>
-    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
-</head>
-
-```
-
 ## Add Spinner component
 
 To initialize the Spinner component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder.

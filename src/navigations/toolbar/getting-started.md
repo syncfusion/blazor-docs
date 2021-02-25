@@ -113,7 +113,7 @@ Now, add the Syncfusion Blazor Toolbar component in any web page (razor) in the 
         //To separate the Toolbar items
         <ToolbarItem></ToolbarItem>
         <ToolbarItem Text="Bold"></ToolbarItem>
-        <ToolbarItem Text="Unde rline"></ToolbarItem>
+        <ToolbarItem Text="Underline"></ToolbarItem>
         <ToolbarItem Text="Italic"></ToolbarItem>
         <ToolbarItem Text="Color-Picker"></ToolbarItem>
     </ToolbarItems>

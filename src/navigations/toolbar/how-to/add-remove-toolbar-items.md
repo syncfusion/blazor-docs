@@ -1,9 +1,3 @@
----
-title: "Add or Remove Toolbar Items"
-component: "Toolbar"
-description: "This example demonstrates how to add or remove a toolbar item in the Blazor Toolbar component."
----
-
 # Add/Remove Toolbar Items
 
 Toolbar items can be added/removed dynamically by iteration of Toolbar Items using conditional **foreach** loop.

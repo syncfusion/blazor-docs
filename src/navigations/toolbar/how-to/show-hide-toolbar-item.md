@@ -1,9 +1,3 @@
----
-title: "How to show/hide toolbar items"
-component: "Toolbar"
-description: "This example demonstrates how to show/hide the specific toolbar item in the Blazor Toolbar component."
----
-
 # Show/Hide Toolbar Items
 
 The `Visible` property of the Toolbar item is used to show/hide the item by setting true/false value to the property. In the following code example initially paste action will be hide. On clicking the cut button, the paste button will be show.

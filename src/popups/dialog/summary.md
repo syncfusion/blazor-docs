@@ -14,6 +14,7 @@
 * [Show Dialog with fullscreen](dialog/how-to/show-dialog-with-fullscreen.md)
 * [Display a Dialog with custom position](dialog/how-to/display-a-dialog-with-custom-position.md)
 * [Prevent closing of modal Dialog](dialog/how-to/prevent-closing-of-modal-dialog.md)
+* [Prevent the focus on the first element](dialog/how-to/prevent-the-focus-on-the-first-element.md)
 * [Open a Dialog on condition](dialog/how-to/prevent-opening-of-the-dialog.md)
 * [Customize the Dialog appearance](dialog/how-to/customize-the-dialog-appearance.md)
 * [Close Dialog when clicking outside of its region](dialog/how-to/close-dialog-while-click-on-outside-of-dialog.md)

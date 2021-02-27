@@ -9,4 +9,5 @@
 * [Data Binding](context-menu/how-to/data-binding.md)
 * [Enable/Disable Context Menu items](context-menu/how-to/enable-or-disable-context-menu-items.md)
 * [Open a dialog on Context Menu item click](context-menu/how-to/open-dialog.md)
+* [Open Sub Menu on Context Menu Item Click](context-menu/how-to/open-context-menu-click.md)
 * [Open and close Context Menu](context-menu/how-to/open-and-close-context-menu.md)

@@ -2,6 +2,7 @@
 
 * [Getting Started](progress-button/getting-started.md)
 * [Native Events](progress-button/native-event.md)
+* [Types and Icons](progress-button/types-icons.md)
 * [Spinner and Progress](progress-button/spinner-and-progress.md)
 * [Accessibility](progress-button/accessibility.md)
 * [Change the text content and styles of the Progress Button during progress](progress-button/how-to/change-the-text-content-and-styles-of-the-progressbutton-during-progress.md)

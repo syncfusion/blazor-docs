@@ -41,6 +41,7 @@ The types of Blazor Button are as follows:
 * Flat Button
 * Outline Button
 * Round Button
+* Primary Button
 * Toggle Button
 
 ### Flat Button
@@ -75,6 +76,21 @@ set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.But
 Output be like
 
 ![Button Sample](./images/button-type.png)
+
+### Primary Button
+
+The primary button is styled with background color and it is used to represent a primary action. To create a Primary Button,
+set the [`IsPrimary`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsPrimary) property to `true`.
+
+```csharp
+@using Syncfusion.Blazor.Buttons
+
+<SfButton IsPrimary="true">Primary</SfButton>
+```
+
+Output be like
+
+![Button Sample](./images/button-primary.png)
 
 ### Toggle Button
 

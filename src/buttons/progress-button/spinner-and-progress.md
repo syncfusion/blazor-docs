@@ -1,4 +1,8 @@
 <!-- markdownlint-disable MD002 MD022 -->
+# Spinner and Progress
+
+This section explains the Spinner and Progress of Progress Button.
+
 ## Spinner
 
 ### Change spinner position

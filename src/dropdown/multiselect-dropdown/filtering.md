@@ -49,7 +49,7 @@ The output will be as follows.
 
 ## Custom Filtering
 
-The DropDownList component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
+The MultiSelect component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
 
 ```csharp
 @using Syncfusion.Blazor.Data
@@ -57,7 +57,7 @@ The DropDownList component filter queries can be customized. You can also use yo
 
 <SfMultiSelect TValue="string[]" @ref="mulObj" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country" AllowFiltering="true">
     <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
-    <MultiSelectEvents TValue="string[]" TItem="Countries" Filtering="OnFilter"></DropDownListEvents>
+    <MultiSelectEvents TValue="string[]" TItem="Countries" Filtering="OnFilter"></MultiSelectEvents>
 </SfMultiSelect>
 
 

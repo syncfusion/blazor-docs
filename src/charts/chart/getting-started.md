@@ -80,6 +80,27 @@ namespace BlazorApplication
 }
 ```
 
+**Note:** For using **Azure SignalR** to host your blazor server application use below configuration
+
+```csharp
+using Syncfusion.Blazor;
+namespace BlazorApplication
+{
+    public class Startup
+    {
+        ....
+        ....
+        public void ConfigureServices(IServiceCollection services)
+        {
+            ....
+            ....
+            services.AddSyncfusionBlazor();
+            services.AddSignalR(e => {e.MaximumReceiveMessageSize = 65536;}).AddAzureSignalR();
+        }
+    }
+}
+```
+
 **Note:** To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```csharp

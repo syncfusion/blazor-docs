@@ -1,9 +1,10 @@
 # Summary
 
 * [Getting Started](query-builder/getting-started.md)
-* [Columns Binding](query-builder/columns-binding.md)
+* [Columns](query-builder/columns-binding.md)
 * [Data Binding](query-builder/data-binding.md)
 * [Filtering](query-builder/filtering.md)
+* [Templates](query-builder/templates.md)
 * [Importing and Exporting](query-builder/import-export.md)
 * [Localization](query-builder/localization.md)
 * [Change Display Mode](query-builder/how-to/change-display-mode.md)

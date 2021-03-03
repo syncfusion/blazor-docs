@@ -1,6 +1,6 @@
 # Templates
 
-This section explains about the list of templates available in Query Builder.
+This section explains the list of templates available in the Query Builder.
 
 ## Value Template
 
@@ -82,7 +82,7 @@ Output will be shown as
 
 Column Template allows you to define your own widgets for entire column. Use the [`ColumnTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_ColumnTemplate) property to define templates.
 
-In the following sample, DropDownList component is used as the custom components for field and value to the `PaymentMode` column.
+In the following sample, the DropDownList component is used as the custom components for field and value in the `PaymentMode` column.
 
 ```csharp
 

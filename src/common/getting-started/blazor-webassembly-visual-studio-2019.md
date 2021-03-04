@@ -2,7 +2,7 @@
 
 # Getting started with Syncfusion Blazor components in Blazor WebAssembly App using Visual Studio 2019
 
-This article provides a step-by-step instruction about how to create Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) with Syncfusion Blazor components setup pre-configured in it.
+This article provides a step-by-step instructions about how to create Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) with Syncfusion Blazor components setup pre-configured in it.
 
 > **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 

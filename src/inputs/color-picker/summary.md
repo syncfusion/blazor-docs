@@ -2,7 +2,7 @@
 
 * [Getting Started](color-picker/getting-started.md)
 * [Accessibility](color-picker/accessibility.md)
-* [Inline Rendering](color-picker/render.md)
+* [Inline Rendering](color-picker/inline-rendering.md)
 * [Mode and Value](color-picker/mode-and-value.md)
 * [Localization and RTL](color-picker/localization.md)
 * [Customize Color Picker](color-picker/how-to/customize-color-picker.md)

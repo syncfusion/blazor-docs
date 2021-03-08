@@ -30,7 +30,7 @@ This section provides information about creating Razor Class Library with the Sy
     ![select framework](images/razor-class-server-template.png)
 
     > **Note:** If exist netstandard version is 2.0 in `RazorClassLibrary.csproj`, then change it to **netstandard2.1**
-    
+
     ```csharp
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>

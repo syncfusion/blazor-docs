@@ -401,7 +401,7 @@ The events should be provided to the datagrid using **GridEvents** component. Al
         public double? Freight { get; set; }
     }
 
-    public void DataBoundHandler(object args)
+    public void DataBoundHandler()
     {
         // Here you can customize your code
     }

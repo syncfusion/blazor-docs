@@ -5,12 +5,10 @@ You can achieve the Cascading DropDownList with datagrid editing by using the [`
 This is demonstrated in the below sample code where cascading dropdownlist is rendered for the **ShipCountry** and **ShipState** column when perform editing in datagrid.
 
 ```csharp
-@page "/"
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
-<SfGrid AllowPaging="true" DataSource="@GridData" ShowColumnChooser="true" Toolbar="@(new List<string>() { "Add","Edit","Delete","Update","Cancel" })">
+<SfGrid @ref="GridRef" AllowPaging="true" DataSource="@GridData" ShowColumnChooser="true" Toolbar="@(new List<string>() { "Add","Edit","Delete","Update","Cancel" })">
     <GridEvents OnActionBegin="OnActionBegin" TValue="Orders"></GridEvents>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
     <GridColumns>
@@ -20,7 +18,7 @@ This is demonstrated in the below sample code where cascading dropdownlist is re
         <GridColumn Field=@nameof(Orders.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150">
             <EditTemplate>
                 <SfDropDownList ID="ShipCountry" Placeholder="Select a Country" TItem="string" TValue="string" @bind-Value="@((context as Orders).ShipCountry)" DataSource="@Countries">
-                    <DropDownListEvents TValue="string" ValueChange="ValueChange"></DropDownListEvents>
+                    <DropDownListEvents TValue="string" TItem="string" ValueChange="ValueChange"></DropDownListEvents>
                     <DropDownListFieldSettings Text="ShipCountry" Value="ShipCountry"></DropDownListFieldSettings>
                 </SfDropDownList>
             </EditTemplate>
@@ -36,6 +34,7 @@ This is demonstrated in the below sample code where cascading dropdownlist is re
 </SfGrid>
 
 @code{
+    SfGrid<Orders> GridRef;
     public List<Orders> GridData { get; set; } = new List<Orders>();
     public List<string> Countries = new List<string>() { "United States", "Australia" };
     public List<string> States = new List<string>() { "New York", "Virginia", "Washington", "Queensland", "Tasmania", "Victoria" };
@@ -81,7 +80,7 @@ This is demonstrated in the below sample code where cascading dropdownlist is re
         public string ShipCountry { get; set; }
         public string ShipState { get; set; }
     }
-    public void ValueChange(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public void ValueChange(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string,string> args)
     {
         if (args.Value == "United States")
         {
@@ -92,6 +91,7 @@ This is demonstrated in the below sample code where cascading dropdownlist is re
             States = new List<string>() { "Queensland", "Tasmania", "Victoria" };
         }
         Enabled = true;
+        GridRef.PreventRender(false);
     }
     public void OnActionBegin(ActionEventArgs<Orders> args)
     {

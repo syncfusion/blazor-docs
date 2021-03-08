@@ -4,6 +4,7 @@
 * [Header and Content](dashboard-layout/panels/setting-header-of-panels)
 * [Drag and Drop](dashboard-layout/interaction-with-panels/dragging-moving-of-panels)
 * [Resizing Panels](dashboard-layout/interaction-with-panels/resizing-of-panels)
+* [Floating Panels](dashboard-layout/interaction-with-panels/floating-of-panels)
 * [Responsive and Adaptive Layout](dashboard-layout/responsive-adaptive)
 * [CSS Structure](dashboard-layout/style)
 * [Accessibility](dashboard-layout/accessibility)

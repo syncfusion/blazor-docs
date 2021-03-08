@@ -56,6 +56,7 @@
 * [Tooltip](diagram/tool-tip.md)
 * [Layers](diagram/layers.md)
 * [Context Menu](diagram/context-menu.md)
+* [Ruler](diagram/ruler.md)
 * [User Handles](diagram/user-handle.md)
 * [CSS Structure](diagram/style.md)
 * [Symbol Palette](diagram/symbol-palette.md)

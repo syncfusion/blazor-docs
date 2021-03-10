@@ -20,7 +20,7 @@ This is demonstrated in the below sample code where the value for **FinalCost** 
                 @{
                     var value = (context as Order);
                     var finalAmount = value.ManfCost + value.LabCost;
-                    <p>$@finalAmount</p>
+                    <div>$@finalAmount</div>
                 }
             </Template>
         </GridColumn>

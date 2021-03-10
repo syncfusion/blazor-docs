@@ -104,7 +104,7 @@ is set as '3'. Hence, the left two columns and top three rows are frozen.
 ```csharp
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenColumns="2" FrozenRows="3" Width="100%" >
+<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenColumns="2" FrozenRows="3" Width="100%" Height="400" >
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -161,7 +161,7 @@ the [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.G
 ```csharp
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenRows="3" Width="100%" >
+<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenRows="3" Width="100%" Height="400" >
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsFrozen="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>

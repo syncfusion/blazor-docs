@@ -399,7 +399,7 @@ The following sample code demonstrates the customization applied to TextBox comp
 
     public class Order
     {
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public double Freight { get; set; }
         public string ShipName { get; set; }
@@ -464,7 +464,7 @@ The following sample code demonstrates the customization applied to NumericTextB
 
     public class Order
     {
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public double Freight { get; set; }
         public string ShipName { get; set; }
@@ -534,7 +534,7 @@ The following sample code demonstrates the customization applied to DropDownList
 
     public class Order
     {
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public double Freight { get; set; }
         public string ShipName { get; set; }
@@ -597,7 +597,7 @@ The following sample code demonstrates the customization applied to Checkbox com
 
     public class Order
     {
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public double Freight { get; set; }
         public string ShipName { get; set; }
@@ -659,7 +659,7 @@ The following sample code demonstrates the customization applied to DatePicker c
 
     public class Order
     {
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public double Freight { get; set; }
         public DateTime? OrderDate { get; set; } = DateTime.Now;
@@ -965,7 +965,7 @@ In the following example:
     {
         public Order(int orderid) => OrderID = orderid;
 
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
@@ -1036,7 +1036,7 @@ In the following example:
     public class Order
     {
         public Order(int orderid) => OrderID = orderid;
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }

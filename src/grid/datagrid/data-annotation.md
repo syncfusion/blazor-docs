@@ -50,9 +50,11 @@ The following sample code demonstrates data annotations implemented in the DataG
     {
         // Sets column as primary key
         [Key]
+        // Sets column as required and error message to be displayed when empty
+        [Required(ErrorMessage ="Order ID  should not be empty")]
         // Sets header text to the column
         [Display(Name = "Order ID")]
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         [Display(Name = "Customer Name")]
         // Sets column as required and error message to be displayed when empty
         [Required(ErrorMessage = "Field should not be empty")]

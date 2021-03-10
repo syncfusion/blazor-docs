@@ -220,7 +220,7 @@ Custom tool bar items can be added by defining the [`Toolbar Template`](https://
             <SfToolbar>
                 <ToolbarEvents Clicked="ToolbarClickHandler"></ToolbarEvents>
                 <ToolbarItems>
-                    <ToolbarItem Type="@ItemType.Button" PrefixIcon="e-collapse" Id="collapseall" TooltipText="Collapse"></ToolbarItem>
+                    <ToolbarItem Type="@ItemType.Button" PrefixIcon="e-icons e-collapse" Id="collapseall" TooltipText="Collapse"></ToolbarItem>
                 </ToolbarItems>
             </SfToolbar>
         </ToolbarTemplate>

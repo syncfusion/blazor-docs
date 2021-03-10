@@ -828,11 +828,11 @@ The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 <SfGrid DataSource="@Orders" EnableHover=false AllowSelection=false Height="280">
     <GridEvents TValue="Order" RowDataBound="RowBound"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="OrderID" Width="110"> </GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="CustomerID" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="ShipCity" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="OrderDate" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -914,11 +914,11 @@ Please refer to the following example.
 
 <SfGrid DataSource="@Orders" Height="280">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="OrderID" Width="110"> </GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="CustomerID" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="ShipCity" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="OrderDate" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -971,11 +971,11 @@ In the below example, the `RowHeight` is set as '60'.
 
 <SfGrid DataSource="@Orders" Height="280" RowHeight="60">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="OrderID" Width="110"> </GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="CustomerID" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="ShipCity" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="OrderDate" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -1023,11 +1023,11 @@ In the below example, the row height for the row with OrderID as '1003' is set a
 <SfGrid DataSource="@Orders" Height="280">
     <GridEvents TValue="Order" RowDataBound="RowBound"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="OrderID" Width="110"> </GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="CustomerID" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="ShipCity" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="OrderDate" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
     </GridColumns>
 </SfGrid>
 

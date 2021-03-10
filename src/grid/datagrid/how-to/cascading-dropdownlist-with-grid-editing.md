@@ -23,7 +23,7 @@ This is demonstrated in the below sample code where cascading dropdownlist is re
                 </SfDropDownList>
             </EditTemplate>
         </GridColumn>
-        <GridColumn Field=@nameof(Orders.ShipState) HeaderText=" ShipState" EditType="EditType.DropDownEdit" Width="150">
+        <GridColumn Field=@nameof(Orders.ShipState) HeaderText=" Ship State" EditType="EditType.DropDownEdit" Width="150">
             <EditTemplate>
                 <SfDropDownList ID="ShipState" Placeholder="Select a State" TItem="string" Enabled="@Enabled" TValue="string" @bind-Value="@((context as Orders).ShipState)" DataSource="@States">
                     <DropDownListFieldSettings Text="ShipState" Value="ShipState"></DropDownListFieldSettings>

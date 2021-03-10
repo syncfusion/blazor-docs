@@ -2,11 +2,13 @@
 
 ## Column
 
-To render a column series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `Column`.
+[`Blazor Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare frequency, count, total, or average of data in different categories. It is ideal for showing variations in the value of an item over time.
 
 {% aspTab template="chart/series/column-charts/column", sourceFiles="column.razor" %}
 
 {% endaspTab %}
+
+**New Note:** You can also explore our [`Blazor Column Chart Example`](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare frequency, count, total, or average of data in different categories.
 
 ## Column Space and Width
 
@@ -99,6 +101,8 @@ You can use the following properties to customize the column series.
 ```
 
 ![Column](../images/chart-types-images/column-custom.png)
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

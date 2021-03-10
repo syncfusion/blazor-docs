@@ -18,3 +18,5 @@ To display the text placing center of the doughnut, `ContentTemplate` should be 
 {% aspTab template="chart/accumulation-charts/how-to/do-nut", sourceFiles="do-nut.razor" %}
 
 {% endaspTab %}
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

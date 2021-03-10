@@ -18,3 +18,5 @@ border for an empty point can be set by using the [`Border`](https://help.syncfu
 {% aspTab template="chart/accumulation-charts/empty-points/custom", sourceFiles="custom.razor" %}
 
 {% endaspTab %}
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

@@ -10,6 +10,8 @@ Like the column chart, but shows the variations in the data values for a given t
 
 ![Range Column](../images/chart-types-images/rangecolumn.png)
 
+**New Note:** You can refer to our [`Blazor Range Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-column-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Range Column Chart Example`](https://blazor.syncfusion.com/demos/chart/range-column?theme=bootstrap4) to know how to show variations in the data values for a given time.
+
 ## Customization
 
 You can use the following properties to customize the range column series.
@@ -66,6 +68,8 @@ You can use the following properties to customize the range column series.
 ```
 
 ![Custom Range Column](../images/chart-types-images/custom-range-column.png)
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

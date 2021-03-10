@@ -2,13 +2,15 @@
 
 ## 100% Stacked
 
-Shows the relative percentage of multiple data series in stacked columns. The cumulative proportion of each stacked column always totals 100%. To render a 100% stacked column series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `StackingColumn100`.
+Shows the relative percentage of multiple data series in stacked columns. The cumulative proportion of each stacked column always totals 100%. To render a [`100% stacked column`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-column-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `StackingColumn100`.
 
 {% aspTab template="chart/series/column-charts/100%stackedcolumn", sourceFiles="stackedcolumn100.razor" %}
 
 {% endaspTab %}
 
 ![100% Stacked Column](../images/chart-types-images/stackedcolumn100.png)
+
+**New Note:** You can also explore our [`Blazor 100% Stacked Column Chart`](https://blazor.syncfusion.com/demos/chart/percent-stacked-column?theme=bootstrap4) Example to knows how to render and configure the 100% stacking column type chart.
 
 ## Stacking Group
 
@@ -66,6 +68,8 @@ You can use the following properties to customize the 100% stacked column series
 ```
 
 ![Custom 100% Stacked Column](../images/chart-types-images/custom-stacked-column-100.png)
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

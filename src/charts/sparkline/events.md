@@ -72,3 +72,5 @@ Description: Triggers, before rendering on each sparkline series. You can custom
 |   LineWidth          |   Specifies the sparkline series line width for applicable line and area|
 |   Name               |   Specifies the name of the event |
 |   Cancel             |   Specifies the event cancel status |
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

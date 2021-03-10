@@ -2,13 +2,15 @@
 
 ## 100% Stacked
 
-Shows the relative percentage of multiple data series in stacked columns. The cumulative proportion of each stacked column always totals 100%. To render a 100% stacked area series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `StackingArea100`.
+Shows the relative percentage of multiple data series in stacked columns. The cumulative proportion of each stacked column always totals 100%. To render a [`100% stacked area`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-area-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `StackingArea100`.
 
 {% aspTab template="chart/series/area-charts/100%stackedarea", sourceFiles="stackedarea100.razor" %}
 
 {% endaspTab %}
 
 ![100% Stacked Area](../images/chart-types-images/stackedarea100.png)
+
+**New Note:** You can also explore our [`Blazor 100% Stacked Area Chart`](https://blazor.syncfusion.com/demos/chart/percent-stacked-area?theme=bootstrap4) Example to knows how to render and configure the 100% stacking area type chart.
 
 ## Customization
 
@@ -63,6 +65,8 @@ You can use the following properties to customize 100% stacked area series.
 ```
 
 ![Custom Stacked Area](../images/chart-types-images/custom-stacked-area-100.png)
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

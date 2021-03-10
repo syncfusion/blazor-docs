@@ -11,7 +11,7 @@ scatter, stacking area and stacking column. The default value of DrawType is `Li
 
 To render a line draw type, use series [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DrawType.html) as `Line`.
 [`IsClosed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~IsClosed.html) property specifies whether to join start and end point of
- a line series used in polar chart to form a closed path. Default value of isClosed is true.
+ a line series used in [`polar chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) to form a closed path. Default value of isClosed is true.
 
 {% aspTab template="chart/series/polar_radar/polar-line", sourceFiles="polar-line.razor" %}
 
@@ -171,6 +171,10 @@ You can customize the radius of the polar series using
 ```
 
 ![Coefficient](../images/polar-radar/polar-co-efficient.png)
+
+**New Note:** You can also explore our [`Blazor Polar Chart example`](https://blazor.syncfusion.com/demos/chart/polar-line) to knows how to render and configure the polar line type charts.
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

@@ -19,6 +19,8 @@ The size of the funnel chart can be customized by using the  [`Width`](https://h
 
 ![Size](../images/funnel/size-razor.png)
 
+**New Note:** You can also explore our [`Blazor Funnel Chart`](https://blazor.syncfusion.com/demos/chart/funnel) example to knows how to render and configure the funnel chart.
+
 ## Neck Size
 
 The neck size can be customized by using the [`NeckWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckWidth) and [`NeckHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckHeight) properties.
@@ -31,7 +33,7 @@ The neck size can be customized by using the [`NeckWidth`](https://help.syncfusi
 
 ## Gap Between the Segments
 
-Funnel chart provides options to customize the space between the segments by using the [`GapRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GapRatio) property of the
+[`Funnel chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart) provides options to customize the space between the segments by using the [`GapRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GapRatio) property of the
 series. It takes values from 0 to 1.
 
 {% aspTab template="chart/accumulation-charts/funnel/gap", sourceFiles="gap.razor" %}
@@ -60,6 +62,8 @@ Arrange the data label smartly on left side of the funnel and pyramid chart, whe
 {% endaspTab %}
 
 ![Smart Data Label](../images/funnel/smart-data-label-razor.png)
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

@@ -98,3 +98,5 @@ when the height is ‘50%’, chart renders to half of the container height.
 ```
 
 > Note:  When you do not specify the size, it takes `126px` as its height and window size as its width.
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

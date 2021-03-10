@@ -10,6 +10,8 @@ Like the area chart, but with the data points connected with a smooth line. To r
 
 ![Spline Area](../images/chart-types-images/splinearea.png)
 
+**New Note:** You can refer to our [`Blazor Spline Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Spline Area Chart Example`](https://blazor.syncfusion.com/demos/chart/spline-area?theme=bootstrap4) to know how to connects the data points with smooth curves.
+
 ## Customization
 
 You can use the following properties to customize the spline area series.
@@ -57,6 +59,8 @@ You can use the following properties to customize the spline area series.
 ```
 
 ![Custom Spline Area](../images/chart-types-images/custom-spline-area.png)
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

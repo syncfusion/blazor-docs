@@ -70,6 +70,10 @@ You can use the following properties to customize the bubble series.
 
 ![Custom Bubble Charts](../images/chart-types-images/custom-bubble.png)
 
+**New Note:** You can refer to our [`Blazor Bubble Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Bubble Chart example`](https://blazor.syncfusion.com/demos/chart/bubble?theme=bootstrap4) to knows how to render and configure the bubble type charts.
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+
 ## See Also
 
 * [Data label](../data-labels)

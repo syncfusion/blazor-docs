@@ -11,6 +11,8 @@ as `Pie`.
 
 ![Pie Chart](../images/pie-dough-nut/pie-razor.png)
 
+**New Note:** You can refer to our [`Blazor Pie Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pie-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Pie Chart example`](https://blazor.syncfusion.com/demos/chart/pie) to knows how to render and configure the pie chart.
+
 ## Radius Customization
 
 By default, radius of the pie series will be 80% of the size (minimum of chart width and height).
@@ -45,8 +47,7 @@ You can use radius mapping to render the slice with different [`Radius`](https:/
 
 ## Doughnut Chart
 
-To achieve a doughnut in pie series, customize the [`InnerRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_InnerRadius)
-property of the series. By setting value greater than 0%, a doughnut will appear.
+To achieve a Doughnut Chart in pie series, customize the [`InnerRadius`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/donut-chart) property of the series. By setting value greater than 0%, a doughnut will appear.
 The InnerRadius property takes value from 0% to 100% of the pie radius.
 
 {% aspTab template="chart/accumulation-charts/pie_doughnut/doughnut", sourceFiles="doughnut.razor" %}
@@ -54,6 +55,8 @@ The InnerRadius property takes value from 0% to 100% of the pie radius.
 {% endaspTab %}
 
 ![Doughnut Chart](../images/pie-dough-nut/doughnut-razor.png)
+
+**New Note:** You can also explore our [`Blazor Doughnut Chart`](https://blazor.syncfusion.com/demos/chart/donut) example to knows how to render and configure the doughnut charts.
 
 ## Start and End angles
 
@@ -89,6 +92,8 @@ property is `false`.
 {% endaspTab %}
 
 ![Pie Chart](../images/pie-dough-nut/pie-razor.png)
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

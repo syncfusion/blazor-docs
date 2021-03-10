@@ -2,11 +2,13 @@
 
 ## Bar
 
-Compare values across categories by using horizontal bars. To render a bar series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `Bar`.
+[`Blazor Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bar-chart) is the most common chart type that is used to compare different categories of data like frequency, count, total, or average displayed in horizontal bars. It is ideal for showing variations in the value of an item over time.
 
 {% aspTab template="chart/series/bar-charts/bar", sourceFiles="bar.razor" %}
 
 {% endaspTab %}
+
+**New Note:** You can also explore our [`Blazor Bar Chart Example`](https://blazor.syncfusion.com/demos/chart/bar?theme=bootstrap4) to compare values across categories by using horizontal bars.
 
 ## Bar Space and Width
 
@@ -97,6 +99,8 @@ You can use the following properties to customize the bar series.
 ```
 
 ![Bar](../images/chart-types-images/bar-custom.png)
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

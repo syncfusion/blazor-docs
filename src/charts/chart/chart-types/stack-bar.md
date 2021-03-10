@@ -2,11 +2,13 @@
 
 ## 100% Stacked
 
-Shows the relative percentage of multiple data series in stacked bars. The cumulative proportion of each stacked bar always totals 100%. To render a 100% stacked bar series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `StackingBar100`.
+Shows the relative percentage of multiple data series in stacked bars. The cumulative proportion of each stacked bar always totals 100%. To render a [`100% stacked bar`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-bar-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `StackingBar100`.
 
 {% aspTab template="chart/series/bar-charts/100%stackedbar", sourceFiles="stackedbar100.razor" %}
 
 {% endaspTab %}
+
+**New Note:** You can also explore our [`Blazor 100% Stacked Bar Chart`](https://blazor.syncfusion.com/demos/chart/percent-stacked-bar?theme=bootstrap4) Example to knows how to render and configure the 100% stacking bar type chart.
 
 ## Stacking Group
 
@@ -33,6 +35,8 @@ You can use the following properties to customize the 100% stacked bar series.
 {% endaspTab %}
 
 ![Custom 100% Stacked Bar](../images/chart-types-images/custom-stacked-bar-100.png)
+
+**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

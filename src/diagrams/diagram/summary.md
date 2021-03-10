@@ -62,3 +62,4 @@
 * [Symbol Palette](diagram/symbol-palette.md)
 * [Overview Control](diagram/overview.md)
 * [Diagram Methods](diagram/methods.md)
+* [Styling And Appearance](diagram/howTo/style.md)

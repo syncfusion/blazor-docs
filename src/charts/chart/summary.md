@@ -1,5 +1,5 @@
-* [Getting Started](chart/getting-started.md)
-* [Rendering Methods](chart/render-methods.md)
+* [Getting Started For Server](chart/getting-started/getting-started-server.md)
+* [Getting Started For WASM](chart/getting-started/getting-started-wasm.md)
 * [Working with Data](chart/working-with-data.md)
 * [Chart Dimensions](chart/chart-dimensions.md)
 * [Category Axis](chart/category-axis.md)

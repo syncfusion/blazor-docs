@@ -132,7 +132,7 @@ Now, add the Syncfusion Blazor components in any web page (razor) in the Pages f
 
 After successful compilation of your application, the Syncfusion Blazor chart component will render in the web browser.
 
-![chart](images/getting-started/chart.png)
+![Getting Started](../images/getting-started/chart.png)
 
 ## Populate Chart With Data
 
@@ -188,7 +188,7 @@ Now map the field  `Month` and `Sales` in the data to the [`XName`](https://help
 }
 ```
 
-![chart](images/getting-started/column.png)
+![chart](../images/getting-started/column.png)
 
 ## Add Chart and Axis Titles
 
@@ -226,7 +226,7 @@ You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfu
 }
 ```
 
-![chart](images/getting-started/columntitle.png)
+![chart](../images/getting-started/columntitle.png)
 
 ## Add Data Label
 
@@ -267,7 +267,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 }
 ```
 
-![chart](images/getting-started/data-label.png)
+![chart](../images/getting-started/data-label.png)
 
 ## Enable Tooltip
 
@@ -307,7 +307,7 @@ The tooltip is useful when you cannot display information by using the data labe
 }
 ```
 
-![chart](images/getting-started/tooltip.png)
+![chart](../images/getting-started/tooltip.png)
 
 ## Enable Legend
 
@@ -347,7 +347,7 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
 }
 ```
 
-![chart](images/getting-started/legend.png)
+![chart](../images/getting-started/legend.png)
 
 >You can find the fully working sample [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppChart1351059325.zip).
 

@@ -127,7 +127,7 @@ Now, add the Syncfusion Blazor HeatMap component in any web page `razor` in the 
 @using Syncfusion.Blazor.HeatMap
 
 <SfHeatMap DataSource="@HeatMapData">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitleSettings>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
 </SfHeatMap>
 

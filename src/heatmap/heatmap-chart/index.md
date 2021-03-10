@@ -8,4 +8,4 @@ The HeatMap control is used to visualize a two-dimensional data in which the val
 * Axis Feature  - Supports inverted axis, opposed position and axis intervals.
 * Legend - Supports legend which provides value information for the colors which represents each values in HeatMap.
 * Data Binding - Supports binding data in JSON and two-dimensional array formats.
-* Rendering Modes - Supports automatic switching between SVG and Canvas rendering modes based on the data source length.
+* Rendering Modes - Supports SVG mode of rendering.

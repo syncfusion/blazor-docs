@@ -6,8 +6,9 @@ The legend is used to provide the information about the heat map cell. You can e
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
@@ -70,8 +71,9 @@ You can change the legend type by using the `Type` property in the `HeatMapPalet
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
@@ -114,8 +116,9 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
@@ -158,8 +161,9 @@ You can align the legend as center, far, or near to the heat map using the `Alig
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
@@ -201,8 +205,9 @@ You can change the legend dimensions with values in pixels or percentage by usin
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
@@ -236,7 +241,7 @@ You can change the legend dimensions with values in pixels or percentage by usin
 
 ![Heatmap Sample](images/legend/Dimension.png)
 
-## Paging for legend
+<!-- ## Paging for legend
 
 Paging is available only for the list type legend in the heat map, and it can be enabled by default, when the legend items exceed the legend bounds. You can view each legend items by navigating between the pages using navigation buttons.
 
@@ -244,8 +249,9 @@ Paging is available only for the list type legend in the heat map, and it can be
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
@@ -309,8 +315,9 @@ The following are the legend label display types:
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
@@ -355,7 +362,6 @@ The following are the legend label display types:
     }
 }
 
-
 ```
 
 ![Heatmap Sample](images/legend/smartLegend.gif)
@@ -368,8 +374,9 @@ In the HeatMap, the legend selection is used to toggle the visibility of cell fo
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
@@ -416,4 +423,4 @@ In the HeatMap, the legend selection is used to toggle the visibility of cell fo
 
 ```
 
-![Heatmap Sample](images/legend/Toggle.png)
+![Heatmap Sample](images/legend/Toggle.png) -->

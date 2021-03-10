@@ -6,8 +6,9 @@ In the HeatMap, the cell selection is used to select the single or multiple heat
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap AllowSelection="true" DataSource="@HeatMapData" ShowTooltip="true">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+<SfHeatMap AllowSelection="true" DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>

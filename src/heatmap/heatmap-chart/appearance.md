@@ -6,17 +6,20 @@ You can customize the cell by using the `CellSettings`
 
 ### Border
 
-Change the width, color, and radius of the heat map cells by using the `Border` property.
+Change the width, color, and radius of the heat map cells by using the `HeatMapCellBorder` tag.
 
 ```csharp
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
-    <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect" Border="@Border"></HeatMapCellSettings>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
+    <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect">
+         <HeatMapCellBorder Width = "1" Radius = "4" Color = "White" ></HeatMapCellBorder>
+    </HeatMapCellSettings>
     <HeatMapLegendSettings ShowLabel="true"></HeatMapLegendSettings>
 </SfHeatMap>
 
@@ -34,7 +37,6 @@ Change the width, color, and radius of the heat map cells by using the `Border` 
         };
         return dataSource;
     }
-    public BorderModel Border = new BorderModel() { Width = 1, Radius = 4, Color = "White" };
     string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
     string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
@@ -58,10 +60,11 @@ Enable or disable the cell highlighting while hover over the heat map cells by u
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect" EnableCellHighlighting="true"></HeatMapCellSettings>
     <HeatMapLegendSettings ShowLabel="true" Position="LegendPosition.Right" EnableSmartLegend="true" ToggleVisibility="true"></HeatMapLegendSettings>
 </SfHeatMap>
@@ -101,10 +104,11 @@ Set the margin for the heat map from its container by using the `HeatMapMargin` 
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
     <HeatMapMargin Left="15" Right="15" Top="15" Bottom="15"></HeatMapMargin>
     <HeatMapLegendSettings ShowLabel="true" Position="LegendPosition.Right" EnableSmartLegend="true" ToggleVisibility="true"></HeatMapLegendSettings>
@@ -139,16 +143,18 @@ Set the margin for the heat map from its container by using the `HeatMapMargin` 
 
 ## Title
 
-The title is used to provide a quick information about the data plotted in heat map. The `Text` property is used to set the title for heat map. You can also customize text style of a title by using the `TextStyle` property.
+The title is used to provide a quick information about the data plotted in heat map. The `Text` property is used to set the title for heat map. You can also customize text style of a title by using the `HeatMapTitleTextStyle` tag.
 
 ```csharp
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)" TextStyle="Style"></HeatMapTitle>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+        <HeatMapTitleTextStyle Size = "15px" FontWeight = "500" FontStyle = "Italic" FontFamily = "Segoe UI"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
     <HeatMapMargin Left="15" Right="15" Top="15" Bottom="15"></HeatMapMargin>
     <HeatMapLegendSettings ShowLabel="true" Position="LegendPosition.Right" EnableSmartLegend="true" ToggleVisibility="true"></HeatMapLegendSettings>
@@ -168,13 +174,6 @@ The title is used to provide a quick information about the data plotted in heat 
             };
             return dataSource;
     }
-    public FontModel Style = new FontModel()
-    {
-        Size = "15px",
-        FontWeight = "500",
-        FontStyle = "Italic",
-        FontFamily = "Segoe UI"
-    };
     string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
     string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
@@ -196,10 +195,11 @@ You can toggle the visibility of data labels by using the `ShowLabel` property. 
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
     <HeatMapMargin Left="15" Right="15" Top="15" Bottom="15"></HeatMapMargin>
 </SfHeatMap>
@@ -233,17 +233,21 @@ You can toggle the visibility of data labels by using the `ShowLabel` property. 
 
 ### Text style
 
-You can customize the font family, font size, and color of the data label by using the `TextStyle` in the `CellSettings` property.
+You can customize the font family, font size, and color of the data label by using the `HeatMapCellTextStyle` tag in the `HeatMapCellSettings` tag.
 
 ```csharp
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)" TextStyle="Style"></HeatMapTitle>
-    <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect" TextStyle="Style"></HeatMapCellSettings>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Italic" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
+    <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect">
+        <HeatMapCellTextStyle Size="15px" FontWeight="500" FontStyle="Italic" FontFamily="Segoe UI"></HeatMapCellTextStyle>
+    </HeatMapCellSettings>
     <HeatMapMargin Left="15" Right="15" Top="15" Bottom="15"></HeatMapMargin>
 </SfHeatMap>
 
@@ -261,13 +265,6 @@ You can customize the font family, font size, and color of the data label by usi
         };
         return dataSource;
     }
-    public FontModel Style = new FontModel()
-    {
-        Size = "15px",
-        FontWeight = "500",
-        FontStyle = "Italic",
-        FontFamily = "Segoe UI"
-    };
     string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
     string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
@@ -289,10 +286,11 @@ You can change the format of the data label, such as currency, decimal, percent 
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect" Format="{value} $"></HeatMapCellSettings>
     <HeatMapMargin Left="15" Right="15" Top="15" Bottom="15"></HeatMapMargin>
 </SfHeatMap>

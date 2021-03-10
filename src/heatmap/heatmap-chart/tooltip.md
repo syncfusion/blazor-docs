@@ -4,17 +4,19 @@ Tooltip is used to provide the details of the heatmap cell, and this can be disp
 
 ## Default tooltip
 
-You can enable the tooltip by setting the `ShowTooltip`  property to true.
+You can enable the tooltip by setting the `Enable` property to true inside the `HeatMapTooltipSettings` tag.
 
 ```csharp
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" ShowTooltip="true">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
+     <HeatMapTooltipSettings Enable="true"></HeatMapTooltipSettings>
 </SfHeatMap>
 
 @code{

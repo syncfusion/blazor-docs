@@ -17,7 +17,8 @@ This data type is a collection of one dimensional array objects, at which each i
 @using Syncfusion.Blazor.HeatMap
 
 <SfHeatMap DataSource="@HeatMapData">
-    <HeatMapTitle Text="GDP Growth Rate for Major Economies (in Percentage)"></HeatMapTitle>
+    <HeatMapTitleSettings Text="GDP Growth Rate for Major Economies (in Percentage)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
     <HeatMapPaletteSettings Type="PaletteType.Gradient">
@@ -68,7 +69,8 @@ The data points that use the `null` or `""` or `undefined` as value are consider
 @using Syncfusion.Blazor.HeatMap
 
 <SfHeatMap DataSource="@HeatMapData">
-    <HeatMapTitle Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitle>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
 </SfHeatMap>

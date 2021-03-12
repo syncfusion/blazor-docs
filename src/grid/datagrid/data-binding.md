@@ -361,6 +361,16 @@ The following sample code demonstrates sending additional paramaters using the Q
 }
 ```
 
+### Configuring HttpClient
+
+**SfDataManager** uses the **HttpClient** instance to make HTTP requests to data services. **SfDataManager** checks whether a **HttpClient** is already registered in the service container if it's found then the SfDataManager will use HttpClient from the service container else it will create and add HttpClient to the service container and use that instance for making requests to the server.
+
+When registering your HttpClient, the registration should be done before calling `AddSyncfusionBlazor()` method in **Startup.cs/Program.cs**, so that **SfDataManager** will not create its own HttpClient and uses the pre-configured HttpClient. This helps SfDataManager to use HttpClient instance pre-configured with base address, authentication, default headers, etc.
+
+To troubleshoot the requests and responses made using HttpClient, a custom HTTP message handler can be used. More information about registering the custom HTTP message handler can be found [here](https://docs.microsoft.com/en-us/aspnet/web-api/overview/advanced/httpclient-message-handlers).
+
+> Currently Named or Typed HttpClient is not supported hence SfDataManager will only recognize default HttpClient.
+
 ### Handling HTTP error
 
 During server interaction from the datagrid, sometimes server-side exceptions might occur. These error messages or exception details can be acquired in client-side using the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) event.
@@ -410,6 +420,37 @@ The following sample code demonstrates notifying user when server-side exception
     }
 }
 ```
+
+### Authorization and Authentication
+
+It is common to have authorization in the server of origin to prevent anonymous access to the data services. **SfDataManager** can consume data from such protected remote data services with the proper bearer token. The access token or bearer token can be used by **SfDataManager** in one of the following ways.
+
+* By using the pre-configured HttpClient with the access token or authentication message handler, SfDataManager can access protected remote services. When registering your HttpClient, the registration should be done before calling `AddSyncfusionBlazor()` method in **Startup.cs/Program.cs**, so that SfDataManager will not create its own HttpClient and uses the already configured HttpClient.
+* Setting access token in the default header of the HttpClient by injecting it in the page. See here for adding default headers to HttpClient.
+
+```csharp
+
+@inject HttpClient _httpClient
+
+. . . .
+
+@code {
+
+    . . .
+
+    protected override async Task OnInitializedAsync()
+    {
+        . . . .
+        _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {tokenValue}");
+
+        await base.OnInitializedAsync();
+    }
+}
+```
+
+* Setting the access token in the **Headers** property of the **SfDataManager**. See [here](#setting-custom-headers) for adding headers.
+
+Getting the bearer token may vary with access token providers. More information on configuring HttpClient with authentication can be found on the official page [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-3.1).
 
 ### Setting custom headers
 

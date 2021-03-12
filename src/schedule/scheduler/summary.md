@@ -19,6 +19,7 @@
 * [Globalization](scheduler/localization.md)
 * [Accessibility](scheduler/accessibility.md)
 * [Events](scheduler/events.md)
+* [Style And Appearance](scheduler/scheduler-styling.md)
 * [Open Editor Window on Single Click](scheduler/how-to/open-editor-window-on-single-click.md)
 * [Create Multiple Events in different time slots through CTRL key](scheduler/how-to/create-multiple-events-dynamically.md)
 * [Custom Header](scheduler/how-to/custom-header.md)
@@ -26,4 +27,3 @@
 * [Setting Minimum and Maximum Date](scheduler/how-to/set-min-max-date.md)
 * [Custom Editor With Validation](scheduler/how-to/custom-editor-with-validation.md)
 * [Expand And Collapse Resource Dynamically](scheduler/how-to/expand-collapse-resource-dynamically.md)
-* [Styling And Appearance](scheduler/how-to/scheduler-styling.md)

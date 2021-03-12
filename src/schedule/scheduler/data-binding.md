@@ -83,7 +83,7 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 1, 9))">
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@ProjectData" Field="ProjectId" Title="Choose Project" Name="Projects" TextField="Text" IdField="Id" ColorField="Color">
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@ProjectData" Field="ProjectId" Title="Choose Project" Name="Projects" TextField="Text" IdField="Id" ColorField="Color">
         </ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings TValue="AppointmentData">

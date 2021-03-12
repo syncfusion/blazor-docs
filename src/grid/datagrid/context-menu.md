@@ -25,6 +25,29 @@ Items |Description
 `LastPage` | Go to the last page.
 `NextPage` | Go to the next page.
 
+The default context menu provide different types of context menu items for the following elements.
+
+Elements | Context Menu Items
+-----|-----
+Header    |   AutoFit
+Header    |   AutoFitAll
+Header    |   Group
+Header    |   Ungroup
+Header    |   SortAscending
+Header    |   SortDescending
+Content   |   Edit
+Content   |   Delete
+Content   |   Save
+Content   |   Cancel
+Content   |   Copy
+Content   |   PdfExport
+Content   |   ExcelExport
+Content   |   CsvExport
+Pager     |   FirstPage
+Pager     |   PrevPage
+Pager     |   LastPage
+Pager     |   NextPage
+
 The following sample code demonstrates enabling context menu with its default items,
 
 ```csharp

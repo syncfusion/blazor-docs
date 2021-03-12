@@ -323,7 +323,7 @@ The following GIF represents dynamically rendering data manager in DataGrid,
 
 ### Sending additional parameters to the server
 
-To add a custom parameter to the data request, use the addParams method of Query class. Assign the Query object with additional parameters to the datagrid's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Width) property.
+To add a custom parameter to the data request, use the addParams method of Query class. Assign the Query object with additional parameters to the datagrid's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
 The following sample code demonstrates sending additional paramaters using the Query property,
 
@@ -373,9 +373,9 @@ To troubleshoot the requests and responses made using HttpClient, a custom HTTP 
 
 ### Handling HTTP error
 
-During server interaction from the datagrid, sometimes server-side exceptions might occur. These error messages or exception details can be acquired in client-side using the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) event.
+During server interaction from the datagrid, sometimes server-side exceptions might occur. These error messages or exception details can be acquired in client-side using the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
 
-The argument passed to the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) event contains the error details returned from the server.
+The argument passed to the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event contains the error details returned from the server.
 
 The following sample code demonstrates notifying user when server-side exception has occurred,
 
@@ -489,7 +489,7 @@ The following sample code demonstrates adding custom headers to the `SfDataManag
 
 ### Change Query parameter value dynamically
 
-It is possible to dynamically modify datagrid's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Width) property value.
+It is possible to dynamically modify datagrid's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property value.
 
 The following sample code demonstrates achieving this,
 
@@ -960,11 +960,11 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
             }
         }
         public string customerID { get; set; }
-        public int EmployeeID { get; set; }
-        public double Freight { get; set; }
+        public int? EmployeeID { get; set; }
+        public double? Freight { get; set; }
         public string ShipCity { get; set; }
         public bool Verified { get; set; }
-        public DateTime OrderDate { get; set; }
+        public DateTime? OrderDate { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

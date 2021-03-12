@@ -1,6 +1,6 @@
 # Search
 
-You can search records in a DataGrid, by using the **Search** method with search key as a parameter. This also provides an option to integrate search text box in datagrid's toolbar by adding **Search** item to the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Toolbar.html).
+You can search records in a DataGrid, by using the **Search** method with search key as a parameter. This also provides an option to integrate search text box in datagrid's toolbar by adding **Search** item to the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar).
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -46,7 +46,7 @@ The following GIF image represents a DataGrid Searching.
 
 ## Initial search
 
-To apply search at initial rendering, set the **Fields**, **Operator**, **Key**, and **IgnoreCase** using [`GridSearchSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings.html) component.
+To apply search at initial rendering, set the **Fields**, **Operator**, **Key**, and **IgnoreCase** using [`GridSearchSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html) component.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -92,11 +92,11 @@ The following screenshot represents a DataGrid with initial searching.
 
 ![Initial Search](./images/grid-initialsearch.png)
 
-> By default, datagrid searches all the bound column values. To customize this behavior define the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Fields.html) property of **GridSearchSettings** component.
+> By default, datagrid searches all the bound column values. To customize this behavior define the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
 
 ## Search operators
 
-The search operator can be defined in the [`Operator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Operator.html) property of **GridSearchSettings** to configure specific searching.
+The search operator can be defined in the [`Operator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) property of **GridSearchSettings** to configure specific searching.
 
 The following operators are supported in searching:
 
@@ -108,7 +108,7 @@ Contains |Checks whether a value contains the specified value.
 Equal |Checks whether a value is equal to the specified value.
 NotEqual |Checks for values not equal to the specified value.
 
-> By default, the [`Operator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Operator.html) value is **Contains**.
+> By default, the [`Operator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) value is **Contains**.
 
 ## Search by external button
 
@@ -163,7 +163,7 @@ To search datagrid records from an external button, invoke the **Search** method
 
 ## Search specific columns
 
-By default, datagrid searches all visible columns. You can search specific columns by defining the specific column's field names in the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.GridSearchSettings~Fields.html) property of **GridSearchSettings** component.
+By default, datagrid searches all visible columns. You can search specific columns by defining the specific column's field names in the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -204,6 +204,48 @@ By default, datagrid searches all visible columns. You can search specific colum
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
         public string ShipCountry { get; set; }
+    }
+}
+```
+
+## Disable search for particular column
+
+By default, DataGrid searches all visible columns. You can disable searching for a particular column by setting the [`AllowSearching`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property of **GridColumn** as false.
+
+In the below code example, the **Order ID** column search functionality is disabled.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Search" })">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" AllowSearching="false" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
     }
 }
 ```

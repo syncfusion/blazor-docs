@@ -1,7 +1,7 @@
 # Toolbar
 
 The DataGrid provides tool bar support to handle datagrid actions. The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar)
- property accepts either the collection of built-in tool bar items and [`ItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray)
+ property accepts either the collection of built-in tool bar items and [`ItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor)
 
 ## Built-in Tool Bar Item
 

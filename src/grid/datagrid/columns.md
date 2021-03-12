@@ -71,9 +71,9 @@ You can refer the following code example to achieve this
 
     public class Order
     {
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public int EmployeeID { get; set; }
+        public int? EmployeeID { get; set; }
     }
 }
 ```
@@ -1228,9 +1228,9 @@ During the reorder action, the grid component triggers the below events,
 }
 ``` -->
 
-## Lock columns
+<!-- ## Lock columns
 
-You can lock columns by using [`LockColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_LockColumn) property. The locked columns will be moved to the first position and can’t be reordered
+You can lock columns by using [`LockColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_LockColumn) property. The locked columns will be moved to the first position and can’t be reordered.
 
 In the below example, Order ID column is locked and its reordering functionality is disabled.
 
@@ -1258,13 +1258,13 @@ In the below example, Order ID column is locked and its reordering functionality
 
     public class EmployeeData
     {
-        public int EmployeeID { get; set; }
+        public int? EmployeeID { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
         public DateTime HireDate { get; set; }
     }
 }
-```
+``` -->
 
 ## Column resizing
 
@@ -2233,9 +2233,9 @@ The following sample code demonstrates [`DisplayAsCheckBox`](https://help.syncfu
     };
     public class Order
     {
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public double Freight { get; set; }
+        public double? Freight { get; set; }
         public string ShipName { get; set; }
         public bool Verified { get; set; }
     }

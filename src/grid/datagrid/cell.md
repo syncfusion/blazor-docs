@@ -46,8 +46,8 @@ The following screenshot represents a DataGrid displaying the HTML content.
 
 ## Customize cell styles
 
-The appearance of cells can be customized by using the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) event.
-The [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) event triggers for every cell. In that event handler, you can get
+The appearance of cells can be customized by using the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event.
+The [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event triggers for every cell. In that event handler, you can get
 [`QueryCellInfoEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) that contains the details of the cell.
 
 ```csharp
@@ -176,7 +176,7 @@ In the following example, the [`TextWrapSettings.WrapMode`](https://help.syncfus
     {
         public int? RollNo { get; set; }
         public string Name { get; set; }
-        public int PatentFamilies { get; set; }
+        public int? PatentFamilies { get; set; }
         public string Country { get; set; }
         public string MainFields { get; set; }
     }
@@ -332,7 +332,7 @@ There are three types of [`ClipMode`](https://help.syncfusion.com/cr/blazor/Sync
     {
         public int? RollNo { get; set; }
         public string Name { get; set; }
-        public int PatentFamilies { get; set; }
+        public int? PatentFamilies { get; set; }
         public string Country { get; set; }
         public string MainFields { get; set; }
     }

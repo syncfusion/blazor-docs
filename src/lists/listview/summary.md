@@ -7,7 +7,7 @@
 * [Nested list](listview/nested-list.md)
 * [Customizing Templates](listview/customizing-templates.md)
 * [Virtualization](listview/virtualization.md)
-* [Virtualization](listview/style.md)
+* [CSS Structure](listview/style.md)
 * [Accessibility](listview/accessibility.md)
 <!-- How to section -->
 * [Get selected items from listview](listview/how-to/get-selected-items-from-listview.md)

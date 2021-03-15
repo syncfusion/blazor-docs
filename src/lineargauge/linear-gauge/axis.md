@@ -215,6 +215,20 @@ Axis also supports custom label format using placeholder like {value}°C, in whi
 
 ![Linear Gauge with Custom label format Sample](images/custom-format.png)
 
+## Orientation
+
+By default, the Linear Gauge is rendered vertically. To change its orientation, the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Orientation.html)property must be set **"Horizontal"**
+
+```csharp
+<SfLinearGauge Orientation="Orientation.Horizontal">
+    <LinearGaugeAxes>
+        <LinearGaugeAxis Minimum="20" Maximum="140"></LinearGauge>
+    </LinearGaugeAxes>
+</SfLinearGauge>
+```
+
+![Linear Gauge with Orientation Sample](images/gauge-orientation.PNG)
+
 ## Inverted Axes
 
 `IsInversed` property is used to choose the rendering of axis either bottom to top or top to bottom direction.

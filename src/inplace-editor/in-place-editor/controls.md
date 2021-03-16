@@ -6,10 +6,10 @@ The following table explains Editor components name and their configurations.
 
 | [AutoComplete](../autocomplete/getting-started/)  (`AutoComplete`)        | [TextBox](../textbox/getting-started/)  (`Text`)             |
 | [ComboBox](../combobox/getting-started/)  (`ComboBox`)              | [DatePicker](../datepicker/getting-started/)  (`Date`)        |
-| [MultiSelect](../multiselect/getting-started/)   (`MultiSelect`)        | [DateTimePicker](../datetimepicker/getting-started/)   (`DateTime`)     |
-| [TimePicker](../timepicker/getting-started/)   (`Time`)         | [DropDownList](../dropdownlist/getting-started/)  (`DropDownList`)      |
-| [DateRangePicker](../daterangepicker/getting-started/)   (`DateRange`)       | [MaskedTextBox](../maskedtextbox/getting-started/)   (`Mask`)      |
-| [Slider](../slider/getting-started/)   (`Slider`)             | [NumericTextBox](../numerictextbox/getting-started/)   (`Numeric`)    |
+| [MultiSelect](../multiselect-dropdown/getting-started/)   (`MultiSelect`)        | [DateTimePicker](../datetime-picker/getting-started/)   (`DateTime`)     |
+| [TimePicker](../timepicker/getting-started/)   (`Time`)         | [DropDownList](../dropdown-list/getting-started/)  (`DropDownList`)      |
+| [DateRangePicker](../daterangepicker/getting-started/)   (`DateRange`)       | [MaskedTextBox](../input-mask/getting-started/)   (`Mask`)      |
+| [Slider](../range-slider/getting-started/)   (`Slider`)             | [NumericTextBox](../numeric-textbox/getting-started/)   (`Numeric`)    |
 | [RichTextEditor](../rich-text-editor/getting-started/)     (`RichTextEditor`)  |   [ColorPicker](../color-picker/getting-started/)    (`Color`)    |
 
 The following example demonstrates how to render the Editor components in the In-place Editor,

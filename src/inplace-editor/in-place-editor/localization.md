@@ -148,9 +148,9 @@ Formatting is a way of representing the value in different formats. You can form
 
 * [DatePicker](../datepicker/date-format/)
 * [DateRangePicker](../daterangepicker/globalization/)
-* [DateTimePicker](../datetimepicker/globalization/)
-* [NumericTextBox](../numerictextbox/formats/#custom-formats)
-* [Slider](../slider/format/)
+* [DateTimePicker](../datetime-picker/globalization/)
+* [NumericTextBox](../numeric-textbox/formats/#custom-formats)
+* [Slider](../range-slider/format/)
 * [TimePicker](../timepicker/globalization/)
 
 ```csharp

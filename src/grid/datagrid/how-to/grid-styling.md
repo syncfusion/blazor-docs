@@ -16,7 +16,6 @@ Section|CSS class|Purpose of CSS class
 ||e-rowcell|This class is added to all cells in the grid. This is to override cells appearance and styling.
 ||e-groupcaption|This class is added to the 'td' of group caption which is to change the background color of caption cell.
 ||e-selectionbackground|This class is added to rowcell's of the grid. This is override selection.
-||e-hover|This class adds to row of grid, while hovering the grid rows.
 **Pager**|e-pager|This class is added to root element of the pager. This to change appearance of the background color and color of font.
 ||e-pagercontainer|This class is added to numeric items of the pager.
 ||e-parentmsgbar|This class is added to pager info of the pager.

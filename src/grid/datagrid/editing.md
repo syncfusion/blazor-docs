@@ -895,6 +895,188 @@ You can set validation rules by defining the [`ValidationRules`](https://help.sy
 The following screenshot represents the Column Validation in Normal Editing.
 ![Validation Rules](./images/validation-rules.png)
 
+### Custom validator component
+
+Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the grid edit form. Such cases can be achieved using the **Validator** property of the **GridEditSettings** component which accepts a validation component and inject it inside the **EditForm** of the grid. Inside the **Validator**, you can access the data using the implicit named parameter context which is of type [`ValidatorTemplateContext`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
+
+For creating a form validator component you can refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#validator-components).
+
+In the below code example, the following things have been done.
+
+* Created a form validator component named `MyCustomValidator` which accepts [`ValidatorTemplateContext`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html) value as parameter.
+* Used the `MyCustomValidator` component inside the **Validator** property.
+* This validator component will check whether Freight value is in between 0 to 100.
+* Displayed the validation error messages using **ValidationMessage** component.
+
+```csharp
+[MyCustomValidator.cs]
+
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Forms;
+    using Syncfusion.Blazor.Grids;
+
+    public class MyCustomValidator : ComponentBase
+    {
+        [Parameter]
+        public ValidatorTemplateContext context { get; set; }
+
+        private ValidationMessageStore messageStore;
+
+        [CascadingParameter]
+        private EditContext CurrentEditContext { get; set; }
+
+        protected override void OnInitialized()
+        {
+            messageStore = new ValidationMessageStore(CurrentEditContext);
+
+            CurrentEditContext.OnValidationRequested += ValidateRequested;
+            CurrentEditContext.OnFieldChanged += ValidateField;
+        }
+
+        protected void HandleValidation(FieldIdentifier identifier)
+        {
+            if (identifier.FieldName.Equals("Freight"))
+            {
+                messageStore.Clear(identifier);
+                if ((context.Data as OrdersDetails).Freight < 0)
+                {
+                    messageStore.Add(identifier, "Freight value should be greater than 0");
+                }
+                else if ((context.Data as OrdersDetails).Freight > 100)
+                {
+                    messageStore.Add(identifier, "Freight value should be lesser than 100");
+                }
+                else
+                {
+                    messageStore.Clear(identifier);
+                }
+            }
+        }
+
+        protected void ValidateField(object editContext, FieldChangedEventArgs fieldChangedEventArgs)
+        {
+            HandleValidation(fieldChangedEventArgs.FieldIdentifier);
+        }
+
+        private void ValidateRequested(object editContext, ValidationRequestedEventArgs validationEventArgs)
+        {
+            HandleValidation(CurrentEditContext.Field("Field"));
+        }
+
+    }
+```
+
+```csharp
+[Index.razor]
+
+<SfGrid TValue="OrdersDetails" DataSource="GridData"
+        Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel" })">
+        <GridEditSettings AllowAdding="true" AllowEditing="true" Mode="EditMode.Dialog">
+            <Validator>
+                @{
+                    ValidatorTemplateContext txt = context as ValidatorTemplateContext;
+                }
+                <MyCustomValidator context="@txt"></MyCustomValidator>
+
+                <ValidationMessage For="@(() => (txt.Data as OrdersDetails).Freight)"></ValidationMessage>
+
+            </Validator>
+        </GridEditSettings>
+        <GridColumns>
+            <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true"></GridColumn>
+            <GridColumn Field=@nameof(OrdersDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+@code{
+
+    private List<OrdersDetails> GridData;
+
+    protected override void OnInitialized()
+    {
+        Random r = new Random();
+        GridData = Enumerable.Range(1, 10).Select(x => new OrdersDetails()
+        {
+            OrderID = x,
+            Freight = 32.45 * x
+        }).ToList();
+    }
+}
+```
+
+The output will be as follows.
+
+![Custom Validator](./images/custom-validator1.png)
+
+#### Display validation message using in-built tooltip
+
+In the above code example, you can see that **ValidationMessage** component is used, this might be not suitable when using Inline editing or batch editing. In such cases, you can use the in-built validation tooltip to show those error messages by using `ValidatorTemplateContext.ShowValidationMessage(fieldName, IsValid, Message)` method.
+
+Now the HandleValidation method of the MyCustomValidator component would be changed like below.
+
+```csharp
+
+        protected void HandleValidation(FieldIdentifier identifier)
+        {
+            if (identifier.FieldName.Equals("Freight"))
+            {
+                messageStore.Clear(identifier);
+                if ((context.Data as OrdersDetails).Freight < 0)
+                {
+                    messageStore.Add(identifier, "Freight value should be greater than 0");
+                    context.ShowValidationMessage("Freight", false, "Freight value should be greater than 0");
+                }
+                else if ((context.Data as OrdersDetails).Freight > 100)
+                {
+                    messageStore.Add(identifier, "Freight value should be lesser than 100");
+                    context.ShowValidationMessage("Freight", false, "Freight value should be greater than 100");
+                }
+                else
+                {
+                    messageStore.Clear(identifier);
+                    context.ShowValidationMessage("Freight", true, null);
+                }
+            }
+        }
+
+```
+
+The output will be as follows.
+
+![Custom Validator 2](./images/custom-validator.png)
+
+#### Disable in-built validator component
+
+**Validator** property can also be used to disable the in-built validator component used by the grid. For instance, by default, the grid uses two validator components, **DataAnnotationValidator** and an internal [`ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property handling validator, for handling edit form validation. If you are willing to use only the **DataAnnotationValidator** component, then it could be simply achieved by using the below code.
+
+```csharp
+<SfGrid TValue="OrdersDetails" DataSource="GridData"
+        Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel" })">
+        <GridEditSettings AllowAdding="true" AllowEditing="true" Mode="EditMode.Dialog">
+            <Validator>
+               <DataAnnotationsValidator></DataAnnotationsValidator>
+            </Validator>
+        </GridEditSettings>
+        <GridColumns>
+            <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true"></GridColumn>
+            <GridColumn Field=@nameof(OrdersDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+@code{
+
+    private List<OrdersDetails> GridData;
+
+    protected override void OnInitialized()
+    {
+        Random r = new Random();
+        GridData = Enumerable.Range(1, 10).Select(x => new OrdersDetails()
+        {
+            OrderID = x,
+            Freight = 32.45 * x
+        }).ToList();
+    }
+}
+```
+
 ## Provide new item or edited item using events
 
 Grid uses `Activator.CreateInstance<TValue>()` to create or clone new record instance during add and edit operations, so it is must to have parameterless constructor defined for the model class.

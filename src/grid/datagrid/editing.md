@@ -9,7 +9,7 @@ To know about editing feature in Blazor DataGrid component, you can check on thi
 
 To define the primary key, set [`IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) to **true** in particular column whose value is unique.
 
-You can start the edit action either by double clicking the particular row or by selecting the required row and click on **Edit** button in the toolbar. Similarly, you can add a new record to datagrid either by clicking on **Add** button in the toolbar or on an external button which is bound to invoke the [`AddRecord`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecord) method of the datagrid, **Save** and **Cancel** while in edit mode is possible using respective toolbar icon in datagrid.
+You can start the edit action either by double-clicking the particular row or by selecting the required row and click on the **Edit** button in the toolbar. Similarly, you can add a new record to DataGrid either by clicking on **Add** button in the toolbar or on an external button which is bound to invoke the [`AddRecord`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecord) method of the DataGrid, **Save** and **Cancel** while in edit mode is possible using the respective toolbar icon in DataGrid.
 
 Deletion of the record is possible by selecting the required row and click on **Delete** button in the toolbar.
 
@@ -53,7 +53,7 @@ Deletion of the record is possible by selecting the required row and click on **
 The following screenshot represents Editing with Default Mode.
 ![Edit Action](./images/edit-action.png)
 
-> * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it is must to have parameterless constructor defined for the model class. To provide custom logic for object creation during editing, you can refer [here](#provide-new-item-or-edited-item-using-events).
+> * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it is must have a parameterless constructor defined for the model class. To provide custom logic for object creation during editing, you can refer [here](#provide-new-item-or-edited-item-using-events).
 > * If [`IsIdentity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, then it will be considered as a read-only column when editing and adding a record.
 > * You can disable editing for a particular column, by specifying
 [`AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) to **false**.
@@ -125,7 +125,7 @@ DataGrid supports the following types of edit modes, they are:
 
 In Normal edit mode, when you start editing the currently selected record is changed to edit state.
 You can change the cell values and save edited data to the data source.
-To enable Normal edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Normal**.
+To enable the  Normal edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Normal**.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -170,7 +170,7 @@ To enable Normal edit, set the [`EditSettings.Mode`](https://help.syncfusion.com
 The following screenshot represents Editing in Normal Mode.
 ![Normal Editing](./images/normal-editing.png)
 
-> Normal edit mode is default mode of editing.
+> Normal edit mode is the default mode of editing.
 
 ### Dialog
 
@@ -225,7 +225,7 @@ The following screenshot represents Editing in Dialog Mode.
 ### Batch
 
 In batch edit mode, when you double-click on the datagrid cell, then the target cell changed to edit state.
-You can bulk save (added, changed and deleted data in the single request) to data source by click on the toolbar's **Update** button or by externally calling the **BatchSave** method.
+You can bulk save (added, changed, and deleted data in the single request) to the data source by click on the toolbar's **Update** button or by externally calling the **BatchSave** method.
 To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Batch**.
 
 ```csharp
@@ -276,7 +276,7 @@ The following screenshot represents Editing in Batch mode.
 You can continue editing the next row or previous row from the current record in batch mode
 by enabling [`EditSettings.AllowNextRowEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowNextRowEdit) to **true**.
 
-Pressing TAB from the last cell of the current record allows to edit the next row and Pressing SHIFT + TAB from the first cell of the current record allows to edit the previous row.
+Pressing TAB from the last cell of the current row allows editing the next row and Pressing SHIFT + TAB from the first cell of the current row allows editing the previous row.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -323,7 +323,7 @@ The following GIF represents Editing in Batch mode.
 
 ## Cell edit type
 
-The [`EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component is used for defining the editor component for any particular column. You can set the [`EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) based on data type of the column.
+The [`EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component is used for defining the editor component for any particular column. You can set the [`EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) based on the data type of the column.
 
 The available default edit types are,
 
@@ -343,8 +343,8 @@ The available default edit types are,
 
 You can customize the behavior of the editor component through the [`EditorSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
-> We have limited the properties of editor components that can be customized using [`EditorSettings`] in Grid default editor components. Kindly find the list of properties that can be customized from below topics.
-> If you want to customize other properties, refer our [`EditTemplate`](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
+> We have limited the properties of editor components that can be customized using [`EditorSettings`] in Grid default editor components. Kindly find the list of properties that can be customized the below topics.
+> If you want to customize other properties, refer to our [`EditTemplate`](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
 
 ### DefaultEdit
 
@@ -1089,7 +1089,7 @@ You can use OnActionBegin event to provide new object instance during editing op
 
 In the following example:
 
-* A model class with no parameter-less constructor is bound with grid.
+* A model class with no parameter-less constructor is bound with the grid.
 * Enabled inline editing feature in grid.
 * `OnActionBegin` event callback is assigned in which `Data` property is assigned with custom object for both add and edit operation.
 
@@ -1167,7 +1167,7 @@ In the following example:
 * A model class with no parameter-less constructor is bound with grid.
 * Enabled batch editing feature in grid.
 * `OnBatchAdd` event callback is assigned in which `DefaultData` property is assigned with custom object for add operation.
-* `OnCellEdit` event callback is assigned in which `Data` property is assigned with custom object for handling edit operation.
+* `OnCellEdit` event callback is assigned in which the `Data` property is assigned with a custom object for handling edit operation.
 
 ```csharp
 
@@ -1229,7 +1229,7 @@ In the following example:
 
 ## Entity Framework
 
-This section uses and follows the code explained in the [`Entity Framework data binding`](./data-binding/#entity-framework) section hence we recommend you to refer Entity framework data binding section before continue this section.
+This section uses and follows the code explained in the [`Entity Framework data binding`](./data-binding/#entity-framework) section hence we recommend you to refer Entity framework data binding section before continuing  this section.
 
 ### Handle CRUD in data access layer class
 
@@ -1480,7 +1480,7 @@ The following GIF represents the datagrid with Add, Update, Delete items,
 
 ## Custom external form editing
 
-You can perform the edit operation of datagrid in a Custom external form. The edit operation can be done by [`RowSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) property.
+You can perform the edit operation of Datagrid in a Custom external form. The edit operation can be done by [`RowSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) property.
 
 ```csharp
 
@@ -1595,7 +1595,7 @@ To know about customizing the  **Dialog Template** in Blazor DataGrid Component,
 
 `youtube:Cfj476xT2ao`
 
-The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your own editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
 > Custom components inside the Dialog Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
@@ -1851,9 +1851,9 @@ The following image represents the dialog template of the DataGrid component wit
 
 ### Set focus to editor
 
-By default, the first input element in the dialog will be focused while opening it. If the first input element is in disabled or hidden state, you can set focus to the required input element in the corresponding components **Created** or **DataBound** event.
+By default, the first input element in the dialog will be focused while opening it. If the first input element is in the a disabled or hidden state, you can set focus to the required input element in the corresponding components **Created** or **DataBound** event.
 
-This is demonstrated in the below sample code where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [`FocusIn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_FocusIn) method in the AutoComplete's [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-1.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_1_DataBound) event.
+This is demonstrated in the below sample code where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [`FocusIn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-1.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_1_DataBound) event.
 
 ```csharp
  await this.AutoComplete.FocusIn();
@@ -1878,9 +1878,9 @@ The following image represents the AutoComplete component in focused state insid
 
 ## Inline Template
 
-> Before adding Inline template to the datagrid, we strongly recommend you to go through the [`Template`](./templates/#templates) section topic to configure the template.
+> Before adding an Inline template to the DataGrid, we strongly recommend you to go through the [`Template`](./templates/#templates) section topic to configure the template.
 
-The Inline template editing provides an option to customize the default behavior of Inline editing. Using the Inline template, you can render your own editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Normal** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+The Inline template editing provides an option to customize the default behavior of Inline editing. Using the Inline template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Normal** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
 > Custom components inside the Inline Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
@@ -2050,7 +2050,7 @@ It is possible to display confirmation dialog's on performing deletion or batch 
 
 ### Delete confirmation
 
-The delete confirm dialog can be shown on deleting a record by setting the [`ShowDeleteConfirmDialog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property of the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component as **true**.
+The delete confirms dialog can be shown on deleting a record by setting the [`ShowDeleteConfirmDialog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property of the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component as **true**.
 
 The following sample code demonstrates enabling delete confirmation dialog in the DataGrid component,
 
@@ -2432,3 +2432,80 @@ In the below example we have changed the dialog's header text and footer button 
 ```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
+## Perform CRUD operation for complex object using EditTemplate
+
+Before performing CRUD operations with complex Objects, we recommend you to go through the [Complex DataBinding](https://blazor.syncfusion.com/documentation/datagrid/columns/#complex-data-binding) documentation.
+
+To customize the default Grid EditForm TextBox component, we will use [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) to customize the Grid EditForm.
+
+You can edit the complex objects using EditTemplate inside the GridColumn component by defining two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
+
+For focus and Column Validation to work properly, you have to define the **ID** property EditTemplate components with a value similar to GridColumn Field property value.
+
+> Also ensure to define **ID** property for the complex column as (`___`) replacing the (`.`) operator in the Field value.
+
+The following sample code demonstrates the CRUD operation for complex objects with EditTemplate.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid DataSource="@Employees" Height="315" Toolbar="@(new List<string>() { "Add", "Edit" ,"Delete","Update","Cancel" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.CustomerID) HeaderText="CustomerID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="Data.EmployeeID" HeaderText="EmployeeID" ValidationRules="@(new ValidationRules{ Required=true, Number=true, Range = new double[]{1, 2000}})" Width="130">
+            <EditTemplate>
+                @{
+                    <SfNumericTextBox ID="Data___EmployeeID" @bind-Value="@((context as EmployeeData).Data.EmployeeID)"></SfNumericTextBox>
+
+                }
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field="Data.FirstName" HeaderText="First Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="150">
+            <EditTemplate>
+                @{
+                    <SfDropDownList ID="Data___FirstName" @bind-Value="@((context as EmployeeData).Data.FirstName)" TItem="EmployeeData" TValue="string" DataSource="@Employees">
+                        <DropDownListFieldSettings Value="Data.FirstName" Text="Data.FirstName"></DropDownListFieldSettings>
+                        </SfDropDownList>
+                        }
+                </EditTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            CustomerID = x,
+            Data = new EmployeeName()
+            {
+                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+                EmployeeID = 1000 + x
+            },
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                      "Inside Sales Coordinator" })[new Random().Next(4)],
+        }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        public int? CustomerID { get; set; }
+        public EmployeeName Data { get; set; }
+        public string Title { get; set; }
+    }
+
+    public class EmployeeName
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+    }
+}
+```

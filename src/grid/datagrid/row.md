@@ -147,7 +147,8 @@ The output will be as follows.
 
 ### Row template with formatting
 
-If the [`RowTemplate`](./templates/#gridtemplates-component) is used, the value cannot be formatted inside the template using the [`Columns.Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
+If the [`RowTemplate`](./templates/#gridtemplates-component) is used, the value cannot be formatted inside the template using the [`Columns.Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property. In that case, C# custom formats can be used.
+Here [`Custom DateTime`](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) format is used for below sample.
 
 ```csharp
 @using Syncfusion.Blazor.Grids

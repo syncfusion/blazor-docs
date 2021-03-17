@@ -151,7 +151,7 @@ The following screenshot shows selection mode using cell
 
 Checkbox selection provides an option to select multiple datagrid records with help of checkbox in each row.
 
-To render the checkbox in each datagrid row, you need to use checkbox column with type as **CheckBox** using the  column [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of **GridColumn** component.
+To render the checkbox in each datagrid row, you need to assign the type as **CheckBox** using the  column [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of **GridColumn** component.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -335,7 +335,7 @@ The following image will be displayed with row selected in initial Rendering
 
 ## Get selected row indexes
 
-You can get the selected row indexes by using [`RowSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html)
+You can get the selected row indexes by using [`GetSelectedRowIndexes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexes) method.
 
 ```csharp
 @using Syncfusion.Blazor
@@ -412,7 +412,7 @@ The following screenshot represents a datagrid touch selection in the device.
 
 ## Multiple selection based on condition
 
-You can select multiple rows at the initial rendering of the datagrid by using [`SelectRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___). The initial selection is based on the condition which we given. Here the initial selection is based on the row which is having the **CustomerID** as **ALFKI**. We have used [`GetCurrentViewRecords`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetCurrentViewRecords) method to get current page records and applied the condition.
+You can select multiple rows at the initial rendering of the datagrid by using [`SelectRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method. The initial selection is based on the condition which we given. Here the initial selection is based on the row which is having the **CustomerID** as **ALFKI**. We have used [`GetCurrentViewRecords`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetCurrentViewRecords) method to get current page records and applied the condition.
 
 ```csharp
 @using Syncfusion.Blazor.Grids

@@ -1028,7 +1028,7 @@ Now the HandleValidation method of the MyCustomValidator component would be chan
                 else if ((context.Data as OrdersDetails).Freight > 100)
                 {
                     messageStore.Add(identifier, "Freight value should be lesser than 100");
-                    context.ShowValidationMessage("Freight", false, "Freight value should be greater than 100");
+                    context.ShowValidationMessage("Freight", false, "Freight value should be lesser than 100");
                 }
                 else
                 {

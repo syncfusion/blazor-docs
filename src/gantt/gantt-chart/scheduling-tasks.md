@@ -123,7 +123,7 @@ Duration units for the tasks can also be defined along with the duration values,
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-            Duration="Duration" DurationUnit="DurationUnit" Progress="Progress" Child="SubTasks">
+            Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
 </SfGantt>
 

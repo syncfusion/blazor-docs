@@ -131,6 +131,7 @@ By default, the custom toolbar items are at left position. You can change the po
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
 
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Toolbar="Toolbaritems" Height="450px" Width="900px" AllowFiltering = "true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -247,6 +248,8 @@ In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+
 <SfGantt DataSource="@TaskCollection" Toolbar="Toolbaritems" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
           Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -355,6 +358,8 @@ You can enable or disable the toolbar items by using the `EnableItems` method.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+
 <button @onclick="EnableToolbar">Enable</button>
 <button @onclick="DisableToolbar">Disable</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Toolbar="Toolbaritems" Height="450px" Width="900px" AllowFiltering = "true">
@@ -368,7 +373,7 @@ You can enable or disable the toolbar items by using the `EnableItems` method.
     public SfGantt<TaskData> Gantt;
     public List<ItemModel> Toolbaritems = new List<ItemModel>() { new ItemModel() { Text = "Quick Filter", TooltipText = "Quick Filter", Id = "quickfilter" },
     new ItemModel() { Text = "Clear Filter", TooltipText = "Clear Filter", Id = "clearfilter" } };
-    public void ToolbarClickHandler(ClickEventArgs args)
+    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "quickfilter")
         {

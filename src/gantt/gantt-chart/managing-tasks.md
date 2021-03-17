@@ -128,10 +128,11 @@ You can add rows to the Gantt Chart component dynamically using the `AddRecord` 
 
 @code{
     public SfGantt<TaskData> Gantt;
+    public TaskData record = new TaskData() { TaskId = 40, TaskName = "New Added Record", StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 50};
+
     public void AddRow()
     {
-    this.Gantt.AddRecord(new TaskData() { TaskId = 9, TaskName = "New Added Record", StartDate = new DateTime(2019, 04, 02), Duration = "3",
-    Progress = 50}, RowPosition.Below, 2);
+    this.Gantt.AddRecord(record, 2, RowPosition.Below);
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -240,7 +241,7 @@ The following code example shows you how to enable the cell editing in Gantt Cha
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
-    <GanttEditSettings AllowEditing="true" Mode="EditMode.Auto"></GanttEditSettings>
+    <GanttEditSettings AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
 </SfGantt>
 
 @code{
@@ -347,7 +348,7 @@ Modify the task details through the edit dialog by setting the edit mode.
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
-    <GanttEditSettings AllowEditing="true" Mode="EditMode.Dialog"></GanttEditSettings>
+    <GanttEditSettings AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog"></GanttEditSettings>
 </SfGantt>
 
 @code{
@@ -445,24 +446,24 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add" })" ResourceNameMapping="ResourceName"
-          ResourceIDMapping="ResourceId" Resources="@ResourceCollection" Height="450px" Width="700px">
+<SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add" })" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" Child="SubTasks" ResourceInfo="ResourceId" Notes="Notes"
                      Dependency="Predecessor">
     </GanttTaskFields>
-    <GanttEditSettings AllowAdding="true" AllowEditing="true" Mode="EditMode.Dialog">
+    <GanttResourceFields TResources="TaskResources" Name="ResourceName" Id="ResourceId" Resources="@ResourceCollection"></GanttResourceFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog">
     </GanttEditSettings>
     <GanttEditDialogFields>
-        <GanttEditDialogField Type="DialogFieldType.General" HeaderText="General">
+        <GanttEditDialogField Type="GanttDialogFieldType.General" HeaderText="General">
         </GanttEditDialogField>
-        <GanttEditDialogField Type="DialogFieldType.Dependency"></GanttEditDialogField>
-        <GanttEditDialogField Type="DialogFieldType.Resources"></GanttEditDialogField>
-        <GanttEditDialogField Type="DialogFieldType.Notes"></GanttEditDialogField>
+        <GanttEditDialogField Type="GanttDialogFieldType.Dependency"></GanttEditDialogField>
+        <GanttEditDialogField Type="GanttDialogFieldType.Resources"></GanttEditDialogField>
+        <GanttEditDialogField Type="GanttDialogFieldType.Notes"></GanttEditDialogField>
     </GanttEditDialogFields>
     <GanttAddDialogFields>
-        <GanttAddDialogField Type="DialogFieldType.General" HeaderText="General Tab"></GanttAddDialogField>
-        <GanttAddDialogField Type="DialogFieldType.Dependency"></GanttAddDialogField>
+        <GanttAddDialogField Type="GanttDialogFieldType.General" HeaderText="General Tab"></GanttAddDialogField>
+        <GanttAddDialogField Type="GanttDialogFieldType.Dependency"></GanttAddDialogField>
     </GanttAddDialogFields>
 </SfGantt>
 
@@ -484,7 +485,7 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
         public string Duration { get; set; }
         public int Progress { get; set; }
         public List<TaskData> SubTasks { get; set; }
-        public int[] ResourceId { get; set; }
+        public List<TaskResources> ResourceId { get; set; }
         public string Notes { get; set; }
         public string Predecessor { get; set; }
     }
@@ -511,7 +512,11 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
         new TaskResources() {
             ResourceId = 4,
             ResourceName = "Fuller King"
-        }
+        },
+        new TaskResources() {
+            ResourceId= 5,
+            ResourceName= "Davolio Fuller"
+        },
     };
     return Resources;
 }
@@ -530,9 +535,7 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
                     StartDate = new DateTime(2019, 04, 02),
                     Duration = "0",
                     Progress = 30,
-                    ResourceId = new int[] {
-                        1
-                    },
+                    ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=1} },
                     Notes = "Measure the total property area alloted for construction"
                 },
                 new TaskData() {
@@ -541,11 +544,7 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
                     StartDate = new DateTime(2019, 04, 02),
                     Duration = "4",
                     Predecessor = "2",
-                    ResourceId = new int[] {
-                        2,
-                        3,
-                        5
-                    },
+                    ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=2}, new TaskResources() { ResourceId=3} },
                     Notes = "Obtain an engineered soil test of lot where construction is planned.From an engineer or company specializing in soil testing"
 
                 },
@@ -572,9 +571,7 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
                     Duration = "3",
                     Progress = 30,
                     Predecessor = "4",
-                    ResourceId = new int[] {
-                        4
-                    },
+                    ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=4}},
                     Notes = "Develop floor plans and obtain a materials list for estimations"
                 },
                 new TaskData() {
@@ -583,10 +580,6 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
                     StartDate = new DateTime(2019, 04, 04),
                     Duration = "3",
                     Predecessor = "6",
-                    ResourceId = new int[] {
-                        4,
-                        8
-                    },
                     Notes = ""
                 },
                 new TaskData() {
@@ -595,10 +588,7 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
                     StartDate = new DateTime(2019, 04, 04),
                     Duration = "0",
                     Predecessor = "7",
-                    ResourceId = new int[] {
-                        12,
-                        5
-                    },
+                    ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=1}, new TaskResources() { ResourceId=5} },
                     Notes = ""
                 }
             })
@@ -626,12 +616,12 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add" })" ResourceNameMapping="ResourceName"
-          ResourceIDMapping="ResourceId" Resources="@ResourceCollections" Height="450px" Width="700px">
+<SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add" })" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-          Duration="Duration" Progress="Progress" Child="SubTasks"
-          ResourceInfo="ResourceId" Notes="Notes" Dependency="Dependency">
+                     Duration="Duration" Progress="Progress" Child="SubTasks" ResourceInfo="ResourceId" Notes="Notes"
+                     Dependency="Predecessor">
     </GanttTaskFields>
+    <GanttResourceFields TResources="TaskResources" Name="ResourceName" Id="ResourceId" Resources="@ResourceCollection"></GanttResourceFields>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" Mode="EditMode.Dialog">
     </GanttEditSettings>
     <GanttColumns>
@@ -671,9 +661,8 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public bool isParent { get; set; }
         public List<TaskData> SubTasks { get; set; }
-        public int[] ResourceId { get; set; }
+        public List<TaskResources> ResourceId { get; set; }
         public string Notes { get; set; }
         public string Predecessor { get; set; }
     }
@@ -683,7 +672,7 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
         public string ResourceName { get; set; }
     }
 
-    public static List <TaskResources> GetResourceCollection() {
+    public static List <TaskResources> GetResourceCollections() {
     List <TaskResources> Resources = new List <TaskResources> () {
         new TaskResources() {
             ResourceId = 1,
@@ -700,7 +689,11 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
         new TaskResources() {
             ResourceId = 4,
             ResourceName = "Fuller King"
-        }
+        },
+        new TaskResources() {
+            ResourceId= 5,
+            ResourceName= "Davolio Fuller"
+        },
     };
     return Resources;
 }
@@ -712,7 +705,6 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
             TaskName = "Project initiation",
             StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
-            isParent = true,
             SubTasks = (new List <TaskData> () {
                 new TaskData() {
                     TaskId = 2,
@@ -720,9 +712,7 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
                     StartDate = new DateTime(2019, 04, 02),
                     Duration = "0",
                     Progress = 30,
-                    ResourceId = new int[] {
-                        1
-                    },
+                    ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=1} },
                     Notes = "Measure the total property area alloted for construction"
                 },
                 new TaskData() {
@@ -731,10 +721,7 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
                     StartDate = new DateTime(2019, 04, 02),
                     Duration = "4",
                     Predecessor = "2",
-                    ResourceId = new int[] {
-                        2,
-                        3
-                    },
+                    ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=2}, new TaskResources() { ResourceId=3} },
                     Notes = "Obtain an engineered soil test of lot where construction is planned.From an engineer or company specializing in soil testing"
 
                 },
@@ -753,7 +740,6 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
             TaskName = "Project estimation",
             StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
-            isParent = true,
             SubTasks = (new List <TaskData> () {
                 new TaskData() {
                     TaskId = 6,
@@ -762,9 +748,7 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
                     Duration = "3",
                     Progress = 30,
                     Predecessor = "4",
-                    ResourceId = new int[] {
-                        4
-                    },
+                    ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=4}},
                     Notes = "Develop floor plans and obtain a materials list for estimations"
                 },
                 new TaskData() {
@@ -773,10 +757,6 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
                     StartDate = new DateTime(2019, 04, 04),
                     Duration = "3",
                     Predecessor = "6",
-                    ResourceId = new int[] {
-                        2,
-                        1
-                    },
                     Notes = ""
                 },
                 new TaskData() {
@@ -785,10 +765,7 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
                     StartDate = new DateTime(2019, 04, 04),
                     Duration = "0",
                     Predecessor = "7",
-                    ResourceId = new int[] {
-                        1,
-                        3
-                    },
+                    ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=1}, new TaskResources() { ResourceId=5} },
                     Notes = ""
                 }
             })
@@ -919,7 +896,7 @@ The following code example demonstrates how to enable task dependency editing in
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks" Dependency="Predecessor">
     </GanttTaskFields>
-    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" Mode="EditMode.Auto"></GanttEditSettings>
+    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
 </SfGantt>
 
 @code{
@@ -1383,7 +1360,7 @@ namespace MyBlazorApp.Data
         public string Predecessor { get; set; }
         public string Notes { get; set; }
         public string TaskType { get; set; }
-        public string ResourceId { get; set; }
+        public List<TaskResources> ResourceId { get; set; }
         public string ProjectId { get; set; }
         public bool? IsExpand { get; set; }
     }

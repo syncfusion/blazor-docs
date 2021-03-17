@@ -420,7 +420,7 @@ You can select multiple rows by setting the `SelectionSettings.Type` property to
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
-    <GanttSelectionSettings Mode="SelectionMode.Row" Type="SelectionType.Multiple"></GanttSelectionSettings>
+    <GanttSelectionSettings Mode="SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
 </SfGantt>
 
 @code{
@@ -521,14 +521,14 @@ You can also select rows dynamically using the `SelectRows` method. The followin
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
-    <GanttSelectionSettings Mode="SelectionMode.Row" Type="SelectionType.Multiple"></GanttSelectionSettings>
+    <GanttSelectionSettings Mode="SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
 </SfGantt>
 
 @code{
     public SfGantt<TaskData> Gantt;
     public void SelectRows()
     {
-        this.Gantt.SelectRows(new [] {1,2,3});
+        this.Gantt.SelectRows(new double[] {1,2,3});
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -728,7 +728,7 @@ You can select multiple cells by setting the `SelectionSettings.Type` property t
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
-    <GanttSelectionSettings Mode="SelectionMode.Cell" Type="SelectionType.Multiple"></GanttSelectionSettings>
+    <GanttSelectionSettings Mode="SelectionMode.Cell" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
 </SfGantt>
 
 @code{
@@ -836,7 +836,7 @@ You can select a cell dynamically using the `SelectCell` method. Refer to the fo
     public SfGantt<TaskData> Gantt;
     public void SelectCell()
     {
-    this.Gantt.SelectCell( new Dictionary<string, int> { { "cellIndex", 1 }, { "rowIndex", 2 } } );
+        this.Gantt.SelectCell( new ValueTuple<int, int> (1, 2) );
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

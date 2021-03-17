@@ -396,7 +396,7 @@ Format | Formatted value
 
 @code{
     public List<TaskData> TaskCollection { get; set; }
-    public string DateFormat = "yMd";
+    public string DateFormat = "MM/dd/yyyy";
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -608,7 +608,7 @@ Multiple columns can be reordered at a time by using the `ReorderColumns` method
     public SfGantt<TaskData> Gantt;
     public void ReorderColumn()
     {
-        this.Gantt.ReorderColumns(new string[]{"TaskName", "StartDate"},"Progress");
+        this.Gantt.ReorderColumns(new List<string>(){"TaskName", "StartDate"},"Progress");
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -912,8 +912,9 @@ A column template is used to customize the column’s look. The following code e
 ```csharp
 @using Syncfusion.Blazor.Gantt
 @inject Microsoft.AspNetCore.Components.IUriHelper UriHelper
-<SfGantt ModelType="@TemplateModel" DataSource="@TaskCollection" ResourceNameMapping="ResourceName" ResourceIDMapping="ResourceId" Resources="@ResourceCollection" Height="450px" Width="700px" RowHeight="80">
+<SfGantt ModelType="@TemplateModel" DataSource="@TaskCollection" Height="450px" Width="700px" RowHeight="80">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ResourceInfo="ResourceId" Child="SubTasks"></GanttTaskFields>
+    <GanttResourceFields TResources="TaskResources" Name="ResourceName" Id="ResourceId" Resources="@ResourceCollection"></GanttResourceFields>
     <GanttSplitterSettings ColumnIndex="3"></GanttSplitterSettings>
     <GanttColumns>
         <GanttColumn Field="TaskId"></GanttColumn>
@@ -988,7 +989,7 @@ A column template is used to customize the column’s look. The following code e
                         StartDate = new DateTime(2019, 04, 02),
                         Duration = "0",
                         Progress = 30,
-                        ResourceId = new int[] { 1 },
+                        ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=1} },
                     },
                     new TaskData() {
                         TaskId = 3,
@@ -996,7 +997,7 @@ A column template is used to customize the column’s look. The following code e
                         StartDate = new DateTime(2019, 04, 02),
                         Duration = "4",
                         Predecessor = "2",
-                        ResourceId = new int[] { 2 },
+                        ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=2} },
                     },
                     new TaskData() {
                         TaskId = 4,
@@ -1005,7 +1006,7 @@ A column template is used to customize the column’s look. The following code e
                         Duration = "0",
                         Progress = 30,
                         Predecessor = "3",
-                        ResourceId = new int[] { 3 },
+                        ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=3} },
                     },
                 })
             },
@@ -1022,7 +1023,7 @@ A column template is used to customize the column’s look. The following code e
                         Duration = "3",
                         Progress = 30,
                         Predecessor = "4",
-                        ResourceId = new int[] { 4 },
+                        ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=4} },
                     },
                     new TaskData() {
                         TaskId = 7,
@@ -1030,7 +1031,7 @@ A column template is used to customize the column’s look. The following code e
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "3",
                         Predecessor = "6",
-                        ResourceId = new int[] { 3 },
+                        ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=3} },
                     },
                     new TaskData() {
                         TaskId = 8,
@@ -1038,7 +1039,7 @@ A column template is used to customize the column’s look. The following code e
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "0",
                         Predecessor = "7",
-                        ResourceId = new int[] { 1 },
+                        ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=5} },
                     }
                 })
             }
@@ -1054,23 +1055,27 @@ A column template is used to customize the column’s look. The following code e
     public static List<TaskResource> GetResourceCollection()
     {
         List<TaskResource> Resources = new List<TaskResource>() {
-            new TaskResource() {
-            ResourceId = 1,
-            ResourceName = "Martin Tamer"
+            new TaskResources() {
+                ResourceId = 1,
+                ResourceName = "Martin Tamer"
             },
-            new TaskResource() {
-            ResourceId = 2,
-            ResourceName = "Rose Fuller"
+            new TaskResources() {
+                ResourceId = 2,
+                ResourceName = "Rose Fuller"
             },
-            new TaskResource() {
-            ResourceId = 3,
-            ResourceName = "Margaret Buchanan"
+            new TaskResources() {
+                ResourceId = 3,
+                ResourceName = "Margaret Buchanan"
             },
-            new TaskResource() {
-            ResourceId = 4,
-            ResourceName = "Fuller King"
-            }
-            };
+            new TaskResources() {
+                ResourceId = 4,
+                ResourceName = "Fuller King"
+            },
+            new TaskResources() {
+                ResourceId= 5,
+                ResourceName= "Davolio Fuller"
+            },
+        };
         return Resources;
     }
 }

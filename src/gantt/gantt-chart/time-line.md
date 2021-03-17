@@ -1007,7 +1007,7 @@ This support is used to view all the tasks available in a project within availab
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "ZoomIn", "ZoomOut", "ZoomToFit" })" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks" Dependency="Predecessor">
     </GanttTaskFields>
-    <GanttLabelSettings LeftLabel="TaskName"></GanttLabelSettings>
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
 </SfGantt>
 
 @code{
@@ -1118,7 +1118,7 @@ You can perform the various zoom actions dynamically or on external click action
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks" Dependency="Predecessor">
     </GanttTaskFields>
-    <GanttLabelSettings LeftLabel="TaskName"></GanttLabelSettings>
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
 </SfGantt>
 
 @code{
@@ -1133,7 +1133,7 @@ You can perform the various zoom actions dynamically or on external click action
     }
     public void ZoomToFit()
     {
-        this.Gantt.FitToProject();
+        this.Gantt.ZoomToFit();
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

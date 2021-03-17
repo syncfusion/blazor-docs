@@ -762,7 +762,7 @@ To apply a search at initial rendering, set the value for `Fields`, `Operator`, 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" Toolbar="@(new List<string>() { "Search" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
-    <GanttSearchSettings Fields="@(new string[] { "TaskName" })" Operator="contains"
+    <GanttSearchSettings Fields="@(new string[] { "TaskName" })" Operator="Operator.Contains"
           Key="List" IgnoreCase="true"></GanttSearchSettings>
 </SfGantt>
 

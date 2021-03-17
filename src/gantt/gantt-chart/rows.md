@@ -321,15 +321,15 @@ On expand action `Expanding` and `Expanded` event will be triggered with current
 </SfGantt>
 
 @code{
-    public void Collapsing(ICollapsingEventArgs<TaskData> args)
+    public void Collapsing(Syncfusion.Blazor.TreeGrid.RowCollapsingEventArgs<TaskData> args)
     {
-        if(args.Data.TaskData.TaskId == 1){
+        if(args.Data.TaskId == 1){
             args.Cancel = true;
         }
     }
-    public void Expanding(ICollapsingEventArgs<TaskData> args)
+    public void Expanding(Syncfusion.Blazor.TreeGrid.RowExpandingEventArgs<TaskData> args)
     {
-        if(args.Data.TaskData.TaskId == 5){
+        if(args.Data.TaskId == 5){
             args.Cancel = true;
         }
     }

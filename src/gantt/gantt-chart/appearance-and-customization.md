@@ -118,10 +118,10 @@ The default taskbar UI can be replaced with custom templates using the `QueryTas
 @code{
     public void QueryTaskbarInfo(IQueryTaskbarInfoEventArgs<TaskData> args)
     {
-        if (args.Data.TaskData.Progress == 30)
+        if (args.Data.Progress == 30)
         {
             args.ProgressBarBgColor = "#FFC0CB";
-        } else if (args.Data.TaskData.Progress == 40) {
+        } else if (args.Data.Progress == 40) {
             args.ProgressBarBgColor = "#FFFFE0";
         }
     }
@@ -228,7 +228,7 @@ You can design your own taskbars to view the tasks in Gantt Chart Chart by using
         <GanttColumn Field="Movie" HeaderText="Movie"></GanttColumn>
         <GanttColumn Field="Performance" HeaderText="Moments / Performance Details"></GanttColumn>
     </GanttColumns>
-    <GanttTemplates>
+    <GanttTemplates TValue="TaskbarData">
         <TaskbarTemplate>
             @if ((context as TaskbarData).GanttProperties.TaskName == "Oscar moments")
             {
@@ -407,7 +407,7 @@ The Gantt Chart component maps any data source fields to task labels using the `
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
-    <GanttLabelSettings LeftLabel="TaskId">
+    <GanttLabelSettings LeftLabel="TaskId" TValue="TaskData">
         <RightLabelTemplate>
             <div class="e-right-label-inner-div" style="height:22px;margin-top:7px;">
                 <span class="e-label">Task Name: @((context as TaskData).TaskName)</span>
@@ -650,7 +650,7 @@ While rendering the Tree Grid part in Gantt Chart, the `RowDataBound` and `Query
     {
         if (args.Column.Field == "Progress")
         {
-            if (args.Data.TaskData.Progress == 30)
+            if (args.Data.Progress == 30)
             {
                 args.Cell.AddClass(new string[] { "yellow-cell" });
             }
@@ -662,7 +662,7 @@ While rendering the Tree Grid part in Gantt Chart, the `RowDataBound` and `Query
     }
     public void RowDataBound(RowDataBoundEventArgs<TaskData> args)
     {
-        if(args.Data.TaskData.TaskId == 4) {
+        if(args.Data.TaskId == 4) {
             args.Row.AddClass(new string[] { "custom-row" });
         }
     }
@@ -993,13 +993,13 @@ In Gantt Chart, we can change the splitter position dynamically by using `SetSpl
         new SplitterView() { ID= "Grid", Text= "Grid" },
         new SplitterView() { ID= "Chart", Text= "Chart" },
     };
-    public void OnChange(ChangeEventArgs<string>args)
+    public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, SplitterView> args)
     {
         this.Gantt.SetSplitterPosition(args.Value, "view");
     }
     public void UpdateSplitterByPosition()
     {
-    this.Gantt.SetSplitterPosition("50%", "position");
+    this.Gantt.SetSplitterPosition("50%", "Position");
     }
     public void UpdateSplitterByIndex()
     {

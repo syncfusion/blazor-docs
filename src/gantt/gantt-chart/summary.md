@@ -19,5 +19,3 @@
 * [Excel Export](gantt-chart/excel-export.md)
 * [Hide chart part](gantt-chart/how-to/hide-chart-part.md)
 * [Open Add Edit Dialog Dynamically](gantt-chart/how-to/open-add-edit-dialog-dynamically.md)
-* [Set vertical scroll position](gantt-chart/how-to/set-vertical-scroll-position.md)
-* [Change schedule start and end dates](gantt-chart/how-to/change-schedule-start-and-end-dates.md)

@@ -4,16 +4,15 @@ Gantt Chart supports client-side exporting, which allows you to export its data 
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" ResourceNameMapping="ResourceName" ResourceIDMapping="ResourceId" Resources="@ResourceCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ResourceInfo="ResourceId" Child="SubTasks"></GanttTaskFields>
+<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     public SfGantt<TaskData> Gantt;
     public List<TaskData> TaskCollection { get; set; }
-    public List<TaskResource> ResourceCollection { get; set; }
-    public void ToolbarClickHandler(ClickEventArgs args)
+    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "GanttContainer_excelexport")
         {
@@ -27,7 +26,6 @@ Gantt Chart supports client-side exporting, which allows you to export its data 
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
-        this.ResourceCollection = GetResourceCollection();
     }
 
     public class TaskData
@@ -56,16 +54,14 @@ Gantt Chart supports client-side exporting, which allows you to export its data 
                         TaskName = "Identify Site location",
                         StartDate = new DateTime(2019, 04, 02),
                         Duration = "0",
-                        Progress = 30,
-                        ResourceId = new int[] { 1 },
+                        Progress = 30
                     },
                     new TaskData() {
                         TaskId = 3,
                         TaskName = "Perform soil test",
                         StartDate = new DateTime(2019, 04, 02),
                         Duration = "4",
-                        Predecessor = "2",
-                        ResourceId = new int[] {2,3},
+                        Predecessor = "2"
                     },
                     new TaskData() {
                         TaskId = 4,
@@ -89,56 +85,26 @@ Gantt Chart supports client-side exporting, which allows you to export its data 
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "3",
                         Progress = 30,
-                        Predecessor = "4",
-                        ResourceId = new int[] {4},
+                        Predecessor = "4"
                     },
                     new TaskData() {
                         TaskId = 7,
                         TaskName = "List materials",
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "3",
-                        Predecessor = "6",
-                        ResourceId = new int[] {2,1},
+                        Predecessor = "6"
                     },
                     new TaskData() {
                         TaskId = 8,
                         TaskName = "Estimation approval",
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "0",
-                        Predecessor = "7",
-                        ResourceId = new int[] {1,3},
+                        Predecessor = "7"
                     }
                 })
             }
         };
     return Tasks;
-}
-
-    public class TaskResource
-    {
-        public int ResourceId { get; set; }
-        public string ResourceName { get; set; }
-    }
-    public static List <TaskResource> GetResourceCollection() {
-    List <TaskResource> Resources = new List <TaskResource> () {
-        new TaskResource() {
-            ResourceId = 1,
-            ResourceName = "Martin Tamer"
-        },
-        new TaskResource() {
-            ResourceId = 2,
-            ResourceName = "Rose Fuller"
-        },
-        new TaskResource() {
-            ResourceId = 3,
-            ResourceName = "Margaret Buchanan"
-        },
-        new TaskResource() {
-            ResourceId = 4,
-            ResourceName = "Fuller King"
-        }
-    };
-    return Resources;
 }
 }
 ```
@@ -153,15 +119,14 @@ In Gantt Chart, the Excel export provides an option to export hidden columns by 
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" ResourceNameMapping="ResourceName" ResourceIDMapping="ResourceId" Resources="@ResourceCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ResourceInfo="ResourceId" Child="SubTasks"></GanttTaskFields>
+<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
     <GanttColumns>
         <GanttColumn Field="TaskId" HeaderText="Task Id" Width="150"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
-        <GanttColumn Field="ResourceId" Width="150" HeaderText="Resource" Visible="false"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="StartDate" Width="250" Visible="false"></GanttColumn>
-        <GanttColumn Field="Duration" Width="150" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Duration" Width="150" HeaderText="Duration" Visible="false"></GanttColumn>
         <GanttColumn Field="Progress" HeaderText="Progress" Width="250"></GanttColumn>
     </GanttColumns>
 </SfGantt>
@@ -169,8 +134,7 @@ In Gantt Chart, the Excel export provides an option to export hidden columns by 
 @code{
     public SfGantt<TaskData> Gantt;
     public List<TaskData> TaskCollection { get; set; }
-    public List<TaskResource> ResourceCollection { get; set; }
-    public void ToolbarClickHandler(ClickEventArgs args)
+    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
         ExportProperties.IncludeHiddenColumn = true;
@@ -186,7 +150,6 @@ In Gantt Chart, the Excel export provides an option to export hidden columns by 
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
-        this.ResourceCollection = GetResourceCollection();
     }
 
     public class TaskData
@@ -215,16 +178,14 @@ In Gantt Chart, the Excel export provides an option to export hidden columns by 
                         TaskName = "Identify Site location",
                         StartDate = new DateTime(2019, 04, 02),
                         Duration = "0",
-                        Progress = 30,
-                        ResourceId = new int[] { 1 },
+                        Progress = 30
                     },
                     new TaskData() {
                         TaskId = 3,
                         TaskName = "Perform soil test",
                         StartDate = new DateTime(2019, 04, 02),
                         Duration = "4",
-                        Predecessor = "2",
-                        ResourceId = new int[] {2,3},
+                        Predecessor = "2"
                     },
                     new TaskData() {
                         TaskId = 4,
@@ -248,56 +209,26 @@ In Gantt Chart, the Excel export provides an option to export hidden columns by 
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "3",
                         Progress = 30,
-                        Predecessor = "4",
-                        ResourceId = new int[] {4},
+                        Predecessor = "4"
                     },
                     new TaskData() {
                         TaskId = 7,
                         TaskName = "List materials",
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "3",
-                        Predecessor = "6",
-                        ResourceId = new int[] {2,1},
+                        Predecessor = "6"
                     },
                     new TaskData() {
                         TaskId = 8,
                         TaskName = "Estimation approval",
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "0",
-                        Predecessor = "7",
-                        ResourceId = new int[] {1,3},
+                        Predecessor = "7"
                     }
                 })
             }
         };
     return Tasks;
-}
-
-    public class TaskResource
-    {
-        public int ResourceId { get; set; }
-        public string ResourceName { get; set; }
-    }
-    public static List <TaskResource> GetResourceCollection() {
-    List <TaskResource> Resources = new List <TaskResource> () {
-        new TaskResource() {
-            ResourceId = 1,
-            ResourceName = "Martin Tamer"
-        },
-        new TaskResource() {
-            ResourceId = 2,
-            ResourceName = "Rose Fuller"
-        },
-        new TaskResource() {
-            ResourceId = 3,
-            ResourceName = "Margaret Buchanan"
-        },
-        new TaskResource() {
-            ResourceId = 4,
-            ResourceName = "Fuller King"
-        }
-    };
-    return Resources;
 }
 }
 ```
@@ -310,16 +241,15 @@ To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" DataSource="@TaskCollection" ResourceNameMapping="ResourceName" ResourceIDMapping="ResourceId" Resources="@ResourceCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ResourceInfo="ResourceId" Child="SubTasks"></GanttTaskFields>
+<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     public SfGantt<TaskData> Gantt;
     public List<TaskData> TaskCollection { get; set; }
-    public List<TaskResource> ResourceCollection { get; set; }
-    public void ToolbarClickHandler(ClickEventArgs args)
+    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
         Syncfusion.Blazor.Grids.ExcelTheme Theme = new Syncfusion.Blazor.Grids.ExcelTheme();
@@ -342,7 +272,6 @@ To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
-        this.ResourceCollection = GetResourceCollection();
     }
 
     public class TaskData
@@ -371,16 +300,14 @@ To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
                         TaskName = "Identify Site location",
                         StartDate = new DateTime(2019, 04, 02),
                         Duration = "0",
-                        Progress = 30,
-                        ResourceId = new int[] { 1 },
+                        Progress = 30
                     },
                     new TaskData() {
                         TaskId = 3,
                         TaskName = "Perform soil test",
                         StartDate = new DateTime(2019, 04, 02),
                         Duration = "4",
-                        Predecessor = "2",
-                        ResourceId = new int[] {2,3},
+                        Predecessor = "2"
                     },
                     new TaskData() {
                         TaskId = 4,
@@ -404,56 +331,26 @@ To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "3",
                         Progress = 30,
-                        Predecessor = "4",
-                        ResourceId = new int[] {4},
+                        Predecessor = "4"
                     },
                     new TaskData() {
                         TaskId = 7,
                         TaskName = "List materials",
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "3",
-                        Predecessor = "6",
-                        ResourceId = new int[] {2,1},
+                        Predecessor = "6"
                     },
                     new TaskData() {
                         TaskId = 8,
                         TaskName = "Estimation approval",
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "0",
-                        Predecessor = "7",
-                        ResourceId = new int[] {1,3},
+                        Predecessor = "7"
                     }
                 })
             }
         };
     return Tasks;
-}
-
-    public class TaskResource
-    {
-        public int ResourceId { get; set; }
-        public string ResourceName { get; set; }
-    }
-    public static List <TaskResource> GetResourceCollection() {
-    List <TaskResource> Resources = new List <TaskResource> () {
-        new TaskResource() {
-            ResourceId = 1,
-            ResourceName = "Martin Tamer"
-        },
-        new TaskResource() {
-            ResourceId = 2,
-            ResourceName = "Rose Fuller"
-        },
-        new TaskResource() {
-            ResourceId = 3,
-            ResourceName = "Margaret Buchanan"
-        },
-        new TaskResource() {
-            ResourceId = 4,
-            ResourceName = "Fuller King"
-        }
-    };
-    return Resources;
 }
 }
 ```
@@ -466,16 +363,15 @@ You can set the required file name for the exported document by defining the `Fi
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" ResourceNameMapping="ResourceName" ResourceIDMapping="ResourceId" Resources="@ResourceCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ResourceInfo="ResourceId" Child="SubTasks"></GanttTaskFields>
+<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     public SfGantt<TaskData> Gantt;
     public List<TaskData> TaskCollection { get; set; }
-    public List<TaskResource> ResourceCollection { get; set; }
-    public void ToolbarClickHandler(ClickEventArgs args)
+    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "GanttContainer_excelexport")
         {
@@ -493,7 +389,6 @@ You can set the required file name for the exported document by defining the `Fi
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
-        this.ResourceCollection = GetResourceCollection();
     }
 
     public class TaskData
@@ -522,16 +417,14 @@ You can set the required file name for the exported document by defining the `Fi
                         TaskName = "Identify Site location",
                         StartDate = new DateTime(2019, 04, 02),
                         Duration = "0",
-                        Progress = 30,
-                        ResourceId = new int[] { 1 },
+                        Progress = 30
                     },
                     new TaskData() {
                         TaskId = 3,
                         TaskName = "Perform soil test",
                         StartDate = new DateTime(2019, 04, 02),
                         Duration = "4",
-                        Predecessor = "2",
-                        ResourceId = new int[] {2,3},
+                        Predecessor = "2"
                     },
                     new TaskData() {
                         TaskId = 4,
@@ -555,56 +448,26 @@ You can set the required file name for the exported document by defining the `Fi
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "3",
                         Progress = 30,
-                        Predecessor = "4",
-                        ResourceId = new int[] {4},
+                        Predecessor = "4"
                     },
                     new TaskData() {
                         TaskId = 7,
                         TaskName = "List materials",
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "3",
-                        Predecessor = "6",
-                        ResourceId = new int[] {2,1},
+                        Predecessor = "6"
                     },
                     new TaskData() {
                         TaskId = 8,
                         TaskName = "Estimation approval",
                         StartDate = new DateTime(2019, 04, 04),
                         Duration = "0",
-                        Predecessor = "7",
-                        ResourceId = new int[] {1,3},
+                        Predecessor = "7"
                     }
                 })
             }
         };
     return Tasks;
-}
-
-    public class TaskResource
-    {
-        public int ResourceId { get; set; }
-        public string ResourceName { get; set; }
-    }
-    public static List <TaskResource> GetResourceCollection() {
-    List <TaskResource> Resources = new List <TaskResource> () {
-        new TaskResource() {
-            ResourceId = 1,
-            ResourceName = "Martin Tamer"
-        },
-        new TaskResource() {
-            ResourceId = 2,
-            ResourceName = "Rose Fuller"
-        },
-        new TaskResource() {
-            ResourceId = 3,
-            ResourceName = "Margaret Buchanan"
-        },
-        new TaskResource() {
-            ResourceId = 4,
-            ResourceName = "Fuller King"
-        }
-    };
-    return Resources;
 }
 }
 ```

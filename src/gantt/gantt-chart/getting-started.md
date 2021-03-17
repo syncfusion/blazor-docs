@@ -780,22 +780,43 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 ## Assigning resources
 
 You can display and assign the resource for each task in the Gantt Chart component.
-Create a collection of list object, which contains ID and name of the resource and assign it to the `Resources` property. Map the resource ID and name with `ResourceIDMapping` and `ResourceNameMapping` properties, respectively.
+Create a collection of list object, which contains ID and name of the resource and assign it to the `GanttResourceFields.Resources` property. Map the resource ID and name with `GanttResourceFields.Id` and `GanttResourceFields.Name` properties, respectively.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" ResourceNameMapping="ResourceName" ResourceIDMapping="ResourceId" Resources="@ResourceCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ResourceInfo="ResourceId" Child="SubTasks"></GanttTaskFields>
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" ResourceInfo="Resources" Duration="Duration" Progress="Progress"
+            Child="SubTasks">
+    </GanttTaskFields>
+    <GanttResourceFields Resources="@ResourceCollection" Id="ResourceId" Name="ResourceName" TResources="ResourceAlloacteData"></GanttResourceFields>
 </SfGantt>
 
 @code{
+    public DateTime ProjectStart = new DateTime(2019, 03, 25);
+    public DateTime ProjectEnd = new DateTime(2019, 05, 10);
     public List<TaskData> TaskCollection { get; set; }
-    public List<TaskResource> ResourceCollection { get; set; }
+    public List<ResourceAlloacteData> ResourceCollection { get; set; }
+
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
-        this.ResourceCollection = GetResourceCollection();
+        this.ResourceCollection = GetResources;
+
     }
+    public class ResourceAlloacteData
+    {
+        public int ResourceId { get; set; }
+        public string ResourceName { get; set; }
+    }
+    public static List<ResourceAlloacteData> GetResources = new List<ResourceAlloacteData>()
+    {
+
+        new ResourceAlloacteData() { ResourceId= 1, ResourceName= "Martin Tamer"},
+        new ResourceAlloacteData() { ResourceId= 2, ResourceName= "Rose Fuller" },
+        new ResourceAlloacteData() { ResourceId= 3, ResourceName= "Margaret Buchanan" },
+        new ResourceAlloacteData() { ResourceId= 4, ResourceName= "Fuller King" },
+        new ResourceAlloacteData() { ResourceId= 5, ResourceName= "Davolio Fuller" },
+    };
 
     public class TaskData
     {
@@ -806,71 +827,38 @@ Create a collection of list object, which contains ID and name of the resource a
         public string Duration { get; set; }
         public int Progress { get; set; }
         public List<TaskData> SubTasks { get; set; }
-        public int[] ResourceId { get; set; }
-    }
+        public List<ResourceAlloacteData> Resources { get; set; }
 
+    }
     public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                    ResourceId = new int[] {
-                        1
+        List <TaskData> Tasks = new List <TaskData> () {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 04, 02),
+                EndDate = new DateTime(2019, 04, 21),
+                SubTasks = (new List <TaskData> () {
+                    new TaskData() {
+                        TaskId = 2,
+                        TaskName = "Identify Site location",
+                        StartDate = new DateTime(2019, 04, 02),
+                        Duration = "4",
+                        Progress = 50,
+                        Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1} }
+                    },
+                    new TaskData() {
+                        TaskId = 3,
+                        TaskName = "Perform soil test",
+                        StartDate = new DateTime(2019, 04, 02),
+                        Duration = "4",
+                        Progress = 50,
+                        Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2}, new ResourceAlloacteData() { ResourceId=3} }
                     }
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                    ResourceId = new int[] {
-                        2,
-                        3
-                    }
-                }
-            })
-        }
-    };
-
-    return Tasks;
-}
-
-    public class TaskResource
-    {
-        public int ResourceId { get; set; }
-        public string ResourceName { get; set; }
+                })
+            }
+        };
+        return Tasks;
     }
-    public static List <TaskResource> GetResourceCollection() {
-    List <TaskResource> Resources = new List <TaskResource> () {
-        new TaskResource() {
-            ResourceId = 1,
-            ResourceName = "Martin Tamer"
-        },
-        new TaskResource() {
-            ResourceId = 2,
-            ResourceName = "Rose Fuller"
-        },
-        new TaskResource() {
-            ResourceId = 3,
-            ResourceName = "Margaret Buchanan"
-        },
-        new TaskResource() {
-            ResourceId = 4,
-            ResourceName = "Fuller King"
-        }
-    };
-    return Resources;
-}
 }
 ```
 

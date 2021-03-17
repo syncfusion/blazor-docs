@@ -7,7 +7,7 @@ The events should be provided to the datagrid using **GridEvents** component. Al
 
 ## OnActionBegin
 
-[`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping etc., starts.
+[`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping, [`editing`](https://blazor.syncfusion.com/documentation/datagrid/editing/#event-trace-while-editing) etc., starts.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -54,7 +54,7 @@ The events should be provided to the datagrid using **GridEvents** component. Al
 
 ## OnActionComplete
 
-[`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping etc. are completed.
+[`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping,[`editing`](https://blazor.syncfusion.com/documentation/datagrid/editing/#event-trace-while-editing) etc. are completed.
 
 ```csharp
 @using Syncfusion.Blazor.Grids

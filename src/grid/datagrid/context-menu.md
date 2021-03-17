@@ -25,7 +25,7 @@ Items |Description
 `LastPage` | Go to the last page.
 `NextPage` | Go to the next page.
 
-The default context menu provide different types of context menu items for the following elements.
+The default context menu provides different types of context menu items for the following elements.
 
 Elements | Context Menu Items
 -----|-----

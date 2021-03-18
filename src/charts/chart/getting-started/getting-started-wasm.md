@@ -2,7 +2,7 @@
 
 # Getting Started with Blazor WebAssembly Charts Using Visual Studio
 
-This article provides a step-by-step instructions to configure Syncfusion Blazor Charts in a simple Blazor WebAssembly application using Visual Studio 2019.
+This article provides a step-by-step instructions to configure Syncfusion Blazor Chart in a simple Blazor WebAssembly application using Visual Studio 2019.
 
 **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this help topic for more information.
 
@@ -23,35 +23,41 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
     ```
 
-2. Choose Create a new project from the Visual Studio dashboard.
+2. Choose **Create a new project** from the Visual Studio dashboard.
 
-    ![chart](../images/getting-started/createproject.png)
+    ![new project in aspnetcore blazor](../images/getting-started/createproject.png)
 
-3. Select Blazor App from the template and click Next button.
+3. Select **Blazor App** from the template and click Next button.
 
-    ![chart](../images/getting-started/blazorapp.png)
+    ![blazor template](../images/getting-started/blazorapp.png)
 
-4. Now, the project configuration window will popup. Click Create button to create a new project with the default project configuration.
+4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
 
-    ![chart](../images/getting-started/blazorconfig.png)
+    ![asp.net core project configuration](../images/getting-started/blazorconfig.png)
 
-5. Choose Blazor WebAssembly App from the dashboard and click Create button to create a new Blazor WebAssembly application. Make sure .NET Core and ASP.NET Core 3.1 is selected at the top.
+5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
 
-    ![chart](../images/getting-started/webassembly.png)
+    ![select framework](../images/getting-started/webassembly.png)
 
-`http://172.16.0.76:9797/products/aspnet-core-blazor-razor-components/control/images/grid/blazor-datagrid-high-performance.png`
+    **Note:** ASP.NET Core 3.1 available in Visual Studio 2019 version.
 
-**Note:** ASP.NET Core 3.1 available in Visual Studio 2019 version.
+6. Now add the lodash script to the **HEAD** element of the **~/wwwroot/index.html**, since we have used it in our [`chart interactive`]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
+
+    ```html
+      <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+      </head>
+    ```
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Now, install Syncfusion.Blazor NuGet package to the newly created application by using the NuGet Package Manager. Right-click the project and select Manage NuGet Packages.
+1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the **NuGet Package Manager**. Right-click the project and select Manage NuGet Packages.
 
-    ![chart](../images/getting-started/nugetconfig.png)
+    ![nuget explorer](../images/getting-started/nugetconfig.png)
 
-2. Search Syncfusion.Blazor keyword in the Browser tab and install Syncfusion.Blazor NuGet package in the application.
+2. Search **Syncfusion.Blazor** keyword in the Browser tab and install Syncfusion.Blazor NuGet package in the application.
 
-    ![chart](../images/getting-started/nugetinstall.png)
+    ![select nuget](../images/getting-started/nugetinstall.png)
 
 3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
 
@@ -62,7 +68,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
     @using Syncfusion.Blazor.Charts
     ```
 
-5. Open the ~/Program.cs file and register the Syncfusion Blazor Service.
+5. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -82,33 +88,25 @@ namespace WebApplication1
 }
 ```
 
-## Adding Chart component to the application
+## Add Chart Component
 
-Now, add the Syncfusion Blazor components in any web page (razor) in the Pages folder. For example, the Chart component is added in the **~/Pages/Index.razor** page.
-
-**Note:** Adding the lodash script is mandatory since we have used it in our chart’s interactive features. The absence of the script will result in console errors.
+To initialize the chart component add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
 ```csharp
-<head>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-</head>
+@page "/"
+
+<SfChart>
+
+</SfChart>
 ```
 
- in the **HEAD** element of the **~/wwwroot/index.html**
-
-```csharp
-<SfChart></SfChart>
-```
-
-## Run the application
-
-After successful compilation of your application, the Syncfusion Blazor chart component will render in the web browser.
+On successful compilation of your application, the Syncfusion Blazor chart component will render in the web browser.
 
 ![chart](../images/getting-started/chart.png)
 
-## Populate Chart With Data
+## Populate Chart with Data
 
-To bind data for the Chart component, you can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. The list data source can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+To bind data for the chart component, you can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 ```csharp
 public class SalesInfo
@@ -128,7 +126,8 @@ public List<SalesInfo> Sales = new List<SalesInfo>
     };
 ```
 
-Now map the field  `Month` and `Sales` in the data to the [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~XName.html) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties of the series, then set the data to [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. As we are going to view the data in column chart, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) of the chart as `Column`.
+Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and[`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties, and then set the data to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property.
+Set the [`chart type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to `Column` because we will be viewing the data in a column chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -162,9 +161,9 @@ Now map the field  `Month` and `Sales` in the data to the [`XName`](https://help
 
 ![chart](../images/getting-started/column.png)
 
-## Add Chart and Axis Titles
+## Add Titles
 
-You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property to the chart and an axis to provide quick information to the user about the data plotted in the chart.
+Using the `Title` property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -202,7 +201,7 @@ You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Add Data Label
 
-You can add data labels to improve the readability of the chart. This can be achieved by setting the `Visible` property to true in the `DataLabel`.
+You can add data labels to improve the readability of the chart. This can be accomplished by setting the DataLabel `Visible` property to **true**.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -243,7 +242,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 
 ## Enable Tooltip
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property as true in [`TooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
+When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. Tooltips can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -283,7 +282,7 @@ The tooltip is useful when you cannot display information by using the data labe
 
 ## Enable Legend
 
-You can use legend for the chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to true in [`LegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo). The name of the legend can be set by using [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Name) property in the series.
+You can use legend for the chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to **true** in [`ChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html). The legend name can be changed by using the [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Name) property in the series.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

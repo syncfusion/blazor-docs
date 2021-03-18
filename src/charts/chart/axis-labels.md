@@ -42,7 +42,7 @@ the axis line using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/
 
 ## Multilevel Labels
 
-Any number of levels of labels can be added to an axis using the [`MultiLevelLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MultiLevelLabels) property. This property can be configured using the following properties.
+Any number of levels of labels can be added to the axis using the [`MultiLevelLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MultiLevelLabels) property. This property can be configured using the following properties.
 
 ### Categories
 
@@ -98,7 +98,7 @@ are `Rectangle`, `Brace`, `WithoutBorder`, `WithoutTopBorder`, `WithoutTopandBot
 
 ## Edge Label Placement
 
-Labels with long text at the edges of an axis may appear partially in the chart. To avoid this,
+Labels with long text at the edges of the axis may appear partially in the chart. To avoid this,
 use [`EdgeLabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_EdgeLabelPlacement) property in axis, which moves
 the label inside the chart area for better appearance or hides it.
 

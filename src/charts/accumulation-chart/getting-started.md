@@ -2,33 +2,52 @@
 
 # Getting Started
 
-This section briefly explains about how to include a `Accumulation Chart` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Accumulation Chart` in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Install **Syncfusion.Blazor** NuGet package to the application by using the NuGet Package Manager. Please ensure to check the **Include prerelease** option.
-2. You can add the client-side style resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+1. Install the **Syncfusion.Blazor**  NuGet package to the application by using the **NuGet Package Manager**.
 
-```html
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-</head>
-```
+2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-**Note:** The same theme file can be referred through the CDN version by using `https://cdn.syncfusion.com/blazor/18.1.36-beta/styles/bootstrap4.css`
+    ```html
+        <head>
+            <environment include="Development">
+            ....
+            ....
+                <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+                <!---CDN--->
+                @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+        </environment>
+        </head>
+    ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [`documentation`](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```html
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
-```
+    ```html
+        <head>
+            <environment include="Development">
+            <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+            </environment>
+        </head>
+    ```
+
+3. Now add the lodash script to the **HEAD** element of the **/Pages/Host.cshtml** page, since we have used it in our [`chart interactive`]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
+
+    ```html
+      <head>
+            <environment include="Development">
+            <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+            </environment>
+    </head>
+    ```
 
 ## Adding component package to the application
 
-Open `**~/_Imports.razor` file and import the `Syncfusion.Blazor.**`
+Open `**~/_Imports.razor` file and import the `Syncfusion.Blazor.**` namespaces.
 
 ```csharp
 @using Syncfusion.Blazor
@@ -57,7 +76,7 @@ namespace BlazorApplication
 }
 ```
 
-On AccumulationChart initial loading, we gather text measure information for rendering purposes. Since its size exceeds the default SignalR buffer size 32 KB, the server will be disconnected. So you need to add the following service to increase the buffer size to 64 KB over the SignalR connection.
+During the initial loading, we collect and send character information in order to render the chart. To avoid any disconnection, increase the buffer size to 64 KB over the SignalR connection.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -80,30 +99,12 @@ namespace BlazorApplication
 }
 ```
 
-**Note**: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+## Add Accumulation Chart
+
+To initialize the accumulation chart component add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
 ```csharp
-<head>
-    <script src="https://cdn.syncfusion.com/blazor/18.1.36-beta/dist/syncfusion-blazor.min.js"></script>
-</head>
-```
-
-## Adding Accumulation Chart component to the application
-
-Now, add the Syncfusion Blazor components in any web page (razor) in the Pages folder. For example, the AccumulationChart component is added in the **~/Pages/Index.razor** page.
-
-**Note:** Adding the lodash script is mandatory since we have used it in our chart’s interactive features. The absence of the script will result in console errors.
-
-```csharp
-<head>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-</head>
-```
-
- in the **HEAD** element of the **~/Pages/_Host.cshtml** page for server side blazor application,
- in the **HEAD** element of the **~/wwwroot/index.html** for wasm application.
-
-```csharp
+@page "/"
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart>
     <AccumulationChartSeriesCollection>
@@ -118,7 +119,7 @@ Now, add the Syncfusion Blazor components in any web page (razor) in the Pages f
         public string Country { get; set;}
         public double Medals { get; set;}
     }
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public ObservableCollection<ChartData> MedalDetails = new ObservableCollection<ChartData>
 {
         new ChartData { Country= "United States of America", Medals= 46 },
         new ChartData { Country= "Great Britain", Medals= 27 },
@@ -132,17 +133,16 @@ Now, add the Syncfusion Blazor components in any web page (razor) in the Pages f
 }
 ```
 
-## Run the application
-
-After successful compilation of your application, the Syncfusion Blazor accumulation chart component will render in the web browser.
+On successful compilation of your application, the Syncfusion Blazor Accumulation Chart component will render in the web browser.
 
 ![pie chart](images/getting-started/pie-chart.png)
 
 ## Add Title
 
-You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_NoRecordsTemplate) property to the accumulation chart, to provide quick information to the user about the data plotted in the chart.
+Using the `Title` property, you can add a title to the accumulation chart to provide the user with quick information about the data plotted in the chart.
 
 ```csharp
+@page "/"
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Olympic Medal Details">
@@ -157,7 +157,7 @@ You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfu
         public string Country { get; set; }
         public double Medals { get; set; }
     }
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public ObservableCollection<ChartData> MedalDetails = new ObservableCollection<ChartData>
 {
         new ChartData { Country= "United States of America", Medals= 46 },
         new ChartData { Country= "Great Britain", Medals= 27 },
@@ -175,9 +175,10 @@ You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Add Data Label
 
-You can add data labels to improve the readability of the Accumulation chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property to true in the `DataLabel`.
+You can add data labels to improve the readability of the accumulation chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property to true in the `AccumulationDataLabelSettings`.
 
 ```csharp
+@page "/"
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Olympic Medal Details">
@@ -194,7 +195,7 @@ You can add data labels to improve the readability of the Accumulation chart. Th
         public string Country { get; set; }
         public double Medals { get; set; }
     }
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public ObservableCollection<ChartData> MedalDetails = new ObservableCollection<ChartData>
 {
         new ChartData { Country= "United States of America", Medals= 46 },
         new ChartData { Country= "Great Britain", Medals= 27 },
@@ -212,18 +213,17 @@ You can add data labels to improve the readability of the Accumulation chart. Th
 
 ## Enable Tooltip
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property as true in [`TooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownBase-1.html#Syncfusion_Blazor_DropDowns_DropDownBase_1_ActionFailureTemplate).
+When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. Tooltips can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [`AccumulationChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) to **true**.
 
 ```csharp
+@page "/"
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
-            <AccumulationDataLabelSettings Visible="true" Name="Medals"></AccumulationDataLabelSettings>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
 </SfAccumulationChart>
 
@@ -233,7 +233,7 @@ The tooltip is useful when you cannot display information by using the data labe
         public string Country { get; set;}
         public double Medals {get; set;}
     }
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public ObservableCollection<ChartData> MedalDetails = new ObservableCollection<ChartData>
 {
         new ChartData { Country= "United States of America", Medals= 46 },
         new ChartData { Country= "Great Britain", Medals= 27 },
@@ -251,9 +251,10 @@ The tooltip is useful when you cannot display information by using the data labe
 
 ## Enable Legend
 
-You can use legend for the accumulation chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Visible) property to true in [`LegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo).
+You can use legend for the accumulation chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Visible) property to true in [`AccumulationChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
 
 ```csharp
+ @page "/"
  @using Syncfusion.Blazor.Charts
 
  <SfAccumulationChart Title="Olympic Medal Details">
@@ -274,7 +275,7 @@ You can use legend for the accumulation chart by setting the [`Visible`](https:/
         public string Country { get; set;}
         public double Medals { get; set;}
     }
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public ObservableCollection<ChartData> MedalDetails = new ObservableCollection<ChartData>
 {
         new ChartData { Country= "United States of America", Medals= 46 },
         new ChartData { Country= "Great Britain", Medals= 27 },
@@ -290,7 +291,7 @@ You can use legend for the accumulation chart by setting the [`Visible`](https:/
 
 ![Legend](images/getting-started/legend.png)
 
->You can find the fully working sample for Accumulation chart [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppAccChart-747645871.zip).
+>You can find the fully working sample for accumulation chart [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppAccChart-747645871.zip).
 
 **New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 

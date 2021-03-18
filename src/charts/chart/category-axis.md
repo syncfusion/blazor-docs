@@ -2,7 +2,7 @@
 
 <!-- markdownlint-disable MD036 -->
 
-Category axis are used to represent the string values instead of numbers.
+Category axis is used to represent string values instead of numbers.
 
 {% aspTab template="chart/axis/category/column", sourceFiles="column.razor" %}
 
@@ -14,8 +14,7 @@ Category axis are used to represent the string values instead of numbers.
 
 <!-- markdownlint-disable MD036 -->
 
-By default, category labels are placed between the ticks in an axis, this can also be placed on ticks
-using [`LabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelPlacement) property.
+By default, the category labels are placed between the ticks, which can also be placed on the ticks using the [`LabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelPlacement) property.
 
 {% aspTab template="chart/axis/category/placement", sourceFiles="placement.razor" %}
 
@@ -25,8 +24,8 @@ using [`LabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Range and Interval
 
-Range of the category axis can be customized using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Minimum),
-[`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Maximum) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Interval.html) property of
+Range of the category axis can be customized using the [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Minimum),
+[`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Maximum) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Interval.html) properties of
 the axis.
 
 {% aspTab template="chart/axis/category/range", sourceFiles="range.razor" %}
@@ -37,8 +36,8 @@ the axis.
 
 ## Indexed category axis
 
-Category axis also can be rendered based on the index values of data source. This can be achieved by defining the
-[`IsIndexed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_IsIndexed) property to `true` in the axis.
+The category axis can also be rendered on the basis of data source index values. This can be achieved by defining the
+[`IsIndexed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_IsIndexed) property as **true** in the axis.
 
 {% aspTab template="chart/axis/category/index", sourceFiles="index.razor" %}
 

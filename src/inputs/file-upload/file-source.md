@@ -2,7 +2,7 @@
 
 ## Directory upload
 
-The uploader component allows you to upload all files in the folders to server by using
+The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload/) component allows you to upload all files in the folders to server by using
 the [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DirectoryUpload) property. When this property is enabled,
 the uploader component processes the files by iterating through the files and sub-directories in a directory.
 It allows you to select only folders instead of files to upload.
@@ -185,3 +185,5 @@ body .e-upload-drag-hover {
 The output will be as follows.
 
 ![uploader](./images/drop.png)
+
+> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities/) to understand how to browse the files which you want to upload to the server.

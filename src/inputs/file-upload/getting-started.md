@@ -1,6 +1,6 @@
-# Getting Started
+# Getting started with Blazor File Upload component
 
-This section briefly explains how to include a **Uploader** Component in your Blazor server-side application. You can refer to the [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configure the common specifications.
+This section briefly explains about how to include a [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload/) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side File Upload](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly File Upload](./getting-started-with-blazor-webassembly) documentation pages for configuration specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -223,8 +223,11 @@ The output will be as follows.
 
 ![Uploader AllowedExtensions](./images/uploader_file_not_allowed.png)
 
+> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities/) to understand how to browse the files which you want to upload to the server.
+
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
+* [Getting Started with Syncfusion File Upload in Blazor WebAssembly using Visual Studio 2019](./getting-started-with-blazor-webassembly)

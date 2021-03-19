@@ -121,14 +121,6 @@ namespace BlazorApplication
 }
 ```
 
->Note: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by  **AddSyncfusionBlazor(true)** and load the scripts to the `<head>` element of the **~/wwwroot/index.html** page in Blazor WebAssembly app or **~/Pages/_Host.cshtml** page in Blazor Server app.  
-
-```csharp
-    <head>
-        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
-    </head>
-```
-
 ## Adding component package to the application
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Popups` package.

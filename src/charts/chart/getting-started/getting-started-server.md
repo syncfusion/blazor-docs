@@ -235,7 +235,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 
 ## Add Data Label
 
-You can add data labels to improve the readability of the chart. This can be accomplished by setting the DataLabel `Visible` property to **true**.
+You can add data labels to improve the readability of the chart. This can be accomplished by setting the ChartDataLabel `Visible` property to **true**.
 
 ```csharp
 @page "/"

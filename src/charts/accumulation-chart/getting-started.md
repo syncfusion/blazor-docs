@@ -76,7 +76,7 @@ namespace BlazorApplication
 }
 ```
 
-During the initial loading, we collect and send character information in order to render the chart. To avoid any disconnection, increase the buffer size to 64 KB over the SignalR connection.
+During the initial loading, we collect and send character information in order to render the chart. To avoid any disconnection, increase the buffer size to 64 KB or more over the SignalR connection.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -251,7 +251,7 @@ When space constraints prevent you from displaying information using data labels
 
 ## Enable Legend
 
-You can use legend for the accumulation chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Visible) property to true in [`AccumulationChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
+You can use legend for the accumulation chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Visible) property to **true** in [`AccumulationChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
 
 ```csharp
  @page "/"

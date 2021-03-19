@@ -201,7 +201,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 
 ## Add Data Label
 
-You can add data labels to improve the readability of the chart. This can be accomplished by setting the DataLabel `Visible` property to **true**.
+You can add data labels to improve the readability of the chart. This can be accomplished by setting the ChartDataLabel `Visible` property to **true**.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -319,8 +319,6 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
 ```
 
 ![chart](../images/getting-started/legend.png)
-
->You can find the fully working sample [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppChart1351059325.zip).
 
 **New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 

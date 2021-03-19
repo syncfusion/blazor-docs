@@ -1,69 +1,113 @@
 # Getting Started
 
-This section briefly explains how to include a **Uploader** Component in your Blazor server-side application. You can refer to the [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configure the common specifications.
+This article provides a step-by-step instructions to configure Syncfusion Blazor File Upload in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+
+> **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
+
+## Prerequisites
+
+* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
+* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+> **Note:** .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
+>
+> Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+
+## Create a Blazor WebAssembly project in Visual Studio 2019
+
+1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
+
+    ```bash
+    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    ````
+
+2. Choose **Create a new project** from the Visual Studio dashboard.
+
+    ![new project in aspnetcore blazor](./images/new-project.png)
+
+3. Select **Blazor App** from the template and click **Next** button.
+
+    ![blazor template](./images/blazor-template.png)
+
+4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
+
+    ![asp.net core project configuration](./images/project-configuration.png)
+
+5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
+
+    ![select framework](./images/blazor-client-template.png)
+
+> **Note:** ASP.NET Core 3.1 available in Visual Studio 2019 version.
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor.Inputs` NuGet package to the application by using the `NuGet Package Manager`.
+1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the **NuGet Package Manager**. Right-click the project and select Manage NuGet Packages.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
+    ![nuget explorer](./images/nuget-explorer.png)
 
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. Search **Syncfusion.Blazor** keyword in the Browser tab and install **Syncfusion.Blazor** NuGet package in the application.
 
- ```html
-    <head>
-            <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-            @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
-    </head>
-```
+    ![select nuget](./images/select-nuget.png)
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
 
- ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
-```
+4. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
 
-## Adding component package to the application
+    ```csharp
+    @using Syncfusion.Blazor
+    @using Syncfusion.Blazor.Inputs
+    ```
 
-Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Inputs` packages.
+5. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-```csharp
-@using Syncfusion.Blazor.Inputs
-```
+    ```csharp
+    using Syncfusion.Blazor;
 
-## Add SyncfusionBlazor service in Startup.cs
-
-Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
-
-```csharp
-using Syncfusion.Blazor;
-
-namespace BlazorApplication
-{
-    public class Startup
+    namespace WebApplication1
     {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
+        public class Program
         {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
+            public static async Task Main(string[] args)
+            {
+                ....
+                ....
+                builder.Services.AddSyncfusionBlazor();
+                await builder.Build().RunAsync();
+            }
         }
     }
-}
-```
+    ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+6. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
 
- ```html
+    ```html
     <head>
-            <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+        ....
+        ....
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
-```
+    ```
+
+    > **Note:** The same theme file can be referred through the CDN version by using [`https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css`](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
+    > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
+
+     ```csharp
+    using Syncfusion.Blazor;
+
+     namespace WebApplication1
+     {
+         public class Program
+       {
+             public static async Task Main(string[] args)
+             {
+                ....
+                ....
+                builder.Services.AddSyncfusionBlazor(true);
+                await builder.Build.RunAsync();
+             }
+         }
+     }
+     ```
 
 ## Adding uploader component to the application
 

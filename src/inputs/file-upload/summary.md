@@ -1,4 +1,5 @@
 * [Getting Started](file-upload/getting-started.md)
+* [Getting Started with Blazor WebAssembly](file-upload/getting-started-with-blazor-webassembly.md)
 * [Asynchronous Upload](file-upload/async.md)
 * [Chunk Upload](file-upload/chunk-upload.md)
 * [Localization](file-upload/localization.md)

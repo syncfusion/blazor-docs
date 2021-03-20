@@ -8,26 +8,13 @@ This section briefly explains about how to include a `Chart` in your Blazor Serv
 
 1. Install the **Syncfusion.Blazor**  NuGet package to the application by using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page. For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
     ```html
         <head>
             <environment include="Development">
             ....
             ....
-                <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-                <!---CDN--->
-                @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
-        </environment>
-        </head>
-    ```
-
-    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
-
-    ```html
-        <head>
-            <environment include="Development">
-            <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
             <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
             </environment>
         </head>
@@ -37,17 +24,18 @@ This section briefly explains about how to include a `Chart` in your Blazor Serv
 
     ```html
       <head>
-            <environment include="Development">
-            <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <environment include="Development">
+            ....
+            ....
             <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-            </environment>
-    </head>
+        </environment>
+      </head>
     ```
 
 ## Adding component package to the application
 
-Open `**~/_Imports.razor` file and import the `Syncfusion.Blazor.**` namespaces.
+Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.**` namespaces.
 
 ```csharp
 @using Syncfusion.Blazor
@@ -76,7 +64,7 @@ namespace BlazorApplication
 }
 ```
 
-During the initial loading, we collect and send character information in-order to render the chart. To avoid any disconnection, increase the buffer size to 64 KB or more over the SignalR connection.
+During initial loading, we collect and send individual character size information in-order to render the chart. To avoid any disconnection, increase the buffer size to 64 KB or more over the SignalR connection.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -146,7 +134,7 @@ public class SalesInfo
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
-public ObservableCollection<SalesInfo> Sales = new ObservableCollection<SalesInfo>
+public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
@@ -158,8 +146,7 @@ public ObservableCollection<SalesInfo> Sales = new ObservableCollection<SalesInf
     };
 ```
 
-Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties, and then set the data to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property.
-Set the [`chart type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to **Column** because we will be viewing the data in a column chart.
+Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties, then set the data to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property, and the [`chart type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to **Column** because we will be viewing the data in a column chart.
 
 ```csharp
 @page "/"
@@ -179,7 +166,7 @@ Set the [`chart type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
-    public ObservableCollection<SalesInfo> Sales = new ObservableCollection<SalesInfo>
+    public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
@@ -196,7 +183,7 @@ Set the [`chart type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ## Add Titles
 
-Using the `Title` property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
+Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
 
 ```csharp
 @page "/"
@@ -204,9 +191,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 
     <SfChart Title="Sales Analysis">
         <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
         <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
-
         <ChartSeriesCollection>
             <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             </ChartSeries>
@@ -218,7 +203,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
-    public ObservableCollection<SalesInfo> Sales = new ObservableCollection<SalesInfo>
+    public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
@@ -235,32 +220,30 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 
 ## Add Data Label
 
-You can add data labels to improve the readability of the chart. This can be accomplished by setting the ChartDataLabel `Visible` property to **true**.
+You can add data labels to improve the readability of the chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) property to **true** in the [`ChartDataLabel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html).
 
 ```csharp
 @page "/"
 @using Syncfusion.Blazor.Charts
 
-    <SfChart Title="Sales Analysis">
-        <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
-        <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
-
-        <ChartSeriesCollection>
-            <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-                <ChartMarker>
-                    <ChartDataLabel Visible="true"></ChartDataLabel>
-                </ChartMarker>
-            </ChartSeries>
-        </ChartSeriesCollection>
-    </SfChart>
-  @code {
+<SfChart Title="Sales Analysis">
+    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+            <ChartMarker>
+                <ChartDataLabel Visible="true"></ChartDataLabel>
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+@code {
     public class SalesInfo
     {
-        public string Month { get; set;}
-        public double SalesValue { get; set;}
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
     }
-    public ObservableCollection<SalesInfo> Sales = new ObservableCollection<SalesInfo>
+    public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
@@ -277,15 +260,14 @@ You can add data labels to improve the readability of the chart. This can be acc
 
 ## Enable Tooltip
 
-When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. Tooltips can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
+When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
 
 ```csharp
 @page "/"
 @using Syncfusion.Blazor.Charts
 
-    <SfChart Title="Sales Analysis">
+<SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
     <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
     <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
     <ChartSeriesCollection>
@@ -299,8 +281,8 @@ When space constraints prevent you from displaying information using data labels
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
-    public ObservableCollection<SalesInfo> Sales = new ObservableCollection<SalesInfo>
-{
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
         new SalesInfo { Month = "Mar", SalesValue = 34 },
@@ -324,11 +306,8 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
 
     <SfChart Title="Sales Analysis">
         <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
         <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
-
         <ChartLegendSettings Visible="true"></ChartLegendSettings>
-
         <ChartSeriesCollection>
             <ChartSeries DataSource="@Sales" Name="Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             </ChartSeries>
@@ -340,7 +319,7 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
-    public ObservableCollection<SalesInfo> Sales = new ObservableCollection<SalesInfo>
+    public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },

@@ -40,11 +40,9 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
     ```html
         <head>
-            <environment include="Development">
             ....
             ....
             <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-            </environment>
         </head>
     ```
 
@@ -52,12 +50,10 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
     ```html
       <head>
-        <environment include="Development">
             ....
             ....
             <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-        </environment>
       </head>
     ```
 
@@ -316,7 +312,9 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
 }
 ```
 
-![chart](../images/getting-started/legend.png)
+![Legend](../images/getting-started/legend.png)
+
+>You can find the fully working sample for accumulation chart [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WASM655353334.zip).
 
 **New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 

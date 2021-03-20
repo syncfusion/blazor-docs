@@ -1,6 +1,6 @@
 # Holidays
 
-Non-working days in a project can be displayed in the Gantt Chart component using the `Holidays` property. Each holiday can be defined with the following properties:
+Non-working days in a project can be displayed in the Gantt Chart component using the `GanttHolidays` property. Each holiday can be defined with the following properties:
 
 * `From`: Defines start date of the holiday(s).
 * `To`: Defines end date of the holiday(s).

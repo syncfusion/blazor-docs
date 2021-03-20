@@ -4,7 +4,7 @@ Gantt Chart supports client-side exporting, which allows you to export its data 
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
+<SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
@@ -119,8 +119,8 @@ In Gantt Chart, the Excel export provides an option to export hidden columns by 
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
+<SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
     <GanttColumns>
         <GanttColumn Field="TaskId" HeaderText="Task Id" Width="150"></GanttColumn>
@@ -160,74 +160,73 @@ In Gantt Chart, the Excel export provides an option to export hidden columns by 
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
-        public List<TaskData> SubTasks { get; set; }
-        public int[] ResourceId { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List <TaskData> GetTaskCollection() {
-        List <TaskData> Tasks = new List <TaskData> () {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
-                SubTasks = (new List <TaskData> () {
-                    new TaskData() {
-                        TaskId = 2,
-                        TaskName = "Identify Site location",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "0",
-                        Progress = 30
-                    },
-                    new TaskData() {
-                        TaskId = 3,
-                        TaskName = "Perform soil test",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "4",
-                        Predecessor = "2"
-                    },
-                    new TaskData() {
-                        TaskId = 4,
-                        TaskName = "Soil test approval",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "0",
-                        Progress = 30,
-                        Predecessor = "3"
-                    },
-                })
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
-                SubTasks = (new List <TaskData> () {
-                    new TaskData() {
-                        TaskId = 6,
-                        TaskName = "Develop floor plan for estimation",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "3",
-                        Progress = 30,
-                        Predecessor = "4"
-                    },
-                    new TaskData() {
-                        TaskId = 7,
-                        TaskName = "List materials",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "3",
-                        Predecessor = "6"
-                    },
-                    new TaskData() {
-                        TaskId = 8,
-                        TaskName = "Estimation approval",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "0",
-                        Predecessor = "7"
-                    }
-                })
-            }
-        };
+    List <TaskData> Tasks = new List <TaskData> () {
+
+        new TaskData() {
+            TaskId = 1,
+            TaskName = "Project initiation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21)
+        },
+        new TaskData() {
+            TaskId = 2,
+            TaskName = "Identify Site location",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "0",
+            Progress = 30,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 3,
+            TaskName = "Perform soil test",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "4",
+            Progress = 40,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 4,
+            TaskName = "Soil test approval",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "0",
+            Progress = 30,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 5,
+            TaskName = "Project estimation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21)
+        },
+        new TaskData() {
+            TaskId = 6,
+            TaskName = "Develop floor plan for estimation",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "3",
+            Progress = 30,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 7,
+            TaskName = "List materials",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "3",
+            Progress = 40,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 8,
+            TaskName = "Estimation approval",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "0",
+            Progress = 30,
+            ParentId = 5
+        }
+    };
     return Tasks;
 }
 }
@@ -241,7 +240,7 @@ To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
+<SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
@@ -363,7 +362,7 @@ You can set the required file name for the exported document by defining the `Fi
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt Id="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
+<SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>

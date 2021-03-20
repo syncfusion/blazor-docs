@@ -1,6 +1,6 @@
 # Event Markers
 
-The event markers in the Gantt Chart component is used to highlight the important events in a project. Event markers can be initialized by using the `EventMarkers` property, and you can define date and label for the event markers using the `Day` and `Label` properties. You can also customize it using the `CssClass` properties. The following code example shows how to add event markers in the Gantt Chart component.
+The event markers in the Gantt Chart component is used to highlight the important events in a project. Event markers can be initialized by using the `GanttEventMarkers` property, and you can define date and label for the event markers using the `Day` and `Label` properties. You can also customize it using the `CssClass` properties. The following code example shows how to add event markers in the Gantt Chart component.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

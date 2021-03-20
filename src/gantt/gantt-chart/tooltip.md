@@ -4,7 +4,7 @@ The Gantt Chart component has a support to display a tooltip for various UI elem
 
 ## Enable tooltip
 
-In the Gantt Chart component, you can enable or disable the mouse hover tooltip for the following UI elements using the `TooltipSettings.ShowTooltip` property:
+In the Gantt Chart component, you can enable or disable the mouse hover tooltip for the following UI elements using the `GanttTooltipSettings.ShowTooltip` property:
 
 * Taskbar
 * Connector line
@@ -133,11 +133,11 @@ Baseline Tooltip
 
 Event Marker Tooltip
 
-> The default value of the `TooltipSettings.ShowTooltip` property is true.
+> The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
 
 ## Timeline cells tooltip
 
-In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the `TimelineSettings.ShowTooltip` property. The default value of this property is true. The following code example shows how to enable the timeline cells tooltip in Gantt Chart.
+In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the `GanttTimelineSettings.ShowTooltip` property. The default value of this property is true. The following code example shows how to enable the timeline cells tooltip in Gantt Chart.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -357,7 +357,7 @@ The following are three types of `ClipMode`:
 
 ### Taskbar tooltip
 
-The default tooltip in the Gantt Chart component can be customized using the `TooltipSettings.Taskbar` property. You can map the template script element’s ID value or template string directly to this property.
+The default tooltip in the Gantt Chart component can be customized using the `GanttTooltipSettings.Taskbar` property. You can map the template script element’s ID value or template string directly to this property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -464,7 +464,7 @@ The below screenshot shows the output of above code example.
 
 ### Taskbar editing tooltip
 
-The taskbar editing tooltip can be customized using the `TooltipSettings.Editing` property. The following code example shows how to customize the taskbar editing tooltip in Gantt Chart.
+The taskbar editing tooltip can be customized using the `GanttTooltipSettings.Editing` property. The following code example shows how to customize the taskbar editing tooltip in Gantt Chart.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -564,7 +564,7 @@ The below screenshot shows the output of above code example.
 
 ### Baseline tooltip
 
-A baseline tooltip can be customized using the `TooltipSettings.Baseline` property. The following code example shows how to customize the baseline tooltip in Gantt Chart.
+A baseline tooltip can be customized using the `GanttTooltipSettings.Baseline` property. The following code example shows how to customize the baseline tooltip in Gantt Chart.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

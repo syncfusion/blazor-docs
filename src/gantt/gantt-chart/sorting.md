@@ -4,7 +4,7 @@ Sorting enables you to sort data in the ascending or descending order. To sort a
 
 To sort multiple columns, press and hold the CTRL key and click the column header. You can clear sorting of any one of the multi-sorted columns by pressing and holding the SHIFT key and clicking the specific column header.
 
-To enable sorting in the Gantt Chart component, set the `AllowSorting` property to true. Sorting options can be configured through the `SortSettings` property.
+To enable sorting in the Gantt Chart component, set the `AllowSorting` property to true. Sorting options can be configured through the `GanttSortSettings` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -107,7 +107,7 @@ The following screenshot shows the output of multicolumn sorting in Gantt Chart 
 
 ## Sorting column on Gantt Chart initialization
 
-The Gantt Chart component can be rendered with sorted columns initially, and this can be achieved by using the `SortSettings` property. You can add columns that are sorted initially in the `SortSettings.Columns` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
+The Gantt Chart component can be rendered with sorted columns initially, and this can be achieved by using the `GanttSortSettings` property. You can add columns that are sorted initially in the `GanttSortSettings.Columns` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -526,4 +526,123 @@ During the sort action, the Gantt Chart component triggers two events. The `OnAc
 }
 ```
 
-> The `args.RequestType` is the current action name. For example, for sorting the `args.RequestType`, value is **sorting**.
+> The `args.RequestType` is the current action name. For example, for sorting the `args.RequestType`, value is **Sorting**.
+
+## Sorting Custom Columns
+
+In Gantt, you can sort custom columns of different types like string, numeric, etc., By adding the custom column in the column collection, you can perform initial sort using the `GanttSortSettings` or you can also sort the column dynamically by a button click.
+
+The following code snippets explains how to achieve this.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+<button @onclick="Sorting">Sort Custom Column</button>
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks"></GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskName" Width="250"></GanttColumn>
+        <GanttColumn Field="StartDate"></GanttColumn>
+        <GanttColumn Field="Duration"></GanttColumn>
+        <GanttColumn Field="Progress"></GanttColumn>
+        <GanttColumn Field="CustomColumn"></GanttColumn>
+    </GanttColumns>
+</SfGantt>
+
+@code{
+    public SfGantt<TaskData> Gantt;
+    public void Sorting()
+    {
+        this.Gantt.SortColumn("CustomColumn", SortDirection.Descending, false);
+    }
+    public List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public List<TaskData> SubTasks { get; set; }
+        public int CustomColumn { get; set; }
+    }
+
+    public static List <TaskData> GetTaskCollection() {
+    List <TaskData> Tasks = new List <TaskData> () {
+        new TaskData() {
+            TaskId = 1,
+            TaskName = "Project initiation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            CustomColumn = 2,
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 2,
+                    TaskName = "Identify Site location",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Progress = 30,
+                    CustomColumn = 3
+                },
+                new TaskData() {
+                    TaskId = 3,
+                    TaskName = "Perform soil test",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "4",
+                    Progress = 40,
+                    CustomColumn = 4
+                },
+                new TaskData() {
+                    TaskId = 4,
+                    TaskName = "Soil test approval",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Progress = 30,
+                    CustomColumn = 1
+                },
+            })
+        },
+        new TaskData() {
+            TaskId = 5,
+            TaskName = "Project estimation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            CustomColumn = 7,
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 6,
+                    TaskName = "Develop floor plan for estimation",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Progress = 30,
+                    CustomColumn = 8
+                },
+                new TaskData() {
+                    TaskId = 7,
+                    TaskName = "List materials",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Progress = 40,
+                    CustomColumn = 5
+                },
+                new TaskData() {
+                    TaskId = 8,
+                    TaskName = "Estimation approval",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "0",
+                    Progress = 30,
+                    CustomColumn = 6
+                }
+            })
+        }
+    };
+    return Tasks;
+    }
+}
+```

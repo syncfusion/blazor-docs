@@ -244,3 +244,138 @@ To bind remote data to the Gantt Chart component, assign service data as an inst
 ```
 
 ![Alt text](images/remote-data.png)
+
+### URL Adaptor
+
+In Gantt, we can fetch data from SQL database using `ADO.NET` Entity Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data we are using `UrlAdaptor` of DataManager property to call the server method and get back resultant data in JSON format. We can know more about `UrlAdaptor` from [`here`](https://blazor.syncfusion.com/documentation/data/adaptors/#url-adaptor).
+
+> Please refer the [link](https://docs.microsoft.com/en-us/aspnet/core/blazor/blazor-server-ef-core?view=aspnetcore-5.0) to create the `ADO.NET` Entity Data Model in Visual studio,
+
+We can define data source for Gantt as instance of DataManager using `Url` property of DataManager. Please Check the below code snippet to assign data source to Gantt.
+
+```csharp
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt TValue="TaskData" Height="450px" Width="700px">
+     <SfDataManager Url="/Home/UrlDatasource" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+        Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+</SfGantt>
+
+@code {
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+}
+```
+
+> * The above provided url is given for reference purpose. In that place you can provide your service url.
+
+The response object from the Web API should contain properties, **Items** and **Count**, whose values are a collection of entities and total count of the entities, respectively.
+
+The sample response object should look like this:
+
+```csharp
+{
+    Items: [{..}, {..}, {..}, ...],
+    Count: 830
+}
+```
+
+### Sending additional parameters to the server
+
+To add a custom parameter to the data request, use the addParams method of Query class. Assign the Query object with additional parameters to the datagrid's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
+
+The following sample code demonstrates sending additional paramaters using the Query property,
+
+```csharp
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt TValue="TaskData" Height="450px" Width="700px" Query=@GanttQuery>
+     <SfDataManager Url="/Home/UrlDatasource" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+        Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+</SfGantt>
+
+@code{
+    public string ParamValue = "true";
+    public Query GanttQuery { get; set; }
+
+    protected override void OnInitialized() {
+        GanttQuery = new Query().AddParams("ej2gantt", ParamValue);
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+}
+```
+
+### Handling HTTP error
+
+During server interaction from the datagrid, sometimes server-side exceptions might occur. These error messages or exception details can be acquired in client-side using the `OnActionFailure` event.
+
+The argument passed to the `OnActionFailure` event contains the error details returned from the server.
+
+The following sample code demonstrates notifying user when server-side exception has occurred,
+
+```csharp
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt TValue="TaskData" Height="450px" Width="700px">
+     <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+        Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents TValue="TaskData" OnActionFailure="ActionFailure"></GanttEvents>
+</SfGantt>
+
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+@code{
+    public string ErrorDetails = "";
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public void ActionFailure(FailureEventArgs args)
+    {
+        this.ErrorDetails = "Server exception: 404 Not found";
+        StateHasChanged();
+    }
+}
+```

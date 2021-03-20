@@ -10,15 +10,13 @@ The resource collection contains details about resources that are used in the pr
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-            ParentID="ParentId" Work="Work" ResourceInfo="Resources" TaskType="TaskType">
+            ParentID="ParentId" ResourceInfo="Resources">
     </GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="TaskId" HeaderText="ID"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Event Name"></GanttColumn>
         <GanttColumn Field="Resources" HeaderText="Event Resources" Width="300px"></GanttColumn>
-        <GanttColumn Field="Work" HeaderText="Work"></GanttColumn>
         <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="TaskType" HeaderText="Task Type"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
     </GanttColumns>
@@ -64,13 +62,11 @@ The resource collection contains details about resources that are used in the pr
     {
         public int TaskId { get; set; }
         public string TaskName { get; set; }
-        public string TaskType { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public double? Work { get; set; }
         public List<ResourceAlloacteData> Resources { get; set; }
 
     }
@@ -81,8 +77,6 @@ The resource collection contains details about resources that are used in the pr
                 TaskName = "Project initiation",
                 StartDate = new DateTime(2019, 03, 28),
                 EndDate = new DateTime(2019, 07, 28),
-                TaskType ="FixedDuration",
-                Work=128,
                 Duration="4"
             },
             new TaskData() {
@@ -92,7 +86,6 @@ The resource collection contains details about resources that are used in the pr
                 Progress = 30,
                 ParentId = 1,
                 Duration="2",
-                Work=16,
                 Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} ,new ResourceAlloacteData() { ResourceId=6} }
             },
             new TaskData() {
@@ -101,9 +94,7 @@ The resource collection contains details about resources that are used in the pr
                 StartDate = new DateTime(2019, 03, 29),
                 Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} },
                 ParentId = 1,
-                Work=96,
-                Duration="4",
-                TaskType="Fixed work"
+                Duration="4"
             },
             new TaskData() {
                 TaskId = 4,
@@ -112,17 +103,13 @@ The resource collection contains details about resources that are used in the pr
                 Duration = "1",
                 Progress = 30,
                 ParentId = 1,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} ,new ResourceAlloacteData() { ResourceId=9} },
-                Work=16,
-                TaskType="Fixed work"
+                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} ,new ResourceAlloacteData() { ResourceId=9} }
             },
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
                 StartDate = new DateTime(2019, 03, 29),
                 EndDate = new DateTime(2019, 04, 2),
-
-                TaskType="Fixed Duration",
                 Duration="4"
             },
             new TaskData() {
@@ -132,9 +119,7 @@ The resource collection contains details about resources that are used in the pr
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} },
-                Work=30,
-                TaskType="Fixed work"
+                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} }
             },
             new TaskData() {
                 TaskId = 7,
@@ -143,8 +128,6 @@ The resource collection contains details about resources that are used in the pr
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
-                TaskType="Fixedwork",
-                Work=48,
                 Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4},new ResourceAlloacteData() { ResourceId=8} },
 
             },
@@ -154,8 +137,6 @@ The resource collection contains details about resources that are used in the pr
                 StartDate = new DateTime(2019, 04, 01),
                 Duration = "2",
                 ParentId = 5,
-                Work=60,
-                TaskType="Fixedwork",
                 Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId= 12},new ResourceAlloacteData() { ResourceId= 5} },
             }
         };
@@ -167,6 +148,41 @@ The resource collection contains details about resources that are used in the pr
 ## Assign resource
 
 We can assign resources for a task at initial load, using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the `ResourceInfo` property.
+
+### Assign resource alone
+
+If the unit is not specified for specific resource, the amount of work done will be consider as 100% by default. In such cases, the resource unit will not be displayed in Gantt UI.
+
+```csharp
+    new TaskData() {
+        TaskId = 6,
+        TaskName = "Develop floor plan for estimation",
+        StartDate = new DateTime(2019, 03, 29),
+        Duration = "3",
+        Progress = 30,
+        ParentId = 5,
+        Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} }
+    }
+```
+
+### Assign resource with unit
+
+We can assign the quantity of work done by the resources for the specific task as like below code snippet.
+
+```csharp
+    new TaskData() {
+        TaskId = 2,
+        TaskName = "Identify Site location",
+        StartDate = new DateTime(2019, 03, 29),
+        Progress = 30,
+        ParentId = 1,
+        Duration="2",
+        Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} }
+    },
+```
+
+When resource unit is defined in resource collection, the amount of work done by that particular resource will be same for all the tasks.
+
 The following code snippet shows how to assign the resource for each task and map to Gantt Chart component.
 
 ```csharp
@@ -295,7 +311,7 @@ The following code snippet shows how to assign the resource for each task and ma
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} },
+                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4, Unit=30} },
                 Work=30,
                 TaskType="Fixed work"
             },
@@ -329,7 +345,7 @@ The following code snippet shows how to assign the resource for each task and ma
 
 ![Alt text](images/assignResource.png)
 
-## Edit resource collection
+## Add/Edit resource collection
 
 By using cell edit option, we can add/remove the resource for particular task and also by using dialog edit support we can add/remove  resources.
 

@@ -8,7 +8,7 @@ The `TreeColumnIndex` property is used to define the expander column in the Gant
 
 ## Defining columns
 
-Using the `Columns` property, you can define the columns in Gantt Chart. If the columns are not defined, then the default columns will be rendered based on the mapped data source fields in the `TaskFields` property. Refer to the following code example for defining the columns in Gantt Chart along with their widths.
+Using the `GanttColumns` property, you can define the columns in Gantt Chart. If the columns are not defined, then the default columns will be rendered based on the mapped data source fields in the `GanttTaskFields` property. Refer to the following code example for defining the columns in Gantt Chart along with their widths.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -1098,7 +1098,7 @@ The default items are displayed in the following table:
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" ShowColumnMenu="true" AllowFiltering="true" AllowSorting="true">
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowResizing="true" ShowColumnMenu="true" AllowFiltering="true" AllowSorting="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
              Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
@@ -1392,3 +1392,515 @@ The tree/expander column is a column in the Gantt Chart component, that has icon
 ```
 
 ![Alt text](images/treeColumnIndex.png)
+
+## Show or Hide columns dynamically
+
+You can show or hide gantt columns dynamically using external buttons by invoking the `ShowColumns` or `HideColumns` method.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+<button @onclick="show">Show columns</button>
+<button @onclick="hide">Hide columns</button>
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250"></GanttColumn>
+        <GanttColumn Field="StartDate"></GanttColumn>
+        <GanttColumn Field="EndDate"></GanttColumn>
+        <GanttColumn Field="Duration"></GanttColumn>
+        <GanttColumn Field="Progress"></GanttColumn>
+    </GanttColumns>
+</SfGantt>
+
+@code{
+    public SfGantt<TaskData> Gantt;
+    public List<TaskData> TaskCollection { get; set; }
+    public string[] ColumnList = {"TaskName", "StartDate"};
+    public void show() {
+        this.Gantt.ShowColumns(ColumnList, "Field");
+    }
+    public void hide() {
+        this.Gantt.HideColumns(ColumnList, "Field");
+    }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public List<TaskData> SubTasks { get; set; }
+    }
+
+    public static List <TaskData> GetTaskCollection() {
+    List <TaskData> Tasks = new List <TaskData> () {
+        new TaskData() {
+            TaskId = 1,
+            TaskName = "Project initiation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 2,
+                    TaskName = "Identify Site location",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Progress = 30,
+                },
+                new TaskData() {
+                    TaskId = 3,
+                    TaskName = "Perform soil test",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "4",
+                    Progress = 40,
+                },
+                new TaskData() {
+                    TaskId = 4,
+                    TaskName = "Soil test approval",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Progress = 30,
+                },
+            })
+        },
+        new TaskData() {
+            TaskId = 5,
+            TaskName = "Project estimation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 6,
+                    TaskName = "Develop floor plan for estimation",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Progress = 30,
+                },
+                new TaskData() {
+                    TaskId = 7,
+                    TaskName = "List materials",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Progress = 40,
+                },
+                new TaskData() {
+                    TaskId = 8,
+                    TaskName = "Estimation approval",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "0",
+                    Progress = 30,
+                },
+            })
+        }
+    };
+    return Tasks;
+    }
+}
+```
+
+## Checkbox Column
+
+To render boolean values as checkbox in columns, you need to set `DisplayAsCheckBox` property as **true**.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250"></GanttColumn>
+        <GanttColumn Field="StartDate"></GanttColumn>
+        <GanttColumn Field="Verified" DisplayAsCheckBox="true"></GanttColumn>
+        <GanttColumn Field="Duration"></GanttColumn>
+        <GanttColumn Field="Progress"></GanttColumn>
+    </GanttColumns>
+    <GanttEditSettings AllowEditing="true"></GanttEditSettings>
+</SfGantt>
+
+@code{
+    public SfGantt<TaskData> Gantt;
+    public List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public bool Verified { get; set; }
+        public List<TaskData> SubTasks { get; set; }
+    }
+
+    public static List <TaskData> GetTaskCollection() {
+    List <TaskData> Tasks = new List <TaskData> () {
+        new TaskData() {
+            TaskId = 1,
+            TaskName = "Project initiation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            Verified = true,
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 2,
+                    TaskName = "Identify Site location",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Verified = true,
+                    Progress = 30,
+                },
+                new TaskData() {
+                    TaskId = 3,
+                    TaskName = "Perform soil test",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "4",
+                    Verified = false,
+                    Progress = 40,
+                },
+                new TaskData() {
+                    TaskId = 4,
+                    TaskName = "Soil test approval",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Verified = true,
+                    Progress = 30,
+                },
+            })
+        },
+        new TaskData() {
+            TaskId = 5,
+            TaskName = "Project estimation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            Verified = false,
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 6,
+                    TaskName = "Develop floor plan for estimation",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Verified = true,
+                    Progress = 30,
+                },
+                new TaskData() {
+                    TaskId = 7,
+                    TaskName = "List materials",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Verified = false,
+                    Progress = 40,
+                },
+                new TaskData() {
+                    TaskId = 8,
+                    TaskName = "Estimation approval",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "0",
+                    Verified = true,
+                    Progress = 30,
+                },
+            })
+        }
+    };
+    return Tasks;
+    }
+}
+```
+
+## Controlling Grid actions
+
+You can enable or disable gantt action for a particular column by setting the `AllowFiltering`, `AllowSorting`, `AllowReordering`, and `AllowEditing` properties.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" AllowSorting="true" AllowFiltering="true" AllowReordering="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskName" AllowReordering="false" Width="250"></GanttColumn>
+        <GanttColumn Field="StartDate" AllowEditing="false"></GanttColumn>
+        <GanttColumn Field="Duration" AllowSorting="false"></GanttColumn>
+        <GanttColumn Field="Progress" AllowFiltering="false"></GanttColumn>
+    </GanttColumns>
+    <GanttEditSettings AllowEditing="true"></GanttEditSettings>
+</SfGantt>
+
+@code{
+    public SfGantt<TaskData> Gantt;
+    public List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public bool Verified { get; set; }
+        public List<TaskData> SubTasks { get; set; }
+    }
+
+    public static List <TaskData> GetTaskCollection() {
+    List <TaskData> Tasks = new List <TaskData> () {
+        new TaskData() {
+            TaskId = 1,
+            TaskName = "Project initiation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            Verified = true,
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 2,
+                    TaskName = "Identify Site location",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Verified = true,
+                    Progress = 30,
+                },
+                new TaskData() {
+                    TaskId = 3,
+                    TaskName = "Perform soil test",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "4",
+                    Verified = false,
+                    Progress = 40,
+                },
+                new TaskData() {
+                    TaskId = 4,
+                    TaskName = "Soil test approval",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Verified = true,
+                    Progress = 30,
+                },
+            })
+        },
+        new TaskData() {
+            TaskId = 5,
+            TaskName = "Project estimation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            Verified = false,
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 6,
+                    TaskName = "Develop floor plan for estimation",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Verified = true,
+                    Progress = 30,
+                },
+                new TaskData() {
+                    TaskId = 7,
+                    TaskName = "List materials",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Verified = false,
+                    Progress = 40,
+                },
+                new TaskData() {
+                    TaskId = 8,
+                    TaskName = "Estimation approval",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "0",
+                    Verified = true,
+                    Progress = 30,
+                },
+            })
+        }
+    };
+    return Tasks;
+    }
+}
+```
+
+## Column type
+
+Column type can be specified using the `Columns.Type` property. It specifies the type of data the column binds.
+
+If the `format` is defined for a column, the column uses `type` to select the appropriate format option number or date.
+
+Gantt column supports the following types:
+
+* String
+* Number
+* Boolean
+* Date
+* DateTime
+
+> If the `type` is not defined, it will be determined from the first record of the `DataSource`.
+> In case if the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `Type` for that column.
+
+## Column Spanning
+
+The gantt has option to span the adjacent cells. You need to define the `ColSpan` attribute to span cells in the `QueryCellInfo` event.
+
+In the following demo, **Work 1**  cells have been spanned.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+            ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="150"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250"></GanttColumn>
+        <GanttColumn Field="StartDate"></GanttColumn>
+        <GanttColumn Field="Duration"></GanttColumn>
+        <GanttColumn Field="Work1"></GanttColumn>
+        <GanttColumn Field="Work2"></GanttColumn>
+    </GanttColumns>
+    <GanttEvents QueryCellInfo="queryCell" TValue="TaskData"></GanttEvents>
+</SfGantt>
+@code{
+    public List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public void queryCell(QueryCellInfoEventArgs<TaskData> args) {
+        switch(args.Data.TaskId) {
+            case 1:
+            if ((args.Column.Field == "Work1") && (args.Data.Work1 == "support")) {
+                args.ColSpan = 2;
+            }
+            break;
+            case 2:
+            if ((args.Column.Field == "Work1") && (args.Data.Work1 == "support")) {
+                args.ColSpan = 2;
+            }
+            break;
+            case 3:
+            if ((args.Column.Field == "Work1") && (args.Data.Work1 == "support")) {
+                args.ColSpan = 2;
+            }
+            break;
+            case 4:
+            if ((args.Column.Field == "Work1") && (args.Data.Work1 == "support")) {
+                args.ColSpan = 2;
+            }
+            break;
+            case 5  :
+            if ((args.Column.Field == "Work1") && (args.Data.Work1 == "support")) {
+                args.ColSpan = 2;
+            }
+            break;
+            case 7:
+            if ((args.Column.Field == "Work1") && (args.Data.Work1 == "support")) {
+                args.ColSpan = 2;
+            }
+            break;
+        }
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Work1 { get; set; }
+        public string Work2 { get; set; }
+    }
+    public static List <TaskData> GetTaskCollection() {
+        List <TaskData> Tasks = new List <TaskData> () {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 03, 28),
+                EndDate = new DateTime(2019, 07, 28),
+                Duration="4",
+                Work1 = "Testing",
+                Work2 = "Development"
+            },
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2019, 03, 29),
+                Progress = 30,
+                ParentId = 1,
+                Duration="2",
+                Work1 = "Support",
+                Work2 = "Support"
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2019, 03, 29),
+                ParentId = 1,
+                Duration="4",
+                Work1 = "Consulting",
+                Work2 = "Support"
+            },
+            new TaskData() {
+                TaskId = 4,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2019, 03, 29),
+                Duration = "4",
+                Progress = 30,
+                ParentId = 1,
+                Work1 = "Support",
+                Work2 = "Support"
+            },
+            new TaskData() {
+                TaskId = 5,
+                TaskName = "Project estimation",
+                StartDate = new DateTime(2019, 03, 29),
+                EndDate = new DateTime(2019, 04, 2),
+                Duration="4",
+                Work1 = "Development",
+                Work2 = "Support"
+            },
+            new TaskData() {
+                TaskId = 6,
+                TaskName = "Develop floor plan for estimation",
+                StartDate = new DateTime(2019, 03, 29),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5,
+                Work1 = "Development",
+                Work2 = "Support"
+            },
+            new TaskData() {
+                TaskId = 7,
+                TaskName = "List materials",
+                StartDate = new DateTime(2019, 04, 01),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5,
+                Work1 = "Support",
+                Work2 = "Support"
+            },
+            new TaskData() {
+                TaskId = 8,
+                TaskName = "Estimation approval",
+                StartDate = new DateTime(2019, 04, 01),
+                Duration = "2",
+                ParentId = 5,
+                Work1 = "Consulting",
+                Work2 = "Support"
+            }
+        };
+        return Tasks;
+    }
+}
+```

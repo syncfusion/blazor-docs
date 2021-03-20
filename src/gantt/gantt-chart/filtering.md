@@ -847,7 +847,7 @@ To apply a search at initial rendering, set the value for `Fields`, `Operator`, 
     };
 
     return Tasks;
-}
+    }
 }
 ```
 
@@ -1074,3 +1074,105 @@ By default, the Gantt Chart component searches all the columns. You can search s
 ```
 
 > In above sample, you can search only `TaskName` and `Duration` column values.
+
+### Clear search by external button
+
+You can pass the `empty` string to `Search` method, to clear the searched Gantt records from external button.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+<button @onclick="Clear">Clear Search</button>
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" Toolbar="@(new List<string>() { "Search" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    </GanttTaskFields>
+    <GanttSearchSettings Fields="@(new string[] { "TaskName" })" Operator="Operator.Contains"
+          Key="List" IgnoreCase="true"></GanttSearchSettings>
+</SfGantt>
+
+@code{
+    public SfGantt<TaskData> Gantt;
+    public List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public void Clear()
+    {
+        this.Gantt.Search("");
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public List<TaskData> SubTasks { get; set; }
+    }
+
+    public static List <TaskData> GetTaskCollection() {
+    List <TaskData> Tasks = new List <TaskData> () {
+        new TaskData() {
+            TaskId = 1,
+            TaskName = "Project initiation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 2,
+                    TaskName = "Identify Site location",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Progress = 30,
+                },
+                new TaskData() {
+                    TaskId = 3,
+                    TaskName = "Perform soil test",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "4",
+                    Progress = 40,
+                },
+                new TaskData() {
+                    TaskId = 4,
+                    TaskName = "Soil test approval",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Progress = 30,
+                },
+            })
+        },
+        new TaskData() {
+            TaskId = 5,
+            TaskName = "Project estimation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 6,
+                    TaskName = "Develop floor plan for estimation",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Progress = 30,
+                },
+                new TaskData() {
+                    TaskId = 7,
+                    TaskName = "List materials",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Progress = 40,
+                },
+                new TaskData() {
+                    TaskId = 8,
+                    TaskName = "Estimation approval",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "0",
+                    Progress = 30,
+                },
+            })
+        }
+    };
+    return Tasks;
+    }
+}
+```

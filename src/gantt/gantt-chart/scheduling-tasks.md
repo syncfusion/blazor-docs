@@ -1,29 +1,26 @@
 # Scheduling Tasks
 
-## Duration units
+The Gantt provides support for automatic and manual task scheduling modes. It is used to indicate whether the start date and end date of all the tasks will be automatically validated or not. `TaskMode` is the property used to change the schedule mode of a task.
 
-In Gantt Chart, the tasks’ duration value can be measured by the following duration units,
+The Gantt control supports three types of mode. They are:
 
-* Day
-* Hour
-* Minute
+* `Auto`: All the tasks are automatically validate.
+* `Manual`: All the tasks are manually validate by the user.
+* `Custom`: Both Auto and Manual tasks are render by mapped from data source.
 
-In Gantt Chart, we can define duration unit for whole project by using `DurationUnit` property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value.
-And each task in the project can be defined with different duration units and the duration unit of a task can be defined by the following ways,
+>Note: The default value of `TaskMode` is `Auto`.
 
-* Using `TaskFields.DurationUnit` property, to map the duration unit data source field.
-* Defining the duration unit value along with the duration field in the data source.
+## Automatically Scheduled Tasks
 
-### Mapping the duration unit field
-
-The below code snippet explains the mapping of duration unit data source field to the Gantt Chart component using the `TaskFields.DurationUnit` property.
+When the `TaskMode` property is set as `Auto`, the start date and end date of all the tasks in the project will be automatically validated. That is, dates are validated based on various factors such as working time, holidays, weekends and predecessors.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-              Duration="Duration" DurationUnit="DurationUnit" Progress="Progress" Child="SubTasks">
+<SfGantt DataSource="@TaskCollection" Height="450px" TaskMode="ScheduleMode.Auto" Width="900px" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+            ParentID="ParentId">
     </GanttTaskFields>
+    <GanttEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GanttEditSettings>
 </SfGantt>
 
 @code{
@@ -32,7 +29,6 @@ The below code snippet explains the mapping of duration unit data source field t
     {
         this.TaskCollection = GetTaskCollection();
     }
-
     public class TaskData
     {
         public int TaskId { get; set; }
@@ -41,90 +37,88 @@ The below code snippet explains the mapping of duration unit data source field t
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public string DurationUnit { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
-
     public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 70,
-                    DurationUnit = "day"
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "16",
-                    Progress = 50,
-                    DurationUnit = "hour"
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "480",
-                    Progress = 50,
-                    DurationUnit = "minute"
-                },
-            })
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "24",
-                    Progress = 70,
-                    DurationUnit = "hour"
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 50,
-                    DurationUnit = "day"
-                },
-            })
-        }
-    };
-
-    return Tasks;
-}
+        List <TaskData> Tasks = new List <TaskData> () {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 03, 28),
+                EndDate = new DateTime(2019, 07, 28),
+                Duration="4"
+            },
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2019, 03, 29),
+                Progress = 30,
+                ParentId = 1,
+                Duration="2"
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2019, 03, 29),
+                ParentId = 1,
+                Duration="4"
+            },
+            new TaskData() {
+                TaskId = 4,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2019, 03, 29),
+                Duration = "1",
+                Progress = 30,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 5,
+                TaskName = "Project estimation",
+                StartDate = new DateTime(2019, 03, 29),
+                EndDate = new DateTime(2019, 04, 2),
+                Duration="4"
+            },
+            new TaskData() {
+                TaskId = 6,
+                TaskName = "Develop floor plan for estimation",
+                StartDate = new DateTime(2019, 03, 29),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5
+            },
+            new TaskData() {
+                TaskId = 7,
+                TaskName = "List materials",
+                StartDate = new DateTime(2019, 04, 01),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5
+            },
+            new TaskData() {
+                TaskId = 8,
+                TaskName = "Estimation approval",
+                StartDate = new DateTime(2019, 04, 01),
+                Duration = "2",
+                ParentId = 5
+            }
+        };
+        return Tasks;
+    }
 }
 ```
 
-![Alt text](images/durationUnits.png)
+## Manually Scheduled Tasks
 
-> NOTE
-The default value of the `DurationUnit` property is `day`.
-
-### Defining duration unit along with duration field
-
-Duration units for the tasks can also be defined along with the duration values, the below code snippet explains the duration unit for a task along with duration value,
+When the `TaskMode` property is set as `Manual`, the start date and end date of all the tasks in the project will be same as given in the data source. That is, dates are not validated based on various factors such as dependencies between tasks, holidays, weekends, working time.
+We can restrict this mode in predecessor validation alone. That is, we can automatically validate the dates based on predecessor values by enabling the `ValidateManualTasksOnLinking` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-            Duration="Duration" Progress="Progress" Child="SubTasks">
+<SfGantt DataSource="@TaskCollection" Height="450px" TaskMode="ScheduleMode.Manual" ValidateManualTasksOnLinking="true" Width="900px" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+            ParentID="ParentId" Dependency="Predecessor">
     </GanttTaskFields>
+    <GanttEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" AllowTaskbarEditing="true"></GanttEditSettings>
 </SfGantt>
 
 @code{
@@ -133,7 +127,6 @@ Duration units for the tasks can also be defined along with the duration values,
     {
         this.TaskCollection = GetTaskCollection();
     }
-
     public class TaskData
     {
         public int TaskId { get; set; }
@@ -142,73 +135,174 @@ Duration units for the tasks can also be defined along with the duration values,
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentId { get; set; }
     }
-
     public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "3days",
-                    Progress = 70,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "12hours",
-                    Progress = 50
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "1800minutes",
-                    Progress = 50
-                },
-            })
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "480minutes",
-                    Progress = 70
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3days",
-                    Progress = 50
-                },
-            })
-        }
-    };
-
-    return Tasks;
-}
+        List <TaskData> Tasks = new List <TaskData> () {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 03, 28),
+                EndDate = new DateTime(2019, 07, 28),
+                Duration="4"
+            },
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2019, 03, 29),
+                Progress = 30,
+                ParentId = 1,
+                Duration="2"
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2019, 03, 29),
+                ParentId = 1,
+                Duration="4"
+            },
+            new TaskData() {
+                TaskId = 4,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2019, 03, 29),
+                Duration = "4",
+                Progress = 30,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 5,
+                TaskName = "Project estimation",
+                StartDate = new DateTime(2019, 03, 29),
+                EndDate = new DateTime(2019, 04, 2),
+                Duration="4"
+            },
+            new TaskData() {
+                TaskId = 6,
+                TaskName = "Develop floor plan for estimation",
+                StartDate = new DateTime(2019, 03, 29),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5
+            },
+            new TaskData() {
+                TaskId = 7,
+                TaskName = "List materials",
+                StartDate = new DateTime(2019, 04, 01),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5
+            },
+            new TaskData() {
+                TaskId = 8,
+                TaskName = "Estimation approval",
+                StartDate = new DateTime(2019, 04, 01),
+                Duration = "2",
+                ParentId = 5
+            }
+        };
+        return Tasks;
+    }
 }
 ```
 
-![Alt text](images/durationUnitswithDuration.png)
+## Custom
 
->NOTE:
-The edit type of the duration column in Gantt Chart is string, to support editing the duration field along with duration units.
+When the `TaskMode` property is set as `Custom`, the scheduling mode for each tasks will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
+
+```csharp
+
+import { Gantt, Toolbar, Edit, Selection } from '@syncfusion/ej2-gantt';
+
+Gantt.Inject(Toolbar, Edit, Selection);
+let GanttData: Object[]  = [
+    {
+        'TaskID': 1,
+        'TaskName': 'Parent Task 1',
+        'StartDate': new Date('02/27/2017'),
+        'EndDate': new Date('03/03/2017'),
+        'Progress': '40',
+        'isManual' : true,
+        'Children': [
+             { 'TaskID': 2, 'TaskName': 'Child Task 1', 'StartDate': new Date('02/27/2017'),
+             'EndDate': new Date('03/03/2017'), 'Progress': '40' },
+             { 'TaskID': 3, 'TaskName': 'Child Task 2', 'StartDate': new Date('02/26/2017'),
+             'EndDate': new Date('03/03/2017'), 'Progress': '40', 'isManual': true },
+             { 'TaskID': 4, 'TaskName': 'Child Task 3', 'StartDate': new Date('02/27/2017'),
+             'EndDate': new Date('03/03/2017'), 'Duration': 5, 'Progress': '40', }
+        ]
+    },
+    {
+        'TaskID': 5,
+        'TaskName': 'Parent Task 2',
+        'StartDate': new Date('03/05/2017'),
+        'EndDate': new Date('03/09/2017'),
+        'Progress': '40',
+        'isManual': true,
+        'Children': [
+             { 'TaskID': 6, 'TaskName': 'Child Task 1', 'StartDate': new Date('03/06/2017'),
+             'EndDate': new Date('03/09/2017'), 'Progress': '40' },
+             { 'TaskID': 7, 'TaskName': 'Child Task 2', 'StartDate': new Date('03/06/2017'),
+             'EndDate': new Date('03/09/2017'), 'Progress': '40', },
+             { 'TaskID': 8, 'TaskName': 'Child Task 3', 'StartDate': new Date('02/28/2017'),
+             'EndDate': new Date('03/05/2017'), 'Progress': '40', 'isManual': true },
+             { 'TaskID': 9, 'TaskName': 'Child Task 4', 'StartDate': new Date('03/04/2017'),
+             'EndDate': new Date('03/09/2017'), 'Progress': '40', 'isManual': true }
+        ]
+    },
+    {
+        'TaskID': 10,
+        'TaskName': 'Parent Task 3',
+        'StartDate': new Date('03/13/2017'),
+        'EndDate': new Date('03/17/2017'),
+        'Progress': '40',
+        'Children': [
+             { 'TaskID': 11, 'TaskName': 'Child Task 1', 'StartDate': new Date('03/13/2017'),
+             'EndDate': new Date('03/17/2017'), 'Progress': '40' },
+             { 'TaskID': 12, 'TaskName': 'Child Task 2', 'StartDate': new Date('03/13/2017'),
+             'EndDate': new Date('03/17/2017'), 'Progress': '40', },
+             { 'TaskID': 13, 'TaskName': 'Child Task 3', 'StartDate': new Date('03/13/2017'),
+             'EndDate': new Date('03/17/2017'), 'Progress': '40', },
+             { 'TaskID': 14, 'TaskName': 'Child Task 4', 'StartDate': new Date('03/12/2017'),
+             'EndDate': new Date('03/17/2017'), 'Progress': '40', 'isManual': true },
+             { 'TaskID': 15, 'TaskName': 'Child Task 5', 'StartDate': new Date('03/13/2017'),
+             'EndDate': new Date('03/17/2017'), 'Progress': '40' }
+        ]
+    }
+];
+let gantt: Gantt = new Gantt({
+    dataSource: GanttData,
+    taskFields: {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        endDate: 'EndDate',
+        dependency: 'Predecessor',
+        child: 'Children',
+        manual: 'isManual',
+    },
+    taskMode : 'Custom',
+    height: '450px',
+    toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Search'],
+    columns: [
+        { field: 'TaskID', visible: false},
+        {field: 'TaskName'},
+        { field: 'isManual'}
+    ],
+    validateManualTasksOnLinking: true,
+    treeColumnIndex: 1,
+    editSettings: {
+        allowEditing: true,
+        allowDeleting: true,
+        allowTaskbarEditing: true,
+        showDeleteConfirmDialog: true
+    },
+});
+gantt.appendTo('#Gantt');
+
+```
 
 ## Unscheduled Tasks
 

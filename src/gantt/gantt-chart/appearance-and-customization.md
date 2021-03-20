@@ -399,7 +399,7 @@ You can design your own taskbars to view the tasks in Gantt Chart Chart by using
 
 ## Task labels
 
-The Gantt Chart component maps any data source fields to task labels using the `LabelSettings.LeftLabel`, `LabelSettings.RightLabel`, and `LabelSettings.TaskLabel` properties. You can customize the task labels with templates.
+The Gantt Chart component maps any data source fields to task labels using the `GanttLabelSettings.LeftLabel`, `GanttLabelSettings.RightLabel`, and `GanttLabelSettings.TaskLabel` properties. You can customize the task labels with templates.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -964,7 +964,7 @@ In the Gantt Chart component, the Splitter separates the Tree Grid section from 
 
 ### Change splitter position dynamically
 
-In Gantt Chart, we can change the splitter position dynamically by using `SetSplitterPosition` method. We can change the splitter position by passing value and type parameter to `SetSplitterPosition` method. Type parameter will accept one of the following values 'position', 'columnIndex', 'viewType'. The following code example shows how to use this method.
+In Gantt Chart, we can change the splitter position dynamically by using `SetSplitterPosition` method. We can change the splitter position by passing value and type parameter to `SetSplitterPosition` method. Type parameter will accept one of the following values 'Position', 'ColumnIndex', 'ViewType'. The following code example shows how to use this method.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -995,7 +995,7 @@ In Gantt Chart, we can change the splitter position dynamically by using `SetSpl
     };
     public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, SplitterView> args)
     {
-        this.Gantt.SetSplitterPosition(args.Value, "view");
+        this.Gantt.SetSplitterPosition(args.Value, "View");
     }
     public void UpdateSplitterByPosition()
     {
@@ -1003,7 +1003,7 @@ In Gantt Chart, we can change the splitter position dynamically by using `SetSpl
     }
     public void UpdateSplitterByIndex()
     {
-    this.Gantt.SetSplitterPosition(0, "columnIndex");
+    this.Gantt.SetSplitterPosition(0, "ColumnIndex");
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

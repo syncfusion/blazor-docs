@@ -192,7 +192,7 @@ public static List <TaskData> GetTaskCollection() {
 
 ## Mapping task fields
 
-The data source fields that are required to render the tasks are mapped to the Gantt Chart component using the `TaskFields` property.
+The data source fields that are required to render the tasks are mapped to the Gantt Chart component using the `GanttTaskFields` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

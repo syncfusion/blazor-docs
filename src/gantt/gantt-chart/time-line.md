@@ -684,9 +684,133 @@ In Gantt Chart, timeline cells in top tier and bottom tier can be combined with 
 
 ![Alt text](images/combineCells.png)
 
+### Format value of timeline cell
+
+In the Gantt control, you can format the value of top and bottom timeline cells using the standard date format string or the custom formatter method. This can be done using the `GanttTopTierSettings.Format`, `GanttTopTierSettings.Formatter`, `GanttBottomTierSettings.Format` and `GanttBottomTierSettings.Formatter` properties. The following example shows how to use the formatter method for timeline cells.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttTimelineSettings TimelineUnitSize=50>
+        <GanttTopTierSettings Unit="TimelineViewMode.Month" Count="3">
+           <FormatterTemplate >
+               @{
+                   @if(context.Tier=="top"){
+                       @this.Formatter((context.Date))
+                   }
+               }
+           </FormatterTemplate>
+        </GanttTopTierSettings>
+        <GanttBottomTierSettings Unit="TimelineViewMode.Month" Format="MMM"></GanttBottomTierSettings>
+    </GanttTimelineSettings>
+</SfGantt>
+
+@code{
+    public DateTime ProjectStart = new DateTime(2019, 01, 10);
+    public DateTime ProjectEnd = new DateTime(2019, 12, 10);
+    public List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+    public string Formatter(DateTime? date) {
+        DateTime dateTime=(DateTime)(date);
+        var month = dateTime.Month;
+        if (month >= 0 && month <= 2) {
+            return "Q1";
+        } else if (month >= 3 && month <= 5) {
+            return "Q2";
+        } else if (month >= 6 && month <= 8) {
+            return "Q3";
+        } else {
+            return "Q4";
+        }
+    }
+    public static List <TaskData> GetTaskCollection() {
+    List <TaskData> Tasks = new List <TaskData> () {
+
+        new TaskData() {
+            TaskId = 1,
+            TaskName = "Project initiation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 06, 21)
+        },
+        new TaskData() {
+            TaskId = 2,
+            TaskName = "Identify Site location",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "20",
+            Progress = 30,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 3,
+            TaskName = "Perform soil test",
+            StartDate = new DateTime(2019, 04, 20),
+            Duration = "24",
+            Progress = 40,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 4,
+            TaskName = "Soil test approval",
+            StartDate = new DateTime(2019, 05, 02),
+            Duration = "25",
+            Progress = 30,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 5,
+            TaskName = "Project estimation",
+            StartDate = new DateTime(2019, 06, 02),
+            EndDate = new DateTime(2019, 09, 21)
+        },
+        new TaskData() {
+            TaskId = 6,
+            TaskName = "Develop floor plan for estimation",
+            StartDate = new DateTime(2019, 06, 04),
+            Duration = "33",
+            Progress = 30,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 7,
+            TaskName = "List materials",
+            StartDate = new DateTime(2019, 07, 04),
+            Duration = "23",
+            Progress = 40,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 8,
+            TaskName = "Estimation approval",
+            StartDate = new DateTime(2019, 08, 04),
+            Duration = "20",
+            Progress = 30,
+            ParentId = 5
+        }
+    };
+    return Tasks;
+    }
+}
+```
+
 ## Timeline cell width
 
-In the Gantt Chart component, you can define the width value of timeline cell using the `TimelineSettings.TimelineUnitSize` property. This value will be set to the bottom timeline cell, and the width value of top timeline cell will be calculated automatically based on bottom tier cell width using the `TopTier.Unit` and `TimelineSettings.TimelineUnitSize` properties. Refer to the following example.
+In the Gantt Chart component, you can define the width value of timeline cell using the `GanttTimelineSettings.TimelineUnitSize` property. This value will be set to the bottom timeline cell, and the width value of top timeline cell will be calculated automatically based on bottom tier cell width using the `TopTier.Unit` and `GanttTimelineSettings.TimelineUnitSize` properties. Refer to the following example.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

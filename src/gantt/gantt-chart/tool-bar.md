@@ -15,6 +15,8 @@ The following table shows built-in toolbar items and its actions.
 | CollapseAll | Collapses all the rows. |
 | Delete | Deletes the selected record. |
 | Edit | Edits the selected record. |
+| Indent | Indent the selected record to one level. |
+| Outdent | Outdent the selected record to one level. |
 | ExpandAll | Expands all the rows. |
 | NextTimeSpan | Navigate the Gantt Chart timeline to next time span. |
 | PrevTimeSpan | Navigate the Gantt Chart timeline to previous time span. |
@@ -23,7 +25,7 @@ The following table shows built-in toolbar items and its actions.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add", "Cancel", "CollapseAll", "Delete", "Edit", "ExpandAll", "NextTimeSpan", "PrevTimeSpan", "Search", "Update" })" Height="450px" Width="900px">
+<SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add", "Cancel", "CollapseAll", "Delete", "Edit", "ExpandAll", "NextTimeSpan", "PrevTimeSpan", "Search", "Update", "Indent", "Outdent" })" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
           Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>

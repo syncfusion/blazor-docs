@@ -11,9 +11,9 @@ Initialize the template for your custom component. Using the following code add 
         <ToolbarItems>
             <ToolbarItem Type="ItemType.Input">
                 <Template>
-                    <SfDropDownList TValue="string" TItem="Select" DataSource=@LocalData Width="200">
+                    <SfDropDownList TValue="string" TItem="Select" Placeholder="Enter the value"  DataSource=@LocalData Width="200">
                         <DropDownListFieldSettings Text="text" Value="text"> </DropDownListFieldSettings>
-                        <DropDownListEvents TValue="string" ValueChange="OnChange"> </DropDownListEvents>
+                        <DropDownListEvents TValue="string" TItem="Select" ValueChange="OnChange"> </DropDownListEvents>
                     </SfDropDownList>
                 </Template>
             </ToolbarItem>
@@ -39,9 +39,9 @@ You can select the datagrid row index based on the selected data in the DropDown
         <ToolbarItems>
             <ToolbarItem Type="ItemType.Input">
                 <Template>
-                    <SfDropDownList TValue="string" TItem="Select" DataSource=@LocalData Width="200">
+                    <SfDropDownList TValue="string" TItem="Select" Placeholder="Enter the value" DataSource=@LocalData Width="200">
                         <DropDownListFieldSettings Text="text" Value="text"> </DropDownListFieldSettings>
-                        <DropDownListEvents TValue="string" ValueChange="OnChange"> </DropDownListEvents>
+                        <DropDownListEvents TValue="string" TItem="Select" ValueChange="OnChange"> </DropDownListEvents>
                     </SfDropDownList>
                 </Template>
             </ToolbarItem>
@@ -87,9 +87,9 @@ You can select the datagrid row index based on the selected data in the DropDown
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-    public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public  async Task OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string,Select> args)
     {
-        this.Grid.SelectRow(int.Parse(args.Value));
+        await this.Grid.SelectRow(int.Parse(args.Value));
     }
 
     public class Order

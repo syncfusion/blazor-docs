@@ -2,14 +2,14 @@
 
 By default, DataGrid will occupy the entire space of the parent element when DataGrid [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) property is defined as 100%. But if you render the similar DataGrid inside the Tab control, it will consider the entire page and render the DataGrid without horizontal scroller.
 
-To overcome this behavior we suggest you to render Tab element inside a specific container and define the [`HeightAdjustMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) of tab as **Fill**. Now the DataGrid inside the Tab element will occupy the specific height.
+To overcome this behavior we suggest you to render a container element enclosing the DataGrid with specific height and set the DataGrid height as 100%.
 
 ```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Grids
 
-<div style="height:300px">
+
     <SfTab ID="Ej2Tab" Width="100%">
         <TabItems>
             <TabItem>
@@ -17,6 +17,7 @@ To overcome this behavior we suggest you to render Tab element inside a specific
                     <TabHeader Text="Grid 1"></TabHeader>
                 </ChildContent>
                 <ContentTemplate>
+                 <div style="height:300px">
                     <SfGrid DataSource="@Orders" Height="100%" Width="100%">
                         <GridColumns>
                             <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -25,6 +26,7 @@ To overcome this behavior we suggest you to render Tab element inside a specific
                             <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
                         </GridColumns>
                     </SfGrid>
+                 </div>
                 </ContentTemplate>
             </TabItem>
             <TabItem>
@@ -32,6 +34,7 @@ To overcome this behavior we suggest you to render Tab element inside a specific
                     <TabHeader Text="Grid 2"></TabHeader>
                 </ChildContent>
                 <ContentTemplate>
+                  <div style="height:300px">
                     <SfGrid DataSource="@Employees" Height="100%" Width="100%">
                         <GridColumns>
                             <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="ID" Visible="false" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -41,11 +44,12 @@ To overcome this behavior we suggest you to render Tab element inside a specific
                             <GridColumn Field=@nameof(EmployeeData.Role) HeaderText="Position" Width="120"></GridColumn>
                         </GridColumns>
                     </SfGrid>
+                  </div>
                 </ContentTemplate>
             </TabItem>
         </TabItems>
     </SfTab>
-</div>
+
 
 @code {
 

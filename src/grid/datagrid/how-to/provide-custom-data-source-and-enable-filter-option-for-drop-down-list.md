@@ -54,6 +54,6 @@ This is demonstrated in the below sample code,
                 new Order() { CustomerID= "United States" },
                 new Order() { CustomerID= "Australia" },
                 new Order() { CustomerID= "India" }
-        };
+    };
 }
 ```

@@ -17,7 +17,7 @@ This is demonstrated in the below sample code where Autocomplete component is re
             <ToolbarItem Type="ItemType.Input">
                 <Template>
                     <SfAutoComplete Placeholder="Search Customer Name" TItem="CustomerDetails" TValue="string" DataSource="@Customers">
-                        <AutoCompleteEvents ValueChange="OnSearch" TValue="string"></AutoCompleteEvents>
+                        <AutoCompleteEvents ValueChange="OnSearch" TValue="string" TItem="CustomerDetails"></AutoCompleteEvents>
                         <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
                     </SfAutoComplete>
                 </Template>
@@ -41,7 +41,7 @@ This is demonstrated in the below sample code where Autocomplete component is re
     }
 
     List<CustomerDetails> Customers = new List<CustomerDetails>
-{
+    {
         new CustomerDetails() { Name = "ALFKI", Id = 1 },
         new CustomerDetails() { Name = "ANANTR", Id = 2 },
         new CustomerDetails() { Name = "ANTON", Id = 3 },
@@ -62,9 +62,9 @@ This is demonstrated in the below sample code where Autocomplete component is re
         }).ToList();
     }
 
-    public void OnSearch(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public async Task  OnSearch(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string,CustomerDetails> args)
     {
-        this.Grid.Search(args.Value);
+        await this.Grid.Search(args.Value);
     }
 
     public class Order

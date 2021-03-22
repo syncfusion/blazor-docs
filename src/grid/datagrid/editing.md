@@ -895,6 +895,117 @@ You can set validation rules by defining the [`ValidationRules`](https://help.sy
 The following screenshot represents the Column Validation in Normal Editing.
 ![Validation Rules](./images/validation-rules.png)
 
+### Data Annotation
+
+Data Annotation validation attributes are used to validate the fields in the DataGrid. The validation attributes that are supported in the DataGrid are listed below.
+
+| Attribute Name | Functionality |
+|-------|---------|
+| Validations are,<br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br>9. DataTypeAttribute<br>10.  DataType.Custom<br>11. DataType.Date<br>12. DataType.DateTime<br>13. DataType.EmailAddress<br>14. DataType.ImageUrl<br>15. DataType.Url | The data annotation validation attributes are used as `validation rules` in the DataGrid CRUD operations |
+
+More information on the data annotation can be found in this [documentation](https://blazor.syncfusion.com/documentation/datagrid/data-annotation/) section.
+
+### Custom Validation
+
+Custom Validation allows the users to customize the validations manually according to the user's criteria.
+
+Custom Validation can be used by overriding the IsValid method inside the class inherits the Validation Attribute. All the validations are done inside the IsValid method.
+
+The following sample code demonstrates custom validations implemented in the fields EmployeeID and Freight.
+
+```csharp
+@using Syncfusion.Blazor.Grids;
+@using System.ComponentModel.DataAnnotations;
+@using System.Text.RegularExpressions;
+
+<SfGrid DataSource="EmployeeList" AllowPaging="true" Toolbar="toolbar">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(EmployeeDetails.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" > </GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.CustomerName)" HeaderText="Customer Name" TextAlign="TextAlign.Left"> </GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.EmployeeID)" HeaderText="Employee ID" TextAlign="TextAlign.Right"> </GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.Freight)" HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2"> </GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.ShipCity)" HeaderText="Ship City" TextAlign="TextAlign.Left"> </GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.ShipName)" HeaderText="Ship Name" TextAlign="TextAlign.Left"> </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code
+{
+    List<EmployeeDetails> EmployeeList;
+    string[] toolbar = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        EmployeeList = Enumerable.Range(1, 20).Select(x => new EmployeeDetails()
+        {
+            OrderID = 10240 + x,
+            CustomerName = new string[] { "VINET", "TOSMP", "HANAR", "VICTE" }[new Random().Next(4)],
+            EmployeeID = x,
+            Freight = new float[] { 32.28f, 22.90f, 30.99f, 50.52f }[new Random().Next(4)],
+            ShipCity = new string[] { "Reims", "Munster", "Rio de Janeir", "Lyon" }[new Random().Next(4)],
+            ShipName = new string[] { "Vins et alocools chevalie", "Toms Spezialitaten", "Hanari Carnes", "Supremes delices" }[new Random().Next(4)]
+        }).ToList();
+    }
+    public class EmployeeDetails
+    {
+        [Required]
+        public int? OrderID { get; set; }
+        public string CustomerName { get; set; }
+        [CustomValidationEmployeeID]
+        public int EmployeeID { get; set; }
+        [CustomValidationFreight]
+        public float Freight { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+    public class CustomValidationEmployeeID : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            if (value != null)
+            {
+                int employeeID = Convert.ToInt16(value);
+                if (employeeID >= 1)
+                {
+                    return ValidationResult.Success;
+                }
+                else
+                {
+                    return new ValidationResult("Employee ID value should be greater than zero");
+                }
+            }
+            else
+            {
+                return new ValidationResult("Employee ID value is required");
+            }
+        }
+    }
+    public class CustomValidationFreight : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            if (value != null)
+            {
+                float freight = (float)value;
+                if (freight >= 1 && freight <= 10000)
+                {
+                    return ValidationResult.Success;
+                }
+                else
+                {
+                    return new ValidationResult("Freight value should between 1 and 10,000");
+                }
+            }
+            else
+            {
+                return new ValidationResult("Freight value  is required");
+            }
+        }
+    }
+}
+```
+
 ### Custom validator component
 
 Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the grid edit form. Such cases can be achieved using the **Validator** property of the **GridEditSettings** component which accepts a validation component and inject it inside the **EditForm** of the grid. Inside the **Validator**, you can access the data using the implicit named parameter context which is of type [`ValidatorTemplateContext`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).

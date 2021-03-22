@@ -38,9 +38,9 @@ This is demonstrated in the below sample code where the [`Print`](https://help.s
         }).ToList();
     }
 
-    public void Print()
+    public async Task Print()
     {
-        this.DefaultGrid.Print();
+        await this.DefaultGrid.Print();
     }
 
     public class EmployeeData

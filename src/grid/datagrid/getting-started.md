@@ -10,32 +10,21 @@ To get start quickly with Blazor DataGrid component, you can check on this video
 
 ## Importing Syncfusion Blazor component in the application
 
- 1. Install the **Syncfusion.Blazor**  NuGet package to the application by using the **NuGet Package Manager**.
+ 1. Install the **Syncfusion.Blazor.Grid**  NuGet package to the application by using the **NuGet Package Manager**.
 
- 2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+ 2. You can add the client-side resources from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
     <head>
         <environment include="Development">
         ....
         ....
-            <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-            <!---CDN--->
-            @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/fabric.css" rel="stylesheet" />*@
+           <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
        </environment>
     </head>
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
-
- ```html
-    <head>
-        <environment include="Development">
-           <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-           <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-       </environment>
-    </head>
-```
+ For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ## Adding component package to the application
 

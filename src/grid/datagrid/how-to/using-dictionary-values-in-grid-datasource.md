@@ -30,17 +30,17 @@ This is demonstrated in the below sample code where **ShipName** is defined as D
 @code{
     private static Dictionary<int, string> ShipDetails = new Dictionary<int, string>()
     {
-            { 1001, "White Clover Markets" },
-            { 1002, "Vins et alcools Chevalier" },
-            { 1003, "Save-a-lot Markets" },
-            { 1004, "Vins et alcools Chevalier" },
-            { 1005, "Save-a-lot Markets" },
-            { 1006, "Victuailles en stock" },
-            { 1007, "Rattlesnake Canyon Grocery" },
-            { 1008, "Victuailles en stock" },
-            { 1009, "Rattlesnake Canyon Grocery" },
-            { 1010, "Blondel et fils" }
-        };
+        { 1001, "White Clover Markets" },
+        { 1002, "Vins et alcools Chevalier" },
+        { 1003, "Save-a-lot Markets" },
+        { 1004, "Vins et alcools Chevalier" },
+        { 1005, "Save-a-lot Markets" },
+        { 1006, "Victuailles en stock" },
+        { 1007, "Rattlesnake Canyon Grocery" },
+        { 1008, "Victuailles en stock" },
+        { 1009, "Rattlesnake Canyon Grocery" },
+        { 1010, "Blondel et fils" }
+    };
 
     List<OrderDetail> GridData = new List<OrderDetail>
     {

@@ -24,7 +24,7 @@ This is demonstrated in the below sample code where the index value of datagrid 
 
     public List<Order> Orders { get; set; }
 
-    public List<int> SelectedNodeIndex = new List<int>();
+    public List<double> SelectedNodeIndex = new List<double>();
 
     protected override void OnInitialized()
     {
@@ -44,10 +44,10 @@ This is demonstrated in the below sample code where the index value of datagrid 
         public double? Freight { get; set; }
     }
 
-    public void OnDataBound(object args)
+    public async Task  OnDataBound(object args)
     {
         // The filtered index values are selected
-        this.DefaultGrid.SelectRows(SelectedNodeIndex);
+        await this.DefaultGrid.SelectRows(SelectedNodeIndex.ToArray());
     }
 
     public void OnRowDataBound(RowDataBoundEventArgs<Order> args)

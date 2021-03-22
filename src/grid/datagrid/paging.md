@@ -49,7 +49,9 @@ In the below sample, [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusi
         Int32.TryParse(this.DefaultGrid.Height, out GridHeight); //datagrid height
         var PageSize = (this.DefaultGrid.PageSettings as GridPageSettings).PageSize; //initial page size
         decimal PageResize = ((GridHeight) - (PageSize * RowHeight)) / RowHeight; //new page size is obtained here
+        #pragma warning disable BL0005
         (this.DefaultGrid.PageSettings as GridPageSettings).PageSize = PageSize + (int)Math.Round(PageResize);
+        #pragma warning restore BL0005
     }
 }
 

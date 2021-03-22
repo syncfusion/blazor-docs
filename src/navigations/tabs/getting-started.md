@@ -87,17 +87,6 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the HEAD element of the `~/Pages/_Host.cshtml` page.
-
- ```html
-    <head>
-        ...
-            <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
-            <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
-        ...
-    </head>
-```
-
 ## Adding Tabs component to the application
 
 Now, add the Syncfusion Blazor Tabs component in any web page (razor) in the `Pages` folder. For example, the Tabs component is added in the `~/Pages/Index.razor` page.

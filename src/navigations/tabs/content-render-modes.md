@@ -166,7 +166,7 @@ In the following code example, Calendar and Scheduler have been rendered in firs
 
 ## On initial rendering
 
- You can set this mode to our Tabs by setting `ContentLoad.OnInit` to the property `LoadOn`. In this mode, the content of all the tabs will be rendered on initial load and maintained in the DOM. You can use this mode, when you have less number of tabs and you need to maintain the state of tabs. In this mode, you can access the reference of components rendered in other tabs.
+ You can set this mode to our Tabs by setting `ContentLoad.Init` to the property `LoadOn`. In this mode, the content of all the tabs will be rendered on initial load and maintained in the DOM. You can use this mode, when you have less number of tabs and you need to maintain the state of tabs. In this mode, you can access the reference of components rendered in other tabs.
 
  In the following example, all the three tabs are rendered in initial load itself and the data entered in the first tab will be maintained even when second or third tab is in active state.
 

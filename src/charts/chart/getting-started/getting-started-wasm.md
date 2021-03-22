@@ -18,7 +18,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
     ![asp.net core project configuration](../images/getting-started/blazorconfig.png)
 
-4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target.
+4. Depending on the requirement, select **.NET Core 3.1 or higher** as the target framework.
 
     ![asp.net core target](../images/getting-started/blazor-select-template.png)
 

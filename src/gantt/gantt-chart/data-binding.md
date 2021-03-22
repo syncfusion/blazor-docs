@@ -215,6 +215,87 @@ The Gantt Chart component can be bound with self-referential data by mapping the
 }
 ```
 
+### ExpandoObject binding
+
+Gantt is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the Gantt as list of ExpandoObject.
+
+ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. Gantt can also perform all kind of supported data operations and editing in ExpandoObject.
+
+```csharp
+
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt TValue="ExpandoObject" DataSource="@TreeData" @ref="Gantt" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" Duration="Duration"
+        Progress="Progress" ParentID="ParentID">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+</SfGantt>
+
+@code {
+    SfGantt<ExpandoObject> Gantt;
+    public List<ExpandoObject> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = GetData().ToList();
+    }
+    public static List<ExpandoObject> Data = new List<ExpandoObject>();
+    public static int ParentRecordID { get; set; }
+    public static int ChildRecordID { get; set; }
+    public static List<ExpandoObject> GetData()
+    {
+        Data.Clear();
+        ParentRecordID = 0;
+        ChildRecordID = 0;
+        for (var i = 1; i <= 60; i++)
+        {
+            Random ran = new Random();
+            DateTime start = new DateTime(2020, 06, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
+            dynamic ParentRecord = new ExpandoObject();
+            ParentRecord.TaskID = ++ParentRecordID;
+            ParentRecord.TaskName = "Parent Task " + i;
+            ParentRecord.StartDate = startingDate;
+            ParentRecord.Progress = ran.Next(10, 100);
+            ParentRecord.Duration = ParentRecordID % 2 == 0 ? (32).ToString() : (76).ToString();
+            ParentRecord.ParentID = null;
+            Data.Add(ParentRecord);
+            AddChildRecords(ParentRecordID);
+        }
+        return Data;
+    }
+    public static void AddChildRecords(int ParentId)
+    {
+        for (var i = 1; i < 4; i++)
+        {
+            Random ran = new Random();
+            DateTime start = new DateTime(2020, 06, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
+            dynamic ChildRecord = new ExpandoObject();
+            ChildRecord.TaskID = ++ParentRecordID;
+            ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
+            ChildRecord.StartDate = startingDate;
+            ChildRecord.Progress = ran.Next(10, 100);
+            ChildRecord.Duration = ParentRecordID % 3 == 0 ? (64).ToString() : (98).ToString();
+            ChildRecord.ParentID = ParentId;
+            Data.Add(ChildRecord);
+        }
+    }
+    public class ExpandoObject
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public int Progress { get; set; }
+        public string Duration { get; set; }
+        public int? ParentID { get; set; }
+    }
+}
+```
+
 ## Remote data
 
 To bind remote data to the Gantt Chart component, assign service data as an instance of `DataManager` to the `DataSource` property.

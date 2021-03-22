@@ -1,5 +1,6 @@
 * [Getting Started](gantt-chart/getting-started.md)
 * [Data Binding](gantt-chart/data-binding.md)
+* [Custom Binding](gantt-chart/custom-binding.md)
 * [Columns](gantt-chart/columns.md)
 * [Selection](gantt-chart/selection.md)
 * [Filtering](gantt-chart/filtering.md)

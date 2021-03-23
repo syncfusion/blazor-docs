@@ -111,7 +111,7 @@ Pointers are used to indicate values on an axis. You can change the pointer valu
 
 ## Add title for Circular gauge
 
-Title can be added to the circular gauge to provide a quick information to the users about the context of the rendered circular gauge. You can add a title using [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Title) property in [`SfCircularGauge`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html).
+Title can be added to the circular gauge to provide a quick information to the users about the context of the rendered circular gauge. You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Title) property in [`SfCircularGauge`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html).
 
 ```csharp
 <SfCircularGauge Title="Speedometer">

@@ -5,6 +5,7 @@
 * [Animations](tabs/animations.md)
 * [Localization](tabs/localization.md)
 * [Orientation](tabs/orientation.md)
+* [Drag and Drop](tabs/drag-and-drop.md)
 * [Accessibility](tabs/accessibility.md)
 * [CSS Structure](tabs/style.md)
 * [Add/Remove Tab items](tabs/how-to/add-remove-tab-items.md)

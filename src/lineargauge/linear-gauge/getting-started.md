@@ -1,16 +1,35 @@
 # Getting Started
 
-This section briefly explains how to include a Linear Gauge in your Blazor Server-Side application. Refer to this [Getting Started with Syncfusion Blazor for Serve-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) documentation for the introduction and configuring the common specifications.
+The Blazor Linear Gauge is an ideal component for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more.
 
-## Importing Syncfusion Blazor component in an application
+This section briefly explains how to include a Linear gauge in your Blazor server-Side application. Refer to this [Getting Started with Syncfusion Blazor for Serve-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) documentation for the introduction and configuring the common specifications.
 
-Install Syncfusion.Blazor NuGet package in application using the **NuGet Package Manager**.
+## Importing Syncfusion Blazor Linear Gauge component in the application
 
-> Please ensure to check the **Include prerelease** option for our Beta release.
+1. Install **Syncfusion.Blazor.LinearGauge** NuGet package in the application using the **NuGet Package Manager**.
+
+2. You can add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+
+```html
+    <head>
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        <!---CDN--->
+        @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+    </head>
+```
+
+> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+
+ ```html
+    <head>
+        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </head>
+```
 
 ## Adding component package to the application
 
-Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor.LinearGauge` package.
+Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.LinearGauge** namespace.
 
 ```csharp
 @using Syncfusion.Blazor.LinearGauge
@@ -18,7 +37,7 @@ Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor.LinearGauge
 
 ## Adding SyncfusionBlazor Service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -39,37 +58,35 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client-side source loading from CRG or CDN. you need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the **HEAD** element of the **~/Pages/Host.cshtml** page
+> To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
-```html
-    <head>
-        <environment include="Development">
-            <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js">
-            </script>
-        </environment>
-    </head>
-```
+## Initializing Linear Gauge component in the application
 
-## Adding Linear Gauge component to an application
-
-Now, add the Syncfusion Blazor Linear Gauge component in any web page razor in the Pages folder. For example, the Linear Gauge component is added to the ~/Pages/ Index.razor page.
+The Syncfusion Linear gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Linear Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
 ```csharp
+@page "/"
+
 <SfLinearGauge>
+    <LinearGaugeAxes>
+        <LinearGaugeAxis>
+            <LinearGaugePointers>
+                <LinearGaugePointer></LinearGaugePointer>
+            </LinearGaugePointers>
+        </LinearGaugeAxis>
+    </LinearGaugeAxes>
 </SfLinearGauge>
 ```
 
-## Run the application
-
-After the successful compilation of your application,  press F5 to run the application. The Blazor Linear Gauge component will be rendered in the web browser as illustrated in the following screenshot.
+After the successful compilation of your application,  press F5 to run the application. The Blazor Linear gauge component will be rendered in the web browser as illustrated in the following screenshot.
 
 ![Linear Gauge Sample](images/pixel.png)
 
 ## Set pointer value
 
-You can change the pointer value in the following sample using the [`Value`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer~_value.html) property in the [`LinearGaugePointer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer_members.html) tag.
+Pointers are used to indicate values on an axis. You can change the pointer value using the [`PointerValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_PointerValue) property in the [`LinearGaugePointer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html).
 
-> In Linear Gauge, you can configure multiple axes. On each axis you can add a pointer.
+> In Linear Gauge, you can configure multiple axes. On each axis, you can add a pointer.
 
 ```csharp
 @using Syncfusion.Blazor.LinearGauge
@@ -78,7 +95,7 @@ You can change the pointer value in the following sample using the [`Value`](htt
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40">
+                <LinearGaugePointer PointerValue="40">
                 </LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
@@ -88,33 +105,16 @@ You can change the pointer value in the following sample using the [`Value`](htt
 
 ![Linear Gauge with pointer value](images/getting-pointers.png)
 
-## Add Linear Gauge title
+## Add title for Linear Gauge
 
-You can add title to the linear gauge using [`Title`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.SfLinearGauge~Title.html) property and you can customize this title using following properties.
-
-* [`LinearGaugeTitleStyle`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeTitleStyle_members.html)
-    * [`Color`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGaugeFontSettings~Color.html) - Specifies the title text color
-    * [`FontStyle`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGaugeFontSettings~FontStyle.html) - Specifies font style for the title
-    * [`FontWeight`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGaugeFontSettings~FontWeight.html) - Specifies font weight for the title
-    * [`Size`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGaugeFontSettings~Size.html) - Specifies font size for the title
-    * [`Opacity`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGaugeFontSettings~Opacity.html) - Specifies font opacity for the title
-    * [`FontFamily`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGaugeFontSettings~FontFamily.html) - Specifies font family for the title
+Title can be added to the linear gauge to provide a quick information to the users about the context of the rendered linear gauge. You can add title to the linear gauge using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Title) property in [`SfLinearGauge`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html).
 
 ```csharp
-@using Syncfusion.Blazor.LinearGauge
-
-<SfLinearGauge Title="Speed calculator">
-    <LinearGaugeTitleStyle Color="blue"
-                           FontStyle="italic"
-                           FontWeight="bold"
-                           Size="15px"
-                           Opacity="0.8">
-    </LinearGaugeTitleStyle>
+<SfLinearGauge Title="Linear Gauge">
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40">
-                </LinearGaugePointer>
+                <LinearGaugePointer></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
@@ -123,30 +123,24 @@ You can add title to the linear gauge using [`Title`](https://help.syncfusion.co
 
 ![Linear gauge with title](images/getting-title.png)
 
-## Add axis ranges
+## Add ranges in the Linear gauge
 
-You can categorize the axis values using the [`Start`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange~Start.html) and [`End`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange~End.html) properties in the [`LinearGaugeRange`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange_members.html). You can add any number of ranges for an axis using [`LinearGaugeRange`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange_members.html).
+Range is used to specify a group of scale values in the gauge. We can set the range start and end using [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html#Syncfusion_Blazor_LinearGauge_LinearGaugeRange_Start) and [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html#Syncfusion_Blazor_LinearGauge_LinearGaugeRange_End) properties in the [`LinearGaugeRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html). You can add any number of ranges for an axis using [`LinearGaugeRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html).
 
 ```csharp
-@using Syncfusion.Blazor.LinearGauge
-
-<SfLinearGauge Title="Speed calculator">
-    <LinearGaugeTitleStyle Color="blue"
-                           FontStyle="italic"
-                           FontWeight="bold"
-                           Size="15px"
-                           Opacity="0.8">
-    </LinearGaugeTitleStyle>
+<SfLinearGauge>
     <LinearGaugeAxes>
-        <LinearGaugeAxis>
+        <LinearGaugeAxis Minimum="0" Maximum="200">
+            <LinearGaugeAxisLabelStyle Format="{value}°C"></LinearGaugeAxisLabelStyle>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40">
+                <LinearGaugePointer PointerValue="140">
                 </LinearGaugePointer>
             </LinearGaugePointers>
             <LinearGaugeRanges>
-                <LinearGaugeRange Start="0" End="30" Color="yellow"></LinearGaugeRange>
-                <LinearGaugeRange Start="30" End="60" Color="orange"></LinearGaugeRange>
-                <LinearGaugeRange Start="60" End="100" Color="red"></LinearGaugeRange>
+                <LinearGaugeRange Start="0" End="80" Color="#ff5985"></LinearGaugeRange>
+                <LinearGaugeRange Start="80" End="120" Color="#ffb133"></LinearGaugeRange>
+                <LinearGaugeRange Start="120" End="140" Color="#fcde0b"></LinearGaugeRange>
+                <LinearGaugeRange Start="140" End="200" Color="#27d5ff"></LinearGaugeRange>
             </LinearGaugeRanges>
         </LinearGaugeAxis>
     </LinearGaugeAxes>

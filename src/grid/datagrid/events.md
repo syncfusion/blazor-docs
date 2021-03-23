@@ -890,7 +890,7 @@ The events should be provided to the datagrid using **GridEvents** component. Al
 
 ## OnCellSave
 
-[`OnCellSave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when cell is saved.
+[`OnCellSave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before saving the cell.
 
 ```csharp
 @using Syncfusion.Blazor.Grids

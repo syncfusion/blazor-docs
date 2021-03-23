@@ -11,8 +11,6 @@ as `RangeArea`.
 
 ![Range Area](../images/chart-types-images/range-area.png)
 
-**New Note:** You can refer to our [`Blazor Range Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-area-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Range Area Chart Example`](https://blazor.syncfusion.com/demos/chart/range-area?theme=bootstrap4) to know how to show variations in the data values for a given time.
-
 ## Customization
 
 You can use the following properties to customize the range area series.
@@ -23,15 +21,11 @@ You can use the following properties to customize the range area series.
 * [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Border) – used to render area series with border.
 
 ```csharp
-@using Syncfusion.Blazor.Charts
-
-<SfChart Width="60%">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" High="High" Low="Low" Opacity="0.5"
                      DashArray="5,5" Fill="blue" Type="ChartSeriesType.RangeArea">
-            <ChartSeriesBorder Width="2" Color="red"></ChartSeriesBorder>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -39,13 +33,13 @@ You can use the following properties to customize the range area series.
 @code{
     public class ChartData
     {
-        public string X;
-        public double Low;
-        public double High;
+        public string X { get; set; }
+        public double Low { get; set; }
+        public double High { get; set; }
     }
 
     public List<ChartData> WeatherReports = new List<ChartData>
-{
+   {
          new ChartData { X= "Sun", Low= 2.5, High= 9.8 },
          new ChartData { X= "Mon", Low= 4.7, High= 11.4 },
          new ChartData { X= "Tue", Low= 6.4, High= 14.4 },
@@ -59,7 +53,7 @@ You can use the following properties to customize the range area series.
 
 ![Custom Range Area](../images/chart-types-images/custom-range-area.png)
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

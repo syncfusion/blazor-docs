@@ -10,8 +10,6 @@ Shows the relative percentage of multiple data series in stacked columns. The cu
 
 ![100% Stacked Area](../images/chart-types-images/stackedarea100.png)
 
-**New Note:** You can also explore our [`Blazor 100% Stacked Area Chart`](https://blazor.syncfusion.com/demos/chart/percent-stacked-area?theme=bootstrap4) Example to knows how to render and configure the 100% stacking area type chart.
-
 ## Customization
 
 You can use the following properties to customize 100% stacked area series.
@@ -24,9 +22,8 @@ You can use the following properties to customize 100% stacked area series.
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfChart Width="60%">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Fill="pink" Opacity="0.7" DashArray="5,5" Type="ChartSeriesType.StackingArea100">
             <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
@@ -43,10 +40,10 @@ You can use the following properties to customize 100% stacked area series.
 @code{
     public class ChartData
     {
-        public double X;
-        public double Y;
-        public double Y1;
-        public double Y2;
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
     }
     public List<ChartData> MedalDetails = new List<ChartData>
 {
@@ -66,7 +63,7 @@ You can use the following properties to customize 100% stacked area series.
 
 ![Custom Stacked Area](../images/chart-types-images/custom-stacked-area-100.png)
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

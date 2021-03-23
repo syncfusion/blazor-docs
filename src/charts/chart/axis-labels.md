@@ -5,7 +5,7 @@
 When the axis labels overlap with each other, you can use [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction)
 property in the axis, to place them smartly.
 
-When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) as **Hide**
+When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) to **Hide**
 
 {% aspTab template="chart/axis/multiple/hide", sourceFiles="hide.razor" %}
 
@@ -46,7 +46,7 @@ Any number of levels of labels can be added to the axis using the [`MultiLevelLa
 
 ### Categories
 
-Using the categories, you can configure the `Start`, `End`, `Text`, and `MaximumTextWidth` of multilevel labels.
+Using the [`Categories`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMultiLevelLabel.html#Syncfusion_Blazor_Charts_ChartMultiLevelLabel_Categories), you can configure the `Start`, `End`, `Text`, and `MaximumTextWidth` of multilevel labels.
 
 {% aspTab template="chart/axis/multiple/multi-category", sourceFiles="categorys.razor" %}
 
@@ -56,7 +56,7 @@ Using the categories, you can configure the `Start`, `End`, `Text`, and `Maximum
 
 ### Overflow
 
-Using the `Overflow` property, you can **Trim** or **Wrap** the multilevel labels.
+Using the [`Overflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMultiLevelLabel.html#Syncfusion_Blazor_Charts_ChartMultiLevelLabel_Overflow) property, you can **Trim** or **Wrap** the multilevel labels.
 
 {% aspTab template="chart/axis/multiple/multi-overflow", sourceFiles="overflows.razor" %}
 
@@ -66,7 +66,7 @@ Using the `Overflow` property, you can **Trim** or **Wrap** the multilevel label
 
 ### Alignment
 
-The `Alignment` property provides option to position the multilevel labels at `Far`, `Center`, or `Near`.
+The [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMultiLevelLabel.html#Syncfusion_Blazor_Charts_ChartMultiLevelLabel_Alignment) property provides option to position the multilevel labels at `Far`, `Center`, or `Near`.
 
 {% aspTab template="chart/axis/multiple/multi-alignment", sourceFiles="alignments.razor" %}
 
@@ -87,7 +87,7 @@ The `TextStyle` property of multilevel labels provides options to customize the 
 
 ### Border customization
 
-Using the `Border` property, you can customize the `Width`, `Color`, and `Type`. The `Type` of border
+Using the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMultiLevelLabel.html#Syncfusion_Blazor_Charts_ChartMultiLevelLabel_Border) property, you can customize the `Width`, `Color`, and `Type`. The `Type` of border
 are `Rectangle`, `Brace`, `WithoutBorder`, `WithoutTopBorder`, `WithoutTopandBottomBorder` and `CurlyBrace`.
 
 {% aspTab template="chart/axis/multiple/multi-bordercustom", sourceFiles="border-customs.razor" %}
@@ -141,7 +141,7 @@ Line break feature used to break the long axis label into multiple lines by usin
 * [DateTime Label Format](./date-time-axis#label-format)
 * [Custom Label Format](./date-time-axis#custom-label-format)
 
-**Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

@@ -48,7 +48,7 @@ Text from the data source can be mapped using `Name` property.
 
 ## Customization
 
-`Stroke` and `Border` of data label can be customized using `Fill` and `Border` properties. Rounded corners can be customized using `Rx` and `Ry` properties.
+`Stroke` and `Border` of data label can be customized using `Fill` and `Border` properties. Rounded corners can be customized using `Rx` and `Ry` properties. `Rx` and `Ry` properties requires `Border` values not to be null.
 
 {% aspTab template="chart/datalabels/custom", sourceFiles="custom.razor" %}
 
@@ -56,9 +56,7 @@ Text from the data source can be mapped using `Name` property.
 
 ![Customization](images/data-label/custom-razor.png)
 
->Note: `Rx` and `Ry` properties requires `Border` values not to be null.
-
-**Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

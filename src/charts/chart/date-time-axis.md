@@ -22,7 +22,7 @@ Date-time category axis is used to display the date-time values with non-linear 
 
 ### Range
 
-Range for an axis, will be calculated automatically based on the provided data, you can also customize the range
+Range for the axis, will be calculated automatically based on the provided data, you can also customize the range
 of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Minimum),
 [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Maximum) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Interval) property of the axis.
 
@@ -63,7 +63,7 @@ of padding,
 
 **DateTime - None**
 
-When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **None**, Minimum and Maximum of the axis is based on the data.
+When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **None**, minimum and maximum of the axis is based on the data.
 
 {% aspTab template="chart/axis/datetime/none", sourceFiles="none.razor" %}
 
@@ -71,9 +71,9 @@ When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 **DateTime - Round**
 
-When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **Round**, Minimum and Maximum will be
-rounded to the nearest possible value divisible by Interval. For example, when the Minimum is 15th Jan, Interval is
-1 and the Interval type is ‘month’, then the axis Minimum will be Jan 1st.
+When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **Round**, minimum and maximum will be
+rounded to the nearest possible value divisible by interval. For example, when the minimum is 15th Jan, interval is
+1 and the interval type is ‘month’, then the axis minimum will be Jan 1st.
 
 {% aspTab template="chart/axis/datetime/round", sourceFiles="round.razor" %}
 
@@ -81,8 +81,8 @@ rounded to the nearest possible value divisible by Interval. For example, when t
 
 **DateTime - Additional**
 
-When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **Additional**, Interval of an axis will
-be padded to the Minimum and Maximum of the axis.
+When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **Additional**, interval of an axis will
+be padded to the minimum and maximum of the axis.
 
 {% aspTab template="chart/axis/datetime/additional", sourceFiles="additional.razor" %}
 
@@ -141,7 +141,7 @@ The following table describes the result of applying some common date time forma
 
 <!-- markdownlint-disable MD033 -->
 
-**Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

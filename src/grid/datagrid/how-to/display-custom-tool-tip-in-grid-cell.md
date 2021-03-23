@@ -15,7 +15,8 @@ This is demonstrated in the below sample code we have render the tooltip for **F
             <Template>
                 @{
                     var employee = (context as EmployeeData);
-                    <SfTooltip Target="#txt">
+                    Count++;
+                    <SfTooltip Target="#txt" @key="@Count">
                         <TooltipTemplates>
                             <Content>
                                 @employee.FirstName
@@ -33,6 +34,8 @@ This is demonstrated in the below sample code we have render the tooltip for **F
 
 @code{
     public List<EmployeeData> Employees { get; set; }
+
+    int Count { get; set; } = 0;
 
     protected override void OnInitialized()
     {

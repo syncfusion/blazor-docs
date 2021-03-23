@@ -403,6 +403,71 @@ To access the filtered values inside the FilterTemplate, you can use the implici
 The following screenshot shows filter menu using custom component
 ![Filtermenu customcomponent](./images/Customfiltermenu.PNG)
 
+### Override default filter operators for Menu Filtering
+
+The default filter operators for a GridColumn can be overridden by using the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the grid. In the below code, we have overridden the filter operators for the `CustomerID` column.
+
+```charp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
+    <GridEvents OnActionBegin="ActionBeginHandler" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    public void ActionBeginHandler(ActionEventArgs<Order> Args)
+    {
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.FilterBeforeOpen)
+        {
+            if (Args.ColumnName == "CustomerID")//Specify Field name
+            {
+                Args.FilterOperators = CustomerIDOperator;
+            }
+        }
+    }
+
+    public class Operators
+    {
+        public string Value { get; set; }
+        public string Text { get; set; }
+    }
+    List<object> CustomerIDOperator = new List<object> {
+        new Operators() { Text= "Equal", Value= "equal" },
+        new Operators() { Text= "Contains", Value= "contains" }
+    };
+
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
+
 ### Enable different filter for a column
 
 You can use different filter types such as **Menu**,**CheckBox** and **Excel** filter in a same DataGrid. To do so, set the

@@ -13,7 +13,7 @@ An axis can be positioned in the chart area using [`CrossesAt`](https://help.syn
 ## Title
 
 You can add a title to the axis using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Title) property to provide quick
-information to the user about the data plotted in the axis. Title style can be customized using [`TitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_TitleStyle) property of the axis.
+information to the user about the data plotted in the axis. Title text can be customized using [`TitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_TitleStyle) property of the axis.
 
 {% aspTab template="chart/axis/category/title", sourceFiles="title.razor" %}
 
@@ -21,7 +21,7 @@ information to the user about the data plotted in the axis. Title style can be c
 
 ## Tick Lines Customization
 
-You can customize the  Width, Color and Size of the minor and major tick lines, using
+You can customize the width, color and size of the minor and major tick lines, using
 [`MajorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MajorTickLines) and
 [`MinorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MinorTickLines) properties in the axis.
 
@@ -33,7 +33,7 @@ You can customize the  Width, Color and Size of the minor and major tick l
 
 ## Grid Lines Customization
 
-You can customize the Width, Color and DashArray of the minor and major grid lines, using [`MajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MajorGridLines)
+You can customize the width, color and dasharray of the minor and major grid lines, using [`MajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MajorGridLines)
 and [`MinorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MinorGridLines) properties in the axis.
 
 {% aspTab template="chart/axis/category/grid", sourceFiles="gridline.razor" %}
@@ -45,7 +45,7 @@ and [`MinorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 ## Multiple Axis
 
 In addition to primary X and Y axis, we can add n number of axis to the chart. Series can be associated with
-this axis, by mapping with axis's unique name. See also
+this axis, by mapping with axis unique name. See also
 
 * [Mixed Chart](./chart-series)
 * [Multiple Panes](./multiple-panes)
@@ -60,8 +60,8 @@ this axis, by mapping with axis's unique name. See also
 
 <!-- markdownlint-disable MD033 -->
 
-When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner set this property
- [`IsInversed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_IsInversed) to true.
+When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To inverse the axis set this property
+ [`IsInversed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_IsInversed) to **true**.
 
  {% aspTab template="chart/axis/category/inversed", sourceFiles="inversed.razor" %}
 
@@ -72,7 +72,7 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 ## Opposed Position
 
 To place an axis opposite from its original position,
-set [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_OpposedPosition) property of the axis to true.
+set [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_OpposedPosition) property of the axis to **true**.
 
 {% aspTab template="chart/axis/category/opposed", sourceFiles="opposed.razor" %}
 
@@ -80,7 +80,7 @@ set [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ![Opposed Position](images/axis-customization/opposed.png)
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+**Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

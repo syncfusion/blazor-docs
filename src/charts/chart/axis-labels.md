@@ -5,7 +5,7 @@
 When the axis labels overlap with each other, you can use [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction)
 property in the axis, to place them smartly.
 
-When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) as `Hide`
+When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) as **Hide**
 
 {% aspTab template="chart/axis/multiple/hide", sourceFiles="hide.razor" %}
 
@@ -13,7 +13,7 @@ When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Sync
 
 ![Hide](images/axis-labels/hide.png)
 
-When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) as `Rotate45`
+When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) to **Rotate45**
 
 {% aspTab template="chart/axis/multiple/rotate45", sourceFiles="rotate45.razor" %}
 
@@ -21,7 +21,7 @@ When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Sync
 
 ![Rotate45](images/axis-labels/rotate45.png)
 
-When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) as `Rotate90`
+When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelIntersectAction) to **Rotate90**
 
 {% aspTab template="chart/axis/multiple/rotate90", sourceFiles="rotate90.razor" %}
 
@@ -31,7 +31,7 @@ When setting [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Sync
 
 ## Axis Labels Positioning
 
-By default, the axis labels can be placed `Outside` of the axis line and this also can be placed `Inside`
+By default, the axis labels can be placed **Outside** of the axis line and this also can be placed **Inside**
 the axis line using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelPosition) property.
 
 {% aspTab template="chart/axis/multiple/position", sourceFiles="position.razor" %}
@@ -56,7 +56,7 @@ Using the categories, you can configure the `Start`, `End`, `Text`, and `Maximum
 
 ### Overflow
 
-Using the `Overflow` property, you can `Trim` or `Wrap` the multilevel labels.
+Using the `Overflow` property, you can **Trim** or **Wrap** the multilevel labels.
 
 {% aspTab template="chart/axis/multiple/multi-overflow", sourceFiles="overflows.razor" %}
 
@@ -116,7 +116,7 @@ The [`LabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ## Label Trim
 
-You can trim the label using [`EnableTrim`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_EnableTrim)  and width of the labels can also be customized using [`MaximumLabelWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MaximumLabelWidth) property in the axis, by default maximum width of the label is `34px`.
+You can trim the label using [`EnableTrim`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_EnableTrim)  and width of the labels can also be customized using [`MaximumLabelWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_MaximumLabelWidth) property in the axis, by default maximum width of the label is **34px**.
 
 {% aspTab template="chart/axis/multiple/labels-trim", sourceFiles="labels-trim.razor" %}
 
@@ -141,7 +141,7 @@ Line break feature used to break the long axis label into multiple lines by usin
 * [DateTime Label Format](./date-time-axis#label-format)
 * [Custom Label Format](./date-time-axis#custom-label-format)
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+**Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

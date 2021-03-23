@@ -1,5 +1,5 @@
-* [Getting Started For Server](chart/getting-started/getting-started-server.md)
-* [Getting Started For WASM](chart/getting-started/getting-started-wasm.md)
+* [Getting Started For Server](chart/getting-started-server.md)
+* [Getting Started For WebAssembly](chart/getting-started-wasm.md)
 * [Working with Data](chart/working-with-data.md)
 * [Chart Dimensions](chart/chart-dimensions.md)
 * [Category Axis](chart/category-axis.md)

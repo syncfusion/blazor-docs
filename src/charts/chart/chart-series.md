@@ -23,9 +23,9 @@ Combination of different types like Line, column etc, can be rendered in a chart
 
 ![Combination Series](images/multiple-series/combination-razor.png)
 
-**New Note:** You can refer to our Blazor Combination Chart feature tour page to know about its other groundbreaking feature representations.
+**Note:** You can refer to our Blazor Combination Chart feature tour page to know about its other groundbreaking feature representations.
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+**Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

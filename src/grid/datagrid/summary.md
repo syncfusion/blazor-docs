@@ -56,3 +56,4 @@
 * [Customize empty grid display message](datagrid/how-to/customize-empty-grid-display-message.md)
 * [Saving a new row at a particular index of the grid page](datagrid/how-to/save-new-row-at-particular-index-in-page.md)
 * [Customize filter choice items count for Excel filter dialog](datagrid/how-to/customize-filter-choice-count-in-excel-filter-dialog.md)
+* [Create custom Grid component](datagrid/how-to/create-custom-grid-component.md)

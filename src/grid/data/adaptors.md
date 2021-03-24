@@ -172,23 +172,23 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 
-<SfGrid TValue="EmployeeData" ID="Grid">
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+<SfGrid TValue="Order" AllowPaging="true">
+    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Designation) HeaderText="Designation" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code{
-    public class EmployeeData
+    public class Order
     {
-        public int EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string Designation { get; set; }
-        public string Country { get; set; }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
     }
 }
 ```

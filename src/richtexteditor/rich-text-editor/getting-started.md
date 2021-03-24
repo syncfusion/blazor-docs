@@ -2,23 +2,27 @@
 
 # Getting Started
 
-This section briefly explains how to include a Rich Text Editor component in your Blazor Server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a Rich Text Editor component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Rich Text Editor components, you can check on this video:
 `youtube:NvauE3z7W0k`
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor.RichTextEditor` NuGet package to the application by using the `NuGet Package Manager`.
+* Install **Syncfusion.Blazor.RichTextEditor** NuGet package to the application by using the **NuGet Package Manager**.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
-
-* You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <environment include="Development">
+    ....
+    ....
+        <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+        <!---CDN--->
+        @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
+   </environment>
 </head>
 
 ```
@@ -28,15 +32,17 @@ To get start quickly with Blazor Rich Text Editor components, you can check on t
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />>
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+   <environment include="Development">
+      <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+  </environment>
 </head>
 
 ```
 
 ## Adding component package to the application
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.RichTextEditor` package.
+Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.RichTextEditor** package.
 
 ```csharp
 
@@ -46,7 +52,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.RichTextEditor`
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the ConfigureServices function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 
@@ -239,30 +245,43 @@ To retrieve the editor contents, use the `Value` property of Rich Text Editor. T
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.Popups
 
 <SfButton @onclick="@GetValue">Get Value</SfButton>
 <SfButton @onclick="@GetText">Get Text</SfButton>
 
 <br />
+<SfDialog @ref="DialogObj" @bind-Visible="@Visibility" Content="@Content" Header="@Header" Target="#target" Height="200px"
+          Width="400px" ShowCloseIcon="true">
+    <DialogButtons>
+        <DialogButton Content="Ok" IsPrimary="true" OnClick="@DlgButtonClick" />
+    </DialogButtons>
 
+</SfDialog>
 <SfRichTextEditor @ref="RteObj" Value="@RteValue" />
 
 @code {
     SfRichTextEditor RteObj;
-
+    SfDialog DialogObj;
+    private string Content;
+    private bool Visibility = false;
+    private string Header = "RichTextEditor's Value";
     private string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />";
-
-    private void GetValue()
+    private async Task GetValue()
     {
-        string Value = this.RteValue;
+        this.Content = this.RteValue;
+        await this.DialogObj.Show();
     }
-
     private async Task GetText()
     {
-        string GetText = await this.RteObj.GetText();
+        this.Content = await this.RteObj.GetText();
+        this.DialogObj.Show();
+    }
+    private async Task DlgButtonClick(object arg)
+    {
+        await this.DialogObj.Hide();
     }
 }
-
 ```
 
 ## See Also

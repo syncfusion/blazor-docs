@@ -2,20 +2,24 @@
 
 # Getting Started
 
-This section briefly explains how to include a Splitter component in your Blazor Server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a Splitter component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor.Layouts` NuGet package to the application by using the `NuGet Package Manager`.
+* Install **Syncfusion.Blazor.Layouts** NuGet package to the application by using the **NuGet Package Manager**.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
-
-* You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <environment include="Development">
+    ....
+    ....
+        <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+        <!---CDN--->
+        @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
+   </environment>
 </head>
 
 ```
@@ -25,15 +29,17 @@ This section briefly explains how to include a Splitter component in your Blazor
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+   <environment include="Development">
+      <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+  </environment>
 </head>
 
 ```
 
 ## Adding component package to the application
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Layouts` package.
+Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Layouts** package.
 
 ```csharp
 
@@ -43,7 +49,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Layouts` packag
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the ConfigureServices function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 

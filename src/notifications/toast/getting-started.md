@@ -1,22 +1,26 @@
 # Getting Started
 
-This section briefly explains how to include a Toast component in your Blazor Server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a Toast component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Toast component, you can check on this video:
 `youtube:tMa7JvcfNcY`
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor.Notifications` NuGet package to the application by using the `NuGet Package Manager`.
+* Install **Syncfusion.Blazor.Notifications** NuGet package to the application by using the **NuGet Package Manager**.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
-
-* You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <environment include="Development">
+    ....
+    ....
+        <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+        <!---CDN--->
+        @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
+   </environment>
 </head>
 
 ```
@@ -26,15 +30,17 @@ To get start quickly with Blazor Toast component, you can check on this video:
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+   <environment include="Development">
+      <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+  </environment>
 </head>
 
 ```
 
 ## Adding component package to the application
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Notifications` package.
+Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Notifications** package.
 
 ```csharp
 
@@ -44,7 +50,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Notifications` 
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the ConfigureServices function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 
@@ -74,43 +80,44 @@ The following code explains how to initialize a simple Toast in Razor page.
 
 ```csharp
 
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Notifications
 
-<SfToast @ref="ToastObj" Title="Adaptive Tiles Meeting" Timeout=5000 Icon="e-meeting" Content="@ToastContent">
-    <ToastPosition X="Right"></ToastPosition>
-</SfToast>
-
-<div class="col-lg-12 col-sm-12 col-md-12 center">
-    <div id="toastBtnDefault" style="margin: auto;text-align: center">
-        <SfButton Content="Show Toasts" @onclick="@ShowToast"></SfButton>
-        <SfButton Content="Hide All" @onclick="@HideToast"></SfButton>
+<div class="col-lg-12 control-section toast-default-section">
+    <SfToast ID="toast_default" @ref="ToastObj" Title="Adaptive Tiles Meeting" Content="@ToastContent" Timeout="5000" Icon="e-meeting">
+        <ToastPosition X="@ToastPosition"></ToastPosition>
+    </SfToast>
+    <div class="col-lg-12 col-sm-12 col-md-12 center">
+        <div id="toastBtnDefault" style="margin: auto;text-align: center">
+            <button class="e-btn" @onclick="@ShowOnClick">Show Toasts</button>
+            <button class="e-btn" @onclick="@HideOnClick">Hide All</button>
+        </div>
     </div>
 </div>
-
 <style>
     #toast_default .e-meeting::before {
         content: "\e705";
         font-size: 17px;
     }
-</style>
 
+    .bootstrap4 #toast_default .e-meeting::before {
+        content: "\e763";
+        font-size: 20px;
+    }
+</style>
 @code {
     SfToast ToastObj;
-
-    private string ToastContent { get; set; } = "Conference Room 01 / Building 135 10:00 AM-10:30 AM";
-
-    private async Task ShowToast()
+    private string ToastPosition = "Right";
+    private string ToastContent = "Conference Room 01 / Building 135 10:00 AM-10:30 AM";
+    private async Task ShowOnClick()
     {
-       await this.ToastObj.Show();
+        await this.ToastObj.Show();
     }
-
-    private async Task HideToast()
+    private async Task HideOnClick()
     {
-       await this.ToastObj.Hide("All");
+        await this.ToastObj.Hide("All");
     }
 }
-
 ```
 
 ## Run the application

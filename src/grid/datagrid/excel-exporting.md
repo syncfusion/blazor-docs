@@ -815,6 +815,64 @@ The following sample code demonstrates dynamically modifying the data source bef
 }
 ```
 
+## Customizing columns
+
+Excel export provides an option to define the columns dynamically before exporting. You can define the dynamic columns using [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Columns) property of the [`ExcelExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class.
+
+The following sample code demonstrates dynamically adding `ShipCountry` column in the exported excel file,
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowExcelExport="true" AllowPaging="true" Toolbar="@(new List<string>() { "ExcelExport" })">
+    <GridEvents OnToolbarClick="OnToolbarClick" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+
+    public List<Order> Orders { get; set; }
+
+    public async Task OnToolbarClick(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if(args.Item.Id == "Grid_excelexport")  //Id is combination of Grid's ID and itemname
+        {
+            ExcelExportProperties ExportProperties = new ExcelExportProperties();
+            var columns = await DefaultGrid.GetColumns();     //get the columns available in Grid
+            columns.Add(new GridColumn() { Field = "ShipCountry" });      //adding additional column
+            ExportProperties.Columns = columns;
+            await DefaultGrid.ExcelExport(ExportProperties);
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 15).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            ShipCountry = (new string[] { "Germany", "UK", "USA", "Italy", "France" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCountry { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
 <!-- Export the hierarchy datagrid

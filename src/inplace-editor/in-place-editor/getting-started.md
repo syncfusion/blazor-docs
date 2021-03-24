@@ -2,20 +2,24 @@
 
 # Getting Started
 
-This section briefly explains how to include a In-Place Editor component in your Blazor Server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a In-Place Editor component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor.InPlaceEditor` NuGet package to the application by using the `NuGet Package Manager`.
+* Install **Syncfusion.Blazor.InPlaceEditor** NuGet package to the application by using the **NuGet Package Manager**.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
-
-* You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <environment include="Development">
+    ....
+    ....
+        <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+        <!---CDN--->
+        @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
+   </environment>
 </head>
 
 ```
@@ -25,15 +29,17 @@ This section briefly explains how to include a In-Place Editor component in your
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+   <environment include="Development">
+      <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+  </environment>
 </head>
 
 ```
 
 ## Adding component package to the application
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.InPlaceEditor` package.
+Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.InPlaceEditor** package.
 
 ```csharp
 
@@ -43,7 +49,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.InPlaceEditor` 
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the ConfigureServices function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 
@@ -344,9 +350,9 @@ The edited data is submitted to the server and you can see the new values gettin
     <div class="control-group">
         Best Employee of the year:
 
-        <SfInPlaceEditor @ref="InPlaceObj" PrimaryKey="Employee" Name="Employee" Adaptor="Adaptors.UrlAdaptor"SaveUrl="https://ej2services.syncfusion.com/production/web-services/api/Editor/UpdateData" Type="Syncfusion.Blazor.InPlaceEditor.InputType.DropDownList" @bind-Value="@DropdownValue" TValue="string">
+        <SfInPlaceEditor @ref="InPlaceObj" PrimaryKey="Employee" Name="Employee" Adaptor="Adaptors.UrlAdaptor" SaveUrl="https://ej2services.syncfusion.com/production/web-services/api/Editor/UpdateData" Type="Syncfusion.Blazor.InPlaceEditor.InputType.DropDownList" @bind-Value="@DropdownValue" TValue="string">
             <EditorComponent>
-                <SfDropDownList TValue="string" TItem="Games" Placeholder="Select employee" PopupHeight="200px" DataSource="@LocalData">
+                <SfDropDownList TValue="string" TItem="Employees" Placeholder="Select employee" PopupHeight="200px" DataSource="@LocalData">
                     <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
                 </SfDropDownList>
             </EditorComponent>t
@@ -388,26 +394,24 @@ The edited data is submitted to the server and you can see the new values gettin
 
 @code {
     SfInPlaceEditor<string> InPlaceObj;
-public string PreviousValue { get; set; }
-public string DropdownValue = "Andrew Fuller";
-public string CurrentValue { get; set; }
+    public string PreviousValue { get; set; }
+    public string DropdownValue = "Andrew";
+    public string CurrentValue { get; set; }
 
-    public class Games
+    public class Employees
     {
         public string ID { get; set; }
         public string Text { get; set; }
     }
-    List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Text= "American Football" },
-    new Games() { ID= "Game2", Text= "Badminton" },
-    new Games() { ID= "Game3", Text= "Basketball" },
-    new Games() { ID= "Game4", Text= "Cricket" },
-    new Games() { ID= "Game5", Text= "Football" },
-    new Games() { ID= "Game6", Text= "Golf" },
-    new Games() { ID= "Game7", Text= "Hockey" },
-    new Games() { ID= "Game8", Text= "Rugby"},
-    new Games() { ID= "Game9", Text= "Snooker" },
-    new Games() { ID= "Game10", Text= "Tennis"},
+    List<Employees> LocalData = new List<Employees> {
+    new Employees() { ID= "Andrew", Text= "Andrew" },
+    new Employees() { ID= "Margaret Hamilit", Text= "Margaret Hamilit" },
+    new Employees() { ID= "Fuller", Text= "Fuller" },
+    new Employees() { ID= "John Smith", Text= "John Smith" },
+    new Employees() { ID= "Victoria", Text= "Victoria" },
+    new Employees() { ID= "David", Text= "David" },
+    new Employees() { ID= "Johnson", Text= "Johnson" },
+    new Employees() { ID= "Rosy", Text= "Rosy"}
   };
 
     public void OnCreate(Object args)

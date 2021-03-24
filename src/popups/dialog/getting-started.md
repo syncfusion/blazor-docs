@@ -1,22 +1,26 @@
 # Getting Started
 
-This section briefly explains how to include a Dialog component in your Blazor Server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a Dialog component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor Server-Side Popups in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Dialog component, you can check on this video:
 `youtube:uSyGKuB8ghg`
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor.Popups` NuGet package to the application by using the `NuGet Package Manager`.
+* Install **Syncfusion.Blazor.Popups** NuGet package to the application by using the **NuGet Package Manager**.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
-
-* You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+  <environment include="Development">
+  ....
+  ....
+    <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+    <!---CDN--->
+    @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
+  </environment>
 </head>
 
 ```
@@ -26,15 +30,17 @@ To get start quickly with Blazor Dialog component, you can check on this video:
 ```html
 
 <head>
-     <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+   <environment include="Development">
+      <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+  </environment>
 </head>
 
 ```
 
 ## Adding component package to the application
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Popups` package.
+Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Popups** package.
 
 ```csharp
 
@@ -44,7 +50,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Popups` package
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the ConfigureServices function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 
@@ -92,8 +98,8 @@ The output will be as follows.
 
 ![Dialog Default](./images/default.png)
 
-> In the dialog control, max-height is calculated based on the dialog target element height. If the target property is not configured, the document.body is considered as a target. Therefore, to show a dialog in proper height, you need to add min-height to the target element.
-> If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, we can set the CSS style for the html and body to get the dialog height.
+> * In the dialog control, max-height is calculated based on the dialog target element height. If the **Target** property is not configured, the **document.body** is considered as a target. Therefore, to show a dialog in proper height, you need to add min-height to the target element.
+> * If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, we can set the CSS style for the html and body to get the dialog height.
 
 ```css
 

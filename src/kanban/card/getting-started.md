@@ -2,55 +2,38 @@
 
 # Getting Started in Blazor Card
 
-This section briefly explains about how to include a `Card` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Card` in your Blazor server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Card component, you can check on this video.
 `youtube:k8KSZIf5VPs`
 
 ## Importing Syncfusion Blazor component in the application
 
-You can use any one of the below standards to install the Syncfusion Blazor library in your application.
+1. Install **Syncfusion.Blazor.Card** NuGet package to the application by using the **NuGet Package Manager**.
 
-### Using Syncfusion Blazor individual NuGet Packages [New standard]
-
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
-
-1. Install **Syncfusion.Blazor.Cards** NuGet package to the application by using the `NuGet Package Manager`.
-
-2. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side style resources from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    </head>
-```
+<head>
+    <environment include="Development">
+    ....
+    ....
+        <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+        <!---CDN--->
+        @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
+   </environment>
+</head>
 
-> Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
-
-### Using Syncfusion.Blazor NuGet Package [Old standard]
-
-> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
-
-1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`.
-
-2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
-
-```html
-    <head>
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-         @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
-    </head>
 ```
 
 > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```html
-
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+   <environment include="Development">
+      <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+  </environment>
 </head>
 
 ```
@@ -68,6 +51,7 @@ Open `**~/_Imports.razor` file and import the `Syncfusion.Blazor.**`
 Open the **Startup.cs** file and add services required by Syncfusion components using **service.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
+
 using Syncfusion.Blazor;
 namespace BlazorApplication
 {
@@ -85,17 +69,9 @@ namespace BlazorApplication
 }
 ```
 
-**Note:** To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+## Adding Card component
 
-```csharp
-<head>
-    <script src="https://cdn.syncfusion.com/blazor/18.1.36-beta/dist/syncfusion-blazor.min.js"></script>
-</head>
-```
-
-## Adding Card component to the application
-
-Now, add the Syncfusion Blazor components in any web page (razor) in the Pages folder. For example, the Card component is added in the **~/Pages/Index.razor** page.
+To initialize the Card component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
 
 ```csharp
 <SfCard> Sample Card </SfCard>

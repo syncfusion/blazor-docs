@@ -59,6 +59,10 @@ By default, the `ShowCloseButton` is not enabled. You can enable it by setting t
 
 By default, the `ShowProgressBar` is not enabled. If it is enabled, it can visually indicate how long to get toast expires. Based on the `Timeout` property, progress bar will appear.
 
+### Progress bar direction
+
+By default, the `ProgressDirection` is set to "Rtl" and it will appear from right to left direction. You can change the progressDirection to "Ltr" to make it appear from left to right direction.
+
 ## Newest on top
 
 By default, the newly created toasts will append next with existing toasts. You can change the sequence like inserting before the toast by enabling the `NewestOnTop`.
@@ -72,7 +76,7 @@ Here, The following sample demonstrates the combination of the `Target`, `ShowCl
 
 <div class="control-section toast-default-section">
     <SfToast ID="toast_default" @ref="ToastObj" Title="File Downloading" Content="@ToastContent"
-             ShowCloseButton="true" Target="#toast_target" NewestOnTop="true" ShowProgressBar="true">
+             ShowCloseButton="true" ProgressDirection="Ltr" Target="#toast_target" NewestOnTop="true" ShowProgressBar="true">
         <ToastPosition X="Center"></ToastPosition>
     </SfToast>
 

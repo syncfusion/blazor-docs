@@ -80,7 +80,6 @@ The following code explains how to initialize a simple Toast in Razor page.
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Notifications
 
 <div class="col-lg-12 control-section toast-default-section">

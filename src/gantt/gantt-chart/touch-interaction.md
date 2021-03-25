@@ -12,7 +12,7 @@ The Gantt control supports to perform user interactions in mobile and tablet dev
 
 To perform `touch and hold` action on a element, refer to [`Tooltip Popup`](tooltip/#tooltip).
 
-## Context menu
+## Context Menu
 
 To perform `long press` action on a row, [`Context Menu`](context-menu/#context-menu) is opened, and then tap a menu item to trigger its action.
 
@@ -24,7 +24,7 @@ The following screenshot shows Gantt touch sorting,
 
 ![Multiple Sorting](images/multiple-sorting.png)
 
-## Column resize
+## Column Resize
 
 When the right edge of the column header cell is `tapped`, a floating handler will be visible over the right border of the column. To [`Resize`](columns/#column-resizing) the column, drag the floating handler as needed.
 
@@ -44,7 +44,7 @@ Action |Description
 [`Dialog editing`](managing-tasks/#dialog-editing) | To perform `double tap` on a specific row, initiate the edit dialog to be opened.
 [`Taskbar editing`](managing-tasks/#taskbar-editing) | Taskbar editing action is initiated using the `tap` action on the taskbar. <br> **Parent taskbar** : Once you tap on the parent taskbar, it will be changed to editing state. Perform only dragging action on parent taskbar editing. <br> ![Alt text](images/editing-parent.PNG) <br> **Child taskbar** : Once you tap the child taskbar, it will be changed to editing state. <br> ![Alt text](images/editing-state.PNG) <br> **Dragging taskbar** : To drag a taskbar to the left or right in editing state. <br> <br> **Resizing taskbar** : To resize a taskbar, drag the left/right resize icon. <br> <br> **Progress resizing** : To change the progress, drag the progress resize icon to the left or right direction.
 
-### Task dependency editing
+### Task Dependency Editing
 
 You can `tap` the left/right connector point to initiate `Task Dependencies`](managing-tasks/#task-dependencies) edit mode and again tap another taskbar to establish the dependency line between two taskbars.
 

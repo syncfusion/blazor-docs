@@ -109,11 +109,11 @@ Gantt Chart supports client-side exporting, which allows you to export its data 
 }
 ```
 
-## Customize the Excel export
+## Customize the Excel Export
 
 Gantt Chart Excel export allows the users to customize the exported document based on requirement.
 
-### Export hidden columns
+### Export Hidden Columns
 
 In Gantt Chart, the Excel export provides an option to export hidden columns by defining `IncludeHiddenColumn` as `true`.
 
@@ -356,7 +356,7 @@ To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
 
 > By default, material theme is applied to the exported Excel document.
 
-### File name for exported document
+### File Name for Exported Document
 
 You can set the required file name for the exported document by defining the `FileName` property in `ExcelExportProperties`.
 

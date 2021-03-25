@@ -21,7 +21,7 @@ The following ARIA attributes are used in Gantt:
 | aria-expanded | This attribute is assigned to the Gantt chart parent task row. The value is changed to `true` when the user clicks a parent taskbar to expand. After the user clicked a parent taskbar to collapse, the attribute value is changed to `false` |
 | aria-grabbed | This attribute is assigned to the taskbars of Gantt when the user tries to achieve taskbar editing |
 
-## Keyboard navigation
+## Keyboard Navigation
 
 Gantt functionalities can be interactive with keyboard shortcuts.
 

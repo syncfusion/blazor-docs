@@ -470,7 +470,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 [Changing culture and Adding Resx file in the application](https://blazor.syncfusion.com/documentation/gantt/globalization/#localization)
 
-## Right to left (RTL)
+## Right to Left (RTL)
 
 RTL provides an option to switch the text direction and layout of the Gantt component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the Below sample **EnableRtl** property is used to enable RTL in the Gantt.
 

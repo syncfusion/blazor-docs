@@ -1,6 +1,6 @@
 # Scheduling Tasks
 
-The Gantt provides support for automatic and manual task scheduling modes. It is used to indicate whether the start date and end date of all the tasks will be automatically validated or not. `TaskMode` is the property used to change the schedule mode of a task.
+By default Gantt tasks are validated based on the child tasks with some factors like working time, holidays, weekends and predecessors. The Gantt provides support for automatic and manual task scheduling modes. It is used to indicate whether the start date and end date of all the tasks will be automatically validated or not. `TaskMode` is the property used to change the schedule mode of a task.
 
 The Gantt control supports three types of mode. They are:
 
@@ -116,7 +116,7 @@ We can restrict this mode in predecessor validation alone. That is, we can autom
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" TaskMode="ScheduleMode.Manual" ValidateManualTasksOnLinking="true" Width="900px" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-            ParentID="ParentId" Dependency="Predecessor">
+            ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" AllowTaskbarEditing="true"></GanttEditSettings>
 </SfGantt>
@@ -206,103 +206,112 @@ We can restrict this mode in predecessor validation alone. That is, we can autom
 }
 ```
 
+![Alt text](images/manual.png)
+
 ## Custom
 
-When the `TaskMode` property is set as `Custom`, the scheduling mode for each tasks will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
+If we want to use some specific taskmode for specific tasks, Then we set the `TaskMode` property is set as `Custom`. So the scheduling mode for each tasks will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
 
 ```csharp
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" TaskMode="ScheduleMode.Custom" Toolbar="@(new List<string>() { "Add", "Cancel", "CollapseAll", "Delete", "Edit", "ExpandAll", "Update" })" Height="450px" Width="1000px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Manual="IsManual">
+    </GanttTaskFields>
+    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
+</SfGantt>
 
-import { Gantt, Toolbar, Edit, Selection } from '@syncfusion/ej2-gantt';
-
-Gantt.Inject(Toolbar, Edit, Selection);
-let GanttData: Object[]  = [
+@code{
+    public List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
     {
-        'TaskID': 1,
-        'TaskName': 'Parent Task 1',
-        'StartDate': new Date('02/27/2017'),
-        'EndDate': new Date('03/03/2017'),
-        'Progress': '40',
-        'isManual' : true,
-        'Children': [
-             { 'TaskID': 2, 'TaskName': 'Child Task 1', 'StartDate': new Date('02/27/2017'),
-             'EndDate': new Date('03/03/2017'), 'Progress': '40' },
-             { 'TaskID': 3, 'TaskName': 'Child Task 2', 'StartDate': new Date('02/26/2017'),
-             'EndDate': new Date('03/03/2017'), 'Progress': '40', 'isManual': true },
-             { 'TaskID': 4, 'TaskName': 'Child Task 3', 'StartDate': new Date('02/27/2017'),
-             'EndDate': new Date('03/03/2017'), 'Duration': 5, 'Progress': '40', }
-        ]
-    },
-    {
-        'TaskID': 5,
-        'TaskName': 'Parent Task 2',
-        'StartDate': new Date('03/05/2017'),
-        'EndDate': new Date('03/09/2017'),
-        'Progress': '40',
-        'isManual': true,
-        'Children': [
-             { 'TaskID': 6, 'TaskName': 'Child Task 1', 'StartDate': new Date('03/06/2017'),
-             'EndDate': new Date('03/09/2017'), 'Progress': '40' },
-             { 'TaskID': 7, 'TaskName': 'Child Task 2', 'StartDate': new Date('03/06/2017'),
-             'EndDate': new Date('03/09/2017'), 'Progress': '40', },
-             { 'TaskID': 8, 'TaskName': 'Child Task 3', 'StartDate': new Date('02/28/2017'),
-             'EndDate': new Date('03/05/2017'), 'Progress': '40', 'isManual': true },
-             { 'TaskID': 9, 'TaskName': 'Child Task 4', 'StartDate': new Date('03/04/2017'),
-             'EndDate': new Date('03/09/2017'), 'Progress': '40', 'isManual': true }
-        ]
-    },
-    {
-        'TaskID': 10,
-        'TaskName': 'Parent Task 3',
-        'StartDate': new Date('03/13/2017'),
-        'EndDate': new Date('03/17/2017'),
-        'Progress': '40',
-        'Children': [
-             { 'TaskID': 11, 'TaskName': 'Child Task 1', 'StartDate': new Date('03/13/2017'),
-             'EndDate': new Date('03/17/2017'), 'Progress': '40' },
-             { 'TaskID': 12, 'TaskName': 'Child Task 2', 'StartDate': new Date('03/13/2017'),
-             'EndDate': new Date('03/17/2017'), 'Progress': '40', },
-             { 'TaskID': 13, 'TaskName': 'Child Task 3', 'StartDate': new Date('03/13/2017'),
-             'EndDate': new Date('03/17/2017'), 'Progress': '40', },
-             { 'TaskID': 14, 'TaskName': 'Child Task 4', 'StartDate': new Date('03/12/2017'),
-             'EndDate': new Date('03/17/2017'), 'Progress': '40', 'isManual': true },
-             { 'TaskID': 15, 'TaskName': 'Child Task 5', 'StartDate': new Date('03/13/2017'),
-             'EndDate': new Date('03/17/2017'), 'Progress': '40' }
-        ]
+        this.TaskCollection = GetTaskCollection();
     }
-];
-let gantt: Gantt = new Gantt({
-    dataSource: GanttData,
-    taskFields: {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        endDate: 'EndDate',
-        dependency: 'Predecessor',
-        child: 'Children',
-        manual: 'isManual',
-    },
-    taskMode : 'Custom',
-    height: '450px',
-    toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Search'],
-    columns: [
-        { field: 'TaskID', visible: false},
-        {field: 'TaskName'},
-        { field: 'isManual'}
-    ],
-    validateManualTasksOnLinking: true,
-    treeColumnIndex: 1,
-    editSettings: {
-        allowEditing: true,
-        allowDeleting: true,
-        allowTaskbarEditing: true,
-        showDeleteConfirmDialog: true
-    },
-});
-gantt.appendTo('#Gantt');
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string IsManual { get; set; }
+    }
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+        new TaskData() {
+            TaskId = 1,
+            TaskName = "Project initiation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21)
+        },
+        new TaskData() {
+            TaskId = 2,
+            TaskName = "Identify Site location",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "5",
+            Progress = 30,
+            ParentId = 1,
+            IsManual="true",
+        },
+        new TaskData() {
+            TaskId = 3,
+            TaskName = "Perform soil test",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "4",
+            Progress = 40,
+            IsManual="true",
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 4,
+            TaskName = "Soil test approval",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "5",
+            Progress = 30,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 5,
+            TaskName = "Project estimation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            IsManual="true",
+        },
+        new TaskData() {
+            TaskId = 6,
+            TaskName = "Develop floor plan for estimation",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "3",
+            Progress = 30,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 7,
+            TaskName = "List materials",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "3",
+            Progress = 40,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 8,
+            TaskName = "Estimation approval",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "3",
+            Progress = 30,
+            IsManual="true",
+            ParentId = 5
+        }
+    };
+    return Tasks;
+    }
+}
 
 ```
+
+![Alt text](images/custom.png)
 
 ## Unscheduled Tasks
 
@@ -326,7 +335,7 @@ A milestone is a task that has no start and end dates, but it has a duration val
 
 ![Alt text](images/milestone.png)
 
-## Define unscheduled tasks in data source
+## Define Unscheduled Tasks in Data Source
 
 You can define the various types of unscheduled tasks in the data source as follows
 
@@ -503,9 +512,9 @@ The following screen shot shows working time range in Gantt Chart component.
 >* Individual tasks can lie between any time within the defined working time range of the project.
 >* The `DayWorkingTime` property is used to define the working time for the whole project.
 
-## Weekend/Non-working days
+## Weekend or Non-working Days
 
-Non-working days/weekend are used to represent the non-productive days in a project. You can define the non-working days in a week using the `WorkWeek` property in Gantt Chart.
+Non-working days/weekend are used to represent the non-productive days in a project. You can exclude the non-working days in a work week using the `WorkWeek` property in Gantt Chart.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

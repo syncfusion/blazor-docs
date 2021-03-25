@@ -297,8 +297,9 @@ Following table explains how the work, duration and resource unit fields will ge
 
 Task Type | Changes in Duration | Changes in work | Changes in Resource Units
 -----|-----|-----|-----
-Fixed Duration | Work field updates | Resource unit updates| Work field updates
-Fixed Work | Resource unit updates. Note: For manually scheduled task work will update.| Duration field updates. Note: For manually scheduled task resource unit updates. |Duration will update. Note: For manually scheduled task work field updates.
-Fixed Unit | Work field updates | Duration field updates. Note: For manually scheduled task resource unit updates.| Duration will update. Note: For manually scheduled task work field updates.
+Fixed Duration | Will updates work value | Will updates Resource unit | Will updates work value
+Fixed Work | Will updates Resource unit. Note: For manually scheduled task work will update.| Will updates Duration value. Note: For manually scheduled task resource unit updates. | Will updates Duration value. Note: For manually scheduled task work field updates.
+Fixed Unit | Will updates work value | Will updates Duration value. Note: For manually scheduled task resource unit updates.| Will updates Duration value. Note: For manually scheduled task work field updates.
 
->Note: 1. Fixed Unit is the default TaskType in Gantt. 2. The above calculations are not applicable for Milestones.
+> Fixed Unit is the default TaskType in Gantt.
+> The above calculations are not applicable for Milestones.

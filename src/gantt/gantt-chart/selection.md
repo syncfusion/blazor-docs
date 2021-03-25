@@ -7,7 +7,7 @@ The Gantt Chart component supports two types of selection that can be set by usi
 * `Single`: Sets a single value by default and allows only selection of a single row or a cell.
 * `Multiple`: Allows you to select multiple rows or cells. To perform the multi-selection, press and hold the CTRL key and click the desired rows or cells.
 
-## Selection mode
+## Selection Mode
 
 The Gantt Chart component supports three types of selection modes that can be set by using the `SelectionSettings.Mode`. They are:
 
@@ -110,7 +110,7 @@ The Gantt Chart component supports three types of selection modes that can be se
 }
 ```
 
-## Row selection
+## Row
 
 The row selection in the Gantt Chart component can be enabled or disabled using the `AllowSelection` property. You can get the selected row object using the `GetSelectedRecords` method. The following code example shows how to disable the row selection in Gantt Chart.
 
@@ -208,7 +208,7 @@ The row selection in the Gantt Chart component can be enabled or disabled using 
 
 > `Row` selection is the default type of Gantt Chart selection mode.
 
-### Selecting a row on initial load
+### Selecting a Row on Initial Load
 
 You can select a row at the time of loading by setting the index of the row to the `SelectedRowIndex` property. Find the following code example for details.
 
@@ -306,7 +306,7 @@ You can select a row at the time of loading by setting the index of the row to t
 
 ![Alt text](images/initialLoadSelection.png)
 
-### Selecting a row dynamically
+### Selecting a Row dynamically
 
 You can also select a row dynamically using the `SelectRow` method. The following code demonstrates how to select a row dynamically by clicking the custom button.
 
@@ -410,7 +410,7 @@ You can also select a row dynamically using the `SelectRow` method. The followin
 
 ![Alt text](images/selectRow.gif)
 
-### Multiple row selection
+### Multiple Row Selection
 
 You can select multiple rows by setting the `SelectionSettings.Type` property to `Multiple`. You can select more than one row by holding down the CTRL key while selecting multiple rows. The following code example explains how to enable multiple selection in Gantt Chart.
 
@@ -510,7 +510,7 @@ You can select multiple rows by setting the `SelectionSettings.Type` property to
 
 ![Alt text](images/multiRow.png)
 
-### Selecting multiple rows dynamically
+### Selecting Multiple Rows dynamically
 
 You can also select rows dynamically using the `SelectRows` method. The following code demonstrates how to select rows dynamically by clicking the custom button.
 
@@ -616,7 +616,7 @@ You can also select rows dynamically using the `SelectRows` method. The followin
 
 ![Alt text](images/multiRow.gif)
 
-## Cell selection
+## Cell
 
 You can select a cell in the Gantt Chart component by setting the `SelectionSettings.Mode` property to cell. You can get the selected cell information using the `GetSelectedRowCellIndexes` method. This method returns the result as an object collection, which has `CellIndexes` and `RowIndex` information of the selected cells.
 
@@ -718,7 +718,7 @@ Find the code example below to enable the cell selection in Gantt Chart.
 
 ![Alt text](images/singleCell.png)
 
-### Selecting multiple cells
+### Selecting Multiple Cells
 
 You can select multiple cells by setting the `SelectionSettings.Type` property to multiple and the `SelectionSettings.Mode` property to `Cell`. Multiple cells can be selected by holding the CTRL key and selecting the cells. The following code example demonstrates how to select multiple cells.
 
@@ -818,7 +818,7 @@ You can select multiple cells by setting the `SelectionSettings.Type` property t
 
 ![Alt text](images/multiCell.png)
 
-### Selecting a cell dynamically
+### Selecting a Cell dynamically
 
 You can select a cell dynamically using the `SelectCell` method. Refer to the following code example for details.
 
@@ -924,7 +924,7 @@ You can select a cell dynamically using the `SelectCell` method. Refer to the fo
 
 ![Alt text](images/selectCelldynamic.gif)
 
-### Customize cell selection action
+### Customize Cell Selection action
 
 While selecting a cell in Gantt Chart, the `CellSelecting` and `CellSelected` event will be triggered. The `CellSelecting` event will be triggered on initialization of cell selection action, and you can get the current selecting cell information to prevent the selection of a particular cell in a particular row. The `CellSelected` event will be triggered on completion of cell selection action, and you can get the current selected cell’s information. The following code example demonstrates how to prevent the selection of the cell using the `CellSelecting` event.
 
@@ -1029,7 +1029,7 @@ While selecting a cell in Gantt Chart, the `CellSelecting` and `CellSelected` ev
 }
 ```
 
-## Toggle selection
+## Toggle Selection
 
 The toggle selection allows you to select and deselect a specific row or cell. To enable toggle selection, set the `EnableToggle` property of the `SelectionSettings` to `true`. If you click the selected row or cell, then it will be deselected and vice versa.
 By default, the `EnableToggle` property is set to `false`.
@@ -1135,7 +1135,7 @@ By default, the `EnableToggle` property is set to `false`.
 }
 ```
 
-## Clear selection
+## Clear Selection
 
 You can clear the selected cells and selected rows by using a method called `ClearSelection`. The following code example demonstrates how to clear the selected rows in Gantt Chart.
 
@@ -1242,7 +1242,7 @@ You can clear the selected cells and selected rows by using a method called `Cle
 }
 ```
 
-## Get selected row indexes and records
+## Get Selected Row Indexes and Records
 
 You can get the selected row indexes by using the `GetSelectedRowIndexes` method. And by using `GetSelectedRecords` method, you can get the selected record details.
 

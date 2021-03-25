@@ -2,7 +2,7 @@
 
 The Gantt Chart component has a support to display a tooltip for various UI elements like taskbar, timeline cells, and grid cells
 
-## Enable tooltip
+## Enable Tooltip
 
 In the Gantt Chart component, you can enable or disable the mouse hover tooltip for the following UI elements using the `GanttTooltipSettings.ShowTooltip` property:
 
@@ -135,7 +135,7 @@ Event Marker Tooltip
 
 > The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
 
-## Timeline cells tooltip
+## Timeline Cells Tooltip
 
 In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the `GanttTimelineSettings.ShowTooltip` property. The default value of this property is true. The following code example shows how to enable the timeline cells tooltip in Gantt Chart.
 
@@ -227,18 +227,16 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
             })
         }
     };
-
     return Tasks;
-}
-}
+    }
 }
 ```
 
 ![Alt text](images/timelinecellTooltip.png)
 
-## Cell tooltip
+## Cell Tooltip
 
-You can enable or disable the Grid cell tooltip using the `Columns.ClipMode` property.
+You can enable or disable the Grid cell tooltip using the `GanttColumn.ClipMode` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -340,7 +338,7 @@ You can enable or disable the Grid cell tooltip using the `Columns.ClipMode` pro
 }
 ```
 
-### Clip mode
+### Clip Mode
 
 The clip mode provides options to display its overflow cell content and it can be defined by the `Columns.ClipMode` property.
 
@@ -353,11 +351,11 @@ The following are three types of `ClipMode`:
 > NOTE
 > By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
 
-## Tooltip template
+## Tooltip Template
 
-### Taskbar tooltip
+### Taskbar Tooltip
 
-The default tooltip in the Gantt Chart component can be customized using the `GanttTooltipSettings.Taskbar` property. You can map the template script element’s ID value or template string directly to this property.
+The default tooltip in the Gantt Chart component can be customized using the `GanttTooltipSettings.TaskbarTemplate` property. You can map the template script element’s ID value or template string directly to this property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -462,7 +460,7 @@ The below screenshot shows the output of above code example.
 
 ![Alt text](images/taskbarTemplate.png)
 
-### Taskbar editing tooltip
+<!-- Taskbar editing tooltip
 
 The taskbar editing tooltip can be customized using the `GanttTooltipSettings.Editing` property. The following code example shows how to customize the taskbar editing tooltip in Gantt Chart.
 
@@ -560,11 +558,11 @@ The taskbar editing tooltip can be customized using the `GanttTooltipSettings.Ed
 
 The below screenshot shows the output of above code example.
 
-![Alt text](images/editingTemplate.png)
+![Alt text](images/editingTemplate.png) -->
 
-### Baseline tooltip
+### Baseline Tooltip
 
-A baseline tooltip can be customized using the `GanttTooltipSettings.Baseline` property. The following code example shows how to customize the baseline tooltip in Gantt Chart.
+A baseline tooltip can be customized using the `GanttTooltipSettings.BaselineTemplate` property. The following code example shows how to customize the baseline tooltip in Gantt Chart.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -576,10 +574,10 @@ A baseline tooltip can be customized using the `GanttTooltipSettings.Baseline` p
     <GanttTooltipSettings ShowTooltip="true" TValue="TaskData">
         <BaselineTemplate>
             @{
-                <div>Baseline StartDate: @context.BaselineStartDate</div>
+                <div>Baseline StartDate: @context.BaselineStartDate.ToShortDateString()</div>
             }
         </BaselineTemplate>
-    </GanttTooltipSettings>GanttTooltipSettings>
+    </GanttTooltipSettings>
 </SfGantt>
 @code{
     public List<TaskData> TaskCollection { get; set; }
@@ -596,8 +594,8 @@ A baseline tooltip can be customized using the `GanttTooltipSettings.Baseline` p
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public DateTime? BaselineStartDate { get; set; }
-        public DateTime? BaselineEndDate { get; set; }
+        public DateTime BaselineStartDate { get; set; }
+        public DateTime BaselineEndDate { get; set; }
         public List<TaskData> SubTasks { get; set; }
     }
 
@@ -668,3 +666,111 @@ A baseline tooltip can be customized using the `GanttTooltipSettings.Baseline` p
 The following screenshot shows the template for baseline in Gantt Chart.
 
 ![Alt text](images/baselineTemplate.png)
+
+### Manual Taskbar Tooltip
+
+A manual taskbar tooltip can be customized using the `GanttTooltipSettings.ManualTaskbarTemplate` property. The following code example shows how to customize the manual taskbar tooltip in Gantt Chart.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" Height="450px" TaskMode="ScheduleMode.Manual" ValidateManualTasksOnLinking="true" Width="900px" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll" })">
+<GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+        ParentID="ParentId" Dependency="Predecessor">
+</GanttTaskFields>
+<GanttEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" AllowTaskbarEditing="true"></GanttEditSettings>
+<GanttTooltipSettings ShowTooltip="true" TValue="TaskData">
+        <ManualTaskbarTemplate>
+            @{
+                <div> StartDate: @context.StartDate.ToShortDateString()</div>
+                <div> EndDate: @context.EndDate.ToShortDateString()</div>
+            }
+        </ManualTaskbarTemplate>
+    </GanttTooltipSettings>
+</SfGantt>
+
+@code{
+public List<TaskData> TaskCollection { get; set; }
+protected override void OnInitialized()
+{
+    this.TaskCollection = GetTaskCollection();
+}
+public class TaskData
+{
+    public int TaskId { get; set; }
+    public string TaskName { get; set; }
+    public DateTime StartDate { get; set; }
+    public DateTime EndDate { get; set; }
+    public string Duration { get; set; }
+    public int Progress { get; set; }
+    public string Predecessor { get; set; }
+    public int? ParentId { get; set; }
+}
+public static List <TaskData> GetTaskCollection() {
+    List <TaskData> Tasks = new List <TaskData> () {
+        new TaskData() {
+            TaskId = 1,
+            TaskName = "Project initiation",
+            StartDate = new DateTime(2019, 03, 28),
+            EndDate = new DateTime(2019, 07, 28),
+            Duration="4"
+        },
+        new TaskData() {
+            TaskId = 2,
+            TaskName = "Identify Site location",
+            StartDate = new DateTime(2019, 03, 29),
+            Progress = 30,
+            ParentId = 1,
+            Duration="2"
+        },
+        new TaskData() {
+            TaskId = 3,
+            TaskName = "Perform soil test",
+            StartDate = new DateTime(2019, 03, 29),
+            ParentId = 1,
+            Duration="4"
+        },
+        new TaskData() {
+            TaskId = 4,
+            TaskName = "Soil test approval",
+            StartDate = new DateTime(2019, 03, 29),
+            Duration = "4",
+            Progress = 30,
+            ParentId = 1,
+        },
+        new TaskData() {
+            TaskId = 5,
+            TaskName = "Project estimation",
+            StartDate = new DateTime(2019, 03, 29),
+            EndDate = new DateTime(2019, 04, 2),
+            Duration="4"
+        },
+        new TaskData() {
+            TaskId = 6,
+            TaskName = "Develop floor plan for estimation",
+            StartDate = new DateTime(2019, 03, 29),
+            Duration = "3",
+            Progress = 30,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 7,
+            TaskName = "List materials",
+            StartDate = new DateTime(2019, 04, 01),
+            Duration = "3",
+            Progress = 30,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 8,
+            TaskName = "Estimation approval",
+            StartDate = new DateTime(2019, 04, 01),
+            Duration = "2",
+            ParentId = 5
+        }
+    };
+    return Tasks;
+}
+}
+```
+
+![Alt text](images/manualTaskbar.png)

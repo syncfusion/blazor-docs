@@ -1,14 +1,14 @@
 # Managing Tasks
 
-The Gantt Chart component has options to dynamically insert, delete, and update tasks in a project. The primary key column is necessary to manage the tasks and perform CRUD operations in Gantt Chart. To define the primary key, set the `Columns.IsPrimaryKey` property to `true` in the column.
+The Gantt Chart component has options to dynamically insert, delete, and update tasks in a project. The primary key column is necessary to manage the tasks and perform CRUD operations in Gantt Chart. To define the primary key, set the `GanttColumn.IsPrimaryKey` property to `true` in the column.
 
-## Adding new tasks
+## Adding New Tasks
 
-Tasks can be dynamically added to the Gantt Chart project by enabling the `EditSettings.AllowAdding` property.
+Tasks can be dynamically added to the Gantt Chart project by enabling the `GanttEditSettings.AllowAdding` property.
 
 ### Toolbar
 
-A row can be added to the Gantt Chart component from the toolbar while the `EditSettings.AllowAdding` property is set to `true`. After clicking the toolbar add icon, you should provide the task information in the add dialog.
+A row can be added to the Gantt Chart component from the toolbar while the `GanttEditSettings.AllowAdding` property is set to `true`. After clicking the toolbar add icon, you should provide the task information in the add dialog.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -107,7 +107,7 @@ A row can be added to the Gantt Chart component from the toolbar while the `Edit
 
 > By default, a new row will be added to the top most row in the Gantt Chart component.
 
-### Context menu
+### Context Menu
 
 A row can also be added above, below or child of the selected row by using context menu support. For this, we need to enable the property `EnableContextMenu`.
 
@@ -222,14 +222,14 @@ You can add rows to the Gantt Chart component dynamically using the `AddRecord` 
 @using Syncfusion.Blazor.Gantt
 <button @onclick="AddRow">Add Row</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true"></GanttEditSettings>
 </SfGantt>
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public TaskData record = new TaskData() { TaskId = 40, TaskName = "New Added Record", StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 50};
+    public TaskData record = new TaskData() { TaskId = 9, TaskName = "New Added Record", StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 50};
 
     public void AddRow()
     {
@@ -249,71 +249,73 @@ You can add rows to the Gantt Chart component dynamically using the `AddRecord` 
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
+
         new TaskData() {
             TaskId = 1,
             TaskName = "Project initiation",
             StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30
-                },
-            })
+            EndDate = new DateTime(2019, 04, 21)
+        },
+        new TaskData() {
+            TaskId = 2,
+            TaskName = "Identify Site location",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "0",
+            Progress = 30,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 3,
+            TaskName = "Perform soil test",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "4",
+            Progress = 40,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 4,
+            TaskName = "Soil test approval",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "0",
+            Progress = 30,
+            ParentId = 1
         },
         new TaskData() {
             TaskId = 5,
             TaskName = "Project estimation",
             StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                }
-            })
+            EndDate = new DateTime(2019, 04, 21)
+        },
+        new TaskData() {
+            TaskId = 6,
+            TaskName = "Develop floor plan for estimation",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "3",
+            Progress = 30,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 7,
+            TaskName = "List materials",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "3",
+            Progress = 40,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 8,
+            TaskName = "Estimation approval",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "0",
+            Progress = 30,
+            ParentId = 5
         }
     };
-
     return Tasks;
 }
 }
@@ -321,19 +323,18 @@ You can add rows to the Gantt Chart component dynamically using the `AddRecord` 
 
 ![Alt text](images/addRecord.gif)
 
-## Editing tasks
+## Editing Tasks
 
-The editing feature can be enabled in the Gantt Chart component by enabling the `EditSettings.AllowEditing` and `EditSettings.AllowTaskbarEditing` properties.
+The editing feature can be enabled in the Gantt Chart component by enabling the `GanttEditSettings.AllowEditing` and `GanttEditSettings.AllowTaskbarEditing` properties.
 
 The following editing options are available to update the tasks in the Gantt chart:
 * Cell
 * Dialog
 * Taskbar
-* Dependency links
 
-### Cell editing
+### Cell Editing
 
-By setting the edit mode to auto using the `EditSettings.Mode` property, the tasks can be edited by double-clicking the Tree Grid cells.
+By setting the edit mode to auto using the `GanttEditSettings.Mode` property, the tasks can be edited by double-clicking the Tree Grid cells.
 
 The following code example shows you how to enable the cell editing in Gantt Chart component.
 
@@ -432,17 +433,17 @@ The following code example shows you how to enable the cell editing in Gantt Cha
 
 `Note:` When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes, the cells to editable mode. Double-clicking on the chart side opens, the edit dialog for editing the task details.
 
-![Alt text](images/enableCellEditing1.png)
-
 double click action on Tree Grid side
 
-![Alt text](images/enableCellEditing2.png)
+![Alt text](images/enableCellEditing1.png)
 
 double click action on chart side
 
-### Dialog editing
+![Alt text](images/enableCellEditing2.png)
 
-Modify the task details through the edit dialog by setting the edit mode.
+### Dialog Editing
+
+Modify the task details through the edit dialog by setting the edit mode as `Dialog`.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -541,13 +542,13 @@ Modify the task details through the edit dialog by setting the edit mode.
 
 ![Alt text](images/enableDialogEditing.png)
 
-#### Sections or tabs in dialog
+#### Sections or Tabs in Dialog
 
-In the Gantt Chart dialog, you can define the required tabs or editing sections using the `AddDialogFields` and `EditDialogFields` properties. Every tab is defined using the `Type` property.
+In the Gantt Chart dialog, you can define the required tabs or editing sections using the `GanttAddDialogFields` and `GanttEditDialogFields` properties. Every tab is defined using the `GanttAddDialogField.Type` or `GanttEditDialogField.Type` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add" })" Height="450px" Width="700px">
+<SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add", "Edit" })" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" Child="SubTasks" ResourceInfo="ResourceId" Notes="Notes"
                      Dependency="Predecessor">
@@ -701,47 +702,46 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
 }
 ```
 
-![Alt text](images/add-edit-dialogtab.png)
-
 Tabs in Edit Dialog
 
-![Alt text](images/add-dialogtab.png)
+![Alt text](images/add-edit-dialogtab.png)
 
 Tabs in Add Dialog
 
-#### Limiting data fields in general tab
+![Alt text](images/add-dialogtab.png)
 
-In the Gantt Chart dialog, you can make only specific data source fields visible for editing by using the `AddDialogFields` and `EditDialogFields` properties. The data fields are defined with `Type` and `Fields` properties.
+#### Limiting Data Fields in General Tab
+
+In the Gantt Chart dialog, you can make only specific data source fields visible for editing by using the `GanttAddDialogFields` and `GanttEditDialogFields` properties. The data fields are defined with `GanttEditDialogField.Type` and `GanttEditDialogField.Fields` properties.
 
 `Note:` You can also define the custom fields in the add/edit dialog General tab using the `Fields` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add" })" Height="450px" Width="700px">
+<SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add", "Edit" })" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" Child="SubTasks" ResourceInfo="ResourceId" Notes="Notes"
                      Dependency="Predecessor">
     </GanttTaskFields>
-    <GanttResourceFields TResources="TaskResources" Name="ResourceName" Id="ResourceId" Resources="@ResourceCollection"></GanttResourceFields>
-    <GanttEditSettings AllowAdding="true" AllowEditing="true" Mode="EditMode.Dialog">
+    <GanttResourceFields TResources="TaskResources" Name="ResourceName" Id="ResourceId" Resources="@ResourceCollections"></GanttResourceFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog">
     </GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="TaskId" Width="50"></GanttColumn>
+        <GanttColumn Field="TaskId" Width="100"></GanttColumn>
         <GanttColumn Field="TaskName"></GanttColumn>
-        <GanttColumn Field="isParent" HeaderText="Custom Column"></GanttColumn>
         <GanttColumn Field="StartDate"></GanttColumn>
         <GanttColumn Field="Duration"></GanttColumn>
         <GanttColumn Field="Progress"></GanttColumn>
     </GanttColumns>
     <GanttEditDialogFields>
-        <GanttEditDialogField Type="DialogFieldType.General" HeaderText="General"
-               Fields="@(new string[]{ "TaskId", "TaskName", "isParent" })"></GanttEditDialogField>
-        <GanttEditDialogField Type="DialogFieldType.Notes"></GanttEditDialogField>
+        <GanttEditDialogField Type="GanttDialogFieldType.General" HeaderText="General"
+               Fields="@(new string[]{ "TaskId", "TaskName", "Duration" })"></GanttEditDialogField>
+        <GanttEditDialogField Type="GanttDialogFieldType.Notes"></GanttEditDialogField>
     </GanttEditDialogFields>
     <GanttAddDialogFields>
-        <GanttAddDialogField Type="DialogFieldType.General" HeaderText="General Tab"
-                Fields="@(new string[]{ "TaskId", "TaskName", "isParent" })"></GanttAddDialogField>
-        <GanttAddDialogField Type="DialogFieldType.Dependency"></GanttAddDialogField>
+        <GanttAddDialogField Type="GanttDialogFieldType.General" HeaderText="General Tab"
+                Fields="@(new string[]{ "TaskId", "TaskName", "Duration" })"></GanttAddDialogField>
+        <GanttAddDialogField Type="GanttDialogFieldType.Dependency"></GanttAddDialogField>
     </GanttAddDialogFields>
 </SfGantt>
 
@@ -751,7 +751,7 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
-        this.ResourceCollections = GetResourceCollection();
+        this.ResourceCollections = GetResourceCollections();
     }
 
     public class TaskData
@@ -824,7 +824,6 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
                     Predecessor = "2",
                     ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=2}, new TaskResources() { ResourceId=3} },
                     Notes = "Obtain an engineered soil test of lot where construction is planned.From an engineer or company specializing in soil testing"
-
                 },
                 new TaskData() {
                     TaskId = 4,
@@ -882,9 +881,9 @@ The following screenshot show the output of above code example.
 
 ![Alt text](images/customfields.png)
 
-### Taskbar editing
+### Taskbar Editing
 
-Modify the task details through user interaction, such as resizing and dragging the taskbar, by enabling the `AllowTaskbarEditing` property.
+Modify the task details through user interaction, such as resizing and dragging the taskbar, by enabling the `GanttEditSettings.AllowTaskbarEditing` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -980,13 +979,12 @@ Modify the task details through user interaction, such as resizing and dragging 
 }
 ```
 
-### Task dependencies
+### Task Dependencies
 
 In the Gantt Chart component, you can update the dependencies between tasks and link the tasks interactively. The task dependencies can be mapped from the data source using the `Dependency` property.
 
 You can update the task dependencies using the following ways:
 
-* Mouse interactions: Using connector points in the taskbar, you can perform drag and drop action to create task dependency links.
 * Edit dialog: Create or remove the task dependencies using the `Dependency` tab in the edit dialog.
 * Cell editing: Create or remove the task links using cell editing.
 
@@ -1091,23 +1089,19 @@ The following code example demonstrates how to enable task dependency editing in
 }
 ```
 
-![Alt text](images/mouse-interactions.png)
-
-Updating with mouse interaction action
+Updating with cell Edit
 
 ![Alt text](images/cell-editing.png)
 
-Updating with cell Edit
+Updating with Dialog
 
 ![Alt text](images/edit-dialog.png)
 
-Updating with Dialog
+### Update Task Values using Method
 
-### Update task values using method
+Tasks' value can be dynamically updated by using the `UpdateRecordByID` method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
 
-Tasks' value can be dynamically updated by using the `UpdateRecordById` method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
-
->NOTE: Using the `UpdateRecordById` method, you cannot update the task ID value.
+>NOTE: Using the `UpdateRecordByID` method, you cannot update the task ID value.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -1122,7 +1116,7 @@ Tasks' value can be dynamically updated by using the `UpdateRecordById` method. 
     public SfGantt<TaskData> Gantt;
     public void UpdateRecord()
     {
-        this.Gantt.UpdateRecordByID(new TaskData() { TaskId = 3, TaskName = "Updated by index value", StartDate = new DateTime(2019, 04, 02), Duration = "4",Progress = 50});
+        this.Gantt.UpdateRecordByID(new TaskData() { TaskId = 3, TaskName = "Updated by ID value", Progress = 60});
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1209,6 +1203,8 @@ Tasks' value can be dynamically updated by using the `UpdateRecordById` method. 
 ```
 
 ![Alt text](images/updateRecord.gif)
+
+## Cell Edit Type and its Params
 
 The `GanttColumn.EditType` is used to customize the edit type of the particular column.
 You can set the `GanttColumn.EditType` based on data type of the column.
@@ -1348,7 +1344,7 @@ Component |Example
 
 > If edit type is not defined in the column, then it will be considered as the **StringEdit** type (Textbox component).
 
-## Cell Edit Template
+### Cell Edit Template
 
 The cell edit template is used to add a custom component for a particular column when the column is edited.
 
@@ -1471,7 +1467,7 @@ The following code example describes, how to define the Edit template for a part
 }
 ```
 
-### Disable editing for particular column
+## Disable Editing for Particular Column
 
 You can disable editing for particular columns, by using the `GanttColumn.AllowEditing` property.
 
@@ -1576,7 +1572,7 @@ In the following demo, editing is disabled for the `TaskName` column.
 }
 ```
 
-## Deleting tasks
+## Deleting Tasks
 
 A task delete option in the Gantt Chart component can be enabled by enabling the `EdiSettings.AllowDeleting` property. Tasks can be deleted by clicking the delete toolbar item or using the `DeleteRecord` method. You can call this method dynamically on any custom actions like button click. The following code example shows how to enable the delete option in the Gantt Chart component.
 
@@ -1683,9 +1679,9 @@ A task delete option in the Gantt Chart component can be enabled by enabling the
 
 > You should set the `AllowDeleting` value to `true` to delete the record dynamically.
 
-## Delete confirmation message
+### Delete confirmation message
 
-Delete confirmation message is used to get confirmation from users before deleting a task. This confirmation message can be enabled by setting the `EditSettings.ShowDeleteConfirmDialog` property to true.
+Delete confirmation message is used to get confirmation from users before deleting a task. This confirmation message can be enabled by setting the `GanttEditSettings.ShowDeleteConfirmDialog` property to true.
 
 The following code snippet explains how to enable the delete confirmation message in Gantt Chart.
 
@@ -1906,7 +1902,7 @@ namespace GanttEF.Models
 
 ```
 
-The following sections will detail the steps needed to be followed when working with server-side and client-side applications individually. You can also find samples attached at the end of each section for server-side applications and client-side applications.
+The following sections will give details about the steps needed to be followed when working with server-side and client-side applications individually. You can also find samples attached at the end of each section for server-side applications and client-side applications.
 
 ### Entity Framework in Server-Side Application
 
@@ -2192,7 +2188,7 @@ You can find the sample for client-side application using entity framework [`her
 
 ## Indent and Outdent
 
-Indent and Outdent of a task are used to update the level of task in the hierarchical order of the task. It can be performed by enabling the `EditSettings.AllowEditing` property.
+Indent and Outdent of a task are used to update the level of task in the hierarchical order of the task. It can be performed by enabling the `GanttEditSettings.AllowEditing` property.
 
 `Indent` - Selected task can be indented to the level of task to the hierarchical order. It can be performed by using in-built context menu or toolbar items. It can also be invoked by using the `indent` method dynamically on any action like external button click. The following code example shows how to enable indent option in the Gantt chart.
 

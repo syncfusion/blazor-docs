@@ -15,7 +15,7 @@ The event markers in the Gantt Chart component is used to highlight the importan
 </SfGantt>
 
 @code{
-    public DateTime Event = new DateTime(2019, 04, 17);
+    public DateTime Event = new DateTime(2019, 04, 11);
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {

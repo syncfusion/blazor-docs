@@ -1,8 +1,8 @@
 # Filtering
 
-Filtering allows you to view specific or related records based on filter criteria. This can be done in the Gantt Chart component by using the filter menu and toolbar search. To enable filtering in the Gantt Chart component, set the `AllowFiltering` to `true`. Menu filtering support can be configured using the `FilterSettings` property and toolbar searching can be configured using the `SearchSettings` property.
+Filtering allows you to view specific or related records based on filter criteria. This can be done in the Gantt Chart component by using the filter menu and toolbar search. To enable filtering in the Gantt Chart component, set the `AllowFiltering` to `true`. Menu filtering support can be configured using the `GanttFilterSettings` property and toolbar searching can be configured using the `GanttSearchSettings` property.
 
-## Menu filtering
+## Menu Filtering
 
 The Gantt Chart component provides menu-filtering support for each column. You can enable the filter menu by setting the `AllowFiltering` to `true`. The filter menu UI will be rendered based on its column type, which allows you to filter data. You can filter the records with different operators.
 
@@ -103,9 +103,9 @@ The Gantt Chart component provides menu-filtering support for each column. You c
 > The `AllowFiltering` property should be set to `true` to enable the filter menu.
 > Setting the `Columns.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
 
-### Filter hierarchy modes
+### Filter Hierarchy Modes
 
-The Gantt Chart supports a set of filtering modes with the `FilterSettings.HierarchyMode` property. The following are the types of filter hierarchy modes available in the Gantt Chart component:
+The Gantt Chart supports a set of filtering modes with the `GanttFilterSettings.HierarchyMode` property. The following are the types of filter hierarchy modes available in the Gantt Chart component:
 
 * `Parent`: This is the default filter hierarchy mode in Gantt Chart. The filtered records are displayed with its parent records. If the filtered records do not have any parent record, then only the filtered records will be displayed.
 
@@ -208,9 +208,9 @@ The Gantt Chart supports a set of filtering modes with the `FilterSettings.Hiera
 }
 ```
 
-### Initial filter
+### Initial Filter
 
-To apply the filter at initial rendering, set the filter `Predicate` collections in the `FilterSettings.Columns` property.
+To apply the filter at initial rendering, set the filter `Predicate` collections in the `GanttFilterSettings.Columns` property.
 
 ```csharp
 @using Syncfusion.Blazor
@@ -314,9 +314,9 @@ To apply the filter at initial rendering, set the filter `Predicate` collections
 
 ![Alt text](images/initialFilter.png)
 
-### Filter operators
+### Filter Operators
 
-The filter operator for a column can be defined in the `FilterSettings.Columns.Operator` property.
+The filter operator for a column can be defined in the `GanttFilterSettings.Columns.Operator` property.
 
 The available operators and their supported data types are:
 
@@ -332,11 +332,11 @@ greaterthanorequal|Checks whether the value is greater than or equal to the spec
 lessthan |Checks whether the value is less than the specified value. |Number &#124; Date
 lessthanorequal |Checks whether the value is less than or equal to the specified value. |Number &#124; Date
 
-> By default, the `FilterSettings.Columns.Operator` value is `equal`
+> By default, the `GanttFilterSettings.Columns.Operator` value is `equal`
 
 ### Diacritics
 
-By default, the Gantt Chart component ignores the diacritic characters while filtering. To include diacritic characters, set the `FilterSettings.IgnoreAccent` to true.
+By default, the Gantt Chart component ignores the diacritic characters while filtering. To include diacritic characters, set the `GanttFilterSettings.IgnoreAccent` to true.
 
 In the following sample, type **Perform** in the **TaskName** column to filter diacritic characters.
 
@@ -435,7 +435,7 @@ In the following sample, type **Perform** in the **TaskName** column to filter d
 
 ![Alt text](images/diacritics.png)
 
-### Filtering a specific column by method
+### Filtering a Specific Column by Method
 
 You can filter the columns dynamically by using the `FilterByColumn` method.
 
@@ -539,7 +539,7 @@ You can filter the columns dynamically by using the `FilterByColumn` method.
 
 ![Alt text](images/filterColumn.gif)
 
-### Clear filtered columns
+### Clear Filtered Columns
 
 You can clear all the filtering condition done in the Gantt Chart component by using the `ClearFiltering` method.
 The following code snippet explains the above behaviour.
@@ -752,10 +752,10 @@ The following screenshot shows the output of searching for string in Gantt Chart
 
 ![Alt text](images/Searching.png)
 
-### Initial search
+### Initial Search
 
-In the Gantt Chart component, you can load a task with some search criteria by using the `SearchSettings` property.
-To apply a search at initial rendering, set the value for `Fields`, `Operator`, `Key`, and `IgnoreCase` in the `SearchSettings` property.
+In the Gantt Chart component, you can load a task with some search criteria by using the `GanttSearchSettings` property.
+To apply a search at initial rendering, set the value for `Fields`, `Operator`, `Key`, and `IgnoreCase` in the `GanttSearchSettings` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -853,9 +853,9 @@ To apply a search at initial rendering, set the value for `Fields`, `Operator`, 
 
 ![Alt text](images/initialLoadSearch.png)
 
-### Search operators
+### Search Operators
 
-The search operator can be defined in the `SearchSettings.Operator` property to configure specific searching.
+The search operator can be defined in the `GanttSearchSettings.Operator` property to configure specific searching.
 
 The following operators are supported in searching:
 
@@ -867,7 +867,7 @@ contains |Checks whether a value contains the specified value.
 equal |Checks whether a value is equal to the specified value.
 notEqual |Checks for the values that are not equal to the specified value.
 
-> By default, the `SearchSettings.Operator` value is *contains*.
+> By default, the `GanttSearchSettings.Operator` value is *contains*.
 
 ### Search by external button
 
@@ -975,9 +975,9 @@ To search the Gantt Chart records from an external button, invoke the `Search` m
 
 >Note: You should set the `AllowFiltering` property to `true` for searching the content externally.
 
-### Search specific columns
+### Search Specific Columns
 
-By default, the Gantt Chart component searches all the columns. You can search specific columns by defining the specific columns' field names in the `SearchSettings.Fields` property.
+By default, the Gantt Chart component searches all the columns. You can search specific columns by defining the specific columns' field names in the `GanttSearchSettings.Fields` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -1075,7 +1075,7 @@ By default, the Gantt Chart component searches all the columns. You can search s
 
 > In above sample, you can search only `TaskName` and `Duration` column values.
 
-### Clear search by external button
+### Clear Search by External Button
 
 You can pass the `empty` string to `Search` method, to clear the searched Gantt records from external button.
 

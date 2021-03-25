@@ -1,4 +1,4 @@
-# Data markers
+# Data Markers
 
 Data markers are a set of events used to represent the schedule events for a task. Data markers are defined in data source as array of objects, and this value is mapped to the Gantt control using the `GanttTaskFields.Indicators` property. You can represent more than one data marker in a task.
 

@@ -2,9 +2,9 @@
 
 In Gantt Chart, the resources are represented by staff, equipment and materials etc. In Gantt Chart component you can show or allocate the resources (human resources) for each task.
 
-## Resource collection
+## Resource Collection
 
-The resource collection contains details about resources that are used in the project. Resources are JSON object that contains id and name of the resources and this collection is mapped to the Gantt Chart component using the `GanttResourceFields.Resources` property. Id, name and unit field of the resources are mapped by using the `GanttResourceFields.Id` , `GanttResourceFields.Name` and `GanttResourceFields.Unit` properties. The following code snippets shows resource collection and how it assigned to Gantt Chart component.
+The resource collection contains details about resources that are used in the project. Resources are List of TResources object that contains id, name and unit of the resources and this collection is mapped to the Gantt Chart component using the `GanttResourceFields.Resources` property. Id, name and unit field of the resources are mapped by using the `GanttResourceFields.Id` , `GanttResourceFields.Name` and `GanttResourceFields.Unit` properties. The following code snippets shows resource collection and how it assigned to Gantt Chart component.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -145,27 +145,15 @@ The resource collection contains details about resources that are used in the pr
 }
 ```
 
-## Assign resource
+## Assign Resource
 
-We can assign resources for a task at initial load, using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the `ResourceInfo` property.
+We can assign resources for a task at initial load, using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the `GanttTaskFields.ResourceInfo` property.
 
-### Assign resource alone
+* Gantt TValue for Resource mapping collection name should be same as `GanttTaskFields.ResourceInfo`.
+* Gantt Resource mapping collection should have the value for Id. Both Name and Unit values are optional.
+* If the unit is not specified for specific resource, the amount of work done will be consider as 100% by default, In such cases, the resource unit will not be displayed in Gantt UI.
 
-If the unit is not specified for specific resource, the amount of work done will be consider as 100% by default. In such cases, the resource unit will not be displayed in Gantt UI.
-
-```csharp
-    new TaskData() {
-        TaskId = 6,
-        TaskName = "Develop floor plan for estimation",
-        StartDate = new DateTime(2019, 03, 29),
-        Duration = "3",
-        Progress = 30,
-        ParentId = 5,
-        Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} }
-    }
-```
-
-### Assign resource with unit
+### Assign Resource with Unit
 
 We can assign the quantity of work done by the resources for the specific task as like below code snippet.
 
@@ -345,9 +333,9 @@ The following code snippet shows how to assign the resource for each task and ma
 
 ![Alt text](images/assignResource.png)
 
-## Add/Edit resource collection
+## Add / Edit Resource Collection
 
-By using cell edit option, we can add/remove the resource for particular task and also by using dialog edit support we can add/remove  resources.
+By using cell editing or dialog editing, we can add/remove the resource for particular task.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -508,10 +496,10 @@ By using cell edit option, we can add/remove the resource for particular task an
 
 `Note:` When the edit mode is set as `Auto`, on performing double click action on Tree Grid side the cells will be changed to editable mode and on performing double click action on chart side the edit dialog will appear for editing the task details. By using this support we can add/remove the resource for particular task using both cell and edit dialog
 
-![Alt text](images/editingResources1.png)
-
 Editing resource with cell edit
 
-![Alt text](images/editingResources2.png)
+![Alt text](images/editingResources1.png)
 
 Editing resource with edit dialog
+
+![Alt text](images/editingResources2.png)

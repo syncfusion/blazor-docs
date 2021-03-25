@@ -7,7 +7,7 @@
 * [Managing Tasks](gantt-chart/managing-tasks.md)
 * [Task Dependencies](gantt-chart/task-dependencies.md)
 * [Sorting](gantt-chart/sorting.md)
-* [Context Menu](gantt-chart/managing-tasks.md)
+* [Context Menu](gantt-chart/context-menu.md)
 * [Baseline](gantt-chart/baseline.md)
 * [Time Line](gantt-chart/time-line.md)
 * [Event Markers](gantt-chart/event-markers.md)

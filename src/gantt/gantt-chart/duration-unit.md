@@ -1,4 +1,4 @@
-# Duration units
+# Duration Units
 
 In Gantt Chart, the tasks’ duration value can be measured by the following duration units,
 
@@ -12,7 +12,7 @@ And each task in the project can be defined with different duration units and th
 * Using `GanttTaskFields.DurationUnit` property, to map the duration unit data source field.
 * Defining the duration unit value along with the duration field in the data source.
 
-## Mapping the duration unit field
+## Mapping the Duration Unit Field
 
 The below code snippet explains the mapping of duration unit data source field to the Gantt Chart component using the `GanttTaskFields.DurationUnit` property.
 
@@ -113,7 +113,7 @@ The below code snippet explains the mapping of duration unit data source field t
 > NOTE
 The default value of the `DurationUnit` property is `day`.
 
-## Defining duration unit along with duration field
+## Defining Duration Unit along With Duration Field
 
 Duration units for the tasks can also be defined along with the duration values, the below code snippet explains the duration unit for a task along with duration value,
 

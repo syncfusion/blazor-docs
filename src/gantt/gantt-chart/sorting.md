@@ -105,9 +105,9 @@ The following screenshot shows the output of multicolumn sorting in Gantt Chart 
 > * Gantt Chart columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
 > * To disable sorting for a particular column, set the `Columns.AllowSorting` property to false.
 
-## Sorting column on Gantt Chart initialization
+## Sorting Column on Gantt Chart Initialization
 
-The Gantt Chart component can be rendered with sorted columns initially, and this can be achieved by using the `GanttSortSettings` property. You can add columns that are sorted initially in the `GanttSortSettings.Columns` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
+The Gantt Chart component can be rendered with sorted columns initially, and this can be achieved by using the `GanttSortSettings` property. You can add columns that are sorted initially in the `GanttSortSettings.GanttSortDescriptors` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -207,9 +207,9 @@ The Gantt Chart component can be rendered with sorted columns initially, and thi
 }
 ```
 
-## Sorting column dynamically
+## Sorting Column dynamically
 
-Columns in the Gantt Chart component can be sorted dynamically using the `SortColumn` method. The following code example demonstrates how to invoke the `SortColumn` method by clicking the custom button.
+Columns in the Gantt Chart component can be sorted dynamically using the `SortByColumn` method. The following code example demonstrates how to invoke the `SortByColumn` method by clicking the custom button.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -223,7 +223,7 @@ Columns in the Gantt Chart component can be sorted dynamically using the `SortCo
     public SfGantt<TaskData> Gantt;
     public void Sorting()
     {
-        this.Gantt.SortColumn("TaskName",SortDirection.Descending,false);
+        this.Gantt.SortByColumn("TaskName", Syncfusion.Blazor.Grids.SortDirection.Descending, false);
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -311,7 +311,7 @@ Columns in the Gantt Chart component can be sorted dynamically using the `SortCo
 
 ![Alt text](images/sortColumn.gif)
 
-## Clear all the sorted columns dynamically
+## Clear all the Sorted Columns dynamically
 
 In the Gantt Chart component, you can clear all the sorted columns and return to previous position using the `ClearSorting` public method. The following code snippet shows how to clear all the sorted columns by clicking the custom button.
 
@@ -421,7 +421,7 @@ In the Gantt Chart component, you can clear all the sorted columns and return to
 
 ![Alt text](images/clearSort.gif)
 
-## Sorting events
+## Sorting Events
 
 During the sort action, the Gantt Chart component triggers two events. The `OnActionBegin` event triggers before the sort action starts, and the `OnActionComplete` event triggers after the sort action is completed.
 
@@ -434,11 +434,11 @@ During the sort action, the Gantt Chart component triggers two events. The `OnAc
 </SfGantt>
 
 @code{
-    public void OnActionBegin(ActionBeginArgs<TaskData> args)
+    public void OnActionBegin(GanttActionEventArgs<TaskData> args)
     {
         Console.WriteLine(args.RequestType + " " + args.Type);
     }
-    public void OnActionComplete(ActionCompleteArgs<TaskData> args)
+    public void OnActionComplete(GanttActionEventArgs<TaskData> args)
     {
         Console.WriteLine(args.RequestType + " " + args.Type);
     }
@@ -553,7 +553,7 @@ The following code snippets explains how to achieve this.
     public SfGantt<TaskData> Gantt;
     public void Sorting()
     {
-        this.Gantt.SortColumn("CustomColumn", SortDirection.Descending, false);
+        this.Gantt.SortByColumn("CustomColumn", SortDirection.Descending, false);
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

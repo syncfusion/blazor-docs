@@ -2,7 +2,7 @@
 
 In the Gantt Chart component, timeline is used to represent the project duration as individual cells with defined unit and formats.
 
-## Timeline view modes
+## Timeline View Modes
 
 Gantt Chart contains the following in-built timeline view modes:
 
@@ -11,11 +11,21 @@ Gantt Chart contains the following in-built timeline view modes:
 * Month
 * Year
 
-Timescale mode in Gantt Chart can be defined by using `TimelineViewMode` property and also we can define timescale mode of top tier and bottom tier by using `TopTier.Unit` and `BottomTier.Unit` properties.
+Timescale mode in Gantt Chart can be defined by using `TimelineViewMode` property and also we can define timescale mode of top tier and bottom tier by using `GanttTopTierSettings.Unit` and `GanttBottomTierSettings.Unit` properties.
 
-### Week timeline mode
+Following table explains how top tier and bottom tier unit changes as per `TimelineViewMode` property.
 
-In the `Week` timeline mode, the upper part of the schedule header displays the weeks, whereas the bottom half of the header displays the days. Refer to the following code example.
+Timeline ViewMode | Top tier Unit | Bottom tier Unit
+-----|-----|-----
+Year | Year | Month
+Month | Month | Week
+Week | Week | Day
+Day | Day | Hour
+Hour | Hour | Minute
+
+### Week Timeline Mode
+
+In the `Week` timeline mode, top tier of the schedule header displays the weeks, where as bottom tier of the header displays the days. Refer the following code example.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -107,9 +117,9 @@ In the `Week` timeline mode, the upper part of the schedule header displays the 
 
 ![Alt text](images/weekMode.png)
 
-### Month timeline mode
+### Month Timeline Mode
 
-In the `Month` timeline mode, the upper part of the schedule header displays the months, whereas the bottom header of the schedule displays its corresponding weeks. Refer to the following code example.
+In the `Month` timeline mode, top tier of the schedule header displays the months, whereas bottom tier of the schedule header displays its corresponding weeks. Refer the following code example.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -117,7 +127,7 @@ In the `Month` timeline mode, the upper part of the schedule header displays the
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
-    <GanttTimelineSettings TimelineUnitSize=100 TimelineViewMode="TimelineViewMode.Month"></GanttTimelineSettings>
+    <GanttTimelineSettings TimelineUnitSize=120 TimelineViewMode="TimelineViewMode.Month"></GanttTimelineSettings>
 </SfGantt>
 
 @code{
@@ -201,9 +211,9 @@ In the `Month` timeline mode, the upper part of the schedule header displays the
 
 ![Alt text](images/monthMode.png)
 
-### Year timeline mode
+### Year Timeline Mode
 
-In the `Year` timeline mode, the upper schedule header displays the years whereas, the bottom header displays its corresponding months. Refer to the following code example.
+In the `Year` timeline mode, top tier of the schedule header displays the years, where as bottom tier of the schedule header displays its corresponding months. Refer the following code example.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -296,9 +306,9 @@ In the `Year` timeline mode, the upper schedule header displays the years wherea
 
 ![Alt text](images/yearMode.png)
 
-### Day timeline mode
+### Day Timeline Mode
 
-In the `Day` timeline mode, the upper part of the header displays the days whereas, the bottom schedule header displays its corresponding hours. Refer to the following code example.
+In the `Day` timeline mode, top tier of the schedule header displays the days, where as the bottom tier of the schedule header displays its corresponding hours. Refer the following code example.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -338,21 +348,21 @@ In the `Day` timeline mode, the upper part of the header displays the days where
                 new TaskData() {
                     TaskId = 2,
                     TaskName = "Identify site location",
-                    StartDate = new DateTime(2019, 04, 02, 9, 0, 0),
+                    StartDate = new DateTime(2019, 04, 02, 09, 0, 0),
                     Duration = "5",
                     Progress = 70,
                 },
                 new TaskData() {
                     TaskId = 3,
                     TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02, 9, 0, 0),
+                    StartDate = new DateTime(2019, 04, 02, 09, 0, 0),
                     Duration = "5",
                     Progress = 50,
                 },
                 new TaskData() {
                     TaskId = 4,
                     TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02, 9, 0, 0),
+                    StartDate = new DateTime(2019, 04, 02, 09, 0, 0),
                     Duration = "5",
                     Progress = 50,
                 },
@@ -391,9 +401,9 @@ In the `Day` timeline mode, the upper part of the header displays the days where
 
 ![Alt text](images/dayMode.png)
 
-### Hour timeline mode
+### Hour Timeline Mode
 
-An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the upper schedule header displays hour scale and the lower schedule header displays its corresponding minutes.
+An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the top tier of the schedule header displays hour scale and the bottom tier of the header displays its corresponding minutes.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -485,9 +495,9 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the upp
 
 ![Alt text](images/hourMode.png)
 
-## Top tier and Bottom tier
+## Top Tier and Bottom Tier
 
-Gantt Chart component contains two tier layout in timeline, we can customize the top tier and bottom tier using `TopTier` and `BottomTier` properties. Timeline tier's unit can be defined by using `Unit` property and `Format` property was used to define date format of timeline cell and `Count` property was used to define how many unit will be combined as single cell.
+Gantt Chart component contains two tier layout in timeline, we can customize the top tier and bottom tier using `GanttTopTierSettings` and `GanttBottomTierSettings` properties. Timeline tier's unit can be defined by using `Unit` property and `Format` property was used to define date format of timeline cell and `Count` property was used to define how many unit will be combined as single cell.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -588,7 +598,7 @@ Gantt Chart component contains two tier layout in timeline, we can customize the
 
 ![Alt text](images/topBottomTier.png)
 
-### Combining timeline cells
+### Combining Timeline Cells
 
 In Gantt Chart, timeline cells in top tier and bottom tier can be combined with number of timeline units, this can be acheived by using `TopTier.Count` and `BottomTier.Count` properties. Please refer the below sample.
 
@@ -684,7 +694,7 @@ In Gantt Chart, timeline cells in top tier and bottom tier can be combined with 
 
 ![Alt text](images/combineCells.png)
 
-### Format value of timeline cell
+### Customize Header Timeline Cells
 
 In the Gantt control, you can format the value of top and bottom timeline cells using the standard date format string or the custom formatter method. This can be done using the `GanttTopTierSettings.Format`, `GanttTopTierSettings.Formatter`, `GanttBottomTierSettings.Format` and `GanttBottomTierSettings.Formatter` properties. The following example shows how to use the formatter method for timeline cells.
 
@@ -808,9 +818,9 @@ In the Gantt control, you can format the value of top and bottom timeline cells 
 }
 ```
 
-## Timeline cell width
+## Timeline Cell Width
 
-In the Gantt Chart component, you can define the width value of timeline cell using the `GanttTimelineSettings.TimelineUnitSize` property. This value will be set to the bottom timeline cell, and the width value of top timeline cell will be calculated automatically based on bottom tier cell width using the `TopTier.Unit` and `GanttTimelineSettings.TimelineUnitSize` properties. Refer to the following example.
+In the Gantt Chart component, you can define the width value of timeline cell using the `GanttTimelineSettings.TimelineUnitSize` property. This value will be set to the bottom timeline cell, and the width value of top timeline cell will be calculated automatically based on bottom tier cell width using the `TopTier.Unit` and `GanttTimelineSettings.TimelineUnitSize` properties. Refer the following example.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -908,7 +918,7 @@ In the Gantt Chart component, you can define the width value of timeline cell us
 
 ![Alt text](images/timelineWidth.png)
 
-## Week start day customization
+## Week Start Day Customization
 
 In the Gantt Chart component, you can customize the week start day using the `WeekStartDay` property. By default,the `WeekStartDay` is set to 0, which specifies the Sunday as a start day of the week. But, you can customize the week start day by using the following code example.
 
@@ -1008,7 +1018,7 @@ In the Gantt Chart component, you can customize the week start day using the `We
 
 ![Alt text](images/weekStartDay.png)
 
-## Customize automatic timescale update action
+## Customize Automatic Timescale Update action
 
 In the Gantt Chart component, the schedule timeline will be automatically updated when the tasks date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the `UpdateTimescaleView` property.
 
@@ -1110,7 +1120,7 @@ In the Gantt Chart component, the schedule timeline will be automatically update
 
 ## Zooming
 
-The zooming support provides options to increase or decrease the width of timeline cells and also provides options to change the timeline units dynamically. This support enables you to view the tasks in a project clearly from minute to decade timespan. To enable the zooming features, define the `ZoomIn`, `ZoomOut`, and `ZoomToFit` items to toolbar items collections, and this action can be performed on external actions such as button click using the `ZoomIn`, `ZoomOut`, and `FitToProject` built-in methods. The following zooming options are available to view the project:
+Gantt Chart have 25 predefined zooming timespan levels from year timespan to hour timespan. This support enables you to view the tasks in a project clearly from minute to decade timespan. To enable the zooming features, define the `ZoomIn`, `ZoomOut`, and `ZoomToFit` items to toolbar items collections. The following zooming options are available to view the project:
 
 ### Zoom in
 
@@ -1124,7 +1134,7 @@ This support is used to increase the timeline width and timeline unit from minut
 
 ### Zoom to fit
 
-This support is used to view all the tasks available in a project within available area on the chart part of Gantt Chart. When users click the `ZoomToFit` icon, then all the tasks are rendered within the available chart container width.
+This support is used to view all the tasks available in a project to specific timespan which is compatible with available area on the chart part of Gantt Chart. When users click the `ZoomToFit` icon, then all the tasks are rendered within the available chart container width.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -1229,12 +1239,9 @@ This support is used to view all the tasks available in a project within availab
 
 ## Zoom action by methods
 
-You can perform the various zoom actions dynamically or on external click action using the following methods:
-* Zoom in - `ZoomIn`
-* Zoom out - `ZoomOut`
-* Fit to project - `FitToProject`
+Zooming action also can be performed on external actions such as button click using the `ZoomIn()`, `ZoomOut()`, and `FitToProject()` built-in methods.
 
-```csharp
+<!-- ```csharp
 @using Syncfusion.Blazor.Gantt
 <button @onclick="ZoomIn">Zoom In</button>
 <button @onclick="ZoomOut">Zoom Out</button>
@@ -1347,6 +1354,6 @@ You can perform the various zoom actions dynamically or on external click action
     return Tasks;
 }
 }
-```
+``` -->
 
 ![Alt text](images/zoomMethods.gif)

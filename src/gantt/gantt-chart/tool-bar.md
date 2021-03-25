@@ -2,7 +2,7 @@
 
 The Gantt Chart component provides the toolbar support to handle Gantt Chart actions. The `Toolbar` property accepts the collection of built-in toolbar items and `ItemModel` objects for custom toolbar items.
 
-## Built-in toolbar items
+## Built-in Toolbar Items
 
 Built-in toolbar items execute standard actions of the Gantt Chart component, and these items can be added to toolbar by defining the `Toolbar` as a collection of built-in items. It renders the button with icon and text.
 
@@ -124,7 +124,7 @@ The following table shows built-in toolbar items and its actions.
 
 > * The `Toolbar` has options to define both built-in and custom toolbar items.
 
-## Custom toolbar items
+## Custom Toolbar Items
 
 Custom toolbar items can be added to the toolbar by defining the `Toolbar` property as a collection of `ItemModels`.
 Actions for this customized toolbar items are defined in the `OnToolbarClick` event.
@@ -242,7 +242,7 @@ By default, the custom toolbar items are at left position. You can change the po
 
 ![Alt text](images/customToolbar.png)
 
-## Built-in and custom items in toolbar
+## Built-in and Custom Items in Toolbar
 
 The Gantt Chart component has an option to use both built-in and custom toolbar items at the same time.
 
@@ -354,7 +354,7 @@ In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar
 
 ![Alt text](images/builtin-customToolbar.png)
 
-## Enable or disable toolbar items
+## Enable or Disable Toolbar Items
 
 You can enable or disable the toolbar items by using the `EnableItems` method.
 
@@ -388,11 +388,11 @@ You can enable or disable the toolbar items by using the `EnableItems` method.
     }
     public void EnableToolbar()
     {
-        this.Gantt.EnableItems(new List<string>() { "quickfilter", "clearfilter" },true);
+        this.Gantt.EnableItems(new List<int>() { 0,1 }, true);
     }
     public void DisableToolbar()
     {
-        this.Gantt.EnableItems(new List<string>() { "quickfilter", "clearfilter" },false);
+        this.Gantt.EnableItems(new List<int>() { 0,1 }, false);
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

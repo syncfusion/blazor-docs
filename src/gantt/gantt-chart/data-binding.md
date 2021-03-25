@@ -1,25 +1,22 @@
 # Data Binding
 
-The Gantt Chart component uses `DataManager` for binding the data source, which supports both RESTful JSON data services and local JavaScript object array. The `DataSource` property can be assigned either with the instance of DataManager or JavaScript object array collection. The Gantt Chart component supports binding two types of data:
-* Local data
+The Gantt Chart uses [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The `DataSource` value can be assigned either with the property values from [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or list of business objects.
+It supports the following kinds of data binding method:
+
+* List binding
 * Remote data
 
-## Local data
+> When using `DataSource` as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding then the **TValue** must be provided explicitly in the gantt component.
 
-To bind local data to Gantt Chart, you can assign a JavaScript object array to the `DataSource` property. The local data source can also be provided as an instance of the `DataManager`.
+## List Binding
 
-In local data binding, the data source for rendering the Gantt Chart component is retrieved from the same application locally.
+To bind list binding to the gantt, you can assign a IEnumerable object to the `DataSource` property. The list data source can also be provided as an instance of the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using[`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
-The following are the two types of data binding possible with the Gantt Chart component:
-
-* Hierarchical data binding.
-* Self-referential data binding (Flat data).
-
-### Hierarchical data binding
+### Hierarchical data Binding
 
 The `Child` property is used to map the child records in hierarchical data.
 
-The following code example shows how to bind the hierarchical local data into the Gantt Chart component.
+The following code example shows how to bind the hierarchical list data into the Gantt Chart component.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -108,13 +105,12 @@ public static List<TaskData> GetTaskCollection()
             })
         }
     };
-
     return Tasks;
 }
 }
 ```
 
-### Self-referential data binding (Flat data)
+### Self-Referential / Flat Data Binding
 
 The Gantt Chart component can be bound with self-referential data by mapping the data source field values to the `Id` and `ParentID` properties.
 
@@ -215,7 +211,7 @@ The Gantt Chart component can be bound with self-referential data by mapping the
 }
 ```
 
-### ExpandoObject binding
+### ExpandoObject Binding
 
 Gantt is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the Gantt as list of ExpandoObject.
 
@@ -296,9 +292,16 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
 }
 ```
 
-## Remote data
+## Remote Data
 
-To bind remote data to the Gantt Chart component, assign service data as an instance of `DataManager` to the `DataSource` property.
+To bind remote data to Gantt component, assign service data as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the `DataSource` property or by using[`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source,  provide the endpoint **Url**.
+
+ > When using [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding then the **TValue** must be provided explicitly in the Gantt component.
+> By default, [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **ODataAdaptor** for remote data-binding.
+
+### Web API
+
+You can use **WebApiAdaptor** to bind datagrid with Web API created using **OData** endpoint.
 
 ```csharp
 @using Syncfusion.Blazor
@@ -326,54 +329,7 @@ To bind remote data to the Gantt Chart component, assign service data as an inst
 
 ![Alt text](images/remote-data.png)
 
-### URL Adaptor
-
-In Gantt, we can fetch data from SQL database using `ADO.NET` Entity Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data we are using `UrlAdaptor` of DataManager property to call the server method and get back resultant data in JSON format. We can know more about `UrlAdaptor` from [`here`](https://blazor.syncfusion.com/documentation/data/adaptors/#url-adaptor).
-
-> Please refer the [link](https://docs.microsoft.com/en-us/aspnet/core/blazor/blazor-server-ef-core?view=aspnetcore-5.0) to create the `ADO.NET` Entity Data Model in Visual studio,
-
-We can define data source for Gantt as instance of DataManager using `Url` property of DataManager. Please Check the below code snippet to assign data source to Gantt.
-
-```csharp
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Gantt
-
-<SfGantt TValue="TaskData" Height="450px" Width="700px">
-     <SfDataManager Url="/Home/UrlDatasource" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-        Progress="Progress" ParentID="ParentId">
-    </GanttTaskFields>
-</SfGantt>
-
-@code {
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-}
-```
-
-> * The above provided url is given for reference purpose. In that place you can provide your service url.
-
-The response object from the Web API should contain properties, **Items** and **Count**, whose values are a collection of entities and total count of the entities, respectively.
-
-The sample response object should look like this:
-
-```csharp
-{
-    Items: [{..}, {..}, {..}, ...],
-    Count: 830
-}
-```
-
-### Sending additional parameters to the server
+### Sending Additional Parameters to the Server
 
 To add a custom parameter to the data request, use the addParams method of Query class. Assign the Query object with additional parameters to the datagrid's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 

@@ -342,7 +342,6 @@ The edited data is submitted to the server and you can see the new values gettin
 
 ```csharp
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.InPlaceEditor
 

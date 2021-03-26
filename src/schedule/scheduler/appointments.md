@@ -455,6 +455,42 @@ Appointments can be rescheduled to any time by dragging and dropping them onto t
 
 > By default, drag and drop action is applicable on all Scheduler views, except Agenda and Month-Agenda view.
 
+### Drag and drop multiple appointments
+
+We can drag and drop multiple appointments by enabling the `AllowMultiDrag` property. We can select multiple appointments by holding the CTRL key. Once the events are selected, we can leave the CTRL key and start dragging the event.
+
+We can also drag multiple events from one resource to another resource. In this case, if all the selected events are in the different resources, then all the events should be moved to the single resource that is related to the target event.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" AllowMultiDrag="true" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0)},
+        new AppointmentData{ Id = 2, Subject = "Testing", StartTime = new DateTime(2020, 1, 31, 12, 0, 0) , EndTime = new DateTime(2020, 1, 31, 13, 0, 0)}
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
 ### Disable the drag action
 
 By default, you can drag and drop the events within any of the applicable scheduler views, and to disable it, set **false** to the `AllowDragAndDrop` property.

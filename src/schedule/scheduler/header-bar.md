@@ -172,3 +172,65 @@ We can also customize the date header by using `OnRenderCell` event. In the `OnR
     }
 }
 ```
+
+## TimelineYear header customization
+
+We can customize the day header cells and month header cells in the TimelineYear view of the Scheduler using `DayHeaderTemplate` and `MonthHeaderTemplate`. The `DayHeaderTemplate` option is used to customize the day header cells of the TimelineYear view in both Vertical and Horizontal orientations. The `MonthHeaderTemplate` option is used to customize the month header cells of the TimelineYear view in both Vertical and Horizontal orientations.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+@using System.Globalization
+
+<div>
+    <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleTemplates>
+            <DayHeaderTemplate>
+                <div>@(getDayHeaderText((context as TemplateContext).Date))
+                </div>
+            </DayHeaderTemplate>
+            <MonthHeaderTemplate>
+                <div>@(getMonthHeaderText((context as TemplateContext).Date))</div>
+            </MonthHeaderTemplate>
+        </ScheduleTemplates>
+        <ScheduleViews>
+            <ScheduleView Option="View.TimelineYear" MaxEventsPerRow="2" Orientation="Orientation.Vertical" DisplayName="Vertical Year">
+            </ScheduleView>
+            <ScheduleView Option="View.TimelineYear" MaxEventsPerRow="2" Orientation="Orientation.Horizontal" DisplayName="Horizontal Year">
+            </ScheduleView>
+        </ScheduleViews>
+        <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    </SfSchedule>
+</div>
+
+
+@code{
+    private DateTime CurrentDate = new DateTime(2020, 3, 10);
+    public static string getDayHeaderText(DateTime date)
+    {
+        return date.ToString("dddd", CultureInfo.InvariantCulture);
+    }
+    public static string getMonthHeaderText(DateTime date)
+    {
+        return date.ToString("MMM", CultureInfo.InvariantCulture);
+    }
+    List<AppointmentData> DataSource = new List<AppointmentData>
+{
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 4, 0, 0, 0) , EndTime = new DateTime(2020, 3, 5, 0, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2020, 5, 1, 9, 30, 0) , EndTime = new DateTime(2020, 5, 1, 12, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2020, 1, 2, 9, 30, 0) , EndTime = new DateTime(2020, 1, 2, 12, 0, 0) }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```

@@ -1,6 +1,6 @@
 # Getting Started
 
-This section briefly explains how to include a **TimePicker** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
+This section briefly explains about how to include a [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side TextBox](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly TextBox](./getting-started-with-blazor-webassembly) documentation pages for configuration specifications.
 
 To get start quickly with Blazor TimePicker component, you can check on this video.
 
@@ -12,12 +12,12 @@ To get start quickly with Blazor TimePicker component, you can check on this vid
 
 > Please ensure to check the `Include prerelease` option for our Beta release.
 
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
  ```html
     <head>
             <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-            @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
+            <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
     </head>
 ```
 
@@ -38,30 +38,29 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Calendars` packag
 @using Syncfusion.Blazor.Calendars
 ```
 
-## Add SyncfusionBlazor service in Startup.cs
+## Add SyncfusionBlazor service in Program.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open the **Program.cs** file and add services required by Syncfusion components using  **builder.Services.AddSyncfusionBlazor()** method.
 
 ```csharp
 using Syncfusion.Blazor;
 
 namespace BlazorApplication
 {
-    public class Startup
+    public class Program
     {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
+        public static async Task Main(string[] args)
         {
             ....
             ....
-            services.AddSyncfusionBlazor();
+            builder.Services.AddSyncfusionBlazor();
+            await builder.Build().RunAsync();
         }
     }
 }
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/wwwroot/index.html** page.
 
  ```html
     <head>

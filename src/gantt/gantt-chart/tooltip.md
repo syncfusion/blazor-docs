@@ -117,21 +117,21 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 </style>
 ```
 
-![Alt text](images/taskbar-tooltip.png)
-
 Taskbar Tooltip
 
-![Alt text](images/dependency-tooltip.png)
+![Alt text](images/taskbar-tooltip.png)
 
 Dependency Tooltip
 
-![Alt text](images/baseline-tooltip.png)
+![Alt text](images/dependency-tooltip.png)
 
 Baseline Tooltip
 
-![Alt text](images/event-marker-tooltip.png)
+![Alt text](images/baseline-tooltip.png)
 
 Event Marker Tooltip
+
+![Alt text](images/event-marker-tooltip.png)
 
 > The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
 
@@ -340,7 +340,7 @@ You can enable or disable the Grid cell tooltip using the `GanttColumn.ClipMode`
 
 ### Clip Mode
 
-The clip mode provides options to display its overflow cell content and it can be defined by the `Columns.ClipMode` property.
+The clip mode provides options to display its overflow cell content and it can be defined by the `GanttColumn.ClipMode` property.
 
 The following are three types of `ClipMode`:
 

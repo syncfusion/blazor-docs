@@ -1,12 +1,6 @@
----
-title: "Touch Interaction"
-component: "Gantt"
-description: "Learn how to work with Essential JS 2 Gantt control in mobile devices."
----
-
 # Touch Interaction
 
-The Gantt control supports to perform user interactions in mobile and tablet devices. This section explains how to interact with the Gantt features in touch-enabled devices.
+The Gantt Chart component supports to perform user interactions in mobile and tablet devices. This section explains how to interact with the Gantt features in touch-enabled devices.
 
 ## Tooltip
 
@@ -34,7 +28,7 @@ The following screenshot represents the Gantt column resizing in touch device.
 
 ## Editing
 
-The Gantt control editing actions can be achieved using the double tap and tap and drag actions on a element.
+The Gantt Chart component editing actions can be achieved using the double tap and tap and drag actions on a element.
 
 The following table describes different types of editing modes available in Gantt.
 
@@ -44,7 +38,7 @@ Action |Description
 [`Dialog editing`](managing-tasks/#dialog-editing) | To perform `double tap` on a specific row, initiate the edit dialog to be opened.
 [`Taskbar editing`](managing-tasks/#taskbar-editing) | Taskbar editing action is initiated using the `tap` action on the taskbar. <br> **Parent taskbar** : Once you tap on the parent taskbar, it will be changed to editing state. Perform only dragging action on parent taskbar editing. <br> ![Alt text](images/editing-parent.PNG) <br> **Child taskbar** : Once you tap the child taskbar, it will be changed to editing state. <br> ![Alt text](images/editing-state.PNG) <br> **Dragging taskbar** : To drag a taskbar to the left or right in editing state. <br> <br> **Resizing taskbar** : To resize a taskbar, drag the left/right resize icon. <br> <br> **Progress resizing** : To change the progress, drag the progress resize icon to the left or right direction.
 
-### Task Dependency Editing
+<!-- Task Dependency Editing
 
 You can `tap` the left/right connector point to initiate `Task Dependencies`](managing-tasks/#task-dependencies) edit mode and again tap another taskbar to establish the dependency line between two taskbars.
 
@@ -59,7 +53,7 @@ Taskbar state |Description
 `Taskbar with dependency` | If you tap the second taskbar, which has already been directly connected, it will ask to remove it. <br> ![Invalid taskbar](images/invalid-taskbar.PNG)
 `Removing dependency` | Once you tap the taskbar with direct dependency, then confirmation dialog will be shown for removing dependency. <br> ![Confirm dialog](images/confirm-dialog.PNG)
 
-> Note: In mobile device, you cannot create dependency other than `FS` by taskbar editing. By using cell/dialog editing, you can add all type of dependencies.
+> Note: In mobile device, you cannot create dependency other than `FS` by taskbar editing. By using cell/dialog editing, you can add all type of dependencies. -->
 
 ## Selection
 

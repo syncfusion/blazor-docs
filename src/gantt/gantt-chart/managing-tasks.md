@@ -443,7 +443,7 @@ double click action on chart side
 
 ### Dialog Editing
 
-Modify the task details through the edit dialog by setting the edit mode as `Dialog`.
+Modify the task details through the edit dialog by setting the `GanttEditSettings.Mode` as `Dialog`.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -981,7 +981,7 @@ Modify the task details through user interaction, such as resizing and dragging 
 
 ### Task Dependencies
 
-In the Gantt Chart component, you can update the dependencies between tasks and link the tasks interactively. The task dependencies can be mapped from the data source using the `Dependency` property.
+In the Gantt Chart component, you can update the dependencies between tasks and link the tasks interactively. The task dependencies can be mapped from the data source using the `GanttTaskFields.Dependency` property.
 
 You can update the task dependencies using the following ways:
 
@@ -1221,7 +1221,7 @@ You can set the `GanttColumn.EditType` based on data type of the column.
 
 * [`Checkbox`](../check-box/getting-started) component for boolean type.
 
-Also, you can customize model of the `GanttColumn.EditType` component through the `GanttColumn.Edit.params`.
+Also, you can customize model of the `GanttColumn.EditType` component through the `GanttColumn.EditorSettings`.
 
 The following table describes cell edit type component and their corresponding edit params of the column.
 
@@ -1574,7 +1574,7 @@ In the following demo, editing is disabled for the `TaskName` column.
 
 ## Deleting Tasks
 
-A task delete option in the Gantt Chart component can be enabled by enabling the `EdiSettings.AllowDeleting` property. Tasks can be deleted by clicking the delete toolbar item or using the `DeleteRecord` method. You can call this method dynamically on any custom actions like button click. The following code example shows how to enable the delete option in the Gantt Chart component.
+A task delete option in the Gantt Chart component can be enabled by enabling the `GanttEditSettings.AllowDeleting` property. Tasks can be deleted by clicking the delete toolbar item or using the `DeleteRecord` method. You can call this method dynamically on any custom actions like button click. The following code example shows how to enable the delete option in the Gantt Chart component.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

@@ -10,7 +10,7 @@ It supports the following kinds of data binding method:
 
 ## List Binding
 
-To bind list binding to the gantt, you can assign a IEnumerable object to the `DataSource` property. The list data source can also be provided as an instance of the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using[`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
+To bind list binding to the gantt component, you can assign a IEnumerable object to the `DataSource` property. The list data source can also be provided as an instance of the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using[`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 ### Hierarchical data Binding
 

@@ -6,7 +6,7 @@ In Gantt Chart, the tasks’ duration value can be measured by the following dur
 * Hour
 * Minute
 
-In Gantt Chart, we can define duration unit for whole project by using `DurationUnit` property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value.
+In Gantt Chart, we can define duration unit for whole project by using `GanttTaskFields.DurationUnit` property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value.
 And each task in the project can be defined with different duration units and the duration unit of a task can be defined by the following ways,
 
 * Using `GanttTaskFields.DurationUnit` property, to map the duration unit data source field.

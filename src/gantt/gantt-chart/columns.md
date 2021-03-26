@@ -249,7 +249,7 @@ The column header text can be defined using the `HeaderText` property, and you c
 
 ## Format
 
-To format the cell values based on a specific culture, use the `Columns.Format` property. The Gantt Chart component uses the `Internationalization` library to format `number` and `date` values.
+To format the cell values based on a specific culture, use the `GanttColumn.Format` property. The Gantt Chart component uses the `Internationalization` library to format `number` and `date` values.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -368,7 +368,7 @@ P | Denotes percentage type | The percentage format expects the input value to b
 
 You can format date values either using the built-in date format string or a custom format string.
 
-For the built-in date format, you can specify the `Columns.Format` property as string (example: `yMd`).
+For the built-in date format, you can specify the `GanttColumn.Format` property as string (example: `yMd`).
 
 You can also use the custom format string to format the date values. Some of the custom formats and the formatted date values are given in the following table.
 
@@ -377,8 +377,8 @@ Format | Formatted value
 { type:'date', format:'dd/MM/yyyy' } | 04/07/2019
 { type:'date', format:'dd.MM.yyyy' } | 04.07.2019
 { type:'date', skeleton:'short' } | 7/4/19
-{ type: 'dateTime', format: 'dd/MM/yyyy hh:mm a' } | 04/07/2019 12:00 AM
-{ type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss a' } | 07/04/2019 12:00:00 AM
+{ type: 'dateTime', format: 'dd/MM/yyyy hh:mm tt' } | 04/07/2019 12:00 AM
+{ type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss tt' } | 07/04/2019 12:00:00 AM
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -583,7 +583,7 @@ The column reordering can be done by dragging a column header from one index to 
 
 ![Alt text](images/columnReorder.gif)
 
-> You can disable the reordering of a particular column by setting the `Columns.AllowReordering` property to `false`.
+> You can disable the reordering of a particular column by setting the `GanttColumn.AllowReordering` property to `false`.
 
 ### Reorder Multiple Columns
 
@@ -799,11 +799,11 @@ The column width can be resized by clicking and dragging the right edge of the c
 
 ![Alt text](images/columnResize.gif)
 
-> You can disable resizing for a particular column by setting the `Columns.AllowResizing` to `false`.
+> You can disable resizing for a particular column by setting the `GanttColumn.AllowResizing` to `false`.
 
 ### Defining Minimum and Maximum Column Width
 
-The column resizing can be restricted between minimum and maximum widths by defining the `Columns.MinWidth` and `Columns.MaxWidth` properties.
+The column resizing can be restricted between minimum and maximum widths by defining the `GanttColumn.MinWidth` and `GanttColumn.MaxWidth` properties.
 
 In the following example, the minimum and maximum widths are defined for the `Duration`, and `Task Name` columns.
 
@@ -1136,7 +1136,7 @@ The default items are displayed in the following table:
 
 ![Alt text](images/columnMenu.png)
 
-> You can disable the column menu for a particular column by setting the `Columns.ShowColumnMenu` to `false`.
+> You can disable the column menu for a particular column by setting the `GanttColumn.ShowColumnMenu` to `false`.
 
 ## Responsive Columns
 
@@ -1340,7 +1340,7 @@ The tree/expander column is a column in the Gantt Chart component, that has icon
 
 ## Show or Hide Columns dynamically
 
-You can show or hide gantt columns dynamically using external buttons by invoking the `ShowColumns` or `HideColumns` method.
+You can show or hide gantt component columns dynamically using external buttons by invoking the `ShowColumns` or `HideColumns` method.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -1452,7 +1452,7 @@ You can show or hide gantt columns dynamically using external buttons by invokin
 
 ## Controlling Gantt Column actions
 
-You can enable or disable gantt action for a particular column by setting the `AllowFiltering`, `AllowSorting`, `AllowReordering`, and `AllowEditing` properties.
+You can enable or disable gantt component action for a particular column by setting the `AllowFiltering`, `AllowSorting`, `AllowReordering`, and `AllowEditing` properties.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -1564,9 +1564,9 @@ You can enable or disable gantt action for a particular column by setting the `A
 
 ## Column Type
 
-Column type can be specified using the `Columns.Type` property. It specifies the type of data the column binds.
+Column type can be specified using the `GanttColumn.Type` property. It specifies the type of data the column binds.
 
-If the `format` is defined for a column, the column uses `type` to select the appropriate format option number or date.
+If the `GanttColumn.Format` is defined for a column, the column uses `GanttColumn.Type` to select the appropriate format option number or date.
 
 Gantt column supports the following types:
 
@@ -1576,8 +1576,8 @@ Gantt column supports the following types:
 * Date
 * DateTime
 
-> If the `type` is not defined, it will be determined from the first record of the `DataSource`.
-> In case if the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `Type` for that column.
+> If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`.
+> In case if the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
 
 <!-- Column Spanning
 

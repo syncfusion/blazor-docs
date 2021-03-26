@@ -101,7 +101,7 @@ The Gantt Chart component provides menu-filtering support for each column. You c
 ![Alt text](images/menuFilter.png)
 
 > The `AllowFiltering` property should be set to `true` to enable the filter menu.
-> Setting the `Columns.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
+> Setting the `GanttColumn.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
 
 ### Filter Hierarchy Modes
 

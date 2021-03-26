@@ -1,6 +1,7 @@
 # Excel Export
 
-Gantt Chart supports client-side exporting, which allows you to export its data to the Excel and CSV formats. Use the `ExcelExport` and `CsvExport` methods for exporting. To enable Excel export in the Gantt Chart, set the `AllowExcelExport` to true.
+The excel export allows exporting GanttChart data to Excel and CSV formats. You need to use the
+ **ExcelExport** and **CSVExport** method for exporting. To enable Excel export in the Gantt chart, set the `AllowExcelExport` property as true.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -111,11 +112,11 @@ Gantt Chart supports client-side exporting, which allows you to export its data 
 
 ## Customize the Excel Export
 
-Gantt Chart Excel export allows the users to customize the exported document based on requirement.
+The excel export provides an option to customize mapping of the gantt chart to excel document.
 
 ### Export Hidden Columns
 
-In Gantt Chart, the Excel export provides an option to export hidden columns by defining `IncludeHiddenColumn` as `true`.
+The excel export provides an option to export hidden columns of gantt chart by defining **IncludeHiddenColumn** as **true**.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -358,7 +359,7 @@ To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
 
 ### File Name for Exported Document
 
-You can set the required file name for the exported document by defining the `FileName` property in `ExcelExportProperties`.
+You can assign the file name for the exported document by defining **FileName** property in excel export properties.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

@@ -1,12 +1,6 @@
----
-title: "Context Menu"
-component: "Gantt"
-description: "Learn how to use the context menu and add custom context menu items in the Essential JS 2 Gantt control."
----
-
 # Context menu
 
-The Gantt control allows you to perform quick actions by using context menu. When right-clicking the context menu, the context menu options are shown. To enable this feature, set the `EnableContextMenu` to true. The default context menu options are enabled using the `EditSettings` property. The context menu options can be customized using the `ContextMenuItems` property.
+The Gantt Chart component allows you to perform quick actions by using context menu. When right-clicking the context menu, the context menu options are shown. To enable this feature, set the `EnableContextMenu` to true. The default context menu options are enabled using the `GanttEditSettings` property. The context menu options can be customized using the `ContextMenuItems` property.
 
 The default items are listed in the following table.
 

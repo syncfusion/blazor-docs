@@ -11,9 +11,9 @@ Gantt Chart contains the following in-built timeline view modes:
 * Month
 * Year
 
-Timescale mode in Gantt Chart can be defined by using `TimelineViewMode` property and also we can define timescale mode of top tier and bottom tier by using `GanttTopTierSettings.Unit` and `GanttBottomTierSettings.Unit` properties.
+Timescale mode in Gantt Chart can be defined by using `GanttTimelineSettings.TimelineViewMode` property and also we can define timescale mode of top tier and bottom tier by using `GanttTopTierSettings.Unit` and `GanttBottomTierSettings.Unit` properties.
 
-Following table explains how top tier and bottom tier unit changes as per `TimelineViewMode` property.
+Following table explains how top tier and bottom tier unit changes as per `GanttTimelineSettings.TimelineViewMode` property.
 
 Timeline ViewMode | Top tier Unit | Bottom tier Unit
 -----|-----|-----
@@ -221,7 +221,7 @@ In the `Year` timeline mode, top tier of the schedule header displays the years,
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                 Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
-    <GanttTimelineSettings TimelineUnitSize=70 TimelineViewMode="TimelineViewMode.Year">
+    <GanttTimelineSettings TimelineUnitSize=75 TimelineViewMode="TimelineViewMode.Year">
     </GanttTimelineSettings>
 </SfGantt>
 
@@ -600,7 +600,7 @@ Gantt Chart component contains two tier layout in timeline, we can customize the
 
 ### Combining Timeline Cells
 
-In Gantt Chart, timeline cells in top tier and bottom tier can be combined with number of timeline units, this can be acheived by using `TopTier.Count` and `BottomTier.Count` properties. Please refer the below sample.
+In Gantt Chart, timeline cells in top tier and bottom tier can be combined with number of timeline units, this can be acheived by using `GanttTopTierSettings.Count` and `GanttBottomTierSettings.Count` properties. Please refer the below sample.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -696,7 +696,7 @@ In Gantt Chart, timeline cells in top tier and bottom tier can be combined with 
 
 ### Customize Header Timeline Cells
 
-In the Gantt control, you can format the value of top and bottom timeline cells using the standard date format string or the custom formatter method. This can be done using the `GanttTopTierSettings.Format`, `GanttTopTierSettings.Formatter`, `GanttBottomTierSettings.Format` and `GanttBottomTierSettings.Formatter` properties. The following example shows how to use the formatter method for timeline cells.
+In the Gantt Chart component, you can format the value of top and bottom timeline cells using the standard date format string or the custom formatter method. This can be done using the `GanttTopTierSettings.Format`, `GanttTopTierSettings.FormatterTemplate`, `GanttBottomTierSettings.Format` and `GanttBottomTierSettings.FormatterTemplate` properties. The following example shows how to use the formatter method for timeline cells.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -820,7 +820,7 @@ In the Gantt control, you can format the value of top and bottom timeline cells 
 
 ## Timeline Cell Width
 
-In the Gantt Chart component, you can define the width value of timeline cell using the `GanttTimelineSettings.TimelineUnitSize` property. This value will be set to the bottom timeline cell, and the width value of top timeline cell will be calculated automatically based on bottom tier cell width using the `TopTier.Unit` and `GanttTimelineSettings.TimelineUnitSize` properties. Refer the following example.
+In the Gantt Chart component, you can define the width value of timeline cell using the `GanttTimelineSettings.TimelineUnitSize` property. This value will be set to the bottom timeline cell, and the width value of top timeline cell will be calculated automatically based on bottom tier cell width using the `GanttTopTierSettings.Unit` and `GanttTimelineSettings.TimelineUnitSize` properties. Refer the following example.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -920,7 +920,7 @@ In the Gantt Chart component, you can define the width value of timeline cell us
 
 ## Week Start Day Customization
 
-In the Gantt Chart component, you can customize the week start day using the `WeekStartDay` property. By default,the `WeekStartDay` is set to 0, which specifies the Sunday as a start day of the week. But, you can customize the week start day by using the following code example.
+In the Gantt Chart component, you can customize the week start day using the `GanttTimelineSettings.WeekStartDay` property. By default,the `GanttTimelineSettings.WeekStartDay` is set to 0, which specifies the Sunday as a start day of the week. But, you can customize the week start day by using the following code example.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -1020,7 +1020,7 @@ In the Gantt Chart component, you can customize the week start day using the `We
 
 ## Customize Automatic Timescale Update action
 
-In the Gantt Chart component, the schedule timeline will be automatically updated when the tasks date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the `UpdateTimescaleView` property.
+In the Gantt Chart component, the schedule timeline will be automatically updated when the tasks date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the `GanttTimelineSettings.UpdateTimescaleView` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

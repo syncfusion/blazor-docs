@@ -2,7 +2,7 @@
 
 By default Gantt tasks are validated based on the child tasks with some factors like working time, holidays, weekends and predecessors. The Gantt provides support for automatic and manual task scheduling modes. It is used to indicate whether the start date and end date of all the tasks will be automatically validated or not. `TaskMode` is the property used to change the schedule mode of a task.
 
-The Gantt control supports three types of mode. They are:
+The Gantt Chart component supports three types of mode. They are:
 
 * `Auto`: All the tasks are automatically validate.
 * `Manual`: All the tasks are manually validate by the user.
@@ -407,7 +407,7 @@ You can define the various types of unscheduled tasks in the data source as foll
 
 ## Working Time Range
 
-In the Gantt Chart component, working hours in a day for a project can be defined by using the `DayWorkingTime` property. Based on the working hours, automatic date scheduling and duration validations for a task are performed.
+In the Gantt Chart component, working hours in a day for a project can be defined by using the `GanttDayWorkingTime` property. Based on the working hours, automatic date scheduling and duration validations for a task are performed.
 
 The following code snippet explains how to define the working time range for the project in Gantt Chart.
 
@@ -420,9 +420,9 @@ The following code snippet explains how to define the working time range for the
     <GanttDayWorkingTimeCollection>
         <GanttDayWorkingTime From="9" To="18"></GanttDayWorkingTime>
     </GanttDayWorkingTimeCollection>
-    <GanttTimelineSettings TimelineUnitSize="60">
+    <GanttTimelineSettings TimelineUnitSize="75">
         <GanttTopTierSettings Unit="TimelineViewMode.Day" Format="MMM dd,yyyy"></GanttTopTierSettings>
-        <GanttBottomTierSettings Unit="TimelineViewMode.Hour" Format="h.mm a"></GanttBottomTierSettings>
+        <GanttBottomTierSettings Unit="TimelineViewMode.Hour" Format="h.mm tt"></GanttBottomTierSettings>
     </GanttTimelineSettings>
 </SfGantt>
 
@@ -510,7 +510,7 @@ The following screen shot shows working time range in Gantt Chart component.
 
 > NOTE
 >* Individual tasks can lie between any time within the defined working time range of the project.
->* The `DayWorkingTime` property is used to define the working time for the whole project.
+>* The `GanttDayWorkingTime` property is used to define the working time for the whole project.
 
 ## Weekend or Non-working Days
 

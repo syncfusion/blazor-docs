@@ -568,3 +568,5 @@ RTL provides an option to switch the text direction and layout of the Gantt comp
 }
 }
 ```
+
+> * Gantt chart doesn't have RTL support when predecessors enabled.

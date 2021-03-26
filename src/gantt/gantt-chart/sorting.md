@@ -103,7 +103,7 @@ The following screenshot shows the output of multicolumn sorting in Gantt Chart 
 ![Alt text](images/multiSorting.png)
 
 > * Gantt Chart columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
-> * To disable sorting for a particular column, set the `Columns.AllowSorting` property to false.
+> * To disable sorting for a particular column, set the `GanttColumn.AllowSorting` property to false.
 
 ## Sorting Column on Gantt Chart Initialization
 

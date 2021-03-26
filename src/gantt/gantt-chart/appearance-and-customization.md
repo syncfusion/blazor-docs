@@ -920,9 +920,9 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 
 | **Splitter Properties** | **Description** |
 | --- | --- |
-| Position | This property denotes the percentage of the Tree Grid section’s width to be rendered and this property supports both pixels and percentage values |
-| ColumnIndex | This property define the splitter position as column index value |
-| View | * `Default`: Shows Grid side and Gantt Chart side. <br /> * `Grid`: Shows Grid side alone in Gantt Chart. <br /> * `Chart`: Shows chart side alone in Gantt Chart. |
+| `GanttSplitterSettings.Position` | This property denotes the percentage of the Tree Grid section’s width to be rendered and this property supports both pixels and percentage values |
+| `GanttSplitterSettings.ColumnIndex` | This property define the splitter position as column index value |
+| `GanttSplitterSettings.View` | * `Default`: Shows Grid side and Gantt Chart side. <br /> * `Grid`: Shows Grid side alone in Gantt Chart. <br /> * `Chart`: Shows chart side alone in Gantt Chart. |
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

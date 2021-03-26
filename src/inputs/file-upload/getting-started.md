@@ -13,7 +13,7 @@ This section briefly explains about how to include a [Blazor File Upload](https:
  ```html
     <head>
             <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-            @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
+            <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
     </head>
 ```
 
@@ -90,6 +90,8 @@ You can upload the files and files of folders in the Blazor application without 
 You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange)  event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Please find the save action code on below.
 
 ```csharp
+@using System.IO
+
 <SfUploader AutoUpload="false">
     <UploaderEvents ValueChange="OnChange"></UploaderEvents>
 </SfUploader>

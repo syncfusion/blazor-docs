@@ -23,10 +23,9 @@ You can copy the selected contents using the `Copy` method as shown in the follo
     SfDocumentEditorContainer container;
     protected void CopyClick(object args)
     {
-        container.GetDocumentEditor().GetSelection().Copy();
+        container.DocumentEditor.Selection.Copy();
     }
 }
-
 ```
 
 ## Cut
@@ -45,7 +44,7 @@ You can cut the selected content using the “Cut” method as shown in the foll
 
     protected void CutClick(object args)
     {
-        container.GetDocumentEditor().GetEditor().Cut();
+        container.DocumentEditor.Editor.Cut();
     }
 }
 
@@ -67,7 +66,7 @@ The following code example shows how to perform the paste operation from the loc
     SfDocumentEditorContainer container;
     protected void PasteClick(object args)
     {
-        container.GetDocumentEditor().GetEditor().Paste();
+        container.DocumentEditor.Editor.Paste();
     }
 }
 

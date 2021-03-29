@@ -22,7 +22,7 @@ Bullets are usually used for unordered lists. To apply bulleted list for selecte
 Refer to the following sample code.
 
 ```javascript
-documentEditor.GetEditor().ApplyBullet("\uf0b7", "Symbol");
+documentEditor.Editor.ApplyBullet("\uf0b7", "Symbol");
 ```
 
 ## Create numbered list
@@ -39,7 +39,7 @@ Numbered lists are usually used for ordered lists. To apply numbered list for se
 Refer to the following example.
 
 ```javascript
-documentEditor.GetEditor().ApplyNumbering("%1)", ListLevelPattern.UpRoman);
+documentEditor.Editor.ApplyNumbering("%1)", ListLevelPattern.UpRoman);
 ```
 
 ## Clear list
@@ -47,7 +47,7 @@ documentEditor.GetEditor().ApplyNumbering("%1)", ListLevelPattern.UpRoman);
 You can also clear the list formatting applied for selected paragraphs. Refer to the following sample code.
 
 ```javascript
-documentEditor.GetEditor().ClearList();
+documentEditor.Editor.ClearList();
 ```
 
 ## Editing numbered list

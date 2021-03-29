@@ -84,7 +84,7 @@ Steps to get started with Word processor component for Blazor:
                 WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
                 document.Dispose();
-                DocumentEditorModule editor = container.GetDocumentEditor();
+                SfDocumentEditor editor = container.DocumentEditor;
                 editor.Open(json);
             }
         }

@@ -15,16 +15,16 @@ The bold formatting for selected text can be get or set by using the following s
 ```javascript
 
 //Gets the value for bold formatting of selected text.
-bool bold = await documentEditor.GetSelection().GetCharacterFormat().GetBold();
+bool bold = await documentEditor.Selection.CharacterFormat.GetBold();
 //Sets bold formatting for selected text.
-documentEditor.GetSelection().GetCharacterFormat().SetBold(true);
+documentEditor.Selection.CharacterFormat.SetBold(true);
 
 ```
 
 You can toggle the bold formatting based on existing value at selection. Refer to the following sample code.
 
 ```javascript
-documentEditor.GetEditor().ToggleBold();
+documentEditor.Editor.ToggleBold();
 ```
 
 ## Italic
@@ -32,13 +32,13 @@ documentEditor.GetEditor().ToggleBold();
 The Italic formatting for selected text can be get or set by using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetCharacterFormat().SetItalic(true);
+documentEditor.Selection.CharacterFormat.SetItalic(true);
 ```
 
 You can toggle the Italic formatting based on existing value at selection. Refer to the following sample code.
 
 ```javascript
-documentEditor.GetEditor().ToggleItalic();
+documentEditor.Editor.ToggleItalic();
 ```
 
 ## Underline property
@@ -46,13 +46,13 @@ documentEditor.GetEditor().ToggleItalic();
 The underline style for selected text can be get or set by using the following sample code.
 
 ```javascript
-documentEditor.GetEditor().ToggleUnderline(Underline.Single);
+documentEditor.Editor.ToggleUnderline(Underline.Single);
 ```
 
 You can toggle the underline style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
 
 ```javascript
-documenteditor.editor.toggleUnderline('Single');
+documenteditor.Editor.ToggleUnderline('Single');
 ```
 
 ## Strikethrough property
@@ -60,13 +60,13 @@ documenteditor.editor.toggleUnderline('Single');
 The strikethrough style for selected text can be get or set by using the following sample code.
 
 ```javascript
-documentEditor.GetEditor().ToggleStrikethrough(Strikethrough.SingleStrike);
+documentEditor.Editor.ToggleStrikethrough(Strikethrough.SingleStrike);
 ```
 
 You can toggle the strikethrough style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
 
 ```javascript
-documentEditor.GetEditor().ToggleStrikethrough(Strikethrough.SingleStrike);
+documentEditor.Editor.ToggleStrikethrough(Strikethrough.SingleStrike);
 ```
 
 ## Superscript property
@@ -74,13 +74,13 @@ documentEditor.GetEditor().ToggleStrikethrough(Strikethrough.SingleStrike);
 The selected text can be made superscript by using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetCharacterFormat().SetBaselineAlignment(BaselineAlignment.Superscript);
+documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.Superscript);
 ```
 
 Toggle the selected text as superscript or normal using the following sample code.
 
 ```javascript
-documentEditor.GetEditor().ToggleSuperscript();
+documentEditor.Editor.ToggleSuperscript();
 ```
 
 ## Subscript property
@@ -88,19 +88,19 @@ documentEditor.GetEditor().ToggleSuperscript();
 The selected text can be made subscript by using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetCharacterFormat().SetBaselineAlignment(BaselineAlignment.Subscript);
+documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.Subscript);
 ```
 
 Toggle the selected text as subscript or normal using the following sample code.
 
 ```javascript
-documentEditor.GetEditor().ToggleSubscript();
+documentEditor.Editor.ToggleSubscript();
 ```
 
 You can make a subscript or superscript text as normal using the following code.
 
 ```javascript
-documentEditor.GetSelection().GetCharacterFormat().SetBaselineAlignment(BaselineAlignment.Normal);
+documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.Normal);
 ```
 
 ## Size
@@ -108,7 +108,7 @@ documentEditor.GetSelection().GetCharacterFormat().SetBaselineAlignment(Baseline
 The size of selected text can be get or set using the following code.
 
 ```javascript
-documentEditor.GetSelection().GetCharacterFormat().SetFontSize(32);
+documentEditor.Selection.CharacterFormat.SetFontSize(32);
 ```
 
 ## Color
@@ -116,8 +116,8 @@ documentEditor.GetSelection().GetCharacterFormat().SetFontSize(32);
 The color of selected text can be get or set using the following code.
 
 ```javascript
-documentEditor.GetSelection().GetCharacterFormat().SetFontColor("Pink");
-documentEditor.GetSelection().GetCharacterFormat().SetFontColor("FFC0CB");
+documentEditor.Selection.CharacterFormat.SetFontColor("Pink");
+documentEditor.Selection.CharacterFormat.SetFontColor("FFC0CB");
 ```
 
 ## Font
@@ -125,7 +125,7 @@ documentEditor.GetSelection().GetCharacterFormat().SetFontColor("FFC0CB");
 The font style of selected text can be get or set using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetCharacterFormat().SetFontFamily("Arial");
+documentEditor.Selection.CharacterFormat.SetFontFamily("Arial");
 ```
 
 ## Highlight color
@@ -133,5 +133,5 @@ documentEditor.GetSelection().GetCharacterFormat().SetFontFamily("Arial");
 The highlight color of the selected text can be get or set using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetCharacterFormat().SetHighlightColor(HighlightColor.Pink);
+documentEditor.Selection.CharacterFormat.SetHighlightColor(HighlightColor.Pink);
 ```

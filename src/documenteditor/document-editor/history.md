@@ -14,17 +14,16 @@ Inject the `EditorHistory` module in your application to provide history preserv
 
 ```csharp
 @using Syncfusion.Blazor.DocumentEditor
-<button @onclick="btnClick">Show hide pane</button>
-<EjsDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
+
+<SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
-</EjsDocumentEditor>
+</SfDocumentEditor>
 
 @code {
-    EjsDocumentEditor documentEditor;
+    SfDocumentEditor documentEditor;
     protected void OnLoad(object args)
     {
         documentEditor.EnableEditorHistory = true;
-
     }
 }
 ```
@@ -41,13 +40,13 @@ You can perform undo and redo by `CTRL+Z` and `CTRL+Y` keyboard shortcuts. Docum
 To undo the last editing operation in document editor, refer to the following sample code.
 
 ```javascript
-documentEditor.GetEditorHistory().Undo();
+documentEditor.EditorHistory.Undo();
 ```
 
 To redo the last undone action, refer to the following code example.
 
 ```javascript
-documentEditor.GetEditorHistory().Redo();
+documentEditor.EditorHistory.Redo();
 ```
 
 ## Stack size
@@ -55,6 +54,6 @@ documentEditor.GetEditorHistory().Redo();
 History of editing actions will be maintained in stack, so that the last item will be reverted first. By default, document editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
 
 ```javascript
-documentEditor.GetEditorHistory().SetRedoLimit(400);
-documentEditor.GetEditorHistory().SetUndoLimit(400);
+documentEditor.EditorHistory.SetRedoLimit(400);
+documentEditor.EditorHistory.SetUndoLimit(400);
 ```

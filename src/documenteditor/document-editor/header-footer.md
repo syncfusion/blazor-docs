@@ -14,43 +14,43 @@ Document editor supports headers and footers in its document. Each section in th
 
 You can define this by setting format properties of the corresponding section using the following sample code.
 
-```javascript
+```csharp
 //Defines whether different header footer is required for first page of the section
-documentEditor.GetSelection().GetSectionFormat().SetDifferentFirstPage(true);
+documentEditor.Selection.SectionFormat.SetDifferentFirstPage(true);
 //Defines whether different header footer is required for odd and even pages in the section
-documentEditor.GetSelection().GetSectionFormat().SetDifferentOddAndEvenPages(true);
+documentEditor.Selection.SectionFormat.SetDifferentOddAndEvenPages(true);
 ```
 
 ## Go to header footer region
 
 Double click in header or footer region to move the selection into it. You can also do this by using the following code.
 
-```javascript
-documentEditor.GetSelection().GoToHeader();
+```csharp
+documentEditor.Selection.GoToHeader();
 ```
 
-```javascript
-documentEditor.GetSelection().GoToFooter();
+```csharp
+documentEditor.Selection.GoToFooter();
 ```
 
 ## Header and footer distance
 
 You can define the distance of header region content from the top of the page. Refer to the following sample code.
 
-```javascript
-documentEditor.GetSelection().GetSectionFormat().SetHeaderDistance(36);
+```csharp
+documentEditor.Selection.SectionFormat.SetHeaderDistance(36);
 ```
 
 Same way, you can define the distance of footer region content from the bottom of the page. Refer to the following sample code.
 
-```javascript
-documentEditor.GetSelection().GetSectionFormat().SetFooterDistance(36);
+```csharp
+documentEditor.Selection.SectionFormat.SetFooterDistance(36);
 ```
 
 ## Close header footer region
 
 Move the selection to the document body from header or footer region by double clicking or tapping the document area. You can also perform this by using the following sample code.
 
-```javascript
-documentEditor.GetSelection().CloseHeaderFooter();
+```csharp
+documentEditor.Selection.CloseHeaderFooter();
 ```

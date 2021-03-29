@@ -36,7 +36,7 @@ If you have your Word document file in the web, you can open it in Blazor Word P
 
     public void OnLoad(object args)
     {
-        DocumentEditorModule editor = container.GetDocumentEditor();
+        SfDocumentEditor editor = container.DocumentEditor;
         editor.Open(sfdtString);
     }
 }
@@ -85,7 +85,7 @@ The following code example shows how to open and load the Word document file sto
     }
     public void OnLoad(object args)
     {
-        DocumentEditorModule editor = container.GetDocumentEditor();
+        SfDocumentEditor editor = container.DocumentEditor;
         editor.Open(sfdtString);
     }
 }
@@ -147,12 +147,10 @@ You can open the Word documents from Azure File Storage using the following code
     {
         if (!String.IsNullOrEmpty(sfdtString))
         {
-            DocumentEditorModule editor = container.GetDocumentEditor();
+            SfDocumentEditor editor = container.DocumentEditor;
             editor.Open(sfdtString);
         }
-
     }
-
 }
 ```
 
@@ -194,10 +192,9 @@ The following code example shows how to open the Word document file in viewer fr
         string json = JsonConvert.SerializeObject(document);
         document.Dispose();
         stream.Dispose();
-        DocumentEditorModule editor = container.GetDocumentEditor();
+        SfDocumentEditor editor = container.DocumentEditor;
         editor.Open(json);
     }
-
 }
 
 ```
@@ -235,12 +232,11 @@ There is an UI option in built-in toolbar to open the Word documents from local 
             WordDocument document = WordDocument.Load(stream, ImportFormatType.Docx);
             string sfdtString = JsonConvert.SerializeObject(document);
             document.Dispose();
-            DocumentEditorModule editor = container.GetDocumentEditor();
+            SfDocumentEditor editor = container.DocumentEditor;
             editor.Open(sfdtString);
         }
         action.Cancel = true;
     }
-
 }
 
 ```
@@ -270,10 +266,9 @@ The Word document can be opened on control initialization, in this sample, the d
             WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
             string json = JsonConvert.SerializeObject(document);
             document.Dispose();
-            DocumentEditorModule editor = container.GetDocumentEditor();
+            SfDocumentEditor editor = container.DocumentEditor;
             editor.Open(json);
         }
     }
 }
-
 ```

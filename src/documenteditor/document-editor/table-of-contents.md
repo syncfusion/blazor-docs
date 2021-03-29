@@ -30,7 +30,7 @@ tableOfContentsSettings.EndLevel = 3;
 tableOfContentsSettings.IncludeHyperlink = true;
 tableOfContentsSettings.IncludePageNumber = true;
 tableOfContentsSettings.RightAlign = true;
-documentEditor.GetEditor().InsertTableOfContents(tableOfContentsSettings);
+documentEditor.Editor.InsertTableOfContents(tableOfContentsSettings);
 ```
 
 ```csharp
@@ -51,7 +51,7 @@ documentEditor.GetEditor().InsertTableOfContents(tableOfContentsSettings);
         tableOfContentsSettings.IncludeHyperlink = true;
         tableOfContentsSettings.IncludePageNumber = true;
         tableOfContentsSettings.RightAlign = true;
-        documentEditor.GetEditor().InsertTableOfContents(tableOfContentsSettings);
+        documentEditor.Editor.InsertTableOfContents(tableOfContentsSettings);
     }
 }
 ```
@@ -75,7 +75,7 @@ tableOfContentsSettings.EndLevel = 3;
 tableOfContentsSettings.IncludeHyperlink = true;
 tableOfContentsSettings.IncludePageNumber = true;
 tableOfContentsSettings.RightAlign = true;
-documentEditor.GetEditor().InsertTableOfContents(tableOfContentsSettings);
+documentEditor.Editor.InsertTableOfContents(tableOfContentsSettings);
 
 ```
 

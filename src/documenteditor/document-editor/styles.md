@@ -83,8 +83,8 @@ The following example shows how to programmatically create a character style.
     protected void OnLoad(object args)
     {
         string styleJson = "{\"type\":\"Character\",\"name\":\"New CharacterStyle\",\"basedOn\":\"Default Paragraph Font\",\"characterFormat\":{\"fontSize\":16.0,\"fontFamily\":\"Calibri Light\",\"fontColor\":\"#2F5496\",\"bold\":true,\"italic\":true,\"underline\":\"Single\"}}";
-        documentEditor.GetEditor().CreateStyle(styleJson);
-        documentEditor.GetEditor().ApplyStyle("New CharacterStyle");
+        documentEditor.Editor.CreateStyle(styleJson);
+        documentEditor.Editor.ApplyStyle("New CharacterStyle");
     }
 }
 ```
@@ -104,8 +104,8 @@ The following example shows how to programmatically create a paragraph style.
     protected void OnLoad(object args)
     {
         string styleJson = "{\"type\":\"Paragraph\",\"name\":\"New ParagraphStyle\",\"basedOn\":\"Normal\",\"characterFormat\":{\"fontSize\":16.0,\"fontFamily\":\"Calibri Light\",\"fontColor\":\"#2F5496\",\"bold\":true,\"italic\":true,\"underline\":\"Single\"},\"paragraphFormat\":{\"leftIndent\":0.0,\"rightIndent\":0.0,\"firstLineIndent\":0.0,\"beforeSpacing\":12.0,\"afterSpacing\":0.0,\"lineSpacing\":1.0791666507720947,\"lineSpacingType\":\"Multiple\",\"textAlignment\":\"Left\",\"outlineLevel\":\"Level1\"}}";
-        documentEditor.GetEditor().CreateStyle(styleJson);
-        documentEditor.GetEditor().ApplyStyle("New ParagraphStyle");
+        documentEditor.Editor.CreateStyle(styleJson);
+        documentEditor.Editor.ApplyStyle("New ParagraphStyle");
     }
 }
 ```
@@ -116,7 +116,7 @@ The following example shows how to programmatically create linked style.
 
 ```csharp
 @using Syncfusion.Blazor.DocumentEditor;
-<button @onclick="BtnClick">Apply Style</button>
+
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
 </SfDocumentEditor>
@@ -126,8 +126,8 @@ The following example shows how to programmatically create linked style.
     protected void OnLoad(object args)
     {
         string styleJson = "{\"type\": \"Paragraph\",\"name\":\"New Linked\",\"basedOn\":\"Normal\",\"next\":\"Normal\",\"link\":\"New Linked Char\",\"characterFormat\":{\"fontSize\":16.0,\"fontFamily\":\"Calibri Light\",\"fontColor\":\"#2F5496\"},\"paragraphFormat\":{\"leftIndent\": 0.0,\"rightIndent\":0.0,\"firstLineIndent\":0.0,\"beforeSpacing\":12.0,\"afterSpacing\":0.0,\"lineSpacing\":1.0791666507720947,\"lineSpacingType\":\"Multiple\",\"textAlignment\":\"Left\",\"outlineLevel\":\"Level1\"}}";
-        documentEditor.GetEditor().CreateStyle(styleJson);
-        documentEditor.GetEditor().ApplyStyle("New Linked");
+        documentEditor.Editor.CreateStyle(styleJson);
+        documentEditor.Editor.ApplyStyle("New Linked");
     }
 }
 ```
@@ -143,7 +143,7 @@ When there is no selection, styles of **Linked** type will change the values of 
 For example, the following line will apply the "New Linked" to the current paragraph.
 
 ```javascript
-documentEditor.GetEditor().ApplyStyle("New Linked");
+documentEditor.Editor.ApplyStyle("New Linked");
 //Clear direct formatting and apply the specified style
-documentEditor.GetEditor().ApplyStyle("New Linked", true);
+documentEditor.Editor.ApplyStyle("New Linked", true);
 ```

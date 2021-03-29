@@ -20,7 +20,7 @@ You might need to save the document back to the server. The following code examp
 
     public async void OnSave()
     {
-        DocumentEditorModule editor = container.GetDocumentEditor();
+        SfDocumentEditor editor = container.DocumentEditor;
         string base64Data = await editor.SaveAsBlob(FormatType.Docx);
         byte[] data = Convert.FromBase64String(base64Data);
         //Word document file stream
@@ -56,7 +56,7 @@ If you have plenty of documents stored in database and you want to save the comp
     public async void OnSave()
     {
         string documentID = "Getting_Started.docx";
-        DocumentEditorModule editor = container.GetDocumentEditor();
+        SfDocumentEditor editor = container.DocumentEditor;
         string base64Data = await editor.SaveAsBlob(FormatType.Docx);
         byte[] data = Convert.FromBase64String(base64Data);
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\database.mdf;";
@@ -89,7 +89,7 @@ You can also save or download the document in local file system.
     SfDocumentEditorContainer container;
     public void OnDownload()
     {
-        DocumentEditorModule editor = container.GetDocumentEditor();
+        SfDocumentEditor editor = container.DocumentEditor;
         editor.Save("sample", FormatType.Docx);
     }
 }

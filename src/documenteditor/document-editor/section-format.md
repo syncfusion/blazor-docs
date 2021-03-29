@@ -13,8 +13,8 @@ Document editor supports various section formatting such as page size, page marg
 You can get or set the size of a section at cursor position by using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetSectionFormat().SetPageWidth(500);
-documentEditor.GetSelection().GetSectionFormat().SetPageHeight(600);
+documentEditor.Selection.SectionFormat.SetPageWidth(500);
+documentEditor.Selection.SectionFormat.SetPageHeight(600);
 ```
 
 You can change the orientation of the page by swapping the values of page width and height respectively.
@@ -25,10 +25,10 @@ Left and right page margin defines the gap between the document content from lef
 Refer to the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetSectionFormat().SetLeftMargin(10);
-documentEditor.GetSelection().GetSectionFormat().SetRightMargin(10);
-documentEditor.GetSelection().GetSectionFormat().SetTopMargin(10);
-documentEditor.GetSelection().GetSectionFormat().SetBottomMargin(10);
+documentEditor.Selection.SectionFormat.SetLeftMargin(10);
+documentEditor.Selection.SectionFormat.SetRightMargin(10);
+documentEditor.Selection.SectionFormat.SetTopMargin(10);
+documentEditor.Selection.SectionFormat.SetBottomMargin(10);
 ```
 
 ## Header distance
@@ -36,7 +36,7 @@ documentEditor.GetSelection().GetSectionFormat().SetBottomMargin(10);
 You can define the distance of header content from the top of the page by using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetSectionFormat().SetHeaderDistance(72);
+documentEditor.Selection.SectionFormat.SetHeaderDistance(72);
 ```
 
 ## Footer distance
@@ -44,5 +44,5 @@ documentEditor.GetSelection().GetSectionFormat().SetHeaderDistance(72);
 You can define the distance of footer content from the bottom of the page by using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetSectionFormat().SetFooterDistance(72);
+documentEditor.Selection.SectionFormat.SetFooterDistance(72);
 ```

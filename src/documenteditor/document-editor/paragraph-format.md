@@ -13,8 +13,8 @@ Document editor supports various paragraph formatting options such as text align
 You can modify the left or right indentation of selected paragraphs using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetParagraphFormat().SetLeftIndent(24);
-documentEditor.GetSelection().GetParagraphFormat().SetRightIndent(24);
+documentEditor.Selection.ParagraphFormat.SetLeftIndent(24);
+documentEditor.Selection.ParagraphFormat.SetRightIndent(24);
 ```
 
 ## Special indentation
@@ -22,7 +22,7 @@ documentEditor.GetSelection().GetParagraphFormat().SetRightIndent(24);
 You can define special indent for first line of the paragraph using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetParagraphFormat().SetFirstLineIndent(24);
+documentEditor.Selection.ParagraphFormat.SetFirstLineIndent(24);
 ```
 
 ## Increase indent
@@ -30,7 +30,7 @@ documentEditor.GetSelection().GetParagraphFormat().SetFirstLineIndent(24);
 You can increase the left indent of selected paragraphs by a factor of 36 points using the following sample code.
 
 ```javascript
-documentEditor.GetEditor().IncreaseIndent();
+documentEditor.Editor.IncreaseIndent();
 ```
 
 ## Decrease indent
@@ -38,7 +38,7 @@ documentEditor.GetEditor().IncreaseIndent();
 You can decrease the left indent of selected paragraphs by a factor of 36 points using the following sample code.
 
 ```javascript
-documentEditor.GetEditor().DecreaseIndent();
+documentEditor.Editor.DecreaseIndent();
 ```
 
 ## Text alignment
@@ -46,13 +46,13 @@ documentEditor.GetEditor().DecreaseIndent();
 You can get or set the text alignment of selected paragraphs using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetParagraphFormat().SetTextAlignment(TextAlignment.Center);
+documentEditor.Selection.ParagraphFormat.SetTextAlignment(TextAlignment.Center);
 ```
 
 You can toggle the text alignment of selected paragraphs by specifying a value using the following sample code.
 
 ```javascript
-documentEditor.GetEditor().ToggleTextAlignment(TextAlignment.Center);
+documentEditor.Editor.ToggleTextAlignment(TextAlignment.Center);
 ```
 
 ## Line spacing and its type
@@ -60,8 +60,8 @@ documentEditor.GetEditor().ToggleTextAlignment(TextAlignment.Center);
 You can define the line spacing and its type for selected paragraphs using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetParagraphFormat().SetLineSpacingType(LineSpacingType.AtLeast);
-documentEditor.GetSelection().GetParagraphFormat().SetLineSpacing(6);
+documentEditor.Selection.ParagraphFormat.SetLineSpacingType(LineSpacingType.AtLeast);
+documentEditor.Selection.ParagraphFormat.SetLineSpacing(6);
 ```
 
 ## Paragraph spacing
@@ -69,6 +69,6 @@ documentEditor.GetSelection().GetParagraphFormat().SetLineSpacing(6);
 You can define the spacing before or after the paragraph by using the following sample code.
 
 ```javascript
-documentEditor.GetSelection().GetParagraphFormat().SetBeforeSpacing(24);
-documentEditor.GetSelection().GetParagraphFormat().SetAfterSpacing(24);
+documentEditor.Selection.ParagraphFormat.SetBeforeSpacing(24);
+documentEditor.Selection.ParagraphFormat.SetAfterSpacing(24);
 ```

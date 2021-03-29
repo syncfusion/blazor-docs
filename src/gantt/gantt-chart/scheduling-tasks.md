@@ -1,18 +1,18 @@
 # Scheduling Tasks
 
-By default Gantt tasks are validated based on the child tasks with some factors like working time, holidays, weekends and predecessors. The Gantt provides support for automatic and manual task scheduling modes. It is used to indicate whether the start date and end date of all the tasks will be automatically validated or not. `TaskMode` is the property used to change the schedule mode of a task.
+By default, Gantt tasks are validated based on the child tasks with some factors like working time, holidays, weekends, and predecessors. The Gantt provides support for automatic and manual task scheduling modes. It is used to indicate whether the start date and end date of all the tasks will be automatically validated or not. `TaskMode` is the property used to change the schedule mode of a task.
 
-The Gantt Chart component supports three types of mode. They are:
+The Gantt Chart component supports three types of modes. They are:
 
-* `Auto`: All the tasks are automatically validate.
-* `Manual`: All the tasks are manually validate by the user.
-* `Custom`: Both Auto and Manual tasks are render by mapped from data source.
+* `Auto`: All the tasks will be automatically validated.
+* `Manual`: All the tasks will be manually validated by the user.
+* `Custom`: Tasks will be validated as Auto or Manual based on the value mapped in the data source.
 
 >Note: The default value of `TaskMode` is `Auto`.
 
 ## Automatically Scheduled Tasks
 
-When the `TaskMode` property is set as `Auto`, the start date and end date of all the tasks in the project will be automatically validated. That is, dates are validated based on various factors such as working time, holidays, weekends and predecessors.
+When the `TaskMode` property is set as `Auto`, the start date and end date of all the tasks in the project will be automatically validated. That is, dates will be validated based on various factors such as working time, holidays, weekends, and predecessors.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -109,7 +109,7 @@ When the `TaskMode` property is set as `Auto`, the start date and end date of al
 
 ## Manually Scheduled Tasks
 
-When the `TaskMode` property is set as `Manual`, the start date and end date of all the tasks in the project will be same as given in the data source. That is, dates are not validated based on various factors such as dependencies between tasks, holidays, weekends, working time.
+When the `TaskMode` property is set as `Manual`, the start date and end date of all the tasks in the project will be the same as given in the data source. That is, dates will not be validated based on factors such as dependencies between tasks, holidays, weekends, working time.
 We can restrict this mode in predecessor validation alone. That is, we can automatically validate the dates based on predecessor values by enabling the `ValidateManualTasksOnLinking` property.
 
 ```csharp
@@ -210,7 +210,7 @@ We can restrict this mode in predecessor validation alone. That is, we can autom
 
 ## Custom
 
-If we want to use some specific taskmode for specific tasks, Then we set the `TaskMode` property is set as `Custom`. So the scheduling mode for each tasks will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
+If we want to use some specific taskmode for specific tasks, then we can set the `TaskMode` property  as `Custom`. So, the scheduling mode for each task will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -514,7 +514,7 @@ The following screen shot shows working time range in Gantt Chart component.
 
 ## Weekend or Non-working Days
 
-Non-working days/weekend are used to represent the non-productive days in a project. You can exclude the non-working days in a work week using the `WorkWeek` property in Gantt Chart.
+Non-working days/weekends are used to represent the non-productive days in a project. You can exclude the non-working days in a work week using the `WorkWeek` property in Gantt Chart.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

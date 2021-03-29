@@ -79,7 +79,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 @code{
     public static List<TaskData> GanttData { get; set; }
-    public List<TaskData> gantt = new List<TaskData>();
+    public static List<TaskData> gantt = new List<TaskData>();
     public class TaskData
     {
         public int? TaskID { get; set; }
@@ -202,7 +202,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 
 @code{
     public static List<TaskData> GanttData { get; set; }
-    public List<TaskData> gantt = new List<TaskData>();
+    public static List<TaskData> gantt = new List<TaskData>();
     public class TaskData
     {
         public int? TaskID { get; set; }

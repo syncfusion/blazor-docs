@@ -147,11 +147,11 @@ The resource collection contains details about resources that are used in the pr
 
 ## Assign Resource
 
-We can assign resources for a task at initial load, using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the `GanttTaskFields.ResourceInfo` property.
+We can assign resources for a task at initial load by using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the `GanttTaskFields.ResourceInfo` property.
 
-* Gantt TValue for Resource mapping collection name should be same as `GanttTaskFields.ResourceInfo`.
+* Gantt TValue for Resource mapping collection name should be the same as `GanttTaskFields.ResourceInfo`.
 * Gantt Resource mapping collection should have the value for Id. Both Name and Unit values are optional.
-* If the unit is not specified for specific resource, the amount of work done will be consider as 100% by default, In such cases, the resource unit will not be displayed in Gantt UI.
+* If the unit is not specified for a specific resource, the amount of work done will be considered as 100% by default. In such cases, the resource unit will not be displayed in Gantt UI.
 
 ### Assign Resource with Unit
 

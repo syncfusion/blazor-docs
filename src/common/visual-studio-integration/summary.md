@@ -4,4 +4,5 @@
 * [Convert Project](visual-studio-integration/visual-studio-extensions/convert-project.md)
 * [Upgrade Project](visual-studio-integration/visual-studio-extensions/upgrade-project.md)
 * [Scaffolding](visual-studio-integration/visual-studio-extensions/scaffolding.md)
+* [Code Generator](visual-studio-integration/visual-studio-extensions/code-generator.md)
 * [Create Project](visual-studio-integration/visual-studio-extensions/create-project.md)

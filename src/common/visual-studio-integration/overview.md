@@ -11,3 +11,5 @@ The following Extensions supports are provided by Syncfusion Blazor in Visual St
 [Convert project](./visual-studio-extensions/convert-project):  Converts the existing Blazor application to the Syncfusion Blazor application by adding the required NuGet Syncfusion and CDN links.
 
 [Upgrade project](./visual-studio-extensions/upgrade-project):  Upgrades the existing Syncfusion Blazor application from one version of Essential Studio to another.
+
+[Code Generator](./visual-studio-extensions/code-generator):  Add Syncfusion Blazor component code in razor file at required place.

@@ -11,3 +11,4 @@
 * [Enable Scroller](listbox/how-to/enable-scroll.md)
 * [Enable/Disable ListBox](listbox/how-to/enable-or-disable-items.md)
 * [Select Items](listbox/how-to/select-items.md)
+* [Style and Appearance](listbox/how-to/style-and-appearance.md)

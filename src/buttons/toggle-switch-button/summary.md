@@ -9,3 +9,4 @@
 * [Change Toggle Switch Button state using toggle method](toggle-switch-button/how-to/change-switch-state-using-toggle-method.md)
 * [Set disabled state](toggle-switch-button/how-to/set-disabled-state.md)
 * [Toggle Switch Button For and Model binding](toggle-switch-button/how-to/switchfor.md)
+* [Style and Appearance](toggle-switch-button/how-to/style-and-appearance.md)

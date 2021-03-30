@@ -9,4 +9,5 @@
 * [Repeat Button](button/how-to/repeat-button.md)
 * [Right-To-Left](button/how-to/right-to-left.md)
 * [Set the disabled state](button/how-to/set-the-disabled-state.md)
+* [Style and Appearance](button/how-to/style-and-appearance.md)
 * [Tooltip for Button](button/how-to/tooltip-for-button.md)

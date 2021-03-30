@@ -16,3 +16,4 @@
 * [Position popup open](drop-down-menu/how-to/position-popup.md)
 * [Create Dropdown List in Popup](drop-down-menu/how-to/dropdownlist-dropdownbutton.md)
 * [Add and Remove Items](drop-down-menu/how-to/add-remove-items.md)
+* [Style and Appearance](drop-down-menu/how-to/style-and-appearance.md)

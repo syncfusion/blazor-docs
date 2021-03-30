@@ -5,3 +5,4 @@
 * [Customized Checkbox](check-box/how-to/customized-checkbox.md)
 * [CheckboxFor and Model Binding](check-box/how-to/checkboxfor.md)
 * [Right-To-Left](check-box/how-to/right-to-left.md)
+* [Style and Appearance](check-box/how-to/style-and-appearance.md)

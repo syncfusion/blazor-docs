@@ -10,3 +10,4 @@
 * [Open a dialog on popup item click](split-button/how-to/open-a-dialog-on-popup-item-click)
 * [Set the disabled state](split-button/how-to/set-the-disabled-state.md)
 * [Add and Remove Items](split-button/how-to/add-remove-items.md)
+* [Style and Appearance](split-button/how-to/style-and-appearance.md)

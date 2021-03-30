@@ -10,3 +10,4 @@
 * [Hide spinner](progress-button/how-to/hide-spinner.md)
 * [Stop Progress Indicator](progress-button/how-to/stop-progress-indicator.md)
 * [Trace Events of Progress Button](progress-button/how-to/trace-events.md)
+* [Style and Appearance](progress-button/how-to/style-and-appearance.md)

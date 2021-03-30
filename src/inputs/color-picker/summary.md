@@ -10,3 +10,4 @@
 * [Handle No Color Support](color-picker/how-to/no-color-support.md)
 * [Hide control buttons](color-picker/how-to/hide-control-buttons.md)
 * [Render palette alone](color-picker/how-to/render-palette-alone.md)
+* [Style and Appearance](color-picker/how-to/style-and-appearance.md)

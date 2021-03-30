@@ -12,4 +12,5 @@
 * [Customize Menu Bar Using Events](menu-bar/how-to/customize-menu-using-events.md)
 * [Menu Bar with Rounded Corner](menu-bar/how-to/menu-with-rounded-corner.md)
 * [Open Sub Menu on Menu Item Click](menu-bar/how-to/open-menu-click.md)
+* [Style and Appearance](menu-bar/how-to/style-and-appearance.md)
 * [Right to Left](menu-bar/how-to/right-left.md)

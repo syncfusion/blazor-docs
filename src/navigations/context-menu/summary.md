@@ -11,3 +11,4 @@
 * [Open a dialog on Context Menu item click](context-menu/how-to/open-dialog.md)
 * [Open Sub Menu on Context Menu Item Click](context-menu/how-to/open-context-menu-click.md)
 * [Open and close Context Menu](context-menu/how-to/open-and-close-context-menu.md)
+* [Style and Appearance](context-menu/how-to/style-and-appearance.md)

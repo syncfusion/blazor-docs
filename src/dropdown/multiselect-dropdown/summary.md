@@ -6,5 +6,6 @@
 * [Filtering](multiselect-dropdown/filtering.md)
 * [Custom Value](multiselect-dropdown/custom-value.md)
 * [CheckBox](multiselect-dropdown/checkbox.md)
+* [Style and appearance](multiselect-dropdown/style.md)
 * [Localization](multiselect-dropdown/localization.md)
 * [Accessibility](multiselect-dropdown/accessibility.md)

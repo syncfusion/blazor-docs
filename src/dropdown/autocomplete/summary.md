@@ -5,5 +5,6 @@
 * [Filtering](autocomplete/filtering.md)
 * [Templates](autocomplete/templates.md)
 * [Localization](autocomplete/localization.md)
+* [Style and appearance](autocomplete/style.md)
 * [Native Events](autocomplete/native-events.md)
 * [Accessibility](autocomplete/accessibility.md)

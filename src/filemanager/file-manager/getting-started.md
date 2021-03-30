@@ -138,7 +138,6 @@ To initialize a local service, create a new folder name with `Controllers` insid
 [Controllers/SampleDataController.cs]
 
 ```csharp
-using filemanager.Shared;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -160,13 +159,13 @@ namespace filemanager.Server.Controllers
     {
         public PhysicalFileProvider operation;
         public string basePath;
-
+        string root = "wwwroot\\Files";
         [Obsolete]
         public SampleDataController(IHostingEnvironment hostingEnvironment)
         {
             this.basePath = hostingEnvironment.ContentRootPath;
             this.operation = new PhysicalFileProvider();
-            this.operation.RootFolder(this.basePath + "\\Data\\Files"); // Data\\Files denotes in which files and folders are available.
+            this.operation.RootFolder(this.basePath + "\\" + this.root); // It denotes in which files and folders are available.
         }
 
         // Processing the File Manager operations
@@ -207,7 +206,20 @@ namespace filemanager.Server.Controllers
 }
 ```
 
-To access the above File Operations, you need some model class files, which have file operations methods. So, create `Models` folder in `server` part of the application and download the files from the [this](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Base-1256964832) link in Models folder.
+To access the above File Operations, you need some model class files that have file operations methods. So, create `Models` folder in `server` part of the application and download the `PhysicalFileProvider.cs` and `Base` folder from the [this](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) link in the Models folder.
+
+Add your required files and folders under the `wwwroot\Files` directory.
+
+>For Server-side application, Add the following code in your **Startup.cs** file.
+
+```csharp
+ app.UseEndpoints(endpoints =>
+            {
+               ....
+               ....
+                endpoints.MapControllers();
+            });
+```
 
 ### Run the application
 
@@ -355,7 +367,7 @@ The following output will demonstrate the image preview of File Manager.
 
 Refer to the following sample link, which is preconfigured with above steps.
 
-[File Manager with local service](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager-315130224)
+[File Manager with local service](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager1055616812)
 
 ## See Also
 

@@ -1,11 +1,11 @@
 # Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Query Builder component from right-to-left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To achieve this functionality, set the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_EnableRtl) to true.
+RTL provides an option to switch the text direction and layout of the Query Builder component from right-to-left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable this feature, set the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_EnableRtl) to true.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder TValue="EmployeeDetails" DataSource="@EmployeeData" EnableRtl="true">
+<SfQueryBuilder DataSource="@EmployeeData" EnableRtl="true">
     <QueryBuilderRule Condition="or" Rules="@Rules"></QueryBuilderRule>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>

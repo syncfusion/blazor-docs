@@ -1,16 +1,16 @@
 # Importing
 
-Importing allows you to view or edit the predefined conditions which is available in List or SQL. You can import the conditions either initial rendering or post rendering.
+Importing allows you to view or edit the predefined conditions which is available in List rules or SQL rules. You can import the conditions either initial rendering or post rendering.
 
 ## Initial rendering
 
-To apply conditions initially, you can define the [`Rule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Rule). Here, you can import list of rules by defining the [`Rule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Rule) property.
+To apply conditions initially, you can define the condition and rules in **QueryBuilderRule** . Here, you can import list of rules by defining the **QueryBuilderRule**.
 
 ```csharp
 
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder TValue="EmployeeDetails" DataSource="@EmployeeData" @ref="QueryBuilderObj">
+<SfQueryBuilder DataSource="@EmployeeData" @ref="QueryBuilderObj">
     <QueryBuilderRule Condition="or" Rules="Rules"></QueryBuilderRule>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
@@ -60,6 +60,7 @@ Output will be shown as
 ### Importing from SQL
 
 You can set the conditions from SQL query through the [`SetRulesFromSql`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SetRulesFromSql_System_String_) method.
+In the following sample sql rules binding on querybuilder on button click.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
@@ -116,23 +117,22 @@ Exporting allows you to save or maintain the created conditions through the Quer
 
 ## Exporting to SQL
 
-You can export the defined conditions to SQL query through the [`GetRulesFromSql`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_GetRulesFromSql_System_String_) method.
+You can export the defined conditions to SQL query through the [`GetSqlFromRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_GetSqlFromRules) method.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.Buttons
 
 <SfQueryBuilder DataSource="@EmployeeDetails" Rule="@ImportRules" @ref="QueryBuilderObj">
-                <QueryBuilderColumns>
-                    <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="number"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="FirstName" Label="First Name" Type="string"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title Of Courtesy" Type="boolean"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="date"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="Country" Label="Country" Type="string"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="City" Label="City" Type="string"></QueryBuilderColumn>
-                </QueryBuilderColumns>
+    <QueryBuilderColumns>
+        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title Of Courtesy" Type="ColumnType.Boolean"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
+    </QueryBuilderColumns>
 </SfQueryBuilder>
-<SfButton CssClass="e-primary" @onclick="setRules">Get Rules</SfButton>
 <SfButton CssClass="e-primary" @onclick="getSql">Get SQL</SfButton>
 
 @code {
@@ -158,19 +158,14 @@ You can export the defined conditions to SQL query through the [`GetRulesFromSql
     {
         Condition = "or",
         Rules = new List<RuleModel>{
-            new RuleModel { Field = "EmployeeID", Value = "1001", Operator = "notequal" },
-            new RuleModel { Field = "Country", Value = "England", Operator = "equal" }
+            new RuleModel { Field = "EmployeeID", type="Number",  Value = 1001, Operator = "notequal" },
+            new RuleModel { Field = "Country", type="String", Value = "England", Operator = "equal" }
         }
     };
 
     private async void getSql()
     {
         string sql = await QueryBuilderObj.GetSqlFromRules();
-    }
-
-    protected void setRules()
-    {
-        QueryBuilderObj.SetRulesFromSql("FirstName LIKE ('%Ch%')");
     }
  }
 

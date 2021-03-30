@@ -6,12 +6,14 @@ The column definitions are used as the [`DataSource`](https://help.syncfusion.co
 
 ## Auto generation
 
-The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) are automatically generated when the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) declaration is empty or undefined while initializing the query builder. All the columns in the `DataSource` are bound as the query builder columns.
+The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) are automatically generated from datasource when the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) declaration is empty or undefined while initializing the query builder. All the columns in the `DataSource` are bound as the query builder columns.
+
+> When columns are auto-generated, the column type will be determined from the first record of the data source.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder TValue="EmployeeDetails" DataSource="@EmployeeData"></SfQueryBuilder>
+<SfQueryBuilder DataSource="@EmployeeData"></SfQueryBuilder>
 
 @code {
     //Local datasource
@@ -36,18 +38,15 @@ The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBui
 
 ```
 
-> When columns are auto-generated, the column type will be determined from the first record of the data source.
-
 ## Labels
 
 By default, the column label is displayed from the column [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) value. To override the default label, you have to define the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Label) value.
 
-> If both the field and headerText are not defined in the column, the column renders with `empty` header text.
+> If both the field and label are not defined in the column, the column renders with `empty` text.
 
 ## Operators
 
-The operator for a column can be defined in the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) property.
-The available operators and its supported data types are:
+The operator for a column can be defined in the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) property. You can directly set the custom operators using [`OperatorsModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.OperatorsModel.html) in columns `Operator` property. The available operators and its supported data types are:
 
 | Operators | Description | Supported Types |
 | ------------ | ----------------------- | ------------------ |
@@ -64,14 +63,16 @@ The available operators and its supported data types are:
 | notbetween | Checks whether the value is not between the two-specific value. | Date/Number |
 | in | Checks whether the value is one of the specific values. | String/Number |
 | notin | Checks whether the value is not in the specific values. | String/Number |
-| isempty | Checks whether the value is empty in the specific values. | String |
-| isnotempty | Checks whether the value is not empty in the specific values. | String |
-| isnull | Checks whether the value is null in the specific values. | String/Number |
-| isnotnull | Checks whether the value is not null in the specific values. | String/Number |
+| isempty | Checks whether the value is empty. | String |
+| isnotempty | Checks whether the value is not empty. | String |
+| isnull | Checks whether the value is null. | String/Number |
+| isnotnull | Checks whether the value is not null. | String/Number |
 
 ## Step
 
 The Query Builder allows you to set the step values to the number fields. It allows you to increase or decrease the numeric value with the predefined Step value using the [`Step`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Step) property.
+
+> By default the Step value is 1.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
@@ -101,20 +102,30 @@ The Query Builder allows you to set the step values to the number fields. It all
 
 ## Format
 
-The Query Builder formats date and number values. Use the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Format)   property, to format date and number values.
+The Query Builder formats date and number values. Use the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Format) property, to format date and number values.
+
+> From the standard numeric format, you can use the numeric related format specifiers such as n,p, and c in the format property. By using these format specifiers, you can achieve the percentage and currency textbox behavior.
+
+In the following sample, the date field is formatted as MM/yyyy/dd and number field is formatted as currency type.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails">
+    <QueryBuilderRule Condition="and" Rules="Rules"></QueryBuilderRule>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date" Format="MM-yyyy-dd"></QueryBuilderColumn>
         <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="Title" Label="Title" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="Salary" Label="Salary" Type="ColumnType.Number" Format="c2"></QueryBuilderColumn>
     </QueryBuilderColumns>
 </SfQueryBuilder>
 
 @code {
+    List<RuleModel> Rules = new List<RuleModel>()
+    {
+        new RuleModel { Field="HireDate", Label="HireDate", Type="Date", Operator="equal", Value = new DateTime(DateTime.Now.Year,DateTime.Now.Month,4) },
+        new RuleModel { Field="Salary", Label="Salary",  Type="Number", Operator="greaterthan", Value = 23 }
+    };
     public class EmployeeDetails
     {
         public int EmployeeID { get; set; }
@@ -124,6 +135,7 @@ The Query Builder formats date and number values. Use the [`Format`](https://hel
         public DateTime HireDate { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
+        public int Salary { get; set; }
     }
 }
 
@@ -135,14 +147,15 @@ Output will be shown as
 
 ## Validations
 
-Validation allows you to validate the conditions and it display errors for invalid fields. To enable validation in the Query Builder, set [`AllowValidation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true. Column fields are validated after setting [`AllowValidation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true.
+Validation allows you to validate the conditions and it display errors for invalid fields. To enable validation in the Query Builder, set [`AllowValidation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true. Column fields are validated after setting [`AllowValidation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) property to true.
 
-> Set `Min`, `Max` values for number values.
+> You can set `Min` and `Max` values for number values.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails" AllowValidation="true">
+    <QueryBuilderColumnValidation Max="0" Min="100"></QueryBuilderColumnValidation>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
         <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>

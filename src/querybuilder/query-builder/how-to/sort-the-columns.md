@@ -1,11 +1,13 @@
 # Sort the columns
 
-SortDirection allows you to sort the columns bounded to the Query Builder to view the columns by `ascending` or `descending` order. You can set [`SortDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SortDirection) property to sort the fields.
+The Querybuilder has options to sort the column fields by `ascending` or `descending` order. To Sort the columns, you need to set [`SortDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SortDirection) property.
+
+In the following sample columns are sorted in ascending order.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder TValue="EmployeeDetails" DataSource="@EmployeeData" SortDirection="SortDirection.Ascending">
+<SfQueryBuilder DataSource="@EmployeeData" SortDirection="SortDirection.Ascending">
     <QueryBuilderRule Condition="or" Rules="@Rules"></QueryBuilderRule>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
@@ -19,6 +21,7 @@ SortDirection allows you to sort the columns bounded to the Query Builder to vie
 </SfQueryBuilder>
 
 @code {
+    private string[] Values = new string[] { "Mr.", "Mrs." };
     List<RuleModel> Rules = new List<RuleModel>()
     {
             new RuleModel { Field="Country", Label="Country", Type="String", Operator="equal", Value = "England" },

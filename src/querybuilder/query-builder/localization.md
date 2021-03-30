@@ -2,106 +2,79 @@
 
 The `Localization` library allows you to localize default text content of the Query Builder. The Query Builder has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.). In the following sample the text is changed to `German` culture.
 
+We have used Resource file (.resx) to translate the static text of the querybuilder.
+
+> Use `Resource` file to translate the static text of the Querybuilder. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](https://blazor.syncfusion.com/documentation/common/localization/#how-to-enable-localization-in-blazor-application) link to know more about how to configure and use localization in the Blazor Server and Web Assembly project for Syncfusion Blazor components.
+
 The following list of properties and its values are used in the Query Builder.
 
 | Locale key | en-US (default) |
 | ------------ | ----------------------- |
-| AddGroup  | Add Group |
-| AddCondition  | Add Condition |
-| DeleteRule | Remove this condition |
-| DeleteGroup | Delete group |
-| Edit | EDIT |
-| SelectField | Select a field |
-| SelectOperator | Select operator |
-| StartsWith | Starts With|
-| EndsWith | Ends With |
-| Contains | Contains |
-| Equal | Equal |
-| NotEqual | Not Equal |
-| LessThan | Less Than |
-| LessThanOrEqual | Less Than Or Equal |
-| GreaterThan | Greater Than |
-| GreaterThanOrEqual | Greater Than Or Equal |
-| Between | Between |
-| NotBetween | Not Between|
-| In | In |
-| NotIn | Not In |
-| Remove | REMOVE |
-| ValidationMessage | This field is required |
-| SummaryViewTitle | Summary View |
-| OtherFields | Other Fields |
-| AND | AND |
-| OR | OR |
-| SelectValue | Enter Value |
-| IsEmpty | Is Empty |
-| IsNotEmpty | Is Not Empty |
-| IsNull | Is Null |
-| IsNotNull | Is Not Null |
-
-> To load translation object in an application, define the culture and the component locale text corresponding to the language in a separate `locale.json` file under `wwwroot` folder.
-
-`locale.json`
-
-```json
-{
-"de-DE": {
-        "querybuilder": {
-            "AddGroup": "Gruppe hinzufügen",
-            "AddCondition": "Bedingung hinzufügen",
-            "DeleteRule": "Entfernen Sie diesen Zustand",
-            "DeleteGroup": "Gruppe löschen",
-            "Edit": "BEARBEITEN",
-            "SelectField": "Wählen Sie ein Feld aus",
-            "DeleteRule": "Entfernen Sie diesen Zustand",
-            "DeleteGroup": "Gruppe löschen",
-            "SelectOperator": "Operator auswählen",
-            "StartsWith": "Beginnt mit",
-            "EndsWith": "Endet mit",
-            "Contains": "Enthält",
-            "Equal": "Gleich",
-            "NotEqual": "Nicht gleich",
-            "LessThan": "Weniger als",
-            "LessThanOrEqual": "Weniger als oder gleich",
-            "GreaterThan": "Größer als",
-            "GreaterThanOrEqual": "Größer als oder gleich",
-            "Between": "Zwischen",
-            "NotBetween": "Nicht zwischen",
-            "In": "Im",
-            "NotIn": "Nicht in",
-            "Remove": "LÖSCHEN",
-            "ValidationMessage": "Dieses Feld wird benötigt",
-            "AND": "Und",
-            "OR": "Oder"
-        }
-    }
-}
-
-```
+| QueryBuilder_AddGroup  | Add Group |
+| QueryBuilder_AddCondition  | Add Condition |
+| QueryBuilder_DeleteRule | Remove this condition |
+| QueryBuilder_DeleteGroup | Delete group |
+| QueryBuilder_Edit | EDIT |
+| QueryBuilder_SelectField | Select a field |
+| QueryBuilder_SelectOperator | Select operator |
+| QueryBuilder_StartsWith | Starts With|
+| QueryBuilder_EndsWith | Ends With |
+| QueryBuilder_Contains | Contains |
+| QueryBuilder_Equal | Equal |
+| QueryBuilder_NotEqual | Not Equal |
+| QueryBuilder_LessThan | Less Than |
+| QueryBuilder_LessThanOrEqual | Less Than Or Equal |
+| QueryBuilder_GreaterThan | Greater Than |
+| QueryBuilder_GreaterThanOrEqual | Greater Than Or Equal |
+| QueryBuilder_Between | Between |
+| QueryBuilder_NotBetween | Not Between|
+| QueryBuilder_In | In |
+| QueryBuilder_NotIn | Not In |
+| QueryBuilder_Remove | REMOVE |
+| QueryBuilder_ValidationMessage | This field is required |
+| QueryBuilder_SummaryViewTitle | Summary View |
+| QueryBuilder_OtherFields | Other Fields |
+| QueryBuilder_AND | AND |
+| QueryBuilder_OR | OR |
+| QueryBuilder_SelectValue | Enter Value |
+| QueryBuilder_IsEmpty | Is Empty |
+| QueryBuilder_IsNotEmpty | Is Not Empty |
+| QueryBuilder_IsNull | Is Null |
+| QueryBuilder_IsNotNull | Is Not Null |
 
 ```csharp
 
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder>
-                <QueryBuilderColumns>
-                    <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="number"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="FirstName" Label="First Name" Type="string"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title Of Courtesy" Type="boolean"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="date"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="Country" Label="Country" Type="string"></QueryBuilderColumn>
-                    <QueryBuilderColumn Field="City" Label="City" Type="string"></QueryBuilderColumn>
-                </QueryBuilderColumns>
+<SfQueryBuilder TValue="EmployeeDetails">
+    <QueryBuilderRule Condition="and" Rules="@Rules"></QueryBuilderRule>
+    <QueryBuilderColumns>
+        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title of Courtesy" Type="ColumnType.Boolean" Values="Values"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="Title" Label="Title" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
+    </QueryBuilderColumns>
 </SfQueryBuilder>
 
 @code {
-    [Inject]
-    protected IJSRuntime JsRuntime { get; set; }
-
-    protected override void OnAfterRender()
+    private string[] Values = new string[] { "Mr.", "Mrs." };
+    List<RuleModel> Rules = new List<RuleModel>()
     {
-        this.JsRuntime.Sf().LoadLocaleData("wwwroot/locale.json").SetCulture("de-DE");
+        new RuleModel { Field="EmployeeID", Label="Employee ID", Type="Number", Operator="equal", Value = 2345 }
+    };
+    public class EmployeeDetails
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public bool TitleOfCourtesy { get; set; }
+        public string Title { get; set; }
+        public DateTime HireDate { get; set; }
+        public string Country { get; set; }
+        public string City { get; set; }
     }
-
 }
 
 ```

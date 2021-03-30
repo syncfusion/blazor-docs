@@ -1,11 +1,13 @@
 # State Persistence
 
-State persistence allows you to maintain the current state in the browser’s `LocalStorage` even if the browser is refreshed or if you move to the next page within the browser. State persistence stores the Query Builder’s [`Rule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Rule) in the local storage when the [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_EnablePersistence) is defined to `true`.
+State persistence allows the querybuilder to retain the current querybuilder state in the browser local storage for state maintenance. This action is handled through the [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_EnablePersistence) property which is set to false by default. When it is set to true, the Querybuilder `Rules` will be retained even after refreshing the page.
+
+>The state will be persisted based on ID property. So, it is recommended to explicitly set the ID property for Querybuilder.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder TValue="EmployeeDetails" DataSource="@EmployeeData" EnablePersistence="true">
+<SfQueryBuilder ID="querybuilder" DataSource="@EmployeeData" EnablePersistence="true">
     <QueryBuilderRule Condition="or" Rules="@Rules"></QueryBuilderRule>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>

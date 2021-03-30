@@ -4,14 +4,15 @@ Query Builder allows you to create or delete conditions and groups. You can use 
 
 You can `create` or `delete` conditions by interacting through the user interface and methods.
 
-Use the [`AddRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AddRules_System_Object_System_String_), and [`DeleteRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DeleteRules_System_Object_) methods to create/delete conditions.
-Use [`AddGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AddGroups_System_Object_System_String_), and [`DeleteGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DeleteGroups_System_Object_) methods to create/delete groups.
+* Use the [`AddRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AddRules_System_Object_System_String_), and [`DeleteRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DeleteRules_System_Object_) methods to create/delete conditions.
+* Use [`AddGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AddGroups_System_Object_System_String_), and [`DeleteGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DeleteGroups_System_Object_) methods to create/delete groups.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.Buttons
 
 <SfQueryBuilder TValue="EmployeeDetails" @ref="QuerybuilderObj">
+    <QueryBuilderShowButtons RuleDelete="true" GroupDelete="true" GroupInsert="true"></QueryBuilderShowButtons>
     <QueryBuilderRule Condition="or" Rules="@Rules"></QueryBuilderRule>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
@@ -40,7 +41,7 @@ Use [`AddGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBu
         Field = "EmployeeID",
         Type = "Number",
         Operator = "equal",
-        Value = "1091"
+        Value = 1091
     };
 
     RuleModel SampGroup = new RuleModel()
@@ -54,7 +55,7 @@ Use [`AddGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBu
                 Field = "EmployeeID",
                 Type = "Number",
                 Operator = "equal",
-                Value = "1091"
+                Value = 1091
             }
         }
     };
@@ -73,7 +74,7 @@ Use [`AddGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBu
 
     private void deleteGroups()
     {
-        2QuerybuilderObj.DeleteGroup("group1");
+        QuerybuilderObj.DeleteGroup("group1");
     }
 
     public class EmployeeDetails

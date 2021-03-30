@@ -10,14 +10,15 @@ To get start quickly with Query Builder Component using Blazor, you can check on
 
 1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.chtml` page.
+2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
 > Please ensure to check the **Include prerelease** option.
 
 ```csharp
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css" rel="stylesheet" />*@
+    <link href="_content/Syncfusion.Blazor/styles/material.css" rel="stylesheet" />
+    <!---CDN--->
+    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/material.css" rel="stylesheet" />*@
 </head>
 ```
 
@@ -26,7 +27,7 @@ For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](h
 ```csharp
 <head>
     <environment include="Development">
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor/styles/material.css" rel="stylesheet" />
         <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
      </environment>
 </head>
@@ -112,7 +113,7 @@ Now, add the Blazor Query Builder component in `razor` page in the `Pages` folde
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Query Builder component will render in the web browser as shown below
 
-![QueryBuilder Sample](./images/query-builder.png)
+![QueryBuilder Sample](https://ej2.syncfusion.com/products/images/querybuilder/readme.gif)
 
 ## See Also
 

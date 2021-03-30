@@ -4,7 +4,9 @@ This section explains the list of templates available in the Query Builder.
 
 ## Value Template
 
-Template allows you to define your own widgets for value. Use the [`ValueTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_ValueTemplate), property to define templates.
+Template allows you to define your own widgets for column values. Use the [`ValueTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_ValueTemplate), property to define templates.
+
+In the following sample, SFDropdownlist is used as value template.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
@@ -82,7 +84,7 @@ Output will be shown as
 
 Column Template allows you to define your own widgets for entire column. Use the [`ColumnTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_ColumnTemplate) property to define templates.
 
-In the following sample, the DropDownList component is used as the custom components for field and value in the `PaymentMode` column.
+In the following sample, the SFDropdownlist component is used as the custom components for field and value in the `PaymentMode` column.
 
 ```csharp
 
@@ -229,3 +231,126 @@ In the following sample, the DropDownList component is used as the custom compon
 Output will be shown as
 
 ![Query Builder Sample](./images/qb-column-template.png)
+
+## Header Template
+
+Header Template allows you to define your own widgets for group header. You can customize the AND/OR/NOT operators and add rules/groups buttons. Use the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_HeaderTemplate) property to define templates.
+
+In the following sample, the SFDropdownlist component is used as the custom components for AND/OR operators and customized SfButtons for add rules and add groups button.
+
+```csharp
+
+@using Syncfusion.Blazor.QueryBuilder
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Buttons
+
+<SfQueryBuilder TValue="EmployeeDetails" @ref="qbObj">
+    <QueryBuilderRule Condition="and" Rules="Rules"></QueryBuilderRule>
+    <QueryBuilderTemplates>
+        <HeaderTemplate>
+            <SfDropDownList ID="@context.ID" TValue="string" TItem="Operator" CssClass="e-outline" Width="100px" DataSource="@operData" @ref="ddlObj">
+                <DropDownListFieldSettings Text="Text"></DropDownListFieldSettings>
+                <DropDownListEvents TValue="string" TItem="Operator" Created="e => ddlCreated(e, context)" ValueChange="e => onChange(e, context)"></DropDownListEvents>
+            </SfDropDownList>
+            <div id="addgrp">
+                <SfButton Content="Add Group" CssClass="e-small e-outline" @onclick="e => addGrpBtn(e, context)"></SfButton>
+            </div>
+            <div id="addgrp">
+                <SfButton Content="Add Condition" CssClass="e-small e-outline" @onclick="e => addCondBtn(e, context)"></SfButton>
+            </div>
+            @if (context.ID.Split("_")[1].IndexOf("0") < 0)
+            {
+                <div id="addgrp">
+                    <SfButton Content="Delete Group" CssClass="e-small e-outline e-danger" @onclick="e => deleteGrpBtn(e, context)"></SfButton>
+                </div>
+            }
+        </HeaderTemplate>
+    </QueryBuilderTemplates>
+    <QueryBuilderColumns>
+        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title of Courtesy" Type="ColumnType.Boolean" Values="Values"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="Title" Label="Title" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
+    </QueryBuilderColumns>
+</SfQueryBuilder>
+
+@code {
+    SfDropDownList<string, Operator> ddlObj { set { ddlRefs.Add(value); } }
+    SfQueryBuilder<EmployeeDetails> qbObj;
+    List<SfDropDownList<string, Operator>> ddlRefs = new List<SfDropDownList<string, Operator>>();
+    private string[] Values = new string[] { "Mr.", "Mrs." };
+    private string grpID;
+    List<RuleModel> Rules = new List<RuleModel>()
+    {
+            new RuleModel { Field="Country", Label="Country", Type="String", Operator="equal", Value = "England" },
+            new RuleModel { Field="EmployeeID", Label="EmployeeID",  Type="Number", Operator="notequal", Value = 1001 },
+            new RuleModel { Condition="or", Rules=new List<RuleModel>() { new RuleModel() { Field="FirstName", Label="First Name", Type = "String", Operator ="equal", Value="Mark" } }}
+    };
+    public class Operator
+    {
+        public string Text { get; set; }
+    }
+    public class EmployeeDetails
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public bool TitleOfCourtesy { get; set; }
+        public string Title { get; set; }
+        public DateTime HireDate { get; set; }
+        public string Country { get; set; }
+        public string City { get; set; }
+    }
+    List<Operator> operData = new List<Operator>()
+    {
+        new Operator() { Text = "AND" },
+        new Operator() { Text = "OR" }
+    };
+    private void ddlCreated(Object obj, HeaderTemplateModel model)
+    {
+        foreach (SfDropDownList<string, Operator> ddlObj in ddlRefs)
+        {
+            if (ddlObj.ID == model.ID)
+            {
+                ddlObj.Value = model.Condition.ToUpper();
+            }
+        }
+    }
+    private void onChange(ChangeEventArgs<string, Operator> args, HeaderTemplateModel model)
+    {
+        if (args.IsInteracted)
+        {
+            model.Condition = args.Value.ToLower();
+        }
+    }
+    private void addGrpBtn(MouseEventArgs args, HeaderTemplateModel model)
+    {
+        grpID = model.ID.Split("_")[1];
+        qbObj.AddGroup(new RuleModel { Condition = "or", Rules = new List<RuleModel>() { new RuleModel() } }, grpID);
+    }
+    private void addCondBtn(MouseEventArgs args, HeaderTemplateModel model)
+    {
+        grpID = model.ID.Split("_")[1];
+        qbObj.AddRule(new RuleModel(), grpID);
+    }
+    private void deleteGrpBtn(MouseEventArgs args, HeaderTemplateModel model)
+    {
+        grpID = model.ID.Split("_")[1];
+        qbObj.DeleteGroup(grpID);
+    }
+}
+
+<style>
+    #addgrp {
+        display: inline-block;
+        padding: 0 0 0 12px;
+    }
+</style>
+
+```
+
+Output will be shown as
+
+![Query Builder Header template Sample](./images/header-template.png)

@@ -1,6 +1,7 @@
 # Display Options
 
-Display options allow you to view the Query Builder Vertically or Horizontally. To achieve this functionality, you can use [`DisplayMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DisplayMode) property.
+The Querybuilder allows you to view Vertically or Horizontally. To enable this feature, you can set the [`DisplayMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DisplayMode) property.
+In the following sample the display option is set as vertical.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder

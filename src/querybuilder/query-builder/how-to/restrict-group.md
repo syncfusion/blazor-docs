@@ -1,11 +1,13 @@
 # Restrict the groups
 
-You can restrict the groups by defining the [`MaxGroupCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_MaxGroupCount) property. In the below demo, the `MaxGroupCount` is set to 2 .
+The Querybuilder allows you to restrict the groups from creation based on group count. You can enable this feature by setting the [`MaxGroupCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_MaxGroupCount) property.
+
+> By default, MaxGroupCount is set as 5.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder TValue="EmployeeDetails" DataSource="@EmployeeData" MaxGroupCount="2">
+<SfQueryBuilder DataSource="@EmployeeData" MaxGroupCount="2">
     <QueryBuilderRule Condition="or" Rules="@Rules"></QueryBuilderRule>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
@@ -18,8 +20,8 @@ You can restrict the groups by defining the [`MaxGroupCount`](https://help.syncf
 @code {
     List<RuleModel> Rules = new List<RuleModel>()
     {
-            new RuleModel { Field="Country", Label="Country", Type="String", Operator="equal", Value = "England" },
-            new RuleModel { Field="EmployeeID", Label="EmployeeID",  Type="Number", Operator="notequal", Value = 1001 }
+        new RuleModel { Field="Country", Label="Country", Type="String", Operator="equal", Value = "England" },
+        new RuleModel { Field="EmployeeID", Label="EmployeeID",  Type="Number", Operator="notequal", Value = 1001 }
     };
 
     public List<EmployeeDetails> EmployeeData = new List<EmployeeDetails>
@@ -42,9 +44,5 @@ You can restrict the groups by defining the [`MaxGroupCount`](https://help.syncf
 }
 
 ```
-
-Output will shown as
-
-![Query Builder Sample](./../images/qb-restrict.png)
 
 > You can use this property in the mobile mode to restrict the nested group creation.

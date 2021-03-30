@@ -12,9 +12,13 @@ The following example illustrates the single selection behavior in ButtonGroup.
 
 <SfButtonGroup Mode="SelectionMode.Single">
     <ButtonGroupButton>Left</ButtonGroupButton>
-    <ButtonGroupButton Selected="true">Center</ButtonGroupButton>
+    <ButtonGroupButton @bind-Selected="@centerSelected">Center</ButtonGroupButton>
     <ButtonGroupButton>Right</ButtonGroupButton>
 </SfButtonGroup>
+
+@code {
+    private bool centerSelected = true;
+}
 
 ```
 
@@ -32,10 +36,15 @@ The following example illustrates the multiple selection behavior in ButtonGroup
 @using Syncfusion.Blazor.SplitButtons
 
 <SfButtonGroup Mode="SelectionMode.Multiple">
-    <ButtonGroupButton Selected="true" IconCss="bg-icons e-btngrp-bold">Bold</ButtonGroupButton>
-    <ButtonGroupButton Selected="true" IconCss="bg-icons e-btngrp-italic e-icon-left">Italic</ButtonGroupButton>
+    <ButtonGroupButton @bind-Selected="@boldSelected" IconCss="bg-icons e-btngrp-bold">Bold</ButtonGroupButton>
+    <ButtonGroupButton @bind-Selected="@italicSelected" IconCss="bg-icons e-btngrp-italic e-icon-left">Italic</ButtonGroupButton>
     <ButtonGroupButton IconCss="bg-icons e-btngrp-underline e-icon-left">Underline</ButtonGroupButton>
 </SfButtonGroup>
+
+@code {
+    private bool boldSelected = true;
+    private bool italicSelected = true;
+}
 
 ```
 

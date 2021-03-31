@@ -1,6 +1,6 @@
 # Overview
 
-The **Scheduler** component is an event calendar which facilitates user with the common Outlook-calendar features,
+The [**Blazor Scheduler**](https://www.syncfusion.com/blazor-components/blazor-scheduler/) component is an event calendar which facilitates user with the common Outlook-calendar features,
 thus allowing the users to plan and manage their events/appointments and its time in an efficient way.
 
 ## Key Features
@@ -14,7 +14,7 @@ side and remote data sources thus allowing the data to load on demand by default
 * **Resizing** - Allows to change the event timing by resizing them to the desired time interval using its handlers.
 * **Adaptive rendering** - Adapts with optimal user interface on mobile and desktop,
 thus helping the user's application to scale elegantly across all the form-factors without any additional effort.
-* **Multiple resources** - Allows the Scheduler to be shared by multiple resources and the events of each resource are displayed relevantly either in expandable groups (Timeline views) or
+* [**Multiple resources**](https://www.syncfusion.com/blazor-components/blazor-scheduler/multiple-resources/) - Allows the Scheduler to be shared by multiple resources and the events of each resource are displayed relevantly either in expandable groups (Timeline views) or
 vertical hierarchy one after the other (Calendar views).
 * **Virtual scrolling** - Allows to load a large set of resources and events on Scheduler instantly as you scroll, to experience better performance.
 * **Block time intervals** - The specific range of date and time on Scheduler can be blocked, thus preventing it from user interactions.

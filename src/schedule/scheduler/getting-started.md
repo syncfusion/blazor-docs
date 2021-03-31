@@ -1,6 +1,6 @@
 # Getting Started
 
-This section briefly explains about how to include a simple Scheduler in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a simple Scheduler Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side Scheduler](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly Scheduler](how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications..
 
 To get start quickly with Blazor Scheduler, you can check on this video:
 
@@ -89,7 +89,7 @@ namespace BlazorApplication
 
 ## Initialize the Scheduler component
 
-The Scheduler component can be rendered on the page by defining the `SfSchedule` tag helper. Add the following code example to your `index.razor` page which is available within the `~/Pages/` folder, to initialize the Scheduler component.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) component can be rendered on the page by defining the `SfSchedule` tag helper. Add the following code example to your `index.razor` page which is available within the `~/Pages/` folder, to initialize the Scheduler component.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -156,7 +156,7 @@ The scheduler with the appointments will be rendered as shown in the following i
 
 ## Setting date
 
-The Scheduler usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the two-way binding for `SelectedDate` property.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the two-way binding for `SelectedDate` property.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -252,6 +252,8 @@ Each individual Scheduler views can be customized with its own options such as s
     }
 }
 ```
+
+> You can refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview?theme=bootstrap4/) to understand how to manage appointments with multiple resources.
 
 ## See Also
 

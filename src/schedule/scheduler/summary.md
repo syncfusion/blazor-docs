@@ -20,6 +20,7 @@
 * [Accessibility](scheduler/accessibility.md)
 * [Events](scheduler/events.md)
 * [Style And Appearance](scheduler/scheduler-styling.md)
+* [Blazor WebAssembly Scheduler](scheduler/how-to/blazor-web-assembly-scheduler.md)
 * [Open Editor Window on Single Click](scheduler/how-to/open-editor-window-on-single-click.md)
 * [Create Multiple Events in different time slots through CTRL key](scheduler/how-to/create-multiple-events-dynamically.md)
 * [Custom Header](scheduler/how-to/custom-header.md)

@@ -80,6 +80,26 @@ The following code example illustrates how to create a complex hierarchical tree
 
 ![Line Distribution](../images/line-distribution.png)
 
+## Prevent connectors overlay
+
+The below constraints prevents the connector segments overlapping nodes with a complex hierarchical layout.
+
+The following code illustrates how to prevents the connector segments overlapping in diagram layout.
+
+```csharp
+  
+    protected override void OnInitialized()
+        {
+            LayoutValue = new DiagramLayout()
+                {
+                    //this prevents connector segments overlapping
+                    enableRouting: true,
+                };
+            }
+        }
+
+```
+
 ## See also
 
 * [`How to create a node`](../nodes/nodes)

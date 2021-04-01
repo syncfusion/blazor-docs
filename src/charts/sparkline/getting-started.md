@@ -81,7 +81,7 @@ the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncf
         public string Month { get; set; }
         public double Celsius { get; set; }
     };
-    pubilc List<WeatherReport> ClimateData = new List<WeatherReport> {
+    public List<WeatherReport> ClimateData = new List<WeatherReport> {
         new  WeatherReport { Month= "Jan", Celsius= 34 },
         new  WeatherReport { Month= "Feb", Celsius= 36 },
         new  WeatherReport { Month= "Mar", Celsius= 32 },

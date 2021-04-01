@@ -10,7 +10,7 @@
 
 ![Stacked Column](../images/chart-types-images/stacked-column.png)
 
-**New Note:** You can also explore our [`Blazor Stacked Column Chart Example`](https://blazor.syncfusion.com/demos/chart/stacked-column?theme=bootstrap4) to knows how to render and configure the stacking column type chart.
+> Note: You can also explore our [`Blazor Stacked Column Chart Example`](https://blazor.syncfusion.com/demos/chart/stacked-column?theme=bootstrap4) to knows how to render and configure the stacking column type chart.
 
 ## Customization
 
@@ -24,27 +24,25 @@ You can use the following properties to customize the stacked column series.
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfChart Width="60%">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" DashArray="5,5" Fill="blue" Opacity="0.7" Type="ChartSeriesType.StackingColumn">
-            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
+        <ChartSeries DataSource="@DataSource" XName="X" DashArray="5,5" Fill="red" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn">
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" DashArray="5,5" Fill="green" Opacity="0.7" Type="ChartSeriesType.StackingColumn">
-            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
+        <ChartSeries DataSource="@DataSource" XName="X" DashArray="5,5" Fill="blue" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
-
 @code{
     public class ChartData
     {
-        public string X;
-        public double YValue;
-        public double YValue1;
+        public string X { get; set; }
+        public double YValue { get; set; }
+        public double YValue1 { get; set; }
     }
-    public List<ChartData> MedalDetails = new List<ChartData>
+
+    public List<ChartData> DataSource = new List<ChartData>
 {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -60,7 +58,7 @@ You can use the following properties to customize the stacked column series.
 
 ![Custom Stacked Column](../images/chart-types-images/custom-stacked-column.png)
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

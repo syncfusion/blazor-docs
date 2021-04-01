@@ -2,8 +2,8 @@
 
 ## Print
 
-The rendered chart can be printed directly from the browser by calling the public method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuItemClicked).
-You can pass array of ID of elements or element to this method. By default it take element of the chart.
+Rendered chart can be printed directly from the browser by calling [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Print) method.
+You can pass array of elements ID or element to this method. By default it take element of the chart.
 
 {% aspTab template="chart/getting-started/print", sourceFiles="print.razor" %}
 
@@ -11,13 +11,13 @@ You can pass array of ID of elements or element to this method. By default it ta
 
 ## Export
 
-The rendered chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) method in chart. The input parameters for this method are `Export Type` for format and `FileName` for result.
+The rendered chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method in chart. The input parameters for this method are `Export Type` for format and `FileName` for result.
 
 The optional parameters for this method are,
-* `Orientation` - either portrait or landscape,
-* `Controls` - pass collections of controls for multiple export,
-* `Width` - width of chart export, and
-* `Height` - height of chart export.
+* `Orientation` - Portrait or landscape,
+* `Controls` - Collections of controls for multiple export,
+* `Width` - Width of chart export, and
+* `Height` - Height of chart export.
 
 {% aspTab template="chart/getting-started/export", sourceFiles="export.razor" %}
 

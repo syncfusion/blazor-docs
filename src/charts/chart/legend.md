@@ -5,7 +5,7 @@ Legend provides information about the series rendered in the chart.
 ## Enable Legend
 
 You can use legend for the chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible)
-property to true in [`LegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) object.
+property to **true** in [`ChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html).
 
 {% aspTab template="chart/getting-started/legend", sourceFiles="legend.razor" %}
 
@@ -34,7 +34,7 @@ Custom position helps you to position the legend anywhere in the chart using x, 
 
 <!-- markdownlint-disable MD036 -->
 
-You can align the legend as `Center`, `Far` or `Near` to the chart using
+You can align the legend at `Center`, `Far` or `Near` to the chart using
 [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Alignment) property.
 
 {% aspTab template="chart/axis/legend/alignment", sourceFiles="alignment.razor" %}
@@ -45,7 +45,7 @@ You can align the legend as `Center`, `Far` or `Near` to the chart using
 
 ## Customization
 
-To change the legend icon shape, you can use [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_LegendShape) property in the Series. By default legend icon shape is `SeriesType`.
+To change the legend icon shape, you can use [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_LegendShape) property in the Series. By default legend icon shape is **SeriesType**.
 
 {% aspTab template="chart/axis/legend/custom", sourceFiles="custom.razor" %}
 
@@ -55,7 +55,7 @@ To change the legend icon shape, you can use [`LegendShape`](https://help.syncf
 
 By default, legend takes 20% - 25% of the chart's height, when it is placed on top or bottom position and 20% - 25% of the
 chart's width, when placed on left or right position of the chart. You can change this default legend size by using the
-[`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Height) property of the `LegendSettings`.
+[`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Height) property.
 
 {% aspTab template="chart/axis/legend/size", sourceFiles="size.razor" %}
 

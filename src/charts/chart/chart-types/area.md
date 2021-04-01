@@ -10,6 +10,8 @@
 
 ![Area](../images/chart-types-images/area.png)
 
+> Note: You can also explore our [`Blazor Area Chart Example`](https://blazor.syncfusion.com/demos/chart/area?theme=bootstrap4) to knows how to represent time-dependent data, showing trends in data at equal intervals.
+
 ## Multicolored area
 
 To render a multicolored area series, use the series type as `MultiColoredArea`.Here, the individual colors to the data can be mapped by using [`PointColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~PointColorMapping.html).

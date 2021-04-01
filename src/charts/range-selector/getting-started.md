@@ -1,43 +1,43 @@
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started
+# Getting Started in Blazor Range Navigator
 
-This section briefly explains about how to include a `RangeNavigator` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Range Navigator` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Install **Syncfusion.Blazor** NuGet package to the application by using the NuGet Package Manager. Please ensure to check the **Include prerelease** option.
-2. You can add the client-side style resources through CDN or from NuGet package in the `HEAD` element of the `~/Pages/_Host.cshtml` page.
+1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
+
+2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <!---CDN--->
+    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
 </head>
 ```
 
-**Note:** The same theme file can be referred through the CDN version by using `https://cdn.syncfusion.com/blazor/18.1.36-beta/styles/bootstrap4.css`
+> For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [`documentation`](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
-
-```html
+ ```html
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
 ```
 
 ## Adding component package to the application
 
-Open `**~/_Imports.razor` file and import the `Syncfusion.Blazor.**`
+Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.Charts` namespace.
 
 ```csharp
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 ```
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using **service.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -57,73 +57,58 @@ namespace BlazorApplication
 }
 ```
 
-**Note:** To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+> To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+
+## Add Range Navigator component
+
+To initialize the `Range Navigator` component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
 ```csharp
-<head>
-    <script src="https://cdn.syncfusion.com/blazor/18.1.36-beta/dist/syncfusion-blazor.min.js"></script>
-</head>
-```
+@page "/"
 
-## Adding RangeNavigator component to the application
+<SfRangeNavigator>
 
-Now, add the Syncfusion Blazor components in any web page (razor) in the Pages folder. For example, the `Range navigator` component is added in the **~/Pages/Index.razor** page.
-
-**Note:** For smooth user interaction with chart, please load the ***lodash*** script,
-
-```csharp
-<head>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-</head>
-```
-
- in the **HEAD** element of the **~/Pages/_Host.cshtml** page for server side blazor application,
- in the **HEAD** element of the **~/wwwroot/index.html** for wasm application.
-
-```csharp
-<SfRangeNavigator></SfRangeNavigator>
+</SfRangeNavigator>
 ```
 
 ## Populate Range Navigator with Data
 
-To bind data for the Range Navigator component, you can assign a IEnumerable object to
-the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. The list can also be provided as an instance of the **DataManager**.
+To bind data for the `Range Navigator` component, you can assign a `IEnumerable` object to
+the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 ```csharp
-public class StockPrice
-{
-    public DateTime Date { get; set;}
-    public double Close { get; set; }
+@code {
+    public class StockPrice
+    {
+        public DateTime Date { get; set; }
+        public double Close { get; set; }
+    }
+    public List<StockPrice> StockDetails = new List<StockPrice>
+    {
+        new StockPrice { Date = new DateTime(2005, 01, 01), Close = 21 },
+        new StockPrice { Date = new DateTime(2006, 01, 01), Close = 24 },
+        new StockPrice { Date = new DateTime(2007, 01, 01), Close = 36 },
+        new StockPrice { Date = new DateTime(2008, 01, 01), Close = 38 },
+        new StockPrice { Date = new DateTime(2009, 01, 01), Close = 54 },
+        new StockPrice { Date = new DateTime(2010, 01, 01), Close = 57 },
+        new StockPrice { Date = new DateTime(2011, 01, 01), Close = 62 }
+    };
 }
-public List<StockPrice> StockDetails = new List<StockPrice>
-        {
-            new StockPrice { Date = new DateTime(2005, 01, 01), Close = 21 },
-            new StockPrice { Date = new DateTime(2006, 01, 01), Close = 24 },
-            new StockPrice { Date = new DateTime(2007, 01, 01), Close = 36 },
-            new StockPrice { Date = new DateTime(2008, 01, 01), Close = 38 },
-            new StockPrice { Date = new DateTime(2009, 01, 01), Close = 54 },
-            new StockPrice { Date = new DateTime(2010, 01, 01), Close = 57 },
-            new StockPrice { Date = new DateTime(2011, 01, 01), Close = 62 }
-        };
 ```
 
-Now map the field names `Date` and `Close` in the data to the [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_YName) properties of the range navigator series, then set the StockDetails to [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
+Now map `Date` and `Close` fields from the datasource to [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_YName) properties of the [`RangeNavigatorSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html) and then set the `StockDetails` to [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
 
 ```csharp
-<SfRangeNavigator Value="@Value" ValueType="Syncfusion.EJ2.Blazor.Charts.RangeValueType.DateTime" IntervalType="RangeIntervalType.Years" LabelFormat="yyyy">
+<SfRangeNavigator ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years" LabelFormat="yyyy">
     <RangeNavigatorSeriesCollection>
         <RangeNavigatorSeries DataSource="@StockDetails" XName="Date" Type="RangeNavigatorType.Area" YName="Close"></RangeNavigatorSeries>
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
 ```
 
-## Run the application
-
-After successful compilation of your application, the Syncfusion Blazor Range Navigator component will render in the web browser.
+On successful compilation of your application, the Syncfusion Blazor `Range Navigator` component will render in the web browser as shown below.
 
 ![range navigator](images/range-navigator.png)
-
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See also
 

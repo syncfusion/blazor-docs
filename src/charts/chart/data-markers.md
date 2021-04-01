@@ -19,7 +19,7 @@ option of the marker property.
 
 ## Shape
 
-Markers can be assigned with different shapes such as Rectangle, Circle, Diamond etc using the [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property.
+Markers can be assigned with different shapes such as Rectangle, Circle, Diamond etc using the [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property.
 
 {% aspTab template="chart/data-marker/shape", sourceFiles="shape.razor" %}
 
@@ -27,12 +27,10 @@ Markers can be assigned with different shapes such as Rectangle, Circle, Diamond
 
 ![Shape](images/marker/shape-razor.png)
 
->Note : To know more about the marker shape type refer the [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartMarker~Shape.html).
-
 ## Images
 
 Apart from the shapes, you can also add custom images to mark the data point using the
-[`ImageUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartMarker~ImageUrl.html) property.
+[`ImageUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_ImageUrl) property.
 
 {% aspTab template="chart/data-marker/images", sourceFiles="images.razor" %}
 
@@ -40,7 +38,7 @@ Apart from the shapes, you can also add custom images to mark the data point usi
 
 ## Customization
 
-Marker's color and border can be customized using `Fill` and `Border` properties.
+Marker color and border can be customized using [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Border) properties.
 
 {% aspTab template="chart/data-marker/custom", sourceFiles="custom.razor" %}
 

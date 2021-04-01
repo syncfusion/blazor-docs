@@ -10,6 +10,8 @@
 
 ![Stacked Area](../images/chart-types-images/stackedarea.png)
 
+> Note: You can also explore our [`Blazor Stacked Area Chart Example`](https://blazor.syncfusion.com/demos/chart/stacked-area?theme=bootstrap4) to knows how to to render and configure the stacking area type charts
+
 ## Customization
 
 You can use the following properties to customize the stacked area series.

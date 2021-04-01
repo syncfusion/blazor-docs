@@ -10,6 +10,8 @@ Shows the relative percentage of multiple data series in stacked columns. The cu
 
 ![100% Stacked Area](../images/chart-types-images/stackedarea100.png)
 
+> Note: You can also explore our [`Blazor 100% Stacked Area Chart`](https://blazor.syncfusion.com/demos/chart/percent-stacked-area?theme=bootstrap4) Example to knows how to render and configure the 100% stacking area type chart.
+
 ## Customization
 
 You can use the following properties to customize 100% stacked area series.

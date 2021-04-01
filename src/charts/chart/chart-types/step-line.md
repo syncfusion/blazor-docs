@@ -10,6 +10,8 @@ This chart represents a set of points connected by horizontal and vertical lines
 
 ![Step Line](../images/chart-types-images/stepline.png)
 
+> Note: You can refer to our [`Blazor Step line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stepline-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Step line Chart Example`](https://blazor.syncfusion.com/demos/chart/step-line?theme=bootstrap4) to know how to render a step line series.
+
 ## Customization
 
 You can use the following properties to customize the step line series.

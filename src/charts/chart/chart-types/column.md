@@ -8,32 +8,31 @@
 
 {% endaspTab %}
 
-**New Note:** You can also explore our [`Blazor Column Chart Example`](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare frequency, count, total, or average of data in different categories.
+> Note: You can also explore our [`Blazor Column Chart Example`](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare frequency, count, total, or average of data in different categories.
 
 ## Column Space and Width
 
-You can use the `ColumnSpacing` and `ColumnWidth` properties to customize the space between the columns.
+You can use the [`ColumnSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnSpacing) and [`ColumnWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnWidth) properties to customize the space between the columns.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfChart Width="60%">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@DataSource" XName="X" YName="YValue" ColumnSpacing="0.2" ColumnWidth="0.7" Type="ChartSeriesType.Column">
-        </ChartSeries>
-        <ChartSeries DataSource="@DataSource" XName="X" YName="YValue1" ColumnSpacing="0.2" ColumnWidth="0.2" Type="ChartSeriesType.Column">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Column"  ColumnSpacing="0.2" ColumnWidth="0.2" >
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code{
     public class ChartData
     {
-        public string X;
-        public double Y;
+        public string X { get; set; }
+        public double Y { get; set; }
     }
-    public List<ChartData> DataSource = new List<ChartData>
+    public List<ChartData> MedalDetails = new List<ChartData>
 {
         new ChartData { X= "South Korea", Y= 39.4 },
         new ChartData { X= "India", Y= 61.3 },
@@ -65,13 +64,12 @@ You can use the following properties to customize the column series.
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals" Width="60%">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Opacity="0.5"
-                     DashArray="5,5" Fill="blue" Type="ChartSeriesType.Column">
-            <ChartSeriesBorder Width="2" Color="red"></ChartSeriesBorder>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Column" Opacity="0.5"
+                     DashArray="5,5" Fill="blue" >
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -79,8 +77,8 @@ You can use the following properties to customize the column series.
 @code{
     public class ChartData
     {
-        public string X;
-        public double Y;
+        public string X { get; set; }
+        public double Y { get; set; }
     }
     public List<ChartData> MedalDetails = new List<ChartData>
 {
@@ -102,7 +100,7 @@ You can use the following properties to customize the column series.
 
 ![Column](../images/chart-types-images/column-custom.png)
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

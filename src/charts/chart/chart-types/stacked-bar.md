@@ -2,7 +2,7 @@
 
 ## Stacked
 
-[`Blazor Stacked Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) is used to plots data points on top of each other using horizontal bars. To render a stacked bar series, use series `Type` as `StackingBar`.
+[`Blazor Stacked Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) is used to plots data points on top of each other using horizontal bars. To render a stacked bar series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `StackingBar`.
 
 {% aspTab template="chart/series/bar-charts/stackedbar", sourceFiles="stackedbar.razor" %}
 
@@ -10,7 +10,7 @@
 
 ![Stacked bar](../images/chart-types-images/stackedbar.png)
 
-**New Note:** You can also explore our Blazor Stacked Bar Chart Example to knows how to render and configure the stacking bar type chart.
+> Note: You can also explore our Blazor Stacked Bar Chart Example to knows how to render and configure the stacking bar type chart.
 
 ## Customization
 
@@ -24,14 +24,14 @@ You can use the following properties to customize the stacked bar series.
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfChart Width="60%">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" DashArray="5,5" Fill="blue" Opacity="0.7" Type="ChartSeriesType.StackingBar">
             <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" DashArray="5,5" Fill="green" Opacity="0.7" Type="ChartSeriesType.StackingBar">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" DashArray="5,5" Fill="red" Opacity="0.7" Type="ChartSeriesType.StackingBar">
             <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
         </ChartSeries>
     </ChartSeriesCollection>
@@ -40,9 +40,9 @@ You can use the following properties to customize the stacked bar series.
 @code{
     public class ChartData
     {
-        public string X;
-        public double YValue;
-        public double YValue1;
+        public string X { get; set; }
+        public double YValue { get; set; }
+        public double YValue1 { get; set; }
     }
     public List<ChartData> MedalDetails = new List<ChartData>
 {
@@ -60,7 +60,7 @@ You can use the following properties to customize the stacked bar series.
 
 ![Custom Stacked bar](../images/chart-types-images/custom-stacked-bar.png)
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

@@ -1,11 +1,10 @@
 # Events
 
-In this section, we have provided the list of events of the Chart component which will be
-triggered for appropriate Chart actions.
+In this section, we have provided a list of chart component events that will be triggered for appropriate chart actions.
 
-The events should be provided to the Chart using [`ChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
+The events should be provided to the chart using [`ChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
 
-> From `v18.4.*`, we have added few additional following events for the Chart component
+> From `v18.4.*`, we have added few additional events for the chart component
 
 Event Name|
 -----|
@@ -36,7 +35,7 @@ MultiLevelLabelClick |[OnMultiLevelLabelClick](events/#onmultilevellabelclick)
 OnSelectionComplete |[OnSelectionChanged](events/#onselectionchanged)
 OnDragComplete |[OnSelectionChanged](events/#onselectionchanged)
 
-> From `v18.4.*`, we remove the following previous release events from Chart component
+> From `v18.4.*`, We have removed the following previous release events from chart component
 
 Event Name|
 -----|
@@ -54,7 +53,7 @@ PointMoved|
 
 ## OnZoomStart
 
-[`OnZoomStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomStart) event is triggers, after the zoom selection is triggered.
+After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomStart) event is triggered.
 
 {% aspTab template="chart/events", sourceFiles="zoomstart.razor" %}
 
@@ -62,7 +61,7 @@ PointMoved|
 
 ## OnZoomEnd
 
-[`OnZoomEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event is triggers, after the zoom selection is triggered.
+[`OnZoomEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event triggers, after the zoom selection is completed.
 
 {% aspTab template="chart/events", sourceFiles="zoomend.razor" %}
 
@@ -70,7 +69,7 @@ PointMoved|
 
 ## OnLegendItemRender
 
-[`OnLegendItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendItemRender) event is triggers,before the legend is rendered.
+[`OnLegendItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendItemRender) event triggers,before the legend is rendered.
 
 {% aspTab template="chart/events", sourceFiles="legendrender.razor" %}
 
@@ -78,7 +77,7 @@ PointMoved|
 
 ## OnDataLabelRender
 
-[`OnDataLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataLabelRender) event is triggers, before the data label for series is rendered.
+[`OnDataLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataLabelRender) event triggers, before the data label for series is rendered.
 
 {% aspTab template="chart/events", sourceFiles="datalabelrender.razor" %}
 
@@ -86,7 +85,7 @@ PointMoved|
 
 ## OnPointRender
 
-[`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event is triggers, before each points for the series is rendered.
+[`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event triggers, before each points for the series is rendered.
 
 {% aspTab template="chart/events", sourceFiles="pointrender.razor" %}
 
@@ -94,7 +93,7 @@ PointMoved|
 
 ## OnAxisLabelRender
 
-[`OnAxisLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event is triggers, before each axis label is rendered.
+[`OnAxisLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event triggers, before each axis label is rendered.
 
 {% aspTab template="chart/events", sourceFiles="axislabelrender.razor" %}
 
@@ -102,7 +101,7 @@ PointMoved|
 
 ## OnAxisLabelClick
 
-[`OnAxisLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelClick) event is triggers, when x axis label clicked.
+[`OnAxisLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelClick) event triggers, when x axis label is clicked.
 
 {% aspTab template="chart/events", sourceFiles="axislabelclick.razor" %}
 
@@ -110,7 +109,7 @@ PointMoved|
 
 ## OnAxisActualRangeCalculated
 
-[`OnAxisActualRangeCalculated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisActualRangeCalculated) event is triggers, before each axis range is rendered.
+[`OnAxisActualRangeCalculated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisActualRangeCalculated) event triggers, before each axis range is calculated.
 
 {% aspTab template="chart/events", sourceFiles="axisactualrange.razor" %}
 
@@ -118,7 +117,7 @@ PointMoved|
 
 ## OnAxisMultiLevelLabelRender
 
-[`OnAxisMultiLevelLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event is triggers, while render multilevellabels.
+[`OnAxisMultiLevelLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event triggers, while rendering multilevellabels.
 
 {% aspTab template="chart/events", sourceFiles="axismultilabel.razor" %}
 
@@ -126,7 +125,7 @@ PointMoved|
 
 ## SizeChanged
 
-[`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SizeChanged) event is triggers after resizing of chart.
+[`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SizeChanged) event triggers after resizing of chart.
 
 {% aspTab template="chart/events", sourceFiles="sizechanged.razor" %}
 
@@ -134,7 +133,7 @@ PointMoved|
 
 ## OnScrollChanged
 
-[`OnScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event is triggers when change the scroll.
+[`OnScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event triggers while scrolling the chart.
 
 {% aspTab template="chart/events", sourceFiles="scrollchanged.razor" %}
 
@@ -142,7 +141,7 @@ PointMoved|
 
 ## OnExportComplete
 
-[`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event is triggers after the export completed.
+[`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event triggers after exporting the chart.
 
 {% aspTab template="chart/events", sourceFiles="exportcomplete.razor" %}
 
@@ -150,7 +149,7 @@ PointMoved|
 
 ## OnPrintComplete
 
-`OnPrintComplete` event is triggers when after the print completed.
+`OnPrintComplete` event triggers after printing the chart.
 
 {% aspTab template="chart/events", sourceFiles="printcomplete.razor" %}
 
@@ -158,7 +157,7 @@ PointMoved|
 
 ## OnDataEdit
 
-[`OnDataEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEdit) event is triggers, when the point drag start.
+[`OnDataEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEdit) event triggers, while dragging the data point.
 
 {% aspTab template="chart/events", sourceFiles="dataedit.razor" %}
 
@@ -166,7 +165,7 @@ PointMoved|
 
 ## OnDataEditCompleted
 
-[`OnDataEditCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEditCompleted) event is triggers  when the point drag end.
+[`OnDataEditCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEditCompleted) event triggers  when the point drag completed.
 
 {% aspTab template="chart/events", sourceFiles="dataeditcomplete.razor" %}
 
@@ -174,7 +173,7 @@ PointMoved|
 
 ## OnLegendClick
 
-[`OnLegendClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendClick) event is triggers after click on legend.
+[`OnLegendClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendClick) event triggers after legend click.
 
 {% aspTab template="chart/events", sourceFiles="legendclick.razor" %}
 
@@ -182,7 +181,7 @@ PointMoved|
 
 ## OnMultiLevelLabelClick
 
-[`OnMultiLevelLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event is triggers after click on multilevellabelclick.
+[`OnMultiLevelLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event triggers after click on multilevellabelclick.
 
 {% aspTab template="chart/events", sourceFiles="multilabelclick.razor" %}
 
@@ -190,7 +189,7 @@ PointMoved|
 
 ## OnSelectionChanged
 
-[`OnSelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event is triggers after the selection is completed.
+[`OnSelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event triggers after the selection is completed.
 
 {% aspTab template="chart/events", sourceFiles="selectionchanged.razor" %}
 
@@ -198,7 +197,7 @@ PointMoved|
 
 ## Loaded
 
-`Loaded` event is triggers after chart load.
+`Loaded` event triggers after chart load.
 
 {% aspTab template="chart/events", sourceFiles="loaded.razor" %}
 
@@ -206,7 +205,7 @@ PointMoved|
 
 ## OnPointClick
 
-[`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointClick) event is triggers on point click.
+[`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointClick) event triggers on point click.
 
 {% aspTab template="chart/events", sourceFiles="pointclick.razor" %}
 
@@ -214,7 +213,7 @@ PointMoved|
 
 ## TooltipRender
 
-[`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_TooltipRender) event is triggers, before the tooltip for series is rendered.
+[`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_TooltipRender) event triggers, before the tooltip for series is rendered.
 
 {% aspTab template="chart/events", sourceFiles="tooltiprender.razor" %}
 
@@ -222,7 +221,7 @@ PointMoved|
 
 ## SharedTooltipRender
 
-[`SharedTooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SharedTooltipRender) event is triggers, before the sharedtooltip for series is rendered.
+[`SharedTooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SharedTooltipRender) event triggers, before the sharedtooltip for series is rendered.
 
 {% aspTab template="chart/events", sourceFiles="sharedtooltiprender.razor" %}
 
@@ -230,7 +229,7 @@ PointMoved|
 
 ## OnZooming
 
-[`OnZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZooming) event is triggers, after the zoom selection is triggered.
+[`OnZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZooming) event triggers, after the zoom selection is completed.
 
 {% aspTab template="chart/events", sourceFiles="zooming.razor" %}
 

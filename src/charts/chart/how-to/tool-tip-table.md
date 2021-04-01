@@ -1,8 +1,8 @@
 # Create a table in tooltip
 
-You can show the tooltip as table by using Template property in tooltip.
+You can show the tooltip as table by using [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html).
 
-To access the aggregate values inside the Template, you can use the implicit named parameter context. You can type cast the context as `ChartTooltipInfo` to get aggregate values inside template
+To access the aggregate values inside the Template, you can use the implicit named parameter context. You can type cast the context as [`ChartTooltipInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipInfo.html) to get aggregate values inside template
 
 ```razor
             <ChartTooltipSettings Enable="true">
@@ -23,4 +23,4 @@ To access the aggregate values inside the Template, you can use the implicit nam
 
 {% endaspTab %}
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

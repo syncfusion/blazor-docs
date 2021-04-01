@@ -10,6 +10,8 @@ This chart connects the data points with smooth curves. To render a spline serie
 
 ![Spline](../images/chart-types-images/spline.png)
 
+> Note: You can refer to our [`Blazor Spline Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Spline Chart Example`](https://blazor.syncfusion.com/demos/chart/spline?theme=bootstrap4) to know how to connects the data points with smooth curves.
+
 ## SplineType
 
 You can configure the spline type using [`SplineType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SplineType) property. The spline types are `Clamped`, `Cardinal`

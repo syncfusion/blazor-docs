@@ -10,6 +10,8 @@
 
 ![Stacked Line](../images/chart-types-images/stacked-line.png)
 
+> Note: You can also explore our [`Blazor Stacked Line Chart`](https://blazor.syncfusion.com/demos/chart/stacked-line?theme=bootstrap4) Example to knows how to render and configure the stacking column type chart.
+
 ## Customization
 
 You can use the following properties to customize the stacked line series.

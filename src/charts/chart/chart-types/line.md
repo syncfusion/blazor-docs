@@ -10,6 +10,8 @@
 
 ![Line Charts](../images/chart-types-images/line.png)
 
+> Note: You can also explore our [`Blazor Line Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows how to represent time-dependent data, showing trends in data at equal intervals.
+
 ## Multicolored Line
 
 To render a multicolored line series, use the series type as `MultiColoredLine`.

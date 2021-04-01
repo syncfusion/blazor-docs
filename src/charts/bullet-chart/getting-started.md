@@ -1,41 +1,41 @@
-# Getting Started
+# Getting Started in Blazor Bullet Chart
 
-This section briefly explains about how to include a `Bullet Chart` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains how to include a `Bullet Chart` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Install Syncfusion.Blazor NuGet package to the application by using the NuGet Package Manager. Please ensure to check the **Include prerelease** option.
-2. You can add the client-side style resources through CDN or from NuGet package in the `HEAD` element of the `~/Pages/_Host.cshtml` page.
+1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
+
+2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <!---CDN--->
+    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
 </head>
 ```
 
-**Note:** The same theme file can be referred through the CDN version by using `https://cdn.syncfusion.com/blazor/18.1.36-beta/styles/bootstrap4.css`
+> For Internet Explorer 11, kindly refer the polyfills. Refer the [`documentation`](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [`documentation`](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
-
-```html
+ ```html
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
 ```
 
 ## Adding component package to the application
 
-Open `**~/_Imports.razor` file and import the `Syncfusion.Blazor.**`
+Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.Charts` namespace.
 
 ```csharp
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 ```
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using **service.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -55,62 +55,54 @@ namespace BlazorApplication
 }
 ```
 
-**Note:** To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+> To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+
+## Add Bullet Chart component
+
+To initialize the `Bullet Chart` component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
 ```csharp
-<head>
-    <script src="https://cdn.syncfusion.com/blazor/18.1.36-beta/dist/syncfusion-blazor.min.js"></script>
-</head>
-```
+@page "/"
 
-## Adding Bullet Chart component to the application
-
-Now, add the Syncfusion Blazor components in any web page (razor) in the Pages folder. For example, the BulletChart component is added in the **~/Pages/Index.razor** page.
-
-```csharp
-  @using Syncfusion.Blazor.Charts
-
-<SfBulletChart DataSource="@BulletChartData" ValueField="value" TargetField="target" Minimum="0" Maximum="300" Interval="50">
+<SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
 </SfBulletChart>
 
 @code{
     public class ChartData
     {
-        public double value { get; set; }
-        public double target { get; set; }
+        public double FieldValue { get; set; }
+        public double TargetValue { get; set; }
     }
     public List<ChartData> BulletChartData = new List<ChartData>
-{
-        new ChartData { value = 270, target = 250 }
+    {
+        new ChartData { FieldValue = 270, TargetValue = 250 }
     };
 }
 ```
 
-## Run the application
-
-After successful compilation of your application, the Syncfusion Blazor Bullet Chart component will render in the web browser.
+On successful compilation of your application, the Syncfusion Blazor `Bullet Chart` component will render in the web browser as shown below.
 
 ![Bullet Chart](images/default.png)
 
 ## Add Title
 
-You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartModel.html#Syncfusion_Blazor_Charts_BulletChartModel_Title) property to the Bullet Chart, to provide quick information to the user about the data plotted in the chart.
+You can add a title by using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartModel.html#Syncfusion_Blazor_Charts_BulletChartModel_Title) property in the `Bullet Chart`, to provide quick information to the user about the data plotted in the component.
 
 ```csharp
-@using Syncfusion.Blazor.Charts
+@page "/"
 
-<SfBulletChart DataSource="@BulletChartData" ValueField="value" TargetField="target" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
+<SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
 </SfBulletChart>
 
 @code{
     public class ChartData
     {
-        public double value { get; set; }
-        public double target { get; set; }
+        public double FieldValue { get; set; }
+        public double TargetValue { get; set; }
     }
     public List<ChartData> BulletChartData = new List<ChartData>
-{
-        new ChartData { value = 270, target = 250 }
+    {
+        new ChartData { FieldValue = 270, TargetValue = 250 }
     };
 }
 ```
@@ -119,12 +111,12 @@ You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Ranges
 
-You can add a range using `Ranges` property to the bullet chart.
+You can add ranges by using [`BulletChartRangeCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRangeCollection.html) to measure the qualitative state by observing the distance between each range.
 
 ```csharp
-@using Syncfusion.Blazor.Charts
+@page "/"
 
-<SfBulletChart DataSource="@BulletChartData" ValueField="value" TargetField="target" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
+<SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
     <BulletChartRangeCollection>
         <BulletChartRange End=150> </BulletChartRange>
         <BulletChartRange End=250></BulletChartRange>
@@ -135,12 +127,12 @@ You can add a range using `Ranges` property to the bullet chart.
 @code{
     public class ChartData
     {
-        public double value { get; set; }
-        public double target { get; set; }
+        public double FieldValue { get; set; }
+        public double TargetValue { get; set; }
     }
     public List<ChartData> BulletChartData = new List<ChartData>
-{
-        new ChartData { value = 270, target = 250 }
+    {
+        new ChartData { FieldValue = 270, TargetValue = 250 }
     };
 }
 ```
@@ -149,13 +141,13 @@ You can add a range using `Ranges` property to the bullet chart.
 
 ## Tooltip
 
-You can use tooltip for the bullet chart by setting the `Enable` property to true in `Tooltip`.
+You can use the tooltip to show the measure values by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip.html#Syncfusion_Blazor_Charts_BulletChartTooltip_Enable) property as **true** in [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip.html).
 
 ```csharp
-@using Syncfusion.Blazor.Charts
+@page "/"
 
-<SfBulletChart DataSource="@BulletChartData" ValueField="value" TargetField="target" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
-    <BulletChartTooltip Enable="true"></BulletChartTooltip>
+<SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
+    <BulletChartTooltip TValue="ChartData" Enable="true"></BulletChartTooltip>
     <BulletChartRangeCollection>
         <BulletChartRange End=150> </BulletChartRange>
         <BulletChartRange End=250></BulletChartRange>
@@ -166,16 +158,14 @@ You can use tooltip for the bullet chart by setting the `Enable` property to tru
 @code{
     public class ChartData
     {
-        public double value { get; set; }
-        public double target { get; set; }
+        public double FieldValue { get; set; }
+        public double TargetValue { get; set; }
     }
     public List<ChartData> BulletChartData = new List<ChartData>
-{
-        new ChartData { value = 270, target = 250 }
+    {
+        new ChartData { FieldValue = 270, TargetValue = 250 }
     };
 }
 ```
 
 ![Bullet Chart](images/tool-tip.png)
-
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

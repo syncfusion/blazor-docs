@@ -2,9 +2,9 @@
 
 # DataLabel Template
 
-You can bind text and interior information for a point from dataSource other than x and y value.
+You can bind text and interior information for a point from datasource other than x and y value.
 
-To access the aggregate values inside the Template, you can use the implicit named parameter context. You can type cast the context as IChartTemplate to get aggregate values inside template.
+To access the aggregate values inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template), you can use the implicit named parameter context. You can type cast the context as IChartTemplate to get aggregate values inside template.
 
 You can also change this implicit parameter name using Context attribute.
 

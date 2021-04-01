@@ -8,7 +8,7 @@ The Resource file is an XML file which contains the strings(key and value pairs)
 
 ## Blazor Server Side
 
-In the following examples, demonstrate how to enable **Localization** for Chart in server side Blazor samples.
+Following examples demonstrate how to enable **Localization** for chart in server side Blazor samples.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -80,7 +80,7 @@ namespace BlazorServer
 
 ## Blazor WebAssembly
 
-In the following examples, demonstrate how to enable **Localization** for Chart in Client side Blazor samples.
+Following examples demonstrate how to enable **Localization** for chart in Client side Blazor samples.
 
 * Open the **Program.cs** file and add the below configuration in the **Main** function as follows.
 

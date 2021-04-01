@@ -8,7 +8,7 @@ Blazor chart supports horizontal and vertical strip lines and customization of s
 
 ## Horizontal Striplines
 
-You can create horizontal stripline by adding the [`StripLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_StripLines) in the vertical axis.
+You can create horizontal stripline by adding the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_StripLines) in the vertical axis.
 Striplines are rendered in the specified start to end range and you can add more than one stripline for an axis.
 
 {% aspTab template="chart/axis/strip-line/horizontal", sourceFiles="horizontal.razor" %}
@@ -19,7 +19,7 @@ Striplines are rendered in the specified start to end range and you can add more
 
 ## Vertical Striplines
 
-You can create vertical stripline by adding the [`StripLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_StripLines) in the horizontal axis. Striplines are rendered in the specified start to end range and you can add more than one stripline for an axis.
+You can create vertical stripline by adding the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_StripLines) in the horizontal axis. Striplines are rendered in the specified start to end range and you can add more than one stripline for an axis.
 
 {% aspTab template="chart/axis/strip-line/vertical", sourceFiles="vertical.razor" %}
 

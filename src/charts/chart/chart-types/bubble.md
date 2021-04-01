@@ -8,9 +8,11 @@ Visualize data with three numeric parameters. The bubble size depends on third p
 
 {% endaspTab %}
 
+> Note: You can refer to our [`Blazor Bubble Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Bubble Chart example`](https://blazor.syncfusion.com/demos/chart/bubble?theme=bootstrap4) to knows how to render and configure the bubble type charts.
+
 ## Bubble Size Mapping
 
-`Size` property can be used to map the size value specified in data source.
+[`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Size) property can be used to map the size value specified in data source.
 
 {% aspTab template="chart/series/scatter-bubble/bubble-size", sourceFiles="bubble-size.razor" %}
 
@@ -28,7 +30,7 @@ You can use the following properties to customize the bubble series.
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfChart Width="60%">
+<SfChart>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Opacity="0.7" Fill="blue" Size="Size" Type="ChartSeriesType.Bubble">
         </ChartSeries>
@@ -38,10 +40,10 @@ You can use the following properties to customize the bubble series.
 @code{
     public class ChartData
     {
-        public double X;
-        public double Y;
-        public double Size;
-        public string Text;
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Size { get; set; }
+        public string Text { get; set; }
     }
 
     public List<ChartData> SalesReports = new List<ChartData>
@@ -70,9 +72,7 @@ You can use the following properties to customize the bubble series.
 
 ![Custom Bubble Charts](../images/chart-types-images/custom-bubble.png)
 
-**New Note:** You can refer to our [`Blazor Bubble Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Bubble Chart example`](https://blazor.syncfusion.com/demos/chart/bubble?theme=bootstrap4) to knows how to render and configure the bubble type charts.
-
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

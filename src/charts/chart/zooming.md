@@ -4,11 +4,11 @@
 
 Chart can be zoomed in three ways.
 
-* Selection - By setting [`EnableSelectionZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableSelectionZooming) property to true
-  in [`ZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ChartArea), you can zoom the chart by using the rubber band selection.
-* MouseWheel - By setting [`EnableMouseWheelZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableMouseWheelZooming) property to true
-  in [`ZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ChartArea), you can zoomin and zoomout the chart by scrolling the mouse wheel.
-* Pinch - By setting  [`EnablePinchZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePinchZooming) property to true in [`ZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ChartArea),
+* Selection - By setting [`EnableSelectionZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableSelectionZooming) property to **true**
+  in [`ChartZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html), you can zoom the chart by using the rubber band selection.
+* MouseWheel - By setting [`EnableMouseWheelZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableMouseWheelZooming) property to **true**
+  in [`ChartZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html), you can zoomin and zoomout the chart by scrolling the mouse wheel.
+* Pinch - By setting  [`EnablePinchZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePinchZooming) property to **true** in [`ChartZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html),
   you can zoom the chart through pinch gesture in touch enabled devices.
 
  >Pinch zooming is supported only in browsers that support multi-touch gestures. Currently IE11, Chrome and Opera browsers support multi-touch in desktop devices.
@@ -67,7 +67,7 @@ Using [`EnableScrollbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Auto interval on zooming
 
-By using [`EnableAutoIntervalOnZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_EnableAutoIntervalOnZooming) property,
+By using [`EnableAutoIntervalOnZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_EnableAutoIntervalOnZooming) property,
 the axis interval will get calculated automatically with respect to the zoomed range.
 
 {% aspTab template="chart/user-interaction/zoom/auto-interval", sourceFiles="auto-interval.razor" %}

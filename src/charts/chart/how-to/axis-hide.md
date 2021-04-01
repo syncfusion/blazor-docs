@@ -2,15 +2,15 @@
 
 # Hide axis line when clicking the legend
 
-By using the `OnLegendClick` event, you can hide the axis line through legend.
+By using the [`OnLegendClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendClick) event, you can hide the axis in the chart.
 
-To hide the axis line through legend click, follow the given steps:
+To hide the axis through legend click, follow the given steps:
 
 **Step 1**:
 
 Create a chart with multiple axes.
 
-By using the `OnLegendClick`event, you can get the Series Name. Using this event, based on which you can hide the axis line when clicking the legend.
+Using the series name in `OnLegendClick` event, you can hide the axis associated with the series.
 
 ```razor
 <ChartEvents OnLegendClick="LegendClick"></ChartEvents>
@@ -36,4 +36,4 @@ By using the `OnLegendClick`event, you can get the Series Name. Using this event
 
 {% endaspTab %}
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

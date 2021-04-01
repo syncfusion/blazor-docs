@@ -4,7 +4,7 @@
 
 Error bars are graphical representations of the variability of data and used on graphs to indicate the error or uncertainty in a reported
 measurement. To render the error bar for the series, set [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ErrorBarSettingsModel~Visible.html)
-as `True` in error bar object.
+as **true** in error bar object.
 
 {% aspTab template="chart/series/other-types/errorbar", sourceFiles="errorbar.razor" %}
 
@@ -24,7 +24,7 @@ property.
 
 ## Customizing Error Bar Type
 
-To customize the error bar type, set error bar [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ErrorBarSettingsModel~Type.htmll) as `Custom` and
+To customize the error bar type, set error bar [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ErrorBarSettingsModel~Type.htmll) as **Custom** and
 then change the horizontal/vertical positive and negative error of error bar.
 
 {% aspTab template="chart/series/other-types/custom-error", sourceFiles="custom-error.razor" %}
@@ -60,7 +60,7 @@ To customize the error bar cap length, width and fill color, you can use [`Error
 
 ![Customizing Error Bar](../images/othertypes/errorbarcap-custom.png)
 
-**New Note:** You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 

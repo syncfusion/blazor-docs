@@ -12,7 +12,7 @@ Chart supports 6 types of trendlines.
 ## Linear
 
 A linear trendline is a best fit straight line that is used with simpler data sets. To render a linear trendline,
-use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `Linear`.
+use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as **Linear**.
 
 {% aspTab template="chart/trendlines", sourceFiles="linear.razor" %}
 
@@ -22,11 +22,11 @@ use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ## Exponential
 
-An exponential trendline is a curved line that is most useful when data values rise or fall
+Exponential trendline is a curved line that is most useful when data values rise or fall
 at increasingly higher rates. You cannot create an exponential trendline, if your data contains zero or negative values.
 
 To render a exponential trendline,
-use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `Exponential`.
+use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as **Exponential**.
 
 {% aspTab template="chart/trendlines", sourceFiles="exponential.razor" %}
 
@@ -39,7 +39,7 @@ in the data increases or decreases quickly and then levels out.
 
 A logarithmic trendline can use negative and/or positive values.
 
-To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `Logarithmic`.
+To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as **Logarithmic**.
 
 {% aspTab template="chart/trendlines", sourceFiles="logarithmic.razor" %}
 
@@ -50,9 +50,7 @@ To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusio
 A polynomial trendline is a curved line that is used when data fluctuates.
 
 To render a polynomial trendline,
-use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `Polynomial`.
-
-`PolynomialOrder` used to define the polynomial value.
+use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as **Polynomial**.
 
 {% aspTab template="chart/trendlines", sourceFiles="polynomial.razor" %}
 
@@ -62,7 +60,7 @@ use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 A power trendline is a curved line that is best used with data sets that compare measurements that increase at a specific rate.
 
-To render a power trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `Power`.
+To render a power trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as **Power**.
 
 {% aspTab template="chart/trendlines", sourceFiles="power.razor" %}
 
@@ -74,7 +72,7 @@ A moving average trendline smoothen out fluctuations in data to show a pattern o
 
 To render a moving average trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as `MovingAverage`.
 
-`Period` property defines the period to find the moving average.
+[`Period`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Period) property defines the period to find the moving average.
 
 {% aspTab template="chart/trendlines", sourceFiles="movingaverage.razor" %}
 
@@ -92,12 +90,11 @@ Trendlines forecasting is the prediction of future/past situations.
 
 Forecasting can be classified into two types as follows
 
-Forward Forecasting
-Backward Forecasting
+Forward Forecasting and Backward Forecasting
 
 **Forward Forecasting**
 
-The value set for ForwardForecast is used to determine the distance moving towards the future trend.
+The value set for [`ForwardForecast`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_ForwardForecast) is used to determine the distance moving towards the future trend.
 
 {% aspTab template="chart/trendlines", sourceFiles="forward-forecast.razor" %}
 
@@ -105,7 +102,7 @@ The value set for ForwardForecast is used to determine the distance moving towar
 
 **Backward Forecasting**
 
-The value set for the BackwardForecast is used to determine the past trends.
+The value set for the [`BackwardForecast`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_BackwardForecast) is used to determine the past trends.
 
 {% aspTab template="chart/trendlines", sourceFiles="backward-forecast.razor" %}
 

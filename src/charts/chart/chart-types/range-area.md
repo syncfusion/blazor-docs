@@ -11,6 +11,8 @@ as `RangeArea`.
 
 ![Range Area](../images/chart-types-images/range-area.png)
 
+ > Note: You can refer to our [`Blazor Range Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-area-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Range Area Chart Example`](https://blazor.syncfusion.com/demos/chart/range-area?theme=bootstrap4) to know how to show variations in the data values for a given time.
+
 ## Customization
 
 You can use the following properties to customize the range area series.

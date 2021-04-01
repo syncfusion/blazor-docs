@@ -2,7 +2,7 @@
 
 ## Step Area
 
-Like the step line chart, but with the areas connected with lines shaded. To render a step area series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `StepArea`.
+Like step line chart, but with the areas connected with lines shaded. To render a step area series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as **StepArea**.
 
 {% aspTab template="chart/series/area-charts/steparea", sourceFiles="steparea.razor" %}
 

@@ -2,8 +2,7 @@
 
 ## Multiple Series
 
-You can add multiple series to the chart by using [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries.html) property.
-The series are rendered in the order as it is added to the series array.
+You can add multiple series to the chart by using [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) property. The series are rendered in the order in which they are added to the array of series.
 
 {% aspTab template="chart/series/multiple-series", sourceFiles="multiple-series.razor" %}
 
@@ -13,7 +12,7 @@ The series are rendered in the order as it is added to the series array.
 
 ## Combination Series
 
-Combination of different types like Line, column etc, can be rendered in a chart.
+Combination of different types like line, column etc, can be rendered in a chart.
 
 >Bar series cannot be combined with any other series as the axis orientation is different from other series.
 

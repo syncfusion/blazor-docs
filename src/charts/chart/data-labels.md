@@ -1,6 +1,6 @@
 # Data Labels
 
-Data label can be added to a chart series by enabling the `Visible` option in the data label. By default, the labels will arrange smartly without overlapping.
+Data label can be added to a chart series by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) option in the data label. By default, the labels will arrange smartly without overlapping.
 
 {% aspTab template="chart/datalabels/datalabel", sourceFiles="datalabel.razor" %}
 
@@ -10,7 +10,7 @@ Data label can be added to a chart series by enabling the `Visible` option in t
 
 ## Position
 
-Using `Position` property, you can place the label either on `Top`, `Middle`,`Bottom` or `Outer` (outer is applicable for column and bar type series).
+Using [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Position) property, you can place the label either on `Top`, `Middle`, `Bottom` or `Outer`.
 
 {% aspTab template="chart/datalabels/position", sourceFiles="position.razor" %}
 
@@ -22,13 +22,11 @@ Using `Position` property, you can place the label either on `Top`, `Middle`,`Bo
 
 ## Data label template
 
-Label content can be formatted by using the template option. Inside the template, you can add the placeholder text `${point.x}` and `${point.y}` to display corresponding data points x & y value.
-Using `Template` property, you can set data label template
-in chart.
+Label content can be formatted by using the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template) option. Inside the template, you can add the placeholder text `${point.x}` and `${point.y}` to display corresponding data point value.
 
 ## Text Mapping
 
-Text from the data source can be mapped using `Name` property.
+Text from the data source can be mapped to data label using [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Name) property.
 
 {% aspTab template="chart/datalabels/mapping", sourceFiles="mapping.razor" %}
 
@@ -38,7 +36,7 @@ Text from the data source can be mapped using `Name` property.
 
 ## Margin
 
-`Margin` for data label can be applied to using `Left`, `Right`, `Bottom` and `Top` properties.
+[`Margin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Margin) can be applied to the data label to create space around the element.
 
 {% aspTab template="chart/datalabels/margin", sourceFiles="margin.razor" %}
 
@@ -48,7 +46,7 @@ Text from the data source can be mapped using `Name` property.
 
 ## Customization
 
-`Stroke` and `Border` of data label can be customized using `Fill` and `Border` properties. Rounded corners can be customized using `Rx` and `Ry` properties. `Rx` and `Ry` properties requires `Border` values not to be null.
+Data label can be further customized using [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Border) properties. Rounded corners can be customized using [`Rx`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Rx) and [`Ry`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Ry) properties. Rx and Ry properties requires `Border` values not to be null.
 
 {% aspTab template="chart/datalabels/custom", sourceFiles="custom.razor" %}
 

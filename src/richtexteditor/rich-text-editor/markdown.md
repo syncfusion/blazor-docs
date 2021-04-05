@@ -7,7 +7,7 @@ Rich Text Editor supports markdown editing when the `EditorMode` set as `Markdow
 
 ## Supported Commands
 
-The Blazor Markdown editor supports the following commands to format the markdown content:
+The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor/wysiwyg-markdown-editor) supports the following commands to format the markdown content:
 
 |Commands|Syntax| Description |
 |--------|------------------------------------------|------------|
@@ -87,6 +87,8 @@ The output will be as follows.
 ### Changing table constants
 
 The Markdown table constants can be changed for the table heading and the column names.
+
+> You can also explore our [Blazor Markdown editor](https://blazor.syncfusion.com/demos/rich-text-editor/markdown-overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
 
 ## See Also
 

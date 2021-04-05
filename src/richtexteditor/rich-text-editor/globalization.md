@@ -163,6 +163,8 @@ The output will be as follows.
 
 Specifies the direction of the Rich Text Editor component using the `EnableRtl` property. For writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
 
+> `EnableRtl` property will not change, based on current culture.
+
 ```csharp
 
 @using Syncfusion.Blazor.RichTextEditor
@@ -175,4 +177,4 @@ The output will be as follows.
 
 ![RTL](./images/rte-rtl.png)
 
-> `EnableRtl` property will not change, based on current culture.
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.

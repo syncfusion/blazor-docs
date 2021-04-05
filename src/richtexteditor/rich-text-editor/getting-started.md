@@ -7,6 +7,8 @@ This section briefly explains how to include a Rich Text Editor component in you
 To get start quickly with Blazor Rich Text Editor components, you can check on this video:
 `youtube:NvauE3z7W0k`
 
+> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+
 ## Importing Syncfusion Blazor component in the application
 
 * Install **Syncfusion.Blazor.RichTextEditor** NuGet package to the application by using the **NuGet Package Manager**.

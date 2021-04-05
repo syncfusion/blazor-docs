@@ -154,3 +154,5 @@ Using the quick toolbar, users can change the width, cell padding, and cell spac
 table using the `TableEditProperties` command dialog action.
 
 ![RTE table settings](./images/table_properties.png)
+
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.

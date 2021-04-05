@@ -104,6 +104,8 @@ The output will be as follows.
 
 ![Quick Link](./images/link-tool.png)
 
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+
 ## See Also
 
 * [How to edit the quick toolbar settings](./toolbar/#quick-inline-toolbar)

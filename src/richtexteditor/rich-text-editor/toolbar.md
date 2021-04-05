@@ -368,6 +368,8 @@ The output will be as follows.
 
 ![Link toolbar](./images/link-toolbar.png)
 
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+
 ## See Also
 
 * [How to render the toolbar in inline mode](./inline-mode/)

@@ -1,6 +1,4 @@
-# Visual Studio Extensions
-
-## Add Syncfusion Blazor component code
+# Add Syncfusion Blazor component code
 
 Syncfusion provides the Code Generator for the Blazor platform to add a code in the application quickly at the required place in the razor file. The Syncfusion extension adds the required Syncfusion component to render the code with namespaces, styles, and NuGet references. The Code Generator provides an easy-to-use wizard that interacts with data models and adds Syncfusion components with the required features to your application.
 

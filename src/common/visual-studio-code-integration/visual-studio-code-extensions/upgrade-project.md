@@ -1,6 +1,4 @@
-# Visual Studio Code Extensions
-
-## Upgrade project
+# Upgrade project
 
 Syncfusion Project Migration is a Visual Studio Code add-in that allows you to migrate the existing Syncfusion Blazor Web Application from one Essential Studio version to another version.
 

@@ -1,6 +1,4 @@
-# Visual Studio Code Extensions
-
-## Create project
+# Create project
 
 Syncfusion provides **project templates** for **Visual Studio Code** to create Syncfusion Blazor applications. Syncfusion Blazor creates applications with the required Syncfusion NuGet packages, namespaces, and component render code for the Calendar, Button, and DataGrid components, and the style for making development easier with Syncfusion components.
 

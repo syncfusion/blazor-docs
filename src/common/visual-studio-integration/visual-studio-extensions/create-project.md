@@ -1,6 +1,4 @@
-# Visual Studio Extensions
-
-## Create a project
+# Create a project
 
 Syncfusion provides the Visual Studio Project Templates to create the Syncfusion Blazor Application. The Syncfusion Blazor application creates an application with the required Syncfusion references, namespaces, component code snippet, and CDN links for the earlier development with Syncfusion components.
 

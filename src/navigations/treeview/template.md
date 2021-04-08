@@ -1,6 +1,6 @@
 # Template
 
-The TreeView component allows you to customize the look of TreeView nodes using the `NodeTemplate` property.
+The Blazor TreeView component allows you to customize the look of TreeView nodes using the `NodeTemplate` property.
 
 The NodeTemplate tag is nested inside the TreeViewTemplates tag, where you can define the custom structure for TreeView. Inside the NodeTemplate tag, a generic type context property is used to access the tree node details.
 

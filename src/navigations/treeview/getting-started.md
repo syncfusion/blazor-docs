@@ -131,7 +131,7 @@ namespace BlazorApplication
 
 ## Adding TreeView component to the application
 
-Now, add the Syncfusion Blazor TreeView component in any web page `razor` in the `Pages` folder. For example, the TreeView component is added in the `~/Pages/Index.razor` page.
+Now, add the Syncfusion Blazor TreeView component in any web page `razor` in the `Pages` folder. For example, the Blazor TreeView component is added in the `~/Pages/Index.razor` page.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -195,6 +195,8 @@ Now, add the Syncfusion Blazor TreeView component in any web page `razor` in the
 After successful compilation of your application, simply press `F5` to run the application.
 
 ![TreeView Sample](./images/list-data.png)
+
+>Note: You can refer to our [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor TreeView example](https://blazor.syncfusion.com/demos/treeview/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.
 
 ## See Also
 

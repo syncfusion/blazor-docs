@@ -1,8 +1,8 @@
 # Data Binding
 
-The TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through `DataSource` property that is a member of the `Fields` property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+The Blazor TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through `DataSource` property that is a member of the `Fields` property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
-TreeView has `load on demand` (Lazy load), by default. It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when parent node is expanded,  loads the child nodes based on the `ParentID/Child` member.
+Blazor TreeView has `load on demand` (Lazy load), by default. It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when parent node is expanded,  loads the child nodes based on the `ParentID/Child` member.
 
 By default, the `LoadOnDemand` is set to true. By disabling this property, all the tree nodes are rendered at the beginning itself.
 
@@ -10,8 +10,8 @@ You can use the `DataBound` event to perform actions. This event will be trigger
 
 ## Local data
 
-To bind local data to the TreeView, you can assign a list of objects to the `DataSource` property.
-The TreeView component requires three  fields (Id, Text, and ParentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
+To bind local data to the Blazor TreeView, you can assign a list of objects to the `DataSource` property.
+The Blazor TreeView component requires three  fields (Id, Text, and ParentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
 
 * Hierarchical data
 
@@ -19,7 +19,7 @@ The TreeView component requires three  fields (Id, Text, and ParentID) to render
 
 ### Hierarchical data
 
-TreeView can be populated with hierarchical data source that contains nested list of objects. You can directly assign hierarchical data to the `DataSource` property, and map all the field members with corresponding keys from the hierarchical data to `Fields` property.
+Blazor TreeView can be populated with hierarchical data source that contains nested list of objects. You can directly assign hierarchical data to the `DataSource` property, and map all the field members with corresponding keys from the hierarchical data to `Fields` property.
 
 In the following example, **Id**, **FolderName**, and **SubFolders** columns from hierarchical data have been mapped to **Id**, **Text**, and **Child** fields, respectively.
 
@@ -113,7 +113,7 @@ Output be like the below.
 
 ### Self-referential data
 
-TreeView can be populated from self-referential data structure that contains list of objects with `ParentID` mapping.
+Blazor TreeView can be populated from self-referential data structure that contains list of objects with `ParentID` mapping.
 
 You can directly assign self-referential data to the `DataSource` property, and map all the field members with corresponding keys from self-referential data to `Fields` property.
 
@@ -214,7 +214,7 @@ Output be like the below.
 
 ## Remote data
 
-TreeView can also be populated from a remote data service with the help of `DataManager` component and `Query` property.
+Blazor TreeView can also be populated from a remote data service with the help of `DataManager` component and `Query` property.
 
 It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
@@ -506,9 +506,9 @@ namespace WebApplication1.Server.Controllers
 
 ```
 
-### Configure TreeView component using Web API adaptor
+### Configure Blazor TreeView component using Web API adaptor
 
-Now, you can configure the TreeView using the **‘SfDataManager’** to interact with the created Web API and consume the data appropriately. To interact with web API, you need to use web Api adaptor.
+Now, you can configure the Blazor TreeView using the **‘SfDataManager’** to interact with the created Web API and consume the data appropriately. To interact with web API, you need to use web Api adaptor.
 
 > **Note:** We have performed the CRUD operation in the TreeView component using the context menu.
 

@@ -1,6 +1,6 @@
 # Node Editing
 
-The TreeView allows you to edit nodes by setting the `AllowEditing` property to **true**.
+The Blazor TreeView allows you to edit nodes by setting the `AllowEditing` property to **true**.
 To directly edit the nodes in place, **double click** the TreeView node or **select** the node and press **F2** key.
 
 When editing is completed by focus out or by pressing the **Enter** key, the modified node’s text saves automatically. If you do not want to save the modified node’s text in TreeView node, press **Escape** key. It does not save the edited text to the TreeView node.

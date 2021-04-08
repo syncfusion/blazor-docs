@@ -1,6 +1,6 @@
 # CheckBox
 
-The TreeView component allows you to check more than one node in TreeView without affecting the UI's appearance by enabling the `ShowCheckBox` property. When this property is enabled, checkbox appears before each TreeView node text.
+The Blazor TreeView component allows you to check more than one node in TreeView without affecting the UI's appearance by enabling the `ShowCheckBox` property. When this property is enabled, checkbox appears before each TreeView node text.
 
 * If one of the child nodes is not in a checked state, then the parent node will be in an intermediate state.
 

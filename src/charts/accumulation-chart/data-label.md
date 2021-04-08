@@ -1,6 +1,6 @@
 # Data Label
 
-Data label can be added to a point by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationDataLabelSettingsModel~Visible.html)
+Data label can be added to a point by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible)
 option in the DataLabel property.
 
 {% aspTab template="chart/accumulation-charts/datalabel/default", sourceFiles="default.razor" %}
@@ -11,7 +11,7 @@ option in the DataLabel property.
 
 ## Position
 
-Accumulation chart provides support for placing the data label either `Inside` or `Outside` of the chart by using [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AccumulationDataLabelSettingsModel~Position.html) property.
+Accumulation chart provides support for placing the data label either `Inside` or `Outside` of the chart by using [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Position) property.
 
 {% aspTab template="chart/accumulation-charts/datalabel/position", sourceFiles="position.razor" %}
 
@@ -22,7 +22,7 @@ Accumulation chart provides support for placing the data label either `Inside` o
 ## Smart Labels
 
 Datalabels will be arranged smartly without overlapping with each other. You can enable or disable this feature using
-the [`EnableSmartLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_EnableSmartLabels)
+the [`EnableSmartLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_EnableSmartLabels)
 property.
 
 {% aspTab template="chart/accumulation-charts/datalabel/smartlabels", sourceFiles="smartlabels.razor" %}
@@ -44,7 +44,7 @@ The connector line can be customized using the [`Type`](https://help.syncfusion.
 
 ## Text Mapping
 
-Text from the data source can be mapped to data label using `Name` property.
+Text from the data source can be mapped to data label using [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Name) property.
 
 {% aspTab template="chart/accumulation-charts/datalabel/map", sourceFiles="map.razor" %}
 

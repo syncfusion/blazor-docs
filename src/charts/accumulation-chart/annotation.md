@@ -1,6 +1,6 @@
 # Annotation
 
-The annotations are used to mark the specific area of interest in the chart  with texts, shapes or images. By using the `content` option of annotation property, you can specify the Id of the HTML element that needs to be displayed in the chart.
+Annotations are used to mark the specific area of interest in the chart with texts, shapes or images. By using the [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Content) option of annotation property, you can specify the Id of the HTML element that needs to be displayed in the chart.
 
 {% aspTab template="chart/accumulation-charts/annotation/annotation", sourceFiles="annotation.razor" %}
 
@@ -20,18 +20,10 @@ The annotation can be placed with respect to `Series` or `Chart`.
 
 ## Co-ordinate Units
 
-Specifies the coordinate units of an annotation either in `Pixel` or `Point`.
+Specifies the [`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) of an annotation either in `Pixel` or `Point`.
 
 {% aspTab template="chart/accumulation-charts/annotation/co-ordinate", sourceFiles="co-ordinate.razor" %}
 
 {% endaspTab %}
 
 ![Co-ordinate Units](images/annotation/co-ordinate-razor.png)
-
-## Alignment
-
-The annotations can be moved vertically and horizontally from its default position by using [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationAnnotationSettingsModel.html) or [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationAnnotationSettingsModel.html) properties. The `VerticalAlignment` provides options to move the content to `Top`, `Bottom` or `Middle` and the `HorizontalAlignment` mouses the content to `Near`, `Far` or `Center`.
-
-{% aspTab template="chart/accumulation-charts/annotation/alignment", sourceFiles="alignment.razor" %}
-
-{% endaspTab %}

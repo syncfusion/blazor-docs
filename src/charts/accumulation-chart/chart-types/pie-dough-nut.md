@@ -11,7 +11,7 @@ as `Pie`.
 
 ![Pie Chart](../images/pie-dough-nut/pie-razor.png)
 
-**New Note:** You can refer to our [`Blazor Pie Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pie-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Pie Chart example`](https://blazor.syncfusion.com/demos/chart/pie) to knows how to render and configure the pie chart.
+> Note: You can refer to our [`Blazor Pie Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pie-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Pie Chart example`](https://blazor.syncfusion.com/demos/chart/pie) to knows how to render and configure the pie chart.
 
 ## Radius Customization
 
@@ -27,7 +27,7 @@ property of the series.
 
 ## Pie Center
 
-The center position of the pie can be changed by Center X and Center Y. By default, center x and center y of the pie series are 50%. You can customize this using [`Center`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_Center) property of the series.
+The center position of the pie can be changed by center x and center y. By default, center x and center y of the pie series are 50%. You can customize this using [`Center`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_Center) property of the series.
 
 {% aspTab template="chart/accumulation-charts/pie_doughnut/piecenter", sourceFiles="piecenter.razor" %}
 
@@ -47,8 +47,8 @@ You can use radius mapping to render the slice with different [`Radius`](https:/
 
 ## Doughnut Chart
 
-To achieve a Doughnut Chart in pie series, customize the [`InnerRadius`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/donut-chart) property of the series. By setting value greater than 0%, a doughnut will appear.
-The InnerRadius property takes value from 0% to 100% of the pie radius.
+To achieve a Doughnut Chart in pie series, customize the [`InnerRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_InnerRadius) property of the series. By setting value greater than 0%, a doughnut will appear.
+The InnerRadius property takes value from 0 to 100% of the pie radius.
 
 {% aspTab template="chart/accumulation-charts/pie_doughnut/doughnut", sourceFiles="doughnut.razor" %}
 
@@ -56,7 +56,7 @@ The InnerRadius property takes value from 0% to 100% of the pie radius.
 
 ![Doughnut Chart](../images/pie-dough-nut/doughnut-razor.png)
 
-**New Note:** You can also explore our [`Blazor Doughnut Chart`](https://blazor.syncfusion.com/demos/chart/donut) example to knows how to render and configure the doughnut charts.
+> Note: You can also explore our [`Blazor Doughnut Chart`](https://blazor.syncfusion.com/demos/chart/donut) example to knows how to render and configure the doughnut charts.
 
 ## Start and End angles
 
@@ -74,7 +74,7 @@ you can achieve a semi pie series.
 
 ## Color and Text Mapping
 
-The fill color and the text in the data source can be mapped to the chart using [`PointColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_PointColorMapping) in series and [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Name) in datalabel respectively.
+The fill color and the text in the data source can be mapped to the chart using [`PointColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_PointColorMapping) in series and [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Name) in datalabel respectively.
 
 {% aspTab template="chart/accumulation-charts/pie_doughnut/map", sourceFiles="map.razor" %}
 
@@ -84,8 +84,8 @@ The fill color and the text in the data source can be mapped to the chart using 
 
 ## Hide pie or doughnut border
 
-By default, the border will appear in the pie/doughnut chart while mouse hover on the chart. You can disable the the border by setting [`EnableBorderOnMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_EnableBorderOnMouseMove)
-property is `false`.
+By default, the border will appear in the pie/doughnut chart while mouse hover on the chart. You can disable the the border by setting [`EnableBorderOnMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_EnableBorderOnMouseMove)
+property is **false**.
 
 {% aspTab template="chart/accumulation-charts/pie_doughnut/boder", sourceFiles="boder.razor" %}
 

@@ -105,7 +105,7 @@ The [`Position`] specifies the label position. Its possible values are 'Position
 <!-- markdownlint-disable MD036 -->
 **Customize the display of the last label**
 
-If the last label is not in the visible range, it will be hidden by default. If you want to show the last label, set the [`ShowLastLabel`] property to **true** in the [`LinearGaugeAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAxisShowLastLabel_members.html).
+If the last label is not in the visible range, it will be hidden by default. If you want to show the last label, set the [`ShowLastLabel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_ShowLastLabel) property to **true** in the [`LinearGaugeAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAxisShowLastLabel_members.html).
 
 ```csharp
 <SfLinearGauge>
@@ -121,22 +121,24 @@ If the last label is not in the visible range, it will be hidden by default. If 
 <!-- markdownlint-disable MD036 -->
 **Label Format**
 
-Axis labels can be formatted using the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle~Format.html) property in [`LinearGaugeAxisLabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle_members.html)
+Axis labels in the Linear Gauge control can be formatted using the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Format) property in the [`LinearGaugeAxisLabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html) class. It is used to render the axis labels in a certain format or to add a user-defined unit in the label. It works with the help of placeholder like **{value}°C**, where **"value"** represents the axis value. e.g. 20°C.
 
 ```csharp
 <SfLinearGauge>
     <LinearGaugeAxes>
-        <LinearGaugeAxis>
-            <LinearGaugeAxisLabelStyle Format="c">
-            </LinearGaugeAxisLabelStyle>
+        <LinearGaugeAxis Minimum =20 Maximum =140>
+            <LinearGaugeLabel Format= "{value}°C">
+            </LinearGaugeLabel>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Label Format Sample](images/label-format.png)
+![Linear Gauge with Custom label format](images/custom-format.png)
 
-The following table describes the result of applying some commonly used label formats on numeric values.
+**Displaying numeric format in labels**
+
+The numeric formats such as currency, percentage, and so on can be displayed in the labels of the Linear Gauge using the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Format) property in the [`SfLinearGauge`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html) class. The following table describes the result of applying some commonly used label formats on numeric values.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -150,70 +152,66 @@ The following table describes the result of applying some commonly used label fo
 <td>1000</td>
 <td>n1</td>
 <td>1000.0</td>
-<td>The Number is rounded to 1 decimal place</td>
+<td>The number is rounded to 1 decimal place</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>n2</td>
 <td>1000.00</td>
-<td>The Number is rounded to 2 decimal place</td>
+<td>The number is rounded to 2 decimal place</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>n3</td>
 <td>1000.000</td>
-<td>The Number is rounded to 3 decimal place</td>
+<td>The number is rounded to 3 decimal place</td>
 </tr>
 <tr>
 <td>0.01</td>
 <td>p1</td>
 <td>1.0%</td>
-<td>The Number is converted to percentage with 1 decimal place</td>
+<td>The number is converted to percentage with 1 decimal place</td>
 </tr>
 <tr>
 <td>0.01</td>
 <td>p2</td>
 <td>1.00%</td>
-<td>The Number is converted to percentage with 2 decimal place</td>
+<td>The number is converted to percentage with 2 decimal place</td>
 </tr>
 <tr>
 <td>0.01</td>
 <td>p3</td>
 <td>1.000%</td>
-<td>The Number is converted to percentage with 3 decimal place</td>
+<td>The number is converted to percentage with 3 decimal place</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>c1</td>
 <td>$1,000.0</td>
-<td>The Currency symbol is appended to number and number is rounded to 1 decimal place</td>
+<td>The currency symbol is appended to number and number is rounded to 1 decimal place</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>c2</td>
 <td>$1,000.00</td>
-<td>The Currency symbol is appended to number and number is rounded to 2 decimal place</td>
+<td>The currency symbol is appended to number and number is rounded to 2 decimal place</td>
 </tr>
 </table>
 
 <!-- markdownlint-disable MD036 -->
 
-**Custom Label Format**
-
-Axis also supports custom label format using placeholder like {value}°C, in which the value represents the axis label e.g. 20°C.
-
 ```csharp
-<SfLinearGauge>
+@using Syncfusion.Blazor.LinearGauge
+
+<SfLinearGauge Format="c">
     <LinearGaugeAxes>
-        <LinearGaugeAxis Minimum =20 Maximum =140>
-            <LinearGaugeLabel Format= "{value}°C">
-            </LinearGaugeLabel>
+        <LinearGaugeAxis>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Custom label format Sample](images/custom-format.png)
+![Linear Gauge with Label format](images/label-format.png)
 
 ## Orientation
 

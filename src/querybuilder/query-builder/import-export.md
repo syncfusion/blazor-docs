@@ -102,7 +102,7 @@ In the following sample sql rules binding on querybuilder on button click.
 
     private void setRules()
     {
-        QueryBuilderObj.SetRulesFromSql("EmployeeID = 1001 AND City like ('%Manchester')");
+        QueryBuilderObj.SetRulesFromSql("EmployeeID = 1001 AND City LIKE ('Manchester%')");
     }
 }
 ```

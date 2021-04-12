@@ -9,7 +9,7 @@ The available events are [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfu
 @using Syncfusion.Blazor.Navigations
 
 <SfMenu Items="MenuItems">
-    <MenuEvents OnOpen="onOpen" OnClose="onClose" Opened="opened" Closed="closed" ItemSelected="itemSelected"></MenuEvents>
+    <MenuEvents TValue="MenuItem" OnOpen="onOpen" OnClose="onClose" Opened="opened" Closed="closed" ItemSelected="itemSelected"></MenuEvents>
 </SfMenu>
 <div id="preview">@eventName Event Triggered</div>
 

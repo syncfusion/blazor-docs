@@ -7,7 +7,7 @@
 * [Use Case Scenarios](menu-bar/usecase-scenario.md)
 * [Change Orientation](menu-bar/how-to/change-orientation.md)
 * [Change Animation Settings](menu-bar/how-to/animation-settings.md)
-* [Change SubMenu Position](menu-bar/how-to/change-submenu-position.md)
+<!-- * [Change SubMenu Position](menu-bar/how-to/change-submenu-position.md) -->
 * [Customize Menu Bar Items](menu-bar/how-to/customize-menu-items.md)
 * [Customize Menu Bar Using Events](menu-bar/how-to/customize-menu-using-events.md)
 * [Menu Bar with Rounded Corner](menu-bar/how-to/menu-with-rounded-corner.md)

@@ -11,71 +11,76 @@ In the following example, the `Europe` menu items are added before the Oceania i
 @using Syncfusion.Blazor.Navigations
 
 <SfMenu Items="@MenuItems" @ref="MenuObj">
-    <MenuEvents Created="@Created"></MenuEvents>
-    <MenuFieldSettings Text="@TextValues" Children="@ChildrenValues"></MenuFieldSettings>
+    <MenuEvents TValue="DataList" Created="Created"></MenuEvents>
+    <MenuFieldSettings Text="@nameof(DataList.Data)" Children="@nameof(DataList.SubDatas)"></MenuFieldSettings>
 </SfMenu>
 
 @code{
-    SfMenu MenuObj;
-    public string[] TextValues = new string[] { "Continent", "Country" };
-    public string[] ChildrenValues = new string[] { "Countries" };
+    SfMenu<DataList> MenuObj;
 
-    public List<CountryData> MenuItems = new List<CountryData>{
-        new CountryData{ Continent = "Asia", Countries = new List<CountryData>{
-            new CountryData{ Country= "China" },
-            new CountryData{ Country= "India" },
-            new CountryData{ Country= "Japan" }}
+    public List<DataList> MenuItems = new List<DataList>
+    {
+        new DataList{ Data = "Company", SubDatas = new List<DataList>{
+            new DataList{ Data= "Overview" },
+            new DataList{ Data= "About" },
+            new DataList{ Data= "Careers" }}
     },
-        new CountryData{ Continent = "North America", Countries = new List<CountryData>{
-            new CountryData{ Country= "Canada" },
-            new CountryData{ Country= "Mexico" },
-            new CountryData{ Country= "USA" }}
+        new DataList{ Data = "Services", SubDatas = new List<DataList>{
+            new DataList{ Data= "Consulting" },
+            new DataList{ Data= "Education" },
+            new DataList{ Data= "Health" }}
     },
-        new CountryData{ Continent = "South America", Countries = new List<CountryData>{
-            new CountryData{ Country = "Brazil" },
-            new CountryData{ Country = "Colombia" },
-            new CountryData{ Country = "Argentina" }}
+        new DataList{ Data = "Products", SubDatas = new List<DataList>{
+            new DataList{ Data = "Hardware" },
+            new DataList{ Data = "Software" }}
     },
-        new CountryData{ Continent = "Oceania", Countries = new List<CountryData>{
-            new CountryData{ Country= "Australia" },
-            new CountryData{ Country= "NewZealand" },
-            new CountryData{ Country= "Samoa" }}
-    },
-        new CountryData{ Continent = "Antartica" }
+        new DataList{ Data = "Contact Us" }
     };
 
-    public class CountryData
+    public class DataList
     {
-        public string Country { get; set; }
-        public string Continent { get; set; }
-        public List<CountryData> Countries { get; set; }
+        public string Data { get; set; }
+        public List<DataList> SubDatas { get; set; }
     }
 
-    public List<CountryData> EuropeCountries = new List<CountryData>
+    private List<DataList> industries = new List<DataList>()
     {
-        new CountryData{ Continent = "Europe", Countries = new List<CountryData>
+        new DataList() { Data = "Industries", SubDatas = new List<DataList>()
         {
-            new CountryData{ Country = "Austria"},
-            new CountryData{ Country = "Germany"}
+            new DataList() { Data = "Logistics"},
+            new DataList() { Data = "Insurance" }
+        }}
+    };
+
+    private List<DataList> addedItems = new List<DataList>()
+    {
+        new DataList() { Data = "Industries", SubDatas = new List<DataList>()
+        {
+            new DataList() { Data = "Logistics"},
+            new DataList() { Data = "Insurance" }
+        }}
+    };
+
+    private List<DataList> newItems = new List<DataList>
+    {
+        new DataList{ Data = "Corporate", SubDatas = new List<DataList>
+        {
+            new DataList{ Data = "Leadership"},
+            new DataList{ Data = "Vision"}
         }
     }
     };
 
-    public List<CountryData> AfricaCountries = new List<CountryData>
+    private List<string> removedItems = new List<string>()
     {
-        new CountryData{ Continent = "Africa", Countries = new List<CountryData>
-        {
-            new CountryData{ Country = "Nigeria"},
-            new CountryData{ Country = "Ethiopia"}
-        }
-    }
+        "Education", "Hardware"
     };
 
     public void Created()
     {
-        this.MenuObj.InsertBefore(EuropeCountries, "Oceania", false);
-        this.MenuObj.InsertAfter(AfricaCountries, "Asia", false);
-        this.MenuObj.RemoveItems(new string[] { "South America", "Mexico" }, false);
+        this.MenuObj.InsertBefore(addedItems, "Contact Us", false);
+        this.MenuObj.InsertAfter(newItems, "Products", false);
+        this.MenuObj.RemoveItems(removedItems);
     }
 }
 
@@ -87,7 +92,7 @@ Output be like
 
 ## Enable or Disable Menu Items
 
-You can enable and disable the menu items using the [`EnableItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~EnableItems.html) method in Menu. To enable menuItems, set the `Enable` property in argument to true and vice-versa.
+You can enable and disable the menu items using the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in Menu items. To disable menuItems, set the `Disabled` property to true and vice-versa.
 
 In the following example, the Directory header item, Conferences, and Music sub menu items are disabled.
 
@@ -96,44 +101,49 @@ In the following example, the Directory header item, Conferences, and Music sub 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
-<SfMenu Items="@MenuItems" @ref="MenuObj">
-    <MenuEvents Created="@Created"></MenuEvents>
+<SfMenu TValue="MenuItem">
+    <MenuEvents TValue="MenuItem" Created="@Created"></MenuEvents>
+    <MenuItems>
+        <MenuItem Text="Events">
+            <MenuItems>
+                <MenuItem Text="Conferences" Disabled="@disableItem"></MenuItem>
+                <MenuItem Text="Music" Disabled="@disableItem"></MenuItem>
+                <MenuItem Text="Workshops"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Movies">
+            <MenuItems>
+                <MenuItem Text="Now Showing"></MenuItem>
+                <MenuItem Text="Coming Soon"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Directory" Disabled="@disableItem">
+            <MenuItems>
+                <MenuItem Text="Newsletter"></MenuItem>
+                <MenuItem Text="Media Gallery"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Queries">
+            <MenuItems>
+                <MenuItem Text="Our Policy"></MenuItem>
+                <MenuItem Text="Site Map"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Services"></MenuItem>
+    </MenuItems>
 </SfMenu>
 <SfButton @onclick="EnableItems">Enable all items</SfButton>
 
 @code {
-    SfMenu MenuObj;
-    public List<MenuItem> MenuItems = new List<MenuItem>{
-        new MenuItem{ Text = "Events", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Conferences" },
-            new MenuItem{ Text= "Music" },
-            new MenuItem{ Text= "Workshops" }}
-    },
-        new MenuItem{ Text = "Movies", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Now Showing" },
-            new MenuItem{ Text= "Coming Soon" } }
-    },
-        new MenuItem{ Text = "Directory", Items = new List<MenuItem>{
-            new MenuItem{ Text = "Newsletter" },
-            new MenuItem{ Text = "Media Gallery" } }
-    },
-        new MenuItem{ Text = "Queries", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Our Policy" },
-            new MenuItem{ Text= "Site Map" }}
-    },
-        new MenuItem{ Text = "Services" }
-    };
-
-    public string[] Items = new string[] { "Conferences", "Music", "Directory" };
-
+    private bool disableItem;
     public void Created()
     {
-        this.MenuObj.EnableItems(Items, false, false);
+        disableItem = true;
     }
 
     public void EnableItems()
     {
-        this.MenuObj.EnableItems(Items, true, false);
+        disableItem = false;
     }
 }
 
@@ -145,7 +155,7 @@ Output be like
 
 ## Show or Hide Menu Items
 
-You can show or hide the menu items using the [`ShowItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~ShowItems.html) and [`HideItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~HideItems.html) methods.
+You can show or hide the menu items using the [`Hidden`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property in Menu items. To hide the menuItems, set the `Hidden` property to true and vice-versa.
 
 In the following example, the Movies header item, Workshops, and Music sub menu items are hidden in menu.
 
@@ -154,44 +164,50 @@ In the following example, the Movies header item, Workshops, and Music sub menu 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
-<SfMenu Items="@MenuItems" @ref="MenuObj">
-    <MenuEvents Created="@Created"></MenuEvents>
+<SfMenu TValue="MenuItem">
+    <MenuEvents TValue="MenuItem" Created="@Created"></MenuEvents>
+    <MenuItems>
+        <MenuItem Text="Events">
+            <MenuItems>
+                <MenuItem Text="Conferences"></MenuItem>
+                <MenuItem Text="Music" Hidden="@hideItem"></MenuItem>
+                <MenuItem Text="Workshops" Hidden="@hideItem"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Movies" Hidden="@hideItem">
+            <MenuItems>
+                <MenuItem Text="Now Showing"></MenuItem>
+                <MenuItem Text="Coming Soon"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Directory">
+            <MenuItems>
+                <MenuItem Text="Newsletter"></MenuItem>
+                <MenuItem Text="Media Gallery"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Queries">
+            <MenuItems>
+                <MenuItem Text="Our Policy"></MenuItem>
+                <MenuItem Text="Site Map"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Services"></MenuItem>
+    </MenuItems>
 </SfMenu>
 <SfButton @onclick="ShowItems">Show all items</SfButton>
 
 @code {
-    SfMenu MenuObj;
-    public List<MenuItem> MenuItems = new List<MenuItem>{
-        new MenuItem{ Text = "Events", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Conferences" },
-            new MenuItem{ Text= "Music" },
-            new MenuItem{ Text= "Workshops" }}
-    },
-        new MenuItem{ Text = "Movies", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Now Showing" },
-            new MenuItem{ Text= "Coming Soon" } }
-    },
-        new MenuItem{ Text = "Directory", Items = new List<MenuItem>{
-            new MenuItem{ Text = "Newsletter" },
-            new MenuItem{ Text = "Media Gallery" } }
-    },
-        new MenuItem{ Text = "Queries", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Our Policy" },
-            new MenuItem{ Text= "Site Map" }}
-    },
-        new MenuItem{ Text = "Services" }
-    };
-
-    public string[] Items = new string[] { "Workshops", "Music", "Movies" };
+    private bool hideItem;
 
     public void Created()
     {
-        this.MenuObj.HideItems(Items, false);
+        hideItem = true;
     }
 
     public void ShowItems()
     {
-        this.MenuObj.ShowItems(Items, false);
+        hideItem = false;
     }
 }
 

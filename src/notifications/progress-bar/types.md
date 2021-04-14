@@ -1,12 +1,10 @@
 # Types
 
-Visualize the progress in different shapes (rectangle, circle or semi-circle) to give a unique appearance.
+Visualize the progress in various shapes, such as a rectangle, circle, or semi-circle, to give it a unique look.
 
 ## Linear
 
-<!-- markdownlint-disable MD033 -->
-
-By setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property as [`Linear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear) to get the linear `Progress Bar`. It also supports the secondary progress, indeterminate, segments and different mode of progress as shown below.
+To get a linear Progress Bar, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property to [`Linear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear). As shown below, it also supports secondary progress, indeterminate, segments, and different modes of progress.
 
 ```csharp
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
@@ -27,7 +25,7 @@ By setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## Circular
 
-By setting [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property as [`Circular`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular) to get the [`Circular`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular) `Progress Bar`. It also supports the secondary progress, indeterminate, segments, pie progress and different mode of progress as shown below.
+To get the circular Progress Bar, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property to [`Circular`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular). As shown below, it also supports secondary progress, indeterminate, segments, pie progress, and various modes of progress.
 
 ```csharp
 <SfProgressBar Type="ProgressType.Circular" Value="100" Height="60" Minimum="0" Maximum="100">

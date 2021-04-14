@@ -1,8 +1,6 @@
-# Getting Started
+# Getting Started in Blazor Maps
 
-Syncfusion Blazor Maps component is ideal for rendering maps from GeoJSON data or from other map providers such as OpenStreetMap and Bing Maps. For example, you can render the World map or the United States map and customize it to the desired look using built-in options in the Blazor Maps component.
-
-This section briefly explains how to include maps in your Blazor server-side application to demonstrate the permanent and non-permanent countries in the United Nations Security Council. Refer to the [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) documentation for introduction and configuring common specifications.
+This section briefly explains how to include a Maps component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
 ## Importing Syncfusion Blazor Maps component in the application
 
@@ -18,7 +16,7 @@ This section briefly explains how to include maps in your Blazor server-side app
     </head>
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
  ```html
     <head>
@@ -37,7 +35,7 @@ Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Maps** na
 
 ## Adding SyncfusionBlazor Service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -60,28 +58,30 @@ namespace BlazorApplication
 
 > To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
-## Initializing the Maps component in an application
+## Adding Maps component
 
 The Syncfusion Maps component can be initialized in any razor page inside the **~/Pages** folder. For example, the Maps component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
 ```csharp
 @page "/"
 
-<SfMaps></SfMaps>
+<SfMaps>
+
+</SfMaps>
 ```
 
-Since the properties related to the map layer is not initialized in the above code, the Maps will not show any content on the web page.
+The Maps will not show any content on the web page while running the application because the properties related to the layer are not initialized in the above code.
 
 ## Adding GeoJSON data in Maps layer
 
-Bind GeoJSON data to the Maps to render any geometric shape in SVG (Scalable Vector Graphics) for powerful data visualization of shapes. For example, you can render the World map and make desired customizations on it. You can also add any number of layers in the maps.
+Bind GeoJSON data to the Maps to render any geometric shape in SVG (Scalable Vector Graphics) for powerful data visualization of shapes. For example, you can render the World map and make desired customizations on it. You can also add any number of layers in the Maps.
 
 You can use the [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property in [`MapsLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to load the GeoJSON shape data into the Maps component.
 
  ```csharp
 <SfMaps>
     <MapsLayers>
-        @* load shape data *@
+        @* To load shape data *@
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
@@ -147,7 +147,7 @@ You should also specify the field names in the shape data and data source to the
 
 ## Apply color mapping
 
-The color mapping feature supports customization of shape colors based on the underlying value of shape received from bound data. The values from the field name specified in [`ShapeDataPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) will be compared for the shapes with the values in the field name specified in the [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property in [`MapsShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html). Specify color and value in [`MapsShapeColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html). Here, **"#EDB46F"** is specified for **"Permanent"** and **"#F1931B"** is specified for **"Non-Permanent"**.
+The color mapping supports customization of shape colors based on the underlying value of shape received from the bound data source. The values from the field name specified in the [`ShapeDataPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) property will be compared for the shapes with the values in the field name specified in the [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property in [`MapsShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html). Also, specify color and value in [`MapsShapeColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html). Here, in this example, **"#EDB46F"** is specified for **"Permanent"** and **"#F1931B"** is specified for **"Non-Permanent"**.
 
 ```csharp
 <SfMaps>
@@ -156,7 +156,7 @@ The color mapping feature supports customization of shape colors based on the un
                    ShapePropertyPath='new string[] {"name"}'
                    DataSource="SecurityCouncilDetails"
                    ShapeDataPath="Name" TValue="UNCouncilCountry">
-            @* color mapping related configuration *@
+            @* Color mapping related configuration *@
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
@@ -172,7 +172,7 @@ The color mapping feature supports customization of shape colors based on the un
 
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-## Add data labels
+## Adding data labels
 
 Label provides information to users about the shapes, and you can enable label text to the shapes in the Maps component by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Visible) property as **true** and field name from data source in the [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property in [`MapsDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html).
 
@@ -200,9 +200,9 @@ Label provides information to users about the shapes, and you can enable label t
 
 ![Map with labels](./images/shape-label.png)
 
-## Add title for Maps
+## Adding title for Maps
 
-Title can be added to the map to provide quick information to the users about the shapes rendered in the Maps. You can add a title using [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTitleSettings.html#Syncfusion_Blazor_Maps_MapsTitleSettings_Text) property in [`MapsTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTitleSettings.html).
+Title can be added to the Maps to provide quick information to the users about the shapes rendered in the component. You can add a title using [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTitleSettings.html#Syncfusion_Blazor_Maps_MapsTitleSettings_Text) property in [`MapsTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTitleSettings.html).
 
 ```csharp
 <SfMaps>
@@ -231,7 +231,7 @@ Title can be added to the map to provide quick information to the users about th
 
 ## Enable legend
 
-The legend items are used to denote color mapping categories, and you can show legend for the maps by setting **true** to the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property in [`MapsLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
+The legend items are used to denote color mapping categories, and you can show legend for the Maps by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property to **true** in [`MapsLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
 
 ```csharp
 <SfMaps>
@@ -261,7 +261,7 @@ The legend items are used to denote color mapping categories, and you can show l
 
 ## Enable tooltip
 
-The tooltip is used when you cannot display information using the data labels due to space constraints. You can enable tooltip by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) property to **true** in [`MapsLayerTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html).
+The tooltip can be used when you cannot display information using the data labels due to space constraints. You can enable tooltip by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) property to **true** in [`MapsLayerTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html).
 
 ```csharp
 <SfMaps>
@@ -279,7 +279,7 @@ The tooltip is used when you cannot display information using the data labels du
                     <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#F1931B"}'></MapsShapeColorMapping>
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
-            @* To add tooltip for map shape *@
+            @* To add tooltip for the shape *@
             <MapsLayerTooltipSettings Visible='true' ValuePath="Name"></MapsLayerTooltipSettings>
         </MapsLayer>
     </MapsLayers>

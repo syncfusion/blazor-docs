@@ -1,8 +1,6 @@
-# Getting Started
+# Getting Started in Blazor TreeMap
 
-Blazor TreeMap is a feature-rich component used to visualize both hierarchical and flat data.
-
-This section briefly explains how to include a TreeMap in your Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) documentation for the introduction and configuring the common specifications.
+This section briefly explains how to include a TreeMap component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
 ## Importing Syncfusion Blazor TreeMap component in the application
 
@@ -18,7 +16,7 @@ This section briefly explains how to include a TreeMap in your Blazor server-sid
     </head>
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
  ```html
     <head>
@@ -37,7 +35,7 @@ Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.TreeMap**
 
 ## Adding SyncfusionBlazor Service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -60,11 +58,11 @@ namespace BlazorApplication
 
 > To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
-## Adding TreeMap component to an application
+## Adding TreeMap component
 
-The Syncfusion TreeMap component can be initialized in any razor page inside the **~/Pages** folder. For example, the TreeMap component can be added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+To initialize the TreeMap component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-You can use the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property to load the car sales details in TreeMap. Specify a field name from the data source in the [`WeightValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_WeightValuePath) property to calculate the TreeMap item size.
+You can use the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property to load the car sales details in TreeMap component. Specify a field name from the data source in the [`WeightValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_WeightValuePath) property to calculate the TreeMap item size.
 
 ```csharp
 <SfTreeMap DataSource="GrowthReport"
@@ -73,12 +71,12 @@ You can use the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 </SfTreeMap>
 
 @code {
-    class Country
+    public class Country
     {
         public string Name { get; set; }
         public double GDP { get; set; }
     }
-    private List<Country> GrowthReport = new List<Country> {
+    public List<Country> GrowthReport = new List<Country> {
         new Country  {Name="United States", GDP=17946 },
         new Country  {Name="China", GDP=10866 },
         new Country  {Name="Japan", GDP=4123 },
@@ -93,11 +91,11 @@ You can use the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 ```
 
-After the successful compilation of your application, press F5 to run the application. The Blazor TreeMap component will render in the web browser as illustrated in the following screenshot.
+On successful compilation of your application, the Syncfusion Blazor TreeMap component will render in the web browser as shown below.
 
 ![TreeMap basic sample](images/treemap-basic.png)
 
-## Add labels in TreeMap items
+## Adding labels in TreeMap items
 
 You can add label text to the leaf items in TreeMap component by setting the field name from data source in the [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPath) property in [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) and it provides information to the user about the leaf items.
 
@@ -113,7 +111,7 @@ You can add label text to the leaf items in TreeMap component by setting the fie
 
 ![TreeMap with label](images/treemap-with-label.png)
 
-## Add title to TreeMap
+## Adding title to TreeMap
 
 You can add a title using [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTitleSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTitleSettings_Text) property in [`TreeMapTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTitleSettings.html) to provide quick information to the user about the items rendered in the TreeMap.
 
@@ -132,7 +130,7 @@ You can add a title using [`Text`](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ## Apply color mapping
 
-The color mapping feature supports customization of item colors based on the underlying value received from bounded data. Specify the field name from which the values have to be compared for the shapes in [`RangeColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath) property in [`SfTreeMap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html). Specify range value and color in [`TreeMapLeafColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html). Here **"Orange"** is specified for the range **"0 - 3000"** and **"Green"** is specified for the range **"3000 - 20000"**.
+The color mapping supports customization of item colors based on the underlying value received from the bound data source. Specify the field name from which the values have to be compared for the items in [`RangeColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath) property in [`SfTreeMap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html). Also, specify range value and color in [`TreeMapLeafColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html). Here, in this example, **"Orange"** is specified for the range **"0 - 3000"** and **"Green"** is specified for the range **"3000 - 20000"**.
 
 ```csharp
 <SfTreeMap DataSource="GrowthReport"
@@ -155,7 +153,7 @@ The color mapping feature supports customization of item colors based on the und
 
 ## Enable legend
 
-Legend items are used to denote the color mapping categories and you can show legend for the TreeMap by setting **true** to the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_Visible) property in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html).
+Legend items are used to denote the color mapping categories and you can show the legend for the TreeMap by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_Visible) property to **true** in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html).
 
 ```csharp
 <SfTreeMap DataSource="GrowthReport"
@@ -179,7 +177,7 @@ Legend items are used to denote the color mapping categories and you can show le
 
 ## Enable tooltip
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property as **true** in [`TreeMapTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html).
+When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property to **true** in [`TreeMapTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html).
 
 ```csharp
 <SfTreeMap DataSource="GrowthReport"

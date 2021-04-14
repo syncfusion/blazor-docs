@@ -1,10 +1,8 @@
-<!-- markdownlint-disable MD040 -->
-
 # Getting Started in Blazor Range Navigator
 
-This section briefly explains about how to include a `Range Navigator` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains how to include a Range Navigator component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
-## Importing Syncfusion Blazor component in the application
+## Importing Syncfusion Blazor Range Navigator component in the application
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
 
@@ -29,18 +27,19 @@ This section briefly explains about how to include a `Range Navigator` in your B
 
 ## Adding component package to the application
 
-Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.Charts` namespace.
+Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** namespace.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 ```
 
-## Add SyncfusionBlazor service in Startup.cs
+## Adding SyncfusionBlazor service in Startup.cs
 
 Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 using Syncfusion.Blazor;
+
 namespace BlazorApplication
 {
     public class Startup
@@ -59,9 +58,9 @@ namespace BlazorApplication
 
 > To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
-## Add Range Navigator component
+## Adding Range Navigator component
 
-To initialize the `Range Navigator` component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+To initialize the Range Navigator component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
 ```csharp
 @page "/"
@@ -73,8 +72,7 @@ To initialize the `Range Navigator` component, add the below code to your **Ind
 
 ## Populate Range Navigator with Data
 
-To bind data for the `Range Navigator` component, you can assign a `IEnumerable` object to
-the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+To bind data for the Range Navigator component, you can assign a `IEnumerable` object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 ```csharp
 @code {
@@ -106,7 +104,7 @@ Now map `Date` and `Close` fields from the datasource to [`XName`](https://help.
 </SfRangeNavigator>
 ```
 
-On successful compilation of your application, the Syncfusion Blazor `Range Navigator` component will render in the web browser as shown below.
+On successful compilation of your application, the Syncfusion Blazor Range Navigator component will render in the web browser as shown below.
 
 ![range navigator](images/range-navigator.png)
 

@@ -1,8 +1,8 @@
 # Getting Started in Blazor Bullet Chart
 
-This section briefly explains how to include a `Bullet Chart` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
+This section briefly explains how to include a Bullet Chart component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
-## Importing Syncfusion Blazor component in the application
+## Importing Syncfusion Blazor Bullet Chart component in the application
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
 
@@ -27,18 +27,19 @@ This section briefly explains how to include a `Bullet Chart` in your Blazor ser
 
 ## Adding component package to the application
 
-Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.Charts` namespace.
+Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** namespace.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 ```
 
-## Add SyncfusionBlazor service in Startup.cs
+## Adding SyncfusionBlazor service in Startup.cs
 
 Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 using Syncfusion.Blazor;
+
 namespace BlazorApplication
 {
     public class Startup
@@ -57,9 +58,9 @@ namespace BlazorApplication
 
 > To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
-## Add Bullet Chart component
+## Adding Bullet Chart component
 
-To initialize the `Bullet Chart` component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+To initialize the Bullet Chart component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
 ```csharp
 @page "/"
@@ -80,13 +81,13 @@ To initialize the `Bullet Chart` component, add the below code to your **Index.
 }
 ```
 
-On successful compilation of your application, the Syncfusion Blazor `Bullet Chart` component will render in the web browser as shown below.
+On successful compilation of your application, the Syncfusion Blazor Bullet Chart component will render in the web browser as shown below.
 
 ![Bullet Chart](images/default.png)
 
-## Add Title
+## Adding Title
 
-You can add a title by using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartModel.html#Syncfusion_Blazor_Charts_BulletChartModel_Title) property in the `Bullet Chart`, to provide quick information to the user about the data plotted in the component.
+You can add a title by using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartModel.html#Syncfusion_Blazor_Charts_BulletChartModel_Title) property in the Bullet Chart, to provide quick information to the user about the data plotted in the component.
 
 ```csharp
 @page "/"
@@ -109,7 +110,7 @@ You can add a title by using [`Title`](https://help.syncfusion.com/cr/blazor/Syn
 
 ![Bullet Chart](images/title.png)
 
-## Ranges
+## Adding Ranges
 
 You can add ranges by using [`BulletChartRangeCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRangeCollection.html) to measure the qualitative state by observing the distance between each range.
 
@@ -139,9 +140,9 @@ You can add ranges by using [`BulletChartRangeCollection`](https://help.syncfusi
 
 ![Bullet Chart](images/ranges.png)
 
-## Tooltip
+## Adding Tooltip
 
-You can use the tooltip to show the measure values by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip.html#Syncfusion_Blazor_Charts_BulletChartTooltip_Enable) property as **true** in [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip.html).
+You can use the tooltip to show the measure values by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip.html#Syncfusion_Blazor_Charts_BulletChartTooltip_Enable) property to **true** in [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip.html).
 
 ```csharp
 @page "/"

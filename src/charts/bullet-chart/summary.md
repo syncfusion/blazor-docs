@@ -9,3 +9,4 @@
 * [Customization](bullet-chart/customization.md)
 * [Data Labels](bullet-chart/data-label.md)
 * [Tooltip](bullet-chart/tool-tip.md)
+* [Legend](bullet-chart/legend.md)

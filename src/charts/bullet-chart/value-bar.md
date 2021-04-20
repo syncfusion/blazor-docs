@@ -1,11 +1,11 @@
 # Feature Bar
 
-The main data value is encoded by a length of the main bar in the middle of the chart, known as the `Feature Measure`. This is also called as `Value Bar`. Also, if you want to display the target bar you should map the `ValueField` name from the dataSource.
+The main data value is encoded by a length of the main bar in the middle of the Bullet Chart known as the **Feature Measure**. This is called as **Value Bar** in Bullet Chart and to display the value bar, should map the property name in [`ValueField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) from the data source.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfBulletChart DataSource="@BulletChartData" ValueField="value" Minimum="0" Maximum="30" Interval="5">
+<SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" Minimum="0" Maximum="30" Interval="5">
     <BulletChartRangeCollection>
         <BulletChartRange End=20> </BulletChartRange>
         <BulletChartRange End=25></BulletChartRange>
@@ -16,11 +16,11 @@ The main data value is encoded by a length of the main bar in the middle of the 
 @code{
     public class ChartData
     {
-        public double value { get; set; }
+        public double FieldValue { get; set; }
     }
     public List<ChartData> BulletChartData = new List<ChartData>
-{
-        new ChartData { value = 23}
+    {
+        new ChartData { FieldValue = 23}
     };
 }
 ```
@@ -29,87 +29,47 @@ The main data value is encoded by a length of the main bar in the middle of the 
 
 ## Feature bar types
 
-You can customize the shape of the feature bar or value bar using the `Type` property of the bullet chart. Feature bar contains `Rect` and `Dot` shapes. The default type of feature bar is `Rect`.
+Customize the shape of the feature bar or value bar using the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Type) property of the Bullet Chart. Feature bar contains [`Rect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Rect) and [`Dot`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Dot) shapes. The default type of feature bar is [`Rect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Rect).
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfBulletChart DataSource="@BulletChartData" Type="FeatureType.Dot" ValueField="value" Minimum="0" Maximum="30" Interval="5">
+<SfBulletChart DataSource="@BulletChartData" Type="FeatureType.Dot" ValueField="FieldValue" Minimum="0" Maximum="30" Interval="5">
     <BulletChartRangeCollection>
         <BulletChartRange End=20> </BulletChartRange>
         <BulletChartRange End=25></BulletChartRange>
         <BulletChartRange End=30></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
-
-@code{
-    public class ChartData
-    {
-        public double value { get; set; }
-    }
-    public List<ChartData> BulletChartData = new List<ChartData>
-{
-        new ChartData { value = 23}
-    };
-}
 ```
+
+> Refer [code block](#feature-bar) to know the property value of **BulletChartData**.
 
 ![Value Bar](images/value-type.png)
 
 ## Customization
 
-### Border customization
+Feature bar to be customized by following properties.
 
-Using the `ValueBorder` property of the bullet chart, you can customize the border `Color` and `Width` of the feature bar.
+* [`ValueFill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueFill) - Specifies the fill color of target bar.
 
-```csharp
-@using Syncfusion.Blazor.Charts
+* [`ValueHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueHeight) - Specifies the width of target bar.
 
-<SfBulletChart DataSource="@BulletChartData" ValueField="value" Minimum="0" Maximum="30" Interval="5">
-    <BulletChartRangeCollection>
-        <BulletChartRange End=20> </BulletChartRange>
-        <BulletChartRange End=25></BulletChartRange>
-        <BulletChartRange End=30></BulletChartRange>
-    </BulletChartRangeCollection>
-</SfBulletChart>
-
-@code{
-    public class ChartData
-    {
-        public double value { get; set; }
-    }
-    public List<ChartData> BulletChartData = new List<ChartData>
-{
-        new ChartData { value = 23}
-    };
-}
-```
-
-### Fill Color and Height customization
-
-You can customize the fill color and height of the feature bar using the `ValueFill` and `ValueHeight` properties of the bullet chart.
+* [`BulletChartValueBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartValueBorder.html) - Specifies border color and width of the feature bar.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfBulletChart DataSource="@BulletChartData" ValueFill="blue" ValueHeight="15" ValueField="value" Minimum="0" Maximum="30" Interval="5">
+<SfBulletChart DataSource="@BulletChartData" ValueFill="lightblue" ValueHeight="15" ValueField="FieldValue" Minimum="0" Maximum="30" Interval="5">
+    <BulletChartValueBorder Color="red" Width="1"></BulletChartValueBorder>
     <BulletChartRangeCollection>
-        <BulletChartRange End=20> </BulletChartRange>
+        <BulletChartRange End=20></BulletChartRange>
         <BulletChartRange End=25></BulletChartRange>
         <BulletChartRange End=30></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
-
-@code{
-    public class ChartData
-    {
-        public double value { get; set; }
-    }
-    public List<ChartData> BulletChartData = new List<ChartData>
-{
-        new ChartData { value = 23}
-    };
-}
 ```
 
-![Value Bar](images/value-fill.png)
+> Refer [code block](#feature-bar) to know the property value of **BulletChartData**.
+
+![Value Bar](images/valuebar-custom.png)

@@ -87,7 +87,7 @@ On successful compilation of your application, the Syncfusion Blazor Bullet Char
 
 ## Adding Title
 
-You can add a title by using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartModel.html#Syncfusion_Blazor_Charts_BulletChartModel_Title) property in the Bullet Chart, to provide quick information to the user about the data plotted in the component.
+You can add a title by using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property in the Bullet Chart, to provide quick information to the user about the data plotted in the component.
 
 ```csharp
 @page "/"
@@ -142,7 +142,7 @@ You can add ranges by using [`BulletChartRangeCollection`](https://help.syncfusi
 
 ## Adding Tooltip
 
-You can use the tooltip to show the measure values by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip.html#Syncfusion_Blazor_Charts_BulletChartTooltip_Enable) property to **true** in [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip.html).
+You can use the tooltip to show the measure values by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property to **true** in [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html).
 
 ```csharp
 @page "/"

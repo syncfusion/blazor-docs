@@ -13,9 +13,10 @@ In the following sample, each list item is split into two columns to display rel
 ```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor
 
 <SfMultiSelect Placeholder="Select a employee" TValue="string[]" TItem="EmployeeData" Query="@Query">
-    <MultiSelectTemplates>
+    <MultiSelectTemplates TItem="EmployeeData">
         <ItemTemplate>
             <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='country'>@((context as EmployeeData).Country)</span></span>
         </ItemTemplate>
@@ -55,9 +56,9 @@ in the MultiSelect input, which is separated by a hyphen.
 ```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
-
+@using Syncfusion.Blazor
 <SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a employee" Query="@Query">
-    <MultiSelectTemplates>
+    <MultiSelectTemplates TItem="EmployeeData">
         <ItemTemplate>
             <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='destination'>@((context as EmployeeData).Designation)</span></span>
         </ItemTemplate>
@@ -101,9 +102,10 @@ similar to multiple columns of the grid.
 ```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor
 
 <SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a employe" Query="@Query">
-    <MultiSelectTemplates>
+    <MultiSelectTemplates TItem="EmployeeData">
         <ItemTemplate>
             <span class='item'><span class='name'>@((context as EmployeeData).FirstName)</span><span class='city'>@((context as EmployeeData).Country)</span></span>
         </ItemTemplate>
@@ -167,9 +169,10 @@ In the following sample, footer element displays the total number of list items 
 ```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor
 
 <SfMultiSelect TValue="string[]" TItem="EmployeeData" Query="@Query" Placeholder="Select a customer">
-    <MultiSelectTemplates>
+    <MultiSelectTemplates TItem="EmployeeData">
         <FooterTemplate>
             <span class='footer'>Total list Item: 6 </span>
         </FooterTemplate>
@@ -214,7 +217,7 @@ In the following sample, popup list content displays the notification of no data
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a employee" CssClass="e-custom" DataSource="@employee">
-    <MultiSelectTemplates>
+    <MultiSelectTemplates TItem="EmployeeData">
         <NoRecordsTemplate>
             <span class='norecord'> NO DATA AVAILABLE</span>
         </NoRecordsTemplate>
@@ -244,9 +247,10 @@ In the following sample, when the data fetch request fails, the MultiSelect disp
 ```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor
 
 <SfMultiSelect  TValue="string[]" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
-    <MultiSelectTemplates>
+    <MultiSelectTemplates TItem="EmployeeData">
         <ActionFailureTemplate>
             <span class='norecord'>Data fetch get fails </span>
         </ActionFailureTemplate>

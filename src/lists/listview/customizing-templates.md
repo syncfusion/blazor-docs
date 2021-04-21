@@ -238,7 +238,7 @@ In the following example, we have grouped Listview based on the category. The ca
 ```csharp
 @using Syncfusion.Blazor.Lists
 <SfListView ID="list" DataSource="@ListData" CssClass="e-list-template">
-    <ListViewFieldSettings Id="Id" Text="Name" GroupBy="Category"></ListViewFieldSettings>
+    <ListViewFieldSettings Id="Id" Text="Name" TValue="DataModel" GroupBy="Category"></ListViewFieldSettings>
     <ListViewTemplates TValue="DataModel">
         <Template>
             <div class="e-list-wrapper e-list-multi-line e-list-avatar">

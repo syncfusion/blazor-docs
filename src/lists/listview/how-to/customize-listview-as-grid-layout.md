@@ -195,7 +195,7 @@ In the below sample, we have sorted in `Ascending` order. To sort it in descendi
 
     ListviewSort ListSortOrder = ListviewSort.Ascending;
 
-    ButtonModel DialogBtn = new ButtonModel { Content = "Add", IsPrimary = true, CssClass = "e-flat" };
+    DialogButtonModel DialogBtn = new DialogButtonModel { Content = "Add", IsPrimary = true, CssClass = "e-flat" };
 
     string Value = "";
 

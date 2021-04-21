@@ -13,7 +13,7 @@ delete icon list item to `OnDelete` method.
 
 <div class="flex">
     <div class="margin">
-        <SfListView DataSource="@DataSource">
+        <SfListView ID="sample-list-flat" DataSource="@DataSource">
             <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
             <ListViewTemplates TValue="ListDataModel">
                 <Template>
@@ -81,7 +81,7 @@ delete icon list item to `OnDelete` method.
         width: 300px;
     }
 
-    .delete-icon::after {
+    #sample-list-flat.e-listview .e-content .delete-icon::after {
         font-family: "e-icon";
         content: "\e700";
         float: right;

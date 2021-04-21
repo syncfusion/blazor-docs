@@ -20,8 +20,8 @@ The dual list supports:
 * Filtering the list by using a client-side typed character.
 
 In the ListView control, sorting is enabled using the
-`SortOrder` property, and the `Selected` event is triggered
-while selecting an item. Here, the `Selected` event is triggered to enable and disable button states.
+`SortOrder` property, and the `Clicked` event is triggered
+while selecting an item. Here, the `Clicked` event is triggered to enable and disable button states.
 
 ## Manipulating data
 
@@ -38,8 +38,8 @@ list. This button is enabled only when the data source of the second ListView is
 
 ## Moving selected item from one list to another list (>) and (<)**
 
-The `Selected` event is triggered
-when selecting a list item in the ListView. The selected items can be transferred between two lists. These buttons will be
+The `Clicked` event is triggered
+when clicking a list item in the ListView. The selected items can be transferred between two lists. These buttons will be
 enabled when selecting an item in lists.
 
 ```csharp
@@ -53,7 +53,7 @@ enabled when selecting an item in lists.
                 <SfTextBox Placeholder="Filter" Input="@(e => OnInput(e, 1))"></SfTextBox>
                 <SfListView DataSource="@FirstData">
                     <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
-                    <ListViewEvents TValue="ListDataModel" Selected="@(e => OnSelected(e, 1))"></ListViewEvents>
+                    <ListViewEvents TValue="ListDataModel" Clicked="@(e => OnSelected(e, 1))"></ListViewEvents>
                 </SfListView>
             </div>
             <div class="flex vertical vertical__center flex__center padding">
@@ -73,8 +73,8 @@ enabled when selecting an item in lists.
             <div class="padding">
                 <SfTextBox Placeholder="Filter" Input="@(e => OnInput(e, 2))"></SfTextBox>
                 <SfListView DataSource="@SecondData">
-                    <ListViewFieldSettings Id="Id" Text="Text"></ListViewFieldSettings>
-                    <ListViewEvents TValue="ListDataModel" Selected="@(e => OnSelected(e, 2))"></ListViewEvents>
+                    <ListViewFieldSettings Id="Id" Text="Text" TValue="ListDataModel"></ListViewFieldSettings>
+                    <ListViewEvents TValue="ListDataModel" Clicked="@(e => OnSelected(e, 2))"></ListViewEvents>
                 </SfListView>
             </div>
         </div>
@@ -140,15 +140,15 @@ enabled when selecting an item in lists.
         }
     }
 
-    void OnSelected(SelectEventArgs<ListDataModel> eventArgs, int listviewIndex)
+    void OnSelected(ClickEventArgs<ListDataModel> eventArgs, int listviewIndex)
     {
         if (listviewIndex == 1)
         {
-            FirstSelected = eventArgs.Data;
+            FirstSelected = eventArgs.ItemData;
         }
         else
         {
-            SecondSelected = eventArgs.Data;
+            SecondSelected = eventArgs.ItemData;
         }
     }
 

@@ -101,3 +101,5 @@ valid or invalid value in text box.
 The output will be as follows.
 
 ![datepicker](./images/strict_mode_false.png)
+
+> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.

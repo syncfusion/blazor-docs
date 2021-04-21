@@ -17,3 +17,5 @@ By default, first day of a week in en-US is Sunday. In the following example, it
 The output will be as follows.
 
 ![DateRangePicker](./images/first_day_of_week.png)
+
+> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.

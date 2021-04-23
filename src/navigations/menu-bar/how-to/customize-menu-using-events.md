@@ -8,36 +8,44 @@ The available events are [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 @using Syncfusion.Blazor.Navigations
 
-<SfMenu Items="MenuItems">
-    <MenuEvents TValue="MenuItem" OnOpen="onOpen" OnClose="onClose" Opened="opened" Closed="closed" ItemSelected="itemSelected"></MenuEvents>
+<SfMenu TValue="MenuItem">
+    <MenuItems>
+        <MenuItem Text="File">
+            <MenuItems>
+                <MenuItem Text="Open"></MenuItem>
+                <MenuItem Text="Save"></MenuItem>
+                <MenuItem Text="Exit"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Edit">
+            <MenuItems>
+                <MenuItem Text="Cut"></MenuItem>
+                <MenuItem Text="Copy"></MenuItem>
+                <MenuItem Text="Paste"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="View">
+            <MenuItems>
+                <MenuItem Text="Toolbars"></MenuItem>
+                <MenuItem Text="Zoomr"></MenuItem>
+                <MenuItem Text="Full Screen"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Tools">
+            <MenuItems>
+                <MenuItem Text="Spelling & Grammar"></MenuItem>
+                <MenuItem Text="Customize"></MenuItem>
+                <MenuItem Text="Options"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Go"></MenuItem>
+        <MenuItem Text="Help"></MenuItem>
+    </MenuItems>
+    <MenuEvents TValue="MenuItem"  OnOpen="onOpen" OnClose="onClose" Opened="opened" Closed="closed" ItemSelected="itemSelected"></MenuEvents>
 </SfMenu>
 <div id="preview">@eventName Event Triggered</div>
 
 @code{
-    public List<MenuItem> MenuItems = new List<MenuItem>{
-        new MenuItem{ Text = "File", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Open" },
-            new MenuItem{ Text= "Save" },
-            new MenuItem{ Text= "Exit" }}
-    },
-        new MenuItem{ Text = "Edit", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Cut" },
-            new MenuItem{ Text= "Copy" },
-            new MenuItem{ Text= "Paste" }}
-    },
-        new MenuItem{ Text = "View", Items = new List<MenuItem>{
-            new MenuItem{ Text = "Toolbars" },
-            new MenuItem{ Text = "Zoom" },
-            new MenuItem{ Text = "Full Screen" }}
-    },
-        new MenuItem{ Text = "Tools", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Spelling & Grammar" },
-            new MenuItem{ Text= "Customize" },
-            new MenuItem{ Text= "Options" }}
-    },
-        new MenuItem{ Text = "Go" },
-        new MenuItem{ Text = "Help" }
-    };
 
     private string eventName = "No";
     private void onOpen()
@@ -67,7 +75,7 @@ The available events are [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfu
 }
 
 <style>
-    #preview{
+    #preview {
         float: right;
         padding: 0 350px 0 0;
     }

@@ -5,39 +5,48 @@ The rounded corner can be achieved by using the [`CssClass`](https://help.syncfu
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfMenu Items="@MenuItems" CssClass="e-rounded-menu"></SfMenu>
-
-@code {
-    public List<MenuItem> MenuItems = new List<MenuItem>{
-        new MenuItem { Text = "File", Items = new List<MenuItem>{
-            new MenuItem{ Text = "Open" },
-            new MenuItem{ Text = "Save" },
-            new MenuItem{ Text = "Exit" } } },
-        new MenuItem { Text = "Edit", Items = new List<MenuItem>{
-            new MenuItem{ Text = "Cut" },
-            new MenuItem{ Text = "Copy" },
-            new MenuItem{ Text = "Paste" } } },
-        new MenuItem { Text = "View", Items = new List<MenuItem>{
-            new MenuItem{ Text = "Toolbar" },
-            new MenuItem{ Text = "Sidebar" },
-            new MenuItem{ Text = "Fullscreen" } } },
-        new MenuItem { Text = "Tools", Items = new List<MenuItem>{
-            new MenuItem{ Text = "Spelling & Grammer" },
-            new MenuItem{ Text = "Customize" },
-            new MenuItem{ Text = "Options" } } },
- };
-}
-
+<SfMenu TValue="MenuItem" CssClass="e-rounded-menu">
+    <MenuItems>
+        <MenuItem Text="File">
+            <MenuItems>
+                <MenuItem Text="Open"></MenuItem>
+                <MenuItem Text="Save"></MenuItem>
+                <MenuItem Text="Exit"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Edit">
+            <MenuItems>
+                <MenuItem Text="Cut"></MenuItem>
+                <MenuItem Text="Copy"></MenuItem>
+                <MenuItem Text="Paste"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="View">
+            <MenuItems>
+                <MenuItem Text="Toolbar"></MenuItem>
+                <MenuItem Text="Sidebar"></MenuItem>
+                <MenuItem Text="Full Screen"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Tools">
+            <MenuItems>
+                <MenuItem Text="Spelling & Grammer"></MenuItem>
+                <MenuItem Text="Customize"></MenuItem>
+                <MenuItem Text="Options"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+    </MenuItems>
+</SfMenu>
 <style>
 
     /* Styles to achieve rounder corner in menu */
-    .e-menu-wrapper.e-rounded-menu:not(.e-menu-popup),
-    .e-menu-wrapper.e-rounded-menu .e-menu {
+    .e-menu-container.e-rounded-menu:not(.e-menu-popup),
+    .e-menu-container.e-rounded-menu .e-menu {
         border-radius: 20px;
     }
 
     /* Increased the menu component left and right padding for better rounded corner UI */
-    .e-menu-wrapper.e-rounded-menu ul.e-menu {
+    .e-menu-container.e-rounded-menu ul.e-menu {
         padding: 0 14px;
     }
 </style>

@@ -8,50 +8,57 @@ The Menu Bar component supports horizontal and vertical scrolling to render larg
 
 @using Syncfusion.Blazor.Navigations
 
-<SfMenu Items="MenuItems" EnableScrolling="true" CssClass="e-scrollable-menu">
+<SfMenu TValue="MenuItem" EnableScrolling="true" CssClass="e-scrollable-menu">
+    <MenuItems>
+        <MenuItem Text="File">
+            <MenuItems>
+                <MenuItem Text="Open"></MenuItem>
+                <MenuItem Text="Save"></MenuItem>
+                <MenuItem Text="Save As"></MenuItem>
+                <MenuItem Text="Print"></MenuItem>
+                <MenuItem Text="Share"></MenuItem>
+                <MenuItem Text="Info"></MenuItem>
+                <MenuItem Text="Exit"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Edit">
+            <MenuItems>
+                <MenuItem Text="Cut"></MenuItem>
+                <MenuItem Text="Copy"></MenuItem>
+                <MenuItem Text="Paste"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="View">
+            <MenuItems>
+                <MenuItem Text="Toolbars"></MenuItem>
+                <MenuItem Text="Zoom"></MenuItem>
+                <MenuItem Text="Full Screen"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Tools">
+            <MenuItems>
+                <MenuItem Text="Spelling & Grammar"></MenuItem>
+                <MenuItem Text="Customize"></MenuItem>
+                <MenuItem Text="Options"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Insert">
+            <MenuItems>
+                <MenuItem Text="Comment"></MenuItem>
+                <MenuItem Text="Links"></MenuItem>
+                <MenuItem Text="Table"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Design"></MenuItem>
+        <MenuItem Text="Go"></MenuItem>
+        <MenuItem Text="Layout"></MenuItem>
+        <MenuItem Text="Help"></MenuItem>
+    </MenuItems>
 </SfMenu>
-
-@code{
-    public List<MenuItem> MenuItems = new List<MenuItem>{
-        new MenuItem{ Text = "File", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Open" },
-            new MenuItem{ Text= "Save" },
-            new MenuItem{ Text= "Save As" },
-            new MenuItem{ Text= "Print" },
-            new MenuItem{ Text= "Share" },
-            new MenuItem{ Text= "Info" },
-            new MenuItem{ Text= "Exit" }}
-    },
-        new MenuItem{ Text = "Edit", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Cut" },
-            new MenuItem{ Text= "Copy" },
-            new MenuItem{ Text= "Paste" }}
-    },
-        new MenuItem{ Text = "View", Items = new List<MenuItem>{
-            new MenuItem{ Text = "Toolbars" },
-            new MenuItem{ Text = "Zoom" },
-            new MenuItem{ Text = "Full Screen" }}
-    },
-        new MenuItem{ Text = "Tools", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Spelling & Grammar" },
-            new MenuItem{ Text= "Customize" },
-            new MenuItem{ Text= "Options" }}
-    },
-        new MenuItem{ Text = "Insert", Items = new List<MenuItem>{
-        new MenuItem{ Text="Comment"},
-        new MenuItem{ Text="Links"},
-        new MenuItem{ Text="Table"} }
-    },
-        new MenuItem{ Text = "Design" },
-        new MenuItem{ Text = "Go" },
-        new MenuItem{ Text = "Layout" },
-        new MenuItem{ Text = "Help" }
-    };
-}
 
 <style>
     .e-scrollable-menu:not(.e-menu-popup) {
-       width: 400px;
+        width: 400px;
     }
 </style>
 
@@ -69,52 +76,52 @@ The following example demonstrates the use case of [`HamburgerMenu`](https://hel
 
 @using Syncfusion.Blazor.Navigations;
 
-<SfMenu Items="@menuItems" HamburgerMode="true" ShowItemOnClick="true"></SfMenu>
-
-@code {
-    private List<MenuItem> menuItems = new List<MenuItem>
-    {
-        new MenuItem{ Text = "File", IconCss = "em-icons e-file", Items = new List<MenuItem>
-        {
-            new MenuItem { Text= "Open", IconCss= "em-icons e-open" },
-            new MenuItem { Text= "Save", IconCss= "em-icons e-save" },
-            new MenuItem { Separator= true },
-            new MenuItem { Text= "Exit" }
-        }
-    },
-         new MenuItem { Text = "Edit", IconCss = "em-icons e-edit", Items = new List<MenuItem>
-         {
-            new MenuItem { Text= "Cut", IconCss= "em-icons e-cut" },
-            new MenuItem { Text= "Copy", IconCss= "em-icons e-copy" },
-            new MenuItem { Text= "Paste", IconCss= "em-icons e-paste" }
-         }
-    },
-         new MenuItem { Text = "View", Items = new List<MenuItem> {
-            new MenuItem { Text = "Toolbars", Items = new List<MenuItem>{
-                new MenuItem { Text= "Menu Bar" },
-                new MenuItem { Text= "Bookmarks Toolbar" },
-                new MenuItem { Text= "Customize" }
-         }
-    },
-         new MenuItem { Text = "Zoom", Items = new List<MenuItem>
-         {
-            new MenuItem { Text= "Zoom In" },
-            new MenuItem { Text= "Zoom Out" },
-            new MenuItem { Text= "Reset" },
-         }
-    },
-         new MenuItem { Text = "Full Screen" } }
-    },
-         new MenuItem { Text = "Tools", Items = new List<MenuItem> {
-            new MenuItem { Text= "Spelling & Grammar" },
-            new MenuItem { Text= "Customize" },
-            new MenuItem { Separator= true },
-            new MenuItem { Text= "Options" }
-         }
-    },
-          new MenuItem { Text = "Help" }
-    };
-}
+<SfMenu TValue="MenuItem" HamburgerMode="true" ShowItemOnClick="true">
+    <MenuItems>
+        <MenuItem Text="File">
+            <MenuItems>
+                <MenuItem Text="Open"></MenuItem>
+                <MenuItem Text="Save"></MenuItem>
+                <MenuItem Text="Exit"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Edit">
+            <MenuItems>
+                <MenuItem Text="Cut"></MenuItem>
+                <MenuItem Text="Copy"></MenuItem>
+                <MenuItem Text="Paste"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="View">
+            <MenuItems>
+                <MenuItem Text="Toolbars">
+                    <MenuItems>
+                        <MenuItem Text="Menu Bar"></MenuItem>
+                        <MenuItem Text="Bookmarks Toolbar"></MenuItem>
+                        <MenuItem Text="Customize"></MenuItem>
+                    </MenuItems>
+                </MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Zoom">
+            <MenuItems>
+                <MenuItem Text="Zoom In"></MenuItem>
+                <MenuItem Text="Zoom Out"></MenuItem>
+                <MenuItem Text="Reset"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Full Screen"></MenuItem>
+        <MenuItem Text="Tools">
+            <MenuItems>
+                <MenuItem Text="Spelling & Grammar"></MenuItem>
+                <MenuItem Text="Customize"></MenuItem>
+                <MenuItem Separator="true"></MenuItem>
+                <MenuItem Text="Options"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Help"></MenuItem>
+    </MenuItems>
+</SfMenu>
 
 <style>
 
@@ -122,7 +129,6 @@ The following example demonstrates the use case of [`HamburgerMenu`](https://hel
         width: 100%;
         background-color: #7b8cfb;
     }
-
 </style>
 
 ```
@@ -146,57 +152,58 @@ The following example demonstrates the use case of Menu Bar in Mobile mode with 
         </div>
         <div class="layout">
             <div id="container">
-                <SfMenu Items="@menuItems" HamburgerMode="true" ShowItemOnClick="true"></SfMenu>
+                <SfMenu TValue="MenuItem" HamburgerMode="true" ShowItemOnClick="true">
+                    <MenuItems >
+                        <MenuItem Text="File">
+                            <MenuItems>
+                                <MenuItem Text="Open"></MenuItem>
+                                <MenuItem Text="Save"></MenuItem>
+                                <MenuItem Separator="true"></MenuItem>
+                                <MenuItem Text="Exit"></MenuItem>
+                            </MenuItems>
+                        </MenuItem>
+                        <MenuItem Text="Edit">
+                            <MenuItems>
+                                <MenuItem Text="Cut"></MenuItem>
+                                <MenuItem Text="Copy"></MenuItem>
+                                <MenuItem Text="Paste"></MenuItem>
+                            </MenuItems>
+                        </MenuItem>
+                        <MenuItem Text="View">
+                            <MenuItems>
+                                <MenuItem Text="Toolbars">
+                                    <MenuItems>
+                                        <MenuItem Text="Menu Bar"></MenuItem>
+                                        <MenuItem Text="Bookmarks Toolbar"></MenuItem>
+                                        <MenuItem Text="Customize"></MenuItem>
+                                    </MenuItems>
+                                </MenuItem>
+                            </MenuItems>
+                        </MenuItem>
+                        <MenuItem Text="Zoom">
+                            <MenuItems>
+                                <MenuItem Text="Zoom In"></MenuItem>
+                                <MenuItem Text="Zoom Out"></MenuItem>
+                                <MenuItem Text="Reset"></MenuItem>
+                            </MenuItems>
+                        </MenuItem>
+                        <MenuItem Text="Full Screen"></MenuItem>
+                        <MenuItem Text="Tools">
+                            <MenuItems>
+                                <MenuItem Text="Spelling & Grammar"></MenuItem>
+                                <MenuItem Text="Customize"></MenuItem>
+                                <MenuItem Separator="true"></MenuItem>
+                                <MenuItem Text="Options"></MenuItem>
+                            </MenuItems>
+                        </MenuItem>
+                        <MenuItem Text="Help"></MenuItem>
+                    </MenuItems>
+                </SfMenu>
             </div>
         </div>
         <div class="outerButton"> </div>
     </div>
 </div>
-
-@code {
-    private List<MenuItem> menuItems = new List<MenuItem>
-    {
-        new MenuItem{ Text = "File", IconCss = "em-icons e-file", Items = new List<MenuItem>
-        {
-            new MenuItem { Text= "Open", IconCss= "em-icons e-open" },
-            new MenuItem { Text= "Save", IconCss= "em-icons e-save" },
-            new MenuItem { Separator= true },
-            new MenuItem { Text= "Exit" }
-        }
-    },
-         new MenuItem { Text = "Edit", IconCss = "em-icons e-edit", Items = new List<MenuItem>
-         {
-            new MenuItem { Text= "Cut", IconCss= "em-icons e-cut" },
-            new MenuItem { Text= "Copy", IconCss= "em-icons e-copy" },
-            new MenuItem { Text= "Paste", IconCss= "em-icons e-paste" }
-         }
-    },
-         new MenuItem { Text = "View", Items = new List<MenuItem> {
-            new MenuItem { Text = "Toolbars", Items = new List<MenuItem>{
-                new MenuItem { Text= "Menu Bar" },
-                new MenuItem { Text= "Bookmarks Toolbar" },
-                new MenuItem { Text= "Customize" }
-         }
-    },
-         new MenuItem { Text = "Zoom", Items = new List<MenuItem>
-         {
-            new MenuItem { Text= "Zoom In" },
-            new MenuItem { Text= "Zoom Out" },
-            new MenuItem { Text= "Reset" },
-         }
-    },
-         new MenuItem { Text = "Full Screen" } }
-    },
-         new MenuItem { Text = "Tools", Items = new List<MenuItem> {
-            new MenuItem { Text= "Spelling & Grammar" },
-            new MenuItem { Text= "Customize" },
-            new MenuItem { Separator= true },
-            new MenuItem { Text= "Options" }
-         }
-    },
-          new MenuItem { Text = "Help" }
-    };
-}
 
 <style>
     .deviceLayout #menu {
@@ -205,9 +212,9 @@ The following example demonstrates the use case of Menu Bar in Mobile mode with 
         height: 363px;
     }
 
-    .deviceLayout #menu::-webkit-scrollbar {
-         width: 0;
-    }
+        .deviceLayout #menu::-webkit-scrollbar {
+            width: 0;
+        }
 
     .menu-control {
         text-align: center;
@@ -229,46 +236,45 @@ The following example demonstrates the use case of Menu Bar in Mobile mode with 
         background-image: linear-gradient(to top, #ffffff, #f5f5f5);
     }
 
-    .deviceLayout .speaker {
-        border: 1px solid black;
-        border-radius: 5px;
-        width: 20%;
-        height: 5px;
-        margin: 15px auto 0px auto;
-        position: relative;
-    }
+        .deviceLayout .speaker {
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 20%;
+            height: 5px;
+            margin: 15px auto 0px auto;
+            position: relative;
+        }
 
-    .deviceLayout .outerButton {
-        width: 30px;
-        height: 30px;
-        border: 1px solid black;
-        border-radius: 50%;
-        position: absolute;
-        bottom: calc(0% + 10px);
-        left: calc(50% - 15px);
-    }
+        .deviceLayout .outerButton {
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 50%;
+            position: absolute;
+            bottom: calc(0% + 10px);
+            left: calc(50% - 15px);
+        }
 
-    .deviceLayout .camera {
-        position: absolute;
-        left: calc(-15% - 10px);
-        top: -100%;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border: 1px solid black;
-    }
+        .deviceLayout .camera {
+            position: absolute;
+            left: calc(-15% - 10px);
+            top: -100%;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
 
-    .deviceLayout .layout {
-        border: 1px solid black;
-        margin: 20px 13px 0px 13px;
-    }
+        .deviceLayout .layout {
+            border: 1px solid black;
+            margin: 20px 13px 0px 13px;
+        }
 
     .layout #container {
         height: 405px;
         background-color: white;
         overflow: hidden;
     }
-
 </style>
 
 ```

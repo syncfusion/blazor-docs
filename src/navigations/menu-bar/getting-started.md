@@ -80,34 +80,40 @@ Now, add the Blazor Menu Bar component in `razor` page in the `Pages` folder. Fo
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfMenu Items="@MenuItems"></SfMenu>
-
-@code {
-    public List<MenuItem> MenuItems = new List<MenuItem>{
-        new MenuItem{ Text = "File", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Open" },
-            new MenuItem{ Text= "Save" },
-            new MenuItem{ Text= "Exit" }}
-    },
-        new MenuItem{ Text = "Edit", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Cut" },
-            new MenuItem{ Text= "Copy" },
-            new MenuItem{ Text= "Paste" }}
-    },
-        new MenuItem{ Text = "View", Items = new List<MenuItem>{
-            new MenuItem{ Text = "Toolbars" },
-            new MenuItem{ Text = "Zoom" },
-            new MenuItem{ Text = "Full Screen" }}
-    },
-        new MenuItem{ Text = "Tools", Items = new List<MenuItem>{
-            new MenuItem{ Text= "Spelling & Grammar" },
-            new MenuItem{ Text= "Customize" },
-            new MenuItem{ Text= "Options" }}
-    },
-        new MenuItem{ Text = "Go" },
-        new MenuItem{ Text = "Help" }
-    };
-}
+<SfMenu TValue="MenuItem">
+    <MenuItems>
+        <MenuItem Text="File">
+            <MenuItems>
+                <MenuItem Text="Open"></MenuItem>
+                <MenuItem Text="Save"></MenuItem>
+                <MenuItem Text="Exit"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Edit">
+            <MenuItems>
+                <MenuItem Text="Cut"></MenuItem>
+                <MenuItem Text="Copy"></MenuItem>
+                <MenuItem Text="Paste"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="View">
+            <MenuItems>
+                <MenuItem Text="Toolbars"></MenuItem>
+                <MenuItem Text="Zoomr"></MenuItem>
+                <MenuItem Text="Full Screen"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Tools">
+            <MenuItems>
+                <MenuItem Text="Spelling & Grammar"></MenuItem>
+                <MenuItem Text="Customize"></MenuItem>
+                <MenuItem Text="Options"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Go"></MenuItem>
+        <MenuItem Text="Help"></MenuItem>
+    </MenuItems>
+</SfMenu>
 
 ```
 

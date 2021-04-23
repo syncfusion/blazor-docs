@@ -7,6 +7,7 @@
 * [Templates](query-builder/templates.md)
 * [Importing and Exporting](query-builder/import-export.md)
 * [Localization](query-builder/localization.md)
+* [Styles and Appearances](query-builder/style-and-appearance.md)
 * [Getting Started-Client side using Visual studio](query-builder/how-to/getting-started-web-assembly.md)
 * [Change Display Mode](query-builder/how-to/change-display-mode.md)
 * [Show Not Operator](query-builder/how-to/enable-not.md)
@@ -15,5 +16,4 @@
 * [Right to Left](query-builder/how-to/right-to-left.md)
 * [Restrict the Groups](query-builder/how-to/restrict-group.md)
 * [Sort the Columns](query-builder/how-to/sort-the-columns.md)
-* [Style and Appearance](query-builder/how-to/style-and-appearance.md)
 * [Summary View](query-builder/how-to/summary-view.md)

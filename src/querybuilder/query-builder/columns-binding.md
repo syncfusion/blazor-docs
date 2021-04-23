@@ -70,7 +70,7 @@ The operator for a column can be defined in the [`Columns`](https://help.syncfus
 
 ## Step
 
-The Query Builder allows you to set the step values to the number fields. It allows you to increase or decrease the numeric value with the predefined Step value using the [`Step`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Step) property.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows you to set the step values to the number fields. It allows you to increase or decrease the numeric value with the predefined Step value using the [`Step`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Step) property.
 
 > By default the Step value is 1.
 
@@ -100,9 +100,11 @@ The Query Builder allows you to set the step values to the number fields. It all
 
 ```
 
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
+
 ## Format
 
-The Query Builder formats date and number values. Use the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Format) property, to format date and number values.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) formats date and number values. Use the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Format) property, to format date and number values.
 
 > From the standard numeric format, you can use the numeric related format specifiers such as n,p, and c in the format property. By using these format specifiers, you can achieve the percentage and currency textbox behavior.
 
@@ -144,6 +146,8 @@ In the following sample, the date field is formatted as MM/yyyy/dd and number fi
 Output will be shown as
 
 ![Query Builder Sample](./images/qb-format.png)
+
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
 
 ## Validations
 

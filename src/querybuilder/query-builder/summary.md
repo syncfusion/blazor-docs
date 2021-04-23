@@ -7,6 +7,7 @@
 * [Templates](query-builder/templates.md)
 * [Importing and Exporting](query-builder/import-export.md)
 * [Localization](query-builder/localization.md)
+* [Getting Started-Client side using Visual studio](query-builder/how-to/getting-started-web-assembly.md)
 * [Change Display Mode](query-builder/how-to/change-display-mode.md)
 * [Show Not Operator](query-builder/how-to/enable-not.md)
 * [Maintain the State Persistence](query-builder/how-to/maintain-state-persistence.md)

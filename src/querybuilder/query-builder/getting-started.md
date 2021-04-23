@@ -6,6 +6,8 @@ To get start quickly with Query Builder Component using Blazor, you can check on
 
 `youtube:jyWU7XSg3WI`
 
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
+
 ## Importing Syncfusion Blazor component in the application
 
 1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
@@ -76,7 +78,7 @@ namespace BlazorApplication
 
 ## Adding Query Builder component to the application
 
-Now, add the Blazor Query Builder component in `razor` page in the `Pages` folder. For example, the Query Builder component is added in the `~/Pages/Index.razor` page.
+Now, add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component in `razor` page in the `Pages` folder. For example, the Query Builder component is added in the `~/Pages/Index.razor` page.
 
 ```csharp
 @using Syncfusion.Blazor.QueryBuilder
@@ -111,7 +113,7 @@ Now, add the Blazor Query Builder component in `razor` page in the `Pages` folde
 
 ## Run the application
 
-After successful compilation of your application, simply press F5 to run the application. The Blazor Query Builder component will render in the web browser as shown below
+After successful compilation of your application, simply press F5 to run the application. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component will render in the web browser as shown below
 
 ![QueryBuilder Sample](https://ej2.syncfusion.com/products/images/querybuilder/readme.gif)
 

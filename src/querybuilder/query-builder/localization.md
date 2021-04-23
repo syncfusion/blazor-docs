@@ -1,6 +1,6 @@
 # Localization
 
-The `Localization` library allows you to localize default text content of the Query Builder. The Query Builder has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.). In the following sample the text is changed to `German` culture.
+The `Localization` library allows you to localize default text content of the Query Builder. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.). In the following sample the text is changed to `German` culture.
 
 We have used Resource file (.resx) to translate the static text of the querybuilder.
 
@@ -82,3 +82,4 @@ The following list of properties and its values are used in the Query Builder.
 Output will be shown as
 
 ![Query Builder Sample](./images/qb-locale.png)
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.

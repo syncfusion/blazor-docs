@@ -113,7 +113,7 @@ Output will be shown as
 
 ## Exporting
 
-Exporting allows you to save or maintain the created conditions through the Query Builder. You can export the defined conditions by the following ways.
+Exporting allows you to save or maintain the created conditions through the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder). You can export the defined conditions by the following ways.
 
 ## Exporting to SQL
 
@@ -170,3 +170,5 @@ You can export the defined conditions to SQL query through the [`GetSqlFromRules
  }
 
 ```
+
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.

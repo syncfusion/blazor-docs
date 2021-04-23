@@ -1,6 +1,6 @@
 # Templates
 
-This section explains the list of templates available in the Query Builder.
+This section explains the list of templates available in the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder).
 
 ## Value Template
 
@@ -354,3 +354,4 @@ In the following sample, the SFDropdownlist component is used as the custom comp
 Output will be shown as
 
 ![Query Builder Header template Sample](./images/header-template.png)
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.

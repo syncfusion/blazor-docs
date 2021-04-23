@@ -5,6 +5,7 @@
 * [Icons](drop-down-menu/icons.md)
 * [Popup Items](drop-down-menu/popup-items.md)
 * [Accessibility](drop-down-menu/accessibility.md)
+* [Styles and Appearances](drop-down-menu/style-and-appearance.md)
 * [Change caret icon](drop-down-menu/how-to/change-caret-icon.md)
 * [Create Dropdown Menu with rounded corner](drop-down-menu/how-to/create-dropdownbutton-with-rounded-corner.md)
 * [Create right-to-left Dropdown Menu](drop-down-menu/how-to/create-right-to-left-dropdownbutton.md)
@@ -16,4 +17,3 @@
 * [Position popup open](drop-down-menu/how-to/position-popup.md)
 * [Create Dropdown List in Popup](drop-down-menu/how-to/dropdownlist-dropdownbutton.md)
 * [Add and Remove Items](drop-down-menu/how-to/add-remove-items.md)
-* [Style and Appearance](drop-down-menu/how-to/style-and-appearance.md)

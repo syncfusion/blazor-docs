@@ -1,13 +1,32 @@
-# Methods
+---
+title: "Methods in Blazor Sparkline component | Syncfusion"
 
-## RenderSparkline
+component: "Sparkline"
 
-Description: To render the sparkline elements.
+description: "Learn here all about Methods of Syncfusion Sparkline (SfSparkline) component and more."
+---
 
-Returns void
+# Methods in Blazor Sparkline (SfSparkline)
+
+Create an object for the Sparkline component using `@ref` property and call the desired Sparkline method.
 
 ## Refresh
 
-Description: The component is rendered again. Whenever you make changes with the sparkline properties.
+The Sparkline component is rendered again.
 
-Return: void
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<button @onclick="RefreshCall">Refresh</button>
+<SfSparkline @ref="@Sparkline" DataSource="new int[]{ 3, 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Area" Height="200px" Width="350px" Fill="#b2cfff" LineWidth="1">
+</SfSparkline>
+
+@code
+{
+    public SfSparkline<int> Sparkline { get; set; }
+    public async Task RefreshCall()
+    {
+        await Sparkline.Refresh();
+    }
+}
+```

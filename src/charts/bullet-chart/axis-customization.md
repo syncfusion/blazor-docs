@@ -1,4 +1,12 @@
-# Axis Customization
+---
+title: "Axis Customization in Blazor Bullet Chart component | Syncfusion"
+
+component: "Bullet Chart"
+
+description: "Learn here all about Axis Customization of Syncfusion Bullet Chart (SfBulletChart) component and more."
+---
+
+# Axis Customization in Blazor Bullet Chart (SfBulletChart)
 
 ## MajorTickLines and MinorTickLines Customization
 

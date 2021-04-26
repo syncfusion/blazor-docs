@@ -1,36 +1,30 @@
-# Sparkline Chart Types
+---
+title: "Chart Types in Blazor Sparkline component | Syncfusion"
 
-Different types of shapes can be used to represent the Sparkline Charts. You can change the type of Sparkline Charts by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property. Sparkline Charts supports the following types:
+component: "Sparkline"
 
-* Line
-* Column
-* Win-Loss
-* Pie
-* Area
+description: "Learn here all about Chart Types of Syncfusion Sparkline (SfSparkline) component and more."
+---
 
-The following code sample shows different types of Sparkline Charts.
+# Chart Types in Blazor Sparkline (SfSparkline)
+
+Different types of shapes can be used to represent the Sparkline Charts and change the type of Sparkline Charts by specifying in [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property.
 
 ## Line
 
-The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) type is used to render the Sparkline Charts series as line.
+The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Line) type is used to render the Sparkline series as line.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="PopulationData"
-              TValue="PopulationReport"
-              XName="Year"
-              YName="Population"
-              Width="200px"
-              Height="150px"
-              Type="SparklineType.Line">
+<SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="200px" Height="150px" Type="SparklineType.Line">
 </SfSparkline>
 
 @code {
     public class PopulationReport
     {
-        public int Year;
-        public int Population;
+        public int Year { get; set; }
+        public int Population { get; set; }
     };
     private List<PopulationReport> PopulationData = new List<PopulationReport> {
         new  PopulationReport { Year= 2005, Population= 20090440 },
@@ -47,83 +41,62 @@ The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSp
 }
 ```
 
-![Sparkline Charts with Line Type](./images/SparklineTypes/Line.png)
+![Sparkline with Line Type](/images/SparklineTypes/Line.png)
 
 ## Column
 
-The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) type is used to render the Sparkline Charts series as column.
+The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Column) type is used to render the Sparkline series as column.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="PopulationData"
-              TValue="PopulationReport"
-              XName="Year"
-              YName="Population"
-              Width="70%"
-              Height="100px"
-              Type="SparklineType.Column">
+<SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="500px" Height="150px" Type="SparklineType.Column">
 </SfSparkline>
 ```
 
-> Refer [code block](#line) to know the property value of `PopulationData`.
+> Refer [code block](#line) to know the property value of **PopulationData**.
 
-![Sparkline Charts with Column Type](./images/SparklineTypes/Column.png)
+![Sparkline Charts with Column Type](/images/SparklineTypes/Column.png)
 
 ## Pie
 
-The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) type is used to render the Sparkline Charts series as pie.
+The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Pie) type is used to render the Sparkline series as pie.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="PopulationData"
-              TValue="PopulationReport"
-              XName="Year"
-              YName="Population"
-              Width="70%"
-              Height="200px"
-              Type="SparklineType.Pie">
+<SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="500px" Height="250px" Type="SparklineType.Pie">
 </SfSparkline>
 ```
 
-> Refer [code block](#line) to know the property value of `PopulationData`.
+> Refer [code block](#line) to know the property value of **PopulationData**.
 
-![Sparkline Charts with Pie type](./images/SparklineTypes/Pie.png)
+![Sparkline with Pie type](/images/SparklineTypes/Pie.png)
 
 ## WinLoss
 
-The [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) type is used to render the Sparkline Charts series as WinLoss.
+The [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) type is used to render the Sparkline series as WinLoss.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="new int[]{12, 15, -10, 13, 15, 6, -12, 17, 13, 0, 8, -10}"
-              Width="50%"
-              Height="200px"
-              Type="SparklineType.WinLoss">
+<SfSparkline DataSource="new int[]{12, 15, -10, 13, 15, 6, -12, 17, 13, 0, 8, -10}" Width="500px" Height="200px" Type="SparklineType.WinLoss">
 </SfSparkline>
 ```
 
-![Sparkline Charts with WinLoss type](./images/SparklineTypes/Winloss.png)
+![Sparkline with WinLoss type](/images/SparklineTypes/Winloss.png)
 
 ## Area
 
-The [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) type is used to render the Sparkline Charts series as area.
+The [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Area) type is used to render the Sparkline series as area.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="PopulationData"
-              TValue="PopulationReport"
-              XName="Year"
-              YName="Population"
-              Width="70%"
-              Height="100px"
-              Type="SparklineType.Area">
+<SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="500px" Height="100px" Type="SparklineType.Area">
 </SfSparkline>
 ```
 
-> Refer [code block](#line) to know the property value of `PopulationData`.
+> Refer [code block](#line) to know the property value of **PopulationData**.
 
-![Sparkline Charts with Area Type Sample](./images/SparklineTypes/Area.png)
+![Sparkline with Area type](/images/SparklineTypes/Area.png)

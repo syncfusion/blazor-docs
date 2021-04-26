@@ -1,4 +1,12 @@
-# Sparkline Dimensions
+---
+title: "Dimensions in Blazor Sparkline component | Syncfusion"
+
+component: "Sparkline"
+
+description: "Learn here all about Dimensions of Syncfusion Sparkline (SfSparkline) component and more."
+---
+
+# Dimensions in Blazor Sparkline (SfSparkline)
 
 ## Size for container
 

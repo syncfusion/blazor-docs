@@ -1,35 +1,66 @@
-# Axis Customization
+---
+title: "Axis Customization in Blazor Sparkline component | Syncfusion"
 
-You can customize axis value types and min and max values of the Sparkline Charts.
+component: "Sparkline"
+
+description: "Learn here all about Axis Customization of Syncfusion Sparkline (SfSparkline) component and more."
+---
+
+# Axis Customization in Blazor Sparkline (SfSparkline)
+
+Axis value can be customize to different value types with min and max range of the Sparkline.
 
 ## Change value type of the Sparkline Charts
 
-You can change the Sparkline Charts value type by setting the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) property to [`Numeric`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html), [`Category`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html), or [`DateTime`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html).
+The [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property can be used to specify the Sparkline value type, which can be [`Numeric`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_Numeric), [`Category`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_Category), or [`DateTime`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_DateTime).
 
-### Category
+### Numeric
 
-You can assign category values to the Sparkline Charts by setting [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) to [`Category`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html).
+The numeric axis value can be provide by specifying [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property to [`Numeric`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_Numeric).
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline XName="EmployeeName"
-              YName="WorkHours"
-              TValue="WorkDetails"
-              DataSource='EmployeeWorkReport'
-              Type="SparklineType.Column"
-              ValueType="SparklineValueType.Category"
-              Height="150px"
-              Width="130px">
+<SfSparkline DataSource="@ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Column" ValueType="SparklineValueType.Numeric" Height="150px" Width="130px">
+</SfSparkline>
+
+@code {
+    public class ExpenditureDetails
+    {
+        public int Year { get; set; }
+        public int Expense { get; set; }
+    };
+    public List<ExpenditureDetails> ExpenditureReport = new List<ExpenditureDetails> {
+        new ExpenditureDetails{ Year= 2010, Expense= 190 },
+        new ExpenditureDetails{ Year= 2011, Expense= 165 },
+        new ExpenditureDetails{ Year= 2012, Expense= 158 },
+        new ExpenditureDetails{ Year= 2013, Expense= 175 },
+        new ExpenditureDetails{ Year= 2014, Expense= 200 },
+        new ExpenditureDetails{ Year= 2015, Expense= 180 },
+        new ExpenditureDetails{ Year= 2016, Expense= 210 }
+    };
+}
+```
+
+![Sparkline with numeric value type](/images/Axis/Numeric.png)
+
+### Category
+
+The category axis value can be provide by specifying [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property to [`Category`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_Category).
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<SfSparkline XName="EmployeeName"YName="WorkHours"TValue="WorkDetails"DataSource="@EmployeeWorkReport" Type="SparklineType.Column"ValueType="SparklineValueType.Category" Height="150px"Width="130px">
 </SfSparkline>
 
 @code {
     public class WorkDetails
     {
-        public string EmployeeName;
-        public double WorkHours;
+        public string EmployeeName { get; set; }
+        public double WorkHours { get; set; }
     };
-    private List<WorkDetails> EmployeeWorkReport = new List<WorkDetails> {
+    public List<WorkDetails> EmployeeWorkReport = new List<WorkDetails> {
         new WorkDetails { EmployeeName = "Robert", WorkHours= 60 },
         new WorkDetails { EmployeeName = "Andrew", WorkHours= 65 },
         new WorkDetails { EmployeeName = "Suyama", WorkHours= 70 },
@@ -42,114 +73,95 @@ You can assign category values to the Sparkline Charts by setting [`ValueType`](
 }
 ```
 
-![Sparkline Charts with category type](./images/Axis/Category.png)
+![Sparkline with category value type](/images/Axis/Category.png)
 
-### Numeric
+### DateTime
 
-You can assign numeric values to the Sparkline Charts by setting [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) to [`Numeric`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html)
+The date time axis value can be provide by specifying [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property to [`DateTime`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_DateTime).
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="ExpenditureReport"
-              TValue="ExpenditureDetails"
-              XName="Year"
-              YName="Expense"
-              Type="SparklineType.Column"
-              ValueType="SparklineValueType.Numeric"
-              Height="150px"
-              Width="130px">
+<SfSparkline XName="Date" YName="Expense" TValue="ExpenditureDetail" DataSource="@ExpenditureReports" Type="SparklineType.Column" ValueType="SparklineValueType.DateTime" Height="150px" Width="130px">
 </SfSparkline>
 
 @code {
-    public class ExpenditureDetails
+    public class ExpenditureDetail
     {
-        public int Year;
-        public int Expense;
-    };
-    private List<ExpenditureDetails> ExpenditureReport = new List<ExpenditureDetails> {
-        new ExpenditureDetails{ Year= 2010, Expense= 190 },
-        new ExpenditureDetails{ Year= 2011, Expense= 165 },
-        new ExpenditureDetails{ Year= 2012, Expense= 158 },
-        new ExpenditureDetails{ Year= 2013, Expense= 175 },
-        new ExpenditureDetails{ Year= 2014, Expense= 200 },
-        new ExpenditureDetails{ Year= 2015, Expense= 180 },
-        new ExpenditureDetails{ Year= 2016, Expense= 210 }
+        public DateTime Date { get; set; }
+        public double Expense { get; set; }
+    }
+
+    public List<ExpenditureDetail> ExpenditureReports = new List<ExpenditureDetail>
+    {
+        new ExpenditureDetail { Date = new DateTime(2005, 01, 01), Expense = 21 },
+        new ExpenditureDetail { Date = new DateTime(2006, 01, 01), Expense = 24 },
+        new ExpenditureDetail { Date = new DateTime(2007, 01, 01), Expense = 36 },
+        new ExpenditureDetail { Date = new DateTime(2008, 01, 01), Expense = 38 },
+        new ExpenditureDetail { Date = new DateTime(2009, 01, 01), Expense = 54 },
+        new ExpenditureDetail { Date = new DateTime(2010, 01, 01), Expense = 57 },
+        new ExpenditureDetail { Date = new DateTime(2011, 01, 01), Expense = 70 }
     };
 }
 ```
 
-![Sparkline Charts with numeric value type](./images/Axis/Numeric.png)
+![Sparkline with date time value type](/images/Axis/Datetime.png)
 
 ## Change min and max values of axis
 
-You can change the min and max values of x-axis by setting the [`MinX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.htmlhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MinX) and [`MaxX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MaxX) values to the [`SparklineAxisSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) tag.
-
-You can also change the min and max values of y-axis by setting the [`MinY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MinY) and [`MaxY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MaxY) values to the [`SparklineAxisSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) tag.
+Customize the min and max values of the x-axis using the [`MinX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MinX) and [`MaxX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MaxX) properties of [`SparklineAxisSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html), and the min and max values of the y-axis using the [`MinY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MinY) and [`MaxY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MaxY) properties.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="ExpenditureReport"
-              TValue="ExpenditureDetails"
-              XName="Year"
-              YName="Expense"
-              Type="SparklineType.Column"
-              ValueType="SparklineValueType.Numeric"
-              Height="150px"
-              Width="130px">
+<SfSparkline DataSource="@ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Column" ValueType="SparklineValueType.Numeric" Height="150px" Width="130px">
     <SparklineAxisSettings MinY="100" MaxY="220"></SparklineAxisSettings>
 </SfSparkline>
 ```
 
-> Refer [code block](#numeric) to know the property value of `ExpenditureReport`.
+> Refer [code block](#numeric) to know the property value of **ExpenditureReport**.
 
-![Sparkline Charts with min and max value](./images/Axis/minmaxvalue.png)
+![Sparkline axis with min and max value](/images/Axis/minmaxvalue.png)
 
 ## Change value of axis
 
-You can set horizontal axis line value of the Sparkline Charts by setting [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_Value) to the [`SparklineAxisSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html) tag. The following code example demonstrates this.
+The horizontal axis line value of the Sparkline can be customized by setting [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_Value) in [`SparklineAxisSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html).
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="ExpenditureReport"
-              TValue="ExpenditureDetails"
-              XName="Year"
-              YName="Expense"
-              Type="SparklineType.Column"
-              Height="150px"
-              Width="130px">
+<SfSparkline DataSource="@ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Column" ValueType="SparklineValueType.Numeric" Height="150px" Width="130px">
     <SparklineAxisSettings Value="170"></SparklineAxisSettings>
 </SfSparkline>
 ```
 
-> Refer [code block](#numeric) to know the property value of `ExpenditureReport`.
+> Refer [code block](#numeric) to know the property value of **ExpenditureReport**.
 
-![Sparkline Charts with axis value](./images/Axis/AxisValue.png)
+![Sparkline with axis value](/images/Axis/AxisValue.png)
 
-## Axis line customization
+## Axis line Customization
 
-Axis of the Sparkline Charts can be collapsed using the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property in [`LineSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html); this is not applicable for win-loss type.
+Axis line can be enabled by specifying the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property **true** in [`SparklineAxisLineSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html).
 
-You can customize the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Width), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Opacity), [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_DashArray), and [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html) of axis line.
+> Axis line is not applicable for [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) Sparkline type.
+
+Following properties can be used to customize the axis line.
+
+* [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Color) - Specifies the color of axis line.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Opacity) - Specifies the opacity for [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Color) of axis line.
+* [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Width) - Specifies the width of axis line.
+* [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_DashArray) - Specifies the dash array of axis line.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="ExpenditureReport"
-              TValue="ExpenditureDetails"
-              XName="Year"
-              YName="Expense"
-              Type="SparklineType.Line"
-              Height="150px"
-              Width="130px">
+<SfSparkline DataSource="ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Line" Height="150px" Width="130px">
     <SparklineAxisSettings>
-        <SparklineAxisLineSettings Visible="true" Color="#ff14ae" DashArray="5"></SparklineAxisLineSettings>
+        <SparklineAxisLineSettings Visible="true" Color="#ff14ae" DashArray="5" Opacity="1"></SparklineAxisLineSettings>
     </SparklineAxisSettings>
 </SfSparkline>
 ```
 
-> Refer [code block](#numeric) to know the property value of `ExpenditureReport`.
+> Refer [code block](#numeric) to know the property value of **ExpenditureReport**.
 
-![Sparkline Charts with axis line settings](./images/Axis/LineCustomization.png)
+![Sparkline with axis line customization](/images/Axis/LineCustomization.png)

@@ -1,4 +1,12 @@
-# Target Bar
+---
+title: "Target Bar in Blazor Bullet Chart component | Syncfusion"
+
+component: "Bullet Chart"
+
+description: "Learn here all about Target Bar of Syncfusion Bullet Chart (SfBulletChart) component and more."
+---
+
+# Target Bar in Blazor Bullet Chart (SfBulletChart)
 
 The line marker that runs perpendicular to the orientation of the graph is known as the **Comparative Measure** and is used as a target marker to compare against the feature measure value. This is also called as **Target Bar** of the Bullet Chart. To display the target bar, should map the [`TargetField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) name from the data source.
 

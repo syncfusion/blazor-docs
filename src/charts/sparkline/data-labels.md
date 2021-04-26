@@ -1,109 +1,89 @@
-# Data Labels
+---
+title: "Data Labels in Blazor Sparkline component | Syncfusion"
 
-Data labels are used to display values of data points to improve the readability.
+component: "Sparkline"
+
+description: "Learn here all about Data Labels of Syncfusion Sparkline (SfSparkline) component and more."
+---
+
+# Data Labels in Blazor Sparkline (SfSparkline)
+
+Data labels are used to display the value of data points to improve the readability.
 
 ## Enable data label
 
-To enable data label for Sparkline Charts series, provide [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelSettings~Visible.html) of the [`SparklineDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html) as following possible values:
+The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Visible) property in [`SparklineDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html) can be used to enable the data label by specifying a collection of special points.
 
-* All - Enables data label of  all points.
-* Start - Enables data label of the start point.
-* End - Enables data label of the end point.
-* High - Enables data label of the high point.
-* Low - Enables data label of the low point.
-* Negative - Enables data labels of the negative points.
+The following special points are applicable for Sparkline data label.
 
-The following example shows enabling Sparkline Charts data label for all points.
+* [`All`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_All) - Data label for all points are enabled.
+* [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Start) - Data label for start points are enabled.
+* [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_End) - Data label for end points are enabled.
+* [`High`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_High) - Data label for high points are enabled.
+* [`Low`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Low) - Data label for low points are enabled.
+* [`Negative`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Negative) - Data label for negative points are enabled.
+* [`None`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_None) - Data label for all points are disabled.
+
+The following code examples shows, how to enable data label for the all points.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }"
-              Type="SparklineType.Line"
-              Height="200px"
-              Width="350px">
+<SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Line" Height="200px" Width="350px">
     <SparklineAxisSettings MinX="-1" MaxX="7" MaxY="7" MinY="-1"></SparklineAxisSettings>
-    <SparklineDataLabelSettings Visible="@dataLabelSettings"></SparklineDataLabelSettings>
+    <SparklineDataLabelSettings Visible="new List<VisibleType>() { VisibleType.All }"></SparklineDataLabelSettings>
 </SfSparkline>
-
-@code {
-    private List<VisibleType> dataLabelSettings = new List<VisibleType> { VisibleType.All };
-}
 ```
 
-![Sparkline Charts with DataLabel Sample](./images/Datalabels/Datalabel.png)
+![Sparkline with data label](/images/Datalabels/Datalabel.png)
 
-## Customize data label
+## Data label customization
 
-Following data label properties can be customized using [`SparklineDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html) tag.
+Sparkline data label can be customized using following properties:
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelSettings~Fill.html) - Specifies fill color for data label
-* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelSettings~Opacity.html) - Specifies opacity of fill color for data label.
-* [`EdgeLabelMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelSettings~EdgeLabelMode.html) - Specifies controlling option when label comes in edge. Available options are 'Shift', 'None' and 'Hide'
-* [`SparklineFont`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineFont.html) - To customize data label font family, style, weight, color, opacity and size
-* [`SparklineDataLabelBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelBorder.html) - To customize data label border width and color
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Fill) - Specifies color for data label.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Opacity) - Specifies opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Fill) color for data label.
+* [`EdgeLabelMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_EdgeLabelMode) - Specifies controlling option when label comes in edge. Available options are [`Shift`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EdgeLabelMode.html#Syncfusion_Blazor_Charts_EdgeLabelMode_Shift), [`None`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EdgeLabelMode.html#Syncfusion_Blazor_Charts_EdgeLabelMode_None) and [`Hide`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EdgeLabelMode.html#Syncfusion_Blazor_Charts_EdgeLabelMode_Hide).
+* [`SparklineFont`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineFont.html) - To customize data label font family, style, weight, color, opacity and size.
+* [`SparklineDataLabelBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelBorder.html) - Specifies color and width for data label border.
 * [`SparklineDataLabelOffset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelOffset.html) - Specifies label offset position from its default position.
-
-The following code example shows customizing data label border, text color, and fill color.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }"
-              Type="SparklineType.Line"
-              Height="200px"
-              Width="350px">
+<SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Line" Height="200px" Width="350px">
     <SparklineAxisSettings MinX="-1" MaxX="7" MaxY="7" MinY="-1"></SparklineAxisSettings>
-    <SparklineDataLabelSettings Visible="@dataLabelSettings"
-                                Fill="yellow"
-                                Opacity="0.4"
-                                EdgeLabelMode="EdgeLabelMode.Shift" >
-        <SparklineFont Color="blue"
-                       FontStyle="italic"
-                       FontWeight="bold"
-                       Size="15"
-                       Opacity="0.8">
+    <SparklineDataLabelSettings Visible="new List<VisibleType>() { VisibleType.All }" Fill="yellow" Opacity="0.4" EdgeLabelMode="EdgeLabelMode.Shift">
+        <SparklineFont Color="blue" FontStyle="italic" FontWeight="bold" Size="15" Opacity="0.8">
         </SparklineFont>
-        <SparklineDataLabelBorder Color="green"
-                                  Width="1">
+        <SparklineDataLabelBorder Color="green" Width="1">
         </SparklineDataLabelBorder>
     </SparklineDataLabelSettings>
 </SfSparkline>
-
-@code {
-    private List<VisibleType> dataLabelSettings = new List<VisibleType> { VisibleType.All };
-}
 ```
 
-![Sparkline Charts with DataLabel border  Sample](./images/Datalabels/LabelCustomization.png)
+![Sparkline with data label customization](/images/Datalabels/LabelCustomization.png)
 
-## Format data label text
+## Format
 
-The text of data labels can be formatted using the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelSettings~Format.html) API in the Sparkline Charts [`SparklineDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html). By default, data label shows the y-value of point. The following code example shows how to display x and y-values for points.
+The text of data labels can be formatted by specifying properties name from data source to the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Format) property in [`SparklineDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html). By default, data label text will be based on [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_YName) property.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="ClimateData"
-              TValue="WeatherReport"
-              XName="Month"
-              YName="Celsius"
-              ValueType="SparklineValueType.Category"
-              Height="200px"
-              Width="500px">
-    <SparklineDataLabelSettings Visible="new List<VisibleType> { VisibleType.All}"
-                                Format="${Month} - ${Celsius}"
-                                EdgeLabelMode="EdgeLabelMode.Shift">
+<SfSparkline DataSource="ClimateData" TValue="WeatherReport" XName="Month" YName="Celsius" ValueType="SparklineValueType.Category" Height="200px" Width="500px">
+    <SparklineDataLabelSettings Visible="new List<VisibleType> { VisibleType.All}" Format="${Month} - ${Celsius}" EdgeLabelMode="EdgeLabelMode.Shift">
     </SparklineDataLabelSettings>
     <SparklinePadding Top="25"></SparklinePadding>
 </SfSparkline>
+
 @code {
     public class WeatherReport
     {
-        public string Month;
-        public double Celsius;
+        public string Month { get; set; }
+        public double Celsius { get; set; }
     };
-    private List<WeatherReport> ClimateData = new List<WeatherReport> {
+    public List<WeatherReport> ClimateData = new List<WeatherReport> {
         new  WeatherReport { Month= "Jan", Celsius= 34 },
         new  WeatherReport { Month= "Feb", Celsius= 36 },
         new  WeatherReport { Month= "Mar", Celsius= 32 },
@@ -120,4 +100,4 @@ The text of data labels can be formatted using the [`Format`](https://help.syncf
 }
 ```
 
-![Sparkline Charts with custom data label](./images/Datalabels/LabelFormat.png)
+![Sparkline with custom data label](/images/Datalabels/LabelFormat.png)

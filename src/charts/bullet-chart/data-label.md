@@ -1,6 +1,14 @@
-# Data Label
+---
+title: "Data Label in Blazor Bullet Chart component | Syncfusion"
 
-Data labels are used to identify the value of measure bar in the Bullet Chart component. Data labels will be shown by specifying the [`BulletChartDataLabel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabel.html).
+component: "Bullet Chart"
+
+description: "Learn here all about Data Label of Syncfusion Bullet Chart (SfBulletChart) component and more."
+---
+
+# Data Label in Blazor Bullet Chart (SfBulletChart)
+
+Data labels are used to identify the value of actual bar in the Bullet Chart component. Data labels will be shown by specifying the [`BulletChartDataLabel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabel.html) tag.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

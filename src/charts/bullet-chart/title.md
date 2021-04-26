@@ -1,4 +1,12 @@
-# Title and SubTitle
+---
+title: "Title and SubTitle in Blazor Bullet Chart component | Syncfusion"
+
+component: "Bullet Chart"
+
+description: "Learn here all about Title and SubTitle of Syncfusion Bullet Chart (SfBulletChart) component and more."
+---
+
+# Title and SubTitle in Blazor Bullet Chart (SfBulletChart)
 
 ## Title
 

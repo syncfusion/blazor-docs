@@ -1,6 +1,14 @@
-# Tooltip
+---
+title: "Tooltip in Blazor Bullet Chart component | Syncfusion"
 
-Bullet Chart display the details of measure and target bar values through the tooltip when mouse is hovered the bar.
+component: "Bullet Chart"
+
+description: "Learn here all about Tooltip of Syncfusion Bullet Chart (SfBulletChart) component and more."
+---
+
+# Tooltip in Blazor Bullet Chart (SfBulletChart)
+
+Bullet Chart display the details of actual and target bar values through the tooltip when mouse is hovered the bar.
 
 ## Default Tooltip
 

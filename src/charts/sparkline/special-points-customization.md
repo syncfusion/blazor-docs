@@ -1,42 +1,39 @@
-# Special Points Customization
+---
+title: "Special Points Customization in Blazor Sparkline component | Syncfusion"
+
+component: "Sparkline"
+
+description: "Learn here all about Special Points Customization of Syncfusion Sparkline (SfSparkline) component and more."
+---
+
+# Special Points Customization in Blazor Sparkline (SfSparkline)
 
 ## Add custom color for special points
 
-You can customize the points by initializing the point colors. This customization is only applicable for line, column, and area type Sparkline Charts.
+The points color to be customized by specifying to corresponding property and it is applicable for [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Line), [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Column) and [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Area) type of Sparkline.
 
-The customization options allows to differentiate the following cases.
+The following properties are used to customization the special points.
 
-* [`StartPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~StartPointColor.html)
-* [`EndPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~EndPointColor.html)
-* [`NegativePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~NegativePointColor.html)
-* [`LowPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~LowPointColor.html)
-* [`HighPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~HighPointColor.html)
+* [`StartPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_StartPointColor)
+* [`EndPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_EndPointColor)
+* [`NegativePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_NegativePointColor)
+* [`LowPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_LowPointColor)
+* [`HighPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_HighPointColor)
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline XName="CarName"
-              YName="Rating"
-              Width="130px"
-              Height="150px"
-              TValue="CarRating"
-              DataSource="CarRatings"
-              Type="SparklineType.Column"
-              HighPointColor="blue"
-              LowPointColor="orange"
-              StartPointColor="green"
-              EndPointColor="green"
-              NegativePointColor="red"
-              ValueType="SparklineValueType.Category">
+<SfSparkline XName="CarName" YName="Rating" Width="130px" Height="150px" TValue="CarRating" DataSource="CarRatings" Type="SparklineType.Column" ValueType="SparklineValueType.Category"
+             HighPointColor="blue" LowPointColor="orange" StartPointColor="green" EndPointColor="green" NegativePointColor="red">
 </SfSparkline>
 
 @code {
     public class CarRating
     {
-        public string CarName;
-        public double Rating;
+        public string CarName { get; set; }
+        public double Rating { get; set; }
     };
-    private List<CarRating> CarRatings = new List<CarRating> {
+    public List<CarRating> CarRatings = new List<CarRating> {
         new CarRating { CarName= "AUDI", Rating= 1 },
         new CarRating { CarName= "BMW", Rating= 5 },
         new CarRating { CarName= "BUICK", Rating= -1 },
@@ -53,21 +50,17 @@ The customization options allows to differentiate the following cases.
 }
 ```
 
-![Sparkline Charts with point customization](./images/SpecialPoints/SpecialPointCustomization.png)
+![Sparkline with point customization](/images/SpecialPoints/SpecialPointCustomization.png)
 
 ## Tie point color
 
-Tie point color is used to configure the win-loss series type Sparkline Chart's y-value point color. The following code sample demonstrates the [`TiePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~TiePointColor.html) of Sparkline Charts series.
+To highlight the tie area of y-axis value by specifying the color in [`TiePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_TiePointColor) property and its applicable for [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) Sparkline type.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline Width="130px"
-              Height="150px"
-              DataSource="new int[]{12, 15, -10, 13, 15, 6, -12, 17, 13, 0, 8, -10}"
-              Type="SparklineType.WinLoss"
-              TiePointColor="blue">
+<SfSparkline Width="130px" Height="150px" Type="SparklineType.WinLoss" TiePointColor="blue" DataSource="new int[]{12, 15, -10, 13, 15, 6, -12, 17, 13, 0, 8, -10}">
 </SfSparkline>
 ```
 
-![Sparkline Charts with tie point color](./images/SpecialPoints/TiePoint.png)
+![Sparkline with tie point color](/images/SpecialPoints/TiePoint.png)

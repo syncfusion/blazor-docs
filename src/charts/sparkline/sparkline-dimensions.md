@@ -1,23 +1,24 @@
 # Sparkline Dimensions
 
-## Size for container
+## Size for Container
 
-The Sparkline Charts can be rendered to its container size. You can set the size through inline or CSS as demonstrated in the following code.
+The size of the Sparkline to be determined based on the container size, and the size can be changed inline or via CSS as shown below.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
 <div style="width:650px; height:350px;">
-    <SfSparkline XName="Year" YName="Population" TValue="PopulationReport" DataSource="PopulationData"></SfSparkline>
+    <SfSparkline XName="Year" YName="Population" TValue="PopulationReport" DataSource="PopulationData">
+    </SfSparkline>
 </div>
 
 @code {
     public class PopulationReport
     {
-        public int Year;
-        public int Population;
+        public int Year { get; set; }
+        public int Population { get; set; }
     };
-    private List<PopulationReport> populationData = new List<PopulationReport> {
+    public List<PopulationReport> PopulationData = new List<PopulationReport> {
         new  PopulationReport { Year= 2005, Population= 20090440 },
         new  PopulationReport { Year= 2006, Population= 20264080 },
         new  PopulationReport { Year= 2007, Population= 20434180 },
@@ -32,50 +33,42 @@ The Sparkline Charts can be rendered to its container size. You can set the size
 }
 ```
 
-![Sparkline Charts with Container Sample](./images/SparklineDimension/ContainerSize.png)
+![Sparkline with container size](/images/SparklineDimension/ContainerSize.png)
 
-## Size for sparkline
+## Size for Sparkline
 
-You can also set the size for Sparkline Charts directly using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Width.html) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Height.html) properties.
+The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Height) properties can be used to customize the size of the Sparkline. Both pixel and percentage values are accepted.
 
 ### In pixel
 
-You can set the size for Sparkline Charts in pixels as demonstrated in the following code.
-
-```csharp
-@using Syncfusion.Blazor.Charts
-
-<SfSparkline XName="Year"
-              YName="Population"
-              TValue="PopulationReport"
-              DataSource="PopulationData"
-              Width="350px"
-              Height="150px">
-</SfSparkline>
-```
-
-> Refer [code block](#size-for-container) to know the property value of `populationData`.
-
-![Sparkline Charts with size in pixel](./images/SparklineDimension/Inpixel.png)
-
-### In percentage
-
-By setting values in percentage, the Sparkline Charts get their dimension with respect to their containers. For example, when the height is set to ‘50%’, Sparkline Chart is rendered to half of its container width.
+Can specify the size of Sparkline Charts in pixels, as shown in the code below.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
 <div style="width:650px; height:350px;">
-    <SfSparkline XName="Year"
-                  YName="Population"
-                  TValue="PopulationReport"
-                  DataSource="PopulationData"
-                  Width="50%"
-                  Height="80%">
+    <SfSparkline XName="Year" YName="Population" TValue="PopulationReport" DataSource="PopulationData">
     </SfSparkline>
 </div>
 ```
 
-> Refer [code block](#size-for-container) to know the property value of `populationData`.
+> Refer [code block](#size-for-container) to know the property value of **PopulationData**.
 
-![Sparkline Charts with size in percentage](./images/SparklineDimension/Inpercentage.png)
+![Sparkline with size in pixel](/images/SparklineDimension/Inpixel.png)
+
+### In percentage
+
+If the value is expressed as a percentage, the dimension of the Sparkline is determined from its container.
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<div style="width:700px; height:300px;">
+    <SfSparkline XName="Year" YName="Population" TValue="PopulationReport" DataSource="PopulationData" Width="50%" Height="50%">
+    </SfSparkline>
+</div>
+```
+
+> Refer [code block](#size-for-container) to know the property value of **PopulationData**.
+
+![Sparkline with size in percentage](/images/SparklineDimension/Inpercentage.png)

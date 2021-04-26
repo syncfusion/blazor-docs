@@ -1,4 +1,12 @@
-# Customization
+---
+title: "Customization in Blazor Bullet Chart component | Syncfusion"
+
+component: "Bullet Chart"
+
+description: "Learn here all about Customization of Syncfusion Bullet Chart (SfBulletChart) component and more."
+---
+
+# Customization in Blazor Bullet Chart (SfBulletChart)
 
 ## Orientation
 
@@ -32,7 +40,7 @@ Bullet Chart can be rendered in different orientation such as [`Horizontal`](htt
 
 ## Flow Direction
 
-Bullet Chart support, right to left or left to right rendering direction and it can be enabled by setting the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_EnableRtl) property to **true**.
+Bullet Chart support, right to left rendering direction and it can be enabled by setting the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_EnableRtl) property to **true**.
 
 ```csharp
 <SfBulletChart DataSource="@BulletChartData" EnableRtl="true" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
@@ -50,7 +58,7 @@ Bullet Chart support, right to left or left to right rendering direction and it 
 
 ## Animation
 
-Comparative and target bar supports linear animation by specifying the [`BulletChartAnimation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html) tag and control speed and delay by using [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Duration) and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Delay) properties.
+Actual and target bar supports linear animation by specifying the [`BulletChartAnimation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html) tag and control speed and delay by using [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Duration) and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Delay) properties.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

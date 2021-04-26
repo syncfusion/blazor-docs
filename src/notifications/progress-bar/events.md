@@ -1,4 +1,12 @@
-# Events
+---
+title: "Events in Blazor Progress Bar component | Syncfusion"
+
+component: "Progress Bar"
+
+description: "Learn here all about Events of Syncfusion Progress Bar (SfProgressBar) component and more."
+---
+
+# Events in Blazor Progress Bar (SfProgressBar)
 
 In this section, will illustrate the list of events in `Progress Bar` component, which will be
 triggered for appropriate `Progress Bar` actions.
@@ -10,6 +18,8 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ValueChanged) event triggers, when the progress [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Value) is changed.
 
 ```csharp
+@using Syncfusion.Blazor.ProgressBar
+
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
     <ProgressBarEvents ValueChanged="@ValueHandler"></ProgressBarEvents>
 </SfProgressBar>
@@ -27,6 +37,8 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 [ProgressCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ProgressCompleted) event triggers, when the progress attains the [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Maximum) value property.
 
 ```csharp
+@using Syncfusion.Blazor.ProgressBar
+
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
     <ProgressBarEvents ProgressCompleted="@ProgressHandler"></ProgressBarEvents>
 </SfProgressBar>
@@ -44,6 +56,8 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 [AnimationComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnimationComplete) event triggers when animation of the progress [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Value) get completed.
 
 ```csharp
+@using Syncfusion.Blazor.ProgressBar
+
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
     <ProgressBarEvents AnimationComplete="@AnimationHandler"></ProgressBarEvents>
 </SfProgressBar>
@@ -61,6 +75,8 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 [AnnotationRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnnotationRender) event triggers, before the `Progress Bar` annotaion rendered.
 
 ```csharp
+@using Syncfusion.Blazor.ProgressBar
+
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
     <ProgressBarEvents AnnotationRender="@AnnotationHandler"></ProgressBarEvents>
 </SfProgressBar>
@@ -78,6 +94,8 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 [TextRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_TextRender) event triggers, before the `Progress Bar` text rendered.
 
 ```csharp
+@using Syncfusion.Blazor.ProgressBar
+
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
     <ProgressBarEvents TextRender="@TextRenderHandler"></ProgressBarEvents>
 </SfProgressBar>
@@ -95,6 +113,8 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 `Loaded` event triggers, after the `Progress Bar` component rendered.
 
 ```csharp
+@using Syncfusion.Blazor.ProgressBar
+
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
     <ProgressBarEvents Loaded="@LoadedHandler"></ProgressBarEvents>
 </SfProgressBar>

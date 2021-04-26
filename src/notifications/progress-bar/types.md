@@ -1,4 +1,12 @@
-# Types
+---
+title: "Types in Blazor Progress Bar component | Syncfusion"
+
+component: "Progress Bar"
+
+description: "Learn here all about Types of Syncfusion Progress Bar (SfProgressBar) component and more."
+---
+
+# Types in Blazor Progress Bar (SfProgressBar)
 
 Visualize the progress in various shapes, such as a rectangle, circle, or semi-circle, to give it a unique look.
 
@@ -7,6 +15,8 @@ Visualize the progress in various shapes, such as a rectangle, circle, or semi-c
 To get a linear Progress Bar, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property to [`Linear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear). As shown below, it also supports secondary progress, indeterminate, segments, and different modes of progress.
 
 ```csharp
+@using Syncfusion.Blazor.ProgressBar
+
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
 </SfProgressBar>
 
@@ -21,13 +31,15 @@ To get a linear Progress Bar, set the [`Type`](https://help.syncfusion.com/cr/bl
 </SfProgressBar>
 ```
 
-![progress bar](images/linearType.png)
+![Progress Bar with linear type](images/linearType.png)
 
 ## Circular
 
 To get the circular Progress Bar, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property to [`Circular`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular). As shown below, it also supports secondary progress, indeterminate, segments, pie progress, and various modes of progress.
 
 ```csharp
+@using Syncfusion.Blazor.ProgressBar
+
 <SfProgressBar Type="ProgressType.Circular" Value="100" Height="60" Minimum="0" Maximum="100">
 </SfProgressBar>
 
@@ -45,4 +57,4 @@ To get the circular Progress Bar, set the [`Type`](https://help.syncfusion.com/c
 </SfProgressBar>
 ```
 
-![progress bar](images/circularType.png)
+![Progress Bar with circular type](images/circularType.png)

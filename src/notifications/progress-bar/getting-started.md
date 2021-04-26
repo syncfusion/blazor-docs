@@ -1,4 +1,12 @@
-# Getting Started in Blazor Progress Bar
+---
+title: "Getting Started with Blazor Progress Bar component | Syncfusion"
+
+component: "Progress Bar"
+
+description: "Learn here about getting started with Syncfusion Blazor Progress Bar (SfProgressBar) component, its elements, and more."
+---
+
+# Getting Started with Blazor Progress Bar (SfProgressBar)
 
 This section briefly explains how to include a Progress Bar component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 

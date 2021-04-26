@@ -1,42 +1,47 @@
-# Color Mapping
+---
+title: "Color Mapping in Blazor TreeMap component | Syncfusion"
 
-Color mapping is used to customize the color for each group or item based on the specified types of color mappings.
+component: "TreeMap"
 
-The following options are available to customize the group and leaf items in the TreeMap component.
+description: "Learn here all about Color Mapping of Syncfusion TreeMap (SfTreeMap) component and more."
+---
+
+# Color Mapping in Blazor TreeMap (SfTreeMap)
+
+Color mapping is used to customize the color for each group or item, based on the specified types and the following options are available to customize the group and leaf items in the TreeMap component.
 
 ## Range color mapping
 
-Range color mapping is used to apply color to items by giving specific ranges in the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource). You should specify the data source field in the [`RangeColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath) property.
+Range color mapping is used to apply color to items by giving specific ranges in the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) and it should be specifying the data source properties to the [`RangeColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath). The color mapping ranges to be specified in [`StartRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_StartRange) and [`EndRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_EndRange) properties of  [`TreeMapLeafColorMappings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html).
 
-The following code example demonstrates how to apply range color mapping.
+The following code example demonstrates, how to apply range color mapping.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 
-<SfTreeMap WeightValuePath="Count" TValue="Fruits" DataSource="Fruits" RangeColorValuePath="Count">
+<SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
     <TreeMapLeafItemSettings LabelPath="FruitName">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="500" To="3000" Color="@("Orange")"></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="5000" Color="@("Green")"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="500" EndRange="3000" Color='new string[] { "Orange" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="5000" Color='new string[] { "Green" }'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 
 @code {
-    //fruits data source
-    public class Fruits
+    public class Fruit
     {
-        public string FruitName;
-        public double Count;
+        public string FruitName { get; set; }
+        public double Count { get; set; }
     };
-    private List<Fruits> Fruits = new List<Fruits> {
-        new Fruits { FruitName="Apple", Count=5000 },
-        new Fruits { FruitName="Mango", Count=3000 },
-        new Fruits { FruitName="Orange", Count=2300 },
-        new Fruits { FruitName="Banana", Count=500 },
-        new Fruits { FruitName="Grape", Count=4300 },
-        new Fruits { FruitName="Papaya", Count=1200 },
-        new Fruits { FruitName="Melon", Count=4500 }
+    public List<Fruit> Fruits = new List<Fruit> {
+        new Fruit { FruitName="Apple", Count=5000 },
+        new Fruit { FruitName="Mango", Count=3000 },
+        new Fruit { FruitName="Orange", Count=2300 },
+        new Fruit { FruitName="Banana", Count=500 },
+        new Fruit { FruitName="Grape", Count=4300 },
+        new Fruit { FruitName="Papaya", Count=1200 },
+        new Fruit { FruitName="Melon", Count=4500 }
     };
 }
 ```
@@ -45,9 +50,9 @@ The following code example demonstrates how to apply range color mapping.
 
 ## Equal color mapping
 
-Equal color mapping is used to fill colors to each item by specifying equal value present in the datasource field that can be specified in the [`EqualColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EqualColorValuePath) property.
+Equal color mapping is used to fill colors to each item by specifying equal value present in the data source, that can be specified in the [`EqualColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EqualColorValuePath) property.
 
-The following code example demonstrates how to apply equal color mapping.
+The following code example demonstrates, how to apply equal color mapping.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -55,23 +60,21 @@ The following code example demonstrates how to apply equal color mapping.
 <SfTreeMap WeightValuePath="Count" TValue="Car" DataSource="Cars" EqualColorValuePath="Brand">
     <TreeMapLeafItemSettings LabelPath="Name">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping Value="Ford" Color="@("green")"></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Value="Audi" Color="@("red")"></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Value="Maruti"  Color="@("orange")"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping Value="Ford" Color='new string[] { "green" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping Value="Audi" Color='new string[] { "red" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping Value="Maruti" Color='new string[] { "orange"}'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 
 @code {
-    // car details
     public class Car
     {
-        public string Name;
-        public int Count;
-        public string Brand;
+        public string Name { get; set; }
+        public int Count { get; set; }
+        public string Brand { get; set; }
     };
-
-    private List<Car> Cars = new List<Car> {
+    public List<Car> Cars = new List<Car> {
         new Car { Name="Mustang", Brand="Ford", Count=232 },
         new Car { Name="EcoSport", Brand="Ford", Count=121 },
         new Car { Name="Swift", Brand="Maruti", Count=143 },
@@ -87,57 +90,55 @@ The following code example demonstrates how to apply equal color mapping.
 
 ## Desaturation color mapping
 
-Desaturation color mapping is used to apply colors to items with opacity, based on the [`MinOpacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) and [`MaxOpacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) properties set to the [`ColorMappingModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) in the TreeMap component.
+Desaturation color mapping is used to apply colors to items based on [`MinOpacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_MinOpacity) and [`MaxOpacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_MaxOpacity) properties in the [`TreeMapLeafColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html).
 
-The following code example demonstrates how to apply desaturation color mapping.
+The following code example demonstrates, how to apply desaturation color mapping.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
-    <TreeMapLeafItemSettings LabelPath="Name">
-         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="500" To="3000" MinOpacity="0.2" MaxOpacity="0.5" Color="@("Orange")"></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="5000" MinOpacity="0.5" MaxOpacity="0.8" Color="@("Green")"></TreeMapLeafColorMapping>
+    <TreeMapLeafItemSettings LabelPath="FruitName">
+        <TreeMapLeafColorMappings>
+            <TreeMapLeafColorMapping StartRange="500" EndRange="3000" MinOpacity="0.2" MaxOpacity="0.5" Color='new string[] { "Orange"}'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="5000" MinOpacity="0.5" MaxOpacity="0.8" Color='new string[] { "Green"}'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 ```
 
-> Refer [code block](#range-color-mapping) to know the property value of `Fruits`.
+> Refer [code block](#range-color-mapping) to know the property value of **Fruits**.
 
 ![TreeMap with desaturation color mapping](images/Colormapping/Desaturation.png)
 
 ## Desaturation with multiple colors
 
-Multiple colors are used to provide gradient effect to specific shapes based on the [`ColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) ranges in datasource.
+Multiple colors are used to provide gradient effect to the TreeMap items based on the [`TreeMapLeafColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html) ranges and specify the **n** number of colors in [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) property.
 
-By using the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) API, you can set n number of colors.
-
-The following code example demonstrates how to use multiple colors.
+The following code example demonstrates, how to use multiple colors.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
-    <TreeMapLeafItemSettings LabelPath="Name">
+    <TreeMapLeafItemSettings LabelPath="FruitName">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="500" To="3000" Color='new string[]{ "orange", "pink" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="5000" Color='new string[]{ "green", "red", "blue" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="500" EndRange="3000" Color='new string[]{ "orange", "pink" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="5000" Color='new string[]{ "green", "red", "blue" }'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 ```
 
-> Refer [code block](#range-color-mapping) to know the property value of `Fruits`.
+> Refer [code block](#range-color-mapping) to know the property value of **Fruits**.
 
 ![Multiple color mapping in TreeMap with desaturation](images/Colormapping/DesaturationwithMultiplecolor.png)
 
 ## Palette color mapping
 
-The palette color mapping is used to fill the same color to each group or leaf node by given colors in the [`Palette`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Palette) property in the TreeMap component.
+The palette color mapping is used to fill the color to each group or leaf item by given colors in the [`Palette`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Palette) property.
 
-The following code example demonstrates how to apply  palette color mapping.
+The following code example demonstrates, how to apply palette color mapping.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -148,61 +149,56 @@ The following code example demonstrates how to apply  palette color mapping.
 </SfTreeMap>
 ```
 
-> Refer [code block](#equal-color-mapping) to know the property value of `Cars`.
+> Refer [code block](#equal-color-mapping) to know the property value of **Cars**.
 
 ![TreeMap with palette color mapping](images/Colormapping/Palette.png)
 
 ## Color for items excluded from color mapping
 
-Based on the color mapping ranges in data source, get the excluded ranges from color mapping and apply specific color to the items.
+Get the excluded ranges from data source using color mapping and apply the specific color to those items, without specifying [`StartRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_StartRange) and [`EndRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_EndRange) properties.
 
-The following code example demonstrates how to set the color for items excluded from color mapping.
+The following code example demonstrates, how to set the color for items excluded from color mapping.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
-    <TreeMapLeafItemSettings LabelPath="Name">
+    <TreeMapLeafItemSettings LabelPath="FruitName">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="500" To="3000" Color="@("Orange")"></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="5000" Color="@("Green")"></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Color="@("purple")"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="500" EndRange="3000" Color='new string[] { "Orange" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="4000" Color='new string[]{ "Green"}'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping Color='new string[]{ "purple"}'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 ```
 
-> Refer [code block](#range-color-mapping) to know the property value of `Fruits`.
+> Refer [code block](#range-color-mapping) to know the property value of **Fruits**.
 
 ![TreeMap color mapping for excluded items](images/Colormapping/ExcludeItem.png)
 
-## Bind the colors to the items from data source
+## Bind the colors to items from data source
 
-To set color for each item in TreeMap, bind the field name in the datasource to the [`RangeColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath).
+To set color for each item from data source, bind the data source property to the [`RangeColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath).
 
-The following code example demonstrates how to set the color for TreeMap items.
+The following code example demonstrates, how to set the color for TreeMap items.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 
-<SfTreeMap WeightValuePath="Count"
-            TValue="Fruit"
-            DataSource="Fruits"
-            RangeColorValuePath="Count"
-            ColorValuePath="Color">
+<SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count" ColorValuePath="Color">
     <TreeMapLeafItemSettings LabelPath="Name"></TreeMapLeafItemSettings>
-    <TreeMapLegendSettings visible=true></TreeMapLegendSettings>
+    <TreeMapLegendSettings Visible="true"></TreeMapLegendSettings>
 </SfTreeMap>
 
 @code {
     public class Fruit
     {
-        public string Name;
-        public double Count;
-        public string Color;
+        public string Name { get; set; }
+        public double Count { get; set; }
+        public string Color { get; set; }
     };
-
-    private List<Fruit> Fruits = new List<Fruit> {
+    public List<Fruit> Fruits = new List<Fruit> {
         new Fruit { Name="Apple", Count=5000, Color = "red" },
         new Fruit { Name="Mango", Count=3000, Color="blue" },
         new Fruit { Name="Orange", Count=2300, Color="green" },

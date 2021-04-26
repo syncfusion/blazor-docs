@@ -1,12 +1,20 @@
-# Labels
+---
+title: "Labels in Blazor TreeMap component | Syncfusion"
 
-Data labels are used to identify the name of items or groups in the TreeMap component. Data labels will be shown by given specified [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPath) in the data source field.
+component: "TreeMap"
+
+description: "Learn here all about Labels of Syncfusion TreeMap (SfTreeMap) component and more."
+---
+
+# Labels in Blazor TreeMap (SfTreeMap)
+
+Data labels are used to identify the name of items or groups in the TreeMap component. Data labels will be shown by specifying the data source properties in [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPath) of [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html).
 
 The following options are available to customize the labels in the TreeMap component.
 
 ## Formatting labels
 
-You can customize the labels for each item using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPath) property in [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html).
+Customize the labels for each item using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelFormat) property in [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html).
 
 The label format is shown in the following code example.
 
@@ -20,12 +28,11 @@ The label format is shown in the following code example.
 @code {
     public class Car
     {
-        public string Name;
-        public string Brand;
-        public int Count;
+        public string Name { get; set; }
+        public string Brand { get; set; }
+        public int Count { get; set; }
     };
-
-    private List<Car> Cars = new List<Car> {
+    public List<Car> Cars = new List<Car> {
         new Car { Name="Mustang", Brand="Ford", Count=232 },
         new Car { Name="EcoSport", Brand="Ford", Count=121 },
         new Car { Name="Swift", Brand="Maruti", Count=143 },
@@ -41,60 +48,50 @@ The label format is shown in the following code example.
 
 ## Label position
 
-Using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) property, you can position the labels at any of the following locations.
+Customize the labels position using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPosition) property by specifying the any of the following locations.
 
-* BottomCenter
-* BottomLeft
-* BottomRight
-* Center
-* CenterLeft
-* CenterRight
-* TopCenter
-* TopLeft
-* TopRight
+* [`BottomCenter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_BottomCenter)
+* [`BottomLeft`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_BottomLeft)
+* [`BottomRight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_BottomRight)
+* [`Center`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_Center)
+* [`CenterLeft`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_CenterLeft)
+* [`CenterRight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_CenterRight)
+* [`TopCenter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_TopCenter)
+* [`TopLeft`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_TopLeft)
+* [`TopRight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_TopRight)
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Car" DataSource="Cars" RangeColorValuePath="Count">
-    <TreeMapLeafItemSettings LabelPath="Name"
-                             LabelFormat="${Name}-${Brand}"
-                             LabelPosition="LabelPosition.Center"
-                             Gap="2"></TreeMapLeafItemSettings>
+    <TreeMapLeafItemSettings LabelPath="Name" LabelFormat="${Name}-${Brand}" LabelPosition="LabelPosition.Center" Gap="2"></TreeMapLeafItemSettings>
 </SfTreeMap>
 ```
 
-> Refer [code block](#formatting-labels) to know the property value of `Cars`.
+> Refer [code block](#formatting-labels) to know the property value of **Cars**.
 
 ![TreeMap label in custom position](images/datalabel/label-position.png)
 
 ## Intersect action
 
-You can avoid overlapping by customizing the labels in each item when they exceed their actual size using the [`InterSectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_InterSectAction) property in [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html).
-
-The intersect action concepts are illustrated in the following code example.
+When the label size in each item exceeds the actual size, use the [`InterSectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_InterSectAction) property in [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) to customise the labels.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 
-<SfTreeMap WeightValuePath="Count"
-            TValue="Car"
-            DataSource="Cars">
-    <TreeMapLeafItemSettings LabelPath="Name"
-                             LabelFormat="${Name}-${Brand}"
-                             InterSectAction="LabelAlignment.WrapByWord">
+<SfTreeMap WeightValuePath="Count" TValue="Car" DataSource="Cars">
+    <TreeMapLeafItemSettings LabelPath="Name" LabelFormat="${Name}-${Brand}" InterSectAction="LabelAlignment.WrapByWord">
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 
 @code{
     public class Car
     {
-        public string Name;
-        public string Brand;
-        public int Count;
+        public string Name { get; set; }
+        public string Brand { get;set; }
+        public int Count { get; set; }
     };
-
-    private List<Car> Cars = new List<Car> {
+    public List<Car> Cars = new List<Car> {
         new Car { Name="Mustang", Brand="Ford Motor Company", Count=232 },
         new Car { Name="Lincoln Continental Mark V", Brand="Ford Motor Company", Count=50},
         new Car { Name="EcoSport", Brand="Ford Motor Company", Count=121 },

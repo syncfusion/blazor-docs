@@ -1,23 +1,25 @@
-# Selection and Highlight
+---
+title: "Selection and Highlight in Blazor TreeMap component | Syncfusion"
+
+component: "TreeMap"
+
+description: "Learn here all about Selection and Highlight of Syncfusion TreeMap (SfTreeMap) component and more."
+---
+
+# Selection and Highlight in Blazor TreeMap (SfTreeMap)
 
 ## Selection
 
-Selection is used to select a particular group or item to differentiate from other items. Each item or each group can be selected and deselected when interacting with the items.
+Selection is used to select a particular group or item to differentiate from other items. Each item or each group can be selected and deselected when interacting with the items. The corresponding Treemap items are also selected when tap a specific legend item, and vice versa.
 
-By tapping a specific legend, the TreeMap items bound to the selected legend are also selected and vice-versa.
-
-The layer [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapSelectionSettings.html#Syncfusion_Blazor_TreeMap_TreeMapSelectionSettings_Fill) property is used to change the selected item color. The [`Color`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapSelectionBorder.html) and [`Width`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapSelectionBorder.html) properties are used to customize the selected item's border.
-
-The selection is enabled using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapSelectionSettings.html#Syncfusion_Blazor_TreeMap_TreeMapSelectionSettings_Enable) property in the [`TreeMapSelectionSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapSelectionSettings.html) tag.
-
-Tree map selection is shown in the following example.
+The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapSelectionSettings.html#Syncfusion_Blazor_TreeMap_TreeMapSelectionSettings_Fill) property is used to change the selected item color. The [`Color`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapSelectionBorder.html) and [`Width`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapSelectionBorder.html) properties are used to customize the selected item border and the selection is enabled by using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapSelectionSettings.html#Syncfusion_Blazor_TreeMap_TreeMapSelectionSettings_Enable) property  to **true** in the [`TreeMapSelectionSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapSelectionSettings.html).
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 
-<SfTreeMap WeightValuePath="EmployeeCount" TValue="Employee"
-            DataSource="Employees">
-    <TreeMapLeafItemSettings LabelPath="JobDescription" Fill="#8ebfe2"></TreeMapLeafItemSettings>
+<SfTreeMap WeightValuePath="EmployeeCount" TValue="Employee" DataSource="Employees">
+    <TreeMapLeafItemSettings LabelPath="JobDescription" Fill="#8ebfe2">
+    </TreeMapLeafItemSettings>
     <TreeMapLevels>
         <TreeMapLevel GroupPath="Country" Fill="#c5e2f7">
         </TreeMapLevel>
@@ -34,13 +36,12 @@ Tree map selection is shown in the following example.
 @code{
     public class Employee
     {
-        public string Country;
-        public string JobDescription;
-        public string JobGroup;
-        public int EmployeeCount;
+        public string Country { get; set; }
+        public string JobDescription { get; set; }
+        public string JobGroup { get; set; }
+        public int EmployeeCount { get; set; }
     };
-
-    private List<Employee> Employees = new List<Employee> {
+    public List<Employee> Employees = new List<Employee> {
         new Employee { Country= "USA", JobDescription= "Sales", JobGroup= "Executive", EmployeeCount= 20 },
         new Employee { Country= "USA", JobDescription= "Sales", JobGroup= "Analyst", EmployeeCount= 30 },
         new Employee { Country= "USA", JobDescription= "Marketing", EmployeeCount= 40 },
@@ -59,21 +60,16 @@ Tree map selection is shown in the following example.
 
 ## Highlight
 
-Highlight is used to highlight an item or group from other items or groups. Each item or each group can be highlighted when hovering the mouse over items.
+Highlight is used to highlight an item or group from other items or groups. Each item or each group can be highlighted when hovering the mouse over items. The corresponding Treemap items are also highlighted when hover a specific legend item, and vice versa.
 
-By hovering over a specific legend, the TreeMap items bound to the selected legend are also highlighted and vice-versa.
-
-The layer [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHighlightSettings.html#Syncfusion_Blazor_TreeMap_TreeMapHighlightSettings_Fill) property is used to change the highlighted item color. The [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHighlightBorder.html#Syncfusion_Blazor_TreeMap_TreeMapHighlightBorder__ctor) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHighlightBorder.html#Syncfusion_Blazor_TreeMap_TreeMapHighlightBorder__ctor) properties are used to customize the highlighted shape border. You can highlight an item by hovering the mouse over the item. The highlight is enabled using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHighlightSettings.html#Syncfusion_Blazor_TreeMap_TreeMapHighlightSettings_Enable) property in the [`TreeMapHighlightSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapHighlightSettings.html) tag.
-
-The following code example demonstrates how to highlight an item.
+The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHighlightSettings.html#Syncfusion_Blazor_TreeMap_TreeMapHighlightSettings_Fill) property is used to change the highlighted item color. The [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHighlightBorder.html#Syncfusion_Blazor_TreeMap_TreeMapHighlightBorder__ctor) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHighlightBorder.html#Syncfusion_Blazor_TreeMap_TreeMapHighlightBorder__ctor) properties are used to customize the highlighted item border and the highlight is enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHighlightSettings.html#Syncfusion_Blazor_TreeMap_TreeMapHighlightSettings_Enable) property to **true** in the [`TreeMapHighlightSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapHighlightSettings.html).
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 
-<SfTreeMap WeightValuePath="EmployeeCount"
-            TValue="Employee"
-            DataSource="Employees">
-    <TreeMapLeafItemSettings LabelPath="JobDescription" Fill="#8ebfe2"></TreeMapLeafItemSettings>
+<SfTreeMap WeightValuePath="EmployeeCount" TValue="Employee" DataSource="Employees">
+    <TreeMapLeafItemSettings LabelPath="JobDescription" Fill="#8ebfe2">
+    </TreeMapLeafItemSettings>
     <TreeMapLevels>
         <TreeMapLevel GroupPath="Country" Fill="#c5e2f7">
         </TreeMapLevel>
@@ -89,6 +85,6 @@ The following code example demonstrates how to highlight an item.
 </SfTreeMap>
 ```
 
-> Refer [code block](#selection) to know the property value of `Employees`.
+> Refer [code block](#selection) to know the property value of **Employees**.
 
 ![TreeMap item with highlight option](images/HighlightandSelection/Highlight.png)

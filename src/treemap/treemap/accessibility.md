@@ -1,5 +1,12 @@
+---
+title: "Accessibility in Blazor TreeMap component | Syncfusion"
 
-# Accessibility
+component: "TreeMap"
+
+description: "Learn here all about Accessibility of Syncfusion TreeMap (SfTreeMap) component and more."
+---
+
+# Accessibility in Blazor TreeMap (SfTreeMap)
 
 The TreeMap component provides built-in compliance with [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. The WAI-ARIA accessibility supports are achieved using attributes such as `aria-label`. It helps to provide information about elements in a document for assistive technology.
 
@@ -15,7 +22,7 @@ This attribute provides text label with some default description for the followi
 </tr>
 <tr>
 <td>TreeMap container</td>
-<td>-</td>
+<td>Reads the TreeMap description</td>
 </tr>
 <tr>
 <td>TreeMap Title</td>
@@ -31,4 +38,4 @@ This attribute provides text label with some default description for the followi
 </tr>
 </table>
 
-You can change this default description using the description property available in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html), [`TreeMapTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTitleSettings.html), [`TreeMapSubTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapSubtitleSettings.html), and [`SfTreeMap`](https://help.syncfusion.com/cr/blazor) tags. It helps screen readers to read for assistive purpose.
+Change this default description using the `Description` property available in [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html), [`TreeMapTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTitleSettings.html), [`TreeMapSubTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapSubtitleSettings.html), and [`SfTreeMap`](https://help.syncfusion.com/cr/blazor). It helps, screen readers to read for assistive purpose.

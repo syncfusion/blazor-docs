@@ -1,4 +1,12 @@
-# Data Binding
+---
+title: "Data Binding in Blazor TreeMap component | Syncfusion"
+
+component: "TreeMap"
+
+description: "Learn here all about Data Binding of Syncfusion TreeMap (SfTreeMap) component and more."
+---
+
+# Data Binding in Blazor TreeMap (SfTreeMap)
 
 ## Populate data
 
@@ -6,7 +14,7 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeM
 
 ### Flat data
 
-The following code example demonstrates how to bind a flat collection as data source to the TreeMap component.
+The following code example demonstrates, how to bind a flat collection as data source to the TreeMap component.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -19,13 +27,12 @@ The following code example demonstrates how to bind a flat collection as data so
 @code {
     public class GDPReport
     {
-        public string Country;
-        public double GDP;
-        public double Percentage;
-        public double Rank;
+        public string Country { get; set; }
+        public double GDP { get; set; }
+        public double Percentage { get; set; }
+        public double Rank { get; set; }
     };
-
-    private List<GDPReport> GrowthReports = new List<GDPReport> {
+    public List<GDPReport> GrowthReports = new List<GDPReport> {
         new GDPReport {Country = "United States", GDP=17946, Percentage=11.08, Rank=1},
         new GDPReport {Country="China", GDP=10866, Percentage= 28.42, Rank=2},
         new GDPReport {Country="Japan", GDP=4123, Percentage=-30.78, Rank=3},
@@ -44,7 +51,7 @@ The following code example demonstrates how to bind a flat collection as data so
 
 ### Hierarchical data
 
-The following code example demonstrates how to bind a hierarchical collection as data source to the TreeMap component.
+The following code example demonstrates, how to bind a hierarchical collection as data source to the TreeMap component.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -63,8 +70,9 @@ The following code example demonstrates how to bind a hierarchical collection as
     </TreeMapLevels>
 </SfTreeMap>
 
-@code  {
-    private List<object> PopulationReport { get; set; } = new List<object> {
+@code{
+    public List<object> PopulationReport { get; set; } = new List<object>
+    {
         new {
             Continent =  new List<object> { new {
             Name= "Africa",
@@ -75,98 +83,98 @@ The following code example demonstrates how to bind a hierarchical collection as
                 Region= new List<object> { new {
                     Name= "Ethiopia",
                     Population= 107534882
-                 }}
-             },
+                    }}
+                },
             new {
                 Name= "Middle Africa",
                 Population= 158562976,
                 Region= new List<object>{ new {
-                     Name= "Democratic, Republic of the Congo",
-                     Population= 84004989
-                 }}
-                 }
-             }
-         }}
-     },
-    new {
-         Continent= new List<object> { new {
-             Name= "Asia",
-             Population= 4436224000,
-             States= new List<object> { new {
-                     Name= "Central Asia",
-                     Population= 69787760,
-                     Region= new List<object> { new {
-                         Name= "Uzbekistan",
-                         Population= 32364996
-                     }}
-                 },
-                 new {
-                     Name= "Eastern Asia",
-                     Population= 1641908531,
-                     Region= new List<object> { new {
-                         Name= "China",
-                         Population= 1415045928
-                     }}
-                 }
-             }
-         }}
-     },
-     new {
-         Continent= new List<object> { new {
-             Name= "North America",
-             Population= 579024000,
-             States= new List<object> { new {
-                     Name= "Central America",
-                     Population= 174988756,
-                     Region= new List<object> { new {
-                         Name= "Mexico",
-                         Population= 130759074
-                     }}
-                 },
-                 new {
-                     Name= "Northern America",
-                     Population= 358593810,
-                     Region= new List<object> { new {
-                         Name= "U.S.",
-                         Population= 3267667480
-                     }}
-                 }
-             }
-         }}
-     },
-     new {
-         Continent= new List<object> { new {
-             Name= "South America",
-             Population= 422535000,
-             States= new List<object> { new {
-                 Name= "Brazil",
-                 Population= 204519000
-             }}
-         }}
-     },
-     new {
-         Continent= new List<object> { new {
-             Name= "Europe",
-             Population= 738849000,
-             States= new List<object> { new {
-                     Name= "Eastern Europe",
-                     Population= 291953328,
-                     Region= new List<object> { new {
-                         Name= "Russia",
-                         Population= 143964709
-                     }}
-                 },
-                 new {
-                     Name= "Northern Europe",
-                     Population= 103642971,
-                     Region= new List<object> { new {
-                         Name= "United Kingdom",
-                         Population= 66573504
-                     }}
-                 }
-             }
-         }}
-     }
+                        Name= "Democratic, Republic of the Congo",
+                        Population= 84004989
+                    }}
+                    }
+                }
+            }}
+        },
+        new {
+            Continent= new List<object> { new {
+                Name= "Asia",
+                Population= 4436224000,
+                States= new List<object> { new {
+                        Name= "Central Asia",
+                        Population= 69787760,
+                        Region= new List<object> { new {
+                            Name= "Uzbekistan",
+                            Population= 32364996
+                        }}
+                    },
+                    new {
+                        Name= "Eastern Asia",
+                        Population= 1641908531,
+                        Region= new List<object> { new {
+                            Name= "China",
+                            Population= 1415045928
+                        }}
+                    }
+                }
+            }}
+        },
+        new {
+            Continent= new List<object> { new {
+                Name= "North America",
+                Population= 579024000,
+                States= new List<object> { new {
+                        Name= "Central America",
+                        Population= 174988756,
+                        Region= new List<object> { new {
+                            Name= "Mexico",
+                            Population= 130759074
+                        }}
+                    },
+                    new {
+                        Name= "Northern America",
+                        Population= 358593810,
+                        Region= new List<object> { new {
+                            Name= "U.S.",
+                            Population= 3267667480
+                        }}
+                    }
+                }
+            }}
+        },
+        new {
+            Continent= new List<object> { new {
+                Name= "South America",
+                Population= 422535000,
+                States= new List<object> { new {
+                    Name= "Brazil",
+                    Population= 204519000
+                }}
+            }}
+        },
+        new {
+            Continent= new List<object> { new {
+                Name= "Europe",
+                Population= 738849000,
+                States= new List<object> { new {
+                        Name= "Eastern Europe",
+                        Population= 291953328,
+                        Region= new List<object> { new {
+                            Name= "Russia",
+                            Population= 143964709
+                        }}
+                    },
+                    new {
+                        Name= "Northern Europe",
+                        Population= 103642971,
+                        Region= new List<object> { new {
+                            Name= "United Kingdom",
+                            Population= 66573504
+                        }}
+                    }
+                }
+            }}
+        }
     };
 }
 ```
@@ -177,14 +185,12 @@ The following code example demonstrates how to bind a hierarchical collection as
 
 ### Fetching data from collection
 
-The following code example demonstrates how to bind a list of objects, that is, a collection, to the TreeMap component as a data source.
+The following code example demonstrates, how to bind a `IEnumerable` object to the TreeMap component as a data source.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 
-<SfTreeMap DataSource="GrowthReports"
-           TValue="GDPReport" Palette="@Palette"
-           WeightValuePath="GDP">
+<SfTreeMap DataSource="GrowthReports" TValue="GDPReport" Palette="@Palette" WeightValuePath="GDP">
     <TreeMapLeafItemSettings LabelPath="CountryName">
         <TreeMapLeafLabelStyle Color="White"></TreeMapLeafLabelStyle>
     </TreeMapLeafItemSettings>
@@ -193,13 +199,13 @@ The following code example demonstrates how to bind a list of objects, that is, 
 @code{
     public class GDPReport
     {
-        public string CountryName;
-        public double GDP;
-        public double Percentage;
-        public int Rank;
+        public string CountryName { get; set; }
+        public double GDP { get; set; }
+        public double Percentage { get; set; }
+        public int Rank { get; set; }
     };
-    public string[] Palette = new string[] { "#87CEFA", "#87CEEB"  };
-    private List<GDPReport> GrowthReports = new List<GDPReport> {
+    public string[] Palette = new string[] { "#87CEFA", "#87CEEB" };
+    public List<GDPReport> GrowthReports = new List<GDPReport> {
             new GDPReport {CountryName="United States", GDP=17946, Percentage=11.08, Rank=1},
             new GDPReport {CountryName="China", GDP=10866, Percentage= 28.42, Rank=2},
             new GDPReport {CountryName="Japan", GDP=4123, Percentage=-30.78, Rank=3},
@@ -214,19 +220,19 @@ The following code example demonstrates how to bind a list of objects, that is, 
 }
 ```
 
-![Local data](images/Databinding/ListCollection.png)
+![TreeMap with local data](images/Databinding/ListCollection.png)
 
 ### Fetching data from JSON file
 
-User can read the JSON file data, convert it to the C# object, and assign it to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property of TreeMap component.
+Read the JSON file data and it can be convert to the C# object, and assign it to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property of TreeMap component.
 
-The `Http.GetJsonAsync` method is used in the  `OnInitAsync` lifecycle method to load JSON file data. As this is done asynchronously, check whether the corresponding data is available and render the TreeMap component or display the loading statement.
+The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` lifecycle method to load JSON file data.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
 @inject HttpClient Http;
 
-@if (growthReports == null)
+@if (GrowthReports == null)
 {
     <p><em>Loading TreeMap component...</em></p>
 }
@@ -238,12 +244,13 @@ else
     </SfTreeMap>
 }
 @code{
-    GDPReport[] growthReports;
-    protected override async Task OnInitAsync()
+    public List<GDPReport> GrowthReports { get; set; }
+    protected override Task OnInitializedAsync()
     {
-        GrowthReports = await Http.GetJsonAsync<GDPReport[]>("sample-data/product-growth.json");
+        GrowthReports = await Http.GetJsonAsync<List<GDPReport>>("sample-data/product-growth.json");
+        return base.OnInitializedAsync();
     }
-    class GDPReport
+    public class GDPReport
     {
         public string State { get; set; }
         public int GDP { get; set; }
@@ -259,34 +266,31 @@ else
 
 To interact with remote data source, provide the endpoint [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class along with appropriate [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). By default, [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [`ODataAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
 
-> When using [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for data binding then the **TValue** must be provided explicitly to the treemap component.
+> When using [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for data binding then the **TValue** must be provided explicitly to the TreeMap component.
 
 ### Binding with OData services
 
-[`OData`](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) is a standardized protocol for creating and consuming data. User can retrieve data from OData service using the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class. Refer to the following code example for remote data binding using OData service.
+[`OData`](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) is a standardized protocol for creating and consuming data. User can retrieve data from [`OData`](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) service using the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+
+Refer to the following code example for remote data binding using OData service.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
-@using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<div class="control-section">
-    <div>
-        <SfTreeMap TValue="OrderDetails" WeightValuePath="Freight"
-                   Palette="@Palette">
-            <SfDataManager Url="https://js.syncfusion.com/demos/ejservices/Wcf/Northwind.svc/Orders"
-                           Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor">
-            </SfDataManager>
-            <TreeMapTitleSettings Text="Order Details">
-            </TreeMapTitleSettings>
-            <TreeMapLeafItemSettings LabelPath="ShipCity">
-                <TreeMapLeafBorder Color="white" Width="0.5">
-                </TreeMapLeafBorder>
-            </TreeMapLeafItemSettings>
-            <TreeMapTooltipSettings Visible="true"></TreeMapTooltipSettings>
-        </SfTreeMap>
-    </div>
-</div>
+<SfTreeMap TValue="OrderDetails" WeightValuePath="Freight" Palette="@Palette">
+    <SfDataManager Url="https://js.syncfusion.com/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor">
+    </SfDataManager>
+    <TreeMapTitleSettings Text="Order Details">
+    </TreeMapTitleSettings>
+    <TreeMapLeafItemSettings LabelPath="ShipCountry">
+        <TreeMapLeafBorder Color="white" Width="0.5">
+        </TreeMapLeafBorder>
+    </TreeMapLeafItemSettings>
+    <TreeMapTooltipSettings Visible="true">
+    </TreeMapTooltipSettings>
+</SfTreeMap>
+
 @code{
     public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
     public class OrderDetails
@@ -294,38 +298,35 @@ To interact with remote data source, provide the endpoint [`Url`](https://help.s
         public int OrderID { get; set; }
         public string OrderDate { get; set; }
         public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
+        public string ShipCountry { get; set; }
         public double Freight { get; set; }
     }
 }
 ```
+
+![Data binding with OData service](images/Databinding/OData.png)
 
 ### Binding with OData V4 services
 
-The OData V4 is an improved version of OData protocols, and the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class can be used to retrieve and consume OData V4 services. For more details on OData V4 services, refer to the [`OData documentation`](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor). To bind OData V4 service, use the [`ODataV4Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor).
+The [`OData V4`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) is an improved version of [`OData`](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) protocols, and the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can be used to retrieve and consume [`OData V4`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) services.
+
+> For more details on OData V4 services, refer to the [`OData documentation`](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) to bind [`OData V4`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) service using the [`OData V4 Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor).
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
-@using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<div class="control-section">
-    <div>
-        <SfTreeMap TValue="OrderDetails" WeightValuePath="Freight"
-                   Palette="@Palette">
-            <SfDataManager Url="https://js.syncfusion.com/demos/ejservices/Wcf/Northwind.svc/Orders"
-                           Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor">
-            </SfDataManager>
-            <TreeMapTitleSettings Text="Order Details">
-            </TreeMapTitleSettings>
-            <TreeMapLeafItemSettings LabelPath="ShipCity">
-                <TreeMapLeafBorder Color="white" Width="0.5">
-                </TreeMapLeafBorder>
-            </TreeMapLeafItemSettings>
-            <TreeMapTooltipSettings Visible="true"></TreeMapTooltipSettings>
-        </SfTreeMap>
-    </div>
-</div>
+<SfTreeMap TValue="OrderDetails" WeightValuePath="Freight" Palette="@Palette">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
+    <TreeMapTitleSettings Text="Order Details">
+    </TreeMapTitleSettings>
+    <TreeMapLeafItemSettings LabelPath="ShipCountry">
+        <TreeMapLeafBorder Color="white" Width="0.5">
+        </TreeMapLeafBorder>
+    </TreeMapLeafItemSettings>
+    <TreeMapTooltipSettings Visible="true"></TreeMapTooltipSettings>
+</SfTreeMap>
+
 @code{
     public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
     public class OrderDetails
@@ -333,38 +334,35 @@ The OData V4 is an improved version of OData protocols, and the [`SfDataManager`
         public int OrderID { get; set; }
         public string OrderDate { get; set; }
         public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
+        public string ShipCountry { get; set; }
         public double Freight { get; set; }
     }
 }
 ```
+
+![Data binding with OData V4 service](images/Databinding/ODatav4.png)
 
 ### Web API
 
-One can use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) to bind treemap with Web API created using OData endpoint.
+Using [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) to bind TreeMap with Web API, created using OData endpoint.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
-@using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<div class="control-section">
-    <div>
-        <SfTreeMap TValue="OrderDetails" WeightValuePath="Freight"
-                   Palette="@Palette">
-            <SfDataManager Url="https://js.syncfusion.com/demos/ejservices/Wcf/Northwind.svc/Orders"
-                           Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor">
-            </SfDataManager>
-            <TreeMapTitleSettings Text="Order Details">
-            </TreeMapTitleSettings>
-            <TreeMapLeafItemSettings LabelPath="ShipCity">
-                <TreeMapLeafBorder Color="white" Width="0.5">
-                </TreeMapLeafBorder>
-            </TreeMapLeafItemSettings>
-            <TreeMapTooltipSettings Visible="true"></TreeMapTooltipSettings>
-        </SfTreeMap>
-    </div>
-</div>
+<SfTreeMap TValue="OrderDetails" WeightValuePath="Freight" Palette="@Palette">
+    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Orders" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor">
+    </SfDataManager>
+    <TreeMapTitleSettings Text="Order Details">
+    </TreeMapTitleSettings>
+    <TreeMapLeafItemSettings LabelPath="ShipCity">
+        <TreeMapLeafBorder Color="white" Width="0.5">
+        </TreeMapLeafBorder>
+    </TreeMapLeafItemSettings>
+    <TreeMapTooltipSettings Visible="true">
+    </TreeMapTooltipSettings>
+</SfTreeMap>
+
 @code{
     public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
     public class OrderDetails
@@ -378,11 +376,11 @@ One can use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/a
 }
 ```
 
-![Remote Data](images/Databinding/RemoteData.png)
+![Data binding with web API data](images/Databinding/RemoteData.png)
 
 ## Entity Framework
 
-Entity Framework acts as a modern object-database mapper for .NET. This section explains how to consume data from the **Microsoft SQL Server** database and bind it to the treemap component.
+Entity Framework acts as a modern object-database mapped for .NET. This section explains, how to consume data from the **Microsoft SQL Server** database and bind it to the TreeMap component.
 
 ### Create DBContext class
 
@@ -411,7 +409,6 @@ The first step is to create a DBContext class called **OrderContext** for establ
                 }
             }
         }
-
         public class Order
         {
             [Key]
@@ -442,7 +439,6 @@ Now need to create a class called **OrderDataAccessLayer**, which acts as a data
         public class OrderDataAccessLayer
         {
             OrderContext db = new OrderContext();
-
             //To Get all Orders details
             public DbSet<Order> GetAllOrders()
             {
@@ -457,12 +453,11 @@ Now need to create a class called **OrderDataAccessLayer**, which acts as a data
             }
         }
     }
-
 ```
 
 ### Creating Web API Controller
 
-A Web API Controller must be created which allows the treemap to directly consume data from the Entity framework.
+A Web API Controller must be created, which allows the TreeMap to directly consume data from the Entity framework.
 
 ```csharp
     using System;
@@ -503,12 +498,11 @@ A Web API Controller must be created which allows the treemap to directly consum
             }
         }
     }
-
 ```
 
 ### Add Web API Controller services in Startup.cs
 
-Open the **Startup.cs** file and add services and endpoints required for Web API Controller as follows.
+Open the **Startup.cs** file, add services and endpoints required for Web API Controller as follows.
 
 ```csharp
 using Newtonsoft.Json.Serialization;
@@ -524,7 +518,6 @@ namespace BlazorApplication
             ....
             ....
             services.AddSingleton<OrderDataAccessLayer>();
-
             // Adds services for controllers to the specified Microsoft.Extensions.DependencyInjection.IServiceCollection.
             services.AddControllers().AddNewtonsoftJson(options =>
             {
@@ -550,9 +543,9 @@ namespace BlazorApplication
 
 ### Configure treemap component
 
-Configure the treemap to bind data using either [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property or [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+Configure the TreeMap to bind data using either [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property or [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-For instance, to bind data directly from the data access layer class **OrderDataAccessLayer**, assign the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property to be **OrderData.GetAllOrders()**.
+For instance, to bind data directly from the **OrderDataAccessLayer** class and  assign to [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property.
 
 ```csharp
 
@@ -561,8 +554,7 @@ For instance, to bind data directly from the data access layer class **OrderData
     @using EFTreeMap.Data
     @using Syncfusion.Blazor.TreeMap
 
-    <SfTreeMap TValue="Order" WeightValuePath="OrderID"
-                   Palette="@Palette" DataSource="@OrderData.GetAllOrders()">
+    <SfTreeMap TValue="Order" WeightValuePath="OrderID" Palette="@Palette" DataSource="@OrderData.GetAllOrders()">
             <TreeMapTitleSettings Text="Order Details">
             </TreeMapTitleSettings>
             <TreeMapLeafItemSettings LabelPath="CustomerID">
@@ -571,34 +563,30 @@ For instance, to bind data directly from the data access layer class **OrderData
             </TreeMapLeafItemSettings>
             <TreeMapTooltipSettings Visible="true"></TreeMapTooltipSettings>
     </SfTreeMap>
+
     @code{
         public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
     }
 ```
 
-On the other hand, to configure the treemap using Web API, provide the appropriate endpoint Url within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
+On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint Url in [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
-@using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<div class="control-section">
-    <div>
-        <SfTreeMap TValue="Order" WeightValuePath="OrderID"
-                   Palette="@Palette">
-            <SfDataManager Url="api/Default" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor">
-            </SfDataManager>
-            <TreeMapTitleSettings Text="Order Details">
-            </TreeMapTitleSettings>
-            <TreeMapLeafItemSettings LabelPath="CustomerID">
-                <TreeMapLeafBorder Color="white" Width="0.5">
-                </TreeMapLeafBorder>
-            </TreeMapLeafItemSettings>
-            <TreeMapTooltipSettings Visible="true"></TreeMapTooltipSettings>
-        </SfTreeMap>
-    </div>
-</div>
+<SfTreeMap TValue="Order" WeightValuePath="OrderID" Palette="@Palette">
+    <SfDataManager Url="api/Default" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor">
+    </SfDataManager>
+    <TreeMapTitleSettings Text="Order Details">
+    </TreeMapTitleSettings>
+    <TreeMapLeafItemSettings LabelPath="CustomerID">
+        <TreeMapLeafBorder Color="white" Width="0.5">
+        </TreeMapLeafBorder>
+    </TreeMapLeafItemSettings>
+    <TreeMapTooltipSettings Visible="true"></TreeMapTooltipSettings>
+</SfTreeMap>
+
 @code{
     public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
 }

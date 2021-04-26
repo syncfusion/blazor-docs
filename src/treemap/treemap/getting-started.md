@@ -1,4 +1,12 @@
-# Getting Started in Blazor TreeMap
+---
+title: "Getting Started with Blazor TreeMap component | Syncfusion"
+
+component: "TreeMap"
+
+description: "Learn here about getting started with Syncfusion Blazor TreeMap (SfTreeMap) component, its elements, and more."
+---
+
+# Getting Started with Blazor TreeMap (SfTreeMap)
 
 This section briefly explains how to include a TreeMap component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 

@@ -1,39 +1,44 @@
-# Print and Export
+---
+title: "Print and Export in Blazor TreeMap component | Syncfusion"
+
+component: "TreeMap"
+
+description: "Learn here all about Print and Export of Syncfusion TreeMap (SfTreeMap) component and more."
+---
+
+# Print and Export in Blazor TreeMap (SfTreeMap)
 
 ## Print
 
-To use the print functionality, we should set the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true**. The rendered treemap can be printed directly from the browser by calling the method [`print`]. You can get the TreeMap component object using `@ref="treemap"`.
+Print functionality can be enabled by setting the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true**. The rendered TreeMap can be printed directly from the browser.
+
+The following code example demonstrates the print method.
 
 ```csharp
-@using Syncfusion.Blazor.TreeMap
+@using Syncfusion.Blazor.TreeMap;
 
-<button @onclick="PrintTreeMap">Print</button>
-<SfTreeMap @ref="treemap" AllowPrint="true" WeightValuePath="Count" TValue="Fruit" DataSource="Fruits">
-    <TreeMapLeafItemSettings LabelPath="Name" Gap="2"></TreeMapLeafItemSettings>
+<button @onclick="PrintMap">Print Treemap</button>
+<SfTreeMap @ref="Treemap" DataSource="@GrowthReport" WeightValuePath="GDP" TValue="Country" AllowPrint="true">
+    <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray">
+    </TreeMapLeafItemSettings>
 </SfTreeMap>
 
 @code {
-    SfTreeMap<Fruit> treemap;
-    void PrintTreeMap()
+    public SfTreeMap<Country> Treemap { get; set; }
+    public async Task PrintMap()
     {
-        this.treemap.Print();
+        await Treemap.Print();
     }
-    public class Fruit
+    public class Country
     {
-        public string Name;
-        public int Count;
+        public string Name { get; set; }
+        public double GDP { get; set; }
+    }
+    public List<Country> GrowthReport = new List<Country> {
+        new Country  {Name="United States", GDP=17946 },
+        new Country  {Name="China", GDP=10866 },
+        new Country  {Name="Japan", GDP=4123 },
     };
-
-    private List<Fruit> Fruits = new List<Fruit> {
-        new Fruit { Name="Apple", Count=5000 },
-        new Fruit { Name="Mango", Count=3000 },
-        new Fruit { Name="Orange", Count=2300 },
-        new Fruit { Name="Banana", Count=500 },
-        new Fruit { Name="Grape", Count=4300 },
-        new Fruit { Name="Papaya", Count=1200 },
-        new Fruit { Name="Melon", Count=4500 }
-    };
-
 }
 ```
 
@@ -43,54 +48,56 @@ To use the print functionality, we should set the [`AllowPrint`](https://help.sy
 
 ### Image Export
 
-To use the image export functionality, we should set the [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowImageExport) property to **true**. The rendered treemap can be exported as an image using the [`export`] method. The method requires two parameters: image type and file name. The treemap can be exported as an image in the following formats.
+Export functionality can be enabled by setting the [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowImageExport) property to **true**. The rendered TreeMap can be exported as an image and the method requires two parameters: image type and file name. The orientation setting is optional.
 
-* JPEG
-* PNG
-* SVG
+The TreeMap can be exported as an image in the following formats.
+
+* [`JPEG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_JPEG)
+* [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PNG)
+* [`SVG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_SVG)
+
+The following code example demonstrates to export the TreeMap in [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PNG) format.
 
 ```csharp
-@using Syncfusion.Blazor.TreeMap
+@using Syncfusion.Blazor.TreeMap;
 
-<button @onclick="ExportTreeMap">Export</button>
-<SfTreeMap @ref="treemap" AllowImageExport="true" WeightValuePath="Count" TValue="Fruit" DataSource="Fruits">
-    <TreeMapLeafItemSettings LabelPath="Name" Gap="2"></TreeMapLeafItemSettings>
+<button @onclick="ExportMap">Export Treemap</button>
+<SfTreeMap @ref="Treemap" DataSource="@GrowthReport" WeightValuePath="GDP" TValue="Country" AllowImageExport="true" AllowPdfExport="true">
+    <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray">
+    </TreeMapLeafItemSettings>
 </SfTreeMap>
 
 @code {
-    SfTreeMap<Fruit> treemap;
-    void ExportTreeMap()
+    public SfTreeMap<Country> Treemap { get; set; }
+    public async Task ExportMap()
     {
-        this.treemap.Export(ExportType.PNG, "Treemap");
+        await Treemap.Export(ExportType.PNG, "Export", Syncfusion.PdfExport.PdfPageOrientation.Portrait, true);
     }
 }
 ```
 
-> Refer [code block](#print) to know the property value of `Fruits`.
-
-![TreeMap with export option](./images/Print/export.png)
+> Refer [code block](#print) to know the property value of **GrowthReport**.
 
 ### PDF Export
 
-To use the PDF export functionality, we should set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property to **true**. The rendered treemap can be exported as PDF using the [`export`] method. The [`export`] method requires three parameters: file type, file name and orientation of the PDF document. The orientation setting is optional and "0" indicates portrait and "1" indicates landscape.
+[`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF) export functionality can be enabled by setting the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property to **true**. The rendered TreeMap can be exported as [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF) and the export method requires two parameters: file type, file name. The orientation setting is optional.
 
 ```csharp
-@using Syncfusion.Blazor.TreeMap
+@using Syncfusion.Blazor.TreeMap;
 
-<button @onclick="ExportTreeMap">Export</button>
-<SfTreeMap @ref="treemap" AllowPdfExport="true" WeightValuePath="Count" TValue="Fruit" DataSource="Fruits">
-    <TreeMapLeafItemSettings LabelPath="Name" Gap="2"></TreeMapLeafItemSettings>
+<button @onclick="ExportMap">Export Treemap</button>
+<SfTreeMap @ref="Treemap" DataSource="@GrowthReport" WeightValuePath="GDP" TValue="Country" AllowImageExport="true" AllowPdfExport="true">
+    <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray">
+    </TreeMapLeafItemSettings>
 </SfTreeMap>
 
 @code {
-    SfTreeMap<Fruit> treemap;
-    void ExportTreeMap()
+    public SfTreeMap<Country> Treemap { get; set; }
+    public async Task ExportMap()
     {
-        this.treemap.Export(ExportType.PDF, "Treemap", 0);
+        await Treemap.Export(ExportType.PDF, "Export", Syncfusion.PdfExport.PdfPageOrientation.Portrait);
     }
 }
 ```
 
-> Refer [code block](#print) to know the property value of `Fruits`.
-
-![TreeMap with export option](./images/Print/export.png)
+> Refer [code block](#print) to know the property value of **GrowthReport**.

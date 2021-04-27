@@ -1,32 +1,125 @@
-# Tooltip
+---
+title: " Tooltip in Blazor Smith Chart component | Syncfusion "
 
-Smith Chart will display details about the points through tooltip, when the mouse is moved over the point. By default, tooltip is disabled. To enable the tooltip, set the property `Visible` as true, in `SmithchartSeriesTooltip`. You can customize the tooltip's visibility and appearance differently each series in the Smith Chart.
+component: "Smith Chart"
+
+description: "Learn here about tooltip feature of Syncfusion Blazor Smith Chart (SfSmithChart) component and more."
+---
+
+# Tooltip in Blazor Smith Chart
+
+When the mouse is moved over a point in the smith chart, a tooltip will appear displaying information about the point. By default, the tooltip is disabled. To enable the tooltip, set the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Visible) property to **true** in [`SmithChartSeriesTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#properties).
 
 ```csharp
-<SfSmithchart>
-    <SmithchartSeriesCollection>
-        <SmithchartSeries Name="First transmission" Points='FirstTransmissionData'>
-            <SmithchartSeriesMarker Visible='true'></SmithchartSeriesMarker>
-            <SmithchartSeriesTooltip Visible='true'></SmithchartSeriesTooltip>
-        </SmithchartSeries>
-    </SmithchartSeriesCollection>
-</SfSmithchart>
+@using Syncfusion.Blazor.Charts
+
+<SfSmithChart>
+    <SmithChartSeriesCollection>
+        <SmithChartSeries Name="First transmission" DataSource='TransmissionData' Reactance="Reactance" Resistance="Resistance">
+            <SmithChartSeriesMarker Visible='true'></SmithChartSeriesMarker>
+            <SmithChartSeriesTooltip Visible='true'></SmithChartSeriesTooltip>
+        </SmithChartSeries>
+    </SmithChartSeriesCollection>
+</SfSmithChart>
 
 @code {
-    public class SmithDataSource
+    public class SmithChartData
     {
-        public double? resistance;
-        public double? reactance;
+        public double? Resistance { get; set; }
+        public double? Reactance { get; set; }
     };
-    private List<SmithDataSource> FirstTransmissionData = new List<SmithDataSource> {
-        new SmithDataSource { resistance= 10, reactance= 25 },
-        new SmithDataSource { resistance= 6, reactance= 4.5 },
-        new SmithDataSource { resistance= 3.5, reactance= 1.6 },
-        new SmithDataSource { resistance= 2, reactance= 1.2 },
-        new SmithDataSource { resistance= 1, reactance= 0.8 },
-        new SmithDataSource { resistance= 0, reactance= 0.2 }
+    public List<SmithChartData> TransmissionData = new List<SmithChartData> {
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
 }
 ```
 
-![Smith chart with tooltip](./images/Tooltip/Tooltip.png)
+![Smith Chart with tooltip](./images/Tooltip/Tooltip.png)
+
+## Tooltip Customization
+
+The tooltip can be customized for each series using the following properties.
+
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Fill) - Used to change fill color of the tooltip.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Opacity) - Used to control opacity of the tooltip.
+* [`SmithChartSeriesTooltipBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltipBorder.html#properties) - Used to customize the width and color of the border using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonBorder.html#Syncfusion_Blazor_Charts_SmithChartCommonBorder_Width) and [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonBorder.html#Syncfusion_Blazor_Charts_SmithChartCommonBorder_Color) properties.
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<SfSmithChart>
+    <SmithChartSeriesCollection>
+        <SmithChartSeries Name="Transmission" DataSource='TransmissionData' Reactance="Reactance" Resistance="Resistance">
+            <SmithChartSeriesMarker Visible='true'></SmithChartSeriesMarker>
+            <SmithChartSeriesTooltip Visible='true' Fill="red" Opacity="0.5">
+                <SmithChartSeriesTooltipBorder Color="blue" Width="2"></SmithChartSeriesTooltipBorder>
+            </SmithChartSeriesTooltip>
+        </SmithChartSeries>
+    </SmithChartSeriesCollection>
+</SfSmithChart>
+
+@code {
+    public class SmithChartData
+    {
+        public double? Resistance { get; set; }
+        public double? Reactance { get; set; }
+    };
+    public List<SmithChartData> TransmissionData = new List<SmithChartData> {
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+    };
+}
+```
+
+![Smith Chart with tooltip customization](./images/Tooltip/TooltipCustomization.png)
+
+## Tooltip Template
+
+To access the aggregate values inside the template, the implicit named parameter context can be used. The context can be typecast as [`SmithChartPoint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartPoint.html) to get aggregate values inside the template. The tooltip template using context as shown below.
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<SfSmithChart>
+    <SmithChartSeriesCollection>
+        <SmithChartSeries Name="Transmission" DataSource='TransmissionData' Reactance="Reactance" Resistance="Resistance">
+            <SmithChartSeriesMarker Visible='true'></SmithChartSeriesMarker>
+            <SmithChartSeriesTooltip Visible='true'>
+                <Template>
+                    @{
+                        var data = context as SmithChartPoint;
+                    }
+                    <div style="background-color: blue">@data.Resistance: @data.Reactance</div>
+                </Template>
+            </SmithChartSeriesTooltip>
+        </SmithChartSeries>
+    </SmithChartSeriesCollection>
+</SfSmithChart>
+
+@code {
+    public class SmithChartData
+    {
+        public double? Resistance { get; set; }
+        public double? Reactance { get; set; }
+    };
+    public List<SmithChartData> TransmissionData = new List<SmithChartData> {
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+    };
+}
+```
+
+![Smith Chart with tooltip template](./images/Tooltip/TooltipTemplate.png)

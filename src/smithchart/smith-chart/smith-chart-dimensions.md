@@ -1,109 +1,126 @@
-# Smith Chart Dimensions
+---
+title: " Dimensions in Blazor Smith Chart component | Syncfusion "
 
-You can set the Smith Chart dimensions in the following ways.
+component: "Smith Chart"
 
-* Size using CSS
-* Size using API
+description: "Learn here about dimensions in Syncfusion Blazor Smith Chart (SfSmithChart) component and more."
+---
 
-## Size using CSS
+# Dimensions in Blazor Smith Chart
 
-To set the size using CSS, add `ID` to the `SfSmithchart` tag and specify the width and height of the Smith Chart using CSS as shown below.
+The dimensions of the Smith Chart can be modified in the following ways.
+
+* Using CSS
+* Using API
+
+## Using CSS
+
+To set the size using CSS, add an [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_ID) to the `SfSmithChart` tag and set the width and height of the Smith Chart in the style tag, as shown below.
 
 ```csharp
-<SfSmithchart ID="dimension">
-    <SmithchartSeriesCollection>
-        <SmithchartSeries Points='FirstTransmissionData'></SmithchartSeries>
-    </SmithchartSeriesCollection>
-</SfSmithchart>
+@using Syncfusion.Blazor.Charts
+
+<SfSmithChart ID="smChart">
+    <SmithChartSeriesCollection>
+        <SmithChartSeries DataSource='TransmissionData' Reactance="Reactance" Resistance="Resistance">
+        </SmithChartSeries>
+    </SmithChartSeriesCollection>
+</SfSmithChart>
 
 <style>
-    #dimension {
-        height:300px;
-        width:300px;
+    #smChart {
+        height: 300px !important;
+        width: 300px !important;
     }
 </style>
 
 @code {
-    public class SmithDataSource
+    public class SmithChartData
     {
-        public double? resistance;
-        public double? reactance;
+        public double? Resistance { get; set; }
+        public double? Reactance { get; set; }
     };
-    private List<SmithDataSource> FirstTransmissionData = new List<SmithDataSource> {
-        new SmithDataSource { resistance= 10, reactance= 25 },
-        new SmithDataSource { resistance= 6, reactance= 4.5 },
-        new SmithDataSource { resistance= 3.5, reactance= 1.6 },
-        new SmithDataSource { resistance= 2, reactance= 1.2 },
-        new SmithDataSource { resistance= 1, reactance= 0.8 },
-        new SmithDataSource { resistance= 0, reactance= 0.2 }
+    public List<SmithChartData> TransmissionData = new List<SmithChartData> {
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
 }
 ```
 
-![Smith chart dimention customization](./images/Dimension/smith-chart.png)
+![Smith chart dimensions via CSS](./images/Dimension/smith-chart.png)
 
-## Size using API
+## Using API
 
-You can also set size for Smith Chart directly through `Width` and `Height` properties. Using this properties, you can directly mention the width and height of the Smith Chart in pixels or you can set the width and height in percentage.
+The width and height of the Smith Chart can also be set directly using [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Height) properties respectively. It can be in pixel or in percentage.
 
 ### In Pixel
 
-In Smith Chart's `Width` and `Height` property, you can directly give values in pixels like below demonstration. This will render Smith Chart in same size as you mentioned in you code.
+The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Height) properties in the Smith Chart can be directly given in pixels, as shown below.
 
 ```csharp
-<SfSmithchart Height="300px" Width="300px">
-    <SmithchartSeriesCollection>
-        <SmithchartSeries Points='FirstTransmissionData'></SmithchartSeries>
-    </SmithchartSeriesCollection>
-</SfSmithchart>
+@using Syncfusion.Blazor.Charts
+
+<SfSmithChart Height="300px" Width="300px">
+    <SmithChartSeriesCollection>
+        <SmithChartSeries DataSource='TransmissionData' Reactance="Reactance" Resistance="Resistance">
+        </SmithChartSeries>
+    </SmithChartSeriesCollection>
+</SfSmithChart>
 
 @code {
-    public class SmithDataSource
+    public class SmithChartData
     {
-        public double? resistance;
-        public double? reactance;
+        public double? Resistance { get; set; }
+        public double? Reactance { get; set; }
     };
-    private List<SmithDataSource> FirstTransmissionData = new List<SmithDataSource> {
-        new SmithDataSource { resistance= 10, reactance= 25 },
-        new SmithDataSource { resistance= 6, reactance= 4.5 },
-        new SmithDataSource { resistance= 3.5, reactance= 1.6 },
-        new SmithDataSource { resistance= 2, reactance= 1.2 },
-        new SmithDataSource { resistance= 1, reactance= 0.8 },
-        new SmithDataSource { resistance= 0, reactance= 0.2 }
+    public List<SmithChartData> TransmissionData = new List<SmithChartData> {
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
 }
 ```
 
-![Smith chart size customization](./images/Dimension/smith-chart.png)
+![Setting dimensions in pixel](./images/Dimension/smith-chart.png)
 
 ### In percentage
 
-In Smith Chart's Width and Height property, you can directly give values in percentage like below demonstration, then Smith Chart will be rendered as per the percentage of it's container size.
+The Smith Chart's [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Height) properties can be directly given in percentage, as shown below. The component will be rendered as a percentage of its container size.
 
 ```csharp
+@using Syncfusion.Blazor.Charts
+
 <div style="height:600px; width:600px">
-    <SfSmithchart Height="50%" Width="50%">
-        <SmithchartSeriesCollection>
-            <SmithchartSeries Points='FirstTransmissionData'></SmithchartSeries>
-        </SmithchartSeriesCollection>
-    </SfSmithchart>
+    <SfSmithChart Height="50%" Width="50%">
+        <SmithChartSeriesCollection>
+            <SmithChartSeries DataSource='FirstTransmissionData' Reactance="Reactance" Resistance="Resistance">
+            </SmithChartSeries>
+        </SmithChartSeriesCollection>
+    </SfSmithChart>
 </div>
 
 @code {
-    public class SmithDataSource
+    public class SmithChartData
     {
-        public double? resistance;
-        public double? reactance;
+        public double? Resistance { get; set; }
+        public double? Reactance { get; set; }
     };
-    private List<SmithDataSource> FirstTransmissionData = new List<SmithDataSource> {
-        new SmithDataSource { resistance= 10, reactance= 25 },
-        new SmithDataSource { resistance= 6, reactance= 4.5 },
-        new SmithDataSource { resistance= 3.5, reactance= 1.6 },
-        new SmithDataSource { resistance= 2, reactance= 1.2 },
-        new SmithDataSource { resistance= 1, reactance= 0.8 },
-        new SmithDataSource { resistance= 0, reactance= 0.2 }
+    public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
 }
 ```
 
-![Smith chart size customization](./images/Dimension/smith-chart.png)
+![Setting dimensions in percentage](./images/Dimension/smith-chart.png)

@@ -1,4 +1,12 @@
-# Getting Started in Blazor Smith Chart
+---
+title: " Getting Started with Blazor Smith Chart component | Syncfusion "
+
+component: "SmithChart"
+
+description: "Learn here about getting started with Syncfusion Blazor Smith Chart (SfSmithChart) component, its elements, and more."
+---
+
+# Getting Started in Blazor Smith Chart (SfSmithChart)
 
 This section briefly explains how to include a Smith Chart component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 

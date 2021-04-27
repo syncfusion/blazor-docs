@@ -8,4 +8,3 @@
 * [Series](smith-chart/smith-chart-series.md)
 * [Print and Export](smith-chart/smith-chart-print.md)
 * [Events](smith-chart/events.md)
-* [Methods](smith-chart/methods.md)

@@ -1,44 +1,88 @@
-# Series customization
+---
+title: " Series customization in Blazor Smith Chart component | Syncfusion "
 
-Using following options in `SmithchartSeries`, you can customize each series in Smith Chart as per your requirement.
+component: "Smith Chart"
 
-* `Fill` - Used to customize the fill color for the series.
-* `EnableSmartLabels` - Used to place the data labels on the Smith Chart without overlapping with each other.
-* `Visibility` - Used to handle the visibility of the series.
-* `Opacity` - Used to control the opacity of the series line.
-* `Width` - Used to customize the width of the series line.
+description: "Learn here about series customization of Syncfusion Blazor Smith Chart (SfSmithChart) component and more."
+---
+
+# Series customization in Blazor Smith Chart
+
+[`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties) is the visual representation of the data.
+Using the following options in [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties), each series can be customized in Smith Chart.
+
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Fill) - Used to customize the fill color for the series.
+* [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Visible) - Used to handle the visibility of the series.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Opacity) - Used to control the opacity of the series line.
+* [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Width) - Used to customize the width of the series line.
 
 ```csharp
-<SfSmithchart>
-    <SmithchartSeriesCollection>
-        <SmithchartSeries
-            Points='FirstTransmissionData'
-            Fill="#009933"
-            Visibility="visible"
-            Opacity="0.75"
-            Width="2.5">
-            <SmithchartSeriesMarker Visible='true'>
-                <SmithchartSeriesMarkerDataLabel Visible='true'></SmithchartSeriesMarkerDataLabel>
-            </SmithchartSeriesMarker>
-        </SmithchartSeries>
-    </SmithchartSeriesCollection>
-</SfSmithchart>
+@using Syncfusion.Blazor.Charts
+
+<SfSmithChart>
+    <SmithChartSeriesCollection>
+        <SmithChartSeries Name="Transmission" DataSource='TransmissionData'
+                          Reactance="Reactance" Resistance="Resistance" Fill="#009933"
+                          Visible="true"
+                          Opacity="0.75"
+                          Width="2.5">
+            <SmithChartSeriesMarker Visible='true'>
+                <SmithChartSeriesDatalabel Visible='true'></SmithChartSeriesDatalabel>
+            </SmithChartSeriesMarker>
+        </SmithChartSeries>
+    </SmithChartSeriesCollection>
+</SfSmithChart>
 
 @code {
-    public class SmithDataSource
+    public class SmithChartData
     {
-        public double? resistance;
-        public double? reactance;
+        public double? Resistance { get; set; }
+        public double? Reactance { get; set; }
     };
-    private List<SmithDataSource> FirstTransmissionData = new List<SmithDataSource> {
-        new SmithDataSource { resistance= 10, reactance= 25 },
-        new SmithDataSource { resistance= 6, reactance= 4.5 },
-        new SmithDataSource { resistance= 3.5, reactance= 1.6 },
-        new SmithDataSource { resistance= 2, reactance= 1.2 },
-        new SmithDataSource { resistance= 1, reactance= 0.8 },
-        new SmithDataSource { resistance= 0, reactance= 0.2 }
+    public List<SmithChartData> TransmissionData = new List<SmithChartData> {
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
 }
 ```
 
-![Smith chart with series customization](./images/SmithChartSeries/SeriesCustomization.png)
+![Smith Chart with series customization](./images/SmithChartSeries/SeriesCustomization.png)
+
+## Animation
+
+Animation for the Smith Chart series can be enabled by using the [`EnableAnimation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_EnableAnimation) property in [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties). By default, the value is **false**. The speed of the animation can be controlled using the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_AnimationDuration) property. By default, the value of the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_AnimationDuration) property is **2000** milliseconds.
+
+```csharp
+@using Syncfusion.Blazor.Charts
+
+<SfSmithChart>
+    <SmithChartSeriesCollection>
+        <SmithChartSeries Name="Transmission" DataSource='TransmissionData'
+                          Reactance="Reactance" Resistance="Resistance" EnableAnimation="true" AnimationDuration="1500">
+            <SmithChartSeriesMarker Visible='true'>
+                <SmithChartSeriesDatalabel Visible='true'></SmithChartSeriesDatalabel>
+            </SmithChartSeriesMarker>
+        </SmithChartSeries>
+    </SmithChartSeriesCollection>
+</SfSmithChart>
+
+@code {
+    public class SmithChartData
+    {
+        public double? Resistance { get; set; }
+        public double? Reactance { get; set; }
+    };
+    public List<SmithChartData> TransmissionData = new List<SmithChartData> {
+        new SmithChartData { Resistance= 10, Reactance= 25 },
+        new SmithChartData { Resistance= 6, Reactance= 4.5 },
+        new SmithChartData { Resistance= 3.5, Reactance= 1.6 },
+        new SmithChartData { Resistance= 2, Reactance= 1.2 },
+        new SmithChartData { Resistance= 1, Reactance= 0.8 },
+        new SmithChartData { Resistance= 0, Reactance= 0.2 }
+    };
+}
+```

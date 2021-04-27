@@ -1,18 +1,26 @@
-# Customization
+---
+title: " Customization in Blazor Range Selector component | Syncfusion "
 
-## Navigator appearance
+component: "Range Selector"
 
-The navigator can be customized using the [`NavigatorStyleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html) property. The [`SelectedRegionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_SelectedRegionColor) property is used to specify the color for selected region whereas the [`UnSelectedRegionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_UnselectedRegionColor) property is used to specify the color for unselected region.
+description: "Learn here all about customization of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
+---
+
+# Customization in Blazor Range Selector (SfRangeNavigator)
+
+## Navigator Appearance
+
+The Range Selector can be customized by using the [`RangeNavigatorStyleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html). The [`SelectedRegionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_SelectedRegionColor) property is used to specify the color for the selected region whereas the [`UnselectedRegionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_UnselectedRegionColor) property is used to specify the color for the unselected region.
 
 {% aspTab template="range-navigator/custom/appearance", sourceFiles="appearance.razor" %}
 
 {% endaspTab %}
 
-![Navigator](images/custom/appearance.png)
+![Range Selector appearance](images/custom/appearance.png)
 
 ## Thumb
 
-The [`Thumb`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_Thumb) property provides options to customize the Border, Fill, Size, and Type of thumb. The types of thumb can be `Circle` and `Rectangle`.
+The [`RangeNavigatorThumbSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html) allows to customize the border, fill color, size, and type of thumb using the [`RangeNavigatorThumbBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbBorder.html), [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Fill), [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Height), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Width), and [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Type) properties. Thumbs can be of two shapes: **Circle** and **Rectangle**.
 
 {% aspTab template="range-navigator/custom/thumb", sourceFiles="thumb.razor" %}
 
@@ -20,21 +28,29 @@ The [`Thumb`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ran
 
 ![Thumb](images/custom/thumb.png)
 
-## Border customization
+## Border
 
-Using the [`NavigatorBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_IsClosed) property, you can customize the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html#Syncfusion_Blazor_Charts_RangeNavigatorBorder_Width) and [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html#Syncfusion_Blazor_Charts_RangeNavigatorBorder_Color) of the range navigator.
+Using the [`RangeNavigatorBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html), the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html#Syncfusion_Blazor_Charts_RangeNavigatorBorder_Widthhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) and [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) of the Range Selector border can customized.
 
 {% aspTab template="range-navigator/custom/border", sourceFiles="border.razor" %}
 
 {% endaspTab %}
 
-![Border](images/custom/border.png)
+![Range Selector Border](images/custom/border.png)
 
-## Allow snapping
+## Snapping
 
-The [`AllowSnapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorModel.html#Syncfusion_Blazor_Charts_RangeNavigatorModel_AllowSnapping) property toggles the placement of the slider exactly to the left or on the nearest interval.
+The [`AllowSnapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorModel.html#Syncfusion_Blazor_Charts_RangeNavigatorModel_AllowSnapping) property toggles the placement of the slider exactly to the left or right at the nearest interval.
 
 {% aspTab template="range-navigator/custom/snap", sourceFiles="snap.razor" %}
+
+{% endaspTab %}
+
+## Animation
+
+Animation for range selector is enabled by default. The speed of the animation can be controlled using the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property. The default value of the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property is **500** milliseconds.
+
+{% aspTab template="range-navigator/custom/animation", sourceFiles="animation.razor" %}
 
 {% endaspTab %}
 

@@ -1,4 +1,12 @@
-# Getting Started in Blazor Range Navigator
+---
+title: " Getting Started with Blazor Range Selector component | Syncfusion "
+
+component: "RangeNavigator"
+
+description: "Learn here about getting started with Syncfusion Blazor Range Selector (SfRangeNavigator) component, its elements, and more."
+---
+
+# Getting Started in Blazor Range Selector (SfRangeNavigator)
 
 This section briefly explains how to include a Range Navigator component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 

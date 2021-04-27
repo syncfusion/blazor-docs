@@ -1,21 +1,29 @@
-# Grid and Tick Lines
+---
+title: " Grid and Ticklines in Blazor Range Selector component | Syncfusion "
 
-## Grid line customization
+component: "Range Selector"
 
-You can customize the Width, Color, and DashArray of the major grid lines using the [`MajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorGridLines.html) property.
+description: "Learn here all about Grid and Ticklines of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
+---
+
+# Grid and Ticklines in Blazor Range Selector (SfRangeNavigator)
+
+## Gridline Customization
+
+Gridlines indicate axis divisions by drawing the chart plot. Gridlines include helpful cues to the user, particularly for large or complicated charts. The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_Width), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_Color), and [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_DashArray) of the major gridlines, can be customized by using the [`RangeNavigatorMajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorGridLines.html) setting.
 
 {% aspTab template="range-navigator/grid/grid", sourceFiles="grid.razor" %}
 
 {% endaspTab %}
 
-![Grid line customization](images/grid-tick/grid.png)
+![Gridline customization](images/grid-tick/grid.png)
 
-## Tick line customization
+## Tickline Customization
 
-You can customize the Width, Color, and Height of the major tick lines using the [`MajorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorTickLines.html) property.
+Tick line are the small lines which is drawn on the axis line representing the axis labels. Tick lines will be drawn outside of the axis by default. The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Width), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Color), and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Height) of the major ticklines, can be customized by using the [`RangeNavigatorMajorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorTickLines.html) setting.
 
 {% aspTab template="range-navigator/grid/tick", sourceFiles="tick.razor" %}
 
 {% endaspTab %}
 
-![Tick line customization](images/grid-tick/tick.png)
+![Tickline customization](images/grid-tick/tick.png)

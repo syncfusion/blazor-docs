@@ -1,8 +1,16 @@
-# Print and Export
+---
+title: " Print and Export in Blazor Range Selector component | Syncfusion "
+
+component: "Range Selector"
+
+description: "Learn here all about print and export of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
+---
+
+# Print and Export in Blazor Range Selector (SfRangeNavigator)
 
 ## Print
 
-The rendered range navigator can be printed directly from the browser by calling the public method print. The ID of the range navigator div element must be passed as argument to that method.
+The rendered Range Selector can be printed directly from the browser by calling the public method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Print).
 
 {% aspTab template="range-navigator/print/print", sourceFiles="print.razor" %}
 
@@ -10,4 +18,12 @@ The rendered range navigator can be printed directly from the browser by calling
 
 ## Export
 
-The rendered range navigator can be exported to JPEG, PNG, SVG, or PDF format using the export method in the range navigator. The input parameters for this method are Export Type for format and fileName for result.
+The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method in the Range Selector. This method contains the following parameters:
+
+* **Type** - To specify the export type. The component can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format.
+* **File name** - To specify the file name to export.
+* **Orientation** - To specify the orientation type. This is applicable only for PDF export type. It is an optional parameter.
+
+{% aspTab template="range-navigator/print/export", sourceFiles="export.razor" %}
+
+{% endaspTab %}

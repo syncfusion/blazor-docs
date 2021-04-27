@@ -1,12 +1,20 @@
-# Lightweight range navigator
+---
+title: " Lightweight Range Selector in Blazor Range Selector component | Syncfusion "
 
-By default, when the DataSource for series property in RangeNavigator is empty, a light weight Range navigator will get initialized without chart. The following code example shows the basic lightweight range navigator.
+component: "RangeNavigator"
+
+description: "Learn here all about Lightweight Range Selector of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
+---
+
+# Lightweight Range Selector in Blazor Range Selector (SfRangeNavigator)
+
+By default, when the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_DataSource) for [`RangeNavigatorSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html) is empty, a lightweight Range Selector will be shown without Chart. The following code example shows the lightweight Range Selector.
 
 {% aspTab template="range-navigator/light-weight", sourceFiles="light-weight.razor" %}
 
 {% endaspTab %}
 
-![Selecting Range](images/common/light-weight.png)
+![Lightweight Range Selector](images/common/light-weight.png)
 
 ## See Also
 

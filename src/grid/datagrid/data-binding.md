@@ -367,9 +367,11 @@ The following sample code demonstrates sending additional paramaters using the Q
 
 When registering your HttpClient, the registration should be done before calling `AddSyncfusionBlazor()` method in **Startup.cs/Program.cs**, so that **SfDataManager** will not create its own HttpClient and uses the pre-configured HttpClient. This helps SfDataManager to use HttpClient instance pre-configured with base address, authentication, default headers, etc.
 
+You could also pass HttpClient to the SfDataManager component as a parameter using `HttpClientInstance` property. This will be useful when the application has more than one pre-configured HttpClients. You can use this approach to use the named HttpClient with SfDataManager.  
+
 To troubleshoot the requests and responses made using HttpClient, a custom HTTP message handler can be used. More information about registering the custom HTTP message handler can be found [here](https://docs.microsoft.com/en-us/aspnet/web-api/overview/advanced/httpclient-message-handlers).
 
-> Currently Named or Typed HttpClient is not supported hence SfDataManager will only recognize default HttpClient.
+> Using Typed HttpClient with SfDataManager is not supported. The [custom binding](./custom-binding) feature has to be used to achieve this requirement.
 
 ### Handling HTTP error
 

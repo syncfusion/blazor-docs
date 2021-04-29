@@ -3,14 +3,14 @@ title: "Customization in Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"
 
-description: "Learn here all about Customization of Syncfusion Bullet Chart (SfBulletChart) component and more."
+description: "Learn here all about customization of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
 # Customization in Blazor Bullet Chart (SfBulletChart)
 
 ## Orientation
 
-Bullet Chart can be rendered in different orientation such as [`Horizontal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.OrientationType.html#Syncfusion_Blazor_Charts_OrientationType_Horizontal) or [`Vertical`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.OrientationType.html#Syncfusion_Blazor_Charts_OrientationType_Vertical) by specifying in [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Orientation) property. By default Bullet Chart rendered in [`Horizontal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.OrientationType.html#Syncfusion_Blazor_Charts_OrientationType_Horizontal) orientation.
+The Bullet Chart can be rendered in different orientation such as [`Horizontal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.OrientationType.html#Syncfusion_Blazor_Charts_OrientationType_Horizontal) or [`Vertical`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.OrientationType.html#Syncfusion_Blazor_Charts_OrientationType_Vertical) via the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Orientation) property. By default, the Bullet Chart is rendered in [`Horizontal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.OrientationType.html#Syncfusion_Blazor_Charts_OrientationType_Horizontal) orientation.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -36,11 +36,11 @@ Bullet Chart can be rendered in different orientation such as [`Horizontal`](htt
 }
 ```
 
-![Bullet Chart with orientation](images/orientation.png)
+![Bullet Chart with Orientation](images/orientation.png)
 
-## Flow Direction
+## Right-to-left (RTL)
 
-Bullet Chart support, right to left rendering direction and it can be enabled by setting the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_EnableRtl) property to **true**.
+The Bullet Chart supports right-to-left rendering, which can be enabled by setting the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_EnableRtl) property to **true**.
 
 ```csharp
 <SfBulletChart DataSource="@BulletChartData" EnableRtl="true" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
@@ -54,11 +54,11 @@ Bullet Chart support, right to left rendering direction and it can be enabled by
 
 > Refer [code block](#orientation) to know the property value of **BulletChartData**.
 
-![Bullet Chart with flow direction](images/rtl.png)
+![Bullet Chart in right-to-left flow direction](images/rtl.png)
 
 ## Animation
 
-Actual and target bar supports linear animation by specifying the [`BulletChartAnimation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html) tag and control speed and delay by using [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Duration) and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Delay) properties.
+The actual and target bar supports linear animation via [`BulletChartAnimation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html) setting. The speed and delay are controlled using the [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Duration) and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Delay) properties respectively.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -77,7 +77,7 @@ Actual and target bar supports linear animation by specifying the [`BulletChartA
 
 ## Theme
 
-Bullet chart support, different type of themes  by specifying in [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Theme) property.
+The Bullet Chart supports different type of themes via [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Theme) property.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -94,11 +94,11 @@ Bullet chart support, different type of themes  by specifying in [`Theme`](https
 
 > Refer [code block](#orientation) to know the property value of **BulletChartData**.
 
-![Bullet Chart with theme](images/theme.png)
+![Bullet Chart with Theme](images/theme.png)
 
 ## Border
 
-Bullet Chart border can be enabled by setting the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonBorder.html#Syncfusion_Blazor_Charts_BulletChartCommonBorder_Color) property in [`BulletChartBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Theme) and width of the border can be customized using [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonBorder.html#Syncfusion_Blazor_Charts_BulletChartCommonBorder_Width) property.
+The Bullet Chart border color can be enabled by setting the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonBorder.html#Syncfusion_Blazor_Charts_BulletChartCommonBorder_Color) property in [`BulletChartBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Theme) and width of the border can be customized using [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonBorder.html#Syncfusion_Blazor_Charts_BulletChartCommonBorder_Width) property.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -115,4 +115,4 @@ Bullet Chart border can be enabled by setting the [`Color`](https://help.syncfus
 
 > Refer [code block](#orientation) to know the property value of **BulletChartData**.
 
-![Bullet Chart with border](images/border.png)
+![Bullet Chart with Border](images/border.png)

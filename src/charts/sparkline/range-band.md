@@ -8,7 +8,7 @@ description: "Learn here all about Range Band of Syncfusion Sparkline (SfSparkli
 
 # Range Band in Blazor Sparkline (SfSparkline)
 
-Range band represents the quality or makes better readability of a specific range for Sparkline y-axis using [`StartRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_StartRange) and [`EndRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_EndRange) properties in [`SparklineRangeBand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html) to specifies in [`SparklineRangeBandSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBandSettings.html) which hold the collection of [`SparklineRangeBand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html).
+Range band represents the quality or improves the readability of a specific range for the Sparkline y-axis by specifying the [`StartRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_StartRange) and [`EndRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_EndRange) properties in [`SparklineRangeBand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html) in [`SparklineRangeBandSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBandSettings.html).
 
 The following properties are used to customization the range band:
 

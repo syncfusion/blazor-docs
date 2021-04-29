@@ -3,16 +3,16 @@ title: "Appearance in Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"
 
-description: "Learn here all about Appearance of Syncfusion Sparkline (SfSparkline) component and more."
+description: "Learn here all about appearance of Syncfusion Sparkline (SfSparkline) component and more."
 ---
 
 # Appearance in Blazor Sparkline (SfSparkline)
 
-The Sparkline rendering direction, padding, border and background appearance can be customized.
+The rendering direction, padding, border, and background appearance of the Sparkline can all be customized.
 
-## RTL
+## Right-to-left (RTL)
 
-Sparkline support, right to left rendering direction and it can be enabled by setting the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_EnableRtl) property to **true**.
+The Sparkline supports right-to-left (RTL) rendering, which can be enabled by setting the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_EnableRtl) property to **true**.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -27,10 +27,8 @@ Sparkline support, right to left rendering direction and it can be enabled by se
 
 ## Border
 
-The border can be enabled by specifying in [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Color)
+The border can be enabled and customized by specifying the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Color)
  and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Width) properties of [`SparklineContainerAreaBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineContainerAreaBorder.html).
-
-The following code example shows the Sparkline Charts with overall border.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -46,9 +44,7 @@ The following code example shows the Sparkline Charts with overall border.
 
 ## Padding
 
-Sparkline supports the padding between container and bottom, left, right, top padding of the Sparkline to be customized by setting in [`SparklinePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklinePadding.html).
-
-The following code example shows the Sparkline Charts with overall padding is set to 20.
+The Sparkline supports padding between container and component using [`SparklinePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklinePadding.html). The code example below shows the Sparkline Chart with overall padding set to 20.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -64,9 +60,9 @@ The following code example shows the Sparkline Charts with overall padding is se
 
 ![Sparkline with padding](/images/Appearance/Padding.png)
 
-## Sparkline area customization
+## Background
 
-The background color of the Sparkline area can be customized using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineContainerArea.html#Syncfusion_Blazor_Charts_SparklineContainerArea_Background) property in [`SparklineContainerArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineContainerArea.html). By default, the Sparkline background color is **Transparent**.
+The background color of the Sparkline area can be changed using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineContainerArea.html#Syncfusion_Blazor_Charts_SparklineContainerArea_Background) property of [`SparklineContainerArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineContainerArea.html). By default, the Sparkline background color is **Transparent**.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -81,4 +77,4 @@ The background color of the Sparkline area can be customized using the [`Backgro
 </SfSparkline>
 ```
 
-![Sparkline with background](/images/Appearance/ContainerBackground.png)
+![Sparkline with background customization](/images/Appearance/ContainerBackground.png)

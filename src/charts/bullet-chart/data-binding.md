@@ -8,16 +8,12 @@ description: "Learn here all about Data Binding of Syncfusion Bullet Chart (SfBu
 
 # Data Binding in Blazor Bullet Chart (SfBulletChart)
 
-The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_DataSource) property accepts a collection of values as input that helps to display measures and compares them to a target bar.
-
-## Local Data
-
-To display the actual and target bar, specify the property from the data source into [`ValueField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) and [`TargetField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField).
+The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_DataSource) property accepts a collection of values as input that helps to display measures and compares them to a target bar. To display the actual and target bar, specify the property from the datasource into [`ValueField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) and [`TargetField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) respectively.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
-<SfBulletChart DataSource="@LocalChartData" ValueField="FieldValue" TargetField="ComparativeMeasureValue" CategoryField="Category" Height="400" Minimum="0" Maximum="20" Interval="5" Title="Profit in %">
+<SfBulletChart DataSource="@InputData" ValueField="FieldValue" TargetField="ComparativeMeasureValue" CategoryField="Category" Height="400" Minimum="0" Maximum="20" Interval="5" Title="Profit in %">
     <BulletChartMinorTickLines Width="0"></BulletChartMinorTickLines>
     <BulletChartRangeCollection>
         <BulletChartRange End=5> </BulletChartRange>
@@ -33,7 +29,7 @@ To display the actual and target bar, specify the property from the data source 
         public double[] ComparativeMeasureValue { get; set; }
         public string Category { get; set; }
     }
-    public List<BulletChartData> LocalChartData = new List<BulletChartData>
+    public List<BulletChartData> InputData = new List<BulletChartData>
     {
         new BulletChartData { FieldValue = 5, ComparativeMeasureValue = new double[] { 7.5 }, Category = "2001" },
         new BulletChartData { FieldValue = 7, ComparativeMeasureValue = new double[] { 5 }, Category = "2002" },
@@ -45,4 +41,4 @@ To display the actual and target bar, specify the property from the data source 
 }
 ```
 
-![Axis Customization](images/local-data.png)
+![Data Binding in Bullet Chart](images/local-data.png)

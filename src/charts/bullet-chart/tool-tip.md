@@ -3,12 +3,12 @@ title: "Tooltip in Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"
 
-description: "Learn here all about Tooltip of Syncfusion Bullet Chart (SfBulletChart) component and more."
+description: "Learn here all about tooltip of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
 # Tooltip in Blazor Bullet Chart (SfBulletChart)
 
-Bullet Chart display the details of actual and target bar values through the tooltip when mouse is hovered the bar.
+When the mouse is hovered over a bar in the Bullet Chart, the tooltip displays important summary about the actual and target bar values.
 
 ## Default Tooltip
 
@@ -34,7 +34,7 @@ The tooltip is not visible by default, to make it visible, set the [`Enable`](ht
         public string Category { get; set; }
     }
     public List<ChartData> BulletChartData = new List<ChartData>
-{
+    {
         new ChartData { ValueField = 5, TargetValue = 7.5, Category = "2001" },
         new ChartData { ValueField = 7, TargetValue = 5, Category = "2002" },
         new ChartData { ValueField = 10, TargetValue = 6, Category = "2003" },
@@ -45,15 +45,15 @@ The tooltip is not visible by default, to make it visible, set the [`Enable`](ht
 }
 ```
 
-![Tooltip](images/default-tool-tip.png)
+![Tooltip in Bullet Chart](images/default-tool-tip.png)
 
-## Customization
+## Tooltip Customization
 
-Customize the Bullet Chart tooltip using following properties.
+The following properties can be used to customize the Bullet Chart tooltip.
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Fill) - Specifies the color of tooltip.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Fill) - Specifies the color of the tooltip.
 * [`BulletChartTooltipBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipBorder.html) - Specifies the tooltip border color and width.
-* [`BulletChartTooltipTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipTextStyle.html) - Specifies the tooltip font family, style, weight, color and size.
+* [`BulletChartTooltipTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipTextStyle.html) - Specifies the tooltip font family, font style, font weight, color and size.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -73,11 +73,11 @@ Customize the Bullet Chart tooltip using following properties.
 
 > Refer [code block](#default-tooltip) to know the property value of **BulletChartData**.
 
-![Tooltip with customization](images/tooltip-custom.png)
+![Tooltip Customization](images/tooltip-custom.png)
 
-## Tooltip template
+## Tooltip Template
 
-Tooltip can be render as a custom component using [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Template) property in the [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) which accepts one or more UI elements as an input, that can be rendered as part of the tooltip rendering.
+The tooltip can be render as a custom component using [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Template) property in the [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) which accepts one or more UI elements as an input, that can be rendered as part of the tooltip rendering.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -110,4 +110,4 @@ Tooltip can be render as a custom component using [`Template`](https://help.sync
 
 > Refer [code block](#default-tooltip) to know the property value of **BulletChartData**.
 
-![Tooltip with template](images/tooltip-template.png)
+![Tooltip with Template](images/tooltip-template.png)

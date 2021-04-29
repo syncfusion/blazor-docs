@@ -3,7 +3,7 @@ title: "Ranges in Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"
 
-description: "Learn here all about Ranges of Syncfusion Bullet Chart (SfBulletChart) component and more."
+description: "Learn here all about ranges of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
 # Ranges in Blazor Bullet Chart (SfBulletChart)
@@ -34,11 +34,11 @@ Ranges represent the quality of a specific range such as **Good**, **Bad** and *
 }
 ```
 
-![Ranges](images/range.png)
+![Ranges in Bullet Chart](images/range.png)
 
 ## Color Customization
 
-Enhance the readability of visualising ranges with color and opacity. It can be specified in [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Color) and [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Opacity) properties.
+Enhance the readability of ranges with color and opacity. It can be applied using [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Color) and [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Opacity) properties respectively.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -69,4 +69,4 @@ Enhance the readability of visualising ranges with color and opacity. It can be 
 }
 ```
 
-![Ranges with customization](images/range-custom.png)
+![Ranges with color customization](images/range-custom.png)

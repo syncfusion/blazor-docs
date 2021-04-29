@@ -8,13 +8,11 @@ description: "Learn here all about Markers of Syncfusion Sparkline (SfSparkline)
 
 # Markers in Blazor Sparkline (SfSparkline)
 
-Data markers are used to provide information about the data points of the Sparkline series.
+Data markers are used to provide information about the data points in the Sparkline series.
 
 ## Adding markers
 
-The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Visible) property in [`SparklineMarkerSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html) can be used to enable a marker by specifying a collection of special points.
-
-The following code example shows, how to enable markers for all points.
+The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Visible) property in [`SparklineMarkerSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html) can be used to enable a marker by specifying a collection of special points. The code example below shows how to enable markers for all points.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -29,7 +27,7 @@ The following code example shows, how to enable markers for all points.
 
 ## Adding special point markers
 
-Markers can be enabled for specific points as a collection. The following special points are applicable for Sparkline marker.
+The markers can be enabled for specific points as a collection. The following special points are applicable for markers.
 
 * [`All`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_All) - Markers for all points are enabled.
 * [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Start) - Markers for start points are enabled.
@@ -39,7 +37,7 @@ Markers can be enabled for specific points as a collection. The following specia
 * [`Negative`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Negative) - Markers for negative points are enabled.
 * [`None`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_None) - Markers for all points are disabled.
 
-The following code examples shows, how to enable markers for the high and low points.
+The code example below shows how to enable high and low point markers.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -50,11 +48,11 @@ The following code examples shows, how to enable markers for the high and low po
 </SfSparkline>
 ```
 
-![Sparkline Charts marker for high and low points](/images/marker/MarkerSpecialPoint.png)
+![Sparkline Chart marker for high and low points](/images/marker/MarkerSpecialPoint.png)
 
 ## Markers customization
 
-Sparkline markers can be customized using following properties:
+The following properties can be used to customize markers:
 
 * [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Fill) - Specifies fill color for marker.
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Opacity) - Specifies opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Fill) color for marker.
@@ -73,4 +71,4 @@ Sparkline markers can be customized using following properties:
 </SfSparkline>
 ```
 
-![Sparkline Charts with All Marker Sample](/images/marker/MarkerCustomization.png)
+![Sparkline Chart - Markers Customization](/images/marker/MarkerCustomization.png)

@@ -3,12 +3,12 @@ title: "States in Blazor Progress Bar component | Syncfusion"
 
 component: "Progress Bar"
 
-description: "Learn here all about States of Syncfusion Progress Bar (SfProgressBar) component and more."
+description: "Learn here all about states of Syncfusion Progress Bar (SfProgressBar) component and more."
 ---
 
 # States in Blazor Progress Bar (SfProgressBar)
 
-Visualize the progress in different states.
+In this section, the progress can be visualized in different states.
 
 ## Determinate
 
@@ -21,7 +21,7 @@ This is the default progress state, which can be used when the estimated progres
 </SfProgressBar>
 ```
 
-![progress bar](images/determinate.png)
+![Determinate - Progress Bar](images/determinate.png)
 
 ## Indeterminate
 
@@ -34,11 +34,11 @@ The state of the progress bar can be used to indeterminate mode by setting the [
 </SfProgressBar>
 ```
 
-![progress bar](images/indeterminate.png)
+![Indeterminate - Progress Bar](images/indeterminate.png)
 
 ## Buffer
 
-Setting the [`SecondaryProgress`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_SecondaryProgress) property value to **true** will make the secondary progress indicator visible, and the primary progress will be dependent on it. Users will be able to see both primary and secondary progress at the same time.
+When the [`SecondaryProgress`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_SecondaryProgress) property value is set to **true**, the secondary progress indicator becomes visible, and the primary progress is dependent on it. Users will be able to view both primary and secondary progress simultaneously.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -47,11 +47,11 @@ Setting the [`SecondaryProgress`](https://help.syncfusion.com/cr/blazor/Syncfusi
 </SfProgressBar>
 ```
 
-![progress bar](images/buffer.png)
+![Buffer - Progress Bar](images/buffer.png)
 
 ## Active
 
-The active animate indicator for estimated progress can be enabled by setting the [`IsActive`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_IsActive) property to **true** and [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Enable) the animation to **true** in [`ProgressBarAnimation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html).
+The active animate indicator for estimated progress can be enabled by setting the [`IsActive`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_IsActive) property to **true** in `SfProgressBar` and [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Enable) property to **true** in [`ProgressBarAnimation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html).
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -61,11 +61,11 @@ The active animate indicator for estimated progress can be enabled by setting th
 </SfProgressBar>
 ```
 
-![progress bar](images/active.png)
+![Active - Progress Bar](images/active.png)
 
 ## Striped
 
-Striped visual indicator for estimated progress can be enabled by setting the [`IsStriped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_IsStriped) property to **true**.
+The striped visual indicator for estimated progress can be enabled by setting the [`IsStriped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_IsStriped) property to **true**.
 
 >[`IsStriped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_IsStriped) property is only applicable for [`Linear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear) [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) of `Progress Bar`.
 
@@ -76,4 +76,4 @@ Striped visual indicator for estimated progress can be enabled by setting the [`
 </SfProgressBar>
 ```
 
-![progress bar](images/striped.png)
+![Striped - Progress Bar](images/striped.png)

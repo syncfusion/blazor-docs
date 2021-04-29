@@ -3,19 +3,16 @@ title: "Events in Blazor Progress Bar component | Syncfusion"
 
 component: "Progress Bar"
 
-description: "Learn here all about Events of Syncfusion Progress Bar (SfProgressBar) component and more."
+description: "Learn here all about events of Syncfusion Progress Bar (SfProgressBar) component and more."
 ---
 
 # Events in Blazor Progress Bar (SfProgressBar)
 
-In this section, will illustrate the list of events in `Progress Bar` component, which will be
-triggered for appropriate `Progress Bar` actions.
-
-The events should be provided in the [`ProgressBarEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html).
+This section describes the Progress Bar component's events that will be triggered when appropriate actions are performed. The events should be provided to the Progress Bar through the [`ProgressBarEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html).
 
 ## ValueChanged
 
-[ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ValueChanged) event triggers, when the progress [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Value) is changed.
+The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ValueChanged) event triggers when the progress value is changed.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -27,14 +24,14 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 @code{
     public void ValueHandler(ProgressValueEventArgs args)
     {
-        // Here can customize the code
+        // Here you can customize the code.
     }
 }
 ```
 
 ## ProgressCompleted
 
-[ProgressCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ProgressCompleted) event triggers, when the progress attains the [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Maximum) value property.
+The [ProgressCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ProgressCompleted) event triggers when the progress attains the [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Maximum) value.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -46,14 +43,14 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 @code{
     public void ProgressHandler(ProgressValueEventArgs args)
     {
-        // Here can customize the code
+        // Here you can customize the code.
     }
 }
 ```
 
 ## AnimationComplete
 
-[AnimationComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnimationComplete) event triggers when animation of the progress [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Value) get completed.
+The [AnimationComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnimationComplete) event triggers when animation is enabled and the progress value is reached.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -65,14 +62,14 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 @code{
     public void AnimationHandler(ProgressValueEventArgs args)
     {
-        // Here can customize the code
+        // Here you can customize the code.
     }
 }
 ```
 
 ## AnnotationRender
 
-[AnnotationRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnnotationRender) event triggers, before the `Progress Bar` annotaion rendered.
+The [AnnotationRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnnotationRender) event triggers before each annotation is rendered.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -84,14 +81,14 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 @code{
     public void AnnotationHandler(AnnotationRenderEventArgs args)
     {
-        // Here can customize the code
+        // Here you can customize the code.
     }
 }
 ```
 
 ## TextRender
 
-[TextRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_TextRender) event triggers, before the `Progress Bar` text rendered.
+The [TextRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_TextRender) event triggers before the text is rendered.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -103,14 +100,14 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 @code{
     public void TextRenderHandler(TextRenderEventArgs args)
     {
-        // Here can customize the code
+        // Here you can customize the code.
     }
 }
 ```
 
 ## Loaded
 
-`Loaded` event triggers, after the `Progress Bar` component rendered.
+The `Loaded` event triggers after the component is rendered.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -122,7 +119,7 @@ The events should be provided in the [`ProgressBarEvents`](https://help.syncfusi
 @code{
     public void LoadedHandler(System.EventArgs args)
     {
-        // Here you can customize your code
+        // Here you can customize the code.
     }
 }
 ```

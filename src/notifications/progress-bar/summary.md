@@ -2,7 +2,7 @@
 * [Types](progress-bar/types.md)
 * [States](progress-bar/states.md)
 * [Customization](progress-bar/customization.md)
-* [Annotation and label](progress-bar/progress-annotation.md)
+* [Annotations and Label](progress-bar/progress-annotation.md)
 * [Animation](progress-bar/animation.md)
 * [Range](progress-bar/range.md)
 * [Events](progress-bar/events.md)

@@ -12,7 +12,7 @@ This section describes the Progress Bar component's events that will be triggere
 
 ## ValueChanged
 
-The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ValueChanged) event triggers when the progress value is changed.
+The [`ValueChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ValueChanged) event triggers when the progress value is changed.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -31,7 +31,7 @@ The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Progr
 
 ## ProgressCompleted
 
-The [ProgressCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ProgressCompleted) event triggers when the progress attains the [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Maximum) value.
+The [`ProgressCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ProgressCompleted) event triggers when the progress attains the [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Maximum) value.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -50,7 +50,7 @@ The [ProgressCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## AnimationComplete
 
-The [AnimationComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnimationComplete) event triggers when animation is enabled and the progress value is reached.
+The [`AnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnimationComplete) event triggers when animation is enabled and the progress value is reached.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -69,7 +69,7 @@ The [AnimationComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## AnnotationRender
 
-The [AnnotationRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnnotationRender) event triggers before each annotation is rendered.
+The [`AnnotationRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnnotationRender) event triggers before each annotation is rendered.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar
@@ -88,7 +88,7 @@ The [AnnotationRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.P
 
 ## TextRender
 
-The [TextRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_TextRender) event triggers before the text is rendered.
+The [`TextRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_TextRender) event triggers before the text is rendered.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar

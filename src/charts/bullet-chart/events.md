@@ -12,7 +12,7 @@ This section describes the Bullet Chart component's events that will be triggere
 
 ## Loaded
 
-Triggers after the Bullet Chart component has been loaded.
+The `Loaded` event triggers after the Bullet Chart component has been loaded.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -40,7 +40,7 @@ Triggers after the Bullet Chart component has been loaded.
 
 ## OnPrintComplete
 
-Triggers before the rendered Bullet Chart starts printing.
+The [`OnPrintComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_OnPrintComplete) event triggers before the rendered Bullet Chart starts printing.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
@@ -71,7 +71,7 @@ Triggers before the rendered Bullet Chart starts printing.
 
 ## TooltipRender
 
-Triggers before the tooltip rendering.
+The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_TooltipRender) event triggers before the tooltip rendering.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
@@ -100,7 +100,7 @@ Triggers before the tooltip rendering.
 
 ## LegendRender
 
-Triggers before the each legend item rendering.
+The [`LegendRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_LegendRender) event triggers before the each legend item rendering.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|

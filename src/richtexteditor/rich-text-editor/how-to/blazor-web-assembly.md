@@ -23,19 +23,19 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 
 1. Choose **Create a new project** from the Visual Studio dashboard.
 
-![new project in aspnetcore blazor](./images/new-client-project.png)
+![new project in aspnetcore blazor](../images/new-client-project.png)
 
 1. Select **Blazor App** from the template and click **Next** button.
 
-![blazor template](images/blazor-template.png)
+![blazor template](../images/blazor-template.png)
 
 1. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
 
-![blazor template](images/blazor-template.png)
+![blazor template](../images/project-configuration.png)
 
 1. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core and ASP.NET Core 3.1** is selected at the top.
 
- ![select framework](images/blazor-select-template.png)
+ ![select framework](../images/blazor-select-template.png)
 
 > Note: ASP.NET Core 3.1 available in Visual Studio 2019 version.
 

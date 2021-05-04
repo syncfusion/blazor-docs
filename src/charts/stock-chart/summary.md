@@ -13,3 +13,4 @@
 * [Appearance](stock-chart/appearance.md)
 * [Print and Export](stock-chart/export-print.md)
 * [Events](stock-chart/events.md)
+* [Stock Events](stock-chart/stock-events.md)

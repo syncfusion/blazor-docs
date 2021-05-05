@@ -1,7 +1,7 @@
 # Summary
 
 * [Getting Started](toggle-switch-button/getting-started.md)
-* [Native Events](toggle-switch-button/native-event.md)
+* [Events](toggle-switch-button/native-event.md)
 * [Accessibility](toggle-switch-button/accessibility.md)
 * [Styles and Appearances](toggle-switch-button/style-and-appearance.md)
 * [Change Size](toggle-switch-button/how-to/change-size.md)

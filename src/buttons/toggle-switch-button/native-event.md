@@ -1,5 +1,29 @@
 # Overview
 
+## ValueChange Event
+
+The ValueChange event will triggers when Switch state has been changed by user interaction.
+
+```csharp
+
+@using Syncfusion.Blazor.Buttons
+
+<SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?" ></SfSwitch>
+
+@code{
+    private bool? isChecked = null;
+    private void Change(ChangeEventArgs<bool?> args)
+    {
+        // Your code here.
+    }
+}
+
+```
+
+> Toggle Switch Button has support for nullable boolean
+
+## Native Events
+
 You can define the native event using on `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
 The different event argument types for each event are,

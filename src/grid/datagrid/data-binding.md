@@ -98,6 +98,58 @@ To know about **ExpandoObject** data binding in Blazor DataGrid component, you c
 }
 ```
 
+### ExpandoObject Complex data binding
+
+You can achieve ExpandoObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples `CustomerID.Name` and `ShipCountry.Country` are complex data.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using System.Dynamic
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@ToolbarItems">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="CustomerID.Name" HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field="ShipCountry.Country" HeaderText="Ship Country"  Width="150"></GridColumn>
+        <GridColumn Field="Verified" HeaderText="Active" DisplayAsCheckBox="true" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
+    private List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" };
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select((x) =>
+        {
+            dynamic d = new ExpandoObject();
+            dynamic customerName = new ExpandoObject();
+            dynamic countryName = new ExpandoObject();
+            d.OrderID = 1000 + x;
+            customerName.Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+            d.CustomerID = customerName;
+            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+            d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
+            countryName.Country = (new string[] { "USA", "UK" })[new Random().Next(2)];
+            d.ShipCountry = countryName;
+            d.Verified = (new bool[] { true, false })[new Random().Next(2)];
+
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+
+    }
+}
+```
+
+> * you can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
+
+The following image represents ExpandoObject complex data binding
+![ExpandoObject Complex Data](./images/expandocomplexdata.png)
+
 ### DynamicObject binding
 
 Grid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the grid as list of  **DynamicObject**.
@@ -162,6 +214,73 @@ To know about **DynamicObject** data binding in Blazor DataGrid component, you c
     }
 }
 ```
+
+#### DynamicObject Complex data binding
+
+You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples `CustomerID.Name` and `ShipCountry.Country` are complex data.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using System.Dynamic
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@ToolbarItems">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="CustomerID.Name" HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" EditType="EditType.DatePickerEdit" Width="130"></GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="ShipCountry.Country" HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" };
+    public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 1075).Select((x) =>
+        {
+            dynamic d = new DynamicDictionary();
+            dynamic combo = new DynamicDictionary();
+            dynamic countryName = new DynamicDictionary();
+            d.OrderID = 1000 + x;
+            combo.Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+            d.CustomerID = combo;
+            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+            d.OrderDate = DateTime.Now.AddDays(-x);
+            countryName.Country = (new string[] { "USA", "UK" })[new Random().Next(2)];
+            d.ShipCountry = countryName;
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+}
+```
+
+> * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
+
+The following image represents DynamicObject complex data binding
+![DynamicObject Complex Data](./images/dynamiccomplexdata.png)
 
 ## Remote data
 

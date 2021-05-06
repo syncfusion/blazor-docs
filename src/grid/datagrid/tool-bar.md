@@ -301,7 +301,7 @@ Drop down list can be added by using dropdownlist in the tool bar section.
                 <Template>
                     <SfDropDownList TValue="string" TItem="Select" DataSource=@LocalData Width="200">
                         <DropDownListFieldSettings Text="text" Value="text"> </DropDownListFieldSettings>
-                        <DropDownListEvents TValue="string" ValueChange="OnChange"> </DropDownListEvents>
+                        <DropDownListEvents TValue="string" TItem="Select" ValueChange="OnChange"> </DropDownListEvents>
                     </SfDropDownList>
                 </Template>
             </ToolbarItem>
@@ -347,7 +347,7 @@ Drop down list can be added by using dropdownlist in the tool bar section.
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-    public async Task OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public async Task OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, Select> args)
     {
         await this.Grid.SelectRow(int.Parse(args.Value));
     }

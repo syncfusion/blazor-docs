@@ -3,7 +3,9 @@
 In this section, we have provided the list of events of the datagrid component which will be
 triggered for appropriate datagrid actions.
 
-The events should be provided to the datagrid using **GridEvents** component. All the events should be provided in a single **GridEvents** component. When using events of datagrid, **TValue** must be provided in the **GridEvents** component.
+The events should be provided to the datagrid using **GridEvents** component. When using events of datagrid, **TValue** must be provided in the **GridEvents** component.
+
+> * All the events should be provided in a single **GridEvents** component.
 
 ## OnActionBegin
 

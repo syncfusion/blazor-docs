@@ -251,3 +251,63 @@ In the below code example, the **Order ID** column search functionality is disab
 ```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
+## Immediate Searching
+
+By default, the datagrid will initiate searching operation after the Enter key is pressed. If you want to initiate the searching operation while typing the values in the search box, then you can invoke the Search method of the datagrid in the Input event of the SfTextBox.
+
+```csharp
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Navigations
+
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" AllowFiltering="true" AllowPaging="true">
+    <SfToolbar>
+        <ToolbarItems>
+            <ToolbarItem Type="ItemType.Input" Align="Syncfusion.Blazor.Navigations.ItemAlign.Right">
+                <Template>
+                    <SfTextBox Placeholder="Enter values to search" Input="OnInput"></SfTextBox>
+                    <span class="e-search-icon e-icons"></span>
+                </Template>
+            </ToolbarItem>
+        </ToolbarItems>
+    </SfToolbar>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Verified) HeaderText="Freight" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+
+    public List<Order> Orders { get; set; }
+
+    public void OnInput(InputEventArgs args)
+    {
+        this.DefaultGrid.Search(args.Value);
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public bool Verified { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Verified = (new bool[] { true, false })[new Random().Next(2)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+}
+```

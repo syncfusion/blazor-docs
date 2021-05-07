@@ -1,6 +1,6 @@
 # Getting started with Blazor File Upload component
 
-This section briefly explains about how to include a [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload/) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side File Upload](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly File Upload](./getting-started-with-blazor-webassembly) documentation pages for configuration specifications.
+This section briefly explains about how to include a [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload/) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side File Upload](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly File Upload](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 
 ## Importing Syncfusion Blazor component in the application
 

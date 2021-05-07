@@ -1,6 +1,6 @@
 # Getting Started
 
-This section briefly explains about how to include a [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side TextBox](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly TextBox](./getting-started-with-blazor-webassembly) documentation pages for configuration specifications.
+This section briefly explains about how to include a [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side Calendar](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly Calendar](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 
 To get start quickly with Blazor Calendar component, you can check on this video.
 

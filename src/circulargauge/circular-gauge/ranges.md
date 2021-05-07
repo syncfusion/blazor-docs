@@ -188,8 +188,6 @@ The ranges can be dragged over the axis line by clicking and dragging the same. 
 </SfCircularGauge>
 ```
 
-![Circular Gauge dragging range](./images/dragging-range.png)
-
 ## Multiple ranges
 
 You can add multiple ranges to an axis with the above customization as demonstrated as follows.

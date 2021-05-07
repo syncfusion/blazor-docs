@@ -4,7 +4,7 @@ Annotations are used to mark a specific area of interest in the map area with te
 
 ## Annotation
 
-By using the [`content`](../api/maps/annotation/#content-string) property of [`annotation`](../api/maps/annotation) object, you can either specify the ID of an element or specify the code to create a new element that needs to be displayed in the gauge area.
+By using the `ContentTemplate` property of [`MapsAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html) object, you can either specify the ID of an element or specify the code to create a new element that needs to be displayed in the gauge area.
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -31,7 +31,7 @@ By using the [`content`](../api/maps/annotation/#content-string) property of [`a
 
 ### Changing the z-order
 
-You can change the z-order of an annotation element using the [`zIndex`](../api/maps/annotation/#zindex-string) property.
+You can change the z-order of an annotation element using the [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_ZIndex) property.
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -56,7 +56,7 @@ You can change the z-order of an annotation element using the [`zIndex`](../api
 
 ### Positioning of annotation
 
-You can place an annotation anywhere in gauge area by specifying pixel values to the [`x`](../api/maps/annotation/#x-number) and [`y`](../api/maps/annotation/#y-number) properties.
+You can place an annotation anywhere in gauge area by specifying pixel values to the [`X`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_X) and [`Y`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_Y) properties.
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -81,7 +81,7 @@ You can place an annotation anywhere in gauge area by specifying pixel values to
 
 ### Alignment of annotation
 
-You can align annotations using the [`horizontalAlignment`](../api/maps/annotation/#horizontalalignment-string) and [`verticalAlignment`](../api/maps/annotation/#verticalalignment-string) properties.
+You can align annotations using the [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_VerticalAlignment) properties.
 
 ```csharp
 @using Syncfusion.Blazor.Maps

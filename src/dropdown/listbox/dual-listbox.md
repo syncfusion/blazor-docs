@@ -21,36 +21,28 @@ The following example illustrates how to move items from `Group A` to `Group B` 
 
 <div id="listbox1">
     <h4>Group A</h4>
-    <SfListBox TValue="string[]" @ref="listbox1" DataSource="@GroupA" Scope="@scope1" TItem="CountryCode">
+    <SfListBox TValue="string[]" DataSource="@GroupA" Scope="scope2" TItem="CountryCode" @attributes="listbox1Attr">
         <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
         <ListBoxToolbarSettings Items="@Items"></ListBoxToolbarSettings>
     </SfListBox>
 </div>
 <div id="listbox2">
     <h4>Group B</h4>
-    <SfListBox TValue="string[]" @ref="listbox2" Scope="scope2" DataSource="@GroupB" TItem="CountryCode">
+    <SfListBox TValue="string[]" Scope="scope1" DataSource="@GroupB" TItem="CountryCode" @attributes="listbox2Attr">
         <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
     </SfListBox>
 </div>
 
 @code {
-    SfListBox<string[], CountryCode> listbox1;
-    SfListBox<string[], CountryCode> listbox2;
-    SfListBox<string[], CountryCode> scope1;
-    SfListBox<string[], CountryCode> scope2;
-
-    public string[] Items = new string[] { "MoveUp", "MoveDown", "MoveTo", "MoveFrom", "MoveAllTo", "MoveAllFrom" };
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    private readonly Dictionary<string, object> listbox1Attr = new Dictionary<string, object>
     {
-        await base.OnAfterRenderAsync(firstRender);
-        if (firstRender)
-        {
-            scope1 = listbox2;
-            scope2 = listbox1;
-            StateHasChanged(); // Re-render component to update the ListBox component Scope references in each connected ListBox.
-        }
-    }
+        { "id", "scope1" }
+    };
+    private readonly Dictionary<string, object> listbox2Attr = new Dictionary<string, object>
+    {
+        { "id", "scope2" }
+    };
+    public string[] Items = new string[] { "MoveUp", "MoveDown", "MoveTo", "MoveFrom", "MoveAllTo", "MoveAllFrom" };
     public List<CountryCode> GroupA = new List<CountryCode>
   {
         new CountryCode{ Name = "Australia", Code = "AU" },

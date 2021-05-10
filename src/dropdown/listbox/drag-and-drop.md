@@ -61,26 +61,18 @@ The following sample illustrates how to drag and drop an item between two listbo
 
 <div id="listbox1">
     <h4>Group A</h4>
-    <SfListBox @ref="listbox1" TValue="string[]" DataSource="@GroupA" AllowDragAndDrop="true" Scope="@listbox2" Height="290px" TItem="CountryCode">
+    <SfListBox TValue="string[]" DataSource="@GroupA" AllowDragAndDrop="true" Scope="combined-list" Height="290px" TItem="CountryCode">
         <ListBoxFieldSettings Text="Name" Value="Code" />
     </SfListBox>
 </div>
 <div id="listbox2">
     <h4>Group B</h4>
-    <SfListBox @ref="listbox2" TValue="string[]" DataSource="@GroupB" Scope="@listbox1" AllowDragAndDrop="true" Height="290px" TItem="CountryCode">
+    <SfListBox TValue="string[]" DataSource="@GroupB" Scope="combined-list" AllowDragAndDrop="true" Height="290px" TItem="CountryCode">
         <ListBoxFieldSettings Text="Name" Value="Code" />
     </SfListBox>
 </div>
 
 @code {
-    SfListBox<string[], CountryCode> listbox1;
-    SfListBox<string[], CountryCode> listbox2;
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await base.OnAfterRenderAsync(firstRender);
-        if (firstRender)
-            StateHasChanged(); // Re-render component to update the ListBox component Scope references in each connected ListBox.
-    }
     public List<CountryCode> GroupA = new List<CountryCode>
   {
         new CountryCode{ Name = "Australia", Code = "AU" },

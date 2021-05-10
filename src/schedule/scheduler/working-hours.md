@@ -118,6 +118,46 @@ It is possible to show the week number count of a week in the header bar of the 
 }
 ```
 
+### Different options in showing week numbers
+
+By default, week numbers are shown in the Scheduler based on the first day of the year. However, the week numbers can be determined based on the following criteria by setting the `WeekRule` property with `CalendarWeekRule` enumeration.
+
+`FirstDay` – The first week of the year is calculated based on the first day of the year.
+
+`FirstFourDayWeek` – The first week of the year begins from the first week with four or more days.
+
+`FirstFullWeek` – The first week of the year begins when meeting the first day of the week (firstDayOfWeek) and the first day of the year.
+
+For more details refer to [this link](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.calendarweekrule?view=net-5.0#remarks)
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate" ShowWeekNumber=true WeekRule="System.Globalization.CalendarWeekRule.FirstFourDayWeek">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="2"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code{
+    DateTime CurrentDate = new DateTime(2020, 12, 28);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
 ## Set working hours
 
 Working hours indicates the work hour limit within the Scheduler, which is visually highlighted with an active color on work cells. The working hours can be set on Scheduler using the `ScheduleWorkhours` which includes the following sub-options,

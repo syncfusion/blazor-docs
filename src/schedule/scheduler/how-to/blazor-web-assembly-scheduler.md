@@ -2,96 +2,124 @@
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Scheduler in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
-**Note**: Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this help topic for more information.
+**Note**: Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 
-**Note**: .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
-
-Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later.
+>
+> **.NET 5.0** requires Visual Studio 2019 16.8 or later.
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
-1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
+1. Choose **Create a new project** from the Visual Studio dashboard.
 
-    ```bash
-      dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    ![new project in aspnetcore blazor](../images/new-project.png)
+
+2. Select **Blazor App** from the template, and then click **Next** button.
+
+    ![blazor template](../images/blazor-template.png)
+
+3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
+
+    ![asp.net core project configuration](../images/project-configuration.png)
+
+4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target.
+
+     ![select framework](../images/blazor-select-template.png)
+
+5. Choose **Blazor WebAssembly App** from the dashboard, and then click **Create** button to create a new Blazor WebAssembly application.
+
+    ![wasm template](../images/blazor-client-template.png)
+
+## Installing Syncfusion Blazor packages in the application
+
+You can use any one of the below standard to install the Syncfusion Blazor library in your application.
+
+### Using Syncfusion Blazor individual NuGet Packages [New standard]
+
+> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
+
+1. Now, install **Syncfusion.Blazor.Schedule** NuGet package to the new application using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
+
+2. Right-click the project,and then select Manage NuGet Packages.
+
+    ![nuget explorer](../images/nuget-explorer.png)
+
+3. Search **Syncfusion.Blazor.Schedule** keyword in the Browse tab and install **Syncfusion.Blazor.Schedule** NuGet package in the application.
+
+    ![select nuget](../images/select-nuget-schedule-package.png)
+
+4. The Syncfusion Blazor Schedule package will be included in the newly created project once the installation process is completed.
+
+5. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
+
+    ```html
+    <head>
+        ....
+        ....
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    </head>
     ```
 
-2. Choose **Create a new project** from the Visual Studio dashboard.
+    > Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
-   ![new project in aspnetcore blazor](../images/new-project.png)
+### Using Syncfusion.Blazor NuGet Package [Old standard]
 
-3. Select **Blazor App** from the template and click **Next** button.
+> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
-   ![blazor template](../images/blazor-template.png)
+1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and then select Manage NuGet Packages.
 
-4. Now, the project configuration window will popup. Click Create button to create a new project with the default project configuration.
+    ![nuget explorer](../images/nuget-explorer.png)
 
-   ![asp.net core project configuration](../images/project-configuration.png)
+2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
+    ![select nuget](../images/select-nuget-schedule-package.png)
 
-   ![wasm template](../images/blazor-client-template.png)
+3. The Syncfusion Blazor package will be installed in the project once the installation process is completed.
 
-**Note**: ASP.NET Core 3.1 available in Visual Studio 2019 version.
+4. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
 
-## Importing Syncfusion Blazor component in the application
+    ```html
+    <head>
+        ....
+        ....
+         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ```
+    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
 
-1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
+## Adding Syncfusion Blazor component and running the application
 
-   ![nuget explorer](../images/nuget-explorer.png)
+1. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-2. Search **Syncfusion.Blazor** keyword in the Browser tab and install **Syncfusion.Blazor** NuGet package in the application.
+    ```csharp
+    @using Syncfusion.Blazor
+    @using Syncfusion.Blazor.Schedule
+    ```
 
-   ![select nuget](../images/select-nuget-schedule-package.png)
+2. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-3. Install **Syncfusion.Blazor.Schedule** NuGet package to the application using the **NuGet Package Manager**.
+    ```csharp
+    using Syncfusion.Blazor;
 
-4. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
-
-```html
-<head>
-    ....
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-</head>
-```
-
-## Adding component package to the application
-
-Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Schedule** package.
-
-```csharp
-  @using Syncfusion.Blazor.Schedule
-```
-
-## Add SyncfusionBlazor service in Startup file
-
-Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
-
-```csharp
- using Syncfusion.Blazor;
-
- namespace BlazorApplication
-{
-    public class Startup
-{
-    ....
-    ....
-        public void ConfigureServices(IServiceCollection services)
+    namespace WebApplication1
     {
-        ....
-        ....
-        services.AddSyncfusionBlazor();
+        public class Program
+        {
+            public static async Task Main(string[] args)
+            {
+                ....
+                ....
+                builder.Services.AddSyncfusionBlazor();
+                await builder.Build().RunAsync();
+            }
+        }
     }
-}
-}
-
-```
+    ```
 
 ## Initialize the Scheduler component
 

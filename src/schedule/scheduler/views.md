@@ -413,6 +413,43 @@ By default the timeline year view orientation is set to Horizontal view. In this
 }
 ```
 
+#### Setting the first month of timeline year
+
+By default, months in timeline year view displayed from January to December. User can customize this default behavior with the help of scheduler [`FirstMonthOfYear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_FirstMonthOfYear) property. This property allows user to set the first month of the timeline year on Scheduler. User can set first month of timeline year by passing integer value to the `FirstMonthOfYear` property, whereby 1 is always denoted as January, 2 as February and so on. This property applicable only in timeline year views.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate" FirstMonthOfYear="4">
+    <ScheduleViews>
+        <ScheduleView Option="View.TimelineYear" Orientation="Orientation.Horizontal" DisplayName="Horizontal Timeline Year" IsSelected="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineYear" Orientation="Orientation.Vertical" DisplayName="Vertical Timeline Year"></ScheduleView>
+        <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    </ScheduleViews>
+</SfSchedule>
+@code{
+    DateTime CurrentDate = new DateTime(2021, 4, 3);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+    new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2021, 5, 13, 10, 0, 0) , EndTime = new DateTime(2021, 5, 13, 12, 0, 0) },
+    new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2021, 5, 15, 10, 0, 0) , EndTime = new DateTime(2021, 5, 15, 12, 0, 0) }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
 ### Year view
 
 The Year view shows a year calendar, where clicking on a particular day will display the appointments present on that date below the calendar. The day with appointments are differentiated with a circular dot below the date of the calendar.

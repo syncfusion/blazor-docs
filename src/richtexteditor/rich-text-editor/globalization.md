@@ -133,6 +133,22 @@ The Rich Text Editor provides an option to localize its strings; it is used for 
 | RichTextEditor_KeepFormat | Keep  |
 | RichTextEditor_PasteDialogOk  | OK  |
 | RichTextEditor_PasteDialogCancel  | Cancel  |
+| RichTextEditor_FormatsDropDownParagraph  | Paragraph |
+| RichTextEditor_FormatsDropDownCode  | Code |
+| RichTextEditor_FormatsDropDownQuotation  | Quotation |
+| RichTextEditor_FormatsDropDownHeading1  | Heading 1 |
+| RichTextEditor_FormatsDropDownHeading2  | Heading 2 |
+| RichTextEditor_FormatsDropDownHeading3  | Heading 3 |
+| RichTextEditor_FormatsDropDownHeading4  | Heading 4 |
+| RichTextEditor_FormatsDropDownHeading5  | Heading 5 |
+| RichTextEditor_FormatsDropDownHeading6  | Heading 6 |
+| RichTextEditor_FontNameSegoeUI  | Segoe UI |
+| RichTextEditor_FontNameArial  | Arial |
+| RichTextEditor_FontNameGeorgia  | Georgia |
+| RichTextEditor_FontNameImpact  | Impact |
+| RichTextEditor_FontNameTahoma  | Tahoma |
+| RichTextEditor_FontNameTimesNewRoman  | Times New Roman |
+| RichTextEditor_FontNameVerdana  | Verdana |
 
 The following sample code block demonstrates that the Rich Text Editor control rendered with `de-DE` German language.
 

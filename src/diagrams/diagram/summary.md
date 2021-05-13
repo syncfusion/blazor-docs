@@ -63,3 +63,4 @@
 * [Overview Control](diagram/overview.md)
 * [Diagram Methods](diagram/methods.md)
 * [Styling And Appearance](diagram/howTo/style.md)
+* [Blazor WebAssembly Diagram](diagram/howTo/blazor-web-assembly-diagram.md)

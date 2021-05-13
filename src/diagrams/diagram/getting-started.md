@@ -228,6 +228,8 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
 
 ![Diagram](images/Diagram.png)
 
+> You can refer to our [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Diagram example](https://blazor.syncfusion.com/demos/diagram/flowchart?theme=bootstrap4/) to understand how to present and manipulate data.
+
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)

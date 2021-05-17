@@ -151,16 +151,6 @@ The following table describes the result of applying some commonly used label fo
 </tr>
 </table>
 
-## Grouping Separator
-
-To separate groups of thousands, use [`UseGroupingSeparator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_UseGroupingSeparator) property in chart.
-
-{% aspTab template="chart/axis/double/group", sourceFiles="group.razor" %}
-
-{% endaspTab %}
-
-![GroupingSeparator](images/numeric-axis/group.png)
-
 ## Custom Label Format
 
 Axis also supports custom label format using placeholder like {value}°C, in which the value represent the axis

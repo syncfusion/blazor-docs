@@ -1,6 +1,6 @@
 # Field List
 
-The pivot table provides a built-in Field List similar to Microsoft Excel. It allows to add or remove fields and also rearrange them between different axes, including column, row, value, and filter along with sort and filter options dynamically at runtime.
+The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) provides a built-in Field List similar to Microsoft Excel. It allows to add or remove fields and also rearrange them between different axes, including column, row, value, and filter along with sort and filter options dynamically at runtime.
 
 The field list can be displayed in two different formats to interact with pivot table. They are:
 
@@ -433,3 +433,5 @@ The event [`FieldDropped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ```
 
 ![output](images/fielddropped_fieldlist.png)
+
+> You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

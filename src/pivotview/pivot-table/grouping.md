@@ -399,3 +399,5 @@ By right-clicking the appropriate header and selecting "**Ungroup**" from the co
 > When a specific field is removed from the report after ungrouping, its custom group fields will also be removed from the pivot table.
 
 ![output](images/custom-ungroup.png)
+
+> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

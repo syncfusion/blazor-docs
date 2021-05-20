@@ -232,37 +232,17 @@ Syntax: X & Y
 Syntax: condition ? then : else
 ```
 
-* `isNaN` – function that checks if the value is not a number.
+* `Min` – function that returns the minimum value.
 
 ```typescript
-Syntax: isNaN(value)
+Syntax: Min(number1, number2)
 ```
 
-* `!isNaN` – function that checks if the value is a number.
+* `Max` – function that returns the maximum value.
 
 ```typescript
-Syntax: isNaN(value)
+Syntax: Max(number1, number2)
 ```
-
-* `abs` – function that returns the absolute value of a number.
-
-```typescript
-Syntax: abs(number)
-```
-
-* `min` – function that returns the minimum value.
-
-```typescript
-Syntax: min(number1, number2)
-```
-
-* `max` – function that returns the maximum value.
-
-```typescript
-Syntax: max(number1, number2)
-```
-
- > Also, you can use JavaScript [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) object properties and methods directly to the formula.
 
 ```csharp
 @using Syncfusion.Blazor.PivotView
@@ -293,7 +273,7 @@ Syntax: max(number1, number2)
     </SfPivotView>
 
     @code{
-        public string totalPrice = "\"" + "Math.round(" + "\"" + "Sum(Amount)" + "\"" + ") > abs(" + "\"" + "Sum(Sold)" + "\"" + ") ? min(" + "\"" + "Sum(Amount)" + "\"" + "," + "\"" + "Sum(Sold)" + "\"" + ") : Math.sqrt(" + "\"" + "Sum(Sold)" + "\"" + ")";
+        public string totalPrice = "\"" + "Round(" + "\"" + "Sum(Amount)" + "\"" + ") > Abs(" + "\"" + "Sum(Sold)" + "\"" + ") ? Min(" + "\"" + "Sum(Amount)" + "\"" + "," + "\"" + "Sum(Sold)" + "\"" + ") : Sqrt(" + "\"" + "Sum(Sold)" + "\"" + ")";
         public List<ProductDetails> data { get; set; }
         protected override void OnInitialized()
         {
@@ -350,7 +330,7 @@ In the below sample, creating a calculated field without setting the format is r
     </SfPivotView>
 
     @code{
-        public string totalPrice = "\"" + "Math.round(" + "\"" + "Sum(Amount)" + "\"" + ") > abs(" + "\"" + "Sum(Sold)" + "\"" + ") ? min(" + "\"" + "Sum(Amount)" + "\"" + "," + "\"" + "Sum(Sold)" + "\"" + ") : Math.sqrt(" + "\"" + "Sum(Sold)" + "\"" + ")";
+        public string totalPrice = "\"" + "Round(" + "\"" + "Sum(Amount)" + "\"" + ") > Abs(" + "\"" + "Sum(Sold)" + "\"" + ") ? Min(" + "\"" + "Sum(Amount)" + "\"" + "," + "\"" + "Sum(Sold)" + "\"" + ") : Sqrt(" + "\"" + "Sum(Sold)" + "\"" + ")";
         public List<ProductDetails> data { get; set; }
         protected override void OnInitialized()
         {
@@ -365,3 +345,5 @@ In the below sample, creating a calculated field without setting the format is r
     }
 
 ```
+
+> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

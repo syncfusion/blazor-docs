@@ -682,3 +682,5 @@ In this demo, the revenue cost for each year is represented with trend icons.
 ```
 
 ![output](images/cell_template.png)
+
+> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

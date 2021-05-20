@@ -204,3 +204,5 @@ The Excel export allows pivot table data to be exported in **CSV** file format a
 ```
 
 ![output](images/csv-export.png)
+
+> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

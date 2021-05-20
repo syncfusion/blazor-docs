@@ -176,3 +176,5 @@ Interaction Keys |Description
 <kbd>Space</kbd> |If the current active element is a tree node or a checkbox element, it will be either checked or unchecked.
 <kbd>Enter</kbd> |When the Dialog button or any input (except text area) is in focus state, when pressing the <kbd>Enter</kbd> key, the click event associated with the primary button or button will be triggered. The <kbd>Enter</kbd> key will not be worked, when the dialog content contains any text area with initial focus.
 <kbd>Esc or Escape</kbd> |Closes the dialog.
+
+> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

@@ -16,7 +16,7 @@
 * [Free text annotations](pdfviewer/annotation/free-text-annotation.md)
 * [Comments](pdfviewer/annotation/comments.md)
 * [Import and Export annotations](pdfviewer/annotation/import-export-annotation.md)
-* [FormFilling](pdfviewer/form-filling.md)
+* [Form filling](pdfviewer/form-filling.md)
 * [Handwritten Signature](pdfviewer/hand-written-signature.md)
 * [Print](pdfviewer/print.md)
 * [Download](pdfviewer/download.md)
@@ -26,3 +26,4 @@
 * [Load PDF documents dynamically in Blazor PDF Viewer](pdfviewer/how-to/load-pdf-document-dynamically.md)
 * [View DOCX file in Blazor application](pdfviewer/how-to/view-docx-file-in-blazor-application.md)
 * [Unload the PDF document from Viewer](pdfviewer/how-to/unload-the-pdf-document-from-viewer.md)
+* [Import annotations as objects](pdfviewer/how-to/import-annotations-as-objects.md)

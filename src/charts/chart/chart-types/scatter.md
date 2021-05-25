@@ -1,8 +1,15 @@
-# Scatter Chart
+---
+title: "Scatter Chart in Blazor Charts component | Syncfusion"
+
+component: "Charts"
+
+description: "Learn here all about Scatter Chart of Syncfusion Charts (SfCharts) component and more."
+---
+# Scatter Chart in Blazor Charts (SfCharts)
 
 ## Scatter
 
-Scatter plot or [`scatter chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) plots data with two numeric parameters. To render a scatter series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `Scatter`.
+[`Scatter Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) plots data with two numeric parameters. To render a [`Scatter Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart), use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Scatter).
 
 {% aspTab template="chart/series/scatter-bubble/scatter", sourceFiles="scatter.razor" %}
 
@@ -10,57 +17,25 @@ Scatter plot or [`scatter chart`](https://www.syncfusion.com/blazor-components/b
 
 ![Scatter Charts](../images/chart-types-images/scatter.png)
 
-> Note: You can also explore our [`Blazor Scatter Chart Example`](https://blazor.syncfusion.com/demos/chart/scatter?theme=bootstrap4) to know how to plot data with two numeric parameters.
+> Refer to our [`Blazor Scatter Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Scatter Chart Example`](https://blazor.syncfusion.com/demos/chart/scatter?theme=bootstrap4) to know how to plot data with two numeric parameters.
 
-## Customization
+## Series Customization
 
-You can use the following properties to customize the scatter series.
+The following properties can be used to customize the [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Scatter) series.
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the scatter.
-* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – used to control the transparency of the chart series.
-* [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) - used to change the shape of the scatter series.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) – Specifies the color of the series.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – Specifies the opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill).
+* [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartShape.html) - Specifies the shape of the scatter series.
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% aspTab template="chart/series/scatter-bubble/scatter", sourceFiles="custom-scatter.razor" %}
 
-<SfChart DataSource="@MedalDetails">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
-    <ChartSeriesCollection>
-        <ChartSeries XName="X" YName="YValue" Type="ChartSeriesType.Scatter" Fill="blue" >
-        </ChartSeries>
-        <ChartSeries XName="X" YName="YValue1" Type="ChartSeriesType.Scatter" Fill="red" >
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code{
-    public class ChartData
-    {
-        public string X { get; set; }
-        public double YValue { get; set; }
-        public double YValue1 { get; set; }
-    }
-    public List<ChartData> MedalDetails = new List<ChartData>
-{
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
-    };
-}
-
-```
+{% endaspTab %}
 
 ![Custom Scatter Charts](../images/chart-types-images/custom-scatter.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](../data-labels)
+* [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

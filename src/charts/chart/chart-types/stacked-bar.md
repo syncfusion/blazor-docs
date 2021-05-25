@@ -1,68 +1,52 @@
-# Stacked bar
+---
+title: "Stacked Bar Chart in Blazor Charts component | Syncfusion"
 
-## Stacked
+component: "Charts"
 
-[`Blazor Stacked Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) is used to plots data points on top of each other using horizontal bars. To render a stacked bar series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `StackingBar`.
+description: "Learn here all about Stacked Bar Chart of Syncfusion Charts (SfCharts) component and more."
+---
+# Stacked Bar Chart in Blazor Charts (SfCharts)
+
+## Stacked Bar
+
+[`Blazor Stacked Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) is a chart with Y values stacked over one another in the series order. Shows the relation between individual values to the total sum of the points. To render a [`Stacked Bar`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StackingBar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingBar).
 
 {% aspTab template="chart/series/bar-charts/stackedbar", sourceFiles="stackedbar.razor" %}
 
 {% endaspTab %}
 
-![Stacked bar](../images/chart-types-images/stackedbar.png)
+![Stacked Bar](../images/chart-types-images/stackedbar.png)
 
-> Note: You can also explore our Blazor Stacked Bar Chart Example to knows how to render and configure the stacking bar type chart.
+> Refer to our [`Blazor Stacked Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Stacked Bar Chart Example`](https://blazor.syncfusion.com/demos/chart/stacked-bar?theme=bootstrap4) to know how to to render and configure the Stacked Bar type charts
 
-## Customization
+## Stacking Group
 
-You can use the following properties to customize the stacked bar series.
+[`StackingGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group the stacked bar and 100% stacked bar. Columns with same group name are stacked on top of each other.
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the stacked bar.
-* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – used to control the transparency of the chart series.
-* [``DashArray``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DashArray.html) – used to render stacked bar series with dashes.
-* [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Border) – used to render stacked bar with border.
+{% aspTab template="chart/series/bar-charts/group", sourceFiles="group.razor" %}
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% endaspTab %}
 
-<SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+![Stacking Group](../images/chart-types-images/groupbar.png)
 
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" DashArray="5,5" Fill="blue" Opacity="0.7" Type="ChartSeriesType.StackingBar">
-            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
-        </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" DashArray="5,5" Fill="red" Opacity="0.7" Type="ChartSeriesType.StackingBar">
-            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+## Series Customization
 
-@code{
-    public class ChartData
-    {
-        public string X { get; set; }
-        public double YValue { get; set; }
-        public double YValue1 { get; set; }
-    }
-    public List<ChartData> MedalDetails = new List<ChartData>
-{
-        new ChartData { X= "USA", YValue= 46, YValue1=56 },
-        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
-        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
-        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
-        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
-        new ChartData { X= "IND", YValue= 26, YValue1=16 },
-        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
-        new ChartData { X= "MEX", YValue= 34, YValue1=32},
-    };
-}
-```
+The following properties can be used to customize the [`Stacked Bar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingBar) series.
+
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) – Specifies the color of the series.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – Specifies the opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill).
+* [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series border.
+* [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
+
+{% aspTab template="chart/series/bar-charts/custom-bar", sourceFiles="custom-stacked-bar.razor" %}
+
+{% endaspTab %}
 
 ![Custom Stacked bar](../images/chart-types-images/custom-stacked-bar.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](../data-labels)
+* [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

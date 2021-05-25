@@ -1,25 +1,32 @@
-# Step Line
+---
+title: "Step Line Chart in Blazor Charts component | Syncfusion"
 
-## Step
+component: "Charts"
 
-This chart represents a set of points connected by horizontal and vertical lines. To render a step line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `StepLine`.
+description: "Learn here all about Step Line Chart of Syncfusion Charts (SfCharts) component and more."
+---
+# Step Line Chart in Blazor Charts (SfCharts)
 
-{% aspTab template="chart/series/line-charts/stepline", sourceFiles="stepline.razor" %}
+## Step Line
+
+[`Blazor Step Line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stepline-chart) is like a line chart except that the data points are connected using vertical and horizontal lines, showing a step-like progress. To render a [`Step Line`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stepline-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StepLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StepLine).
+
+T{% aspTab template="chart/series/line-charts/stepline", sourceFiles="stepline.razor" %}
 
 {% endaspTab %}
 
 ![Step Line](../images/chart-types-images/stepline.png)
 
-> Note: You can refer to our [`Blazor Step line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stepline-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Step line Chart Example`](https://blazor.syncfusion.com/demos/chart/step-line?theme=bootstrap4) to know how to render a step line series.
+> Refer to our [`Blazor Step Line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stepline-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Step Line Chart Example`](https://blazor.syncfusion.com/demos/chart/step-line?theme=bootstrap4) to know how to render a Step Line series.
 
-## Customization
+## Series Customization
 
-You can use the following properties to customize the step line series.
+The following properties can be used to customize the [`Step Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StepLine) series.
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the step line.
-* [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Width.html) – used to change the width of the step line.
-* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – used to control the transparency of the chart series.
-* [``DashArray``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DashArray.html) – used to render step line series with dashes.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) – Specifies the color of the series.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – Specifies the opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill).
+* [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Width.html) – Specifies the width of the line stroke.
+* [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of line stroke.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -58,11 +65,11 @@ You can use the following properties to customize the step line series.
 }
 ```
 
-![Custon Step Line](../images/chart-types-images/custom-stepline.png)
+![Step Line with series customization](../images/chart-types-images/custom-stepline.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](../data-labels)
+* [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

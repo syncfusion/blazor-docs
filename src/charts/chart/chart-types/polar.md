@@ -1,183 +1,129 @@
-# Polar Chart
+---
+title: "Polar Chart in Blazor Charts component | Syncfusion"
 
-To render a polar series, use series[`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `Polar`.
+component: "Charts"
 
-> Note: You can also explore our [`Blazor Polar Chart example`](https://blazor.syncfusion.com/demos/chart/polar-line) to knows how to render and configure the polar line type charts.
+description: "Learn here all about Polar Chart of Syncfusion Charts (SfCharts) component and more."
+---
+
+# Polar Chart in Blazor Charts (SfCharts)
+
+## Polar
+
+[`Polar`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) series visualizes data in terms of values and angles. It provides options for visual comparison between several quantitative or qualitative aspects of a situation. To render a polar chart, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) to [`Polar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar).
+
+> Refer to our [`Blazor Polar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Polar Chart Example`](https://blazor.syncfusion.com/demos/chart/polar-line) to know how to render and configure the Polar Line type chart.
 
 ## Draw Types
 
-Polar [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DrawType.html) property is used to change the series plotting type to line, column, area, range column, spline,
-scatter, stacking area and stacking column. The default value of DrawType is **Line**.
+ To change the series plotting type to  [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line),  [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column),  [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area),  [`RangeColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn),  [`Spline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline), [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter), [`StackingArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea) and [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn) use the Polar's [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property. [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) is set to [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line) by default.
 
 ### Line
 
-To render a line draw type, use series [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DrawType.html) as **Line**.
-[`IsClosed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~IsClosed.html) property specifies whether to join start and end point of
- a line series used in [`polar chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) to form a closed path. Default value of isClosed is true.
+To render a [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line). [`IsClosed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~IsClosed.html) property specifies whether to join start and end point of a line series used in [`Polar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) to form a closed path. Default value of [`IsClosed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~IsClosed.html) is **true**.
 
 {% aspTab template="chart/series/polar_radar/polar-line", sourceFiles="polar-line.razor" %}
 
 {% endaspTab %}
 
-![Line](../images/polar-radar/polar-line-razor.png)
+![Polar Chart with Line Draw Type](../images/polar-radar/polar-line-razor.png)
 
 ### Spline
 
-To render a spline line draw type, use series [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DrawType.html) as **Spline**.
+To render a [`Spline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`Spline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline).
 
 {% aspTab template="chart/series/polar_radar/polar-spline", sourceFiles="polar-spline.razor" %}
 
 {% endaspTab %}
 
-![Spline](../images/polar-radar/polar-spline-razor.png)
+![Polar Chart with Spline Draw Type](../images/polar-radar/polar-spline-razor.png)
 
 ### Area
 
-To render a area series, use [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DrawType.html) as **Area**.
+To render a [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area).
 
 {% aspTab template="chart/series/polar_radar/polar-area", sourceFiles="polar-area.razor" %}
 
 {% endaspTab %}
-
-![Area](../images/polar-radar/polar-area-razor.png)
+  
+![Polar Chart with Area Draw Type](../images/polar-radar/polar-area-razor.png)
 
 ### Stacked Area
 
-To render a stacked area, use [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DrawType.html) as **StackingArea**.
+To render a [`StackingArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`StackingArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea).
 
 {% aspTab template="chart/series/polar_radar/polar-stackedarea", sourceFiles="polar-stackedarea.razor" %}
 
 {% endaspTab %}
 
-![Stacked Area](../images/polar-radar/polar-stackedarea-razor.png)
+![Polar Chart with Stacked Area Draw Type](../images/polar-radar/polar-stackedarea-razor.png)
 
 ### Column
 
-To render a column draw type, use series [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DrawType.html) as **Column**.
+To render a [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column).
 
 {% aspTab template="chart/series/polar_radar/polar-column", sourceFiles="polar-column.razor" %}
 
 {% endaspTab %}
 
-![Column](../images/polar-radar/polar-column-razor.png)
+![Polar Chart with Column Draw Type](../images/polar-radar/polar-column-razor.png)
 
 ### Stacked Column
 
-To render a stacked column draw type, use series [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DrawType.html) as `StackingColumn`.
+To render a [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn).
 
 {% aspTab template="chart/series/polar_radar/polar-stackedcolumn", sourceFiles="polar-stackedcolumn.razor" %}
 
 {% endaspTab %}
 
-![Stacked Column](../images/polar-radar/polar-stackedcolumn-razor.png)
+![Polar Chart with Stacked Column Draw Type](../images/polar-radar/polar-stackedcolumn-razor.png)
 
 ### Range Column
 
-To render a range column draw type, use series [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DrawType.html) as **RangeColumn**.
+To render a [`RangeColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`RangeColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn).
 
 {% aspTab template="chart/series/polar_radar/polar-rangecolumn", sourceFiles="polar-rangecolumn.razor" %}
 
 {% endaspTab %}
 
-![Range Column](../images/polar-radar/polar-rangecolumn-razor.png)
+![Polar Chart with Range Column Draw Type](../images/polar-radar/polar-rangecolumn-razor.png)
 
 ### Scatter
-
-To render a scatter draw type, use series [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DrawType.htmll) as **Scatter**.
+  
+To render a [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter).
 
 {% aspTab template="chart/series/polar_radar/polar-scatter", sourceFiles="polar-scatter.razor" %}
 
 {% endaspTab %}
 
-![Scatter](../images/polar-radar/polar-scatter-razor.png)
+![Polar Chart with Scatter Draw Type](../images/polar-radar/polar-scatter-razor.png)
 
-## Customization
+## Series Customization
 
 ### Start Angle
 
-You can customize the start angle of the polar series using
-[`StartAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~StartAngle.html) property. By default, `StartAngle` is **0 degree**.
+Customize the start angle of the [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar) using [`StartAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_StartAngle) property. By default, [`StartAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_StartAngle) value is **0**.
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% aspTab template="chart/series/polar_radar/start-angle", sourceFiles="start-angle.razor" %}
 
-<SfChart>
-    <ChartPrimaryXAxis StartAngle="270" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesReports" XName="X" Width="2" YName="Y"
-                     Type="ChartSeriesType.Polar" DrawType="ChartDrawType.Line">
-            <ChartMarker Height="10" Width="10" Visible="true" Shape="ChartShape.Pentagon"></ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+{% endaspTab %}
 
-@code{
-    public class ChartData
-    {
-        public double X { get; set; }
-        public double Y { get; set; }
-    }
-
-    public List<ChartData> SalesReports = new List<ChartData>
-{
-        new ChartData{ X= 2005, Y= 28 },
-        new ChartData{ X= 2006, Y= 25 },
-        new ChartData{ X= 2007, Y= 26 },
-        new ChartData{ X= 2008, Y= 27 },
-        new ChartData{ X= 2009, Y= 32 },
-        new ChartData{ X= 2010, Y= 35 },
-        new ChartData{ X= 2011, Y= 30 }
-    };
-}
-```
-
-![Start Angle](../images/polar-radar/polar-start-angle.png)
+![Polar Chart with Start Angle](../images/polar-radar/polar-start-angle.png)
 
 ### Coefficient in axis
 
-You can customize the radius of the polar series using
-[`Coefficient`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Coefficient.html) property. By default, `Coefficient` is **100**.
+Customize the radius of the [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar) using [`Coefficient`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Coefficient) property. By default [`Coefficient`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Coefficient) value is **100**.
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% aspTab template="chart/series/polar_radar/co-efficient", sourceFiles="co-efficient.razor" %}
 
-<SfChart>
-    <ChartPrimaryXAxis Coefficient="40" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesReports" XName="X" Width="2" YName="Y"
-                     Type="ChartSeriesType.Polar" DrawType="ChartDrawType.Line">
-            <ChartMarker Height="10" Width="10" Visible="true" Shape="ChartShape.Pentagon"></ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+{% endaspTab %}
 
-@code{
-    public class ChartData
-    {
-        public double X { get; set; }
-        public double Y { get; set; }
-    }
+![Polar Chart with Coefficient](../images/polar-radar/polar-co-efficient.png)
 
-    public List<ChartData> SalesReports = new List<ChartData>
-{
-        new ChartData{ X= 2005, Y= 28 },
-        new ChartData{ X= 2006, Y= 25 },
-        new ChartData{ X= 2007, Y= 26 },
-        new ChartData{ X= 2008, Y= 27 },
-        new ChartData{ X= 2009, Y= 32 },
-        new ChartData{ X= 2010, Y= 35 },
-        new ChartData{ X= 2011, Y= 30 }
-    };
-}
-```
-
-![Coefficient](../images/polar-radar/polar-co-efficient.png)
-
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](../data-labels)
+* [Data Label](../data-labels)
+
 * [Tooltip](../tool-tip)

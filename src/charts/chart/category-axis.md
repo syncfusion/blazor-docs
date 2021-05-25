@@ -1,20 +1,22 @@
-# Category Axis
+---
+title: "Category Axis  in Blazor Charts component | Syncfusion"
 
-<!-- markdownlint-disable MD036 -->
+component: "Charts"
 
-Category axis is used to represent string values instead of numbers.
+description: "Learn here all about Category Axis of Syncfusion Charts (SfCharts) component and more."
+---
+
+# Category Axis in Blazor Charts (SfCharts)
+
+The category axis is used to represent string values instead of integers.
 
 {% aspTab template="chart/axis/category/column", sourceFiles="column.razor" %}
 
 {% endaspTab %}
 
-<!-- markdownlint-disable MD036 -->
-
 ## Labels Placement
 
-<!-- markdownlint-disable MD036 -->
-
-By default, the category labels are placed between the ticks, which can also be placed on the ticks using the [`LabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelPlacement) property.
+The category labels are positioned between the ticks by default, but the [`LabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelPlacement) property allows them to be placed on the ticks as well with the [`BetweenTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_BetweenTicks) and [`OnTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_OnTicks) options.
 
 {% aspTab template="chart/axis/category/placement", sourceFiles="placement.razor" %}
 
@@ -24,9 +26,7 @@ By default, the category labels are placed between the ticks, which can also be 
 
 ## Range and Interval
 
-Range of the category axis can be customized using the [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Minimum),
-[`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Maximum) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Interval.html) properties of
-the axis.
+The [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum), and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties of the axis can be used to customize the range of the [`Category`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis.
 
 {% aspTab template="chart/axis/category/range", sourceFiles="range.razor" %}
 
@@ -36,8 +36,7 @@ the axis.
 
 ## Indexed category axis
 
-The category axis can also be rendered on the basis of data source index values. This can be achieved by defining the
-[`IsIndexed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_IsIndexed) property as **true** in the axis.
+The data source index values can also be used to render the category axis. This can be achieved by setting the [`IsIndexed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_IsIndexed) property in the axis to **true**.
 
 {% aspTab template="chart/axis/category/index", sourceFiles="index.razor" %}
 
@@ -45,10 +44,10 @@ The category axis can also be rendered on the basis of data source index values.
 
 ![Indexed category axis](images/category-axis/index-category.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 
-* [Data label](./data-labels)
+* [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
 * [Marker](./data-markers)

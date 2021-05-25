@@ -1,9 +1,16 @@
-# Hilo
+---
+title: "Hilo Chart in Blazor Charts component | Syncfusion"
 
-Hilo Series illustrates the price movements in stock using the high and low values.
-To render a Hilo series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as **Hilo**.
+component: "Charts"
 
-Hilo series requires 3 fields (x, high and low) to show the high and low price in the stock.
+description: "Learn here all about Hilo Chart of Syncfusion Charts (SfCharts) component and more."
+---
+
+# Hilo Chart in Blazor Charts (SfCharts)
+
+## Hilo
+
+[`Hilo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Hilo) series illustrates the price movements in stock using the high and low values and it can be rendered by specifying the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Hilo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Hilo). Hilo series requires three fields (x, high and low) to show the high and low price in the stock.
 
 {% aspTab template="chart/series/financial-charts/hilo", sourceFiles="hilo.razor" %}
 
@@ -11,21 +18,20 @@ Hilo series requires 3 fields (x, high and low) to show the high and low price i
 
 ![Hilo](../images/financial-types/hilo.png)
 
-> Note: You can refer to our [`Blazor Hilo Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Hilo Chart example`](https://blazor.syncfusion.com/demos/chart/hilo) to knows how to render and configure the Hilo type series.
+> Refer to our [`Blazor Hilo Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page to know about its other groundbreaking feature representations and also explore our [`Blazor Hilo Chart example`](https://blazor.syncfusion.com/demos/chart/hilo) to know how to render and configure the Hilo type series.
 
-## Customization
+## Series Customization
 
-You can use the following properties to customize the hilo series.
+The following properties can be used to customize the [`Hilo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Hilo) series.
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the hilo.
-* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – used to control the transparency of the chart series.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) – Specifies the color of the series.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – Specifies the opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill).
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@StockDetails" XName="X" High="High" Low="Low" Fill="blue" Type="ChartSeriesType.Hilo">
         </ChartSeries>
@@ -40,7 +46,6 @@ You can use the following properties to customize the hilo series.
         public double High { get; set; }
         public double Low { get; set; }
     }
-
     public List<Data> StockDetails = new List<Data> {
             new Data{ X= "Jan", Low= 87, High= 200 },
             new Data{ X= "Feb", Low= 45, High= 135 },
@@ -58,11 +63,11 @@ You can use the following properties to customize the hilo series.
 }
 ```
 
-![Custom Hilo Charts](../images/chart-types-images/custom-hilo.png)
+![Hilo Charts with Series Customization](../images/chart-types-images/custom-hilo.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our Blazor [`Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our Blazor [`Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](../data-labels)
+* [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

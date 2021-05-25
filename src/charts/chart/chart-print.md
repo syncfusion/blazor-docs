@@ -1,9 +1,16 @@
-# Print
+---
+title: "Print & Export in Blazor Charts component | Syncfusion"
+
+component: "Charts"
+
+description: "Learn here all about Print & Export of Syncfusion Charts (SfCharts) component and more."
+---
+
+# Print & Export in Blazor Charts (SfCharts)
 
 ## Print
 
-Rendered chart can be printed directly from the browser by calling [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Print) method.
-You can pass array of elements ID or element to this method. By default it take element of the chart.
+The [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Print) method can be used to print a rendered chart directly from the browser. This method accepts an array of elements' ID or a single element. By default, it picks a chart element.
 
 {% aspTab template="chart/getting-started/print", sourceFiles="print.razor" %}
 
@@ -11,22 +18,20 @@ You can pass array of elements ID or element to this method. By default it take 
 
 ## Export
 
-The rendered chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method in chart. The input parameters for this method are `Export Type` for format and `FileName` for result.
+Using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method in chart, the rendered chart can be exported to [`JPEG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [`SVG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) format. [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) Type for format and `FileName` for result are the input parameters for this method.
 
 The optional parameters for this method are,
-* `Orientation` - Portrait or landscape,
-* `Controls` - Collections of controls for multiple export,
-* `Width` - Width of chart export, and
-* `Height` - Height of chart export.
+* `Orientation` - Specifies the portrait or landscape orientation of the page.
+* `AllowDownload` - Specifies whether to download or not.
 
 {% aspTab template="chart/getting-started/export", sourceFiles="export.razor" %}
 
 {% endaspTab %}
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](./data-labels)
+* [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
 * [Legend](./legend)

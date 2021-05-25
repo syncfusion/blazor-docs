@@ -1,25 +1,32 @@
-# Column Charts
+---
+title: "Column Chart in Blazor Charts component | Syncfusion"
+
+component: "Charts"
+
+description: "Learn here all about Column Chart of Syncfusion Charts (SfCharts) component and more."
+---
+
+# Column Chart in Blazor Charts (SfCharts)
 
 ## Column
 
-[`Blazor Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare frequency, count, total, or average of data in different categories. It is ideal for showing variations in the value of an item over time.
+[`Column Charts`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories. It is ideal for showing variations in the value of an item over time.
 
 {% aspTab template="chart/series/column-charts/column", sourceFiles="column.razor" %}
 
 {% endaspTab %}
 
-> Note: You can also explore our [`Blazor Column Chart Example`](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare frequency, count, total, or average of data in different categories.
+> Refer to our Blazor [`Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our Blazor [`Column Charts Example`](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
 
 ## Column Space and Width
 
-You can use the [`ColumnSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnSpacing) and [`ColumnWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnWidth) properties to customize the space between the columns.
+[`ColumnSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnSpacing) and [`ColumnWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnWidth) properties are used to customize the space between the columns.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Column"  ColumnSpacing="0.2" ColumnWidth="0.2" >
         </ChartSeries>
@@ -33,7 +40,7 @@ You can use the [`ColumnSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusi
         public double Y { get; set; }
     }
     public List<ChartData> MedalDetails = new List<ChartData>
-{
+    {
         new ChartData { X= "South Korea", Y= 39.4 },
         new ChartData { X= "India", Y= 61.3 },
         new ChartData { X= "Pakistan", Y= 20.4 },
@@ -50,23 +57,22 @@ You can use the [`ColumnSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusi
 }
 ```
 
-![Column](../images/chart-types-images/column-space.png)
+![Column chart with space and width](../images/chart-types-images/column-space.png)
 
-## Customization
+## Series Customization
 
-You can use the following properties to customize the column series.
+The following properties can be used to customize the [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column) series.
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the column.
-* `Opacity` – used to control the transparency of the chart series.
-* [``DashArray``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DashArray.html) – used to render column series with dashes.
-* `Border` – used to render column with border.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) – Specifies the color of the series.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – Specifies the opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill).
+* [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series.
+* [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Column" Opacity="0.5"
                      DashArray="5,5" Fill="blue" >
@@ -81,7 +87,7 @@ You can use the following properties to customize the column series.
         public double Y { get; set; }
     }
     public List<ChartData> MedalDetails = new List<ChartData>
-{
+    {
         new ChartData { X= "South Korea", Y= 39.4 },
         new ChartData { X= "India", Y= 61.3 },
         new ChartData { X= "Pakistan", Y= 20.4 },
@@ -98,11 +104,11 @@ You can use the following properties to customize the column series.
 }
 ```
 
-![Column](../images/chart-types-images/column-custom.png)
+![Column Chart with Series Customization](../images/chart-types-images/column-custom.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](../data-labels)
+* [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

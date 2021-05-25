@@ -1,8 +1,15 @@
-# Step Area
+---
+title: "Step Area Chart in Blazor Charts component | Syncfusion"
+
+component: "Charts"
+
+description: "Learn here all about Step Area Chart of Syncfusion Charts (SfCharts) component and more."
+---
+# Step Area Chart in Blazor Charts (SfCharts)
 
 ## Step Area
 
-Like step line chart, but with the areas connected with lines shaded. To render a step area series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as **StepArea**.
+[`Blazor Step Area chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) is like a step line chart except that the area connected through vertical and horizontal lines are shaded with color. To render a [`Step Area`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StepArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StepArea).
 
 {% aspTab template="chart/series/area-charts/steparea", sourceFiles="steparea.razor" %}
 
@@ -10,14 +17,16 @@ Like step line chart, but with the areas connected with lines shaded. To render 
 
 ![Step Area](../images/chart-types-images/steparea.png)
 
-## Customization
+> Refer to our [`Blazor Step Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Step Area Chart`](https://blazor.syncfusion.com/demos/chart/step-area?theme=bootstrap4) Example to know how to render and configure the Step Area type chart.
 
-You can use the following properties to customize the step area series.
+## Series Customization
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the step area.
-* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – used to control the transparency of the chart series.
-* [``DashArray``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DashArray.html) – used to render step area series with dashes.
-* [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Border) – used to render step area series with border.
+The following properties can be used to customize the [`Step Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StepArea) series.
+
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) – Specifies the color of the series.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – Specifies the opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill).
+* [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series border.
+* [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -51,11 +60,11 @@ You can use the following properties to customize the step area series.
 }
 ```
 
-![Custom Step Area](../images/chart-types-images/custom-step-area.png)
+![Step Area with series customization](../images/chart-types-images/custom-step-area.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](../data-labels)
+* [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

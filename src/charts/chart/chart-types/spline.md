@@ -1,8 +1,15 @@
-# Spline
+---
+title: "Spline Chart in Blazor Charts component | Syncfusion"
+
+component: "Charts"
+
+description: "Learn here all about Spline Chart of Syncfusion Charts (SfCharts) component and more."
+---
+# Spline Chart in Blazor Charts (SfCharts)
 
 ## Spline
 
-This chart connects the data points with smooth curves. To render a spline series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as `Spline`.
+[`Spline Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart) connects the data points with smooth curves. To render a [`Spline Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart), use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Spline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Spline).
 
 {% aspTab template="chart/series/line-charts/spline", sourceFiles="spline.razor" %}
 
@@ -10,102 +17,36 @@ This chart connects the data points with smooth curves. To render a spline serie
 
 ![Spline](../images/chart-types-images/spline.png)
 
-> Note: You can refer to our [`Blazor Spline Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Spline Chart Example`](https://blazor.syncfusion.com/demos/chart/spline?theme=bootstrap4) to know how to connects the data points with smooth curves.
+> Refer to our [`Blazor Spline Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Spline Chart Example`](https://blazor.syncfusion.com/demos/chart/spline?theme=bootstrap4) to know how to connects the data points with smooth curves.
 
-## SplineType
+## Type of Spline
 
-You can configure the spline type using [`SplineType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SplineType) property. The spline types are `Clamped`, `Cardinal`
-, `Monotonic` and `Natural`.
+To specify the type of [`Spline Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Spline) use [`SplineType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SplineType) property. The spline [`types`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html) are **Clamped**, **Cardinal**, **Monotonic** and **Natural**.
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% aspTab template="chart/series/line-charts/spline", sourceFiles="splinetype.razor" %}
 
-<SfChart Title="Olympic Medals" Width="60%">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Spline" SplineType="SplineType.Cardinal">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code{
-    public class ChartData
-    {
-        public string X;
-        public double Y;
-    }
-    public List<ChartData> MedalDetails = new List<ChartData>
-{
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
-    };
-}
-```
+{% endaspTab %}
 
 ![Cardinal](../images/chart-types-images/cardinal.png)
 
-## Customization
+## Series Customization
 
-You can use the following properties to customize the spline series.
+The following properties can be used to customize the [`Spline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Spline) series.
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Fill.html) – used to change the color of the spline.
-* [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Width.html) – used to change the width of the spline.
-* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – used to control the transparency of the chart series.
-* [``DashArray``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~DashArray.html) – used to render spline series with dashes.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) – Specifies the color of the series.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – Specifies the opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill).
+* [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Width.html) – Specifies the width of the line stroke.
+* [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of line stroke.
 
-```csharp
-@using Syncfusion.Blazor.Charts
+{% aspTab template="chart/series/line-charts/spline", sourceFiles="custom-spline.razor" %}
 
-<SfChart Title="Olympic Medals" Width="60%">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Width="3" Opacity="0.5"
-                     DashArray="5,5" Fill="blue" Type="ChartSeriesType.Spline">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code{
-    public class ChartData
-    {
-        public string X;
-        public double Y;
-    }
-    public List<ChartData> MedalDetails = new List<ChartData>
-{
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
-    };
-}
-```
+{% endaspTab %}
 
 ![Custom Spline](../images/chart-types-images/custom-spline.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](../data-labels)
+* [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

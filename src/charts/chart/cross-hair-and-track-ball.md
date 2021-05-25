@@ -1,7 +1,14 @@
-# Crosshair
+---
+title: "Crosshair in Blazor Charts component | Syncfusion"
 
-Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position. Crosshair lines can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Enable)
-property in the [`ChartCrosshairSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html).
+component: "Charts"
+
+description: "Learn here all about Crosshair of Syncfusion Charts (SfCharts) component and more."
+---
+
+# Crosshair in Blazor Charts (SfCharts)
+
+Inspect or target any data point on mouse move or touch position with the help of crosshair. A thin horizontal line and a vertical line indicate the data point with the information displayed in an interactive tooltip. Crosshair lines can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Enable) property in the [`ChartCrosshairSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html).
 
 {% aspTab template="chart/user-interaction/crosshair-trackball/crosshair", sourceFiles="crosshair.razor" %}
 
@@ -11,7 +18,7 @@ property in the [`ChartCrosshairSettings`](https://help.syncfusion.com/cr/blazo
 
 ## Tooltip for axis
 
-Tooltip label for an axis can be enabled by setting `Enable` property to **true** of [`ChartAxisCrosshairTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisCrosshairTooltip.html) in the corresponding axis.
+The [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html#Syncfusion_Blazor_Charts_ChartCommonCrosshairTooltip_Enable) property of [`ChartAxisCrosshairTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisCrosshairTooltip.html) in the corresponding axis can be set to **true** to enable the tooltip label for that axis.
 
 {% aspTab template="chart/user-interaction/crosshair-trackball/axis-tooltip", sourceFiles="axis-tooltip.razor" %}
 
@@ -19,8 +26,7 @@ Tooltip label for an axis can be enabled by setting `Enable` property to **true*
 
 ## Customization
 
-The `Fill` and `TextStyle` property of the `CrosshairTooltip` is used to customize the background color and font style of the crosshair label respectively. Color and width of the crosshair line can be customized by using the
-[`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Line) property in the crosshair.
+The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html#Syncfusion_Blazor_Charts_ChartCommonCrosshairTooltip_Fill) and [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html#Syncfusion_Blazor_Charts_ChartCommonCrosshairTooltip_TextStyle) property of the [`CrosshairTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html) is used to customize the background color and font style of the crosshair label respectively. Color and width of the crosshair line can be customized by using the [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Line) property in the crosshair.
 
 {% aspTab template="chart/user-interaction/crosshair-trackball/custom", sourceFiles="custom.razor" %}
 
@@ -28,11 +34,7 @@ The `Fill` and `TextStyle` property of the `CrosshairTooltip` is used to customi
 
 ## Trackball
 
-Trackball is used to track a data point closest to the mouse or touch position. Trackball marker indicates the
-closest point and trackball tooltip displays the information about the point.
-
-Trackball can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Enable) property of the crosshair to true and
-[`Shared`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Shared) property in `Tooltip` to **true** in chart.
+The trackball is used to track the data point that is closest to the mouse or touch position. The closest point is indicated by a trackball marker, and the information about the point is displayed via a trackball tooltip. Trackball can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Enable) property of the [`ChartCrosshairSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html) to **true** and [`Shared`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Shared) property in [`Tooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true** in chart.
 
 {% aspTab template="chart/user-interaction/crosshair-trackball/trackball", sourceFiles="trackball.razor" %}
 
@@ -40,10 +42,10 @@ Trackball can be enabled by setting the [`Enable`](https://help.syncfusion.com/c
 
 ![Trackball](images/crosshair/trackball-razor.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
-* [Data label](./data-labels)
+* [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
 * [Marker](./data-markers)

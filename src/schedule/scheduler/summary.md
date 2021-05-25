@@ -20,6 +20,7 @@
 * [Globalization](scheduler/localization.md)
 * [Accessibility](scheduler/accessibility.md)
 * [Events](scheduler/events.md)
+* [Context Menu](scheduler/context-menu.md)
 * [Style And Appearance](scheduler/scheduler-styling.md)
 * [Blazor WebAssembly Scheduler](scheduler/how-to/blazor-web-assembly-scheduler.md)
 * [Open Editor Window on Single Click](scheduler/how-to/open-editor-window-on-single-click.md)

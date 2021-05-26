@@ -211,6 +211,109 @@ The Gantt Chart component can be bound with self-referential data by mapping the
 }
 ```
 
+### DynamicObject binding
+
+Gantt Chart is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bind data to the gantt chart as list of  **DynamicObject**.
+
+**DynamicObject** can be bound to gantt chart by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DataSource) property. Gantt Chart can also perform all kind of supported data operations and editing in DynamicObject.
+
+> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+@using System.Dynamic
+
+<SfGantt DataSource="@GanttDynamicData" Height="500px" Width="100%" HighlightWeekends="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Progress="Progress" Duration="Duration" ParentID="ParentId"></GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" Width="250"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration" Width="250"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" Format="@NumberFormat" Width="250"></GanttColumn>
+    </GanttColumns>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true" ShowDeleteConfirmDialog="true"></GanttEditSettings>
+</SfGantt>
+
+@code {
+    SfGantt<DynamicDictionary> GanttChart;
+    public string NumberFormat = "C";
+    public static List<DynamicDictionary> Data = new List<DynamicDictionary>();
+    public List<DynamicDictionary> GanttDynamicData { get; set; }
+    public static int ParentRecordID { get; set; }
+    public static int ChildRecordID { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.GanttDynamicData = GetData().ToList();
+    }
+
+    public static List<DynamicDictionary> GetData()
+    {
+        Data.Clear();
+        ParentRecordID = 0;
+        ChildRecordID = 0;
+        for (var i = 1; i <= 10; i++)
+        {
+            Random ran = new Random();
+            DateTime start = new DateTime(2021, 01, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
+            dynamic ParentRecord = new DynamicDictionary();
+            ParentRecord.TaskId = ++ParentRecordID;
+            ParentRecord.TaskName = "Parent Task " + i;
+            ParentRecord.StartDate = startingDate;
+            ParentRecord.Progress = ran.Next(10, 100);
+            ParentRecord.Duration = ParentRecordID % 2 == 0 ? (32).ToString() : (76).ToString();
+            ParentRecord.ParentId = null;
+            Data.Add(ParentRecord);
+            AddChildRecords(ParentRecordID);
+        }
+        return Data;
+    }
+
+    public static void AddChildRecords(int ParentId)
+    {
+        for (var i = 1; i < 4; i++)
+        {
+            Random ran = new Random();
+            DateTime start = new DateTime(2021, 01, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
+            dynamic ChildRecord = new DynamicDictionary();
+            ChildRecord.TaskId = ++ParentRecordID;
+            ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
+            ChildRecord.StartDate = startingDate;
+            ChildRecord.Progress = ran.Next(10, 100);
+            ChildRecord.Duration = ParentRecordID % 3 == 0 ? (64).ToString() : (98).ToString();
+            ChildRecord.ParentId = ParentId;
+            Data.Add(ChildRecord);
+        }
+    }
+
+    public class DynamicDictionary : DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+}
+```
+
 ### ExpandoObject Binding
 
 Gantt is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the Gantt as list of ExpandoObject.
@@ -291,6 +394,22 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
     }
 }
 ```
+
+> Herewith we have provided list of reserved properties and the purpose used in Gantt Chart. We recommend to avoid these reserved properties for Internal purpose(To get rid of conflicts).
+
+Reserved keywords | Purpose
+-----|-----
+ganttProperties | Specifies the task data details
+TaskMode | Specifies the mode of task
+childRecords | Specifies the childRecords of a parentData
+hasChildRecords | Specifies whether the record contains child records
+expanded | Specifies whether the child records are expanded
+parentRecord | Specifies the parentItem of childRecords
+index | Specifies the index of current record
+level | Specifies the hierarchy level of record
+uniqueID | Specifies the unique ID of a record
+parentUniqueID | Specifies the parent Unique ID of a record
+checkboxState | Specifies the checkbox state of a record
 
 ## Remote Data
 

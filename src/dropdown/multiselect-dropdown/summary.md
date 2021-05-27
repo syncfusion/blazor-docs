@@ -9,3 +9,4 @@
 * [Style and appearance](multiselect-dropdown/style.md)
 * [Localization](multiselect-dropdown/localization.md)
 * [Accessibility](multiselect-dropdown/accessibility.md)
+* [DropDownList options with tooltip](multiselect-dropdown/how-to/tooltip.md)

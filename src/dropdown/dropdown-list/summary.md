@@ -7,3 +7,4 @@
 * [Style and appearance](dropdown-list/style.md)
 * [Localization](dropdown-list/localization.md)
 * [Accessibility](dropdown-list/accessibility.md)
+* [DropDownList options with tooltip](dropdown-list/how-to/tooltip.md)

@@ -8,3 +8,4 @@
 * [Style and appearance](combobox/style.md)
 * [Native Events](combobox/native-events.md)
 * [Accessibility](combobox/accessibility.md)
+* [DropDownList options with tooltip](combobox/how-to/tooltip.md)

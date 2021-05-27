@@ -524,3 +524,101 @@ The events from external calendars (ICS files) can be imported into Scheduler by
     }
 </style>
 ```
+
+## How to print the Scheduler element
+
+The Scheduler allows you to print the Scheduler element by using the `Print` method. The Print method works in two ways. You can find it below.
+
+* Using Print method without options.
+* Using a Print method with options.
+
+### Using Print method without options
+
+You can print the Schedule element with the current view by using the `Print` method without passing the `PrintModel` options. The following example shows how to print the Scheduler using the `Print` method without passing the `PrintModel` options.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnPrintClick">Print</SfButton>
+
+<SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    SfSchedule<AppointmentData> ScheduleRef;
+    DateTime CurrentDate = new DateTime(2020, 1, 10);
+    public async void OnPrintClick()
+    {
+        await ScheduleRef.Print();
+    }
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", Location = "Dallas",  StartTime = new DateTime(2020, 3, 10, 9, 30, 0), EndTime = new DateTime(2020, 3, 10, 11, 0, 0)  },
+        new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", Location = "Texas", StartTime = new DateTime(2020, 3, 13, 12, 0, 0), EndTime = new DateTime(2020, 3, 13, 14, 0, 0)  },
+        new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", Location = "Australia", StartTime = new DateTime(2020, 3, 11, 10, 30, 0), EndTime = new DateTime(2020, 3, 11, 13, 0, 0)  },
+        new AppointmentData { Id = 4, Subject = "Meteor Showers in 2020", Location = "Canada", StartTime = new DateTime(2020, 3, 9, 13, 0, 0), EndTime = new DateTime(2020, 3, 9, 14, 30, 0)  },
+        new AppointmentData { Id = 5, Subject = "Milky Way as Melting pot", Location = "Mexico", StartTime = new DateTime(2020, 3, 12, 9, 0, 0), EndTime = new DateTime(2020, 3, 12, 10, 30, 0)  }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
+### Using a Print method with options
+
+You can print the Schedule element with customized Width and Height using the `Print` method by passing the `PrintModel` Height and Width options. The following example shows how to print the Scheduler using the `Print` method by passing the `PrintModel` options.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnPrintClick">Print</SfButton>
+
+<SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    SfSchedule<AppointmentData> ScheduleRef;
+    DateTime CurrentDate = new DateTime(2020, 1, 10);
+    PrintModel Options = new PrintModel() { Height = "auto", Width = "auto" };
+    public async void OnPrintClick()
+    {
+        await ScheduleRef.Print(Options);
+    }
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", Location = "Dallas",  StartTime = new DateTime(2020, 3, 10, 9, 30, 0), EndTime = new DateTime(2020, 3, 10, 11, 0, 0)  },
+        new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", Location = "Texas", StartTime = new DateTime(2020, 3, 13, 12, 0, 0), EndTime = new DateTime(2020, 3, 13, 14, 0, 0)  },
+        new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", Location = "Australia", StartTime = new DateTime(2020, 3, 11, 10, 30, 0), EndTime = new DateTime(2020, 3, 11, 13, 0, 0)  },
+        new AppointmentData { Id = 4, Subject = "Meteor Showers in 2020", Location = "Canada", StartTime = new DateTime(2020, 3, 9, 13, 0, 0), EndTime = new DateTime(2020, 3, 9, 14, 30, 0)  },
+        new AppointmentData { Id = 5, Subject = "Milky Way as Melting pot", Location = "Mexico", StartTime = new DateTime(2020, 3, 12, 9, 0, 0), EndTime = new DateTime(2020, 3, 12, 10, 30, 0)  }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```

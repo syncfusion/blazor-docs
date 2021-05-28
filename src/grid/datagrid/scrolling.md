@@ -54,11 +54,13 @@ To specify the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ## Responsive with parent container
 
 Specify the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) as **100%** to make the datagrid element fill its parent container.
-Setting the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) to **100%** requires the datagrid parent element to have explicit height.
+Setting the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) to **100%** requires the datagrid parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
 
+<div style="width:calc(100vw - 20rem); height:calc(100vh - 7rem);">
+@*Change the rem values based on your browser page layout*@
 <SfGrid DataSource="@Orders" Height="100%" Width="100%">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -68,6 +70,7 @@ Setting the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
         <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
+</div>
 
 @code{
     public List<Order> Orders { get; set; }
@@ -210,6 +213,79 @@ the [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.G
 ```
 
 > Frozen rows and columns should not be set outside the datagrid view port.
+
+### Change default frozen line color
+
+The following demo shows how to change the default frozen line color.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenColumns="2" FrozenRows="3" Width="100%" Height="400">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .e-grid .e-frozenheader > .e-table,
+    .e-grid .e-frozencontent > .e-table,
+    .e-grid .e-frozencontent .e-virtualtable > .e-table,
+    .e-grid .e-frozenheader .e-virtualtable > .e-table {
+        border-right-color: orangered;
+    }
+    .e-grid .e-frozenhdrcont .e-headercontent > .e-table,
+    .e-grid .e-frozenhdrcont .e-frozenheader > .e-table,
+    .e-grid .e-frozenhdrcont .e-movableheader > .e-table,
+    .e-grid .e-frozenhdrcont .e-headercontent .e-virtualtable > .e-table {
+        border-bottom-color: orangered;
+    }
+</style>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            EmployeeID = x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)],
+            ShipName = "MOS",
+            ShipCity = (new string[] { "New york", "London", "Hue" })[new Random().Next(3)],
+            ShipAddress = (new string[] { "55, Baker street", "65/5 Kings landing", "56, Winterfell" })[new Random().Next(3)],
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public int? EmployeeID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+        public string ShipAddress { get; set; }
+    }
+}
+```
+
+The following screenshots represent a datagrid by customizing frozen line color.
+![Change default frozen line color](./images/frozenline-color.png)
 
 ### Limitations
 

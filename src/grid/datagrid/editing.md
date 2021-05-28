@@ -2,7 +2,7 @@
 
 The DataGrid component has options to dynamically insert, delete and update records.
 
-> * [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/) feature requires a primary key column for CRUD operations.
+> [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/) feature requires a primary key column for CRUD operations.
 
 To know about editing feature in Blazor DataGrid component, you can check on this video.
 
@@ -494,6 +494,8 @@ The following sample code demonstrates the customization applied to NumericTextB
 | ActionFailureTemplate | Accepts the template and assigns it to the popup list content of the component when the data fetch request from the remote server fails |
 | DataSource | Accepts the list items either through local or remote service and binds it to the component. It can be an array of JSON Objects or an instance of `DataManager`. |
 
+> [`IEnumerable<TItem>`] is the type of [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property in [`DropDownListModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html), so you should not bind [`string[]`] or [`List<string>`] type to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property.
+
 The following sample code demonstrates the customization applied to DropDownList component set for the DataGrid columns,
 
 ```csharp
@@ -680,6 +682,10 @@ The cell edit template is used to add a custom component for a particular column
 
 > Custom components inside the EditTemplate must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
+### Using AutoComplete in EditTemplate
+
+You can able to render SfAutoComplete component in EditTemplate. In the below sample we have rendered  **SfAutoComplete** component in **EditTemplate** for Customer ID column.
+
 ```csharp
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Grids
@@ -727,6 +733,125 @@ The cell edit template is used to add a custom component for a particular column
 
 In the following image, **Autocomplete** component is rendered with **EditTemplate** in Customer ID column
 ![Celledit Template](./images/celledit-template.png)
+
+### Using DropDownList in EditTemplate
+
+You can able to render SfDropDownList component in EditTemplate. In the below sample we have rendered  **SfDropDownList** component in **EditTemplate** for ShipCountry column.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150">
+            <EditTemplate>
+                <SfDropDownList ID="ShipCountry" TItem="Country" TValue="string" @bind-Value="@((context as Order).ShipCountry)" DataSource="@Countries">
+                    <DropDownListFieldSettings Value="CountryName" Text="CountryName"></DropDownListFieldSettings>
+                </SfDropDownList>
+            </EditTemplate>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+    public List<Country> Countries { get; set; } = new List<Country>()
+    {
+        new Country(){ CountryName="Brazil", ID=1},
+        new Country(){ CountryName="Argentina", ID=2},
+        new Country(){ CountryName="Canada", ID=3}
+    };
+    public class Country
+    {
+        public string CountryName { get; set; }
+        public int ID { get; set; }
+    }
+}
+```
+
+In the following image, **SfDropDownList** component is rendered with **EditTemplate** in ShipCountry column
+![Custom SfDropDownList in EditTemplate](./images/sfdropdownlist-edittemplate.png)
+
+### Using TimePicker in EditTemplate
+
+You can able to render SfTimePicker component in EditTemplate. In the below sample we have rendered  **SfTimePicker** component in **EditTemplate** for OrderDate column.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Calendars
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" TextAlign="TextAlign.Right" Width="130" Format="hh:mm tt" DefaultValue="DateTime.Now" Type="ColumnType.DateTime">
+            <EditTemplate>
+                <SfTimePicker TValue="DateTime?" @bind-Value="@((context as Order).OrderDate)"
+                              AllowEdit="true" Format="hh:mm:tt" CssClass="CustomDateCSS" ShowClearButton="true"></SfTimePicker>
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150">
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
+
+In the following image, **SfTimePicker** component is rendered with **EditTemplate** in OrderDate column
+![Custom SfTimePicker in EditTemplate](./images/sftimepicker-edittemplate.png)
 
 ## Command column
 
@@ -855,6 +980,8 @@ The following image represents the custom command added in the **Manage Records*
 Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data.
 DataGrid uses **Form Validator** library for column validation.
 You can set validation rules by defining the [`ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules).
+
+> Validation in datagrid works based on the Microsoft Blazor EditForm behavior. So once the validation message is shown then it will be again validated only during the form submit or when you focus out from that particular field. Please refer the [Microsoft Validation](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) for further reference.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -1257,7 +1384,7 @@ In the following example:
     // This class does not contain any parameter-less constructor, hence this cannot be instantiated using Activator.CreateInstance.
     public class Order
     {
-        public Order(int orderid) => OrderID = orderid;
+        public Order(int? orderid) => OrderID = orderid;
 
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }

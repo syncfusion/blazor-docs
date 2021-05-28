@@ -191,7 +191,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150">
             <FilterTemplate>
                 <SfDropDownList PlaceHolder="Customer Name" ID="CustomerID" Value="@((string)(context as PredicateModel).Value)" DataSource="@Dropdown" TValue="string" TItem="Data">
-                    <DropDownListEvents ValueChange="@Change" TValue="string"></DropDownListEvents>
+                    <DropDownListEvents ValueChange="@Change" TItem="Data" TValue="string"></DropDownListEvents>
                     <DropDownListFieldSettings Value="CustomerID" Text="CustomerID"></DropDownListFieldSettings>
                 </SfDropDownList>
             </FilterTemplate>
@@ -238,7 +238,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
         public double? Freight { get; set; }
     }
 
-    public void Change(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public void Change(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, Data> args)
     {
         if (args.Value == "All")
         {

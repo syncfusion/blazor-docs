@@ -1,4 +1,11 @@
-# Localization
+---
+title: "Localization (Multi-Language) in Blazor components | Syncfusion"
+component: "General"
+platform: "Blazor"
+description: "The Syncfusion Blazor UI components support localization and globalization (RTL, number, and date formats) in Blazor Server and WebAssembly (WASM) apps."
+---
+
+# Localization (Multi-Language) support in Syncfusion Blazor components
 
 Localization (L10N) is the process of adapting application components and content to the desired language with its corresponding region. This page shows you how to use the Localization feature in your application.
 

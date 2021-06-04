@@ -728,9 +728,6 @@ In this example, we have used the tree view control as an external source and th
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Navigations
 
-@using Syncfusion.Blazor.Schedule
-@using Syncfusion.Blazor.Navigations
-
 <div class="row">
     <div class="col-lg-8 e-droppable">
         <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">

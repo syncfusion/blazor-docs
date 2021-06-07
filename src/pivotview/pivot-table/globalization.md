@@ -155,7 +155,6 @@ PivotView_GreaterThan | Größer als
 PivotView_GreaterThanOrEqualTo | Größer als oder gleich wie
 PivotView_Group | Gruppe
 PivotView_GroupCaptionMessage | Geben Sie die Beschriftung ein, die in der Kopfzeile angezeigt werden soll
-PivotView_GroupFieldCaption | Feldbeschriftung
 PivotView_GroupFieldCaptionMessage | Geben Sie die Beschriftung für das Gruppenfeld ein
 PivotView_Grouping | Gruppierung
 PivotView_GroupName | Gruppenname
@@ -289,6 +288,21 @@ PivotView_Pareto | Pareto
 PivotView_Radar | Radar
 PivotView_CalculatedField_ClearTooltipMessage | Bearbeiten Sie die bearbeiteten Feldinformationen
 PivotView_CalculatedField_EditTooltipMessage | Berechnetes Feld bearbeiten
+PivotView_NumberFormat_ExampleWatermark | Beispiel: C, P, 0000%, ### 0. ## 0 # usw.
+PivotView_ShowLegend | Legende anzeigen
+PivotView_FieldCaptionWatermark | Geben Sie die Feldbeschriftung ein
+PivotView_SortNone_TooltipMessage | Datenreihenfolge sortieren
+PivotView_SortAscending_TooltipMessage | Aufsteigende Reihenfolge sortieren
+PivotView_SortDescending_TooltipMessage | Absteigende Reihenfolge sortieren
+PivotView_ReplaceReport_BeforeMessage | Ein Bericht mit dem Namen
+PivotView_ReplaceReport_AfterMessage | ist bereits vorhanden. Möchten Sie es ersetzen?
+PivotView_StaticFieldList | Pivot-Feldlis
+PivotView_FieldList | Feldliste
+PivotView_AddFieldMessage | Feld hier hinzufügen
+PivotView_ChooseFieldMessage | Feld auswählen
+PivotView_DragFieldsMessage | Ziehen Sie Felder zwischen den folgenden Achsen:
+PivotView_Add | Hinzufügen
+PivotView_DeferLayoutUpdate | Layoutaktualisierung verschieben
 
 All locale files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale/tree/master/src) location. You can get any resource file from there and utilize it in your application.
 

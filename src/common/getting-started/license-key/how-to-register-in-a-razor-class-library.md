@@ -1,4 +1,4 @@
-# How to register Syncfusion license key in a Razor Class Library application
+# Register Syncfusion license key in a Razor Class Library application
 
 There is now difference for registering the license key in Razor Class Library used Blazor project. You can register Blazor license key in Blazor project before blazor component is initiated from Razor Class Library in Blazor project.
 

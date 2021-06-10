@@ -1,4 +1,4 @@
-# How to install Syncfusion Blazor web installer
+# Installing Syncfusion Blazor web installer
 
 ## Installation
 

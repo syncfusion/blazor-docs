@@ -1,4 +1,4 @@
-# How to install Syncfusion Blazor Mac installer
+# Installing Syncfusion Blazor Mac installer
 
 The Syncfusion Blazor Mac installer allows you to create the Blazor application in Visual Studio for Mac with the Syncfusion Blazor components.
 

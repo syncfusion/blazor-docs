@@ -1,4 +1,4 @@
-# How to download Syncfusion Blazor Mac installer
+# Downloading Syncfusion Blazor Mac installer
 
 Syncfusion provides Blazor Mac installer for both evaluation and paid customers. You can either download the licensed installer or try our trial installer depending on your license.
 

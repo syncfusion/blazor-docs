@@ -1,4 +1,4 @@
-# How to generate Syncfusion Blazor license key
+# Generate Syncfusion License key in Blazor application
 
 License keys can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trail & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section of the Syncfusion website.
 

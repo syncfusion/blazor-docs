@@ -1,4 +1,4 @@
-# How to install Syncfusion Blazor offline installer
+# Installing Syncfusion Blazor offline installer
 
 ## Installing with UI
 

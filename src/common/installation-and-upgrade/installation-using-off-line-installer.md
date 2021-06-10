@@ -1,4 +1,6 @@
-# Installing Syncfusion Blazor offline installer
+# Installation using Offline Installer
+
+You can refer to the [Download](https://help.syncfusion.com/winui/installation-and-upgrade/download) section to learn how to get the Blazor trial or licensed installer.
 
 ## Installing with UI
 
@@ -23,11 +25,11 @@ The steps below show how to install the Essential Studio Blazor installer.
 
    **Use Unlock Key:**
 
-   Unlock keys are used to unlock the Syncfusion offline installer, and they are platform and version specific. You should use either Syncfusion licensed or trial Unlock key to unlock Syncfusion Blazor installer.
+   Unlock keys are used to unlock the Syncfusion offline installer, and they are platform and version specific. You should use either    Syncfusion licensed or trial Unlock key to unlock Syncfusion Blazor installer.
 
    The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key.
 
-   To learn how to generate an unlock key for both trial and licensed products, see [this](https://www.syncfusion.com/kb/2326) Knowledge Base article.
+   To learn how to generate an unlock key for both trial and licensed products, see [this](https://www.syncfusion.com/kb/2326) Knowledge    Base article.
 
    ![Web Offline Installer UseUnlockKey Wizard](images/webofflineinstaller-3.png)
 
@@ -39,9 +41,9 @@ The steps below show how to install the Essential Studio Blazor installer.
 
    ***Additional Settings***
 
-   * Select the **Install Demos** check box to install Syncfusion samples, or leave the check box unchecked, if you do not want to install Syncfusion samples.
+   * Select the **Install Demos** check box to install Syncfusion samples, or leave the check box unchecked, if you do not want to install    Syncfusion samples.
 
-   * Select the **Configure Syncfusion Extensions controls in Visual Studio** checkbox to configure the Syncfusion Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion Extensions in Visual Studio.
+   * Select the **Configure Syncfusion Extensions controls in Visual Studio** checkbox to configure the Syncfusion Extensions in Visual    Studio or clear this check box when you do not want to configure the Syncfusion Extensions in Visual Studio.
 
    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion Control Panel.
 
@@ -93,11 +95,11 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 6. Run Command Prompt in administrator mode and enter the following arguments.
 
-   **Arguments:** "installer file path\SyncfusionEssentialStudio(product)_(version).exe" /Install silent /UNLOCKKEY:"(product unlock key)" [/   log "{Log file path}"] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/   CreateStartMenuShortcut:{true/false}]
+   **Arguments:** "installer file path\SyncfusionEssentialStudio(product)_(version).exe" /Install silent /PIDKEY:"(product unlock key)" [/   log "{Log file path}"] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/   CreateStartMenuShortcut:{true/false}]
 
    > **Note** <br /> [..] – Arguments inside the square brackets are optional.
 
-   **Example:** "D:\Temp\syncfusionessentialblazor_x.x.x.x.exe" /Install silent /UNLOCKKEY:"product unlock key" /log    "C:\Temp\EssentialStudio_Product.log" /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /CreateShortcut:true /   CreateStartMenuShortcut:true
+   **Example:** "D:\Temp\syncfusionessentialblazor_x.x.x.x.exe" /Install silent /PIDKEY:"product unlock key" /log    "C:\Temp\EssentialStudio_Product.log" /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /CreateShortcut:true /   CreateStartMenuShortcut:true
 
 7. Essential Studio for Blazor is installed.
 

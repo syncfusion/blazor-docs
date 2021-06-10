@@ -1,4 +1,10 @@
-# Installing Syncfusion Blazor web installer
+# Installation using Web Installer
+
+You can refer to the [Download](https://help.syncfusion.com/winui/installation-and-upgrade/download) section to learn how to get the Blazor trial or licensed installer.
+
+## Overview
+
+For the Essential Studio Blazor product, Syncfusion offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio products you have chosen. You can get the most recent version of Essential Studio Web Installer [here](https://www.syncfusion.com/downloads/latest-version).
 
 ## Installation
 
@@ -20,13 +26,13 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
    ![Web Installer Available Tab](images/webinstaller-3.png)
 
-   If you have multiple products installed in the same version, they will be listed under the **Installed** tab. You can also select which products to uninstall from the same version. Click the Next button.
+   If you have multiple products installed in the same version, they will be listed under the **Installed** tab. You can also select which    products to uninstall from the same version. Click the Next button.
 
    ***Installed***
 
    ![Web Installer Installed Tab](images/webinstaller-4.png)
 
-   > **IMPORTANT** <br /> If the required software for the selected product isn’t already installed, the **Additional Software Required** alert will appear. You can, however, continue the installation and install the necessary software later.
+   > **IMPORTANT** <br /> If the required software for the selected product isn’t already installed, the **Additional Software Required**    alert will appear. You can, however, continue the installation and install the necessary software later.
 
    ***Required Software***
 
@@ -54,9 +60,9 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
    ***Additional settings***
 
-   * Select the **Install Demos** check box to install Syncfusion samples, or leave the check box unchecked, if you do not want to install Syncfusion samples.
+   * Select the **Install Demos** check box to install Syncfusion samples, or leave the check box unchecked, if you do not want to install    Syncfusion samples.
 
-   * Select the **Configure Syncfusion Extensions controls in Visual Studio** checkbox to configure the Syncfusion Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion Extensions in Visual Studio.
+   * Select the **Configure Syncfusion Extensions controls in Visual Studio** checkbox to configure the Syncfusion Extensions in Visual    Studio or clear this check box when you do not want to configure the Syncfusion Extensions in Visual Studio.
 
    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion Control Panel.
 

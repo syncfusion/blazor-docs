@@ -1,7 +1,0 @@
-* [How to download Syncfusion Blazor Web installer?](installation/web-installer/how-to-download.md)
-* [How to install Syncfusion Blazor Web installer?](installation/web-installer/how-to-install.md)
-* [How to download Syncfusion Blazor Offline installer?](installation/offline-installer/how-to-download.md)
-* [How to install Syncfusion Blazor Offline installer?](installation/offline-installer/how-to-install.md)
-* [How to download Syncfusion Blazor Mac installer?](installation/mac-installer/how-to-download.md)
-* [How to install Syncfusion Blazor Mac installer?](installation/mac-installer/how-to-install.md)
-* [Installation Errors](installation/common-installation-errors)

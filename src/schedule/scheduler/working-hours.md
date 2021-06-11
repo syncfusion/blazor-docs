@@ -283,18 +283,18 @@ You can manually scroll to a specific time on Scheduler by making use of the `Sc
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate { get; set; } = new DateTime(2020, 1, 31);
     SfSchedule<AppointmentData> ScheduleRef;
-    public DateTime TimeValue = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 0, 0);
-    public void OnValueChange(Syncfusion.Blazor.Calendars.ChangeEventArgs<DateTime?> args)
+    public DateTime? TimeValue { get; set; } = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 0, 0);
+    public void OnValueChange(ChangeEventArgs<DateTime?> args)
     {
         ScheduleRef.ScrollTo(args.Text);
     }
 
     List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
-    };
+{
+    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
+};
     public class AppointmentData
     {
         public int Id { get; set; }

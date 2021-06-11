@@ -1183,15 +1183,15 @@ You can also do different customization for quick popup on cell and event by che
         await SheduleRef.AddEvent(cloneData);
     }
     public List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Board Meeting", Description = "Meeting to discuss business goal of 2020.", StartTime = new DateTime(2020, 1, 5, 9, 30, 0), EndTime = new DateTime(2020, 1, 5, 11, 0, 0), RoomId = 1},
-        new AppointmentData { Id = 2, Subject = "Training session on JSP", Description = "Knowledge sharing on JSP topics.", StartTime = new DateTime(2020, 1, 7, 9, 30, 0), EndTime = new DateTime(2020, 1, 7, 11, 0, 0), RoomId = 2}
-    };
+{
+    new AppointmentData { Id = 1, Subject = "Board Meeting", Description = "Meeting to discuss business goal of 2020.", StartTime = new DateTime(2020, 1, 5, 9, 30, 0), EndTime = new DateTime(2020, 1, 5, 11, 0, 0), RoomId = 1},
+    new AppointmentData { Id = 2, Subject = "Training session on JSP", Description = "Knowledge sharing on JSP topics.", StartTime = new DateTime(2020, 1, 7, 9, 30, 0), EndTime = new DateTime(2020, 1, 7, 11, 0, 0), RoomId = 2}
+};
     private List<RoomsData> ResourceData { get; set; } = new List<RoomsData> {
-        new RoomsData { Name = "Jammy", Id = 1, Color = "#ea7a57", Capacity = 20, Type = "Conference" },
-        new RoomsData { Name = "Tweety", Id = 2, Color = "#7fa900", Capacity = 7, Type = "Cabin" },
-        new RoomsData { Name = "Nestle", Id = 3, Color = "#5978ee", Capacity = 5, Type = "Cabin" }
-    };
+    new RoomsData { Name = "Jammy", Id = 1, Color = "#ea7a57", Capacity = 20, Type = "Conference" },
+    new RoomsData { Name = "Tweety", Id = 2, Color = "#7fa900", Capacity = 7, Type = "Cabin" },
+    new RoomsData { Name = "Nestle", Id = 3, Color = "#5978ee", Capacity = 5, Type = "Cabin" }
+};
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -1205,6 +1205,7 @@ You can also do different customization for quick popup on cell and event by che
         public Nullable<int> RecurrenceID { get; set; }
         public string RecurrenceException { get; set; }
         public int RoomId { get; set; }
+        public virtual string ElementType { get; set; }
     }
     public class RoomsData
     {
@@ -1386,9 +1387,9 @@ You can close the quick info popup in scheduler by using the `CloseQuickInfoPopu
 
     SfSchedule<AppointmentData> ScheduleObj;
     private DateTime SelectedDate = new DateTime(2020, 4, 1);
-    private void OnBtnClick()
+    private async Task OnBtnClick()
     {
-        ScheduleObj.CloseQuickInfoPopup();
+       await ScheduleObj.CloseQuickInfoPopup();
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {

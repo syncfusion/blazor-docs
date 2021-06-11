@@ -1379,7 +1379,7 @@ An interaction with the appointments of Scheduler can be enabled/disabled using 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-SfSchedule TValue="AppointmentData" Height="550px" Readonly="true" @bind-SelectedDate="@CurrentDate">
+<SfSchedule TValue="AppointmentData" Height="550px" Readonly="true" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
@@ -1412,7 +1412,7 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="DataSource"> </ScheduleEventSettings>
 </SfSchedule>
 
@@ -1626,35 +1626,19 @@ The appointments can be filtered by passing the predicate value to `Query` optio
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Buttons
 
-<SfSchedule TValue="ScheduleData.ResourceSampleData" CssClass='schedule-resource' Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
+<SfCheckBox TChecked="bool" @bind-Checked="MargretChecked" Value="@MargretId" ValueChange="@OnChange" Label="Margaret" CssClass="margaret"></SfCheckBox>
+<SfCheckBox TChecked="bool" @bind-Checked="RobertChecked" Value="@RobertId" ValueChange="@OnChange" Label="Robert" CssClass="robert"></SfCheckBox>
+<SfCheckBox TChecked="bool" @bind-Checked="LauraChecked" Value="@LauraId" ValueChange="@OnChange" Label="Laura" CssClass="laura"></SfCheckBox>
+
+<SfSchedule TValue="AppointmentData" CssClass='schedule-resource' Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleResources>
         <ScheduleResource TValue="int[]" TItem="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owners" Name="Owners" TextField="OwnerText" IdField="OwnerId" ColorField="Color" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource" Query="@ScheduleQuery"></ScheduleEventSettings>
 </SfSchedule>
-<table id='property' title='Properties' class='property-panel-table' style="width: 100%;">
-    <tbody>
-        <tr style="height: 50px">
-            <td style="width: 100%">
-                <SfCheckBox TChecked="bool" @bind-Checked="MargretChecked" Value="@MargretId" ValueChange="@OnChange" Label="Margaret" CssClass="margaret">
-                </SfCheckBox>
-            </td>
-        </tr>
-        <tr style="height: 50px">
-            <td style="width: 100%">
-                <SfCheckBox TChecked="bool" @bind-Checked="RobertChecked" Value="@RobertId" ValueChange="@OnChange" Label="Robert" CssClass="robert">
-                </SfCheckBox>
-            </td>
-        </tr>
-        <tr style="height: 50px">
-            <td style="width: 100%">
-                <SfCheckBox TChecked="bool" @bind-Checked="LauraChecked" Value="@LauraId" ValueChange="@OnChange" Label="Laura" CssClass="laura">
-                </SfCheckBox>
-            </td>
-        </tr>
-    </tbody>
-</table>
 
 @code{
     public DateTime CurrentDate { get; set; } = new DateTime(2020, 6, 5);
@@ -1668,7 +1652,88 @@ The appointments can be filtered by passing the predicate value to `Query` optio
 
     public dynamic predicate;
     public Query ScheduleQuery { get; set; } = null;
-    public List<ScheduleData.ResourceSampleData> DataSource = new ScheduleData().GetResourceSampleData();
+
+    List<AppointmentData> DataSource = new List<AppointmentData>
+{
+        new AppointmentData {
+            Id = 1,
+            Subject = "Burning Man",
+            StartTime = new DateTime(2020, 5, 29, 15, 0, 0),
+            EndTime = new DateTime(2020, 5, 29, 17, 0, 0),
+            OwnerId = 1},
+        new AppointmentData{
+            Id = 2,
+            Subject = "Marketing Forum",
+            StartTime = new DateTime(2020, 5, 31, 10, 0, 0),
+            EndTime = new DateTime(2020, 5, 31, 11, 30, 0),
+            OwnerId = 2},
+        new AppointmentData{
+            Id = 3,
+            Subject = "Business Factory",
+            StartTime = new DateTime(2020, 5, 31, 13, 30, 0),
+            EndTime = new DateTime(2020, 5, 31, 15, 0, 0),
+            OwnerId = 3},
+        new AppointmentData{
+            Id = 4,
+            Subject = "Burning Man",
+            StartTime = new DateTime(2020, 6, 1, 11, 30, 0),
+            EndTime = new DateTime(2020, 6, 1, 13, 0, 0),
+            OwnerId = 1},
+        new AppointmentData{
+            Id = 5,
+            Subject = "Funnel Hacking",
+            StartTime = new DateTime(2020, 6, 2, 9, 30, 0),
+            EndTime = new DateTime(2020, 6, 2, 11, 0, 0),
+            OwnerId = 3},
+        new AppointmentData{
+            Id = 6,
+            Subject = "The human gathering",
+            StartTime = new DateTime(2020, 6, 2, 13, 0, 0),
+            EndTime = new DateTime(2020, 6, 2, 14, 30, 0),
+            OwnerId = 2},
+        new AppointmentData{
+            Id = 7,
+            Subject = "Techweek",
+            StartTime = new DateTime(2020, 6, 3, 11, 0, 0),
+            EndTime = new DateTime(2020, 6, 3, 12, 30, 0),
+            OwnerId = 2},
+        new AppointmentData{
+            Id = 8,
+            Subject = "Grow Conference",
+            StartTime = new DateTime(2020, 6, 4, 10, 0, 0),
+            EndTime = new DateTime(2020, 6, 4, 11, 30, 0),
+            OwnerId = 1},
+        new AppointmentData{
+            Id = 9,
+            Subject = "Data Science Conference",
+            StartTime = new DateTime(2020, 6, 4, 13, 30, 0),
+            EndTime = new DateTime(2020, 6, 4, 15, 0, 0),
+            OwnerId = 1},
+        new AppointmentData{
+            Id = 10,
+            Subject = "Blogcademy",
+            StartTime = new DateTime(2020, 6, 5, 12, 0, 0),
+            EndTime = new DateTime(2020, 6, 5, 13, 30, 0),
+            OwnerId = 3},
+        new AppointmentData{
+            Id = 11,
+            Subject = "World Domination Summit",
+            StartTime = new DateTime(2020, 6, 6, 9, 30, 0),
+            EndTime = new DateTime(2020, 6, 6, 11, 0, 0),
+            OwnerId = 2},
+        new AppointmentData{
+            Id = 12,
+            Subject = "Content Marketing",
+            StartTime = new DateTime(2020, 6, 6, 13, 0, 0),
+            EndTime = new DateTime(2020, 6, 6, 14, 30, 0),
+            OwnerId = 1},
+        new AppointmentData{
+            Id = 13,
+            Subject = "Mobile World Conference",
+            StartTime = new DateTime(2020, 6, 12, 18, 0, 0),
+            EndTime = new DateTime(2020, 6, 12, 20, 0, 0),
+            OwnerId = 1}
+    };
 
     public void OnChange(ChangeEventArgs<bool> args)
     {
@@ -1713,18 +1778,49 @@ The appointments can be filtered by passing the predicate value to `Query` optio
         ScheduleQuery = new Query().Where(predicate);
     }
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
-    {
-        new ResourceData { OwnerText = "Margaret", OwnerId = 1, Color = "#ea7a57" },
-        new ResourceData { OwnerText = "Robert", OwnerId = 2, Color = "#df5286" },
-        new ResourceData { OwnerText = "Laura", OwnerId = 3, Color = "#865fcf" }
-    };
+{
+    new ResourceData { OwnerText = "Margaret", OwnerId = 1, Color = "#ea7a57" },
+    new ResourceData { OwnerText = "Robert", OwnerId = 2, Color = "#df5286" },
+    new ResourceData { OwnerText = "Laura", OwnerId = 3, Color = "#865fcf" }
+};
     public class ResourceData
     {
         public int OwnerId { get; set; }
         public string OwnerText { get; set; }
         public string Color { get; set; }
     }
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int OwnerId { get; set; }
+    }
 }
+<style>
+    .e-checkbox-wrapper.margaret .e-frame {
+        background-color: #ea7a57;
+        border-color: transparent;
+    }
+
+   .e-checkbox-wrapper.robert .e-frame {
+        background-color: #df5286;
+        border-color: transparent;
+    }
+
+   .e-checkbox-wrapper.laura .e-frame {
+        background-color: #865fcf;
+        border-color: transparent;
+    }
+</style>
 ```
 
 ## Appointment selection

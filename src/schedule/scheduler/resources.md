@@ -686,7 +686,6 @@ It is possible to customize the resource headers to display with multiple column
     </ScheduleViews>
     <ScheduleGroup Resources="@GroupData"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@RoomData" Field="RoomId" Title="RoomType" Name="Room" TextField="Text" IdField="Id" ColorField="Roomcolor" AllowMultiple="false"></ScheduleResource>
         <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="OwnerType" Name="Owner" TextField="Text" IdField="Id" GroupIDField="OwnerGroupId" ColorField="Ownercolor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleTemplates>
@@ -695,8 +694,8 @@ It is possible to customize the resource headers to display with multiple column
                 var resourceData = (context as TemplateContext).ResourceData as ResourceData;
                 <div class='template-wrap'>
                     <div class="room-name">@(resourceData.Text)</div>
-                    <div class="room-type">@(resourceData.Capacity)</div>
-                    <div class="room-capacity">@(resourceData.Type)</div>
+                    <div class="room-capacity">@(resourceData.Capacity)</div>
+                    <div class="room-type">@(resourceData.Type)</div>
                     <div class="room-avail">@(resourceData.Availability)</div>
                 </div>
             }
@@ -708,12 +707,8 @@ It is possible to customize the resource headers to display with multiple column
 @code{
     DateTime CurrentDate = new DateTime(2020, 1, 31);
     private View CurrentView = View.TimelineWeek;
-    public string[] GroupData { get; set; } = { "Room", "Owner" };
-    public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
-    {
-        new ResourceData{ Text = "Mission", Id = 1, RoomColor = "#df5286", Capacity = 25, Type = "Conference", Availability = 15 },
-        new ResourceData{ Text = "Hangout", Id = 2,  RoomColor = "#00bdae", Capacity = 10, Type = "Cabin", Availability = 8 }
-    };
+    public string[] GroupData { get; set; } = { "Owner" };
+
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData> {
         new ResourceData{ Text = "Jammy", Id = 1, OwnerGroupId = 1, Ownercolor = "#ea7a57", Capacity = 20, Type = "Conference" , Availability = 10 },
         new ResourceData{ Text = "Tweety", Id = 2, OwnerGroupId = 2, Ownercolor = "#7fa900", Capacity = 7, Type = "Cabin", Availability = 5 },
@@ -735,9 +730,9 @@ It is possible to customize the resource headers to display with multiple column
         public int Availability { get; set; }
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
-    {
+{
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
-        OwnerId = 1, RoomId = 1 }
+        OwnerId = 1 }
     };
     public class AppointmentData
     {
@@ -752,7 +747,6 @@ It is possible to customize the resource headers to display with multiple column
         public string RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
         public int OwnerId { get; set; }
-        public int RoomId { get; set; }
     }
 }
 <style>
@@ -774,28 +768,28 @@ It is possible to customize the resource headers to display with multiple column
         padding: 0;
     }
 
-    .e-schedule .e-timeline-month-view .e-resource-left-td .e-resource-text>div,
-    .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text>div {
-        border-right: 1px solid rgba(0, 0, 0, 0.12);
-        border-top: 1px solid rgba(0, 0, 0, 0.12);
-        flex: 0 0 20%;
-        font-weight: 500;
-        height: 36px;
-        line-height: 34px;
-        padding-left: 5px;
-    }
+        .e-schedule .e-timeline-month-view .e-resource-left-td .e-resource-text > div,
+        .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text > div {
+            border-right: 1px solid rgba(0, 0, 0, 0.12);
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+            flex: 0 0 20%;
+            font-weight: 500;
+            height: 36px;
+            line-height: 34px;
+            padding-left: 5px;
+        }
 
-    .e-schedule .e-timeline-month-view .e-resource-left-td .e-resource-text>div:first-child,
-    .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text>div:first-child {
-        flex: 0 0 40%;
-    }
+            .e-schedule .e-timeline-month-view .e-resource-left-td .e-resource-text > div:first-child,
+            .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text > div:first-child {
+                flex: 0 0 40%;
+            }
 
-    .e-schedule .e-timeline-month-view .e-resource-left-td .e-resource-text>div:last-child,
-    .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text>div:last-child {
-        border-right: 0;
-    }
+            .e-schedule .e-timeline-month-view .e-resource-left-td .e-resource-text > div:last-child,
+            .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text > div:last-child {
+                border-right: 0;
+            }
 
-    .e-schedule .e-schedule-table>tbody>tr>td {
+    .e-schedule .e-schedule-table > tbody > tr > td {
         width: 100%;
     }
 
@@ -831,11 +825,11 @@ It is possible to customize the resource headers to display with multiple column
         text-align: left;
     }
 
-    .e-schedule .e-resource-cells .e-blazor-template{
-        height:100%;
+    .e-schedule .e-resource-cells .e-blazor-template {
+        height: 100%;
     }
 
-    .e-schedule .template-wrap>div {
+    .e-schedule .template-wrap > div {
         border-right: 1px solid rgba(0, 0, 0, 0.12);
         flex: 0 0 20%;
         font-weight: 500;
@@ -845,13 +839,13 @@ It is possible to customize the resource headers to display with multiple column
         text-overflow: ellipsis;
     }
 
-    .e-schedule .template-wrap>div:first-child {
-        flex: 0 0 40%;
-    }
+        .e-schedule .template-wrap > div:first-child {
+            flex: 0 0 40%;
+        }
 
-    .e-schedule .template-wrap>div:last-child {
-        border-right: 0;
-    }
+        .e-schedule .template-wrap > div:last-child {
+            border-right: 0;
+        }
 
     .e-schedule .e-timeline-view .e-resource-cells,
     .e-schedule .e-timeline-month-view .e-resource-cells {
@@ -872,18 +866,18 @@ It is possible to customize the resource headers to display with multiple column
             width: 100px;
         }
 
-        .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text>div,
-        .e-schedule .template-wrap>div {
-            flex: 0 0 100%;
-        }
+            .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text > div,
+            .e-schedule .template-wrap > div {
+                flex: 0 0 100%;
+            }
 
-        .e-schedule .template-wrap>div:first-child {
-            border-right: 0;
-        }
+                .e-schedule .template-wrap > div:first-child {
+                    border-right: 0;
+                }
 
-        .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text>div:first-child {
-            border-right: 0;
-        }
+                .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text > div:first-child {
+                    border-right: 0;
+                }
 
         .e-schedule .room-type,
         .e-schedule .room-capacity {

@@ -100,12 +100,13 @@ The following screenshot shows the auto-adjustment of row in timeline week view 
 By default, with the feature `EnableAutoRowHeight`, there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property `IgnoreWhitespace` with `ScheduleEventSettings` taghelper whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
 
 ```csharp
+
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="350px" EnableAutoRowHeight="true" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnerData" Field="OwnerId" Title="Owner" Name="Owner" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@OwnerData" Field="OwnerId" Title="Owner" Name="Owner" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource" IgnoreWhitespace="true"></ScheduleEventSettings>
     <ScheduleViews>
@@ -118,7 +119,7 @@ By default, with the feature `EnableAutoRowHeight`, there will be a space in the
     DateTime CurrentDate = new DateTime(2020, 12, 30);
     public string[] Resources { get; set; } = { "Owner" };
     private List<ResourceData> OwnerData { get; set; } = new List<ResourceData>
-    {
+{
         new ResourceData { Text = "Nancy", Id= 1, Color = "#df5286" },
         new ResourceData { Text = "Steven", Id= 2, Color = "#7fa900" },
         new ResourceData { Text = "Robert", Id= 3, Color = "#ea7a57" },
@@ -126,10 +127,10 @@ By default, with the feature `EnableAutoRowHeight`, there will be a space in the
         new ResourceData { Text = "John", Id= 5, Color = "#7fa900" }
     };
     private List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData {  Id = 1, Subject = "Board Meeting", StartTime = new DateTime(2019, 12, 30, 9, 0, 0), EndTime = new DateTime(2019, 12, 30, 11, 0, 0), OwnerId = 1},
-        new AppointmentData {  Id = 2, Subject = "Sprint Meeting", StartTime = new DateTime(2019, 12, 30, 9, 30, 0), EndTime = new DateTime(2019, 12, 30, 11, 30, 0), OwnerId = 2},
-        new AppointmentData {  Id = 3, Subject = "Scrum Meeting", StartTime = new DateTime(2019, 12, 30, 10, 0, 0), EndTime = new DateTime(2019, 12, 30, 12, 0, 0), OwnerId = 3}
+{
+        new AppointmentData {  Id = 1, Subject = "Board Meeting", StartTime = new DateTime(2020, 12, 30, 9, 0, 0), EndTime = new DateTime(2020, 12, 30, 11, 0, 0), OwnerId = 1},
+        new AppointmentData {  Id = 2, Subject = "Sprint Meeting", StartTime = new DateTime(2020, 12, 30, 9, 30, 0), EndTime = new DateTime(2020, 12, 30, 11, 30, 0), OwnerId = 2},
+        new AppointmentData {  Id = 3, Subject = "Scrum Meeting", StartTime = new DateTime(2020, 12, 30, 10, 0, 0), EndTime = new DateTime(2020, 12, 30, 12, 0, 0), OwnerId = 3}
     };
     public class ResourceData
     {

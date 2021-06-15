@@ -5,6 +5,7 @@
 * [Columns](datagrid/columns.md)
 * [Row](datagrid/row.md)
 * [Cell](datagrid/cell.md)
+* [Display Density](datagrid/display-density.md)
 * [Templates](datagrid/templates.md)
 * [Grouping](datagrid/grouping.md)
 * [Filtering](datagrid/filtering.md)

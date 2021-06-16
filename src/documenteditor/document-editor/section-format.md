@@ -6,7 +6,7 @@ description: "Learn section formatting supported in Blazor document editor like 
 
 # Working with Section Formatting
 
-Document editor supports various section formatting such as page size, page margins, and more.
+[`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 
@@ -46,3 +46,5 @@ You can define the distance of footer content from the bottom of the page by usi
 ```javascript
 documentEditor.Selection.SectionFormat.SetFooterDistance(72);
 ```
+
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

@@ -6,7 +6,7 @@ description: "Learn how undo and redo can be done in Blazor Word processor and h
 
 # History
 
-Document editor tracks the history of all editing actions done in the document, which allows undo and redo functionality.
+[`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
 ## Enable or disable history
 
@@ -57,3 +57,5 @@ History of editing actions will be maintained in stack, so that the last item wi
 documentEditor.EditorHistory.SetRedoLimit(400);
 documentEditor.EditorHistory.SetUndoLimit(400);
 ```
+
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

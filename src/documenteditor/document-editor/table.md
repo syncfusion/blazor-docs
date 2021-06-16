@@ -6,7 +6,7 @@ description: "Learn how to insert, select, or delete table, row(s), and column(s
 
 # Tables
 
-Tables are an efficient way to present information. Document editor can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document editor exposes a rich set of APIs to perform these operations programmatically.
+Tables are an efficient way to present information. Document editor can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. [`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) exposes a rich set of APIs to perform these operations programmatically.
 
 ## Create a table
 
@@ -128,3 +128,5 @@ Refer to the following sample code.
 ```javascript
 documentEditor.Editor.MergeCells();
 ```
+
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

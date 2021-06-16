@@ -23,8 +23,12 @@ You might need to save the document back to the server. The following code examp
         SfDocumentEditor editor = container.DocumentEditor;
         string base64Data = await editor.SaveAsBlob(FormatType.Docx);
         byte[] data = Convert.FromBase64String(base64Data);
+        //To observe the memory go down, null out the reference of base64Data variable.
+        base64Data = null;
         //Word document file stream
         Stream stream = new MemoryStream(data);
+        //To observe the memory go down, null out the reference of data variable.
+        data = null;
         using (var fileStream = new FileStream(@"wwwroot\data\GettingStarted.docx", FileMode.Create, FileAccess.Write))
         {
             //Saving the new file in root path of application
@@ -32,6 +36,8 @@ You might need to save the document back to the server. The following code examp
             fileStream.Close();
         }
         stream.Close();
+        //To observe the memory go down, null out the reference of stream variable.
+        stream = null;
     }
 }
 
@@ -59,6 +65,8 @@ If you have plenty of documents stored in database and you want to save the comp
         SfDocumentEditor editor = container.DocumentEditor;
         string base64Data = await editor.SaveAsBlob(FormatType.Docx);
         byte[] data = Convert.FromBase64String(base64Data);
+        //To observe the memory go down, null out the reference of base64Data variable.
+        base64Data = null;
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\database.mdf;";
         string queryStmt = "Update DocumentsTable SET Data = @Content where DocumentName = '" + documentID + "'";
         using (SqlConnection con = new SqlConnection(connectionString))
@@ -69,6 +77,8 @@ If you have plenty of documents stored in database and you want to save the comp
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
+            //To observe the memory go down, null out the reference of data variable.
+            data = null;
         }
     }
 }

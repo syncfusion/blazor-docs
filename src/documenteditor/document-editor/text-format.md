@@ -6,7 +6,7 @@ description: "Learn text formatting supported in Blazor Word processor and how t
 
 # Working with Text Formatting
 
-Document editor supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
+[`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
 ## Bold
 
@@ -135,3 +135,5 @@ The highlight color of the selected text can be get or set using the following s
 ```javascript
 documentEditor.Selection.CharacterFormat.SetHighlightColor(HighlightColor.Pink);
 ```
+
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

@@ -6,7 +6,7 @@ description: "Learn paragraph formatting supported in Blazor Word processor and 
 
 # Working with Paragraph Formatting
 
-Document editor supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 
@@ -72,3 +72,5 @@ You can define the spacing before or after the paragraph by using the following 
 documentEditor.Selection.ParagraphFormat.SetBeforeSpacing(24);
 documentEditor.Selection.ParagraphFormat.SetAfterSpacing(24);
 ```
+
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

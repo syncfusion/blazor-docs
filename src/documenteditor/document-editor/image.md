@@ -6,7 +6,7 @@ description: "Learn the supported image types in Blazor Word processor and how t
 
 # Images
 
-Document editor supports common raster format images like PNG, BMP, JPEG, and GIF. You can insert an image file or online image in the document using the `InsertImage()` method.
+[`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports common raster format images like PNG, BMP, JPEG, and GIF. You can insert an image file or online image in the document using the `InsertImage()` method.
 
 ```csharp
 documentEditor.Editor.InsertImage("<<base64String>>");
@@ -29,3 +29,5 @@ int height = await documentEditor.Selection.ImageFormat.GetHeight();
 int width = await documentEditor.Selection.ImageFormat.GetWidth();
 documentEditor.Selection.ImageFormat.Resize(width + 10, height + 10);
 ```
+
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

@@ -4,7 +4,7 @@ You might need to open and view Word documents from various location. In this se
 
 ## Opening a document from URL
 
-If you have your Word document file in the web, you can open it in Blazor Word Processor using URL. The following code example explains how to open a Word document file from URL.
+If you have your Word document file in the web, you can open it in [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) using URL. The following code example explains how to open a Word document file from URL.
 
 ```csharp
 @using Syncfusion.Blazor.DocumentEditor
@@ -28,19 +28,29 @@ If you have your Word document file in the web, you can open it in Blazor Word P
         WebClient webClient = new WebClient();
         byte[] byteArray = webClient.DownloadData(fileUrl);
         Stream stream = new MemoryStream(byteArray);
+        //To observe the memory go down, null out the reference of byteArray variable.
+        byteArray = null;
         WordDocument document = WordDocument.Load(stream, ImportFormatType.Docx);
+        stream.Dispose();
+        //To observe the memory go down, null out the reference of stream variable.
+        stream = null;
         sfdtString = JsonConvert.SerializeObject(document);
         document.Dispose();
-        stream.Dispose();
+        //To observe the memory go down, null out the reference of document variable.
+        document = null;
     }
 
     public void OnLoad(object args)
     {
         SfDocumentEditor editor = container.DocumentEditor;
         editor.Open(sfdtString);
+        //To observe the memory go down, null out the reference of sfdtString variable.
+        sfdtString = null;
     }
 }
 ```
+
+>Note: As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), please null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
 
 ## Opening a document from Cloud
 
@@ -79,14 +89,20 @@ The following code example shows how to open and load the Word document file sto
         MemoryStream memoryStream = new MemoryStream();
         cloudBlockBlob.DownloadToStream(memoryStream);
         WordDocument document = WordDocument.Load(memoryStream, ImportFormatType.Docx);
+        memoryStream.Dispose();
+        //To observe the memory go down, null out the reference of memoryStream variable.
+        memoryStream = null;
         sfdtString = JsonConvert.SerializeObject(document);
         document.Dispose();
-        memoryStream.Dispose();
+        //To observe the memory go down, null out the reference of document variable.
+        document = null;
     }
     public void OnLoad(object args)
     {
         SfDocumentEditor editor = container.DocumentEditor;
         editor.Open(sfdtString);
+        //To observe the memory go down, null out the reference of sfdtString variable.
+        sfdtString = null;
     }
 }
 ```
@@ -137,9 +153,13 @@ You can open the Word documents from Azure File Storage using the following code
                 //Download file to local disk
                 file.DownloadToStream(memoryStream);
                 WordDocument document = WordDocument.Load(memoryStream, ImportFormatType.Docx);
+                memoryStream.Dispose();
+                //To observe the memory go down, null out the reference of memoryStream variable.
+                memoryStream = null;
                 sfdtString = JsonConvert.SerializeObject(document);
                 document.Dispose();
-                memoryStream.Dispose();
+                //To observe the memory go down, null out the reference of document variable.
+                document = null;
             }
         }
     }
@@ -149,6 +169,8 @@ You can open the Word documents from Azure File Storage using the following code
         {
             SfDocumentEditor editor = container.DocumentEditor;
             editor.Open(sfdtString);
+            //To observe the memory go down, null out the reference of sfdtString variable.
+            sfdtString = null;
         }
     }
 }
@@ -188,12 +210,20 @@ The following code example shows how to open the Word document file in viewer fr
         //Reads the Word document data as byte array from the database
         byte[] byteArray = (byte[])read["Data"];
         Stream stream = new MemoryStream(byteArray);
+        //To observe the memory go down, null out the reference of byteArray variable.
+        byteArray = null;
         WordDocument document = WordDocument.Load(stream, ImportFormatType.Docx);
+        stream.Dispose();
+        //To observe the memory go down, null out the reference of stream variable.
+        stream = null;
         string json = JsonConvert.SerializeObject(document);
         document.Dispose();
-        stream.Dispose();
+        //To observe the memory go down, null out the reference of document variable.
+        document = null;
         SfDocumentEditor editor = container.DocumentEditor;
         editor.Open(json);
+        //To observe the memory go down, null out the reference of json variable.
+        json = null;
     }
 }
 
@@ -232,8 +262,12 @@ There is an UI option in built-in toolbar to open the Word documents from local 
             WordDocument document = WordDocument.Load(stream, ImportFormatType.Docx);
             string sfdtString = JsonConvert.SerializeObject(document);
             document.Dispose();
+            //To observe the memory go down, null out the reference of document variable.
+            document = null;
             SfDocumentEditor editor = container.DocumentEditor;
             editor.Open(sfdtString);
+            //To observe the memory go down, null out the reference of sfdtString variable.
+            sfdtString = null;
         }
         action.Cancel = true;
     }
@@ -266,9 +300,15 @@ The Word document can be opened on control initialization, in this sample, the d
             WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
             string json = JsonConvert.SerializeObject(document);
             document.Dispose();
+            //To observe the memory go down, null out the reference of document variable.
+            document = null;
             SfDocumentEditor editor = container.DocumentEditor;
             editor.Open(json);
+            //To observe the memory go down, null out the reference of json variable.
+            json = null;
         }
     }
 }
 ```
+
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

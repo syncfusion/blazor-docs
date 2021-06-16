@@ -1,6 +1,6 @@
 # Overview
 
-The Word processor component for Blazor is used to compose, edit, view, and print Word (DOC, DOCX, and RTF) documents in Blazor applications.
+The [`Blazor Word Processor component`](https://www.syncfusion.com/blazor-components/blazor-word-processor) for Blazor is used to compose, edit, view, and print Word (DOC, DOCX, and RTF) documents in Blazor applications.
 
 ## Key Features
 
@@ -24,3 +24,5 @@ The Word processor component for Blazor is used to compose, edit, view, and prin
 * Allows user interactions through mouse, touch, and keyboard.
 * Contains Intuitive UI options through context menu, dialogs, and navigation pane.
 * Localizes all the static text to any desired language.
+
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

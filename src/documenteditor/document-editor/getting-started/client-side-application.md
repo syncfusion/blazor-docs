@@ -1,6 +1,6 @@
 # Create a Word processing application with Blazor WebAssembly app
 
-This article provides the step-by-step instructions to integrate the Word processor component in Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+This article provides the step-by-step instructions to integrate the [`Blazor Word Processor component`](https://www.syncfusion.com/blazor-components/blazor-word-processor) in Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
 Steps to get started with Word processor component for Blazor:
 
@@ -67,3 +67,5 @@ Steps to get started with Word processor component for Blazor:
 12. Run the application. The Word processor component will be rendered in the web browser.
 
     ![DocumentEditor Sample](../images/browser-output.png)
+
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

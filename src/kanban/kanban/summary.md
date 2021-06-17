@@ -11,3 +11,4 @@
 * [Responsive Mode](kanban/responsive-mode.md)
 * [Localization](kanban/localization.md)
 * [Dimensions](kanban/dimensions.md)
+* [Events](kanban/events.md)

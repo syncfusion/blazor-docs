@@ -62,7 +62,7 @@ The TimePicker component has built-in keyboard accessibility support by followin
     {
         if (args.Key == "t")
         {
-            this.TimeObj.FocusOut();
+            this.TimeObj.FocusOutAsync();
         }
     }
 }

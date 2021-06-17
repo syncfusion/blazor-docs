@@ -68,7 +68,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
     {
         if (args.Key == "t")
         {
-            this.RangeObj.FocusOut();
+            this.RangeObj.FocusOutAsync();
         }
     }
 }

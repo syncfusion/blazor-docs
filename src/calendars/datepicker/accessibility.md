@@ -77,7 +77,7 @@ Use the following list of keys to navigate the Calendar after the pop-up has bee
     {
         if (args.Key == "t")
         {
-            this.DateObj.FocusOut();
+            this.DateObj.FocusOutAsync();
         }
     }
 }

@@ -91,7 +91,7 @@ Use the following shortcut keys to interact with the TimePicker after the TimePi
     {
         if (args.Key == "t")
         {
-            this.DateTimeObj.FocusOut();
+            this.DateTimeObj.FocusOutAsync();
         }
     }
 }

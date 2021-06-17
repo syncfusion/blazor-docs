@@ -14,7 +14,7 @@ The following example demonstrates how to open the DatePicker popup when the inp
 @code{
     SfDatePicker<DateTime?> DateObj;
     public void FocusHandler(Syncfusion.Blazor.Calendars.FocusEventArgs args)    {
-        this.DateObj.Show();
+        this.DateObj.ShowAsync();
     }
 }
 ```

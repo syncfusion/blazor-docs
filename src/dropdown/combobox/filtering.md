@@ -76,7 +76,7 @@ The ComboBox component filter queries can be customized. You can also use your o
 
         query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
 
-        await comboObj.Filter(Country1, query);
+        await comboObj.FilterAsync(Country1, query);
     }
 }
 ```

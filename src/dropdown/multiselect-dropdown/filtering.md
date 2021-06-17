@@ -96,7 +96,7 @@ The MultiSelect component filter queries can be customized. You can also use you
 
         query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
 
-        await mulObj.Filter(Country1, query);
+        await mulObj.FilterAsync(Country1, query);
     }
 
 

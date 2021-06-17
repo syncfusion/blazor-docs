@@ -94,7 +94,7 @@ The DropDownList component filter queries can be customized. You can also use yo
 
         query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
 
-        await ddlObj.Filter(Country1, query);
+        await ddlObj.FilterAsync(Country1, query);
     }
 
 

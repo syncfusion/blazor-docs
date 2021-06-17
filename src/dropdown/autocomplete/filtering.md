@@ -203,7 +203,7 @@ The AutoComplete component filter queries can be customized. You can also use yo
 
         query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
 
-        await autoObj.Filter(Country, query);
+        await autoObj.FilterAsync(Country, query);
     }
 }
 ```

@@ -43,13 +43,13 @@ The following code demonstrates how to display a tooltip when hovering over the 
     }
     public void OnClose(PopupEventArgs args)
     {
-        TooltipObj.Close();
+        TooltipObj.CloseAsync();
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (isOpen)
         {
-            await TooltipObj.Refresh();
+            await TooltipObj.RefreshAsync();
         }
     }
 }

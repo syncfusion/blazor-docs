@@ -8,7 +8,7 @@ Following is an example which demonstrates the above cases which are used to man
 @using Syncfusion.Blazor.Navigations
 
 <div id="treeview">
-    <SfTreeView TValue="EmployeeData" @ref="tree" AllowDragAndDrop="true" @bind-SelectedNodes="@selectedNodes">
+    <SfTreeView TValue="EmployeeData" @ref="tree" AllowDragAndDrop="true" @bind-SelectedNodes="@selectedNodes" @bind-ExpandedNodes="expandedNodes">
         <TreeViewFieldsSettings Id="Id" ParentID="Pid" DataSource="@ListData" Text="Name" HasChildren="HasChild"></TreeViewFieldsSettings>
         <TreeViewEvents TValue="EmployeeData" NodeSelected="OnSelect" NodeClicked="nodeClicked"></TreeViewEvents>
         <SfContextMenu TValue="MenuItem" @ref="menu" Target="#treeview" Items="@MenuItems">
@@ -26,6 +26,7 @@ Following is an example which demonstrates the above cases which are used to man
     SfContextMenu<MenuItem> menu;
     string selectedId;
     public string[] selectedNodes = Array.Empty<string>();
+    public string[] expandedNodes = new string[] { "" };
     int index = 100;
 
     // Datasource for menu items
@@ -59,6 +60,8 @@ Following is an example which demonstrates the above cases which are used to man
     // To add a new node
     async Task AddNodes()
     {
+        // Expand the selected nodes
+        expandedNodes = new string[] { this.selectedId };
         string NodeId = "tree_" + this.index.ToString();
         ListData.Add(new EmployeeData
         {
@@ -66,7 +69,9 @@ Following is an example which demonstrates the above cases which are used to man
             Name = "NewItem",
             Pid = this.selectedId
         });
-        await this.tree.BeginEdit(NodeId);
+        await Task.Delay(100);
+        // Edit the added node.
+        await this.tree.BeginEditAsync(NodeId);
         this.index = this.index + 1;
 
     }
@@ -102,7 +107,6 @@ Following is an example which demonstrates the above cases which are used to man
             await this.AddNodes();
         }
     }
-
 
     // local data source
     List<EmployeeData> ListData = new List<EmployeeData>();

@@ -1,9 +1,9 @@
 # How to get selected items from listview
 
 Single or many items can be selected by users in the ListView control. An API is used to get selected items from the
-list items. This is called as the `GetSelectedItems` method.
+list items. This is called as the `GetCheckedItemsAsync` method.
 
-**`GetSelectedItems` method**
+**`GetCheckedItemsAsync` method**
 
 | Return type | Purpose |
 |------------|-------------------|
@@ -64,7 +64,7 @@ list items. This is called as the `GetSelectedItems` method.
 
     async void OnSelect()
     {
-        var items = await SfList.GetSelectedItems();
+        var items = await SfList.GetCheckedItemsAsync();
         if (items.Data != null)
         {
             SelectedItems = items.Data;

@@ -7,3 +7,4 @@
 * [Accessibility](timepicker/accessibility.md)
 * [Events](timepicker/events.md)
 * [CSS Customization](timepicker/how-to/css-customization.md)
+* [Limitations of TimeSpan DataType](timepicker/how-to/limitation-of-time-span.md)

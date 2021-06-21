@@ -191,4 +191,28 @@
     **Solution:**
 
     We recommend you to clear the browser cache to resolve the above script error in v18.2.0.44 or later.
+
+* **net::ERR_ABORTED 404 Error While Using Syncfusion Blazor Static files in modified base path or hosted as sub path app.**
+
+   You may face the below exception when deploying the blazor application as Sub application.
+
+    > Error: GET `./<SUB-PATH>/<SUB-PATH>_content/Syncfusion.Blazor/<Scripts and CSSs references>` net::ERR_ABORTED 404
+
+    For this, we need to configure the Base path configuration in the root application's `startup.cs` and `_Host.cshtml`.
+
+    **Cause:**
+
+    For sub-path hosting we need to configure the base path related configuration. If we missed to configure it leads to this errors.
+
+    **Solution:**
+
+    We need to configure the base path in our application when we are hosting the app as Sub-URL like below.
+
+    | In _Host.cshtml File | In Startup.cs File |
+    | ------------- | ------------- |
+    | `<base href="/myblazorapp/" />`  | `app.UsePathBase("/myblazorapp");`|
+
+    > Note : The trailing slash is must for '_Host.cshtml' base path configuration.
+
+    For further details, please refer this [MSDN documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-5.0&tabs=visual-studio#app-base-path) for your reference.
 <!-- markdownlint-enable MD036 -->

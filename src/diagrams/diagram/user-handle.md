@@ -528,7 +528,7 @@ The following table shows all the possible alignments visually shows the fixed u
 
 The following table shows all the possible alignments visually shows the fixed user handle positions.
 
-| Displacment | Alignment | Output |
+| Displacement | Alignment | Output |
 | -------- | -------- | -------- |
 | x=10 | Before |![fixed user handle for node](images/xbefore.png)|
 | x=10 | After |![fixed user handle for node](images/xafter.png)|

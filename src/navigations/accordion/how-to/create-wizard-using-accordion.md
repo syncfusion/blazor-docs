@@ -144,7 +144,7 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
         DisableCardItem = true;
     }
 
-    public void OnSignIn()
+    public async Task OnSignIn()
     {
         if (EmailTextbox.Value == null || PasswordTextbox.Value == null)
         {
@@ -154,12 +154,12 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
         {
             EmptyField = false;
             DisableDeliveryItem = false;
-            Accordion.Select(1);
+            await Accordion.SelectAsync(1);
             ExpandSignInItem = false;
             ExpandDeliveryItem = true;
         }
     }
-    public void OnContinue()
+    public async Task OnContinue()
     {
         if (NameTextbox.Value == null || AddressTextbox.Value == null || MobileNumberTextbox == null)
         {
@@ -168,18 +168,18 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
         else
         {
             DisableCardItem = false;
-            Accordion.Select(2);
+            await Accordion.SelectAsync(2);
             ExpandDeliveryItem = false;
             ExpandCardItem = true;
         }
     }
-    public void GoBack()
+    public async Task GoBack()
     {
-        Accordion.Select(1);
+        await Accordion.SelectAsync(1);
         ExpandCardItem = false;
         ExpandDeliveryItem = true;
     }
-    public void SaveDetails()
+    public async Task SaveDetails()
     {
         if (CardNumberTextbox == null || CardHolderNameTextbox == null || CvvTextbox == null)
         {
@@ -188,22 +188,22 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
         else
         {
             EmptyField = false;
-            AlertDialog.Show();
+            await AlertDialog.ShowAsync();
         }
     }
-    public void DialogCreate()
+    public async Task DialogCreate()
     {
-        AlertDialog.Hide();
+        await AlertDialog.HideAsync();
     }
-    public void OnSubmit(Object args)
+    public async Task OnSubmit(Object args)
     {
 
-        AlertDialog.Hide();
+        await AlertDialog.HideAsync();
         ExpandCardItem = false;
         DisableSignInItem = false;
         DisableDeliveryItem = true;
         DisableCardItem = true;
-        Accordion.Select(0);
+        await Accordion.SelectAsync(0);
     }
 }
 

@@ -295,7 +295,7 @@ You can go back on each tab using buttons available in it and tabs are disabled 
         new DropdownFields { ID = "2", Text = "Economy Class" },
         new DropdownFields { ID = "3", Text = "Common Class" }
     };
-    public void SearchButtonClick()
+    public async Task SearchButtonClick()
     {
         if ((StartPoint.Value == null) || (EndPoint.Value == null) || (Quota.Value == null))
         {
@@ -327,8 +327,8 @@ You can go back on each tab using buttons available in it and tabs are disabled 
                     Availability = 28
                 }
             };
-            Tab.EnableTab(1, true);
-            Tab.Select(1);
+            await Tab.EnableTabAsync(1, true);
+            await Tab.SelectAsync(1);
         }
     }
     public void SelectedTrainDetails(RowSelectEventArgs<GridFields> args)
@@ -372,35 +372,35 @@ You can go back on each tab using buttons available in it and tabs are disabled 
         new DropdownFields { ID = "2", Text = "Window" },
         new DropdownFields { ID = "2", Text = "Aisle" }
     };
-    public void TabCreate()
+    public async Task TabCreate()
     {
-        Tab.EnableTab(1, false);
-        Tab.EnableTab(2, false);
-        Tab.EnableTab(3, false);
+        await Tab.EnableTabAsync(1, false);
+        await Tab.EnableTabAsync(2, false);
+        await Tab.EnableTabAsync(3, false);
     }
-    public void SelectTrainBack()
+    public async Task SelectTrainBack()
     {
-        Tab.Select(0);
+        await Tab.SelectAsync(0);
     }
-    public void SelectTrainContinue()
+    public async Task SelectTrainContinue()
     {
         if (IsSelectedTrain)
         {
             EmptyField = false;
-            Tab.EnableTab(2, true);
-            Tab.Select(2);
+            await Tab.EnableTabAsync(2, true);
+            await Tab.SelectAsync(2);
         }
         else
         {
-            Tab.EnableTab(2, false);
+            await Tab.EnableTabAsync(2, false);
             EmptyField = true;
         }
     }
-    public void PassengerListBack()
+    public async Task PassengerListBack()
     {
-        Tab.Select(1);
+        await Tab.SelectAsync(1);
     }
-    public void PassengerListContinue()
+    public async Task PassengerListContinue()
     {
         if (FirstPassengerName.Value == null)
         {
@@ -409,8 +409,8 @@ You can go back on each tab using buttons available in it and tabs are disabled 
         else
         {
             EmptyField = false;
-            Tab.EnableTab(3, true);
-            Tab.Select(3);
+            await Tab.EnableTabAsync(3, true);
+            await Tab.SelectAsync(3);
             PassengerData = new List<PassengerFields>();
             if (FirstPassengerName.Value != null)
             {
@@ -444,26 +444,26 @@ You can go back on each tab using buttons available in it and tabs are disabled 
             }
         }
     }
-    public void ConfirmBack()
+    public async Task ConfirmBack()
     {
-        Tab.Select(2);
+        await Tab.SelectAsync(2);
     }
-    public void ConfirmPayment()
+    public async Task ConfirmPayment()
     {
-        AlertDialog.Show();
+        await AlertDialog.ShowAsync();
     }
-    public void DialogCreate()
+    public async Task DialogCreate()
     {
-        AlertDialog.Hide();
+        await AlertDialog.HideAsync();
     }
-    public void OnSubmit(Object args)
+    public async Task OnSubmit(Object args)
     {
-        AlertDialog.Hide();
-        Tab.EnableTab(0, true);
-        Tab.EnableTab(1, false);
-        Tab.EnableTab(2, false);
-        Tab.EnableTab(3, false);
-        Tab.Select(0);
+        await AlertDialog.HideAsync();
+        await Tab.EnableTabAsync(0, true);
+        await Tab.EnableTabAsync(1, false);
+        await Tab.EnableTabAsync(2, false);
+        await Tab.EnableTabAsync(3, false);
+        await Tab.SelectAsync(0);
     }
 }
 

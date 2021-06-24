@@ -57,7 +57,7 @@ To enable the field list in pivot table UI, set the [`ShowFieldList`](https://he
 
 The field list can be rendered in a static position, anywhere in web page layout, like a separate component. To do so, you need to set [`RenderMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_RenderMode) property to [**Mode.Fixed**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Mode.html) in [`SfPivotFieldList`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html).
 
-> To make field list interact with pivot table, you need to use the [**UpdateView**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_UpdateView_System_Object_) and [**Update**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_Update_System_Object_) methods for data source update in both field list and pivot table simultaneously.
+> To make field list interact with pivot table, you need to use the [**UpdateViewAsync**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_UpdateView_System_Object_) and [**Update**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_Update_System_Object_) methods for data source update in both field list and pivot table simultaneously.
 
 ```csharp
         <SfPivotView TValue="ProductDetails" ID="pivotview"  @ref="pivotView" Height="530">
@@ -104,11 +104,11 @@ The field list can be rendered in a static position, anywhere in web page layout
 
             public void pivotenginepopulated(EnginePopulatedEventArgs args)
             {
-                this.fieldList.Update(this.pivotView);
+                this.fieldList.UpdateAsync(this.pivotView);
             }
             public void enginepopulated(EnginePopulatedEventArgs args)
             {
-                this.fieldList.UpdateView(this.pivotView);
+                this.fieldList.UpdateViewAsync(this.pivotView);
             }
         }
 
@@ -263,9 +263,9 @@ It can also be viewed in toolbar by setting [`ShowFieldList`](https://help.syncf
 
 The [`EnginePopulated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_EnginePopulated) event is available in both Pivot Table and Field List.
 
-* The event [`EnginePopulated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_EnginePopulated) is triggered in field list whenever the report gets modified. The updated report is passed to the pivot table via [`UpdateView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_UpdateView_System_Object_) method written within this event to refresh the same.
+* The event [`EnginePopulated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_EnginePopulated) is triggered in field list whenever the report gets modified. The updated report is passed to the pivot table via [`UpdateViewAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_UpdateView_System_Object_) method written within this event to refresh the same.
 
-* Likewise, [`EnginePopulated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulated) event is triggered in pivot table whenever the report gets modified. The updated report is passed to the field list via [`Update`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_Update_System_Object_) method written within this event to refresh the same.
+* Likewise, [`EnginePopulated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulated) event is triggered in pivot table whenever the report gets modified. The updated report is passed to the field list via [`UpdateAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_Update_System_Object_) method written within this event to refresh the same.
 
 The event [`EnginePopulated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_EnginePopulated) is triggered after engine is populated. It has following parameters - [`DataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EnginePopulatedEventArgs.html#Syncfusion_Blazor_PivotView_EnginePopulatedEventArgs_DataSourceSettings), [`PivotFieldList`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EnginePopulatedEventArgs.html#Syncfusion_Blazor_PivotView_EnginePopulatedEventArgs_PivotFieldList) and [`PivotValues`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EnginePopulatedEventArgs.html#Syncfusion_Blazor_PivotView_EnginePopulatedEventArgs_PivotValues).
 
@@ -316,11 +316,11 @@ The event [`EnginePopulated`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
             public void pivotenginepopulated(EnginePopulatedEventArgs args)
             {
-                this.fieldList.Update(this.pivotView);
+                this.fieldList.UpdateAsync(this.pivotView);
             }
             public void enginepopulated(EnginePopulatedEventArgs args)
             {
-                this.fieldList.UpdateView(this.pivotView);
+                this.fieldList.UpdateViewAsync(this.pivotView);
             }
         }
 
@@ -375,11 +375,11 @@ The event [`FieldListRefreshed`](https://help.syncfusion.com/cr/blazor/Syncfusio
 
         public void pivotenginepopulated(EnginePopulatedEventArgs args)
         {
-            this.fieldList.Update(this.pivotView);
+            this.fieldList.UpdateAsync(this.pivotView);
         }
         public void enginepopulated(EnginePopulatedEventArgs args)
         {
-            this.fieldList.UpdateView(this.pivotView);
+            this.fieldList.UpdateViewAsync(this.pivotView);
         }
         private void fieldlistrefresh(FieldListRefreshedEventArgs args)
         {

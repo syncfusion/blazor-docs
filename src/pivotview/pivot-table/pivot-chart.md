@@ -1136,7 +1136,7 @@ By default, tooltip for the pivot chart is enabled. User can customize it by usi
 
 ## Export
 
-The pivot chart can be exported using the [`ChartExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ChartExport_System_Object_System_String_System_Object_System_Nullable_System_Double__System_Nullable_System_Double__) method which holds parameters like export type, file name, PDF orientation, width, and height in the same order. The mandatory parameters for this method are export type and file name whereas other parameters are optional.
+The pivot chart can be exported using the [`ExportToChartAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ChartExport_System_Object_System_String_System_Object_System_Nullable_System_Double__System_Nullable_System_Double__) method which holds parameters like export type, file name, PDF orientation, width, and height in the same order. The mandatory parameters for this method are export type and file name whereas other parameters are optional.
 
 The following are the four export types:
 
@@ -1186,9 +1186,9 @@ In the following code sample, exporting can be done using an external button nam
         }
         public void OnChartExport()
         {
-            this.pivot.ChartExport("PDF", "sample", "Landscape");
+            this.pivot.ExportToChartAsync("PDF", "sample", "Landscape");
             //To export pivot chart to JPEG, SVG or PNG image formats, change the export type from "PDF" to JPEG, SVG or PNG.
-            //this.pivot.ChartExport("JPEG", "sample");
+            //this.pivot.ExportToChartAsync("JPEG", "sample");
         }
     }
 

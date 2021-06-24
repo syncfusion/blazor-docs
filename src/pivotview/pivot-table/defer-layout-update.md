@@ -53,7 +53,7 @@ The field list can be rendered in a static position, anywhere in web page layout
 
 To enable deferred updates in the static fieldlist, set the property [`AllowDeferLayoutUpdate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_AllowDeferLayoutUpdate) in [`SfPivotFieldlist`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html) as **true**. To make a note, the defer update option can be controlled only via Field List during runtime.
 
-> To make field list interact with pivot table, you need to use the **UpdateView** and **Update** methods for data source update in both field list and pivot table simultaneously.
+> To make field list interact with pivot table, you need to use the **UpdateViewAsync** and **UpdateAsync** methods for data source update in both field list and pivot table simultaneously.
 
 ```csharp
         <SfPivotView TValue="ProductDetails" ID="pivotview"  @ref="pivotView" AllowDeferLayoutUpdate="true" Height="530">
@@ -100,11 +100,11 @@ To enable deferred updates in the static fieldlist, set the property [`AllowDefe
 
             public void pivotenginepopulated(EnginePopulatedEventArgs args)
             {
-                this.fieldList.Update(this.pivotView);
+                this.fieldList.UpdateAsync(this.pivotView);
             }
             public void enginepopulated(EnginePopulatedEventArgs args)
             {
-                this.fieldList.UpdateView(this.pivotView);
+                this.fieldList.UpdateViewAsync(this.pivotView);
             }
         }
 

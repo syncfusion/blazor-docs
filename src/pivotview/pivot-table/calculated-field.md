@@ -51,7 +51,7 @@ Calculated field can also be included in the pivot table through code behind usi
 
 ![output](images/calculatedfield.png)
 
-Meanwhile, user can also view calculated field dialog in UI by invoking [`CreateCalculatedFieldDialog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_CreateCalculatedFieldDialog) method on an external button click which is shown in the below code sample.
+Meanwhile, user can also view calculated field dialog in UI by invoking [`CreateCalculatedFieldDialogAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_CreateCalculatedFieldDialog) method on an external button click which is shown in the below code sample.
 
 ```csharp
     @using Syncfusion.Blazor.PivotView
@@ -88,7 +88,7 @@ Meanwhile, user can also view calculated field dialog in UI by invoking [`Create
         }
         public void calc(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
         {
-            this.pivot.CreateCalculatedFieldDialog();
+            this.pivot.CreateCalculatedFieldDialogAsync();
         }
     }
 

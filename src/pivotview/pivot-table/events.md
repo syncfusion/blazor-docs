@@ -223,7 +223,7 @@ The event [`ConditionalFormatting`](https://help.syncfusion.com/cr/blazor/Syncfu
         SfPivotView<ProductDetails> Pivot;
         public async Task OnClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
         {
-            await this.Pivot.ShowConditionalFormattingDialog();
+            await this.Pivot.ShowConditionalFormattingDialogAsync();
         }
         private void conditionalFormat(ConditionalFormatSettings args)
         {
@@ -529,7 +529,7 @@ The event [`ToolbarRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
                     j = i;
                 }
             }
-            this.pivot.LoadPersistData(this.report[j]);
+            this.pivot.LoadPersistDataAsync(this.report[j]);
         }
         //to delete a report
         public void removeReport(RemoveReportArgs args)

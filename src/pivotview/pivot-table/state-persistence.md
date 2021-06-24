@@ -42,7 +42,7 @@ State persistence allows user to maintain the current state of the component alo
 
 ## Save and Load Pivot Layout
 
-You can save the current layout of the pivot table by using [`GetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_GetPersistData) in string format. The saved layout can be loaded to pivot table any time by passing the saved data as a parameter to [`LoadPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_LoadPersistData_System_String_) method in the [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html).
+You can save the current layout of the pivot table by using [`GetPersistDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_GetPersistData) in string format. The saved layout can be loaded to pivot table any time by passing the saved data as a parameter to [`LoadPersistDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_LoadPersistData_System_String_) method in the [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html).
 
 ```csharp
     @using Syncfusion.Blazor.PivotView
@@ -82,11 +82,11 @@ You can save the current layout of the pivot table by using [`GetPersistData`](h
         public string persistData;
         public async void savedata(Microsoft.AspNetCore.Components.Web.MouseEventArgs e)
         {
-            persistData = await this.pivot.GetPersistData();
+            persistData = await this.pivot.GetPersistDataAsync();
         }
         public async void loaddata(Microsoft.AspNetCore.Components.Web.MouseEventArgs e)
         {
-            this.pivot.LoadPersistData(persistData);
+            this.pivot.LoadPersistDataAsync(persistData);
         }
     }
 

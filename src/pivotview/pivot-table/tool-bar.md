@@ -115,7 +115,7 @@ The following table shows built-in toolbar options and its actions.
                     j = i;
                 }
             }
-            this.pivot.LoadPersistData(this.report[j]);
+            this.pivot.LoadPersistDataAsync(this.report[j]);
         }
         //to delete a report
         public void removereport(RemoveReportArgs args)
@@ -371,7 +371,7 @@ For example, you can add the header and footer for the pdf document by setting t
                     j = i;
                 }
             }
-            this.pivot.LoadPersistData(this.report[j]);
+            this.pivot.LoadPersistDataAsync(this.report[j]);
         }
         //to delete a report
         public void removereport(RemoveReportArgs args)

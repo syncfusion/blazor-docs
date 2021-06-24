@@ -68,7 +68,7 @@ The available style properties in [`PivotViewStyle`](https://help.syncfusion.com
 * [`FontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewStyle.html#Syncfusion_Blazor_PivotView_PivotViewStyle_FontFamily): Specifies the font family.
 * [`FontSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewStyle.html#Syncfusion_Blazor_PivotView_PivotViewStyle_FontSize): Specifies the font size.
 
-Meanwhile, user can also view conditional formatting dialog in UI by invoking [`ShowConditionalFormattingDialog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowConditionalFormattingDialog) method on an external button click which is shown in the below code sample.
+Meanwhile, user can also view conditional formatting dialog in UI by invoking [`ShowConditionalFormattingDialogAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowConditionalFormattingDialog) method on an external button click which is shown in the below code sample.
 
 ```csharp
     @using Syncfusion.Blazor.PivotView
@@ -118,7 +118,7 @@ Meanwhile, user can also view conditional formatting dialog in UI by invoking [`
         }
         public void OnCondFormatting(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
         {
-            this.pivot.ShowConditionalFormattingDialog();
+            this.pivot.ShowConditionalFormattingDialogAsync();
         }
     }
 

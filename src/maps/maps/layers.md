@@ -1,12 +1,16 @@
 # Layers
 
-The Maps component is maintained through [`layers`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayer.html), and it can accommodate one or more layers.
+The Maps component is rendered through [`MapsLayers`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayers.html) class and any number of layers can be added to the Maps.
+
+## Multilayer
+
+The Multilayer support allows loading multiple shape files and map providers in a single container, enabling Maps to display more information. The shape layer or map providers are the main layers of the Maps. Multiple layers can be added as sublayer over the main layers using the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Type.html) property in the [`MapsLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) class.
 
 ## Sublayer
 
-Sublayer in the maps component allows to load multiple shape files in a single map view. For example, add a sublayer over a main shape layer to view geographic features such as rivers, valleys, and cities in a map of a country.
+Sublayer is a type of shape layer. It allows loading multiple shape files in a single map view. For example, a sublayer can be added over the main layer to view geographic features such as rivers, valleys and cities in a map of a country. Similar to the main layer, elements in the Maps such as markers, bubbles, color mapping and legends can be added to the sub-layer.
 
-In this example, the United States map shape is used as shape data by utilizing the `USA.json` file, and the `texas.json` and `california.json` files are used as sub layers in the United States map.
+In this example, the United States map shape is used as shape data by utilizing the **usa.json** file, and the **texas.json** and **california.json** files are used as sub-layers in the United States map.
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -34,13 +38,9 @@ In this example, the United States map shape is used as shape data by utilizing 
 
 ![Maps with sublayer](./images/Layers/layers.png)
 
-> Sublayer is a type of shape file layer. You can add all the elements such as markers, bubbles, color mapping, and legends to sublayer.
-
 ## Displaying layer in the view
 
-In Maps, you can load multiple shape files. Using the [`BaseLayerIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~BaseLayerIndex.html) property, you can select a layer to display on user interface.
-
-In this example, we have loaded two layers with the World map and the United States map shape data and selected a layer using the `BaseLayerIndex` property to show that layer on the web page.
+Multiple shape files and map providers can be loaded simultaneously in Maps. The [`BaseLayerIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~BaseLayerIndex.html) property is used to determine which layer should be displayed on the user interface. This property is used for the Maps drill-down feature, so when the [`BaseLayerIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~BaseLayerIndex.html) value is changed, the corresponding shape is loaded. For example, two layers can be loaded with the World map and the United States map. Based on the given [`BaseLayerIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~BaseLayerIndex.html) value, the corresponding shape will be loaded in the user interface. In the below code snippet, if the [`BaseLayerIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~BaseLayerIndex.html) value is set to 1, then the USA map will be loaded.
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -56,13 +56,7 @@ In this example, we have loaded two layers with the World map and the United Sta
 
 ![Maps with multiple layer](./images/Layers/multi-layer.png)
 
-If you set the [`BaseLayerIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.SfMaps~BaseLayerIndex.html) value to 0, the world map will be loaded.
-
-This concept is used in the Maps drill-down feature, so the corresponding shape will be loaded when clicking a shape of the maps.
-
-> Note: The Maps component will render even [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SummaryFillColor) only is set in [`MapsLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html). The [`LayerType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_NavigatorBorder) will be set Geometry by default. If we set `LayerType` other than Geometry type and `ShapeData` in the `MapsLayer`, the Maps will be rendered based on the provided `LayerType`. It will not consider the `ShapeData` as the `LayerType` is not Geometry type.
-
-Consider we want to view Bing map. If we set `ShapeData` and [`BingMapType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_ValueType) in the MapsLayer but missed to set LayerType, the Maps component will consider the `LayerType` as Geometry and render the map based on the provided ShapeType.
+> Note: When only the [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property is set in the [`MapsLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) class, the Maps component will render. By default, the [`LayerType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_LayerType) is **Geometry** type. If a [`LayerType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_LayerType) other than **Geometry** is set and [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) is specified in the [`MapsLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html), the Maps will be rendered based on the provided [`LayerType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_LayerType). For example, when the [`LayerType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_LayerType) is set as **OSM** and [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property is set, then the **OSM** map will be rendered in the component.
 
 ## See also
 

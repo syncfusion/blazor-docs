@@ -36,7 +36,7 @@ This section explains how to render model dialog with the Rich Text Editor compo
     }
     private void DialogOpen()
     {
-        this.RteObj.RefreshUI();
+        this.RteObj.RefreshUIAsync();
     }
 }
 

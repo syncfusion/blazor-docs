@@ -25,12 +25,12 @@ You can show the dialog in fullscreen by passing `true` as argument to the dialo
 
     private async Task OpenDialog()
     {
-        await this.DialogRef.Show(true);
+        await this.DialogRef.ShowAsync(true);
     }
 
     private async Task CloseDialog()
     {
-        await this.DialogRef.Hide();
+        await this.DialogRef.HideAsync();
     }
 }
 

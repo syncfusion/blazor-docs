@@ -7,6 +7,7 @@
 * [Style and appearance](dialog/style.md)
 * [Localization](dialog/localization.md)
 * [Accessibility](dialog/accessibility.md)
+* [Events](dialog/events.md)
 * [Create nested Dialog](dialog/how-to/create-nested-dialog.md)
 * [Achieve two-way binding using the visible property](dialog/how-to/achieve-two-way-binding-to-the-visible-property.md)
 * [Position the Dialog in center of the page on scrolling](dialog/how-to/position-the-dialog-on-center-of-the-page-on-scrolling.md)

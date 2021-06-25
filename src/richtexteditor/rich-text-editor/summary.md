@@ -17,6 +17,7 @@
 * [Keyboard support](rich-text-editor/keyboard-support.md)
 * [Miscellaneous](rich-text-editor/miscellaneous.md)
 * [Accessibility](rich-text-editor/accessibility.md)
+* [Events](rich-text-editor/events.md)
 * [Getting Started with Blazor WebAssembly RichTextEditor using Visual Studio](rich-text-editor/how-to/blazor-web-assembly.md)
 * [Add Google fonts](rich-text-editor/how-to/add-google-fonts.md)
 * [Change default font-family](rich-text-editor/how-to/default-font.md)

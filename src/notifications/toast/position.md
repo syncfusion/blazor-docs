@@ -150,12 +150,12 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
         {
             this.SetCustomPosValue();
         }
-        await ToastObj.Show();
+        await ToastObj.ShowAsync();
     }
 
     private async Task HideToast()
     {
-        await ToastObj.Hide("All");
+        await ToastObj.HideAsync("All");
     }
 
     //Setting Toast Custom Position
@@ -167,7 +167,7 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
 
     private async Task DropDownChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> e)
     {
-        await ToastObj.Hide("All");
+        await ToastObj.HideAsync("All");
         this.SetToastPosition(e.Value.ToString());
     }
 
@@ -211,19 +211,19 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
     {
         if (e.Value == "Target")
         {
-            await ToastObj.Hide("All");
+            await ToastObj.HideAsync("All");
             ToastTarget = "#toast_pos_target";
             StateHasChanged();
         }
         else if (e.Value == "Global")
         {
-            await ToastObj.Hide("All");
+            await ToastObj.HideAsync("All");
             ToastTarget = null;
             StateHasChanged();
         }
         else if (e.Value == "Position")
         {
-            await ToastObj.Hide("All");
+            await ToastObj.HideAsync("All");
             DropDownDisplay = "table-cell";
             TextBoxDisplay = "none";
             this.SetToastPosition(ListObj.Value.ToString());
@@ -231,7 +231,7 @@ Custom `X` and `Y` positions can be given as pixels/numbers/percentage. The numb
         }
         else if (e.Value == "Custom")
         {
-            await ToastObj.Hide("All");
+            await ToastObj.HideAsync("All");
             TextBoxDisplay = "table-cell";
             DropDownDisplay = "none";
             this.SetCustomPosValue();

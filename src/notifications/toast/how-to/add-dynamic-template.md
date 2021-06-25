@@ -33,7 +33,7 @@ Toast supports to change templates dynamically with displaying in multiple toast
     {
         // Delay mandatory to update the dynamically changed Toast properties
         await Task.Delay(100);
-        await this.ToastObj.Show(Messages[this.ToastFlag]);
+        await this.ToastObj.ShowAsync(Messages[this.ToastFlag]);
         this.ToastFlag = ((this.ToastFlag == Messages.Length - 1) ? 0 : (this.ToastFlag + 1));
     }
 }

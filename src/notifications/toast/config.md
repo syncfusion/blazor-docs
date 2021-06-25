@@ -37,7 +37,7 @@ Toast can be created with the notification message. The message contains `Title`
 
     private async Task ShowToast()
     {
-       await this.ToastObj.Show();
+       await this.ToastObj.ShowAsync();
     }
 }
 
@@ -96,7 +96,7 @@ Here, The following sample demonstrates the combination of the `Target`, `ShowCl
 
     private async Task ShowToast()
     {
-       await this.ToastObj.Show();
+       await this.ToastObj.ShowAsync();
     }
 }
 
@@ -226,14 +226,14 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
 
     private async Task ShowToast()
     {
-        await this.ToastObj.Show();
+        await this.ToastObj.ShowAsync();
     }
 
     private async Task CheckBoxChange(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> e)
     {
         if (e.Checked)
         {
-            await ToastObj.Hide();
+            await ToastObj.HideAsync();
             this.Width = "100%";
             this.Title = "";
             this.ToastContent = "<div class='e-custom'>Take a look at our next generation <b>Javascript</b> <a href='https://blazor.syncfusion.com/home/index.html' target='_blank'>LEARN MORE</a></div>";
@@ -241,7 +241,7 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
         }
         else
         {
-            await ToastObj.Hide();
+            await ToastObj.HideAsync();
             this.Width = "300";
             this.Title = "Matt sent you a friend request";
             this.ToastContent = "You have a new friend request yet to accept";
@@ -254,13 +254,13 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
         if (e.Value == "Target")
         {
             this.PositionY = "Top";
-            await ToastObj.Hide();
+            await ToastObj.HideAsync();
             StateHasChanged();
         }
         else if (e.Value == "Global")
         {
             this.PositionY = "Bottom";
-            await ToastObj.Hide();
+            await ToastObj.HideAsync();
             StateHasChanged();
         }
     }

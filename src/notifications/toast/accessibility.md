@@ -29,7 +29,7 @@ The toast component implements the keyboard navigation support by using the foll
 
     private async Task OnCreate()
     {
-       await this.ToastObj.Show();
+       await this.ToastObj.ShowAsync();
     }
 }
 

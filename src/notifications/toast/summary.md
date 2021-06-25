@@ -7,6 +7,7 @@
 * [Animation](toast/animation.md)
 * [Style and appearance](toast/style.md)
 * [Accessibility](toast/accessibility.md)
+* [Events](toast/events.md)
 * [Show different types of toast](toast/how-to/show-different-types-of-toast.md)
 * [Show multiple toasts in various positions](toast/how-to/show-multiple-toasts-in-various-positions.md)
 * [Show toast content dynamically](toast/how-to/change-toast-content-dynamically.md)

@@ -39,22 +39,22 @@ In the following example, Toast is closed by calling the `Hide` method with the 
         private int key { get; set; } = 0;
         private async Task showOnclick()
         {
-            await this.toast.Show( new ToastModel {Key = key , Content = key.ToString() , Timeout = 10000 });
+            await this.toast.ShowAsync( new ToastModel {Key = key , Content = key.ToString() , Timeout = 10000 });
             key++;
         }
 
         private async Task OnOpen(ToastOpenArgs args)
         {
-            await this.toast.Hide(args.Key);
+            await this.toast.HideAsync(args.Key);
         }
 
     private async Task HideOnclick()
     {
-        await this.toast.Hide();
+        await this.toast.HideAsync();
     }
     private async Task hideOnclick()
     {
-        await this.toast.Hide("All");
+        await this.toast.HideAsync("All");
     }
 }
 

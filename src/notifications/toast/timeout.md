@@ -57,7 +57,7 @@ The toast can be expired based on the `Timeout` property. The toast can live til
 
     private async Task ShowToast()
     {
-       await this.ToastObj.Show();
+       await this.ToastObj.ShowAsync();
     }
 
     private void OnValChange()
@@ -69,7 +69,7 @@ The toast can be expired based on the `Timeout` property. The toast can live til
 
     private async Task HideToast()
     {
-       await this.ToastObj.Hide();
+       await this.ToastObj.HideAsync();
     }
 }
 
@@ -112,7 +112,7 @@ You can prevent auto hiding in a toast as visible like static by setting zero (`
 
     private async Task ShowToast()
     {
-       await this.ToastObj.Show();
+       await this.ToastObj.ShowAsync();
     }
 }
 

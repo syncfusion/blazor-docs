@@ -46,12 +46,12 @@ In the following code, toast buttons are configured using `ToastButton` property
 
     private async Task ShowToast()
     {
-      await this.ToastObj.Show();
+      await this.ToastObj.ShowAsync();
     }
 
     private async Task HideToast()
     {
-       await this.ToastObj.Hide();
+       await this.ToastObj.HideAsync();
     }
 }
 

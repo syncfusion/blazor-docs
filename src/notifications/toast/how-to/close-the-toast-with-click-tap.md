@@ -37,7 +37,7 @@ The following sample demonstrates the click/tap action in toast.
     {
         this.ToastContent = this.Contents[this.ToastFlag];
         await Task.Delay(100);
-        await this.ToastObj.Show();
+        await this.ToastObj.ShowAsync();
         this.ToastFlag = ((this.ToastFlag != 5) ? (this.ToastFlag + 1) : 0);
     }
 }

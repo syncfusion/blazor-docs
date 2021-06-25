@@ -29,7 +29,7 @@ The following code explains how to initialize a Toast with `Template`.
 
     private async Task ShowToast()
     {
-       await this.ToastObj.Show();
+       await this.ToastObj.ShowAsync();
     }
 }
 
@@ -134,7 +134,7 @@ The Template can be given as a RenderFragment type for the `ContentTemplate` pro
 
     private async Task ShowToast()
     {
-       await this.ToastObj.Show(new ToastModel { ContentTemplate = template });
+       await this.ToastObj.ShowAsync(new ToastModel { ContentTemplate = template });
     }
 }
 

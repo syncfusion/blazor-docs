@@ -40,12 +40,12 @@ The following sample demonstrates adding multiple toasts in different positions.
 
     private async Task ShowWarningToast()
     {
-       await this.WarningToastObj.Show();
+       await this.WarningToastObj.ShowAsync();
     }
 
     private async Task ShowSuccessToast()
     {
-        await this.SuccessToastObj.Show();
+        await this.SuccessToastObj.ShowAsync();
     }
 }
 

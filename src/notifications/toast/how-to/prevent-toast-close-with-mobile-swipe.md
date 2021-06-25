@@ -34,7 +34,7 @@ The following sample demonstrates preventing toast close with mobile swipe eleme
 
         private async Task ShowToast()
         {
-            await this.ToastObj.Show();
+            await this.ToastObj.ShowAsync();
         }
         private void OnClose(ToastBeforeCloseArgs args)
         {

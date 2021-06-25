@@ -54,7 +54,7 @@ The following sample demonstrates the different types of toast.
         this.ToastContent = this.Toasts[this.ToastFlag].Content;
         this.ToastCssClass = this.Toasts[this.ToastFlag].CssClass;
         await Task.Delay(100);
-        await this.ToastObj.Show();
+        await this.ToastObj.ShowAsync();
         this.ToastFlag = ((this.ToastFlag == Toasts.Length - 1) ? 0 : (this.ToastFlag + 1));
     }
 }

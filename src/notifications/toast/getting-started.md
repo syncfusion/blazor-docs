@@ -110,11 +110,11 @@ The following code explains how to initialize a simple Toast in Razor page.
     private string ToastContent = "Conference Room 01 / Building 135 10:00 AM-10:30 AM";
     private async Task ShowOnClick()
     {
-        await this.ToastObj.Show();
+        await this.ToastObj.ShowAsync();
     }
     private async Task HideOnClick()
     {
-        await this.ToastObj.Hide("All");
+        await this.ToastObj.HideAsync("All");
     }
 }
 ```

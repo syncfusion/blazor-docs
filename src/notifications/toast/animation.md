@@ -104,7 +104,7 @@ The following sample demonstrates some types of animations that suit toast. You 
 
     private async Task ShowToast()
     {
-        await ToastObj.Show();
+        await ToastObj.ShowAsync();
     }
 
     private void ShowAnimationChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)

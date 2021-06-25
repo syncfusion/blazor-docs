@@ -150,7 +150,7 @@ By default, the custom toolbar items are at left position. You can change the po
     {
         if (args.Item.Id == "toolbarfilter")
         {
-            this.Gantt.FilterByColumn("TaskName", "startswith", "Identify");
+            this.Gantt.FilterByColumnAsync("TaskName", "startswith", "Identify");
         }
     }
     public List<TaskData> TaskCollection { get; set; }
@@ -379,11 +379,11 @@ You can enable or disable the toolbar items by using the `EnableItems` method.
     {
         if (args.Item.Id == "quickfilter")
         {
-            this.Gantt.FilterByColumn("TaskName", "startswith", "Identify");
+            this.Gantt.FilterByColumnAsync("TaskName", "startswith", "Identify");
         }
         if (args.Item.Id == "clearfilter")
         {
-            this.Gantt.ClearFiltering();
+            this.Gantt.ClearFilteringAsync();
         }
     }
     public void EnableToolbar()

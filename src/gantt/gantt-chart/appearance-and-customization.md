@@ -1053,20 +1053,20 @@ In Gantt Chart, we can change the splitter position dynamically by using `SetSpl
     public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, SplitterView> args)
     {
         if(args.Value == "Grid") {
-            this.Gantt.SetSplitterPosition(Syncfusion.Blazor.Gantt.SplitterView.Grid);
+            this.Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Grid);
         } else if (args.Value == "Chart") {
-            this.Gantt.SetSplitterPosition(Syncfusion.Blazor.Gantt.SplitterView.Chart);
+            this.Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Chart);
         } else {
-            this.Gantt.SetSplitterPosition(Syncfusion.Blazor.Gantt.SplitterView.Default);
+            this.Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Default);
         }
     }
     public void UpdateSplitterByPosition()
     {
-    this.Gantt.SetSplitterPosition("70%");
+    this.Gantt.SetSplitterPositionAsync("70%");
     }
     public void UpdateSplitterByIndex()
     {
-    this.Gantt.SetSplitterPosition(0);
+    this.Gantt.SetSplitterPositionAsync(0);
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

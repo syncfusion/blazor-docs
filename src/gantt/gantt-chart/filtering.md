@@ -451,7 +451,7 @@ You can filter the columns dynamically by using the `FilterByColumn` method.
     public SfGantt<TaskData> Gantt;
     public void Filter()
     {
-        this.Gantt.FilterByColumn("TaskName","startswith","Iden");
+        this.Gantt.FilterByColumnAsync("TaskName","startswith","Iden");
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -564,7 +564,7 @@ The following code snippet explains the above behaviour.
     public SfGantt<TaskData> Gantt;
     public void ClearFilter()
     {
-        this.Gantt.ClearFiltering();
+        this.Gantt.ClearFilteringAsync();
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -884,7 +884,7 @@ To search the Gantt Chart records from an external button, invoke the `Search` m
     public SfGantt<TaskData> Gantt;
     public void Search()
     {
-        this.Gantt.Search("Perform");
+        this.Gantt.SearchAsync("Perform");
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1098,7 +1098,7 @@ You can pass the `empty` string to `Search` method, to clear the searched Gantt 
     }
     public void Clear()
     {
-        this.Gantt.Search("");
+        this.Gantt.SearchAsync("");
     }
     public class TaskData
     {

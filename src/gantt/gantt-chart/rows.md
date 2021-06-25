@@ -755,7 +755,7 @@ The following code example shows how to drag and drop a row on button click acti
         this.TaskCollection = GetTaskCollection();
     }
     public void drag() {
-        this.Gantt.ReorderRows(2, 6, "Below");
+        this.Gantt.ReorderRowAsync(2, 6, "Below");
     }
     public class TaskData
     {

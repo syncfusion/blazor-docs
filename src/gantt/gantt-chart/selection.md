@@ -322,7 +322,7 @@ You can also select a row dynamically using the `SelectRow` method. The followin
     public SfGantt<TaskData> Gantt;
     public void SelectRow()
     {
-        this.Gantt.SelectRow(2);
+        this.Gantt.SelectRowAsync(2);
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -528,7 +528,7 @@ You can also select rows dynamically using the `SelectRows` method. The followin
     public SfGantt<TaskData> Gantt;
     public void SelectRows()
     {
-        this.Gantt.SelectRows(new double[] {1,2,3});
+        this.Gantt.SelectRowsAsync(new double[] {1,2,3});
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -836,7 +836,7 @@ You can select a cell dynamically using the `SelectCell` method. Refer to the fo
     public SfGantt<TaskData> Gantt;
     public void SelectCell()
     {
-        this.Gantt.SelectCell( new ValueTuple<int, int> (1, 2) );
+        this.Gantt.SelectCellAsync( new ValueTuple<int, int> (1, 2) );
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1154,10 +1154,10 @@ You can clear the selected cells and selected rows by using a method called `Cle
     public SfGantt<TaskData> Gantt;
     public void select()
     {
-        this.Gantt.SelectRows(new double[] {1,2,3});
+        this.Gantt.SelectRowsAsync(new double[] {1,2,3});
     }
     public void clear() {
-        this.Gantt.ClearSelection();
+        this.Gantt.ClearSelectionAsync();
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

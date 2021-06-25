@@ -16,11 +16,11 @@ Gantt Chart add and edit dialogs can be opened dynamically by using `OpenAddDial
     public SfGantt<TaskData> Gantt;
     public void AddDialog()
     {
-       this.Gantt.OpenAddDialog();
+       this.Gantt.OpenAddDialogAsync();
     }
     public void EditDialog()
     {
-       this.Gantt.OpenEditDialog(3);
+       this.Gantt.OpenEditDialogAsync(3);
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

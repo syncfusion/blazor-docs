@@ -17,11 +17,11 @@ The excel export allows exporting GanttChart data to Excel and CSV formats. You 
     {
         if (args.Item.Id == "GanttContainer_excelexport")
         {
-            this.Gantt.ExcelExport();
+            this.Gantt.ExportToExcelAsync();
         }
         else if (args.Item.Id == "GanttContainer_csvexport")
         {
-            this.Gantt.CsvExport();
+            this.Gantt.ExportToCsvAsync();
         }
     }
     protected override void OnInitialized()
@@ -141,11 +141,11 @@ The excel export provides an option to export hidden columns of gantt chart by d
         ExportProperties.IncludeHiddenColumn = true;
         if (args.Item.Id == "GanttContainer_excelexport")
         {
-            this.Gantt.ExcelExport(ExportProperties);
+            this.Gantt.ExportToExcelAsync(ExportProperties);
         }
         else if (args.Item.Id == "GanttContainer_csvexport")
         {
-            this.Gantt.CsvExport(ExportProperties);
+            this.Gantt.ExportToCsvAsync(ExportProperties);
         }
     }
     protected override void OnInitialized()
@@ -266,7 +266,7 @@ To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
         ExportProperties.Theme = Theme;
         if (args.Item.Id == "GanttContainer_excelexport")
         {
-            this.Gantt.ExcelExport(ExportProperties);
+            this.Gantt.ExportToExcel(ExportProperties);
         }
     }
     protected override void OnInitialized()
@@ -377,13 +377,13 @@ You can assign the file name for the exported document by defining **FileName** 
         {
             Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
             ExportProperties.FileName = "Gantt.xlsx";
-            this.Gantt.ExcelExport(ExportProperties);
+            this.Gantt.ExportToExcel(ExportProperties);
         }
         else if (args.Item.Id == "GanttContainer_csvexport")
         {
             Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
             ExportProperties.FileName = "Gantt.csv";
-            this.Gantt.CsvExport(ExportProperties);
+            this.Gantt.ExportToCsv(ExportProperties);
         }
     }
     protected override void OnInitialized()

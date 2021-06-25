@@ -610,7 +610,7 @@ Multiple columns can be reordered at a time by using the `ReorderColumns` method
     public SfGantt<TaskData> Gantt;
     public void ReorderColumn()
     {
-        this.Gantt.ReorderColumns(new List<string>(){"TaskName", "StartDate"},"Progress");
+        this.Gantt.ReorderColumnsAsync(new List<string>(){"TaskName", "StartDate"},"Progress");
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1364,10 +1364,10 @@ You can show or hide gantt component columns dynamically using external buttons 
     public List<TaskData> TaskCollection { get; set; }
     public string[] ColumnList = {"TaskName", "StartDate"};
     public void show() {
-        this.Gantt.ShowColumns(ColumnList, "Field");
+        this.Gantt.ShowColumnsAsync(ColumnList, "Field");
     }
     public void hide() {
-        this.Gantt.HideColumns(ColumnList, "Field");
+        this.Gantt.HideColumnsAsync(ColumnList, "Field");
     }
     protected override void OnInitialized()
     {
@@ -1578,6 +1578,134 @@ Gantt column supports the following types:
 
 > If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`.
 > In case if the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
+
+## Custom Columns
+
+Using the `GanttColumns` property, you can define the Custom Columns in Gantt Chart. If custom columns are required, then you can generate columns that was not defined in the `GanttTaskFields` property. Refer to the following code example for defining the custom columns in Gantt Chart.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" Child="SubTasks">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="150"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Job Name" Width="150"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" Width="150"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date" Width="150"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration" Width="150"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" Width="150"></GanttColumn>
+        <GanttColumn Field="Status" HeaderText="Status" Width="150" EditType=Syncfusion.Blazor.Grids.EditType.DefaultEdit></GanttColumn>
+        <GanttColumn Field="WorkersCount" HeaderText="Workers Count" Width="150" EditType=Syncfusion.Blazor.Grids.EditType.NumericEdit></GanttColumn>
+    </GanttColumns>
+</SfGantt>
+
+@code{
+    public List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public string Status { get; set; }
+        public int WorkersCount { get; set; }
+        public List<TaskData> SubTasks { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+        new TaskData() {
+            TaskId = 1,
+            TaskName = "Project initiation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            Status="Progress",
+            WorkersCount=20,
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 2,
+                    TaskName = "Identify Site location",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Progress = 5,
+                    Status="Progress",
+                    WorkersCount=10,
+                },
+                new TaskData() {
+                    TaskId = 3,
+                    TaskName = "Perform soil test",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "4",
+                    Progress = 10,
+                    Status="Hold",
+                    WorkersCount=15,
+                },
+                new TaskData() {
+                    TaskId = 4,
+                    TaskName = "Soil test approval",
+                    StartDate = new DateTime(2019, 04, 02),
+                    Duration = "0",
+                    Progress = 30,
+                    Status="PostPoned",
+                    WorkersCount=5,
+                },
+            })
+        },
+        new TaskData() {
+            TaskId = 5,
+            TaskName = "Project estimation",
+            StartDate = new DateTime(2019, 04, 02),
+            EndDate = new DateTime(2019, 04, 21),
+            Status="Progress",
+            WorkersCount=25,
+            SubTasks = (new List <TaskData> () {
+                new TaskData() {
+                    TaskId = 6,
+                    TaskName = "Develop floor plan for estimation",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Progress = 30,
+                    Status="PostPoned",
+                    WorkersCount=10,
+                },
+                new TaskData() {
+                    TaskId = 7,
+                    TaskName = "List materials",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "3",
+                    Progress = 40,
+                    Status="Progress",
+                    WorkersCount=5,
+
+                },
+                new TaskData() {
+                    TaskId = 8,
+                    TaskName = "Estimation approval",
+                    StartDate = new DateTime(2019, 04, 04),
+                    Duration = "0",
+                    Progress = 30,
+                    Status="Progress",
+                    WorkersCount=10,
+                }
+            })
+        }
+    };
+        return Tasks;
+    }
+}
+```
+
+![Alt text](images/CustomColumn.png)
 
 <!-- Column Spanning
 

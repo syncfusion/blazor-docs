@@ -223,7 +223,7 @@ Columns in the Gantt Chart component can be sorted dynamically using the `SortBy
     public SfGantt<TaskData> Gantt;
     public void Sorting()
     {
-        this.Gantt.SortByColumn("TaskName", Syncfusion.Blazor.Grids.SortDirection.Descending, false);
+        this.Gantt.SortByColumnAsync("TaskName", Syncfusion.Blazor.Grids.SortDirection.Descending, false);
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -323,8 +323,8 @@ In the Gantt Chart component, you can clear all the sorted columns and return to
     </GanttTaskFields>
     <GanttSortSettings>
         <GanttSortDescriptors>
-            <GanttSortDescriptor Field="TaskId" Direction="SortDirection.Descending"></GanttSortDescriptor>
-            <GanttSortDescriptor Field="TaskName" Direction="SortDirection.Ascending"></GanttSortDescriptor>
+            <GanttSortDescriptor Field="TaskId" Direction="Syncfusion.Blazor.Grids.SortDirection.Descending"></GanttSortDescriptor>
+            <GanttSortDescriptor Field="TaskName" Direction="Syncfusion.Blazor.Grids.SortDirection.Ascending"></GanttSortDescriptor>
         </GanttSortDescriptors>
     </GanttSortSettings>
 </SfGantt>
@@ -333,7 +333,7 @@ In the Gantt Chart component, you can clear all the sorted columns and return to
     public SfGantt<TaskData> Gantt;
     public void ClearSorting()
     {
-        this.Gantt.ClearSorting();
+        this.Gantt.ClearSortingAsync();
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -553,7 +553,7 @@ The following code snippets explains how to achieve this.
     public SfGantt<TaskData> Gantt;
     public void Sorting()
     {
-        this.Gantt.SortByColumn("CustomColumn", SortDirection.Descending, false);
+        this.Gantt.SortByColumnAsync("CustomColumn", Syncfusion.Blazor.Grids.SortDirection.Descending, false);
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

@@ -364,12 +364,12 @@ Define the components DataSource in `@code` section.
 
     private async Task Created()
     {
-        await this.RichTextEditorObj.RefreshUI();
+        await this.RichTextEditorObj.RefreshUIAsync();
     }
 
     private async Task ResizeStop()
     {
-        await this.RichTextEditorObj.RefreshUI();
+        await this.RichTextEditorObj.RefreshUIAsync();
     }
 }
 

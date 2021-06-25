@@ -121,12 +121,12 @@ The Splitter provides public method to control the expand and collapse behavior 
 
     private async Task Expand()
     {
-        await this.SplitterObj.Expand(0);
+        await this.SplitterObj.ExpandAsync(0);
     }
 
     private async Task Collapse()
     {
-        await this.SplitterObj.Collapse(0);
+        await this.SplitterObj.CollapseAsync(0);
     }
 }
 

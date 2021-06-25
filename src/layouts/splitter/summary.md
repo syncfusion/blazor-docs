@@ -8,3 +8,4 @@
 * [State Management](splitter/state-management.md)
 * [Different Layouts](splitter/different-layouts.md)
 * [Style and appearance](splitter/style.md)
+* [Events](splitter/events.md)

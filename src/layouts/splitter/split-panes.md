@@ -307,9 +307,9 @@ You can add the panes dynamically in the splitter by passing `PaneProperties` al
         Max = "250px"
     };
 
-    private void Add()
+    private async Task Add()
     {
-        this.SplitterObj.AddPane(AddingPane, 1);
+       await this.SplitterObj.AddPaneAsync(AddingPane, 1);
     }
 }
 
@@ -370,9 +370,9 @@ You can remove the split panes dynamically by passing the pane index to `RemoveP
 @code  {
     SfSplitter SplitterObj;
 
-    private void Remove()
+    private async Task Remove()
     {
-        this.SplitterObj.RemovePane(1);
+       await this.SplitterObj.RemovePaneAsync(1);
     }
 }
 

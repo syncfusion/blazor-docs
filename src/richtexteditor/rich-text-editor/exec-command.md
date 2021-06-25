@@ -5,32 +5,32 @@ The `ExecuteCommand` will perform the following commands.
 
 | Commands | Description | Code snippets |
 |----------------|---------| -----------|
-| Bold | Bold the selected content in the Rich Text Editor. |`await this.RteObj.ExecuteCommand(CommandName.Bold);`|
-| Italic | The selected text will be italics. |`await this.RteObj.ExecuteCommand(CommandName.Italic);`|
-| Underline | Underline the selected text in the Rich Text Editor. |`await this.RteObj.ExecuteCommand(CommandName.Underline);`|
-| StrikeThrough | Apply single line strike through formatting for the selected text. |`await this.RteObj.ExecuteCommand(CommandName.StrikeThrough);`|
-| Superscript | Makes the selected text as superscript (higher). |`await this.RteObj.ExecuteCommand(CommandName.Superscript);`|
-| Subscript | Makes the selected text as subscript (lower). |`await this.RteObj.ExecuteCommand(CommandName.Subscript);`|
-| Uppercase | Change the case of selected text to upper  in the content. |`await this.RteObj.ExecuteCommand(CommandName.Uppercase);`|
-| Lowercase | Change the case of selected text to lower in the content. |`await this.RteObj.ExecuteCommand(CommandName.Lowercase);`|
-| FontColor | Apply the specified font color for the selected text. |`await this.RteObj.ExecuteCommand(CommandName.FontColor, "Red");`|
-| FontName | Apply the specified font name for the selected text. |`await this.RteObj.ExecuteCommand(CommandName.FontName, "Impact");`|
-| FontSize | Apply the specified font size for the selected text. |`await this.RteObj.ExecuteCommand(CommandName.FontSize, "10pt");`|
-| BackgroundColor | Apply the specified background color the selected text. | `await this.RteObj.ExecuteCommand(CommandName.BackgroundColor, "red");`|
-| JustifyCenter | Align the content with center margin. | `await this.RteObj.ExecuteCommand(CommandName.JustifyCenter);`|
-| JustifyFull | Align the content with justify margin. |`await this.RteObj.ExecuteCommand(CommandName.JustifyFull);`|
-| JustifyLeft | Align the content with left margin. | `await this.RteObj.ExecuteCommand(CommandName.JustifyLeft);`|
-| JustifyRight | Align the content with right margin. | `await this.RteObj.ExecuteCommand(CommandName.JustifyRight);`|
-| CreateLink | Creates a hyperlink to a text or image to a specific location in the content. |`await this.RteObj.ExecuteCommand(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});}` |
-| Indent | Allows to increase the indent level of the content. | `await this.RteObj.ExecuteCommand(CommandName.Indent);`|
-| InsertHTML | Insert the html content to the current cursor position. |`await this.RteObj.ExecuteCommand(CommandName.InsertHTML,"<div>Syncfusion Rich Text Editor`|
-| InsertOrderedList | Create a new list item(numbered). | `await this.RteObj.ExecuteCommand(CommandName.InsertOrderedList);`|
-| InsertUnorderedList | Create a new list item(bulleted). |`await this.RteObj.ExecuteCommand(CommandName.InsertUnorderedList);`|
-| Outdent | Allows to decrease the indent level of the content. | `await this.RteObj.ExecuteCommand(CommandName.Outdent);`|
-| Redo | Allows to redo the actions | `await this.RteObj.ExecuteCommand(CommandName.Redo);`|
-| RemoveFormat | remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. |`await this.RteObj.ExecuteCommand(CommandName.RemoveFormat);`|
-| InsertText | Insert text to the current cursor position. | `await this.RteObj.ExecuteCommand(CommandName.InsertText, "Inserted text");`|
-| InsertImage | Insert an image to the current cursor position. | `await this.RteObj.ExecuteCommand(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });`|
+| Bold | Bold the selected content in the Rich Text Editor. |`await this.RteObj.ExecuteCommandAsync(CommandName.Bold);`|
+| Italic | The selected text will be italics. |`await this.RteObj.ExecuteCommandAsync(CommandName.Italic);`|
+| Underline | Underline the selected text in the Rich Text Editor. |`await this.RteObj.ExecuteCommandAsync(CommandName.Underline);`|
+| StrikeThrough | Apply single line strike through formatting for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);`|
+| Superscript | Makes the selected text as superscript (higher). |`await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);`|
+| Subscript | Makes the selected text as subscript (lower). |`await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);`|
+| Uppercase | Change the case of selected text to upper  in the content. |`await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);`|
+| Lowercase | Change the case of selected text to lower in the content. |`await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);`|
+| FontColor | Apply the specified font color for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red");`|
+| FontName | Apply the specified font name for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");`|
+| FontSize | Apply the specified font size for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.FontSize, "10pt");`|
+| BackgroundColor | Apply the specified background color the selected text. | `await this.RteObj.ExecuteCommandAsync(CommandName.BackgroundColor, "red");`|
+| JustifyCenter | Align the content with center margin. | `await this.RteObj.ExecuteCommandAsync(CommandName.JustifyCenter);`|
+| JustifyFull | Align the content with justify margin. |`await this.RteObj.ExecuteCommandAsync(CommandName.JustifyFull);`|
+| JustifyLeft | Align the content with left margin. | `await this.RteObj.ExecuteCommandAsync(CommandName.JustifyLeft);`|
+| JustifyRight | Align the content with right margin. | `await this.RteObj.ExecuteCommandAsync(CommandName.JustifyRight);`|
+| CreateLink | Creates a hyperlink to a text or image to a specific location in the content. |`await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});}` |
+| Indent | Allows to increase the indent level of the content. | `await this.RteObj.ExecuteCommandAsync(CommandName.Indent);`|
+| InsertHTML | Insert the html content to the current cursor position. |`await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML,"<div>Syncfusion Rich Text Editor`|
+| InsertOrderedList | Create a new list item(numbered). | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);`|
+| InsertUnorderedList | Create a new list item(bulleted). |`await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);`|
+| Outdent | Allows to decrease the indent level of the content. | `await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);`|
+| Redo | Allows to redo the actions | `await this.RteObj.ExecuteCommandAsync(CommandName.Redo);`|
+| RemoveFormat | remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.RemoveFormat);`|
+| InsertText | Insert text to the current cursor position. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");`|
+| InsertImage | Insert an image to the current cursor position. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });`|
 
 > Provided support to apply execute commands which do not require direct DOM access.
 
@@ -61,12 +61,12 @@ The following code block demonstrates the usage of the ExecuteCommand in Rich Te
 
     private async Task OnBoldCommand()
     {
-        await this.RteObj.ExecuteCommand(CommandName.Bold);
+        await this.RteObj.ExecuteCommandAsync(CommandName.Bold);
     }
 
     private async Task OnInsertHtmlCommand()
     {
-        await this.RteObj.ExecuteCommand(CommandName.InsertHTML, "<div>Syncfusion Rich Text Editor component</div>");
+        await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML, "<div>Syncfusion Rich Text Editor component</div>");
     }
 }
 

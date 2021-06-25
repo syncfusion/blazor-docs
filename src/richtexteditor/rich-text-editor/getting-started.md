@@ -272,16 +272,16 @@ To retrieve the editor contents, use the `Value` property of Rich Text Editor. T
     private async Task GetValue()
     {
         this.Content = this.RteValue;
-        await this.DialogObj.Show();
+        await this.DialogObj.ShowAsync();
     }
     private async Task GetText()
     {
-        this.Content = await this.RteObj.GetText();
-        this.DialogObj.Show();
+        this.Content = await this.RteObj.GetTextAsync();
+        this.DialogObj.ShowAsync();
     }
     private async Task DlgButtonClick(object arg)
     {
-        await this.DialogObj.Hide();
+        await this.DialogObj.HideAsync();
     }
 }
 ```

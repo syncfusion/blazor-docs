@@ -1,5 +1,5 @@
 ---
-title: " Types of data in Blazor Range Selector component | Syncfusion "
+title: " Types of data in the Blazor Range Selector component | Syncfusion "
 
 component: "Range Selector"
 
@@ -8,7 +8,7 @@ description: "Learn here all about different types of data for Syncfusion Blazor
 
 <!-- markdownlint-disable MD036 -->
 
-# Types of data in Range Selector (SfRangeNavigator)
+# Types of data in the Range Selector (SfRangeNavigator)
 
 ## Numeric
 
@@ -22,7 +22,7 @@ The numeric scale is used to represent the numeric values of data in a Range Sel
 
 ### Range
 
-The minimum and maximum of the scale will be calculated automatically based on the provided data. It can be customized by using the [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Minimum), [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Maximum), and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) properties.
+The minimum and the maximum of the scale will be calculated automatically based on the provided data. It can be customized by using the [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Minimum), the [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Maximum), and the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) properties.
 
 {% aspTab template="range-navigator/data/range", sourceFiles="range.razor" %}
 
@@ -32,7 +32,7 @@ The minimum and maximum of the scale will be calculated automatically based on t
 
 ### Label Format
 
-The numeric labels can be formatted using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property and it supports all globalized formats.
+The numeric labels can be formatted using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property and it supports all the globalized formats.
 
 {% aspTab template="range-navigator/data/format", sourceFiles="format.razor" %}
 
@@ -40,7 +40,7 @@ The numeric labels can be formatted using the [`LabelFormat`](https://help.syncf
 
 ![Numeric label format](images/data/format.png)
 
-The table below shows the results of applying some commonly used label formats to numeric values.
+The following table shows the results of applying some commonly used label formats to numeric values.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -60,13 +60,13 @@ The table below shows the results of applying some commonly used label formats t
 <td>1000</td>
 <td>n2</td>
 <td>1000.00</td>
-<td>The number is rounded to 2 decimal place.</td>
+<td>The number is rounded to 2 decimal places.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>n3</td>
 <td>1000.000</td>
-<td>The number is rounded to 3 decimal place.</td>
+<td>The number is rounded to 3 decimal places.</td>
 </tr>
 <tr>
 <td>0.01</td>
@@ -78,31 +78,31 @@ The table below shows the results of applying some commonly used label formats t
 <td>0.01</td>
 <td>p2</td>
 <td>1.00%</td>
-<td>The number is converted to percentage with 2 decimal place.</td>
+<td>The number is converted to percentage with 2 decimal places.</td>
 </tr>
 <tr>
 <td>0.01</td>
 <td>p3</td>
 <td>1.000%</td>
-<td>The number is converted to percentage with 3 decimal place.</td>
+<td>The number is converted to percentage with 3 decimal places.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>c1</td>
 <td>$1,000.0</td>
-<td>The currency symbol is appended to number and number is rounded to 1 decimal place.</td>
+<td>The currency symbol is appended to number and the number is rounded to 1 decimal place.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>c2</td>
 <td>$1,000.00</td>
-<td>The currency symbol is appended to number and number is rounded to 2 decimal place.</td>
+<td>The currency symbol is appended to number and the number is rounded to 2 decimal places.</td>
 </tr>
 </table>
 
 ### Custom Label Format
 
-The Range Selector also supports custom label formats using placeholders such as **{value}$**, in which, the value represents the axis label, e.g. 20$.
+The Range Selector also supports the Custom Label formats using the placeholders such as **{value}$**, in which the value represents the axis label, e.g. 20$.
 
 {% aspTab template="range-navigator/data/custom-format", sourceFiles="custom-format.razor" %}
 
@@ -114,7 +114,7 @@ The Range Selector also supports custom label formats using placeholders such as
 
 <!-- markdownlint-disable MD033 -->
 
-The logarithmic supports logarithmic scale, and it is used to visualize data when the Range Selector has numerical values in both lower (e.g.: 10-6) and higher (e.g.: 106) orders of magnitude.
+The Logarithmic supports the logarithmic scale, and it is used to visualize the data when the Range Selector has numerical values in both the lower (e.g.: 10-6) and the higher (e.g.: 106) orders of the magnitude.
 
 {% aspTab template="range-navigator/data/log", sourceFiles="log.razor" %}
 
@@ -124,7 +124,7 @@ The logarithmic supports logarithmic scale, and it is used to visualize data whe
 
 ### Range
 
-The minimum and maximum of the Range Selector will be calculated automatically based on the provided data. It can be customized by using the [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Minimum), [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Maximum), and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) properties.
+The minimum and the maximum of the Range Selector will be calculated automatically based on the provided data. It can be customized by using the [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Minimum), the [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Maximum), and the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) properties.
 
 {% aspTab template="range-navigator/data/log-range", sourceFiles="log-range.razor" %}
 
@@ -134,7 +134,7 @@ The minimum and maximum of the Range Selector will be calculated automatically b
 
 ### Logarithmic Base
 
-The logarithmic base can be customized using the [`LogBase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LogBase) property. The default value of this property is **10**.
+The Logarithmic Base can be customized using the [`LogBase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LogBase) property. The default value of this property is **10**.
 
 {% aspTab template="range-navigator/data/log-base", sourceFiles="log-base.razor" %}
 
@@ -142,22 +142,22 @@ The logarithmic base can be customized using the [`LogBase`](https://help.syncfu
 
 ![Logarithmic base](images/data/log-base.png)
 
-## Datetime
+## DateTime
 
-The Range Selector supports datetime scale and displays datetime values as labels in the specified format.
+The Range Selector supports the DateTime scale and displays the DateTime values as labels in the specified format.
 
 {% aspTab template="range-navigator/data/date-time", sourceFiles="date-time.razor" %}
 
 {% endaspTab %}
 
-![Datetime](images/data/datetime.png)
+![DateTime](images/data/datetime.png)
 
 ### Interval Customization
 
-Datetime intervals can be customized using the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) and [`IntervalType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_IntervalType) properties of the Range Selector.
-For example, if [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) is set to 2 and [`IntervalType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_IntervalType) is set to years, the interval will be considered to be 2 years.
+The DateTime intervals can be customized using the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) and the [`IntervalType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_IntervalType) properties of the Range Selector.
+For example, if the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) is set to 2 and the [`IntervalType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_IntervalType) is set to years, the interval will be considered to be 2 years.
 
-Datetime supports the following interval types:
+DateTime supports the following interval types:
 * Auto
 * Years
 * Quarter
@@ -171,7 +171,7 @@ Datetime supports the following interval types:
 
 {% endaspTab %}
 
-![Datetime interval type](images/data/datetime-interval.png)
+![DateTime interval type](images/data/datetime-interval.png)
 
 ### Label Format
 
@@ -181,9 +181,9 @@ The [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 {% endaspTab %}
 
-![Datetime label format](images/data/datetime-format.png)
+![DateTime label format](images/data/datetime-format.png)
 
-The table below shows the results of applying some common datetime formats to the [`LabelFormat`]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat)) property.
+The following table shows the results of applying some common DateTime formats to the [`LabelFormat`]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat)) property.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -197,13 +197,13 @@ The table below shows the results of applying some common datetime formats to th
 <td>new Date(2000, 03, 10)</td>
 <td>EEEE</td>
 <td>Monday</td>
-<td>The date is displayed in day format.</td>
+<td>The date is displayed in the day format.</td>
 </tr>
 <tr>
 <td>new Date(2000, 03, 10)</td>
 <td>yMd</td>
 <td>04/10/2000</td>
-<td>The date is displayed in month/date/year format.</td>
+<td>The date is displayed in the month/date/year format.</td>
 </tr>
 <tr>
 <td>new Date(2000, 03, 10)</td>
@@ -215,7 +215,7 @@ The table below shows the results of applying some common datetime formats to th
 <td>new Date(2000, 03, 10)</td>
 <td>hm</td>
 <td>12:00 AM</td>
-<td>Time of the date value is displayed as label.</td>
+<td>The time of the date value is displayed as label.</td>
 </tr>
 <tr>
 <td>new Date(2000, 03, 10)</td>

@@ -1,10 +1,10 @@
 # Localization
 
-The Sparkline Charts component supports localization. The default culture for localization is `en-US`. You can change the culture using the `LoadCldrData` and `setCulture` method.
+The Sparkline Charts component supports localization. The default culture for localization is `en-US`. Change the culture using the `LoadCldrData` and the `setCulture` method.
 
 ## Tooltip format
 
-Sparkline Charts tooltip supports localization. The following code sample shows tooltip text with currency format based on culture.
+The Sparkline Charts tooltip supports localization. The following code sample shows the tooltip text with currency format based on culture.
 
 ```csharp
 <SfSparkline DataSource="@Numbers"
@@ -37,7 +37,7 @@ Sparkline Charts tooltip supports localization. The following code sample shows 
 
 ## Rtl
 
-If you set the `EnableRtl` property to true, then the Sparkline Charts will be rendered from right-to-left direction.
+If the `EnableRtl` property is set to true, then the Sparkline Charts will be rendered from right-to-left direction.
 
 The following example shows the Sparkline Charts render from "Right-to-left".
 

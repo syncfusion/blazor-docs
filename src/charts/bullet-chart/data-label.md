@@ -1,14 +1,14 @@
 ---
-title: "Data Labels in Blazor Bullet Chart component | Syncfusion"
+title: "Data Labels in the Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"
 
-description: "Learn here all about Data Labels of Syncfusion Bullet Chart (SfBulletChart) component and more."
+description: "Learn here all about the Data Labels of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
 # Data Labels in Blazor Bullet Chart (SfBulletChart)
 
-Data labels are used to identify the value of actual bar in the Bullet Chart component. Data labels will be shown by specifying the [`BulletChartDataLabel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabel.html) setting.
+The Data Labels are used to identify the value of the actual bar in the Bullet Chart component. The Data Labels will be shown by specifying the [`BulletChartDataLabel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabel.html) setting.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -44,7 +44,7 @@ Data labels are used to identify the value of actual bar in the Bullet Chart com
 
 ## Data Labels Customization
 
-The data labels color, opacity, font size, font family, font weight and font style can be customized using [`BulletChartDataLabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabelStyle.html).
+The Data Labels color, opacity, font size, font family, font weight, and font style can be customized using the [`BulletChartDataLabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabelStyle.html).
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -62,6 +62,6 @@ The data labels color, opacity, font size, font family, font weight and font sty
 </SfBulletChart>
 ```
 
-> Refer [code block](#data-label) to know the property value of **BulletChartData**.
+> Refer to the [code block](#data-label) to know about the property value of the **BulletChartData**.
 
 ![Bullet Chart with Data Labels](images/data-label.png)

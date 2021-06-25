@@ -1,6 +1,6 @@
 # Sparkline Chart Types
 
-Different types of shapes can be used to represent the Sparkline Charts. You can change the type of Sparkline Charts by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) property. Sparkline Charts supports the following types:
+The different types of shapes can be used to represent the Sparkline Charts. Change the type of Sparkline Charts by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) property. Sparkline Charts supports the following types:
 
 * Line
 * Column
@@ -8,7 +8,7 @@ Different types of shapes can be used to represent the Sparkline Charts. You can
 * Pie
 * Area
 
-The following code sample shows different types of Sparkline Charts.
+The following code sample shows the different types of Sparkline Charts.
 
 ## Line
 
@@ -66,7 +66,7 @@ The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusio
 </SfSparkline>
 ```
 
-> Refer [code block](#line) to know the property value of `PopulationData`.
+> Refer to the [code block](#line) to know about the property value of the `PopulationData`.
 
 ![Sparkline Charts with Column Type](./images/SparklineTypes/Column.png)
 
@@ -87,7 +87,7 @@ The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.B
 </SfSparkline>
 ```
 
-> Refer [code block](#line) to know the property value of `PopulationData`.
+> Refer to the [code block](#line) to know about the property value of the `PopulationData`.
 
 ![Sparkline Charts with Pie type](./images/SparklineTypes/Pie.png)
 
@@ -124,6 +124,6 @@ The [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.
 </SfSparkline>
 ```
 
-> Refer [code block](#line) to know the property value of `PopulationData`.
+> Refer to the [code block](#line) to know about the property value of the `PopulationData`.
 
 ![Sparkline Charts with Area Type Sample](./images/SparklineTypes/Area.png)

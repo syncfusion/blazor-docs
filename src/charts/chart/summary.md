@@ -67,3 +67,4 @@
 * [Threshold in Chart](chart/how-to/threshold.md)
 * [Live Chart](chart/how-to/live-chart.md)
 * [Hiding Axis](chart/how-to/axis-hide.md)
+* [Convert millisecond to date time](chart/how-to/convert-millisecond-to-date-time.md)

@@ -1,14 +1,14 @@
 ---
-title: "Data Binding in Blazor Bullet Chart component | Syncfusion"
+title: "Data Binding in the Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"
 
-description: "Learn here all about Data Binding of Syncfusion Bullet Chart (SfBulletChart) component and more."
+description: "Learn here all about the Data Binding of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
-# Data Binding in Blazor Bullet Chart (SfBulletChart)
+# Data Binding in the Blazor Bullet Chart (SfBulletChart)
 
-The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_DataSource) property accepts a collection of values as input that helps to display measures and compares them to a target bar. To display the actual and target bar, specify the property from the datasource into [`ValueField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) and [`TargetField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) respectively.
+The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_DataSource) property accepts a collection of values as input that helps to display measures, and compares them to a target bar. To display the actual and the target bar, specify the property from the datasource into the [`ValueField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) and the [`TargetField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) respectively.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

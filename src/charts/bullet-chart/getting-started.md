@@ -1,20 +1,20 @@
 ---
-title: " Getting Started with Blazor Bullet Chart component | Syncfusion "
+title: " Getting Started with the Blazor Bullet Chart component | Syncfusion "
 
 component: "Bullet Chart"
 
 description: "Learn here about getting started with Syncfusion Blazor Bullet Chart (SfBulletChart) component, its elements, and more."
 ---
 
-# Getting Started with Blazor Bullet Chart (SfBulletChart)
+# Getting Started with the Blazor Bullet Chart (SfBulletChart)
 
-This section briefly explains how to include a Bullet Chart component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
+This section briefly explains how to include a Bullet Chart component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
 ## Importing Syncfusion Blazor Bullet Chart component in the application
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
@@ -24,7 +24,7 @@ This section briefly explains how to include a Bullet Chart component in your Bl
 </head>
 ```
 
-> For Internet Explorer 11, kindly refer the polyfills. Refer the [`documentation`](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11, kindly refer to the polyfills. Refer to the [`documentation`](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
  ```html
 <head>
@@ -64,11 +64,11 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+> To enable the custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
 ## Adding Bullet Chart component
 
-To initialize the Bullet Chart component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+To initialize the Bullet Chart component, add the below code to the **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed, and following code can be added.
 
 ```csharp
 @page "/"
@@ -89,13 +89,13 @@ To initialize the Bullet Chart component, add the below code to your **Index.ra
 }
 ```
 
-On successful compilation of your application, the Syncfusion Blazor Bullet Chart component will render in the web browser as shown below.
+On successful compilation of the application, the Syncfusion Blazor Bullet Chart component will render in the web browser as follows.
 
 ![Bullet Chart](images/default.png)
 
 ## Adding Title
 
-You can add a title by using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property in the Bullet Chart, to provide quick information to the user about the data plotted in the component.
+Add a title by using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property in the Bullet Chart, to provide quick information to the user about the data plotted in the component.
 
 ```csharp
 @page "/"
@@ -120,7 +120,7 @@ You can add a title by using [`Title`](https://help.syncfusion.com/cr/blazor/Syn
 
 ## Adding Ranges
 
-You can add ranges by using [`BulletChartRangeCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRangeCollection.html) to measure the qualitative state by observing the distance between each range.
+Add ranges by using the [`BulletChartRangeCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRangeCollection.html) to measure the qualitative state by observing the distance between each range.
 
 ```csharp
 @page "/"
@@ -150,7 +150,7 @@ You can add ranges by using [`BulletChartRangeCollection`](https://help.syncfusi
 
 ## Adding Tooltip
 
-You can use the tooltip to show the measure values by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property to **true** in [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html).
+Use the tooltip to show the measured values by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property to **true** in the [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html).
 
 ```csharp
 @page "/"

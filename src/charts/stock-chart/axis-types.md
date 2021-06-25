@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD036 -->
+
 # DateTime and Logarithmic Axis
 
 ## DateTime Axis

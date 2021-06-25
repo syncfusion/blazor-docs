@@ -1,18 +1,18 @@
 ---
-title: "Tooltip in Blazor Bullet Chart component | Syncfusion"
+title: "Tooltip in the Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"
 
-description: "Learn here all about tooltip of Syncfusion Bullet Chart (SfBulletChart) component and more."
+description: "Learn here all about the tooltip of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
-# Tooltip in Blazor Bullet Chart (SfBulletChart)
+# Tooltip in the Blazor Bullet Chart (SfBulletChart)
 
-When the mouse is hovered over a bar in the Bullet Chart, the tooltip displays important summary about the actual and target bar values.
+When the mouse is hovered over a bar in the Bullet Chart, the tooltip displays important summary about the actual and the target bar values.
 
 ## Default Tooltip
 
-The tooltip is not visible by default, to make it visible, set the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property in the [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) to **true**.
+The tooltip is not visible by default. To make it visible, set the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property in the [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) to **true**.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -52,7 +52,7 @@ The tooltip is not visible by default, to make it visible, set the [`Enable`](ht
 The following properties can be used to customize the Bullet Chart tooltip.
 
 * [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Fill) - Specifies the color of the tooltip.
-* [`BulletChartTooltipBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipBorder.html) - Specifies the tooltip border color and width.
+* [`BulletChartTooltipBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipBorder.html) - Specifies the tooltip border color and the width.
 * [`BulletChartTooltipTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipTextStyle.html) - Specifies the tooltip font family, font style, font weight, color and size.
 
 ```csharp
@@ -71,13 +71,13 @@ The following properties can be used to customize the Bullet Chart tooltip.
 </SfBulletChart>
 ```
 
-> Refer [code block](#default-tooltip) to know the property value of **BulletChartData**.
+> Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
 
 ![Tooltip Customization](images/tooltip-custom.png)
 
 ## Tooltip Template
 
-The tooltip can be render as a custom component using [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Template) property in the [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) which accepts one or more UI elements as an input, that can be rendered as part of the tooltip rendering.
+The tooltip can be rendered as a custom component using the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Template) property in the [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) which accepts one or more UI elements as an input, that can be rendered as a part of the tooltip rendering.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -108,6 +108,6 @@ The tooltip can be render as a custom component using [`Template`](https://help.
 </SfBulletChart>
 ```
 
-> Refer [code block](#default-tooltip) to know the property value of **BulletChartData**.
+> Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
 
 ![Tooltip with Template](images/tooltip-template.png)

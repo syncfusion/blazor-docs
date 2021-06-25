@@ -1,14 +1,14 @@
 ---
-title: " Events in Blazor Range Selector component | Syncfusion "
+title: " Events in the Blazor Range Selector component | Syncfusion "
 
 component: "Range Selector"
 
-description: "Learn here all about events of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
+description: "Learn here all about the events of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
-# Events in Blazor Range Selector (SfRangeNavigator)
+# Events in the Blazor Range Selector (SfRangeNavigator)
 
-This section describes the Range Selector component's events that will be triggered when appropriate actions are performed. The events should be provided to the Range Selector through the **RangeNavigatorEvents** component.
+This section describes about the Range Selector component's events, that is triggered when appropriate actions are performed. The events should be provided to the Range Selector through the **RangeNavigatorEvents** component.
 
 The Range Selector component supports the following events.
 
@@ -22,7 +22,7 @@ The Range Selector component supports the following events.
 
 ## Loaded
 
-The [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Loaded) event triggers after the Range Selector is rendered.
+The [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Loaded) event triggers, after the Range Selector is rendered.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -62,7 +62,7 @@ The [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ra
 
 ## OnPrintCompleted
 
-The [`OnPrintCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrintCompleted) event triggers after the Range Selector is printed.
+The [`OnPrintCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrintCompleted) event triggers, after the Range Selector is printed.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -102,7 +102,7 @@ The [`OnPrintCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Changed
 
-The [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Changed) event triggers whenever the slider position is changed. The following arguments are present in this event:
+The [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Changed) event triggers, whenever the slider position is changed. The following arguments are present in this event:
 
 * [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_Start) - Specifies the start value.
 * [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_End) - Specifies the end value.
@@ -148,10 +148,10 @@ The [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.R
 
 ## Resized
 
-The [`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Resized) event triggers when browser window is resized. The following arguments are present in this event:
+The [`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Resized) event triggers, when the browser window is resized. The following arguments are present in this event:
 
-* [`CurrentSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_CurrentSize) - Specifies the current size for Range Selector.
-* [`PreviousSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_PreviousSize) - Specifies the previous size for Range Selector.
+* [`CurrentSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_CurrentSize) - Specifies the current size for the Range Selector.
+* [`PreviousSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_PreviousSize) - Specifies the previous size for the Range Selector.
 
 ```csharp
 @using Syncfusion.Blazor.Charts

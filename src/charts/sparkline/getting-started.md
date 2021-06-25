@@ -1,20 +1,20 @@
 ---
-title: "Getting Started with Blazor Sparkline component | Syncfusion"
+title: "Getting Started with the Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"
 
 description: "Learn here about getting started with Syncfusion Blazor Sparkline (SfSparkline) component, its elements, and more."
 ---
 
-# Getting Started with Blazor Sparkline (SfSparkline)
+# Getting Started with the Blazor Sparkline (SfSparkline)
 
-This section briefly explains how to include a Sparkline component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
+This section briefly explains how to include a Sparkline component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
 ## Importing Syncfusion Blazor Sparkline component in the application
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -24,8 +24,7 @@ This section briefly explains how to include a Sparkline component in your Blazo
     </head>
     ```
 
-    > For Internet Explorer 11, kindly refer the polyfills. Refer the [`documentation`](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
-
+    > For the Internet Explorer 11, kindly refer to the polyfills. For more information, refer to the [`documentation`](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/)
     ```html
     <head>
         <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
@@ -43,7 +42,7 @@ Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** 
 
 ## Adding SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add services required by the Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -64,11 +63,11 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+> To enable the custom client-side source loading from CRG or CDN, please refer to the section about the [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
 ## Adding Sparkline Component
 
-To initialize the Sparkline component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+To initialize the Sparkline component, add the below code to the **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and the following code can be added.
 
 ```csharp
 @page "/"
@@ -80,7 +79,7 @@ To initialize the Sparkline component, add the below code to your **Index.razor
 
 ## Populate Sparkline with Data
 
-To bind data for the Sparkline component, you can assign a `IEnumerable` object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+To bind data for the Sparkline component, assign a `IEnumerable` object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 ```csharp
 @code {
@@ -106,7 +105,7 @@ To bind data for the Sparkline component, you can assign a `IEnumerable` object 
 }
 ```
 
-Now map `Month` and `Celsius` fields from the datasource to [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_YName) properties for x-axis and y-axis in Sparkline and then set the `ClimateData` to [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_DataSource) property. Because the `Month` field is a value-based category, the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property is used to specify it.
+Now map the `Month` and the `Celsius` fields from the datasource to [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_YName) properties for x-axis and y-axis in the Sparkline and then set the `ClimateData` to [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_DataSource) property. Because the `Month` field is a value-based category, the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property is used to specify it.
 
 ```csharp
 <SfSparkline XName="Month"
@@ -119,13 +118,13 @@ Now map `Month` and `Celsius` fields from the datasource to [`XName`](https://he
 </SfSparkline>
 ```
 
-On successful compilation of your application, the Syncfusion Blazor Sparkline component will render in the web browser as shown below.
+On successful compilation of the application, the Syncfusion Blazor Sparkline component will render in the web browser as following.
 
 ![Sparkline Sample](./images/Sparkline.png)
 
 ## Change the type of Sparkline
 
-You can change the Sparkline type using the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property set to **Line**, **Column**, **WinLoss**, **Pie** or **Area**. Here, the Sparkline type is set to **Area**.
+Change the Sparkline type using the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property set to **Line**, **Column**, **WinLoss**, **Pie** or **Area**. Here, the Sparkline type is set to **Area**.
 
 ```csharp
 <SfSparkline XName="Month"
@@ -141,11 +140,11 @@ You can change the Sparkline type using the [`Type`](https://help.syncfusion.com
 
 ![Sparkline Sample](./images/Areatype.png)
 
-> Refer [code block](#populate-sparkline-with-data) to know the property value of **ClimateData**.
+> Refer to [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
 
-## Adding data label
+## Adding Data Label
 
-You can add data labels to improve the readability of the Sparkline component. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Visible) property to **true** in the [`SparklineDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html).
+Add the Data Labels to improve the readability of the Sparkline component. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Visible) property to **true** in the [`SparklineDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html).
 
 Available types are:
 
@@ -169,13 +168,13 @@ Available types are:
 </SfSparkline>
 ```
 
-> Refer [code block](#populate-sparkline-with-data) to know the property value of **ClimateData**.
+> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
 
 ![Sparkline with data label](./images/data-label.png)
 
 ## Enable tooltip
 
-When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_1_Visible) property to **true** in [`SparklineTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html).
+When space constraints prevent from displaying information using Data Labels, the tooltip comes in handy. The tooltip can be enabled by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_1_Visible) property to **true** in the [`SparklineTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html).
 
 ```csharp
 <SfSparkline DataSource="ClimateData"
@@ -191,7 +190,7 @@ When space constraints prevent you from displaying information using data labels
 </SfSparkline>
 ```
 
-> Refer [code block](#adding-sparkline-component-to-an-application) to know the property value of **ClimateData**.
+> Refer to the [code block](#adding-sparkline-component-to-an-application) to know about the property value of the **ClimateData**.
 
 ![Sparkline with tooltip](./images/sparkline-with-tooltip.png)
 

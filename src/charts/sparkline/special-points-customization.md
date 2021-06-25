@@ -1,16 +1,16 @@
 ---
-title: "Special Points Customization in Blazor Sparkline component | Syncfusion"
+title: "Special Points Customization in the Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"
 
-description: "Learn here all about special points customization of Syncfusion Sparkline (SfSparkline) component and more."
+description: "Learn here all about the special points customization of Syncfusion Sparkline (SfSparkline) component and more."
 ---
 
 # Special Points Customization in Blazor Sparkline (SfSparkline)
 
 ## Add custom color for special points
 
-The color of special points can be changed by specifying the corresponding property, and it is applicable for [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Line), [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Column) and [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Area) chart types in Sparkline. The following properties are used to customization the special points.
+The color of special points can be changed by specifying the corresponding property, and it is applicable for [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Line), [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Column) and [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Area) chart types in the Sparkline. The following properties are used to customize the special points.
 
 * [`StartPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_StartPointColor)
 * [`EndPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_EndPointColor)
@@ -48,11 +48,11 @@ The color of special points can be changed by specifying the corresponding prope
 }
 ```
 
-![Sparkline with point customization](/images/SpecialPoints/SpecialPointCustomization.png)
+![Sparkline with point customization](images/SpecialPoints/SpecialPointCustomization.png)
 
 ## Tie point color
 
-To highlight the tie area of the Y-axis value, use the [`TiePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_TiePointColor) property, which is only applicable to the [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) type.
+To highlight the tie area of the Y-axis value, use the [`TiePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_TiePointColor) property that is only applicable to the [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) type.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -61,4 +61,4 @@ To highlight the tie area of the Y-axis value, use the [`TiePointColor`](https:/
 </SfSparkline>
 ```
 
-![Sparkline with tie point color](/images/SpecialPoints/TiePoint.png)
+![Sparkline with tie point color](images/SpecialPoints/TiePoint.png)

@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD036 -->
+
 # Range selector
 
 The range selector allows to select a range with specified periods. By default the range selector is enabled in stock chart.

@@ -1,14 +1,14 @@
 ---
-title: "Chart Types in Blazor Sparkline component | Syncfusion"
+title: "Chart Types in the Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"
 
-description: "Learn here all about chart types of Syncfusion Sparkline (SfSparkline) component and more."
+description: "Learn here all about the chart types of Syncfusion Sparkline (SfSparkline) component and more."
 ---
 
 # Chart Types in Blazor Sparkline (SfSparkline)
 
-Different type of shapes can be used to represent Sparkline Chart, and the type of Sparkline Chart can be changed by specifying the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property.
+The different type of shapes can be used to represent the Sparkline Chart, and the type of Sparkline Chart can be changed by specifying the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property.
 
 ## Line
 
@@ -41,7 +41,7 @@ The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spar
 }
 ```
 
-![Sparkline with Line type](/images/SparklineTypes/Line.png)
+![Sparkline with Line type](images/SparklineTypes/Line.png)
 
 ## Column
 
@@ -54,9 +54,9 @@ The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sp
 </SfSparkline>
 ```
 
-> Refer [code block](#line) to know the property value of **PopulationData**.
+> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
 
-![Sparkline with Column type](/images/SparklineTypes/Column.png)
+![Sparkline with Column type](images/SparklineTypes/Column.png)
 
 ## Pie
 
@@ -69,9 +69,9 @@ The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spark
 </SfSparkline>
 ```
 
-> Refer [code block](#line) to know the property value of **PopulationData**.
+> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
 
-![Sparkline with Pie type](/images/SparklineTypes/Pie.png)
+![Sparkline with Pie type](images/SparklineTypes/Pie.png)
 
 ## WinLoss
 
@@ -84,7 +84,7 @@ The [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.S
 </SfSparkline>
 ```
 
-![Sparkline with WinLoss type](/images/SparklineTypes/Winloss.png)
+![Sparkline with WinLoss type](images/SparklineTypes/Winloss.png)
 
 ## Area
 
@@ -97,6 +97,6 @@ The [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spar
 </SfSparkline>
 ```
 
-> Refer [code block](#line) to know the property value of **PopulationData**.
+> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
 
-![Sparkline with Area type](/images/SparklineTypes/Area.png)
+![Sparkline with Area type](images/SparklineTypes/Area.png)

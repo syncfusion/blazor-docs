@@ -2,7 +2,7 @@
 
 ## Size for Container
 
-The size of the Sparkline to be determined based on the container size, and the size can be changed inline or via CSS as shown below.
+The size of the Sparkline is determined based on the container size, and the size can be changed inline or via CSS as shown in the following.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -33,15 +33,15 @@ The size of the Sparkline to be determined based on the container size, and the 
 }
 ```
 
-![Sparkline with container size](/images/SparklineDimension/ContainerSize.png)
+![Sparkline with container size](./images/SparklineDimension/ContainerSize.png)
 
 ## Size for Sparkline
 
-The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Height) properties can be used to customize the size of the Sparkline. Both pixel and percentage values are accepted.
+The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Width) and the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Height) properties can be used to customize the size of the Sparkline. Both pixel and percentage values are accepted.
 
 ### In pixel
 
-Can specify the size of Sparkline Charts in pixels, as shown in the code below.
+The size of Sparkline Charts can be specified in pixels, as shown in the following code.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -52,9 +52,9 @@ Can specify the size of Sparkline Charts in pixels, as shown in the code below.
 </div>
 ```
 
-> Refer [code block](#size-for-container) to know the property value of **PopulationData**.
+> Refer to the [code block](#size-for-container) to know about the property value of the **PopulationData**.
 
-![Sparkline with size in pixel](/images/SparklineDimension/Inpixel.png)
+![Sparkline with size in pixel](./images/SparklineDimension/Inpixel.png)
 
 ### In percentage
 
@@ -69,6 +69,6 @@ If the value is expressed as a percentage, the dimension of the Sparkline is det
 </div>
 ```
 
-> Refer [code block](#size-for-container) to know the property value of **PopulationData**.
+> Refer to the [code block](#size-for-container) to know about the property value of **PopulationData**.
 
-![Sparkline with size in percentage](/images/SparklineDimension/Inpercentage.png)
+![Sparkline with size in percentage](./images/SparklineDimension/Inpercentage.png)

@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD036 -->
+
 # Chart selected data in grid
 
 By using the chart’s `OnSelectionChanged` event, you can get the current data.

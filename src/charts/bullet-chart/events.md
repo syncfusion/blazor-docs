@@ -1,14 +1,14 @@
 ---
-title: "Events in Blazor Bullet Chart component | Syncfusion"
+title: "Events in the Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"
 
-description: "Learn here all about Events of Syncfusion Bullet Chart (SfBulletChart) component and more."
+description: "Learn here all about the Events of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
-# Events in Blazor Bullet Chart (SfBulletChart)
+# Events in the Blazor Bullet Chart (SfBulletChart)
 
-This section describes the Bullet Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [`BulletChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
+This section describes about the Bullet Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [`BulletChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
 
 ## Loaded
 
@@ -67,7 +67,7 @@ The [`OnPrintComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
-> Refer [code block](#Loaded) to know the property value of **BulletChartData**.
+> Refer to the [code block](#Loaded) to know about the property value of **BulletChartData**.
 
 ## TooltipRender
 
@@ -96,17 +96,17 @@ The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 ```
 
-> Refer [code block](#Loaded) to know the property value of **BulletChartData**.
+> Refer to the [code block](#Loaded) to know about the property value of **BulletChartData**.
 
 ## LegendRender
 
-The [`LegendRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_LegendRender) event triggers before the each legend item rendering.
+The [`LegendRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_LegendRender) event triggers before each legend item rendering.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
-|   Fill     |    Specifies the fill of legend item.      |
-|   Shape     |    Specifies the shape of legend item.      |
-|   Text     |    Specifies the text of legend item.      |
+|   Fill     |    Specifies the fill of the legend item.      |
+|   Shape     |    Specifies the shape of the legend item.      |
+|   Text     |    Specifies the text of the legend item.      |
 |   Cancel             |   Specifies the event cancel status. |
 
 ```csharp

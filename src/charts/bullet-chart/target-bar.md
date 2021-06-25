@@ -1,14 +1,14 @@
 ---
-title: "Target Bar in Blazor Bullet Chart component | Syncfusion"
+title: "Target Bar in the Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"
 
-description: "Learn here all about Target Bar of Syncfusion Bullet Chart (SfBulletChart) component and more."
+description: "Learn here all about the Target Bar of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
-# Target Bar in Blazor Bullet Chart (SfBulletChart)
+# Target Bar in the Blazor Bullet Chart (SfBulletChart)
 
-The line marker that runs perpendicular to the orientation of the graph is known as the **Comparative Measure** and is used as a target marker to compare against the feature measure value. This is also called as **Target Bar** in the Bullet Chart. To display the target bar, the [`TargetField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) should be mapped to the appropriate field from the datasource.
+The line marker that runs perpendicular to the orientation of the graph is known as the **Comparative Measure** and it is used as a target marker to compare against the feature measure value. This is also called as the **Target Bar** in the Bullet Chart. To display the target bar, the [`TargetField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) should be mapped to the appropriate field from the datasource.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -37,7 +37,7 @@ The line marker that runs perpendicular to the orientation of the graph is known
 
 ## Types of Target Bar
 
-The shape of the target bar can be customized using the [`TargetTypes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetTypes) property and it supports [`Circle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Circle), [`Cross`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Cross), and [`Rect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Rect) shapes. The default type of target bar is [`Rect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Rect).
+The shape of the target bar can be customized using the [`TargetTypes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetTypes) property and it supports [`Circle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Circle), [`Cross`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Cross), and [`Rect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Rect) shapes. The default type of the target bar is [`Rect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Rect).
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -51,7 +51,7 @@ The shape of the target bar can be customized using the [`TargetTypes`](https://
 </SfBulletChart>
 ```
 
-> Refer [code block](#target-bar) to know the property value of **BulletChartData**.
+> Refer to the [code block](#target-bar) to know about the property value of the **BulletChartData**.
 
 ![Target Bar with types](images/target-type.png)
 
@@ -74,6 +74,6 @@ The following properties can be used to customize the Target Bar.
 </SfBulletChart>
 ```
 
-> Refer [code block](#target-bar) to know the property value of **BulletChartData**.
+> Refer to the [code block](#target-bar) to know about the property value of the **BulletChartData**.
 
 ![Target Bar with customization](images/target-custom.png)

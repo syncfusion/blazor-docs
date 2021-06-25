@@ -1,12 +1,12 @@
 ---
-title: "Methods in Blazor Sparkline component | Syncfusion"
+title: "Methods in the Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"
 
-description: "Learn here all about methods of Syncfusion Sparkline (SfSparkline) component and more."
+description: "Learn here all about the methods of Syncfusion Sparkline (SfSparkline) component and more."
 ---
 
-# Methods in Blazor Sparkline (SfSparkline)
+# Methods in the Blazor Sparkline (SfSparkline)
 
 Using the `@ref` property, create an object for the Sparkline component and call the desired method.
 

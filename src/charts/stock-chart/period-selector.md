@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD036 -->
+
 # Period selector
 
 The period selector allows to select a range with specified periods. By default the period selector is enabled in stock chart.

@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD036 -->
+
 # Create a table in tooltip
 
 You can show the tooltip as table by using [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html).

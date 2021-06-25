@@ -1,16 +1,16 @@
 ---
-title: " Labels in Blazor Range Selector component | Syncfusion "
+title: " Labels in the Blazor Range Selector component | Syncfusion "
 
 component: "Range Selector"
 
-description: "Learn here all about labels in Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
+description: "Learn here all about the labels in Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
-# Labels in Blazor Range Selector (SfRangeNavigator)
+# Labels in the Blazor Range Selector (SfRangeNavigator)
 
 ## Multi-level labels
 
-The multi-level labels for the Range Selector can be enabled by setting the [`EnableGrouping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_EnableGrouping) property to **true**. This is restricted to the datetime axis alone.
+The multi-level labels for the Range Selector can be enabled by setting the [`EnableGrouping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_EnableGrouping) property to **true**. This is restricted to the DateTime axis alone.
 
 {% aspTab template="range-navigator/label/multi", sourceFiles="multi.razor" %}
 
@@ -38,9 +38,9 @@ The multi-level labels can be grouped using the [`GroupBy`](https://help.syncfus
 
 ![Grouping](images/labels/group.png)
 
-## Smart Labels
+## Smart labels
 
-The [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelIntersectAction) property is used to avoid overlapping of labels. The following code sample shows setting of [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelIntersectAction) property to **Hide**.
+The [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelIntersectAction) property is used to avoid overlapping of labels. The following code sample shows the setting of [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelIntersectAction) property to **Hide**.
 
 {% aspTab template="range-navigator/label/smart", sourceFiles="smart.razor" %}
 
@@ -50,7 +50,7 @@ The [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ## Position
 
-By default, the labels can be placed outside of the Range Selector. It can also be placed inside the Range Selector
+By default, the labels can be placed outside the Range Selector. It can also be placed inside the Range Selector
 using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelPosition) property.
 
 {% aspTab template="range-navigator/label/position", sourceFiles="position.razor" %}
@@ -61,10 +61,10 @@ using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ## Labels Customization
 
-The font size, color, family, etc... can be customized using the [`RangeNavigatorLabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorLabelStyle.html) setting.
+The font size, color, family, etc. can be customized using the [`RangeNavigatorLabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorLabelStyle.html) setting.
 
 {% aspTab template="range-navigator/label/custom", sourceFiles="custom.razor" %}
 
 {% endaspTab %}
 
-![Labels customization](images/labels/custom.png)
+![Labels Customization](images/labels/custom.png)

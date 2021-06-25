@@ -1,12 +1,12 @@
 ---
-title: "Events in Blazor Sparkline component | Syncfusion"
+title: "Events in the Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"
 
-description: "Learn here all about events of Syncfusion Sparkline (SfSparkline) component and more."
+description: "Learn here all about the events of Syncfusion Sparkline (SfSparkline) component and more."
 ---
 
-# Events in Blazor Sparkline (SfSparkline)
+# Events in the Blazor Sparkline (SfSparkline)
 
 This section describes the Sparkline component's events that will be triggered when appropriate actions are performed. The events should be provided to the Sparkline through the [`SparklineEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html).
 
@@ -37,7 +37,7 @@ The [`OnPointRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 |--------------------| -------------------------------------------------------|
 |   PointIndex            |    Specifies the current point index.           |
 |   Fill     |    Specifies the point index color.       |
-|   Border               |   Specifies the color and width of point border. |
+|   Border               |   Specifies the color and the width of the point border. |
 |   Cancel               |   Specifies the event cancel status. |
 
 ```csharp
@@ -58,11 +58,11 @@ The [`OnPointRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## OnPointRegionMouseClick
 
-The [`OnPointRegionMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnPointRegionMouseClick) event triggers when the mouse click on point region.
+The [`OnPointRegionMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnPointRegionMouseClick) event triggers when the mouse click on the point region.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
-|   PointerIndex     |    Specifies the sparkline point index region.      |
+|   PointerIndex     |    Specifies the Sparkline point index region.      |
 |   Cancel             |   Specifies the event cancel status. |
 
 ```csharp
@@ -83,12 +83,12 @@ The [`OnPointRegionMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ## OnResizing
 
-The [`OnResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnResizing) event triggers while resize the window.
+The [`OnResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnResizing) event triggers while resizing the window.
 
 |   Argument name      |   Description                          |
 |----------------------| ---------------------------------------|
-|   CurrentSize        |   Specifies the size of sparkline.         |
-|   PreviousSize       |   Specifies the size of previous sparkline. |
+|   CurrentSize        |   Specifies the size of the Sparkline.         |
+|   PreviousSize       |   Specifies the size of the previous Sparkline. |
 |   Cancel             |   Specifies the event cancel status. |
 
 ```csharp
@@ -112,7 +112,7 @@ The [`OnSeriesRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 |   Argument name      |   Description                                                         |
 |----------------------| ----------------------------------------------------------------------|
-|   Border             |   Specifies the color and width of series border.                         |
+|   Border             |   Specifies the color and the width of the series border.                         |
 |   Fill               |   Specifies the series fill color.                             |
 |   LineWidth          |   Specifies the series line width. |
 |   Cancel             |   Specifies the event cancel status. |
@@ -138,12 +138,12 @@ The [`OnMarkerRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 |   Argument name      |   Description                                                         |
 |----------------------| ----------------------------------------------------------------------|
-|   Border             |   Specifies the color and width of marker border.                         |
+|   Border             |   Specifies the color and the width of the marker border.                         |
 |   Fill               |   Specifies the marker fill color.                             |
 |   PointIndex          |   Specifies the marker point index. |
-|   X          |   Specifies the x axis of marker. |
-|   Y          |   Specifies the x axis of marker. |
-|   Size          |   Specifies the size of marker. |
+|   X          |   Specifies the x axis of the marker. |
+|   Y          |   Specifies the x axis of the marker. |
+|   Size          |   Specifies the size of the marker. |
 |   Cancel             |   Specifies the event cancel status. |
 
 ```csharp
@@ -168,12 +168,12 @@ The [`OnDataLabelRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 |   Argument name      |   Description                                                         |
 |----------------------| ----------------------------------------------------------------------|
-|   Border             |   Specifies the color and width of data label border.                        |
-|   Fill               |   Specifies the series fill color of data label.                             |
+|   Border             |   Specifies the color and the width of the data label border.                        |
+|   Fill               |   Specifies the series fill color of the data label.                             |
 |   PointIndex          |   Specifies the data label point index. |
-|   X          |   Specifies the x axis of data label. |
-|   Y          |   Specifies the y axis of data label. |
-|   Text          |   Specifies the content of data label. |
+|   X          |   Specifies the x axis of the data label. |
+|   Y          |   Specifies the y axis of the data label. |
+|   Text          |   Specifies the content of the data label. |
 |   Color          |   Specifies the content color. |
 |   Cancel             |   Specifies the event cancel status. |
 

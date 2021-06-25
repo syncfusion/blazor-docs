@@ -1,16 +1,16 @@
 ---
-title: "Dimensions in Blazor Bullet Chart component | Syncfusion"
+title: "Dimensions in the Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"
 
-description: "Learn here all about dimensions of Syncfusion Bullet Chart (SfBulletChart) component and more."
+description: "Learn here all about the dimensions of the Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
-# Dimensions in Blazor Bullet Chart (SfBulletChart)
+# Dimensions in the Blazor Bullet Chart (SfBulletChart)
 
 ## Size for Container
 
-The size of the Bullet Chart is determined by the container size, and it can be changed inline or via CSS, as shown below.
+The size of the Bullet Chart is determined by the container size, and it can be changed inline or via CSS as following.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -41,9 +41,9 @@ The size of the Bullet Chart is determined by the container size, and it can be 
 
 ## Size for Bullet Chart
 
-The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Height) properties are used to adjust the size of the Bullet Chart. Both pixel and percentage values are accepted. If the value is expressed as a percentage, the dimension of the Bullet Chart is determined by its container.
+The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Width) and the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Height) properties are used to adjust the size of the Bullet Chart. Both the pixel and the percentage values are accepted. If the value is expressed as a percentage, the dimension of the Bullet Chart is determined by its container.
 
-> If the size is not specified, Bullet Chart will be rendered with a height of **126px** and a width of the window.
+> If the size is not specified, the Bullet Chart will be rendered with a height of **126px** and a width of the window.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -60,11 +60,11 @@ The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfB
 </div>
 ```
 
-> Refer [code block](#size-for-container) to know the property value of **BulletChartData**.
+> Refer to the [code block](#size-for-container) to know about the property value of **BulletChartData**.
 
 ## Margin
 
-The [`BulletChartMargin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMargin.html) is used to customize the bottom, left, right, and top margins of the Bullet Chart.
+The [`BulletChartMargin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMargin.html) is used to customize the bottom, the left, the right, and the top margins of the Bullet Chart.
 
 ```csharp
 @using Syncfusion.Blazor.Charts
@@ -83,6 +83,6 @@ The [`BulletChartMargin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 </div>
 ```
 
-> Refer [code block](#size-for-container) to know the property value of **BulletChartData**.
+> Refer to the [code block](#size-for-container) to know about the property value of **BulletChartData**.
 
 ![Bullet Chart with Margin](images/margin.png)

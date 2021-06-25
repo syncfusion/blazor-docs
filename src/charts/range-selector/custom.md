@@ -1,16 +1,16 @@
 ---
-title: " Customization in Blazor Range Selector component | Syncfusion "
+title: " Customization in the Blazor Range Selector component | Syncfusion "
 
 component: "Range Selector"
 
-description: "Learn here all about customization of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
+description: "Learn here all about customization of the Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
-# Customization in Blazor Range Selector (SfRangeNavigator)
+# Customization in the Blazor Range Selector (SfRangeNavigator)
 
 ## Navigator Appearance
 
-The Range Selector can be customized by using the [`RangeNavigatorStyleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html). The [`SelectedRegionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_SelectedRegionColor) property is used to specify the color for the selected region whereas the [`UnselectedRegionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_UnselectedRegionColor) property is used to specify the color for the unselected region.
+The Range Selector can be customized by using the [`RangeNavigatorStyleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html). The [`SelectedRegionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_SelectedRegionColor) property is used to specify the color for the selected region, whereas the [`UnselectedRegionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_UnselectedRegionColor) property is used to specify the color for the unselected region.
 
 {% aspTab template="range-navigator/custom/appearance", sourceFiles="appearance.razor" %}
 
@@ -30,7 +30,7 @@ The [`RangeNavigatorThumbSettings`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Border
 
-Using the [`RangeNavigatorBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html), the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html#Syncfusion_Blazor_Charts_RangeNavigatorBorder_Widthhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) and [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) of the Range Selector border can customized.
+Using the [`RangeNavigatorBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html), the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html#Syncfusion_Blazor_Charts_RangeNavigatorBorder_Widthhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) and the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) of the Range Selector border can be customized.
 
 {% aspTab template="range-navigator/custom/border", sourceFiles="border.razor" %}
 
@@ -48,7 +48,7 @@ The [`AllowSnapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ## Animation
 
-Animation for range selector is enabled by default. The speed of the animation can be controlled using the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property. The default value of the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property is **500** milliseconds.
+Animation for the Range Selector is enabled by default. The speed of the animation can be controlled using the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property. The default value of the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property is **500** milliseconds.
 
 {% aspTab template="range-navigator/custom/animation", sourceFiles="animation.razor" %}
 

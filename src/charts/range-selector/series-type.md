@@ -1,12 +1,12 @@
 ---
-title: " Series types in Blazor Range Selector component | Syncfusion "
+title: " Series types in the Blazor Range Selector component | Syncfusion "
 
 component: "Range Selector"
 
-description: "Learn here all about series types feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
+description: "Learn here all about the series types feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
-# Series Types in Blazor Range Selector (SfRangeNavigator)
+# Series Types in the Blazor Range Selector (SfRangeNavigator)
 
 To render the data, the Range Selector supports three types of series.
 
@@ -16,7 +16,7 @@ To render the data, the Range Selector supports three types of series.
 
 <!-- markdownlint-disable MD036 -->
 
-To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Line**. By default, line series is rendered in Range Selector.
+To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Line**. By default, the line series is rendered in the Range Selector.
 
 {% aspTab template="range-navigator/series-type/line", sourceFiles="line.razor" %}
 
@@ -36,7 +36,7 @@ To render an area series, use series [`Type`](https://help.syncfusion.com/cr/bla
 
 ## Step Line
 
-To render a step line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Step Line**.
+To render a Step line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Step Line**.
 
 {% aspTab template="range-navigator/series-type/step", sourceFiles="step.razor" %}
 

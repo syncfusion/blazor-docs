@@ -59,3 +59,4 @@
 * [Customize filter choice items count for Excel filter dialog](datagrid/how-to/customize-filter-choice-count-in-excel-filter-dialog.md)
 * [Custom delete confirmation dialog](datagrid/how-to/custom-delete-confirmation-dialog.md)
 * [Create custom Grid component](datagrid/how-to/create-custom-grid-component.md)
+* [Effectively add a range of items into ObservableCollection](datagrid/how-to/effectively-add-range-of-items-to-observablecollection.md)

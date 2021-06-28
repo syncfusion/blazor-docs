@@ -40,6 +40,13 @@ To change the default labels such as Title, Location and other field names in th
             <FieldEndTimezone Title="Destination"></FieldEndTimezone>
         </ScheduleField>
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -83,6 +90,13 @@ It is possible to validate the required fields of the editor window before submi
             <FieldEndTime Name="EndTime"></FieldEndTime>
         </ScheduleField>
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -125,6 +139,13 @@ In default event editor window, start and end time duration are processed based 
     <ScheduleEvents TValue="AppointmentData" OnPopupOpen="@OnPopupOpen"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource">
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -165,6 +186,13 @@ It is possible to prevent the display of editor and quick popup windows by passi
     <ScheduleEvents TValue="AppointmentData" OnPopupOpen="@OnPopupOpen"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource">
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -210,7 +238,7 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 
 ### How to open editor window manually
 
-It is possible to open the editor window by manually for on specific time or certain events by using the `OpenEditor` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as a parameters.
+It is possible to open the editor window by manually for on specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as a parameters.
 
 > [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click/) is the example to open the editor window on a single click.
 
@@ -266,6 +294,13 @@ The event editor window can be customized by making use of the `EditorTemplate` 
         </EditorTemplate>
     </ScheduleTemplates>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -353,6 +388,13 @@ The resource field can be added within editor template with the following code e
         </EditorTemplate>
     </ScheduleTemplates>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -446,6 +488,13 @@ The following code example shows how to add recurrence options within the editor
         </EditorTemplate>
     </ScheduleTemplates>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -541,6 +590,13 @@ In the following code example, validation has been added to the `EventType` fiel
         </EditorTemplate>
     </ScheduleTemplates>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -592,6 +648,13 @@ By default, these popups are displayed over cells and appointments of Scheduler 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate" ShowQuickInfo="false">
     <ScheduleEventSettings DataSource="@DataSource">
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -696,7 +759,7 @@ The quick popup accepts the template that customizes quick popup only on cell by
     }
     private async void OnMoreDetailsClick(MouseEventArgs args, AppointmentData data)
     {
-        await SheduleRef.CloseQuickInfoPopup();
+        await SheduleRef.CloseQuickInfoPopupAsync();
         AppointmentData eventData = new AppointmentData
         {
             Id = new Random().Next(1000),
@@ -711,12 +774,12 @@ The quick popup accepts the template that customizes quick popup only on cell by
             RecurrenceID = data.RecurrenceID,
             RecurrenceRule = data.RecurrenceRule
         };
-        await SheduleRef.OpenEditor(eventData, CurrentAction.Add);
+        await SheduleRef.OpenEditorAsync(eventData, CurrentAction.Add);
     }
 
     private async Task OnAdd(MouseEventArgs args, AppointmentData data)
     {
-        await SheduleRef.CloseQuickInfoPopup();
+        await SheduleRef.CloseQuickInfoPopupAsync();
         AppointmentData cloneData = new AppointmentData
         {
             Id = new Random().Next(1000),
@@ -731,7 +794,7 @@ The quick popup accepts the template that customizes quick popup only on cell by
             RecurrenceID = data.RecurrenceID,
             RecurrenceRule = data.RecurrenceRule
         };
-        await SheduleRef.AddEvent(cloneData);
+        await SheduleRef.AddEventAsync(cloneData);
     }
     public List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -889,7 +952,7 @@ The quick popup accepts the template that customizes quick popup only on event b
     }
     private async void OnMoreDetailsClick(MouseEventArgs args, AppointmentData data)
     {
-        await SheduleRef.CloseQuickInfoPopup();
+        await SheduleRef.CloseQuickInfoPopupAsync();
         AppointmentData eventData = new AppointmentData
         {
             Id = data.Id,
@@ -904,7 +967,7 @@ The quick popup accepts the template that customizes quick popup only on event b
             RecurrenceID = data.RecurrenceID,
             RecurrenceRule = data.RecurrenceRule
         };
-        await SheduleRef.OpenEditor(eventData, CurrentAction.Save);
+        await SheduleRef.OpenEditorAsync(eventData, CurrentAction.Save);
     }
     public List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -1124,7 +1187,7 @@ You can also do different customization for quick popup on cell and event by che
     }
     private async void OnMoreDetailsClick(MouseEventArgs args, AppointmentData data, bool isEventData)
     {
-        await SheduleRef.CloseQuickInfoPopup();
+        await SheduleRef.CloseQuickInfoPopupAsync();
         if (isEventData == false)
         {
             AppointmentData eventData = new AppointmentData
@@ -1141,7 +1204,7 @@ You can also do different customization for quick popup on cell and event by che
                 RecurrenceID = data.RecurrenceID,
                 RecurrenceRule = data.RecurrenceRule
             };
-            await SheduleRef.OpenEditor(eventData, CurrentAction.Add);
+            await SheduleRef.OpenEditorAsync(eventData, CurrentAction.Add);
         }
         else
         {
@@ -1159,13 +1222,13 @@ You can also do different customization for quick popup on cell and event by che
                 RecurrenceID = data.RecurrenceID,
                 RecurrenceRule = data.RecurrenceRule
             };
-            await SheduleRef.OpenEditor(eventData, CurrentAction.Save);
+            await SheduleRef.OpenEditorAsync(eventData, CurrentAction.Save);
         }
     }
 
     private async Task OnAdd(MouseEventArgs args, AppointmentData data)
     {
-        await SheduleRef.CloseQuickInfoPopup();
+        await SheduleRef.CloseQuickInfoPopupAsync();
         AppointmentData cloneData = new AppointmentData
         {
             Id = new Random().Next(1000),
@@ -1180,7 +1243,7 @@ You can also do different customization for quick popup on cell and event by che
             RecurrenceID = data.RecurrenceID,
             RecurrenceRule = data.RecurrenceRule
         };
-        await SheduleRef.AddEvent(cloneData);
+        await SheduleRef.AddEventAsync(cloneData);
     }
     public List<AppointmentData> DataSource = new List<AppointmentData>
 {
@@ -1311,6 +1374,13 @@ By default, the `QuickInfoOnSelectionEnd` property is set to `false` to prevent 
 
 <SfSchedule TValue="AppointmentData" Height="550px" QuickInfoOnSelectionEnd="true" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1345,6 +1415,13 @@ By default, the Scheduler allows the user to select multiple days. We can preven
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowMultiRowSelection="false" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1372,7 +1449,7 @@ By default, the Scheduler allows the user to select multiple days. We can preven
 
 ### How to close quick info popup manually
 
-You can close the quick info popup in scheduler by using the `CloseQuickInfoPopup()` public method. The following code example demonstrates the how to close quick info popup manually.
+You can close the quick info popup in scheduler by using the `CloseQuickInfoPopupAsync` public method. The following code example demonstrates the how to close quick info popup manually.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -1381,6 +1458,13 @@ You can close the quick info popup in scheduler by using the `CloseQuickInfoPopu
 <SfButton Content="Close popup" OnClick="@(e => OnBtnClick())"></SfButton>
 <SfSchedule TValue="AppointmentData" @ref="ScheduleObj" Width="100%" Height="750px" @bind-SelectedDate="@SelectedDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1389,7 +1473,7 @@ You can close the quick info popup in scheduler by using the `CloseQuickInfoPopu
     private DateTime SelectedDate = new DateTime(2020, 4, 1);
     private async Task OnBtnClick()
     {
-       await ScheduleObj.CloseQuickInfoPopup();
+       await ScheduleObj.CloseQuickInfoPopupAsync();
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {

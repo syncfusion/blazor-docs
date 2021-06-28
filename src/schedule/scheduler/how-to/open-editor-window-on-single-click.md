@@ -1,6 +1,6 @@
 # Open Editor Window on Single Click
 
-By default, the editor window will open on double clicking the cell or appointment. In the following code example, we have opened the editor window on single click using `OpenEditor` public method within `OnCellClick` and `OnEventClick` Scheduler events.
+By default, the editor window will open on double clicking the cell or appointment. In the following code example, we have opened the editor window on single click using `OpenEditorAsync` public method within `OnCellClick` and `OnEventClick` Scheduler events.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -8,6 +8,13 @@ By default, the editor window will open on double clicking the cell or appointme
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" ShowQuickInfo="false" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleEvents TValue="AppointmentData" OnCellClick="OnCellClick" OnEventClick="OnEventClick"></ScheduleEvents>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -16,12 +23,12 @@ By default, the editor window will open on double clicking the cell or appointme
     public async Task OnCellClick(CellClickEventArgs args)
     {
         args.Cancel = true;
-        await ScheduleRef.OpenEditor(args, CurrentAction.Add); //to open the editor on cell click
+        await ScheduleRef.OpenEditorAsync(args, CurrentAction.Add); //to open the editor on cell click
     }
     public async Task OnEventClick(EventClickArgs<AppointmentData> args)
     {
         args.Cancel = true;
-        await ScheduleRef.OpenEditor(args.Event, CurrentAction.Save); //to open the editor on event click
+        await ScheduleRef.OpenEditorAsync(args.Event, CurrentAction.Save); //to open the editor on event click
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {

@@ -260,7 +260,7 @@ By default, Scheduler defaults to `Sunday` as its first day of a week. To change
 
 ## Scroll to specific time and date
 
-You can manually scroll to a specific time on Scheduler by making use of the `ScrollTo` method as depicted in the following code example.
+You can manually scroll to a specific time on Scheduler by making use of the `ScrollToAsync` method as depicted in the following code example.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -286,9 +286,9 @@ You can manually scroll to a specific time on Scheduler by making use of the `Sc
     DateTime CurrentDate { get; set; } = new DateTime(2020, 1, 31);
     SfSchedule<AppointmentData> ScheduleRef;
     public DateTime? TimeValue { get; set; } = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 0, 0);
-    public void OnValueChange(ChangeEventArgs<DateTime?> args)
+    public async Task OnValueChange(ChangeEventArgs<DateTime?> args)
     {
-        ScheduleRef.ScrollTo(args.Text);
+        await ScheduleRef.ScrollToAsync(args.Text);
     }
 
     List<AppointmentData> DataSource = new List<AppointmentData>

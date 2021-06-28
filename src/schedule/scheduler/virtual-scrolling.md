@@ -109,15 +109,15 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
         <ResourceHeaderTemplate>
             <div class='template-wrap'>
                 <div class="resource-details">
-                    <div class="resource-name">@(((context as EventData).ResourceData as ResourceData).Text)</div>
-                    <div class="resource-designation">@(((context as EventData).ResourceData as ResourceData).Designation)</div>
+                    <div class="resource-name">@(((context as TemplateContext).ResourceData as ResourceData).Text)</div>
+                    <div class="resource-designation">@(((context as TemplateContext).ResourceData as ResourceData).Designation)</div>
                 </div>
             </div>
         </ResourceHeaderTemplate>
     </ScheduleTemplates>
     <ScheduleGroup EnableCompactView="false" Resources="@GroupData"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@ResourceDatasource" Field="ResourceId" Title="Resource" Name="Resources" TextField="Text" IdField="Id" ColorField="Color" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TValue="int[]" TItem="ResourceData" DataSource="@ResourceDatasource" Field="ResourceId" Title="Resource" Name="Resources" TextField="Text" IdField="Id" ColorField="Color" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@AppointmentData">
         <Template>

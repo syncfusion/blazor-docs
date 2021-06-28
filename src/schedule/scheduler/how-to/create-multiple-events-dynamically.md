@@ -11,36 +11,31 @@ In Blazor Scheduler, we can able to select the different time slots(10:00 - 10:3
 <SfSchedule @ref="ScheduleObj" TValue="AppointmentData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 3, 10))">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleEvents TValue="AppointmentData" OnCellClick="OnCellClicked"></ScheduleEvents>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
-
-<style>
-
-    .e-schedule .e-month-view .e-work-cells.custom-class,
-    .e-schedule .e-vertical-view .e-work-cells.custom-class {
-        background: #e0e0e0;
-    }
-</style>
 
 @code{
     SfSchedule<AppointmentData> ScheduleObj;
     public List<CellClickEventArgs> CellDetails = new List<CellClickEventArgs>();
-    public List<DOM> ElementDetails = new List<DOM>();
-    public string[] CustomClass = { "custom-class" };
     public async void OnCellClicked(CellClickEventArgs args)
     {
-        if (args.Event.CtrlKey == true) //to check whether CTRL key is pressed
+        if (args.MouseEventArgs.CtrlKey == true) //to check whether CTRL key is pressed
         {
-            args.Cancel = true;   //to prevent default action
-            args.Element.AddClass(CustomClass); // to add the background color for selected cells
-            ElementDetails.Add(args.Element);
-            CellClickEventArgs cell = await this.ScheduleObj.GetCellDetails(args.Element); //to get the current cell details
+            await this.ScheduleObj.CloseQuickInfoPopupAsync();
+            CellClickEventArgs cell = await this.ScheduleObj.GetSelectedCellsAsync();
             CellDetails.Add(cell);
         }
     }
 
-    public void OnButtonClick()
+    public async Task OnButtonClick()
     {
-        for (int i = 0; i < cellDetails.Count; i++)
+        for (int i = 0; i < CellDetails.Count; i++)
         {
             Random rnd = new Random();
             int Id = rnd.Next(1000);
@@ -49,11 +44,10 @@ In Blazor Scheduler, we can able to select the different time slots(10:00 - 10:3
             {
                 Id = Id,
                 Subject = "Added events",
-                StartTime = cellDetails[i].StartTime,
-                EndTime = cellDetails[i].EndTime
+                StartTime = CellDetails[i].StartTime,
+                EndTime = CellDetails[i].EndTime
             });
-            this.ScheduleObj.AddEvent(newData);  //to add appointments to the scheduler
-            ElementDetails[i].RemoveClass(CustomClass); // to remove the background color for selected cells
+            await this.ScheduleObj.AddEventAsync(newData);  //to add appointments to the scheduler
         }
         CellDetails.Clear();
     }

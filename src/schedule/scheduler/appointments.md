@@ -20,6 +20,13 @@ The following example depicts how to define a normal event on the Scheduler, wit
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -73,6 +80,13 @@ The following example depicts how to create a recurring event on Scheduler with 
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -107,6 +121,13 @@ For example, 7th January 2020 can be represented as 20200107. Also, the time par
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -141,6 +162,13 @@ In this example, a recurring instance that displays on the date 30th January 202
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -174,6 +202,13 @@ The Scheduler allows the user to edit the following recurrence events by setting
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource" AllowEditFollowingEvents="true"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -337,6 +372,13 @@ When the fields of event instances has the default mapping name, it is not manda
             <FieldEndTimezone Name="Destination"></FieldEndTimezone>
         </ScheduleField>
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -389,6 +431,13 @@ In following example, the Subject field in event editor will display its appropr
             <FieldEndTime Name="EndTime"></FieldEndTime>
         </ScheduleField>
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 @code{
     DateTime CurrentDate = new DateTime(2020, 1, 31);
@@ -422,6 +471,13 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource">
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -466,6 +522,13 @@ We can also drag multiple events from one resource to another resource. In this 
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowMultiDrag="true" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -500,6 +563,13 @@ By default, you can drag and drop the events within any of the applicable schedu
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowDragAndDrop="false" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -534,6 +604,13 @@ It is possible to prevent the drag action on particular target, by passing the t
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnAppointmentDrag"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -572,6 +649,13 @@ By default, while dragging an appointment to the edges, either top/bottom in the
 <SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnAppointmentDrag"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -610,6 +694,13 @@ The speed of the scrolling action while dragging an appointment to the Scheduler
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnAppointmentDrag"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -651,6 +742,13 @@ By default, the navigation delay is set to 2000ms. The navigation delay decides 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnAppointmentDrag"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -690,6 +788,13 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnAppointmentDrag"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -720,9 +825,9 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 
 ### Drag and drop items from external source
 
-It is possible to drag and drop the unplanned items from any of the external source into the scheduler, by manually saving those dropped item as a new appointment data through `AddEvent` method of Scheduler.
+It is possible to drag and drop the unplanned items from any of the external source into the scheduler, by manually saving those dropped item as a new appointment data through `AddEventAsync` method of Scheduler.
 
-In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where we can form an event object and save it using the `AddEvent` method.
+In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where we can form an event object and save it using the `AddEventAsync` method.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -737,6 +842,13 @@ In this example, we have used the tree view control as an external source and th
             </ScheduleResources>
             <ScheduleEventSettings DataSource="@DataSource">
             </ScheduleEventSettings>
+            <ScheduleViews>
+                <ScheduleView Option="View.Day"></ScheduleView>
+                <ScheduleView Option="View.Week"></ScheduleView>
+                <ScheduleView Option="View.WorkWeek"></ScheduleView>
+                <ScheduleView Option="View.Month"></ScheduleView>
+                <ScheduleView Option="View.Agenda"></ScheduleView>
+            </ScheduleViews>
         </SfSchedule>
     </div>
     <div class="col-lg-4">
@@ -753,26 +865,26 @@ In this example, we have used the tree view control as an external source and th
     SfSchedule<AppointmentData> ScheduleRef;
     public string[] GroupData = new string[] { "Consultants" };
     public List<ResourceData> Consultants { get; set; } = new List<ResourceData> {
-        new ResourceData { Text = "Margaret", Id = 1, Color = "#1aaa55" },
-        new ResourceData { Text = "Robert", Id = 2, Color = "#357cd2" },
-        new ResourceData { Text = "Laura", Id = 3, Color = "#7fa900" },
-        new ResourceData { Text = "Robson", Id = 4, Color = "#9e5fff" },
-        new ResourceData { Text = "Laura", Id = 5, Color = "#bbdc00" }
+    new ResourceData { Text = "Margaret", Id = 1, Color = "#1aaa55" },
+    new ResourceData { Text = "Robert", Id = 2, Color = "#357cd2" },
+    new ResourceData { Text = "Laura", Id = 3, Color = "#7fa900" },
+    new ResourceData { Text = "Robson", Id = 4, Color = "#9e5fff" },
+    new ResourceData { Text = "Laura", Id = 5, Color = "#bbdc00" }
     };
     public List<EmployeeData> WaitingListData { get; set; } = new List<EmployeeData>() {
-        new EmployeeData { Id = 1, Name = "Johnson" },
-        new EmployeeData { Id = 2, Name = "Sourav" },
-        new EmployeeData { Id = 3,  Name = "Sanjay" }
+    new EmployeeData { Id = 1, Name = "Johnson" },
+    new EmployeeData { Id = 2, Name = "Sourav" },
+    new EmployeeData { Id = 3,  Name = "Sanjay" }
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
 {
-        new AppointmentData{ Id = 1, Subject = "General-Check up", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), ConsultantID=1 }
+    new AppointmentData{ Id = 1, Subject = "General-Check up", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), ConsultantID=1 }
     };
 
     async void DragStop(DragAndDropEventArgs args)
     {
         args.Cancel = true;
-        CellClickEventArgs cellData = await ScheduleRef.GetTargetCell((int)args.Left, (int)args.Top);
+        CellClickEventArgs cellData = await ScheduleRef.GetTargetCellAsync((int)args.Left, (int)args.Top);
         if (cellData != null)
         {
             var resourceDetails = ScheduleRef.GetResourceByIndex(cellData.GroupIndex);
@@ -786,7 +898,7 @@ In this example, we have used the tree view control as an external source and th
                 IsAllDay = cellData.IsAllDay,
                 ConsultantID = resourceDetails.GroupData.ConsultantID,
             };
-            await ScheduleRef.OpenEditor(eventData, CurrentAction.Add);
+            await ScheduleRef.OpenEditorAsync(eventData, CurrentAction.Add);
         }
     }
 
@@ -828,10 +940,24 @@ You can drag and drop the events to external source by setting the target to the
         <SfSchedule @ref="Schedule1Ref" Height="550px" TValue="AppointmentData" EventDragArea=".ScheduleClass" @bind-SelectedDate="@CurrentDate">
             <ScheduleEvents TValue="AppointmentData" Dragged="OnDragged"></ScheduleEvents>
             <ScheduleEventSettings DataSource="@ScheduleData"></ScheduleEventSettings>
+            <ScheduleViews>
+                <ScheduleView Option="View.Day"></ScheduleView>
+                <ScheduleView Option="View.Week"></ScheduleView>
+                <ScheduleView Option="View.WorkWeek"></ScheduleView>
+                <ScheduleView Option="View.Month"></ScheduleView>
+                <ScheduleView Option="View.Agenda"></ScheduleView>
+            </ScheduleViews>
         </SfSchedule>
     </div>
     <div class="col-lg-6">
         <SfSchedule @ref="Schedule2Ref" Height="550px" TValue="AppointmentData" CssClass="ScheduleClass" SelectedDate="@(new DateTime(2020, 1, 6))">
+            <ScheduleViews>
+                <ScheduleView Option="View.Day"></ScheduleView>
+                <ScheduleView Option="View.Week"></ScheduleView>
+                <ScheduleView Option="View.WorkWeek"></ScheduleView>
+                <ScheduleView Option="View.Month"></ScheduleView>
+                <ScheduleView Option="View.Agenda"></ScheduleView>
+            </ScheduleViews>
         </SfSchedule>
     </div>
 </div>
@@ -847,10 +973,10 @@ You can drag and drop the events to external source by setting the target to the
     };
     public async Task OnDragged(DragEventArgs<AppointmentData> args)
     {
-        await Schedule1Ref.DeleteEvent(args.Data.Id);
+        await Schedule1Ref.DeleteEventAsync(args.Data.Id);
         Random random = new Random();
         args.Data.Id = Convert.ToInt32(random.Next());
-        await Schedule2Ref.AddEvent(args.Data);
+        await Schedule2Ref.AddEventAsync(args.Data);
     }
     public class AppointmentData
     {
@@ -881,15 +1007,22 @@ There are scenarios where you want to open the editor filled with data on newly 
 <SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Dragged="OnAppointmentDragStop"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
     DateTime CurrentDate = new DateTime(2020, 1, 31);
     SfSchedule<AppointmentData> ScheduleRef;
-    public void OnAppointmentDragStop(DragEventArgs<AppointmentData> args)
+    public async Task OnAppointmentDragStop(DragEventArgs<AppointmentData> args)
     {
         args.Cancel = true;
-        this.ScheduleRef.OpenEditor(args.Data, CurrentAction.Save);
+        await this.ScheduleRef.OpenEditorAsync(args.Data, CurrentAction.Save);
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -924,6 +1057,13 @@ By default, resizing of events is allowed on all Scheduler views except Agenda a
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowResizing="false" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -958,6 +1098,13 @@ By default, while resizing an appointment, when its handler reaches the extreme 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnResizeStart="OnAppointmentResize"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -996,6 +1143,13 @@ The speed of the scrolling action while resizing an appointment to the Scheduler
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnResizeStart="OnAppointmentResize"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1034,6 +1188,13 @@ By default, while resizing an appointment, it extends or shrinks at an interval 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnResizeStart="OnAppointmentResize"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1085,6 +1246,13 @@ Any kind of text, images and links can be added to customize the look of the eve
             <div>EndTime:  @((context as AppointmentData).EndTime)</div>
         </Template>
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 @code {
     DateTime CurrentDate = new DateTime(2020, 1, 31);
@@ -1269,6 +1437,13 @@ Also, the customization of events can be achieved using `CssClass` property of t
 
 <SfSchedule TValue="AppointmentData" Height="550px" CssClass="custom-class" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1313,6 +1488,13 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1346,6 +1528,13 @@ Block events can also be defined to repeat on several days as shown in the follo
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1381,6 +1570,13 @@ An interaction with the appointments of Scheduler can be enabled/disabled using 
 
 <SfSchedule TValue="AppointmentData" Height="550px" Readonly="true" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1414,6 +1610,13 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="DataSource"> </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1549,6 +1752,13 @@ The tooltip can be displayed for appointments by setting `true` to the `EnableTo
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource" EnableTooltip="true"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1593,6 +1803,13 @@ After enabling the default tooltip, it is possible to customize the display of n
             </div>
         </TooltipTemplate>
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1638,6 +1855,13 @@ The appointments can be filtered by passing the predicate value to `Query` optio
         <ScheduleResource TValue="int[]" TItem="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owners" Name="Owners" TextField="OwnerText" IdField="OwnerId" ColorField="Color" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource" Query="@ScheduleQuery"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1838,7 +2062,7 @@ With the options available to select multiple appointments, it is also possible 
 
 ## Retrieve event details from the UI of an event
 
-It is possible to access the information about the event fields of an appointment based on the X and Y co-ordinates. This can be achieved by passing an X and Y co-ordinates to the public method `GetTargetEvent`. You can also get the selected appointment details using `GetSelectedEvents` method.
+It is possible to access the information about the event fields of an appointment based on the X and Y co-ordinates. This can be achieved by passing an X and Y co-ordinates to the public method `GetTargetEventAsync`. You can also get the selected appointment details using `GetSelectedEventsAsync` method.
 
 ## Get the current view appointments
 
@@ -1850,6 +2074,13 @@ To retrieve the appointments present in the current view of the Scheduler, you c
 <SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" DataBound="OnDataBound"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -1883,7 +2114,7 @@ To retrieve the appointments present in the current view of the Scheduler, you c
 
 ## Get the entire appointment collections
 
-The entire collection of appointments rendered on the Scheduler can be accessed using the `GetEvents` public method. In the following example, entire appointment collection rendered on the Scheduler has been traced in `DataBound` event.
+The entire collection of appointments rendered on the Scheduler can be accessed using the `GetEventsAsync` public method. In the following example, entire appointment collection rendered on the Scheduler has been traced in `DataBound` event.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -1891,13 +2122,20 @@ The entire collection of appointments rendered on the Scheduler can be accessed 
 <SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020,1,10))">
     <ScheduleEvents TValue="AppointmentData" DataBound="OnDataBound"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
     SfSchedule<AppointmentData> ScheduleRef;
     public async void OnDataBound(DataBoundEventArgs<AppointmentData> args)
     {
-        List<AppointmentData> EventCollection = await ScheduleRef.GetEvents();
+        List<AppointmentData> EventCollection = await ScheduleRef.GetEventsAsync();
         //You can get the entire appointment collections in the EventCollection variable
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
@@ -1921,12 +2159,12 @@ The entire collection of appointments rendered on the Scheduler can be accessed 
 }
 ```
 
-> You can also get the specific range of appointments by passing the start and end time in the `GetEvents` method. To get the block events, you can make use of the method `GetBlockEvents`.
+> You can also get the specific range of appointments by passing the start and end time in the `GetEventsAsync` method. To get the block events, you can make use of the method `GetBlockEventsAsync`.
 
 ## Refresh appointments
 
-If your requirement is to simply refresh the appointments instead of refreshing the entire Scheduler elements from your application end, make use of the `RefreshEvents` public method.
+If your requirement is to simply refresh the appointments instead of refreshing the entire Scheduler elements from your application end, make use of the `RefreshEventsAsync` public method.
 
 ```csharp
-ScheduleRef.RefreshEvents();
+ScheduleRef.RefreshEventsAsync();
 ```

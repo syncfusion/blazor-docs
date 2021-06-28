@@ -28,6 +28,13 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" ActionCompleted="OnActionCompleted"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -70,6 +77,13 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Created="OnCreated"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -108,6 +122,13 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" DataBinding="DataBindHandler"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -146,6 +167,13 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 <SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" DataBound="OnDataBound"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -185,6 +213,13 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Destroyed="OnDestroyed"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -223,6 +258,13 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 <SfSchedule TValue="AppointmentData" @ref="@ScheduleObj" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Dragged="OnDragged"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -230,7 +272,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
     SfSchedule<AppointmentData> ScheduleObj;
     public async Task OnDragged(DragEventArgs<AppointmentData> args)
     {
-        await ScheduleObj.OpenEditor(args.Data, CurrentAction.Save);   //To open the editor window at drag stop
+        await ScheduleObj.OpenEditorAsync(args.Data, CurrentAction.Save);   //To open the editor window at drag stop
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -262,6 +304,13 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" EventRendered="OnEventRendered"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 <style>
     .e-schedule .e-vertical-view .e-all-day-appointment-wrapper .e-appointment.custom-class,
@@ -309,6 +358,13 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate" @bind-CurrentView="@CurrentView">
     <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsClick"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -350,6 +406,13 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Navigating="OnNavigating"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -402,6 +465,13 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnActionBegin="OnActionBegin"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -443,6 +513,13 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnActionFailure="OnActionFailure"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -481,6 +558,13 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 <SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnCellClick="OnCellClick"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -488,8 +572,8 @@ The request type that can be checked within the `OnActionBegin` event are as fol
     SfSchedule<AppointmentData> ScheduleRef;
     public async Task OnCellClick(CellClickEventArgs args)
     {
-        args.cancel = true;
-        await ScheduleRef.OpenEditor(args, CurrentAction.Add);   //To open editor window on cell click
+        args.Cancel = true;
+        await ScheduleRef.OpenEditorAsync(args, CurrentAction.Add);   //To open editor window on cell click
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -521,6 +605,13 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnCellDoubleClick="OnCellDoubleClick"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -559,6 +650,13 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnDragStart="OnDragStart"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -597,6 +695,13 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 <SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnEventClick="OnEventClick"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -604,8 +709,8 @@ The request type that can be checked within the `OnActionBegin` event are as fol
     SfSchedule<AppointmentData> ScheduleRef;
     public async Task OnEventClick(EventClickArgs<AppointmentData> args)
     {
-        args.cancel = true;
-        await ScheduleRef.OpenEditor(args.Event, CurrentAction.Save);   //To open the editor on event click
+        args.Cancel = true;
+        await ScheduleRef.OpenEditorAsync(args.Event, CurrentAction.Save);   //To open the editor on event click
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -637,6 +742,13 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 <SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnEventDoubleClick="OnEventDoubleClick"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -645,7 +757,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
     public async Task OnEventDoubleClick(EventClickArgs<AppointmentData> args)
     {
         args.Cancel = true;
-        await ScheduleRef.OpenQuickInfoPopup(args.Event); //To open Quick popup on double click
+        await ScheduleRef.OpenQuickInfoPopupAsync(args.Event); //To open Quick popup on double click
     }
 
     List<AppointmentData> DataSource = new List<AppointmentData>
@@ -692,6 +804,13 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnPopupClose="OnPopupClose"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -747,6 +866,13 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnPopupOpen="OnPopupOpen"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -803,6 +929,13 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnRenderCell="OnRenderCell"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 <style>
     .e-schedule .e-vertical-view .e-work-hours.custom-class {
@@ -850,6 +983,13 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnResizeStart="OnResizeStart"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -889,6 +1029,13 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" Resized="OnResized"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{

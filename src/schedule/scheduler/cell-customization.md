@@ -10,6 +10,13 @@ The height and width of the Scheduler cells can be customized either to increase
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" CssClass="schedule-cell-dimension" Height="550px">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 <style>
@@ -189,6 +196,13 @@ We can also customize the cells by using `OnRenderCell` event. In the `OnRenderC
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEvents TValue="AppointmentData" OnRenderCell="OnRenderCell"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 <style>
     .e-schedule .e-vertical-view .e-work-hours.custom-class {
@@ -236,6 +250,13 @@ Providing the `MinDate` and `MaxDate` property with some date values, allows the
 
 <p>Setting date</p>
 <SfSchedule TValue="AppointmentData" Height="650px" MinDate="new DateTime(2019, 1, 1)" MaxDate="new DateTime(2030, 12, 31)" @bind-SelectedDate="@CurrentDate">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 @code{
     private DateTime CurrentDate = new DateTime(2020, 1, 10);

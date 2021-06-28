@@ -17,9 +17,16 @@ The Data Annotation can be enabled by referencing the `System.ComponentModel.Dat
     <ScheduleEvents TValue="AppointmentData" OnPopupOpen="PopupOpen"></ScheduleEvents>
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TValue="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TValue="int[]" TItem="ResourceData" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 <SfDialog @bind-Visible="@DialogVisibility" IsModal="true" Width="575px" ShowCloseIcon="true">
@@ -88,8 +95,6 @@ The Data Annotation can be enabled by referencing the `System.ComponentModel.Dat
 @code{
     SfTextBox SubjectObj;
     SfTextBox NotesObj;
-    SfDateTimePicker<DateTime> StartTimeObj;
-    SfDateTimePicker<DateTime> EndTimeObj;
     private string Action;
     Boolean DialogVisibility = false;
     private int Id;
@@ -127,15 +132,15 @@ The Data Annotation can be enabled by referencing the `System.ComponentModel.Dat
         EventData.Id = Id;
         if (Action == "CellClick")
         {
-            await ScheduleRef.AddEvent(EventData); //to add new appointment
+            await ScheduleRef.AddEventAsync(EventData); //to add new appointment
         }
         else
         {
-            await ScheduleRef.SaveEvent(EventData); // to save the existing appointment
+            await ScheduleRef.SaveEventAsync(EventData); // to save the existing appointment
         }
     }
 
-    private async void PopupOpen(PopupOpenEventArgs<AppointmentData> args)
+    private void PopupOpen(PopupOpenEventArgs<AppointmentData> args)
     {
         if (args.Type == PopupType.Editor)
         {
@@ -143,13 +148,10 @@ The Data Annotation can be enabled by referencing the `System.ComponentModel.Dat
             this.Action = args.Data.Id == 0 ? "CellClick" : "AppointmentClick"; //to check whether the window opens on cell or appointment
             if (Action == "CellClick")
             {
-                var groupIndex = await args.Target.GetAttribute("data-group-index");
-                var resourceIndex = await this.ScheduleRef.GetResourcesByIndex(Convert.ToInt32(groupIndex.ToString()));
-                var groupData = JsonConvert.DeserializeObject<GroupData>(JsonConvert.SerializeObject(resourceIndex.GroupData));
                 AppointmentValidation.StartTime = args.Data.StartTime;
                 AppointmentValidation.EndTime = args.Data.EndTime;
                 AppointmentValidation.Description = args.Data.Description;
-                AppointmentValidation.OwnerId = groupData.OwnerId;
+                AppointmentValidation.OwnerId = args.Data.OwnerId;
                 Random random = new Random();
                 Id = random.Next(2, 1000);
             }

@@ -25,6 +25,13 @@ We can hide the Scheduler header bar by setting `false` to `ShowHeaderBar` and u
 
 <SfSchedule @bind-SelectedDate="@DateValue" TValue="AppointmentData" @bind-CurrentView="@MyView" Height="650px" ShowHeaderBar="false">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 <style>

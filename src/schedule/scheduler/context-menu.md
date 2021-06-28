@@ -1,10 +1,10 @@
 # Context Menu
 
-You can display context menu on work cells and appointments of Scheduler by making use of the `ContextMenu` control manually from the application end. In the following code example, context menu control is being added from sample end and set its target as `Scheduler` and the target element is get by using `GetTargetElement` public method in Blazor.
+You can display context menu on work cells and appointments of Scheduler by making use of the `ContextMenu` control manually from the application end. In the following code example, context menu control is being added from sample end and set its target as `Scheduler` and the target element is get by using `GetTargetCellAsync` public method in Blazor.
 
-On Scheduler cells, you can display the menu items such as `New Event`, `New Recurring Event` and `Today` option. For appointments, you can display its related options such as `Edit Event` and `Delete Event`. The default event window can be opened for appointment creation and editing using the `OpenEditor` method of Scheduler.
+On Scheduler cells, you can display the menu items such as `New Event`, `New Recurring Event` and `Today` option. For appointments, you can display its related options such as `Edit Event` and `Delete Event`. The default event window can be opened for appointment creation and editing using the `OpenEditorAsync` method of Scheduler.
 
-The deletion of appointments can be done by using the `DeleteEvent` public method. Also, the `SelectedDate` property can be used to navigate between different dates.
+The deletion of appointments can be done by using the `DeleteEventAsync` public method. Also, the `SelectedDate` property can be used to navigate between different dates.
 
 > You can also display custom menu options on Scheduler cells and appointments. Context menu will open on tap-hold in responsive mode.
 
@@ -14,6 +14,13 @@ The deletion of appointments can be done by using the `DeleteEvent` public metho
 
 <SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Height="650px" @bind-SelectedDate="@SelectedDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 <SfContextMenu TValue="MenuItem" @ref="ContextMenuObj" CssClass="schedule-context-menu" Target=".e-schedule">
@@ -53,10 +60,10 @@ The deletion of appointments can be done by using the `DeleteEvent` public metho
     {
         if (args.ParentItem == null)
         {
-            CellData = await ScheduleRef.GetTargetCell((int)args.Left, (int)args.Top);
+            CellData = await ScheduleRef.GetTargetCellAsync((int)args.Left, (int)args.Top);
             if (CellData == null)
             {
-                EventData = await ScheduleRef.GetTargetEvent((int)args.Left, (int)args.Top);
+                EventData = await ScheduleRef.GetTargetEventAsync((int)args.Left, (int)args.Top);
                 if (EventData.Id == 0)
                 {
                     args.Cancel = true;
@@ -82,7 +89,7 @@ The deletion of appointments can be done by using the `DeleteEvent` public metho
     public async Task OnItemSelected(MenuEventArgs<MenuItem> args)
     {
         var SelectedMenuItem = args.Item.Id;
-        var ActiveCellsData = await ScheduleRef.GetSelectedCells();
+        var ActiveCellsData = await ScheduleRef.GetSelectedCellsAsync();
         if (ActiveCellsData == null)
         {
             ActiveCellsData = CellData;
@@ -94,37 +101,37 @@ The deletion of appointments can be done by using the `DeleteEvent` public metho
                 break;
 
             case "Add":
-                await ScheduleRef.OpenEditor(ActiveCellsData, CurrentAction.Add);
+                await ScheduleRef.OpenEditorAsync(ActiveCellsData, CurrentAction.Add);
                 break;
 
             case "AddRecurrence":
-                await ScheduleRef.OpenEditor(ActiveCellsData, CurrentAction.Add, RepeatType.Daily);
+                await ScheduleRef.OpenEditorAsync(ActiveCellsData, CurrentAction.Add, RepeatType.Daily);
                 break;
 
             case "Save":
-                await ScheduleRef.OpenEditor(EventData, CurrentAction.Save);
+                await ScheduleRef.OpenEditorAsync(EventData, CurrentAction.Save);
                 break;
 
             case "EditOccurrence":
-                await ScheduleRef.OpenEditor(EventData, CurrentAction.EditOccurrence);
+                await ScheduleRef.OpenEditorAsync(EventData, CurrentAction.EditOccurrence);
                 break;
 
             case "EditSeries":
-                List<AppointmentData> Events = await ScheduleRef.GetEvents();
+                List<AppointmentData> Events = await ScheduleRef.GetEventsAsync();
                 EventData = (AppointmentData)Events.Where(data => data.Id == EventData.RecurrenceID).FirstOrDefault();
-                await ScheduleRef.OpenEditor(EventData, CurrentAction.EditSeries);
+                await ScheduleRef.OpenEditorAsync(EventData, CurrentAction.EditSeries);
                 break;
 
             case "Delete":
-                await ScheduleRef.DeleteEvent(EventData);
+                await ScheduleRef.DeleteEventAsync(EventData);
                 break;
 
             case "DeleteOccurrence":
-                await ScheduleRef.DeleteEvent(EventData, CurrentAction.DeleteOccurrence);
+                await ScheduleRef.DeleteEventAsync(EventData, CurrentAction.DeleteOccurrence);
                 break;
 
             case "DeleteSeries":
-                await ScheduleRef.DeleteEvent(EventData, CurrentAction.DeleteSeries);
+                await ScheduleRef.DeleteEventAsync(EventData, CurrentAction.DeleteSeries);
                 break;
         }
     }

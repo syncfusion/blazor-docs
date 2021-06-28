@@ -7,7 +7,7 @@ Events, a.k.a. Appointments, play an important role in Scheduler with which the 
 Any kind of appointments such as normal, all-day, spanned or recurring events can be easily added on Scheduler using any one of the following ways.
 
 * [Creation using editor window](#creation-using-editor-window)
-* [Creation using AddEvent method](#creation-using-addevent-method)
+* [Creation using AddEventAsync method](#creation-using-addevent-method)
 
 ### Creation using editor window
 
@@ -15,9 +15,9 @@ The default editor window opens when you double click on the Scheduler cells. It
 
 In case, if you want to simply provide the Subject alone for appointments, just single click on the required cells which will open the quick popup expecting you to enter subject alone and save it. You can also select multiple cells and press `Enter` key to open the quick popup for selected time range and save the appointment for that time range.
 
-### Creation using AddEvent method
+### Creation using AddEventAsync method
 
-The appointments can be created dynamically by using `AddEvent` method. The following code example let you know how to use the `AddEvent` method to create an appointment.
+The appointments can be created dynamically by using `AddEventAsync` method. The following code example let you know how to use the `AddEventAsync` method to create an appointment.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -27,6 +27,13 @@ The appointments can be created dynamically by using `AddEvent` method. The foll
 
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 @code{
     DateTime CurrentDate = new DateTime(2020, 1, 6);
@@ -45,7 +52,7 @@ The appointments can be created dynamically by using `AddEvent` method. The foll
             StartTime = new DateTime(2020, 1, 7, 9, 30, 0),
             EndTime = new DateTime(2020, 1, 7, 11, 30, 0),
         };
-        await ScheduleRef.AddEvent(eventData);
+        await ScheduleRef.AddEventAsync(eventData);
     }
     public class AppointmentData
     {
@@ -72,6 +79,13 @@ Another easier way to create the appointments is enabling the `AllowInline` prop
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowInline="true" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -146,6 +160,13 @@ Additionally, the regex condition has been added to the Location field, so that 
             <FieldEndTime Name="EndTime" Validation="@ValidationRules"></FieldEndTime>
         </ScheduleField>
     </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 @code{
     DateTime CurrentDate = new DateTime(2020, 1, 6);
@@ -233,7 +254,7 @@ You can also dynamically prevent the creation of appointments on Scheduler. For 
 The same way the appointments such as normal, all-day, spanned or recurring events are created, it can be easily edited using any of the following ways.
 
 * [Update using editor window](#update-using-editor-window)
-* [Update using SaveEvent method](#update-using-saveevent-method)
+* [Update using SaveEventAsync method](#update-using-saveevent-method)
 
 ### Update using editor window
 
@@ -241,11 +262,11 @@ You can open the default editor window filled with appointment details by double
 
 > You can also single click on appointments, which opens the quick info popup with edit and delete options. Clicking on the `Edit` option will open the default editor filled with event details and `Delete` option will prompt for delete confirmation.
 
-### Update using SaveEvent method
+### Update using SaveEventAsync method
 
-The appointments can be edited and updated manually using the `SaveEvent` method. The following code examples shows how to edit the events.
+The appointments can be edited and updated manually using the `SaveEventAsync` method. The following code examples shows how to edit the events.
 
-Here, an event with ID `1` is edited and its subject is changed with a new text. When the modified data object is passed onto the `SaveEvent` method, the changes gets reflected onto the original event. The `Id` field is mandatory in this edit process, where the modified event object should hold the valid `Id` value that exists in the Scheduler data source.
+Here, an event with ID `1` is edited and its subject is changed with a new text. When the modified data object is passed onto the `SaveEventAsync` method, the changes gets reflected onto the original event. The `Id` field is mandatory in this edit process, where the modified event object should hold the valid `Id` value that exists in the Scheduler data source.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -255,6 +276,13 @@ Here, an event with ID `1` is edited and its subject is changed with a new text.
 
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 @code{
     DateTime CurrentDate = new DateTime(2020, 1, 6);
@@ -273,7 +301,7 @@ Here, an event with ID `1` is edited and its subject is changed with a new text.
             StartTime = new DateTime(2020, 1, 6, 10, 30, 0),
             EndTime = new DateTime(2020, 1, 6, 12, 0, 0),
         };
-        await ScheduleRef.SaveEvent(eventData);
+        await ScheduleRef.SaveEventAsync(eventData);
     }
     public class AppointmentData
     {
@@ -300,6 +328,13 @@ Another easier way to edit the appointments is enabling the `AllowInline` proper
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowInline="true" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -550,11 +585,11 @@ While performing all these above mentioned actions, a pop-up with a delete confi
 
 When you double click an event, the default editor window will be opened which includes a `Delete` button at the bottom left position to allow you to delete that particular appointment. When deleting an appointment through this editor window, the delete alert confirmation will not be asked and the event will be deleted immediately.
 
-### Deletion using DeleteEvent method
+### Deletion using DeleteEventAsync method
 
-The appointments can be removed manually using the `DeleteEvent` method. The following code examples shows how to edit the normal and recurring events.
+The appointments can be removed manually using the `DeleteEventAsync` method. The following code examples shows how to edit the normal and recurring events.
 
-**Normal event** - You can delete the normal appointments of Scheduler by simply passing its `Id` value or the entire event object collection to the `DeleteEvent` method.
+**Normal event** - You can delete the normal appointments of Scheduler by simply passing its `Id` value or the entire event object collection to the `DeleteEventAsync` method.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -564,6 +599,13 @@ The appointments can be removed manually using the `DeleteEvent` method. The fol
 
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 @code{
     DateTime CurrentDate = new DateTime(2020, 1, 6);
@@ -575,7 +617,7 @@ The appointments can be removed manually using the `DeleteEvent` method. The fol
     };
     public async Task OnClick()
     {
-        await ScheduleRef.DeleteEvent(2);
+        await ScheduleRef.DeleteEventAsync(2);
     }
     public class AppointmentData
     {
@@ -593,7 +635,7 @@ The appointments can be removed manually using the `DeleteEvent` method. The fol
 }
 ```
 
-**Recurring Event** - The recurring events can be removed as an entire series or simply removing single occurrence by using the deleteEvent method which takes in either the `DeleteSeries` or `DeleteOccurrence` parameters. The following code example shows how to delete entire series.
+**Recurring Event** - The recurring events can be removed as an entire series or simply removing single occurrence by using the `DeleteEventAsync` method which takes in either the `DeleteSeries` or `DeleteOccurrence` parameters. The following code example shows how to delete entire series.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -603,6 +645,13 @@ The appointments can be removed manually using the `DeleteEvent` method. The fol
 
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 @code{
     DateTime CurrentDate = new DateTime(2020, 1, 6);
@@ -625,7 +674,7 @@ The appointments can be removed manually using the `DeleteEvent` method. The fol
             RecurrenceID = 2,
             RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=3"
         };
-        await ScheduleRef.DeleteEvent(eventData, CurrentAction.DeleteSeries);
+        await ScheduleRef.DeleteEventAsync(eventData, CurrentAction.DeleteSeries);
     }
         public class AppointmentData
     {
@@ -744,6 +793,13 @@ When you drag and drop a normal event on the Scheduler, the event editing action
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 @code {
     DateTime CurrentDate = new DateTime(2020, 1, 31);
@@ -778,6 +834,13 @@ When you resize a normal event on the Scheduler, the event editing action takes 
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 @code {
     DateTime CurrentDate = new DateTime(2020, 1, 31);

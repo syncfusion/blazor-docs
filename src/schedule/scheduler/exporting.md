@@ -4,7 +4,7 @@ The Scheduler supports exporting all its appointments both to an Excel or ICS ex
 
 ## Excel Exporting
 
-The Scheduler allows you to export all its events into an Excel format file by using the `ExportToExcel` method. By default, it exports all the default fields of Scheduler mapped through `<ScheduleEventSettings>` property.
+The Scheduler allows you to export all its events into an Excel format file by using the `ExportToExcelAsync` method. By default, it exports all the default fields of Scheduler mapped through `<ScheduleEventSettings>` property.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -44,7 +44,7 @@ The Scheduler allows you to export all its events into an Excel format file by u
     }
     public async Task OnExportToExcel()
     {
-        await ScheduleRef.ExportToExcel();
+        await ScheduleRef.ExportToExcelAsync();
     }
 }
 ```
@@ -55,7 +55,7 @@ Exported Excel file be like below
 
 ### Exporting with custom fields
 
-By default, Scheduler exports all the default event fields that are mapped to it through the `<ScheduleEventSettings>` property. To limit the number of fields on the exported excel file, it provides an option to export only the custom fields of the event data. To export such custom fields alone, define the required `Fields` and pass it as argument to the `ExportToExcel` method as shown in the following example. In the following code example, only 'Id', 'Subject', 'StartTime', 'EndTime' fields were exported.
+By default, Scheduler exports all the default event fields that are mapped to it through the `<ScheduleEventSettings>` property. To limit the number of fields on the exported excel file, it provides an option to export only the custom fields of the event data. To export such custom fields alone, define the required `Fields` and pass it as argument to the `ExportToExcelAsync` method as shown in the following example. In the following code example, only 'Id', 'Subject', 'StartTime', 'EndTime' fields were exported.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -91,7 +91,7 @@ By default, Scheduler exports all the default event fields that are mapped to it
     public async Task OnExportToExcel()
     {
         ExportOptions Options = new ExportOptions() { ExportType = ExcelFormat.Xlsx, Fields = new string[] { "Id", "Subject", "StartTime", "EndTime" } };
-        await ScheduleRef.ExportToExcel(Options);
+        await ScheduleRef.ExportToExcelAsync(Options);
     }
 }
 ```
@@ -102,7 +102,7 @@ Exported Excel file with custom fields be like below
 
 ### Exporting individual occurrences of a recurring series
 
-By default, the Scheduler exports recurring events as a single data by exporting only its parent record into the excel file. If you want to export each individual occurrences of a recurring series appointment as separate records in an Excel file, define the `IncludeOccurrences` option as `true` and pass it as argument to the `ExportToExcel` method. By default, the `IncludeOccurrences` option is set to `false`.
+By default, the Scheduler exports recurring events as a single data by exporting only its parent record into the excel file. If you want to export each individual occurrences of a recurring series appointment as separate records in an Excel file, define the `IncludeOccurrences` option as `true` and pass it as argument to the `ExportToExcelAsync` method. By default, the `IncludeOccurrences` option is set to `false`.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -138,14 +138,14 @@ By default, the Scheduler exports recurring events as a single data by exporting
     public ExportOptions ExportValues = new ExportOptions { IncludeOccurrences = true };
     public async Task OnExportToExcel()
     {
-       await ScheduleRef.ExportToExcel(ExportValues);
+       await ScheduleRef.ExportToExcelAsync(ExportValues);
     }
 }
 ```
 
 ### Exporting custom event data
 
-By default, the whole event collection bound to the Scheduler gets exported as an excel file. To export only specific events of Scheduler or some custom event collection, you need to pass those custom data collection as a parameter to the `ExportToExcel` method as shown in this following example, through the `CustomData` option.
+By default, the whole event collection bound to the Scheduler gets exported as an excel file. To export only specific events of Scheduler or some custom event collection, you need to pass those custom data collection as a parameter to the `ExportToExcelAsync` method as shown in this following example, through the `CustomData` option.
 
 > By default, the event data are taken from Scheduler dataSource.
 
@@ -194,7 +194,7 @@ By default, the whole event collection bound to the Scheduler gets exported as a
     };
     public async Task OnExportToExcel()
     {
-        await ScheduleRef.ExportToExcel(ExportValues);
+        await ScheduleRef.ExportToExcelAsync(ExportValues);
     }
     public class AppointmentData
     {
@@ -214,7 +214,7 @@ By default, the whole event collection bound to the Scheduler gets exported as a
 
 ### Export with custom file name
 
-By default, the Scheduler allows you to download the exported Excel file with a name `Schedule.xlsx`. It also provides an option to export the excel file with a custom file name, define the desired `FileName` and passing it as an argument to the `ExportToExcel` method.
+By default, the Scheduler allows you to download the exported Excel file with a name `Schedule.xlsx`. It also provides an option to export the excel file with a custom file name, define the desired `FileName` and passing it as an argument to the `ExportToExcelAsync` method.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -255,7 +255,7 @@ By default, the Scheduler allows you to download the exported Excel file with a 
     public ExportOptions ExportValues = new ExportOptions { FileName = "SchedulerData" };
     public async Task OnExportToExcel()
     {
-        await ScheduleRef.ExportToExcel(ExportValues);
+        await ScheduleRef.ExportToExcelAsync(ExportValues);
     }
 }
 ```
@@ -303,7 +303,7 @@ By default, the Scheduler exports event data to an excel file in the `.xlsx` for
     public ExportOptions ExportValues = new ExportOptions { ExportType = ExcelFormat.Csv };
     public async Task OnExportToExcel()
     {
-        await ScheduleRef.ExportToExcel(ExportValues);
+        await ScheduleRef.ExportToExcelAsync(ExportValues);
     }
 }
 ```
@@ -351,7 +351,7 @@ You can export the Scheduler data with specific date format, by defining the `Da
     public ExportOptions ExportValues = new ExportOptions { DateFormat = "MM/dd/yy H:mm:ss" };
     public async Task OnExportToExcel()
     {
-        await ScheduleRef.ExportToExcel(ExportValues);
+        await ScheduleRef.ExportToExcelAsync(ExportValues);
     }
 }
 ```
@@ -364,7 +364,7 @@ Exported Excel file with 24 hour date format be like below
 
 You can export the Scheduler events to a calendar (.ics) file format, and open it on any of the other default calendars such as Google or Outlook.
 
-The following code example shows how the Scheduler events are exported to a calendar (.ics) file by making use of the `ExportToICalendars` public method.
+The following code example shows how the Scheduler events are exported to a calendar (.ics) file by making use of the `ExportToICalendarAsync` public method.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -404,7 +404,7 @@ The following code example shows how the Scheduler events are exported to a cale
     }
     public async Task OnExportToIcs()
     {
-        await ScheduleRef.ExportToICalendar();
+        await ScheduleRef.ExportToICalendarAsync();
     }
 }
 ```
@@ -453,50 +453,54 @@ The following example downloads the iCal file with a name `ScheduleEvents.ics`.
     }
     public async Task OnExportToIcs()
     {
-        await ScheduleRef.ExportToICalendar("ScheduleEvents");
+        await ScheduleRef.ExportToICalendarAsync("ScheduleEvents");
     }
 }
 ```
 
 ## Importing events from other calendars
 
-The events from external calendars (ICS files) can be imported into Scheduler by using the `ImportICalendar` method. In the following code example events has been imported from an ICS file into Scheduler with the help of Uploader. In `ImportICalendar` public method, ics file is passed as string format.
+The events from external calendars (ICS files) can be imported into Scheduler by using the `ImportICalendarAsync` method. In the following code example events has been imported from an ICS file into Scheduler with the help of Uploader. In `ImportICalendarAsync` public method, ics file is passed as string format.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Inputs
 @using System.IO
 
-<SfUploader AllowedExtensions=".ics" CssClass="calendar-import" Multiple="false" Buttons="@BrowseBtn">
+<SfUploader AllowedExtensions=".ics" CssClass="calendar-import" Multiple="false">
+    <UploaderButtons Browse="Choose File"></UploaderButtons>
     <UploaderEvents ValueChange="OnChange"></UploaderEvents>
 </SfUploader>
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
     SfSchedule<AppointmentData> ScheduleRef;
     DateTime CurrentDate = new DateTime(2020, 1, 10);
-    private UploaderButtonsProps BrowseBtn { get; set; } = new UploaderButtonsProps()
-    {
-        Browse = "Choose File"
-    };
     public async Task OnChange(UploadChangeEventArgs args)
     {
         foreach (var file in args.Files)
         {
             file.Stream.Position = 0;
             StreamReader reader = new StreamReader(file.Stream);
-            await ScheduleRef.ImportICalendar(reader.ReadToEnd());
+            await ScheduleRef.ImportICalendarAsync(reader.ReadToEnd());
         }
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", Location = "Dallas",  StartTime = new DateTime(2020, 3, 10, 9, 30, 0), EndTime = new DateTime(2020, 3, 10, 11, 0, 0)  },
-        new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", Location = "Texas", StartTime = new DateTime(2020, 3, 13, 12, 0, 0), EndTime = new DateTime(2020, 3, 13, 14, 0, 0)  },
-        new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", Location = "Australia", StartTime = new DateTime(2020, 3, 11, 10, 30, 0), EndTime = new DateTime(2020, 3, 11, 13, 0, 0)  },
-        new AppointmentData { Id = 4, Subject = "Meteor Showers in 2020", Location = "Canada", StartTime = new DateTime(2020, 3, 9, 13, 0, 0), EndTime = new DateTime(2020, 3, 9, 14, 30, 0)  },
-        new AppointmentData { Id = 5, Subject = "Milky Way as Melting pot", Location = "Mexico", StartTime = new DateTime(2020, 3, 12, 9, 0, 0), EndTime = new DateTime(2020, 3, 12, 10, 30, 0)  }
+    new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", Location = "Dallas",  StartTime = new DateTime(2020, 3, 10, 9, 30, 0), EndTime = new DateTime(2020, 3, 10, 11, 0, 0)  },
+    new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", Location = "Texas", StartTime = new DateTime(2020, 3, 13, 12, 0, 0), EndTime = new DateTime(2020, 3, 13, 14, 0, 0)  },
+    new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", Location = "Australia", StartTime = new DateTime(2020, 3, 11, 10, 30, 0), EndTime = new DateTime(2020, 3, 11, 13, 0, 0)  },
+    new AppointmentData { Id = 4, Subject = "Meteor Showers in 2020", Location = "Canada", StartTime = new DateTime(2020, 3, 9, 13, 0, 0), EndTime = new DateTime(2020, 3, 9, 14, 30, 0)  },
+    new AppointmentData { Id = 5, Subject = "Milky Way as Melting pot", Location = "Mexico", StartTime = new DateTime(2020, 3, 12, 9, 0, 0), EndTime = new DateTime(2020, 3, 12, 10, 30, 0)  }
     };
     public class AppointmentData
     {
@@ -516,9 +520,11 @@ The events from external calendars (ICS files) can be imported into Scheduler by
     .calendar-import.e-upload {
         border: 0;
     }
+
     .calendar-import.e-upload .e-file-select-wrap {
         padding: 0
     }
+
     .calendar-import.e-upload .e-file-select-wrap .e-file-drop, .calendar-import .e-upload-files {
         display: none;
     }
@@ -527,14 +533,14 @@ The events from external calendars (ICS files) can be imported into Scheduler by
 
 ## How to print the Scheduler element
 
-The Scheduler allows you to print the Scheduler element by using the `Print` method. The Print method works in two ways. You can find it below.
+The Scheduler allows you to print the Scheduler element by using the `PrintAsync` method. The Print method works in two ways. You can find it below.
 
 * Using Print method without options.
 * Using a Print method with options.
 
-### Using Print method without options
+### Using PrintAsync method without options
 
-You can print the Schedule element with the current view by using the `Print` method without passing the `PrintModel` options. The following example shows how to print the Scheduler using the `Print` method without passing the `PrintModel` options.
+You can print the Schedule element with the current view by using the `PrintAsync` method without passing the `PrintOptions` options. The following example shows how to print the Scheduler using the `PrintAsync` method without passing the `PrintOptions` options.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -544,6 +550,13 @@ You can print the Schedule element with the current view by using the `Print` me
 
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -551,7 +564,7 @@ You can print the Schedule element with the current view by using the `Print` me
     DateTime CurrentDate = new DateTime(2020, 1, 10);
     public async void OnPrintClick()
     {
-        await ScheduleRef.Print();
+        await ScheduleRef.PrintAsync();
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -577,9 +590,9 @@ You can print the Schedule element with the current view by using the `Print` me
 }
 ```
 
-### Using a Print method with options
+### Using a PrintAsync method with options
 
-You can print the Schedule element with customized Width and Height using the `Print` method by passing the `PrintModel` Height and Width options. The following example shows how to print the Scheduler using the `Print` method by passing the `PrintModel` options.
+You can print the Schedule element with customized Width and Height using the `PrintAsync` method by passing the `PrintOptions` Height and Width options. The following example shows how to print the Scheduler using the `PrintAsync` method by passing the `PrintOptions` options.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -589,15 +602,22 @@ You can print the Schedule element with customized Width and Height using the `P
 
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
     SfSchedule<AppointmentData> ScheduleRef;
     DateTime CurrentDate = new DateTime(2020, 1, 10);
-    PrintModel Options = new PrintModel() { Height = "auto", Width = "auto" };
+    PrintOptions Options = new PrintOptions() { Height = "auto", Width = "auto" };
     public async void OnPrintClick()
     {
-        await ScheduleRef.Print(Options);
+        await ScheduleRef.PrintAsync(Options);
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {

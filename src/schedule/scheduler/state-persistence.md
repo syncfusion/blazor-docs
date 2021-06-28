@@ -12,6 +12,13 @@ The following sample demonstrates how to set state persistence of the Scheduler 
 
 <SfSchedule TValue="AppointmentData" Height="650px" ID="Schedule" EnablePersistence="true" @bind-SelectedDate="@SelectedDate" @bind-CurrentView="@CurrentView">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code {
@@ -40,5 +47,4 @@ The following sample demonstrates how to set state persistence of the Scheduler 
         public string EndTimezone { get; set; }
     }
 }
-
 ```

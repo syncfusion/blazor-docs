@@ -1,6 +1,6 @@
 # Expand and collapse resource dynamically
 
-In Blazor Scheduler, we can expand or collapse a resource by clicking the expand/collapse icons. You can also programmatically expand or collapse the resource using public methods `ExpandResource` and `CollapseResurce` respectively. The following code shows how to expand and collapse the resource `Room 1` on external button click.
+In Blazor Scheduler, we can expand or collapse a resource by clicking the expand/collapse icons. You can also programmatically expand or collapse the resource using public methods `ExpandResourceAsync` and `CollapseResourceAsync` respectively. The following code shows how to expand and collapse the resource `Room 1` on external button click.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -10,11 +10,6 @@ In Blazor Scheduler, we can expand or collapse a resource by clicking the expand
 <SfButton Content="Collapse Resource" OnClick="OnCollapseButton"></SfButton>
 
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
-    <ScheduleViews>
-        <ScheduleView Option="View.TimelineDay"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
-        <ScheduleView Option="View.TimelineMonth"></ScheduleView>
-    </ScheduleViews>
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
         <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@HotelData" Field="HotelId" Title="Hotel" Name="Hotels" TextField="HotelText" IdField="Id" ColorField="HotelColor" AllowMultiple="false"></ScheduleResource>
@@ -23,6 +18,11 @@ In Blazor Scheduler, we can expand or collapse a resource by clicking the expand
         <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.TimelineDay"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+    </ScheduleViews>
 </SfSchedule>
 
 @code{
@@ -52,11 +52,11 @@ In Blazor Scheduler, we can expand or collapse a resource by clicking the expand
     };
     private async Task OnCollapseButton()
     {
-        await this.ScheduleRef.CollapseResource(1, "Rooms");
+        await this.ScheduleRef.CollapseResourceAsync(1, "Rooms");
     }
     private async Task OnExpandButton()
     {
-        await this.ScheduleRef.ExpandResource(1, "Rooms");
+        await this.ScheduleRef.ExpandResourceAsync(1, "Rooms");
     }
     public class AppointmentData
     {

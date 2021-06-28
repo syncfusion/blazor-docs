@@ -1638,6 +1638,171 @@ namespace WebApplication1.Server.Controllers
 
 >You can find the fully working sample [`here`](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
 
+## Perform CRUD operation using Grid Events
+
+IQueryable data can be bound directly to Grid component from database without using Data Adaptors. IQueryable data bound to Grid component using DataSource property of SfGrid. While binding the Data to Grid component using **DataSource** property, CRUD actions needs to be handled using Grid Action Events (i.e.) using **OnActionBegin** and **OnActionComplete** events of Grid.
+
+### Create an interface layer to the Database
+
+Create an interface with CRUD methods like below based on your model class.
+
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+
+namespace LibraryManagement.Models
+{
+    interface ILibraryService
+    {
+        IQueryable<Book> GetBooks();
+        void InsertBook(Book employee);
+        void UpdateBook(long id, Book employee);
+        Book SingleBook(long id);
+        void DeleteBook(long id);
+    }
+}
+```
+
+### Create an intermediate service using the interface
+
+By inheriting the interface, create a new service to retrieve the data from database and perform CRUD operation. Refer the below demonstration.
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+
+namespace LibraryManagement.Models
+{
+    public class LibraryService : ILibraryService
+    {
+        private LibraryContext _context;
+        public LibraryService(LibraryContext context)
+        {
+            _context = context;
+        }
+
+        public void DeleteBook(long id)
+        {
+            try
+            {
+                Book ord = _context.Books.Find(id);
+                _context.Books.Remove(ord);
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public IQueryable<Book> GetBooks()
+        {
+            try
+            {
+                return _context.Books.AsQueryable();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void InsertBook(Book book)
+        {
+            try
+            {
+                _context.Books.Add(book);
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public void UpdateBook(long id, Book book)
+        {
+            try
+            {
+                var local = _context.Set<Book>().Local.FirstOrDefault(entry => entry.Id.Equals(book.Id));
+                // check if local is not null
+                if (local != null)
+                {
+                    // detach
+                    _context.Entry(local).State = EntityState.Detached;
+                }
+                _context.Entry(book).State = EntityState.Modified;
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+    }
+}
+```
+
+### Configure the DataGrid component to perform CRUD actions using Grid events
+
+Since data is bound to Grid using DataSource property, perform CRUD actions will be reflected at Grid component level only. To reflect the changes in database, we need to handle the changes in Grid action events.
+
+**OnActionBegin** – This event will be triggered when the action gets initiated. So, while inserting/updating a record, **RequestType Save** will be sent in the event arguments to save the changes in the database. Similarly, while deleting a record, RequestType as Delete will be initiated to perform actions externally.  Since for both Update and Insert action, RequestType will be Save, we can differentiate them by using the **Args.Action** property, which will indicate the current action.
+**OnActionComplete** – It will be triggered when certain actions are completed. Here, we can refresh the Grid component with an updated datasource to reflect the changes.
+
+```csharp
+@using LibraryManagement.Models
+@inject ILibraryService LibraryService
+
+<SfGrid DataSource="@LibraryBooks" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" TValue="Book">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Book"></GridEvents>
+    <GridColumns>
+        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code
+{
+    public IQueryable<Book> LibraryBooks { get; set; }
+    protected override void OnInitialized()
+    {
+        LibraryBooks = LibraryService.GetBooks();
+    }
+    public void ActionBeginHandler(ActionEventArgs<Book> Args)
+    {
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Add")
+            {
+                LibraryService.InsertBook(Args.Data);
+            }
+            else
+            {
+                LibraryService.UpdateBook(Args.Data.Id, Args.Data);
+            }
+        }
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
+        {
+            LibraryService.DeleteBook(Args.Data.Id);
+        }
+    }
+    public void ActionCompleteHandler(ActionEventArgs<Book> Args)
+    {
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            LibraryBooks = LibraryService.GetBooks(); //to fetch the updated data from db to Grid
+        }
+    }
+}
+```
+
+> Please find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
+
 ## Performing CRUD operations programmatically
 
 You can perform CRUD operations like **Add** , **Update** , **Delete** by using the [`AddRecord`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecord) , [`UpdateRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdateRow_System_Double__0_) , [`DeleteRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRow_System_Object_)  methods.

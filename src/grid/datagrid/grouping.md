@@ -370,7 +370,7 @@ The following sample code demonstrates the above,
     <GridGroupSettings EnableLazyLoading="true" Columns="@GroupedColumns">
     </GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Customer.OrderID) HeaderText="Order ID" AllowGrouping="false" TextAlign="@TextAlign.Center" Width="180"><GridColumn>
+        <GridColumn Field=@nameof(Customer.OrderID) HeaderText="Order ID" AllowGrouping="false" TextAlign="@TextAlign.Center" Width="180"></GridColumn>
         <GridColumn Field=@nameof(Customer.ProductName) HeaderText="Product" Width="200"></GridColumn>
         <GridColumn Field=@nameof(Customer.CustomerID) HeaderText="Customer Name" Width="170"></GridColumn>
         <GridColumn Field=@nameof(Customer.UnitsInStock) HeaderText="Units In Stock" TextAlign="TextAlign.Right" Width="120"></GridColumn>

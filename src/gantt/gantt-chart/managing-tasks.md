@@ -210,7 +210,7 @@ A row can also be added above, below or child of the selected row by using conte
 
 ### Using method
 
-You can add rows to the Gantt Chart component dynamically using the `AddRecord` method and you can define the add position of the default new record by using the `RowPosition` property. You can also pass the `RowIndex` as an additional parameter.
+You can add rows to the Gantt Chart component dynamically using the `AddRecordAsync` method and you can define the add position of the default new record by using the `RowPosition` property. You can also pass the `RowIndex` as an additional parameter.
 
 * Top of all the rows.
 * Bottom to all the existing rows.
@@ -1099,9 +1099,9 @@ Updating with Dialog
 
 ### Update Task Values using Method
 
-Tasks' value can be dynamically updated by using the `UpdateRecordByID` method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
+Tasks' value can be dynamically updated by using the `UpdateRecordByIDAsync` method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
 
->NOTE: Using the `UpdateRecordByID` method, you cannot update the task ID value.
+>NOTE: Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -1582,7 +1582,7 @@ In the following demo, editing is disabled for the `TaskName` column.
 
 ## Deleting Tasks
 
-A task delete option in the Gantt Chart component can be enabled by enabling the `GanttEditSettings.AllowDeleting` property. Tasks can be deleted by clicking the delete toolbar item or using the `DeleteRecord` method. You can call this method dynamically on any custom actions like button click. The following code example shows how to enable the delete option in the Gantt Chart component.
+A task delete option in the Gantt Chart component can be enabled by enabling the `GanttEditSettings.AllowDeleting` property. Tasks can be deleted by clicking the delete toolbar item or using the `DeleteRecordAsync` method. You can call this method dynamically on any custom actions like button click. The following code example shows how to enable the delete option in the Gantt Chart component.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

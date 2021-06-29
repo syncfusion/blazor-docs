@@ -1,7 +1,7 @@
 # Excel Export
 
 The excel export allows exporting GanttChart data to Excel and CSV formats. You need to use the
- **ExcelExport** and **CSVExport** method for exporting. To enable Excel export in the Gantt chart, set the `AllowExcelExport` property as true.
+ **ExcelExportAsync** and **CsvExportAsync** method for exporting. To enable Excel export in the Gantt chart, set the `AllowExcelExport` property as true.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -266,7 +266,7 @@ To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
         ExportProperties.Theme = Theme;
         if (args.Item.Id == "GanttContainer_excelexport")
         {
-            this.Gantt.ExportToExcel(ExportProperties);
+            this.Gantt.ExportToExcelAsync(ExportProperties);
         }
     }
     protected override void OnInitialized()
@@ -377,13 +377,13 @@ You can assign the file name for the exported document by defining **FileName** 
         {
             Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
             ExportProperties.FileName = "Gantt.xlsx";
-            this.Gantt.ExportToExcel(ExportProperties);
+            this.Gantt.ExportToExcelAsync(ExportProperties);
         }
         else if (args.Item.Id == "GanttContainer_csvexport")
         {
             Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
             ExportProperties.FileName = "Gantt.csv";
-            this.Gantt.ExportToCsv(ExportProperties);
+            this.Gantt.ExportToCsvAsync(ExportProperties);
         }
     }
     protected override void OnInitialized()

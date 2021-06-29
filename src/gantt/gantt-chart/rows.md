@@ -729,7 +729,7 @@ You can prevent drag action of the particular record by setting the `Cancel` pro
 
 ### Perform Row Drag and Drop action Programmatically
 
-Gantt provides option to perform row drag and drop action programmatically by using the `ReorderRows` method, this method can be used for any external actions like button click.
+Gantt provides option to perform row drag and drop action programmatically by using the `ReorderRowsAsync` method, this method can be used for any external actions like button click.
 The following arguments are used to specify the positions to drag and drop a row:
 
 * `FromIndexes`: Index value of source(dragging) row.

@@ -1021,7 +1021,7 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 
 ### Change splitter position dynamically
 
-In Gantt Chart, we can change the splitter position dynamically by using `SetSplitterPosition` method. We can change the splitter position by passing value and type parameter to `SetSplitterPosition` method. Type parameter will accept one of the following values 'Position', 'ColumnIndex', 'ViewType'. The following code example shows how to use this method.
+In Gantt Chart, we can change the splitter position dynamically by using `SetSplitterPositionAsync` method. We can change the splitter position by passing value and type parameter to `SetSplitterPositionAsync` method. Type parameter will accept one of the following values 'Position', 'ColumnIndex', 'ViewType'. The following code example shows how to use this method.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

@@ -437,7 +437,7 @@ In the following sample, type **Perform** in the **TaskName** column to filter d
 
 ### Filtering a Specific Column by Method
 
-You can filter the columns dynamically by using the `FilterByColumn` method.
+You can filter the columns dynamically by using the `FilterByColumnAsync` method.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -541,7 +541,7 @@ You can filter the columns dynamically by using the `FilterByColumn` method.
 
 ### Clear Filtered Columns
 
-You can clear all the filtering condition done in the Gantt Chart component by using the `ClearFiltering` method.
+You can clear all the filtering condition done in the Gantt Chart component by using the `ClearFilteringAsync` method.
 The following code snippet explains the above behaviour.
 
 ```csharp
@@ -654,7 +654,7 @@ The following code snippet explains the above behaviour.
 
 ## Search
 
-You can search for records in the Gantt Chart component by using the `Search` method with search key as a parameter. The Gantt Chart component provides an option to integrate the search text box in the toolbar by adding the search item to the `Toolbar` property.
+You can search for records in the Gantt Chart component by using the `SearchAsync` method with search key as a parameter. The Gantt Chart component provides an option to integrate the search text box in the toolbar by adding the search item to the `Toolbar` property.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -871,7 +871,7 @@ notEqual |Checks for the values that are not equal to the specified value.
 
 ### Search by external button
 
-To search the Gantt Chart records from an external button, invoke the `Search` method.
+To search the Gantt Chart records from an external button, invoke the `SearchAsync` method.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -1077,7 +1077,7 @@ By default, the Gantt Chart component searches all the columns. You can search s
 
 ### Clear Search by External Button
 
-You can pass the `empty` string to `Search` method, to clear the searched Gantt records from external button.
+You can pass the `empty` string to `SearchAsync` method, to clear the searched Gantt records from external button.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

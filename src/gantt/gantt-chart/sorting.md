@@ -209,7 +209,7 @@ The Gantt Chart component can be rendered with sorted columns initially, and thi
 
 ## Sorting Column dynamically
 
-Columns in the Gantt Chart component can be sorted dynamically using the `SortByColumn` method. The following code example demonstrates how to invoke the `SortByColumn` method by clicking the custom button.
+Columns in the Gantt Chart component can be sorted dynamically using the `SortByColumnAsync` method. The following code example demonstrates how to invoke the `SortByColumnAsync` method by clicking the custom button.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -313,7 +313,7 @@ Columns in the Gantt Chart component can be sorted dynamically using the `SortBy
 
 ## Clear all the Sorted Columns dynamically
 
-In the Gantt Chart component, you can clear all the sorted columns and return to previous position using the `ClearSorting` public method. The following code snippet shows how to clear all the sorted columns by clicking the custom button.
+In the Gantt Chart component, you can clear all the sorted columns and return to previous position using the `ClearSortingAsync` public method. The following code snippet shows how to clear all the sorted columns by clicking the custom button.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

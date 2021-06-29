@@ -587,7 +587,7 @@ The column reordering can be done by dragging a column header from one index to 
 
 ### Reorder Multiple Columns
 
-Multiple columns can be reordered at a time by using the `ReorderColumns` method.
+Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` method.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -1340,7 +1340,7 @@ The tree/expander column is a column in the Gantt Chart component, that has icon
 
 ## Show or Hide Columns dynamically
 
-You can show or hide gantt component columns dynamically using external buttons by invoking the `ShowColumns` or `HideColumns` method.
+You can show or hide gantt component columns dynamically using external buttons by invoking the `ShowColumnsAsync` or `HideColumnsAsync` method.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

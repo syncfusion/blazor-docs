@@ -1316,6 +1316,79 @@ With this compact view enabled on mobile, you can view only single resource at a
 
 ![Resources in compact mode](images/resource.png)
 
+## Adaptive UI in desktop
+
+By default, the Scheduler layout adapts automatically in the desktop and mobile devices with appropriate UI changes. In case, if the user wants to display the Adaptive scheduler in desktop mode with adaptive enhancements, then the property `EnableAdaptiveUI` can be set to true. Enabling this option will display the exact mobile mode of Scheduler view on desktop devices.
+
+Some of the default changes made for compact Scheduler to render in desktop devices are as follows,
+* View options displayed in the Navigation drawer.
+* Plus icon is added to the header for new event creation.
+* Today icon is added to the header instead of the Today button.
+* With Multiple resources – only one resource has been shown to enhance the view experience of resource events details clearly. To switch to other resources, there is a TreeView on the left that lists all other available resources, clicking on which will display that particular resource and its related events.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate" @bind-CurrentView="@CurrentView" EnableAdaptiveUI="true">
+    <ScheduleGroup Resources="@GroupData"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@ProjectData" Field="ProjectId" Title="Choose Project" Name="Projects" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@TaskData" Field="TaskId" Title="Category" Name="Categories" TextField="Text" IdField="Id" GroupIDField="GroupId" ColorField="Color" AllowMultiple="true"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+    </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    private View CurrentView = View.Month;
+    public DateTime CurrentDate = new DateTime(2020, 1, 31);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), ProjectId = 1, TaskId = 1 }
+    };
+    private string[] GroupData = new string[] { "Projects", "Categories" };
+    private List<ResourceData> ProjectData { get; set; } = new List<ResourceData> {
+        new ResourceData {Text = "PROJECT 1", Id= 1, Color= "#cb6bb2"},
+        new ResourceData {Text = "PROJECT 2", Id= 2, Color= "#56ca85"},
+        new ResourceData {Text = "PROJECT 3", Id= 3, Color= "#df5286"}
+    };
+    private List<ResourceData> TaskData { get; set; } = new List<ResourceData> {
+        new ResourceData { Text = "Nancy", Id= 1, GroupId = 1, Color = "#df5286" },
+        new ResourceData { Text = "Steven", Id= 2, GroupId = 1, Color = "#7fa900" },
+        new ResourceData { Text = "Robert", Id= 3, GroupId = 2, Color = "#ea7a57" },
+        new ResourceData { Text = "Smith", Id= 4, GroupId = 2, Color = "#5978ee" },
+        new ResourceData { Text = "Michael", Id= 5, GroupId = 3, Color = "#df5286" },
+        new ResourceData { Text = "Root", Id= 6, GroupId = 3, Color = "#00bdae" }
+    };
+    public class ResourceData
+    {
+        public string Text { get; set; }
+        public int Id { get; set; }
+        public int GroupId { get; set; }
+        public string Color { get; set; }
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int ProjectId { get; set; }
+        public int TaskId { get; set; }
+    }
+}
+```
+
 ## See Also
 
 [How to expand or collapse a resource programmatically](./how-to/#expand-collapse-resource-programmatically)

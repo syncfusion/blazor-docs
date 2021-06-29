@@ -30,3 +30,4 @@
 * [Setting Minimum and Maximum Date](scheduler/how-to/set-min-max-date.md)
 * [Custom Editor With Validation](scheduler/how-to/custom-editor-with-validation.md)
 * [Expand And Collapse Resource Dynamically](scheduler/how-to/expand-collapse-resource-dynamically.md)
+* [Enable scroll option on all-day section](scheduler/how-to/enable-scroll-option-on-all-day-section.md)

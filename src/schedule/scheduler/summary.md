@@ -19,6 +19,7 @@
 * [Scheduler Dimensions](scheduler/dimensions.md)
 * [Globalization](scheduler/localization.md)
 * [Accessibility](scheduler/accessibility.md)
+* [WebAssembly Performance](scheduler/webassembly-performance.md)
 * [Events](scheduler/events.md)
 * [Context Menu](scheduler/context-menu.md)
 * [Style And Appearance](scheduler/scheduler-styling.md)

@@ -853,6 +853,75 @@ You can able to render SfTimePicker component in EditTemplate. In the below samp
 In the following image, **SfTimePicker** component is rendered with **EditTemplate** in OrderDate column
 ![Custom SfTimePicker in EditTemplate](./images/sftimepicker-edittemplate.png)
 
+### Using MultiSelect Dropdown in EditTemplate
+
+You can able to render SfMultiSelect component in EditTemplate. In the below sample we have rendered  **SfMultiSelect** component in **EditTemplate** for ChosenItems column.
+
+```csharp
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Grids
+
+<SfGrid AllowPaging="true" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ChosenItems) HeaderText="Chosen Items" Width="150">
+            <EditTemplate>
+                <SfMultiSelect ID="ChosenItems" @bind-Value="@((context as Order).ChosenItems)" DataSource="@AvailableChoices" TValue="string[]" TItem="MyChoiceItem">
+                    <MultiSelectFieldSettings Value="ChosenItems" Text="ChosenItems"></MultiSelectFieldSettings>
+                </SfMultiSelect>
+            </EditTemplate>
+            <Template>
+                @{
+                    var d = (context as Order).ChosenItems;
+                    <span>@String.Join(",", d)</span>
+                }
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" EditType="EditType.NumericEdit" Format="C2" Width="90" TextAlign="@TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" Type="ColumnType.Date" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    public List<MyChoiceItem> AvailableChoices { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            ChosenItems = new string[] { x + "ItemA" },
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+        AvailableChoices = Enumerable.Range(1, 75).Select(x => new MyChoiceItem()
+        {
+            Id = x,
+            ChosenItems = x + "ItemA"
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string[] ChosenItems { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public class MyChoiceItem
+    {
+        public int Id { get; set; }
+        public string ChosenItems { get; set; }
+    }
+}
+```
+
+In the following image, **SfMultiSelect** component is rendered with **EditTemplate** in ChosenItems column
+![Custom SfMultiSelect in EditTemplate](./images/multiselect-edittemplate.png)
+
 ## Command column
 
 The command column provides an option to add CRUD action buttons in a column. This can be defined by using the `GridCommandColumns` component which needs to be wrapped inside the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.

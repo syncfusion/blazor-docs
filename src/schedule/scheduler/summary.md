@@ -28,6 +28,7 @@
 * [Create Multiple Events in different time slots through CTRL key](scheduler/how-to/create-multiple-events-dynamically.md)
 * [Custom Header](scheduler/how-to/custom-header.md)
 * [Prevent Appointment Creation and Deletion](scheduler/how-to/prevent-appointment-creation-and-deletion.md)
+* [Show half-yearly view](schedule/how-to/half-yearly-view.md)
 * [Setting Minimum and Maximum Date](scheduler/how-to/set-min-max-date.md)
 * [Custom Editor With Validation](scheduler/how-to/custom-editor-with-validation.md)
 * [Expand And Collapse Resource Dynamically](scheduler/how-to/expand-collapse-resource-dynamically.md)

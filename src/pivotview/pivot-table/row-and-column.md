@@ -136,6 +136,45 @@ In the below example, the [`ColumnWidth`](https://help.syncfusion.com/cr/blazor/
 
 ![output](images/column-width.png)
 
+### Adjust width based on columns
+
+By default, if the component width set in code-behind is more than the width of the total columns, then the columns will be stretched to make it fit. To avoid the stretching, set the [`AutoFit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AutoFit) property in the [`PivotViewGridSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) to **false**. By doing so, the component will be adjusted (shrinked) based on the width of total columns.
+
+```csharp
+    @using Syncfusion.Blazor.PivotView
+
+    <SfPivotView TValue="ProductDetails" Height="500" Width="1000" ShowGroupingBar="true">
+        <PivotViewDataSourceSettings DataSource="@dataSource">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFilterSettings>
+                <PivotViewFilterSetting Name="Year" Type=FilterType.Exclude Items="@(new string[] { "FY 2017" })">
+                </PivotViewFilterSetting>
+            </PivotViewFilterSettings>
+        </PivotViewDataSourceSettings>
+        <PivotViewGridSettings AutoFit="false"></PivotViewGridSettings>
+    </SfPivotView>
+
+    @code{
+        public List<ProductDetails> data { get; set; }
+        protected override void OnInitialized()
+        {
+            this.data = ProductDetails.GetProductData().ToList();
+           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        }
+    }
+
+```
+
+![output](images/autofit.png)
+
 ## Reorder
 
 Allows end user to reorder a particular column header from one index to another index within the pivot table through drag-and-drop option. It can be enabled by setting the [`AllowReordering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowReordering) property in [`PivotViewGridSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class to **true**.

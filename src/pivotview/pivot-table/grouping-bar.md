@@ -6,6 +6,7 @@ Similar to Field List, Grouping Bar UI also comes with basic interactions like,
 
 * Re-arranging fields through drag-and-drop operation between row, column, value and filter axes.
 * Remove fields from the existing report using remove icon.
+* Add fields to the report using fields panel option.
 * Filtering members of specific fields using filter icon.
 * Sorting members of specific fields using sort icon.
 
@@ -44,6 +45,40 @@ Similar to Field List, Grouping Bar UI also comes with basic interactions like,
 ```
 
 ![output](images/gs_groupingbar.png)
+
+## Show or hide fields panel
+
+The fields panel, which is positioned above the grouping bar, displays the fields that are available in the data source but are not bound in the report. The fields can be dragged and dropped into the appropriate axis. In addition, any field removed from any axes will be automatically added to the fields panel. The fields panel can be displayed by setting the [`ShowFieldsPanel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html#Syncfusion_Blazor_PivotView_PivotViewGroupingBarSettings_ShowFieldsPanel) property in the [`PivotViewGroupingBarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) to **true**.
+
+```csharp
+    @using Syncfusion.Blazor.PivotView
+
+    <SfPivotView TValue="ProductDetails" Height="500" Width="1000" ShowGroupingBar="true">
+        <PivotViewDataSourceSettings DataSource="@dataSource">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            </PivotViewValues>
+        </PivotViewDataSourceSettings>
+        <PivotViewGroupingBarSettings ShowFieldsPanel="true"></PivotViewGroupingBarSettings>
+    </SfPivotView>
+
+    @code{
+        public List<ProductDetails> data { get; set; }
+        protected override void OnInitialized()
+        {
+            this.data = ProductDetails.GetDefaultData().ToList();
+           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        }
+    }
+```
+
+![output](images/showfieldspanel.png)
 
 ## Show or hide all filter icon
 

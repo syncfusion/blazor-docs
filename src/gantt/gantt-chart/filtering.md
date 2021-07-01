@@ -4,7 +4,7 @@ Filtering allows you to view specific or related records based on filter criteri
 
 ## Menu Filtering
 
-The Gantt Chart component provides menu-filtering support for each column. You can enable the filter menu by setting the `AllowFiltering` to `true`. The filter menu UI will be rendered based on its column type, which allows you to filter data. You can filter the records with different operators.
+The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component provides menu-filtering support for each column. You can enable the filter menu by setting the `AllowFiltering` to `true`. The filter menu UI will be rendered based on its column type, which allows you to filter data. You can filter the records with different operators.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt

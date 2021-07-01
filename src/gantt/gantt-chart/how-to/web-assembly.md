@@ -1,6 +1,43 @@
-# Getting Started
+# Getting Started with Blazor WebAssembly Gantt Chart Using Visual Studio
 
-This section briefly explains about how to include a **Gantt Chart** Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
+This article provides a step-by-step instructions to configure Syncfusion [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+
+**Note**: Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this help topic for more information.
+
+## Prerequisites
+
+* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
+* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+**Note**: .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
+
+Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+
+## Create a Blazor WebAssembly project in Visual Studio 2019
+
+1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
+
+    ```bash
+    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    ```
+
+2. Choose **Create a new project** from the Visual Studio dashboard.
+
+    ![new project in aspnetcore blazor](../images/new-projectt.png)
+
+3. Select **Blazor App** from the template, and then click **Next** button.
+
+    ![blazor template](../images/blazor-template.png)
+
+4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
+
+    ![asp.net core project configuration](../images/project-configuration.png)
+
+5. Choose **Blazor WebAssembly App** from the dashboard, and then click **Create** button to create a new Blazor WebAssembly application.
+
+    ![wasm template](../images/blazor-client-template.png)
+
+**Note**: ASP.NET Core 3.1 available in Visual Studio 2019 version.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -532,10 +569,4 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 You can find the full information regarding Predecessors from [here](/task-dependencies/)
 
 The following image represents Gantt with Editing, Sorting, Filtering and Predecessors.
-![Gantt Features](images/getting-started.gif)
-
-## See Also
-
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
-* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
+![Gantt Features](../images/enableDependency.png)

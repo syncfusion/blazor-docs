@@ -29,3 +29,4 @@
 * [Style And Appearance](gantt-chart/style-and-appearance.md)
 * [Hide chart part](gantt-chart/how-to/hide-chart-part.md)
 * [Open Add Edit Dialog Dynamically](gantt-chart/how-to/open-add-edit-dialog-dynamically.md)
+* [WebAssembly Gantt Chart](gantt-chart/how-to/web-assembly.md)

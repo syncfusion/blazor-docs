@@ -1,6 +1,6 @@
 # Timeline
 
-In the Gantt Chart component, timeline is used to represent the project duration as individual cells with defined unit and formats.
+In the [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component, timeline is used to represent the project duration as individual cells with defined unit and formats.
 
 ## Timeline View Modes
 

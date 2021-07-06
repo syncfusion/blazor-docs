@@ -210,7 +210,7 @@ enabled when selecting an item in lists.
         }
     };
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id
         {

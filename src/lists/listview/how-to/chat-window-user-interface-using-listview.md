@@ -167,7 +167,7 @@ void OnSend()
 
     }
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id
         {

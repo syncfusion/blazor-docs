@@ -184,7 +184,7 @@ The following key shortcuts are used to access the ListView control without any 
         });
     }
 
-    class DataModel
+    public class DataModel
     {
         public string Id { get; set; }
         public string Text { get; set; }

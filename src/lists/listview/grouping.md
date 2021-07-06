@@ -21,11 +21,11 @@ In the following sample, The cars are grouped based on its category by using the
         new  DataModel{ Id = "4", Text = "4", Type = "Even"},
     };
 
-    class DataModel
+    public class DataModel
     {
         public string Id { get; set; }
         public string Text { get; set; }
-       public string Type { get; set; }
+        public string Type { get; set; }
     }
 
 }

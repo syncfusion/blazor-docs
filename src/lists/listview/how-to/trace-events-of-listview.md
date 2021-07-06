@@ -56,7 +56,7 @@ select event, and display the selected list item text in the event trace panel w
         new ListDataModel { Id = "7", Text = "Text 7" },
     };
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id
         {

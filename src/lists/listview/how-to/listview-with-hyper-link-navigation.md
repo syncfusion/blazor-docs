@@ -52,7 +52,7 @@ In the below sample, we have rendered `ListView` with search engines URL.
         }
     };
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id
         {

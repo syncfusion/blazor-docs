@@ -152,7 +152,7 @@ Add the Syncfusion Blazor ListView component in any web page (razor) in the `Pag
             new DataModel { Text = "Animation Art", Id = "list-05" },
             new DataModel { Text = "Oil Painting", Id = "list-06" }
     };
-    class DataModel
+    public class DataModel
     {
         public string Text { get; set; }
         public string Id { get; set; }

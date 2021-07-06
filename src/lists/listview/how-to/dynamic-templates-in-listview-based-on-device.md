@@ -82,7 +82,7 @@ two templates have been loaded for mobile and desktop modes. To check the device
         IsMobile = (userAgent[0] as string).ToLower().Contains("mobile");
     }
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id { get; set; }
         public string Name { get; set; }

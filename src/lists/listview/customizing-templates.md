@@ -43,7 +43,7 @@ In the following example, we have rendered Listview with customized header which
 
     }
 
-    class DataModel
+    public class DataModel
     {
         public string Text { get; set; }
         public string Id { get; set; }
@@ -273,7 +273,7 @@ In the following example, we have grouped Listview based on the category. The ca
         ListData.Add(new DataModel { Name = "Laura", Contact = "(206) 555-1189", Id = "9", Image = "https://ej2.syncfusion.com/demos/src/grid/images/8.png", Category = "Experience" });
     }
 
-    class DataModel
+    public class DataModel
     {
         public string Name { get; set; }
         public string Contact { get; set; }

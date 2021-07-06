@@ -72,7 +72,7 @@ list items. This is called as the `GetCheckedItemsAsync` method.
         }
     }
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id { get; set; }
         public string Text { get; set; }

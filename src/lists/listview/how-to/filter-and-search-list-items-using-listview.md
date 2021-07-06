@@ -64,7 +64,7 @@ following steps to render the ListView with filtered data.
         ListData = DataSource.FindAll(e => e.Text.ToLower().StartsWith(eventArgs.Value));
     }
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id
         {

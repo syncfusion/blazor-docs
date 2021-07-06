@@ -62,7 +62,7 @@ delete icon list item to `OnDelete` method.
         });
     }
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id { get; set; }
         public string Text { get; set; }

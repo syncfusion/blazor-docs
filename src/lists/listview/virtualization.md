@@ -88,7 +88,7 @@ It has two types of scrollers as follows:
 
     }
 
-    class DataModel
+    public class DataModel
     {
         public string Id { get; set; }
         public string Text { get; set; }

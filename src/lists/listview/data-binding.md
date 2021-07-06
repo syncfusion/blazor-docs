@@ -54,7 +54,7 @@ ListView can generate its list items through an array of complex data. To get it
         Data.Add(new DataModel { Text = "Ferrari LaFerrari", Id = "list-10" });
     }
 
-    class DataModel
+    public class DataModel
     {
         public string Id { get; set; }
         public string Text { get; set; }

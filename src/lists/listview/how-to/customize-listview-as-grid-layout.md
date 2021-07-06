@@ -247,7 +247,7 @@ In the below sample, we have sorted in `Ascending` order. To sort it in descendi
         Value = "";
     }
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id
         {

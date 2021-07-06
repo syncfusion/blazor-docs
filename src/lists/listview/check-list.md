@@ -30,7 +30,7 @@ private DataModel[] Data = {
 
     };
 
-    class DataModel
+    public class DataModel
     {
         public string Text { get; set; }
         public string Id { get; set; }
@@ -70,7 +70,7 @@ private DataModel[] Data = {
 
     };
 
-    class DataModel
+    public class DataModel
     {
         public string Text { get; set; }
         public string Id { get; set; }

@@ -127,7 +127,7 @@ ListDataModel item = context as ListDataModel;
         }
     };
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id
         {

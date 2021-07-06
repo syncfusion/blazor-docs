@@ -51,7 +51,7 @@ So, we need to map id attribute to listview items using `ListViewFieldSettings` 
         Selected = listData;
     }
 
-    class ListDataModel
+    public class ListDataModel
     {
         public string Id
         {

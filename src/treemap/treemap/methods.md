@@ -1,12 +1,12 @@
 ---
-title: "Methods in Blazor TreeMap component | Syncfusion"
+title: "Methods in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"
 
-description: "Learn here all about Methods of Syncfusion TreeMap (SfTreeMap) component and more."
+description: "Learn here all about the Methods of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
-# Methods in Blazor TreeMap (SfTreeMap)
+# Methods in the Blazor TreeMap (SfTreeMap)
 
 Create an object for the TreeMap component using `@ref` property and call the desired TreeMap method.
 
@@ -46,16 +46,16 @@ To print the rendered TreeMap component by setting the [`AllowPrint`](https://he
 
 Export the current TreeMap component to different file formats such as [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PNG), [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF), [`JPEG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_JPEG) and [`SVG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_SVG).
 
-[`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowImageExport) and [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property represents to allow the file to be download in image and pdf type export.
+The [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowImageExport) and the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property represents to allow the file to be downloaded in an image and pdf type export.
 
 |   Arguments      |   Description                                       |
 |----------------------| ----------------------------------------------------|
-|     type             |    Define the export type such as **PNG**, **PDF**, **JPEG** and **SVG**.   |
-|     fileName        |    Define the file name.                             |
-|     orientation      |    Define the orientation such as **horizontal** and **vertical**.     |
-| allowDownload | Define the export file to be download or not. |
+|     type             |    Defines the export type such as **PNG**, **PDF**, **JPEG** and **SVG**.   |
+|     fileName        |    Defines the file name.                             |
+|     orientation      |    Defines the orientation such as **horizontal** and **vertical**.     |
+| allowDownload | Defines the export file to be downloaded or not. |
 
-> Export method returns the **Base64** string, if **allowDownload** argument is set to **false**. The file can be download by paste the returned **Base64** string in the browser URL bar and press the enter button.
+> Export method returns the **Base64** string, if **allowDownload** argument is set to **false**. To download the file, paste the returned **Base64** string in the browser URL bar and press the enter button.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap;
@@ -117,12 +117,12 @@ The TreeMap component is rendered again.
 
 ## SelectItem
 
-Select or unselect of the TreeMap item can be achieved by programmatically using [`SelectItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_SelectItem_System_String___System_Boolean_) method.  
+The [`SelectItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_SelectItem_System_String___System_Boolean_) method can be used to select or unselect the TreeMap item programmatically.
 
 |   Arguments      |   Description                                       |
 |----------------------| ----------------------------------------------------|
-| levelOrder | Define the level order name for the treemap item. |
-| isSelected | Define whether it to be select or unselect. |
+| levelOrder | Defines the level order name for the treemap item. |
+| isSelected | Defines whether it has to select or unselect. |
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap;

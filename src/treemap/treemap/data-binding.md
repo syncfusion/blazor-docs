@@ -1,12 +1,12 @@
 ---
-title: "Data Binding in Blazor TreeMap component | Syncfusion"
+title: "Data Binding in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"
 
-description: "Learn here all about Data Binding of Syncfusion TreeMap (SfTreeMap) component and more."
+description: "Learn here all about the Data Binding of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
-# Data Binding in Blazor TreeMap (SfTreeMap)
+# Data Binding in the Blazor TreeMap (SfTreeMap)
 
 ## Populate data
 
@@ -14,7 +14,7 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeM
 
 ### Flat data
 
-The following code example demonstrates, how to bind a flat collection as data source to the TreeMap component.
+The following code example shows, how to bind a flat collection as data source to the TreeMap component.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -51,7 +51,7 @@ The following code example demonstrates, how to bind a flat collection as data s
 
 ### Hierarchical data
 
-The following code example demonstrates, how to bind a hierarchical collection as data source to the TreeMap component.
+The following code example shows, how to bind a hierarchical collection as data source to the TreeMap component.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -183,9 +183,9 @@ The following code example demonstrates, how to bind a hierarchical collection a
 
 ## Local data
 
-### Fetching data from collection
+### Fetching data from the collection
 
-The following code example demonstrates, how to bind a `IEnumerable` object to the TreeMap component as a data source.
+The following code example shows, how to bind a `IEnumerable` object to the TreeMap component as a data source.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -222,11 +222,11 @@ The following code example demonstrates, how to bind a `IEnumerable` object to t
 
 ![TreeMap with local data](images/Databinding/ListCollection.png)
 
-### Fetching data from JSON file
+### Fetching data from the JSON file
 
-Read the JSON file data and it can be convert to the C# object, and assign it to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property of TreeMap component.
+Read the JSON file data and it can be convert to the C# object, and assign it to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property of the TreeMap component.
 
-The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` lifecycle method to load JSON file data.
+The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` lifecycle method to load the JSON file data.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -264,7 +264,7 @@ else
 
 ## Remote data
 
-To interact with remote data source, provide the endpoint [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class along with appropriate [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). By default, [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [`ODataAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
+To interact with the remote data source, provide the endpoint [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class along with an appropriate [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). By default, the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [`ODataAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
 
 > When using [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for data binding then the **TValue** must be provided explicitly to the TreeMap component.
 
@@ -424,7 +424,7 @@ The first step is to create a DBContext class called **OrderContext** for establ
 
 ### Create data access layer to perform data operation
 
-Now need to create a class called **OrderDataAccessLayer**, which acts as a data access layer to retrieve the records from the database table.
+Now create a class called **OrderDataAccessLayer**, which acts as a data access layer to retrieve the records from the database table.
 
 ```csharp
     using Microsoft.EntityFrameworkCore;
@@ -502,7 +502,7 @@ A Web API Controller must be created, which allows the TreeMap to directly consu
 
 ### Add Web API Controller services in Startup.cs
 
-Open the **Startup.cs** file, add services and endpoints required for Web API Controller as follows.
+Open the **Startup.cs** file, add services and endpoints required for the Web API Controller as follows.
 
 ```csharp
 using Newtonsoft.Json.Serialization;
@@ -545,7 +545,7 @@ namespace BlazorApplication
 
 Configure the TreeMap to bind data using either [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property or [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-For instance, to bind data directly from the **OrderDataAccessLayer** class and  assign to [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property.
+For instance, bind the data directly from the **OrderDataAccessLayer** class and  assign to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property.
 
 ```csharp
 
@@ -569,7 +569,7 @@ For instance, to bind data directly from the **OrderDataAccessLayer** class and 
     }
 ```
 
-On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint Url in [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
+On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap

@@ -1,12 +1,12 @@
 ---
-title: "Layout in Blazor TreeMap component | Syncfusion"
+title: "Layout in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"
 
 description: "Learn here all about Layout of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
-# Layout in Blazor TreeMap (SfTreeMap)
+# Layout in the Blazor TreeMap (SfTreeMap)
 
 Determine the visual representation of nodes belonging to all the TreeMap levels using the [`LayoutType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_LayoutType) property.
 
@@ -21,7 +21,7 @@ The available layout types are,
 
 ### Squarified
 
-The [`Squarified`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html#Syncfusion_Blazor_TreeMap_LayoutMode_Squarified) layout displays the nested rectangles based on aspect ratio in TreeMap. The rectangles will be split based on the height and width of parent. The default rendering type of layout is [`Squarified`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html).
+The [`Squarified`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html#Syncfusion_Blazor_TreeMap_LayoutMode_Squarified) layout displays the nested rectangles based on aspect ratio in the TreeMap. The rectangles will be split based on the height and width of the parent. The default rendering type of layout is [`Squarified`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html).
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -56,40 +56,40 @@ The [`Squarified`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeM
 
 ### Slice and dice vertical
 
-The [`SliceAndDiceVertical`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and display items in sorted vertically.
+The [`SliceAndDiceVertical`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and displays items in a vertically sorted order.
 
 ```csharp
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP" LayoutType="LayoutMode.SliceAndDiceVertical">
 </SfTreeMap>
 ```
 
-> Refer [code block](#squarified) to know the property value of **GrowthReports**.
+> Refer to the [code block](#squarified) to know about the property value of **GrowthReports**.
 
 ![TreeMap with slice and dice vertical layout](images/Layout/SliceAndDiceVertical.png)
 
 ### Slice and dice horizontal
 
-The [`SliceAndDiceHorizontal`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and display items in sorted horizontally.
+The [`SliceAndDiceHorizontal`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and displays items in a horizontally sorted order.
 
 ```csharp
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP" LayoutType="LayoutMode.SliceAndDiceHorizontal">
 </SfTreeMap>
 ```
 
-> Refer [code block](#squarified) to know the property value of **GrowthReports**.
+> Refer to the [code block](#squarified) to know about the property value of **GrowthReports**.
 
 ![TreeMap with slice and dice horizontal](images/Layout/SliceandDiceHorizontal.png)
 
 ### Slice and dice auto
 
-The [`SliceAndDiceAuto`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and display items in sorted both horizontally and vertically.
+The [`SliceAndDiceAuto`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and display items sorted both horizontally and vertically.
 
 ```csharp
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP" LayoutType="LayoutMode.SliceAndDiceAuto">
 </SfTreeMap>
 ```
 
-> Refer [code block](#squarified) to know the property value of **GrowthReports**.
+> Refer to the [code block](#squarified) to know about the property value of **GrowthReports**.
 
 ![TreeMap with slice and dice auto layout](images/Layout/SliceAndDiceAuto.png)
 
@@ -104,7 +104,7 @@ The TreeMap can be rendered in the following directions:
 * [`BottomRightTopLeft`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html)
 * [`BottomLeftTopRight`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html)
 
-The following example demonstrate, how to render the TreeMap in the RTL direction with [`TopLeftBottomRight`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
+The following example shows, how to render the TreeMap in the RTL direction with [`TopLeftBottomRight`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
 ```csharp
 using Syncfusion.Blazor.TreeMap;
@@ -136,7 +136,7 @@ using Syncfusion.Blazor.TreeMap;
 
 ![TreeMap with custom rendering direction](images/Internationalization/TopLeftBottomRight.png)
 
-The following example demonstrate, how to render the TreeMap in the RTL direction with [`TopRightBottomLeft`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
+The following example shows, how to render the TreeMap in the RTL direction with [`TopRightBottomLeft`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
 ```csharp
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" Palette='new string[]{"#71B081","#5A9A77", "#498770", "#39776C", "#266665","#124F5E"}' RenderDirection="RenderingMode.TopRightBottomLeft">
@@ -147,11 +147,11 @@ The following example demonstrate, how to render the TreeMap in the RTL directio
 </SfTreeMap>
 ```
 
-> Refer [code block](#rendering-direction) to know the property value of **Fruits**.
+> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
 ![TreeMap custom rendering direction](images/Internationalization/TopRightBottomLeft.png)
 
-The following example demonstrate, how to render the TreeMap in the RTL direction with [`BottomRightTopLeft`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
+The following example shows, how to render the TreeMap in the RTL direction with [`BottomRightTopLeft`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
 ```csharp
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" Palette='new string[]{"#71B081","#5A9A77", "#498770", "#39776C", "#266665","#124F5E"}' RenderDirection="RenderingMode.BottomRightTopLeft">
@@ -162,11 +162,11 @@ The following example demonstrate, how to render the TreeMap in the RTL directio
 </SfTreeMap>
 ```
 
-> Refer [code block](#rendering-direction) to know the property value of **Fruits**.
+> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
 ![TreeMap custom rendering direction](images/Internationalization/BottomRightTopLeft.png)
 
-The following example demonstrate, how to render the TreeMap in the RTL direction with [`BottomLeftTopRight`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
+The following example shows, how to render the TreeMap in the RTL direction with [`BottomLeftTopRight`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
 ```csharp
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" Palette='new string[]{"#71B081","#5A9A77", "#498770", "#39776C", "#266665","#124F5E"}' RenderDirection="RenderingMode.BottomLeftTopRight">
@@ -177,6 +177,6 @@ The following example demonstrate, how to render the TreeMap in the RTL directio
 </SfTreeMap>
 ```
 
-> Refer [code block](#rendering-direction) to know the property value of **Fruits**.
+> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
 ![TreeMap custom rendering direction](images/Internationalization/BottomLeftTopRight.png)

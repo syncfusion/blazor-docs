@@ -1,14 +1,14 @@
 ---
-title: "Drill-down in Blazor TreeMap component | Syncfusion"
+title: "Drill-down in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"
 
 description: "Learn here all about Drill-down of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
-# Drill-down in Blazor TreeMap (SfTreeMap)
+# Drill-down in the Blazor TreeMap (SfTreeMap)
 
-The TreeMap component supports drill-down to expose the hierarchy, achieved by clicking a node. If click an item in TreeMap, it will be moved to the next level or sub level hierarchy and returned back to the previous level by clicking the node.
+The TreeMap component supports drill-down to expose the hierarchy, achieved by clicking a node. If an item is clicked in the TreeMap, it will be moved to the next level or sub level hierarchy and returned back to the previous level by clicking the node.
 
 ## Perform drill-down
 
@@ -63,7 +63,7 @@ The drill-down concepts are shown in the following code example.
 
 ## On-demand data loading
 
-All of the child items are rendered during the normal drill-down process, and visible at the initial rendering of the TreeMap. But on-demand data loading, it will not render child items at initial rendering and child nodes will be rendered during the drill-down process by setting the [`DrillDownView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DrillDownView) property to **true**.
+All the child items are rendered during the normal drill-down process, and visible at the initial rendering of the TreeMap. But on-demand data loading, it will not render child items at initial rendering, and child nodes will be rendered during the drill-down process by setting the [`DrillDownView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DrillDownView) property to **true**.
 
 The on-demand loading concepts are shown in the following code example.
 
@@ -88,13 +88,13 @@ The on-demand loading concepts are shown in the following code example.
 </SfTreeMap>
 ```
 
-> Refer [code block](#perform-drill-down) to know the property value of **Employees**.
+> Refer to the [code block](#perform-drill-down) to know about the property value of **Employees**.
 
 ![TreeMap with on demand data loading](images/drilldown/drilldownView.png)
 
 ## Breadcrumb support
 
-TreeMap items are drill, up to any level of parent using breadcrumb navigation and the level from root parent to current level is displayed at the top of item layout. It can be enabled by using the [`EnableBreadcrumb`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableBreadcrumb) property to **true** and customize the breadcrumb connector using the [`BreadcrumbConnector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_BreadcrumbConnector) property. By default, **-**(hyphen) is the connector.
+TreeMap items are drilled, up to any level of parent using breadcrumb navigation and the level from root parent to current level is displayed at the top of item layout. It can be enabled by using the [`EnableBreadcrumb`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableBreadcrumb) property to **true** and customize the breadcrumb connector using the [`BreadcrumbConnector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_BreadcrumbConnector) property. By default, **-**(hyphen) is the connector.
 
 The breadcrumb concepts are shown in the following code example.
 
@@ -119,13 +119,13 @@ The breadcrumb concepts are shown in the following code example.
 </SfTreeMap>
 ```
 
-> Refer [code block](#perform-drill-down) to know the property value of **Employees**.
+> Refer to the [code block](#perform-drill-down) to know about the property value of the **Employees**.
 
 ![TreeMap with breadcrumb](images/drilldown/Breadcrumb.png)
 
 ## Initial drill-down
 
-TreeMap items can be drilled on initial rendering and it can be enabled by specifying the item index in [`GroupIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html#Syncfusion_Blazor_TreeMap_TreeMapInitialDrillSettings_GroupIndex) property and level order name in [`GroupName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html#Syncfusion_Blazor_TreeMap_TreeMapInitialDrillSettings_GroupName) property of [`TreeMapInitialDrillSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html).
+TreeMap items can be drilled on initial rendering and it can be enabled by specifying the item index in the [`GroupIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html#Syncfusion_Blazor_TreeMap_TreeMapInitialDrillSettings_GroupIndex) property and level order name in the [`GroupName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html#Syncfusion_Blazor_TreeMap_TreeMapInitialDrillSettings_GroupName) property of the [`TreeMapInitialDrillSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html).
 
 The initial drill-down concepts are shown in the following code example.
 
@@ -151,6 +151,6 @@ The initial drill-down concepts are shown in the following code example.
 </SfTreeMap>
 ```
 
-> Refer [code block](#perform-drill-down) to know the property value of **Employees**.
+> Refer to the [code block](#perform-drill-down) to know about the property value of **Employees**.
 
 ![TreeMap with initial drill-down](images/drilldown/Initial-drill-down.png)

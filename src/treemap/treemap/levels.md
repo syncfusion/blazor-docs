@@ -1,18 +1,18 @@
 ---
-title: "Levels in Blazor TreeMap component | Syncfusion"
+title: "Levels in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"
 
 description: "Learn here all about Levels of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
-# Levels in Blazor TreeMap (SfTreeMap)
+# Levels in the Blazor TreeMap (SfTreeMap)
 
 TreeMap supports **n** number of levels and each level is separated by using the [`GroupPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property.
 
 ## Group path
 
-The [`GroupPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property is used to separate each level of the TreeMap by specifying the property from data source.
+The [`GroupPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property is used to separate each level of the TreeMap by specifying the property from the data source.
 
 In the following example, three levels are added and each level is configured using the [`GroupPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property.
 
@@ -86,13 +86,13 @@ The [`GroupGap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap
 </SfTreeMap>
 ```
 
-> Refer [code block](#group-path) to know the property value of **Employees**.
+> Refer to the [code block](#group-path) to know about the property value of the **Employees**.
 
 ![TreeMap levels with group gap](images/Levels/groupgap.png)
 
 ## Header height and style
 
-Customize the font color, family, weight, opacity and size using the [`TreeMapHeaderStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHeaderStyle.html). Based on font settings, the header height can be given using the [`HeaderHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderHeight) property in [`TreeMapLevel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html).
+Customize the font color, family, weight, opacity and size using the [`TreeMapHeaderStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHeaderStyle.html). Based on the font settings, the header height is given using the [`HeaderHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderHeight) property in [`TreeMapLevel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html).
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -118,17 +118,17 @@ Customize the font color, family, weight, opacity and size using the [`TreeMapHe
 </SfTreeMap>
 ```
 
-> Refer [code block](#group-path) to know the property value of **Employees**.
+> Refer to the [code block](#group-path) to know about the property value of **Employees**.
 
 ![TreeMap with custom header height and style](images/Levels/headerHeight.png)
 
 ## Customization
 
-Following properties are available to customize the header content in the [`TreeMapLevel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html).
+The following properties are available to customize the header content in the [`TreeMapLevel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html).
 
-* [`HeaderFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderFormat) - Represents the header name, which is available in data source.
+* [`HeaderFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderFormat) - Represents the header name, which is available in the data source.
 * [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_ShowHeader) - Specifies to visibility of the header.
-* [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderTemplate) - Specifies the template of the header and the position of template to be customize using [`TemplatePosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_TemplatePosition) property.
+* [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderTemplate) - Specifies the template of the header and the position of the template to be customized using the [`TemplatePosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_TemplatePosition) property.
 * [`TreeMapLevelBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevelBorder.html) - Specifies TreeMap level border color and width.
 * [`HeaderAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderAlignment) - Align the header to [`Near`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.Alignment.html#Syncfusion_Blazor_TreeMap_Alignment_Near), [`Center`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.Alignment.html#Syncfusion_Blazor_TreeMap_Alignment_Center) and [`Far`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.Alignment.html#Syncfusion_Blazor_TreeMap_Alignment_Far).
 
@@ -153,6 +153,6 @@ Following properties are available to customize the header content in the [`Tree
 </SfTreeMap>
 ```
 
-> Refer [code block](#group-path) to know the property value of `Employees`.
+> Refer to the [code block](#group-path) to know about the property value of `Employees`.
 
 ![TreeMap with customized header](images/Levels/headeralignment.png)

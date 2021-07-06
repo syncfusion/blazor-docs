@@ -1,28 +1,28 @@
 ---
-title: "Leaf Item in Blazor TreeMap component | Syncfusion"
+title: "Leaf Item in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"
 
 description: "Learn here all about Leaf Item of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
-# Leaf Item in Blazor TreeMap (SfTreeMap)
+# Leaf Item in the Blazor TreeMap (SfTreeMap)
 
-A leaf item defines a visualized data element and do not contain child nodes but contains parent node if levels specified in TreeMap.
+A leaf item defines a visualized data element and does not contain child nodes but contains parent node if the levels are specified in the TreeMap.
 
 ## Customization
 
-Following properties are available to customize the leaf item  in the [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html).
-* [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Represents the item name, which is available in data source.
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the fill color for leaf items.
+The following properties are available to customize the leaf item in the [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html).
+* [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Represents the item name, which is available in the data source.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the fill color for the leaf items.
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the opacity of leaf item fill color.
 * [`ShowLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ShowLabels) - Specifies to visibility of the leaf item label.
 * [`Padding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the padding of leaf items
-* [`LabelTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelTemplate) - Specifies the template of leaf item label and the position of template to be customize using [`TemplatePosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_TemplatePosition) property.
+* [`LabelTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelTemplate) - Specifies the template of leaf item label and the position of the template to be customized using the [`TemplatePosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_TemplatePosition) property.
 * [`TreeMapLeafLabelStyle`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafLabelStyle.html) - To customize the label color, opacity, font size, font family, font weight and font style.
 * [`TreeMapLeafBorder`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafBorder.html) - Specifies leaf item border color and width.
 
-In following example, the name of the property **CountryName** from data source is mapped to [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) property, so corresponding country name will be displayed in the label.
+In the following example, the name of the property **CountryName** from data source is mapped to [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) property, so corresponding country name will be displayed in the label.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -61,7 +61,7 @@ In following example, the name of the property **CountryName** from data source 
 
 ## Label position and format
 
-Positioning the leaf item label using [`LabelPosition`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html) property and the text format can be customized by specifying data source properties name in [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelFormat) property.
+Positioning the leaf item label using the [`LabelPosition`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html) property and the text format can be customized by specifying data source properties name in the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelFormat) property.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -74,7 +74,7 @@ Positioning the leaf item label using [`LabelPosition`](https://help.syncfusion.
 </SfTreeMap>
 ```
 
-> Refer [code block](#customization) to know the property value of **GrowthReports**.
+> Refer to the [code block](#customization) to know about the property value of **GrowthReports**.
 
 ![TreeMap with label position and format](images/LeafItem/LabelFormat.png)
 
@@ -91,6 +91,6 @@ The [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.Tree
 </SfTreeMap>
 ```
 
-> Refer [code block](#customization) to know the property value of **GrowthReports**.
+> Refer to the [code block](#customization) to know about the property value of **GrowthReports**.
 
 ![Gap in TreeMap item](images/LeafItem/itemgap.png)

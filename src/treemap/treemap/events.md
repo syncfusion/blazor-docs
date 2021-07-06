@@ -1,16 +1,16 @@
 ---
-title: "Events in Blazor TreeMap component | Syncfusion"
+title: "Events in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"
 
-description: "Learn here all about Events of Syncfusion TreeMap (SfTreeMap) component and more."
+description: "Learn here all about the Events of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
-# Events in Blazor TreeMap (SfTreeMap)
+# Events in the Blazor TreeMap (SfTreeMap)
 
 ## ItemHighlighted
 
-Triggers, after highlight the TreeMap items.
+Triggers, after highlighting the TreeMap items.
 
 |   Argument name      |   Description                                 |
 |----------------------| ----------------------------------------------|
@@ -28,7 +28,7 @@ Triggers, before rendering the item of the TreeMap.
 
 ## ItemSelected
 
-Triggers, after select the TreeMap item.
+Triggers, after selecting the TreeMap item.
 
 |   Argument name      |   Description                         |
 |----------------------| --------------------------------------|
@@ -45,7 +45,7 @@ Triggers, before rendering the TreeMap legend.
 
 ## LegendItemRendering
 
-Triggers, before rendering of the each legend item.
+Triggers, before rendering each of the legend item.
 
 |   Argument name      |   Description                                                    |
 |----------------------| -----------------------------------------------------------------|
@@ -61,7 +61,7 @@ Triggers, after the TreeMap component has been loaded.
 
 |   Argument name      |   Description                                                    |
 |----------------------| -----------------------------------------------------------------|
-|   IsResized               |   Specifies whether the component resize or not.                               |
+|   IsResized               |   Specifies whether the component is resized or not.                               |
 
 ## Load
 
@@ -77,7 +77,7 @@ Triggers, before the print operation gets started.
 
 ## OnClick
 
-Description: Triggers, when click on the treemap.
+Description: Triggers, when clicking on the treemap.
 
 |   Argument name      |   Description                                 |
 |----------------------| ----------------------------------------------|
@@ -88,7 +88,7 @@ Description: Triggers, when click on the treemap.
 
 ## OnDoubleClick
 
-Triggers, when double click on the treemap.
+Triggers, when double clicking on the treemap.
 
 |   Argument name      |   Description                         |
 |----------------------| --------------------------------------|
@@ -96,7 +96,7 @@ Triggers, when double click on the treemap.
 
 ## DrillCompleted
 
-Triggers, when drill down functionality get completed on the TreeMap item.
+Triggers, when drilling down functionality gets completed on the TreeMap item.
 
 |   Argument name      |   Description                         |
 |----------------------| --------------------------------------|
@@ -104,19 +104,19 @@ Triggers, when drill down functionality get completed on the TreeMap item.
 
 ## OnDrillStart
 
-Triggers, when drill down functionality get starts on the TreeMap item.
+Triggers, when drilling down functionality gets started on the TreeMap item.
 
 |   Argument name  | Description         |
 |----------------------| ----------------------------------------------------------|
 |   GroupIndex         |   Specifies the index of the TreeMap item.                 |
-|   GroupName          |   Specifies the parent name of the TreeMap item. item             |
+|   GroupName          |   Specifies the parent name of the TreeMap item.            |
 |   Item               |   Specifies the current drill item.                           |
 |   RightClick         |   Return the boolean value whether it is right or not.     |
-|   Cancel             |   Specifies the event cancel. status                              |
+|   Cancel             |   Specifies the event cancel status.                              |
 
 ## OnItemClick
 
-Triggers, when click on the TreeMap item.
+Triggers, when clicking on the TreeMap item.
 
 |   Argument name      |   Description                                 |
 |----------------------| ----------------------------------------------|
@@ -128,7 +128,7 @@ Triggers, when click on the TreeMap item.
 
 ## OnItemMove
 
-Triggers, when mouse move on the TreeMap item.
+Triggers, when mouse moves on the TreeMap item.
 
 |   Argument name      |   Description                         |
 |----------------------| --------------------------------------|
@@ -136,7 +136,7 @@ Triggers, when mouse move on the TreeMap item.
 
 ## OnRightClick
 
-Triggers, when right-click on the TreeMap.
+Triggers, when right-clicked on the TreeMap.
 
 |   Argument name      |   Description                         |
 |----------------------| --------------------------------------|
@@ -148,8 +148,8 @@ Triggers, when resizing the TreeMap component.
 
 |   Argument name      |   Description                          |
 |----------------------| ---------------------------------------|
-|   CurrentSize        |   Specifies the size of TreeMap.           |
-|   PreviousSize       |   Specifies the previous size of TreeMap.  |
+|   CurrentSize        |   Specifies the size of the TreeMap.           |
+|   PreviousSize       |   Specifies the previous size of the TreeMap.  |
 |   Cancel             |   Specifies the event cancel status.        |
 
 ## TooltipRendering
@@ -158,8 +158,8 @@ Triggers, before rendering the TreeMap tooltip.
 
 |   Argument name      |   Description                         |
 |----------------------| --------------------------------------|
-|   Location           |   Specifies the location of tooltip.     |
-|   Text               |   Specifies the text of tooltip.         |
-|   TextStyle          |   Specifies the text style of tooltip.   |
-|   Data               |   Specifies the TreeMap item data, where tooltip to be render.       |
+|   Location           |   Specifies the location of the tooltip.     |
+|   Text               |   Specifies the text of the tooltip.         |
+|   TextStyle          |   Specifies the text style of the tooltip.   |
+|   Data               |   Specifies the TreeMap item data, where the tooltip is to be rendered.       |
 |   Cancel             |   Specifies the event cancel status.  |

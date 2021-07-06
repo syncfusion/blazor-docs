@@ -1,21 +1,21 @@
 ---
-title: "Globalization in Blazor TreeMap component | Syncfusion"
+title: "Globalization in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"
 
-description: "Learn here all about Globalization of Syncfusion TreeMap (SfTreeMap) component and more."
+description: "Learn here all about the Globalization of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
-# Globalization in Blazor TreeMap (SfTreeMap)
+# Globalization in the Blazor TreeMap (SfTreeMap)
 
 The TreeMap component supports globalization for the following elements:
 
-* Data label
+* Data Label
 * Tooltip
 
-Globalization is the process of designing and developing a component that works in different cultures or locales. [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Format) property is used to globalize number, date, and time values in the TreeMap component.
+Globalization is the process of designing and developing a component that works in different cultures or locales. The [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Format) property is used to globalize number, date, and time values in the TreeMap component.
 
-In the following code example, tooltip and datalabel is globalized to currency format in deutsch culture.
+In the following code example, tooltip and Data Label is globalized to currency format in deutsch culture.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -48,8 +48,8 @@ In the following code example, tooltip and datalabel is globalized to currency f
 }
 ```
 
-> Refer [`here`](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-server-application) to configure localization for the Blazor server application, and [`here`](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) for the Blazor web assembly application.
+> Refer  [`here`](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-server-application) to configure localization for the Blazor server application, and [`here`](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) for the Blazor web assembly application.
 
-On successful configuration of localization the TreeMap will be render, as shown below.
+On successful configuration of localization the TreeMap will be rendered, as following.
 
 ![TreeMap with internationalization](images/Internationalization/NumericFormat.png)

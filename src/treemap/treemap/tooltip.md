@@ -1,14 +1,14 @@
 ---
-title: "Tooltip in Blazor TreeMap component | Syncfusion"
+title: "Tooltip in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"
 
-description: "Learn here all about Tooltip of Syncfusion TreeMap (SfTreeMap) component and more."
+description: "Learn here all about the Tooltip of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
-# Tooltip in Blazor TreeMap (SfTreeMap)
+# Tooltip in the Blazor TreeMap (SfTreeMap)
 
-Tooltip is used to display details about the items in TreeMap. When space constraints prevent you from displaying information using data labels, the tooltip comes in handy.
+Tooltip is used to display details about the items in the TreeMap. When space constraints prevent us from displaying the information using Data Labels, the tooltip comes in handy.
 
 ## Default tooltip
 
@@ -44,9 +44,9 @@ The tooltip is not visible by default, to make it visible, set the [`Visible`](h
 
 ## Customization
 
-Customize the TreeMap tooltip using following properties.
+Customize the TreeMap tooltip using the following properties.
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Fill) - Specifies the color of tooltip.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Fill) - Specifies the color of the tooltip.
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Opacity) - Specifies the opacity of the tooltip.
 * [`TreeMapTooltipBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipBorder.html) - Specifies the tooltip border color and width.
 * [`TreeMapTooltipTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipTextStyle.html) - Specifies the tooltip font family, style, weight, color and size.
@@ -63,13 +63,13 @@ Customize the TreeMap tooltip using following properties.
 </SfTreeMap>
 ```
 
-> Refer [code block](#default-tooltip) to know the property value of **Fruits**.
+> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
 ![TreeMap with custom tooltip](images/Tooltip/custom-tooltip.png)
 
 ## Formatting tooltip content
 
-The tooltip content is displayed by default based on [`WeightValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_WeightValuePath). In addition, to show more information in tooltip, can use the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Format) property and define properties from data source as shown below.
+The tooltip content is displayed by default based on the [`WeightValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_WeightValuePath). In addition, to show more information in the tooltip, use the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Format) property and define properties from the data source as following.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -80,13 +80,13 @@ The tooltip content is displayed by default based on [`WeightValuePath`](https:/
 </SfTreeMap>
 ```
 
-> Refer [code block](#default-tooltip) to know the property value of **Fruits**.
+> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
 ![TreeMap with tooltip format](images/Tooltip/TooltipFormat.png)
 
 ## Tooltip template
 
-Tooltip can be render as a custom component using [`TooltipTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_TooltipTemplate) property in the [`TreeMapTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) which accepts one or more UI elements as an input, that can be rendered as part of the tooltip rendering.
+Tooltip can be rendered as a custom component using the [`TooltipTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_TooltipTemplate) property in the [`TreeMapTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) which accepts one or more UI elements as an input, that can be rendered as a part of the tooltip rendering.
 
 ```csharp
 @using Syncfusion.Blazor.TreeMap
@@ -109,6 +109,6 @@ Tooltip can be render as a custom component using [`TooltipTemplate`](https://he
 </SfTreeMap>
 ```
 
-> Refer [code block](#default-tooltip) to know the property value of **Fruits**.
+> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
 ![TreeMap with tooltip template](images/Tooltip/Template.png)

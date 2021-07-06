@@ -1,14 +1,14 @@
 ---
-title: "Animation in Blazor Progress Bar component | Syncfusion"
+title: "Animation in the Blazor Progress Bar component | Syncfusion"
 
 component: "Progress Bar"
 
-description: "Learn here all about animation of Syncfusion Progress Bar (SfProgressBar) component and more."
+description: "Learn here all about the animation of Syncfusion Progress Bar (SfProgressBar) component and more."
 ---
 
-# Animation in Blazor Progress Bar (SfProgressBar)
+# Animation in the Blazor Progress Bar (SfProgressBar)
 
-The progress bar supports animation, which can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Enable) property to **true** in [`ProgressBarAnimation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html). The speed and delay during animation can be controlled using [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Duration) and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Delay) properties.
+The progress bar supports animation, which can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Enable) property to **true** in the [`ProgressBarAnimation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html). The speed and the delay during an animation can be controlled using the [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Duration) and the [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Delay) properties.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar

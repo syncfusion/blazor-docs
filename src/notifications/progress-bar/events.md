@@ -1,12 +1,12 @@
 ---
-title: "Events in Blazor Progress Bar component | Syncfusion"
+title: "Events in the Blazor Progress Bar component | Syncfusion"
 
 component: "Progress Bar"
 
-description: "Learn here all about events of Syncfusion Progress Bar (SfProgressBar) component and more."
+description: "Learn here all about the events of Syncfusion Progress Bar (SfProgressBar) component and more."
 ---
 
-# Events in Blazor Progress Bar (SfProgressBar)
+# Events in the Blazor Progress Bar (SfProgressBar)
 
 This section describes the Progress Bar component's events that will be triggered when appropriate actions are performed. The events should be provided to the Progress Bar through the [`ProgressBarEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html).
 
@@ -50,7 +50,7 @@ The [`ProgressCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## AnimationComplete
 
-The [`AnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnimationComplete) event triggers when animation is enabled and the progress value is reached.
+The [`AnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnimationComplete) event triggers when an animation is enabled and the progress value is reached.
 
 ```csharp
 @using Syncfusion.Blazor.ProgressBar

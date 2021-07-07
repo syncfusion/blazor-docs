@@ -182,7 +182,7 @@ The ranges can be dragged over the axis line by clicking and dragging the same. 
 			<CircularGaugeRanges>
                 <CircularGaugeRange Start="0" End="100" Radius="108%" Color="#30B32D" StartWidth="8" EndWidth="8">
                 </CircularGaugeRange>
-			<CircularGaugeRanges>
+			</CircularGaugeRanges>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
@@ -236,85 +236,97 @@ To apply linear gradient to the range, follow the below code sample.
 ```csharp
 @using Syncfusion.Blazor.CircularGauge
 
- <SfCircularGauge CenterY="57%" Title="Short Put Distance" Height="750">
+<SfCircularGauge CenterY="57%" Title="Shot Put Distance" Height="750">
     <CircularGaugeAxes>
         <CircularGaugeAxis StartAngle="200" EndAngle="130" Minimum="0" Maximum="14" Radius="80%">
-            <CircularGaugeAxisLineStyle Width="0.001"/>
-            <CircularGaugeAxisMajorTicks Width="0.01"/>
-            <CircularGaugeAxisMinorTicks Width="0.01"/>
+            <CircularGaugeAxisLineStyle Width="0.001" />
+            <CircularGaugeAxisMajorTicks Width="0.01" />
+            <CircularGaugeAxisMinorTicks Width="0.01" />
             <CircularGaugeAxisLabelStyle>
-                <CircularGaugeAxisLabelFont Size="0px"/>
+                <CircularGaugeAxisLabelFont Size="0px" />
             </CircularGaugeAxisLabelStyle>
             <CircularGaugePointers>
                 <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/football.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="1500"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="11" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/basketball.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="1200"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1200" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="10" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/golfball.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="900"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="900" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="src/ircular-gauge/images/athletics.png" Radius="0%" MarkerWidth="90" MarkerHeight="90">
-                <CircularGaugePointerAnimation Enable="true" Duration="0"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="0" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/girl1.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="1500"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/man1.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="1500"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/man2.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="1500"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
             </CircularGaugePointers>
             <CircularGaugeRanges>
-                <CircularGaugeRange Start="0" End="12" Radius="105%" Color="#01aebe" StartWidth="25" EndWidth="25" LinearGradient="@RangeLinearModel"/>
-                <CircularGaugeRange Start="0" End="11" Radius="75%" Color="#3bceac" StartWidth="25" EndWidth="25" LinearGradient="@RangeLinearModel"/>
-                <CircularGaugeRange Start="0" End="10" Radius="45%" Color="#ee4266" StartWidth="25" EndWidth="25" LinearGradient="@RangeLinearModel"/>
-            </CircularGaugeRanges>
+                <CircularGaugeRange Start="0" End="12" Radius="105%" Color="#01aebe" StartWidth="25" EndWidth="25">
+                    <LinearGradient StartValue="1%" EndValue="99%">
+                        <ColorStops>
+                            <ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></ColorStop>
+                            <ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></ColorStop>
+                        </ColorStops>
+                    </LinearGradient>
+                    </CircularGaugeRange>
+                <CircularGaugeRange Start="0" End="11" Radius="75%" Color="#3bceac" StartWidth="25" EndWidth="25">
+                    <LinearGradient StartValue="1%" EndValue="99%">
+                        <ColorStops>
+                            <ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></ColorStop>
+                            <ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></ColorStop>
+                        </ColorStops>
+                    </LinearGradient>
+                </CircularGaugeRange>
+                <CircularGaugeRange Start="0" End="10" Radius="45%" Color="#ee4266" StartWidth="25" EndWidth="25">
+                    <LinearGradient StartValue="1%" EndValue="99%">
+                        <ColorStops>
+                            <ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></ColorStop>
+                            <ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></ColorStop>
+                        </ColorStops>
+                    </LinearGradient>
+                </CircularGaugeRange>
+              </CircularGaugeRanges>
             <CircularGaugeAnnotations>
-                <CircularGaugeAnnotation Content="12 M" Radius="105%" Angle="95" ZIndex="1"/>
-                <CircularGaugeAnnotation Content="11 M" Radius="77%" Angle="78" ZIndex="1"/>
-                <CircularGaugeAnnotation Content="10 M" Radius="45%" Angle="65" ZIndex="1"/>
+                <CircularGaugeAnnotation Content="12 M" Radius="105%" Angle="95" ZIndex="1" />
+                <CircularGaugeAnnotation Content="11 M" Radius="77%" Angle="78" ZIndex="1" />
+                <CircularGaugeAnnotation Content="10 M" Radius="45%" Angle="65" ZIndex="1" />
                 <CircularGaugeAnnotation Radius="108%" Angle="190" ZIndex="1">
-            <ContentTemplate>
-                <div class="annotationText"><span class="templateAlign">Doe</span></div>
-            </ContentTemplate>
-            </CircularGaugeAnnotation>
-            <CircularGaugeAnnotation Radius="80%" Angle="185" ZIndex="1">
-             <ContentTemplate>
-                <div class="annotationText"><span class="templateAlign">Almaida</span></div>
-            </ContentTemplate>
-            </CircularGaugeAnnotation>
-            <CircularGaugeAnnotation Radius="50%" Angle="180" ZIndex="1">
-            <ContentTemplate>
-                <div class="annotationText"><span class="templateAlign">John</span></div>
-             </ContentTemplate>
-            </CircularGaugeAnnotation>
+                    <ContentTemplate>
+                        <div class="annotationText"><span class="templateAlign">Doe</span></div>
+                    </ContentTemplate>
+                </CircularGaugeAnnotation>
+                <CircularGaugeAnnotation Radius="80%" Angle="185" ZIndex="1">
+                    <ContentTemplate>
+                        <div class="annotationText"><span class="templateAlign">Almaida</span></div>
+                    </ContentTemplate>
+                </CircularGaugeAnnotation>
+                <CircularGaugeAnnotation Radius="50%" Angle="180" ZIndex="1">
+                    <ContentTemplate>
+                        <div class="annotationText"><span class="templateAlign">John</span></div>
+                    </ContentTemplate>
+                </CircularGaugeAnnotation>
             </CircularGaugeAnnotations>
-            </CircularGaugeAxis>
+        </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
-@code {
-    public static LinearGradient  RangeLinearModel = new LinearGradient() {
-        StartValue = "1%",
-        EndValue = "99%",
-        ColorStop = new List<ColorStop>() {
-            new ColorStop { Opacity=1, Color= "#fef3f9", Offset="1%" },
-            new ColorStop { Opacity=1, Color= "#f54ea2", Offset="100%" }
-        }
-    };
-}
+
 <style>
-    .templateAlign{
-        font-size:14px;
-        color:#9E9E9E;
-        font-family:Regular;
+    .templateAlign {
+        font-size: 14px;
+        color: #9E9E9E;
+        font-family: Regular;
         margin-left: -20px;
     }
     .annotationText {
-        margin-top:-30px;
+        margin-top: -30px;
     }
 </style>
 ```
@@ -328,86 +340,103 @@ To apply radial gradient to the range, follow the below code sample.
 ```csharp
 @using Syncfusion.Blazor.CircularGauge
 
- <SfCircularGauge CenterY="57%" Title="Short Put Distance" Height="750">
+<SfCircularGauge CenterY="57%" Title="Shot Put Distance">
     <CircularGaugeAxes>
         <CircularGaugeAxis StartAngle="200" EndAngle="130" Minimum="0" Maximum="14" Radius="80%">
-            <CircularGaugeAxisLineStyle Width="0.001"/>
-            <CircularGaugeAxisMajorTicks Width="0.01"/>
-            <CircularGaugeAxisMinorTicks Width="0.01"/>
+            <CircularGaugeAxisLineStyle Width="0.001" />
+            <CircularGaugeAxisMajorTicks Width="0.01" />
+            <CircularGaugeAxisMinorTicks Width="0.01" />
             <CircularGaugeAxisLabelStyle>
-                <CircularGaugeAxisLabelFont Size="0px"/>
+                <CircularGaugeAxisLabelFont Size="0px" />
             </CircularGaugeAxisLabelStyle>
             <CircularGaugePointers>
                 <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/football.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="1500"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="11" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/basketball.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="1200"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1200" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="10" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/cimages/golfball.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="900"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="900" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="src/ircular-gauge/images/athletics.png" Radius="0%" MarkerWidth="90" MarkerHeight="90">
-                <CircularGaugePointerAnimation Enable="true" Duration="0"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="0" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/girl1.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="1500"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/man1.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="1500"/>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
                 <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/man2.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
-                <CircularGaugePointerAnimation Enable="true" Duration="1500"/>
-            </CircularGaugePointer>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
+                </CircularGaugePointer>
             </CircularGaugePointers>
             <CircularGaugeRanges>
-                <CircularGaugeRange Start="0" End="12" Radius="105%" Color="#01aebe" StartWidth="25" EndWidth="25" RadialGradient="@RangeRadialModel"/>
-                <CircularGaugeRange Start="0" End="11" Radius="75%" Color="#3bceac" StartWidth="25" EndWidth="25" RadialGradient="@RangeRadialModel"/>
-                <CircularGaugeRange Start="0" End="10" Radius="45%" Color="#ee4266" StartWidth="25" EndWidth="25" RadialGradient="@RangeRadialModel"/>
+                <CircularGaugeRange Start="0" End="12" Radius="105%" Color="#01aebe" StartWidth="25" EndWidth="25">
+                    <RadialGradient Radius="65%">
+                        <InnerPosition X="60%" Y="60%"></InnerPosition>
+                        <OuterPosition X="50%" Y="70%"></OuterPosition>
+                        <ColorStops>
+                            <ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></ColorStop>
+                            <ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></ColorStop>
+                        </ColorStops>
+                    </RadialGradient>
+                    </CircularGaugeRange>
+                <CircularGaugeRange Start="0" End="11" Radius="75%" Color="#3bceac" StartWidth="25" EndWidth="25">
+                    <RadialGradient Radius="65%">
+                        <InnerPosition X="60%" Y="60%"></InnerPosition>
+                        <OuterPosition X="50%" Y="70%"></OuterPosition>
+                        <ColorStops>
+                            <ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></ColorStop>
+                            <ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></ColorStop>
+                        </ColorStops>
+                    </RadialGradient>
+                </CircularGaugeRange>
+                <CircularGaugeRange Start="0" End="10" Radius="45%" Color="#ee4266" StartWidth="25" EndWidth="25">
+                    <RadialGradient Radius="65%">
+                        <InnerPosition X="60%" Y="60%"></InnerPosition>
+                        <OuterPosition X="50%" Y="70%"></OuterPosition>
+                        <ColorStops>
+                            <ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></ColorStop>
+                            <ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></ColorStop>
+                        </ColorStops>
+                    </RadialGradient>
+                </CircularGaugeRange>
             </CircularGaugeRanges>
             <CircularGaugeAnnotations>
-                <CircularGaugeAnnotation Content="12 M" Radius="105%" Angle="95" ZIndex="1"/>
-                <CircularGaugeAnnotation Content="11 M" Radius="77%" Angle="78" ZIndex="1"/>
-                <CircularGaugeAnnotation Content="10 M" Radius="45%" Angle="65" ZIndex="1"/>
+                <CircularGaugeAnnotation Content="12 M" Radius="105%" Angle="95" ZIndex="1" />
+                <CircularGaugeAnnotation Content="11 M" Radius="77%" Angle="78" ZIndex="1" />
+                <CircularGaugeAnnotation Content="10 M" Radius="45%" Angle="65" ZIndex="1" />
                 <CircularGaugeAnnotation Radius="108%" Angle="190" ZIndex="1">
-            <ContentTemplate>
-                <div class="annotationText"><span class="templateAlign">Doe</span></div>
-            </ContentTemplate>
-            </CircularGaugeAnnotation>
-            <CircularGaugeAnnotation Radius="80%" Angle="185" ZIndex="1">
-            <ContentTemplate>
-                <div class="annotationText"><span class="templateAlign">Almaida</span></div>
-            </ContentTemplate>
-            </CircularGaugeAnnotation>
-            <CircularGaugeAnnotation Radius="50%" Angle="180" ZIndex="1">
-            <ContentTemplate>
-                <div class="annotationText"><span class="templateAlign">John</span></div>
-            </ContentTemplate>
-            </CircularGaugeAnnotation>
+                    <ContentTemplate>
+                        <div class="annotationText"><span class="templateAlign">Doe</span></div>
+                    </ContentTemplate>
+                </CircularGaugeAnnotation>
+                <CircularGaugeAnnotation Radius="80%" Angle="185" ZIndex="1">
+                    <ContentTemplate>
+                        <div class="annotationText"><span class="templateAlign">Almaida</span></div>
+                    </ContentTemplate>
+                </CircularGaugeAnnotation>
+                <CircularGaugeAnnotation Radius="50%" Angle="180" ZIndex="1">
+                    <ContentTemplate>
+                        <div class="annotationText"><span class="templateAlign">John</span></div>
+                    </ContentTemplate>
+                </CircularGaugeAnnotation>
             </CircularGaugeAnnotations>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
-@code {
-    public static RadialGradient RangeRadialModel = new RadialGradient() {
-        Radius="65%",
-        OuterPosition = new OuterPosition(){ X="50%", Y="70%"},
-        InnerPosition = new InnerPosition() { X="60%", Y="60%" },
-        ColorStop = new List<ColorStop>() {
-            new ColorStop { Opacity=0.9, Color= "#fff5f5", Offset="5%" },
-            new ColorStop { Opacity=1, Color= "#f54ea2", Offset="99%" }
-        }
-    };
-}
+
 <style>
     .templateAlign {
-        font-size:14px;
-        color:#9E9E9E;
-        font-family:Regular;
+        font-size: 14px;
+        color: #9E9E9E;
+        font-family: Regular;
         margin-left: -20px;
     }
     .annotationText {
-        margin-top:-30px;
+        margin-top: -30px;
     }
 </style>
 ```

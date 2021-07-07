@@ -195,13 +195,13 @@ The ranges can be dragged over the axis values by clicking and dragging the rang
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnableRangeDrag="true">
-    <CircularGaugeAxes >
-        <CircularGaugeAxis>
-            <CircularGaugePointers>
-                <CircularGaugePointer Value="50">
-                </CircularGaugePointer>
-            </CircularGaugePointers>
-        </CircularGaugeAxis>
-    </CircularGaugeAxes>
+<CircularGaugeAxes >
+    <CircularGaugeAxis>
+        <CircularGaugePointers>
+            <CircularGaugePointer Value="50">
+            </CircularGaugePointer>
+        </CircularGaugePointers>
+    </CircularGaugeAxis>
+</CircularGaugeAxes>
 </SfCircularGauge>
 ```

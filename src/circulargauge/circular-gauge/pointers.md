@@ -421,44 +421,60 @@ The linear gradient can be applied to all pointer types like marker, range bar a
 ```csharp
 @using Syncfusion.Blazor.CircularGauge
 
- <SfCircularGauge Height="250px" CenterY="40%">
+<SfCircularGauge>
     <CircularGaugeAxes>
-    <CircularGaugeAxis StartAngle="270" EndAngle="90" Radius="90%" Minimum="0" Maximum="100">
-       <CircularGaugeAxisLineStyle Width="3" Color="#E63B86"/>
+        <CircularGaugeAxis StartAngle="270" EndAngle="90" Radius="90%" Minimum="0" Maximum="100">
+            <CircularGaugeAxisLineStyle Width="3" Color="#E63B86" />
             <CircularGaugeAxisLabelStyle>
-            <CircularGaugeAxisLabelFont Size="0px"/>
-             </CircularGaugeAxisLabelStyle>
-                <CircularGaugeAxisMajorTicks Height="0.01"/>
-                <CircularGaugeAxisMinorTicks Height="0.01"/>
-                <CircularGaugePointers>
-                <CircularGaugePointer Value="80" Radius="80%" PointerWidth="10" LinearGradient="@PointerLinearModel">
-                <CircularGaugeCap Radius="8" Color="White">
-                <CircularGaugeCapBorder Color="#E63B86" Width="1"/>
-                </CircularGaugeCap>
-                <CircularGaugeNeedleTail Length="20%" LinearGradient="@PointerLinearModel"/>
-                <CircularGaugePointerAnimation Enable="true" Duration="1000"/>
+                <CircularGaugeAxisLabelFont Size="0px" />
+            </CircularGaugeAxisLabelStyle>
+            <CircularGaugeAxisMajorTicks Height="0.01" />
+            <CircularGaugeAxisMinorTicks Height="0.01" />
+            <CircularGaugePointers>
+                <CircularGaugePointer Value="80" Radius="80%" PointerWidth="10">
+                    <LinearGradient StartValue="1%" EndValue="99%">
+                        <ColorStops>
+                            <ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></ColorStop>
+                            <ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></ColorStop>
+                        </ColorStops>
+                    </LinearGradient>
+                    <CircularGaugeCap Radius="8" Color="White">
+                        <CircularGaugeCapBorder Color="#E63B86" Width="1" />
+                    </CircularGaugeCap>
+                    <CircularGaugeNeedleTail Length="20%">
+                        <LinearGradient StartValue="1%" EndValue="99%">
+                            <ColorStops>
+                                <ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></ColorStop>
+                                <ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></ColorStop>
+                            </ColorStops>
+                        </LinearGradient>
+                        </CircularGaugeNeedleTail>
+                        <CircularGaugePointerAnimation Enable="true" Duration="1000" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Value="40" Radius="60%" MarkerWidth="5" MarkerHeight="5" LinearGradient="@PointerLinearModel" PointerWidth="10">
-                <CircularGaugeCap Radius="8" Color="White">
-                <CircularGaugeCapBorder Color="#E63B86" Width="1"/>
-                </CircularGaugeCap>
-                <CircularGaugeNeedleTail Length="20%" LinearGradient="@PointerLinearModel"/>
-                <CircularGaugePointerAnimation Enable="true" Duration="1000"/>
+                <CircularGaugePointer Value="40" Radius="60%" MarkerWidth="5" MarkerHeight="5" PointerWidth="10">
+                    <LinearGradient StartValue="1%" EndValue="99%">
+                        <ColorStops>
+                            <ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></ColorStop>
+                            <ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></ColorStop>
+                        </ColorStops>
+                    </LinearGradient>
+                    <CircularGaugeCap Radius="8" Color="White">
+                        <CircularGaugeCapBorder Color="#E63B86" Width="1" />
+                    </CircularGaugeCap>
+                    <CircularGaugeNeedleTail Length="20%">
+                        <LinearGradient StartValue="1%" EndValue="99%">
+                            <ColorStops>
+                                <ColorStop Opacity="0.9" Offset="0%" Color="#fef3f9"></ColorStop>
+                                <ColorStop Opacity="0.9" Offset="100%" Color="#f54ea2"></ColorStop>
+                            </ColorStops>
+                        </LinearGradient>
+                    </CircularGaugeNeedleTail>
+                    <CircularGaugePointerAnimation Enable="true" Duration="1000" />
                 </CircularGaugePointer>
-                </CircularGaugePointers>
-    </CircularGaugeAxis>
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
-@code {
-    public static LinearGradient PointerLinearModel = new LinearGradient() {
-        StartValue = "1%",
-        EndValue = "99%",
-        ColorStop = new List<ColorStop>() {
-            new ColorStop { Opacity=1, Color= "#fef3f9", Offset="1%" },
-            new ColorStop { Opacity=1, Color= "#f54ea2", Offset="100%" }
-        }
-    };
-}
 ```
 
 ### Radial Gradient
@@ -470,46 +486,68 @@ The radial gradient can be applied to all pointer types like marker, range bar a
 ```csharp
 @using Syncfusion.Blazor.CircularGauge
 
- <SfCircularGauge Height="250px" CenterY="40%">
+<SfCircularGauge>
     <CircularGaugeAxes>
-    <CircularGaugeAxis StartAngle="270" EndAngle="90" Radius="90%" Minimum="0" Maximum="100">
-       <CircularGaugeAxisLineStyle Width="3" Color="#E63B86"/>
+        <CircularGaugeAxis StartAngle="270" EndAngle="90" Radius="90%" Minimum="0" Maximum="100">
+            <CircularGaugeAxisLineStyle Width="3" Color="#E63B86" />
             <CircularGaugeAxisLabelStyle>
-            <CircularGaugeAxisLabelFont Size="0px"/>
-             </CircularGaugeAxisLabelStyle>
-                <CircularGaugeAxisMajorTicks Height="0.01"/>
-                <CircularGaugeAxisMinorTicks Height="0.01"/>
-                <CircularGaugePointers>
-                <CircularGaugePointer Value="80" Radius="80%" PointerWidth="10" RadialGradient="@PointerRadialModel">
-                <CircularGaugeCap Radius="8" Color="White">
-                <CircularGaugeCapBorder Color="#E63B86" Width="1"/>
-                </CircularGaugeCap>
-                <CircularGaugeNeedleTail Length="20%" RadialGradient="@PointerRadialModel"/>
-                <CircularGaugePointerAnimation Enable="true" Duration="1000"/>
+                <CircularGaugeAxisLabelFont Size="0px" />
+            </CircularGaugeAxisLabelStyle>
+            <CircularGaugeAxisMajorTicks Height="0.01" />
+            <CircularGaugeAxisMinorTicks Height="0.01" />
+            <CircularGaugePointers>
+                <CircularGaugePointer Value="80" Radius="80%" PointerWidth="10">
+                    <RadialGradient Radius="65%">
+                        <InnerPosition X="60%" Y="60%"></InnerPosition>
+                        <OuterPosition X="50%" Y="70%"></OuterPosition>
+                        <ColorStops>
+                            <ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></ColorStop>
+                            <ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></ColorStop>
+                        </ColorStops>
+                    </RadialGradient>
+                    <CircularGaugeCap Radius="8" Color="White">
+                        <CircularGaugeCapBorder Color="#E63B86" Width="1" />
+                    </CircularGaugeCap>
+                    <CircularGaugeNeedleTail Length="20%">
+                        <RadialGradient Radius="65%">
+                            <InnerPosition X="60%" Y="60%"></InnerPosition>
+                            <OuterPosition X="50%" Y="70%"></OuterPosition>
+                            <ColorStops>
+                                <ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></ColorStop>
+                                <ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></ColorStop>
+                            </ColorStops>
+                        </RadialGradient>
+                        </CircularGaugeNeedleTail>
+                        <CircularGaugePointerAnimation Enable="true" Duration="1000" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Value="40" Radius="60%" MarkerWidth="5" MarkerHeight="5" RadialGradient="@PointerRadialModel" PointerWidth="10">
-                <CircularGaugeCap Radius="8" Color="White">
-                <CircularGaugeCapBorder Color="#E63B86" Width="1"/>
-                </CircularGaugeCap>
-                <CircularGaugeNeedleTail Length="20%" RadialGradient="@PointerRadialModel"/>
-                <CircularGaugePointerAnimation Enable="true" Duration="1000"/>
+                <CircularGaugePointer Value="40" Radius="60%" MarkerWidth="5" MarkerHeight="5" PointerWidth="10">
+                    <RadialGradient Radius="65%">
+                        <InnerPosition X="60%" Y="60%"></InnerPosition>
+                        <OuterPosition X="50%" Y="70%"></OuterPosition>
+                        <ColorStops>
+                            <ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></ColorStop>
+                            <ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></ColorStop>
+                        </ColorStops>
+                    </RadialGradient>
+                    <CircularGaugeCap Radius="8" Color="White">
+                        <CircularGaugeCapBorder Color="#E63B86" Width="1" />
+                    </CircularGaugeCap>
+                    <CircularGaugeNeedleTail Length="20%">
+                        <RadialGradient Radius="65%">
+                            <InnerPosition X="60%" Y="60%"></InnerPosition>
+                            <OuterPosition X="50%" Y="70%"></OuterPosition>
+                            <ColorStops>
+                                <ColorStop Opacity="0.9" Offset="5%" Color="#fff5f5"></ColorStop>
+                                <ColorStop Opacity="0.9" Offset="99%" Color="#f54ea2"></ColorStop>
+                            </ColorStops>
+                        </RadialGradient>
+                        </CircularGaugeNeedleTail>
+                        <CircularGaugePointerAnimation Enable="true" Duration="1000" />
                 </CircularGaugePointer>
-                </CircularGaugePointers>
-    </CircularGaugeAxis>
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
-@code {
-    public static RadialGradient PointerRadialModel = new RadialGradient()
-    {
-        Radius = "60%",
-        OuterPosition = new OuterPosition() { X="50%", Y="50%" },
-        InnerPosition = new InnerPosition() { X="50%", Y="50%" },
-        ColorStop = new List<ColorStop>() {
-            new ColorStop { Opacity=0.9, Color= "#fff5f5", Offset="1%" },
-            new ColorStop { Opacity=0.8, Color= "#f54ea2", Offset="99%" }
-        }
-    };
-}
 ```
 
 <!-- markdownlint-disable MD010 -->

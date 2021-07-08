@@ -4,4 +4,6 @@
 * [Blazor WebAssembly App in .NET Core CLI](getting-started/blazor-webassembly-dotnet-cli.md)
 * [Blazor Server Side App in Visual Studio for Mac](getting-started/blazor-server-side-mac.md)
 * [Blazor WebAssembly App in Visual Studio for Mac](getting-started/blazor-webassembly-visual-studio-mac.md)
+* [Blazor ASP.NET Core Hosted App in Visual Studio 2019](getting-started/blazor-core-hosted.md)
+* [Blazor ASP.NET Core Hosted App in .NET Core CLI](getting-started/blazor-core-hosted-cli.md)
 * [Razor Class Library in Visual Studio 2019](getting-started/razor-class-library.md)

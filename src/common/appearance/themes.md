@@ -7,7 +7,7 @@ The Syncfusion Blazor components library provides the following list of built-in
 3. Google’s Material
 4. Microsoft Office’s Fabric
 5. High Contrast
-6. Tailwind
+6. Tailwind CSS
 
 > The Syncfusion Blazor Bootstrap theme is designed based on `Bootstrap v3`, whereas the Bootstrap 4 theme is designed based on `Bootstrap v4`.
 

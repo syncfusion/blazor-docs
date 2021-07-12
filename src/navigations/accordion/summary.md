@@ -3,7 +3,7 @@
 * [Expand Mode](accordion/expand-mode.md)
 * [Animations](accordion/animations.md)
 * [Accessibility](accordion/accessibility.md)
-* [CSS Structure](accordion/style.md)
+* [Style and Appearance](accordion/style.md)
 * [Content Render Mode](accordion/content-render-mode.md)
 * [Add/Remove Accordion items](accordion/how-to/add-remove-accordion-items.md)
 * [Show/Hide Accordion item](accordion/how-to/show-hide-accordion-item.md)

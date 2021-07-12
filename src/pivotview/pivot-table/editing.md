@@ -183,6 +183,46 @@ An additional column appended in the data grid layout holds the command buttons 
 
 ![output](images/edit-command.png)
 
+## Inline Editing
+
+Allows editing of a value cell directly without the use of an external edit dialog. It is applicable if and only if a single raw data is used for the value of the cell. It is applicable to all editing modes, such as normal, batch, dialog and column commands. It can be enabled by setting the [`AllowInlineEditing`] property in [`PivotViewCellEditSettings`] to `true`.
+
+```csharp
+    @using Syncfusion.Blazor.PivotView
+
+    <SfPivotView TValue="ProductDetails">
+        <PivotViewDataSourceSettings DataSource="@data">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+                <PivotViewColumn Name="Quarter"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+                <PivotViewRow Name="Products"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFormatSettings>
+                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            </PivotViewFormatSettings>
+        </PivotViewDataSourceSettings>
+        <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowInlineEditing="true" ></PivotViewCellEditSettings>
+    </SfPivotView>
+
+    @code{
+        public List<ProductDetails> data { get; set; }
+        protected override void OnInitialized()
+        {
+            this.data = ProductDetails.GetProductData().ToList();
+           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        }
+    }
+
+```
+
+![output](images/inline-editing.png)
+
 ## Editing using the pivot chart
 
 Users can also add, delete, or update the underlying raw items of any data point via pivot chart. The raw items will be shown in the data grid in the new window by clicking the appropriate data point. Then you can edit the raw items as mentioned above by any of the edit types (normal, dialog, batch and command column).

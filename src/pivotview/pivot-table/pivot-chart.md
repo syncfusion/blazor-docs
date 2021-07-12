@@ -808,6 +808,46 @@ If the user binds more value fields, the result will be multiple pivot charts, a
 
 ![output](images/chart-scrollbar.png)
 
+Meanwhile, there is another way to display multiple values in a chart. In this approach, the series drawn from multiple values are grouped and displayed in a single chart. And, based on the values, multiple Y axis scales will be framed with different ranges. This can be achieved by setting the properties [`EnableMultipleAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableMultipleAxis) as `true` and [`MultipleAxisMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_MultipleAxisMode) as `Grouped` in `PivotChartSettings`.
+
+In the following code sample, the pivot chart can be seen as a single chart with multiple value fields such as `Sold` and `Amount` that are drawn as multiple Y axis.
+
+```csharp
+    @using Syncfusion.Blazor.PivotView
+
+    <SfPivotView ID="PivotView" TValue="ProductDetails" Height="400" Width="1400">
+    <PivotViewDisplayOption View="View.Chart" Primary="Primary.Chart"></PivotViewDisplayOption>
+        <PivotViewDataSourceSettings DataSource="@pivotData" ExpandAll="false" AllowLabelFilter="true" AllowMemberFilter="true" AllowValueFilter="true" EnableSorting=true>
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+                <PivotViewColumn Name="Quarter"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+                <PivotViewRow Name="Products"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+        </PivotViewDataSourceSettings>
+        <PivotChartSettings Title="Sales Analysis" EnableMultipleAxis="enableMultiaxis" MultipleAxisMode="MultipleAxisMode.Grouped">
+            <PivotChartSeries Type=Syncfusion.Blazor.PivotView.ChartSeriesType.Column></PivotChartSeries>
+        </PivotChartSettings>
+    </SfPivotView>
+
+    @code{
+        public List<ProductDetails> pivotData { get; set; }
+        protected override void OnInitialized()
+        {
+            this.pivotData = ProductDetails.GetProductData().ToList();
+           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        }
+    }
+```
+
+![output](images/multiple-axis-mode.png)
+
 ## Series Customization
 
 User can customize series of the pivot chart using [`PivotChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) in [`PivotChartSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. The changes handled in the property will be reflected commonly in all chart series.

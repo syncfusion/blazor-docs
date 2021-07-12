@@ -62,6 +62,44 @@ Member sorting can also be configured using the [`PivotViewSortSettings`](https:
 
 ![output](images/sorting_grid.png)
 
+### Alphanumeric Sorting
+
+Usually string sorting is applied to field members even if it starts with numbers. But this kind of field members can also be sorted on the basis of numbers that are placed at the beginning of the member name. This can be achieved by setting the [`DataType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptionsModel.html#Syncfusion_Blazor_PivotView_FieldOptionsModel_DataType) property as number to the desired field.
+
+```csharp
+    @using Syncfusion.Blazor.PivotView
+
+    <SfPivotView ID="PivotView" TValue="AlphaNumericData" Width="100%" Height="600" ShowGroupingBar="true" ShowFieldList="true" ShowTooltip="false">
+        <PivotViewDataSourceSettings DataSource="@pivotData" ExpandAll="false" AllowMemberFilter="true" EnableSorting=true>
+            <PivotViewColumns>
+                <PivotViewColumn Name="Units"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Product"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFieldMapping>
+                <PivotViewField Name="Units" DataType="number"></PivotViewField>
+            </PivotViewFieldMapping>
+        </PivotViewDataSourceSettings>
+    </SfPivotView>
+
+    @code{
+        public List<AlphaNumericData> data { get; set; }
+        protected override void OnInitialized()
+        {
+            this.data = AlphaNumericData.GetProductData().ToList();
+           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        }
+    }
+
+```
+
+![output](images/alphanumbericsorting.png)
+
 ## Value sorting
 
 > This property is applicable only for relational data source.

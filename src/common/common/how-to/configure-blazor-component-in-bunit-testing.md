@@ -68,6 +68,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     using BlazorServerApp.Pages;
     using Syncfusion.Blazor;
     using Syncfusion.Blazor.Buttons;
+    using Microsoft.Extensions.DependencyInjection;
 
     namespace BlazorXUnitTesting
     {
@@ -78,8 +79,11 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
             {
                 using var testContext = new TestContext();
 
-                // Add Syncfusion Blazor service and disable script manager.
-                testContext.Services.AddSyncfusionBlazor(true);
+                // Add Syncfusion Blazor service and Ignore script isolation.
+                testContext.Services.AddSyncfusionBlazor(options => {
+                    options.IgnoreScriptIsolation = true;
+                });
+                testContext.Services.AddOptions();
 
                 // Rendering application Index component (~/Pages/Index.razor).
                 var indexComponent = testContext.RenderComponent<Index>();
@@ -109,8 +113,11 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     ```csharp
     using var testContext = new TestContext();
 
-    // Add Syncfusion Blazor service and disable script manager.
-    testContext.Services.AddSyncfusionBlazor(true);
+    // Add Syncfusion Blazor service and Ignore script isolation.
+    testContext.Services.AddSyncfusionBlazor(options => {
+        options.IgnoreScriptIsolation = true;
+    });
+    testContext.Services.AddOptions();
     ```
 
     * Rendered the Blazor application's `Index` component which we added in the 3rd step.
@@ -215,6 +222,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     using BlazorServerApp.Pages;
     using Syncfusion.Blazor;
     using Syncfusion.Blazor.Buttons;
+    using Microsoft.Extensions.DependencyInjection;
 
     namespace BlazorNUnitTesting
     {
@@ -226,8 +234,11 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
                 // Arrange
                 using var testContext = new Bunit.TestContext();
 
-                // Add Syncfusion Blazor service and disable script manager.
-                testContext.Services.AddSyncfusionBlazor(true);
+                // Add Syncfusion Blazor service and Ignore script Isolation.
+                testContext.Services.AddSyncfusionBlazor(options => {
+                    options.IgnoreScriptIsolation = true;
+                });
+                testContext.Services.AddOptions();
 
                 // Rendering application Index component (~/Pages/Index.razor).
                 var indexComponent = testContext.RenderComponent<Index>();
@@ -257,8 +268,11 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     ```csharp
     using var testContext = new Bunit.TestContext();
 
-    // Add Syncfusion Blazor service and disable script manager.
-    testContext.Services.AddSyncfusionBlazor(true);
+    // Add Syncfusion Blazor service and Ignore script isolation.
+    testContext.Services.AddSyncfusionBlazor(options => {
+        options.IgnoreScriptIsolation = true;
+    });
+    testContext.Services.AddOptions();
     ```
 
     * Rendered the Blazor application's `Index` component which we added in the 3rd step.
@@ -307,8 +321,11 @@ public void TestParameter()
 {
     using var testContext = new TestContext();
 
-    // Add Syncfusion Blazor service and disable script manager.
-    testContext.Services.AddSyncfusionBlazor(true);
+    // Add Syncfusion Blazor service and Ignore script isolation.
+    testContext.Services.AddSyncfusionBlazor(options => {
+        options.IgnoreScriptIsolation = true;
+    });
+    testContext.Services.AddOptions();
 
     // Rendering application Index component (~/Pages/Index.razor).
     var indexComponent = testContext.RenderComponent<Index>();

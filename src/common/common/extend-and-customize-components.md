@@ -63,7 +63,7 @@ The Syncfusion Blazor components can extend and customize the logic by creating 
 
     ```
 
-3. Render your new component in view page `~/Pages/Index.razor` and run the application.
+3. Render your new component in the view page `~/Pages/Index.razor` and run the application.
 
     ```cshtml
     <SyncButton Content="Primary" IsPrimary="true" Disabled="true"></SyncButton>
@@ -77,11 +77,11 @@ The Syncfusion Blazor components can extend and customize the logic by creating 
 
 ## Use Syncfusion Blazor Component within Another Blazor Component
 
-The Syncfusion Blazor component can implement within another Blazor component.
+The Syncfusion Blazor component can be implemented within another Blazor component.
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Razor Component` to create a new Razor component (TodoList.razor).
 
-2. Add any Syncfusion Blazor component within new created Blazor component.
+2. Add any Syncfusion Blazor component to the newly created Blazor component.
 
     ```cshtml
     <h3>Todo List</h3>
@@ -91,7 +91,7 @@ The Syncfusion Blazor component can implement within another Blazor component.
     @using Syncfusion.Blazor.Lists;
 
     <div class="form-group">
-        <SfTextBox @oninput="UpdateItem" @bind-Value="@item" Placeholder="Add new   item" Width="200px"></SfTextBox>
+        <SfTextBox @oninput="UpdateItem" @bind-Value="@item" Placeholder="Add new item" Width="200px"></SfTextBox>
 
         <SfButton @onclick="AddItem">Add</SfButton>
     </div>
@@ -139,7 +139,7 @@ The Syncfusion Blazor component can implement within another Blazor component.
 
     ```
 
-3. Render your new component in view page `~/Pages/Index.razor` and run the application.
+3. Render your new component in the view page `~/Pages/Index.razor` and run the application.
 
     ```cshtml
     <TodoList></TodoList>
@@ -149,7 +149,7 @@ The Syncfusion Blazor component can implement within another Blazor component.
 
 ## Render Syncfusion Blazor Component Dynamically
 
-The below methods can be used to render the Syncfusion Blazor components dynamically:
+The following methods can be used to render the Syncfusion Blazor components dynamically:
 
 1. [RenderFragment](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-5.0) with [Razor Template Syntax](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-5.0#razor-templates)
 2. [RenderFragment](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-5.0) with [RenderTreeBuilder](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-5.0) methods
@@ -157,11 +157,11 @@ The below methods can be used to render the Syncfusion Blazor components dynamic
 
 ### RenderFragment with Razor Syntax
 
-The `RenderFragment` represents the segments of UI content that can be reusable in the view page based on the application logic.
+The `RenderFragment` represents the segments of UI content that can be reused in the view page based on the application logic.
 
 You can use [Razor Template Syntax](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-5.0#razor-templates) to define the `RenderFragment` in the view page.
 
-The below code demonstrates the RenderFragment that renders the `SfButton` component.
+The following code demonstrates the RenderFragment that renders the `SfButton` component.
 
 ```csharp
 @{
@@ -172,7 +172,7 @@ The below code demonstrates the RenderFragment that renders the `SfButton` compo
 @ButtonFragment("My Button")
 ```
 
-The below code demonstrates the RenderFragment that renders the `SfGrid` component.
+The following code demonstrates the RenderFragment that renders the `SfGrid` component.
 
 ```csharp
 @{
@@ -356,5 +356,5 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
 
     > The advantages of a reusable component are:
     >
-    > 1. Instead of changing values in each component, you can change a property value in a single place and it will reflect in all components.
-    > 2. A better code optimization against the repeated code.
+    > 1. Instead of changing values in each component, you can change a property value once and it will be reflected in all the components.
+    > 2. Better code optimization against the repeated code.

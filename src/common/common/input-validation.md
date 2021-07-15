@@ -123,7 +123,7 @@ The Syncfusion Blazor UI input and editor components can be validated by the sta
     @code {
         private void FormSubmit(EditContext context)
         {
-            // Validate the EditContext and returns bool whether it has valid or invalid input values.
+            // Validates the EditContext and returns bool to indicate whether it has valid or invalid input values.
             bool isValid = context.Validate();
             if (isValid)
             {
@@ -137,11 +137,11 @@ The Syncfusion Blazor UI input and editor components can be validated by the sta
     }
     ```
 
-    > Warning: You shouldn't use the `OnSubmit` handler along with `OnValidSubmit` and `OnInvalidSubmit` event handler in the `EditForm` component. It will throw a runtime error.
+    > Warning: You shouldn't use the `OnSubmit` handler along with `OnValidSubmit` and `OnInvalidSubmit` event handlers in the `EditForm` component. It will throw a runtime error.
 
 ## Blazor Form Validation Supported Components
 
-The below section provides the details about the Syncfusion Blazor UI components that are supported with form validation, corresponding `@bind` properties, and validation examples.
+The following section provides the details about the Syncfusion Blazor UI components that are supported with form validation, corresponding `@bind` properties, and validation examples.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -383,7 +383,7 @@ The Checkbox component is used to select one or more options from a list of pred
 
 ### SfColorPicker
 
-The ColorPicker component provides you to choose a specific color value instead of input. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The ColorPicker component allows you to choose a specific color value instead of input. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -728,7 +728,7 @@ The Masked TextBox component provides an easy and reliable way to collect user i
 
 ### SfMultiSelect
 
-The MultoSelect component allows the user to type or select multiple values from a list of predefined options. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The MultiSelect component allows the user to type or select multiple values from a list of predefined options. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -832,7 +832,7 @@ The Radio Button component allows users to select one option from a list of pred
     public class MyModel
     {
         [Required]
-        [Range(typeof(int), "1", "3", ErrorMessage = "Extra large size product is currently unavailable. Please select any other size.")]
+        [Range(typeof(int), "1", "3", ErrorMessage = "Extra-large size product is currently unavailable. Please select any other size.")]
         public int Value { get; set; } = 1;
     }
 }
@@ -861,7 +861,7 @@ The RichTextEditor component is used to create blogs, forum posts, notes section
     public class EditorModel
     {
         [Required]
-        [MaxLength(100, ErrorMessage = "The maximum length of this field is {1} characters.")]
+        [MaxLength(100, ErrorMessage = "The maximum length of this field is {1} character.")]
         public string Feedback { get; set; }
     }
 }
@@ -928,7 +928,7 @@ The Switch component allows you to perform a toggle (on/off) action between chec
 
 ### SfTextBox
 
-The TextBox is a component for editing, displaying, or entering plain text on forms to capture user names, phone numbers, email, and more. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The TextBox is a component for editing, displaying, or entering plain text on forms to capture usernames, phone numbers, email, and more. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -948,7 +948,7 @@ The TextBox is a component for editing, displaying, or entering plain text on fo
     public class EditorModel
     {
         [Required(ErrorMessage = "Enter employee name.")]
-        [MinLength(3, ErrorMessage = "Name should have greater than 2 characters.")]
+        [MinLength(3, ErrorMessage = "Name should have more than 2 characters.")]
         public string Name { get; set; }
     }
 }
@@ -986,7 +986,7 @@ If you are using the `Required` attribute, make sure to use the `DateTime?` type
 
 ## Apply Custom Validation Attributes
 
-You can implement your custom validation logic and apply the [custom attributes](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-5.0#custom-attributes) on the model class properties. Refer to the below steps to create and apply custom attributes to a model property.
+You can implement your custom validation logic and apply the [custom attributes](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-5.0#custom-attributes) on the model class properties. Refer to the following steps to create and apply custom attributes to a model property.
 
 1. Create a class and inherit it from [ValidationAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute?view=net-5.0).
 
@@ -1047,13 +1047,13 @@ You can implement your custom validation logic and apply the [custom attributes]
 
 ### Validate Syncfusion Components Inside Another Component
 
-You can create a new Blazor component and used [Syncfusion Blazor components](#blazor-form-validation-supported-components) on top of it for your custom implementation. In this case, you may need to validate your Blazor component that should validate the Syncfusion Blazor components.
+You can create a new Blazor component and use [Syncfusion Blazor components](#blazor-form-validation-supported-components) on top of it for your custom implementation. In this case, you may need to validate your Blazor component that should validate the Syncfusion Blazor components.
 
-Refer to the below steps to create and validate the Syncfusion Blazor component on your custom Blazor component.
+Refer to the following steps to create and validate the Syncfusion Blazor component on your custom Blazor component.
 
 1. Right-click on the `~/Pages/` folder in the Visual Studio and navigate to `Add -> Razor Component`. Specify the component name and create it.
 
-2. Add Syncfusion Blazor component in the new component and assign `Value`, `ValueChanged`, and `ValueExpression` properties. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/data-binding?view=aspnetcore-5.0#binding-with-component-parameters), to know more about data binding in component parameters.
+2. Add Syncfusion Blazor component in the new component and assign the `Value`, `ValueChanged`, and `ValueExpression` properties. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/data-binding?view=aspnetcore-5.0#binding-with-component-parameters), to know more about data binding in component parameters.
 
     ```cshtml
     @using System.Linq.Expressions;
@@ -1110,7 +1110,7 @@ Refer to the below steps to create and validate the Syncfusion Blazor component 
         public class EditorModel
         {
             [Required(ErrorMessage = "Enter employee name.")]
-            [MinLength(3, ErrorMessage = "Name should have greater than 2 characters.")]
+            [MinLength(3, ErrorMessage = "Name should have more than 2 characters.")]
             public string Name { get; set; }
         }
     }

@@ -1,10 +1,10 @@
 # Default HTML Attributes and DOM Events
 
-The Syncfusion Blazor UI components provide the most useful [public API](https://help.syncfusion.com/cr/blazor/) for component implementation and customization. Apart from this public API, the Syncfusion Blazor UI components can support to use of default [HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes) and [DOM events](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-5.0) to the root element of its component.
+The Syncfusion Blazor UI components provide the most useful [public API](https://help.syncfusion.com/cr/blazor/) for component implementation and customization. Apart from this public API, the Syncfusion Blazor UI components can support the use of default [HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes) and [DOM events](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-5.0) in the root element of its component.
 
-## Using HTML Attributes and DOM Events to the Input Element
+## Using HTML Attributes and DOM Events in the Input Element
 
-The below list of Syncfusion Blazor UI components using the standard HTML `input` element. You can apply the [HTML input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and DOM events directly to the input element used on these Syncfusion Blazor components.
+The following is a list of Syncfusion Blazor UI components that use the standard HTML `input` element. You can apply the [HTML input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and DOM events directly to the input element used on these Syncfusion Blazor components.
 
 * [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started/)
 * [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started/)
@@ -23,7 +23,7 @@ The below list of Syncfusion Blazor UI components using the standard HTML `input
 
 ### Available Syncfusion Properties Equivalent to HTML Attributes
 
-The below table illustrates the HTML attributes and their equivalent Syncfusion API.
+The following table illustrates the HTML attributes and their equivalent Syncfusion API.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -171,13 +171,13 @@ The below table illustrates the HTML attributes and their equivalent Syncfusion 
 </table>
 <!-- markdownlint-enable MD033 -->
 
-> If you specify both HTML attribute and Syncfusion API in the component, then the Syncfusion API will get higher priority and apply it on the DOM element.
+> If you specify both HTML attribute and Syncfusion API in the component, then the Syncfusion API will get higher priority and will be applied to the DOM element.
 
 ```cshtml
 <SfTextBox ID="textbox" name="first-name" title="First name." minlength="15" Autocomplete="AutoComplete.Off"></SfTextBox>
 ```
 
-The textbox will be rendered with the below output.
+The textbox will be rendered with the following output.
 
 ```html
 <span class="....">
@@ -185,13 +185,13 @@ The textbox will be rendered with the below output.
 </span>
 ```
 
-In some cases, you may need to add HTML attributes to the root/container element of the above input-based components. For this, you can use [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_HtmlAttributes) Syncfusion API to add HTML attributes on the root/container element.
+In some cases, you may need to add HTML attributes to the root/container element of the above input-based components. For this, you can use [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_HtmlAttributes) Syncfusion API to add HTML attributes to the root/container element.
 
 ```cshtml
 <SfTextBox HtmlAttributes="@(new() { { "style", "background:aliceblue;" } })"></SfTextBox>
 ```
 
-The textbox will be rendered with the below output.
+The textbox will be rendered with the following output.
 
 ```html
 <span class="...." style="background: aliceblue;" ....>
@@ -228,7 +228,7 @@ The Syncfusion Blazor UI component supports binding the native [DOM events](http
 }
 ```
 
-## Using HTML Attributes and DOM Events to the Root Element
+## Using HTML Attributes and DOM Events in the Root Element
 
 The HTML attributes and DOM events can be applied directly to the component's root element.
 
@@ -249,7 +249,7 @@ The HTML attributes and DOM events can be applied directly to the component's ro
 }
 ```
 
-The chip container/root element will be rendered with the below output.
+The chip container/root element will be rendered with the following output.
 
 ```html
 <div style="border: 1px solid tomato" class="...." >

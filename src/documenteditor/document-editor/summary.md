@@ -6,6 +6,8 @@
 * [Clipboard](document-editor/clipboard.md)
 * [Undo and redo](document-editor/history.md)
 * [Images](document-editor/image.md)
+* [Shapes](document-editor/shapes.md)
+* [Text Wrapping Style](document-editor/text-wrapping-style.md)
 * [Tables](document-editor/table.md)
 * [Table of contents](document-editor/table-of-contents.md)
 * [Headers and Footers](document-editor/header-footer.md)

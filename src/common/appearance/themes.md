@@ -251,7 +251,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
 | `$info-alt` | ![#66b0ff](https://ej2.syncfusion.com/download/documentation/svg/66b0ff.svg) `#66b0ff` |
 | `$disable` | ![#757575](https://ej2.syncfusion.com/download/documentation/svg/757575.svg) `#757575` |
 
-### Syncfusion Blazor Tailwind Theme
+### Syncfusion Blazor Tailwind CSS Theme
 
 | Name | Value (Default Theme) | Value (Dark Theme) |
 | ------------- | ------------- | ------------- |

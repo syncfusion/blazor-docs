@@ -106,6 +106,6 @@ The complete pack of Syncfusion Blazor icons is listed in the below table. The c
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/highcontrast/demo.html" style="height:1000px;"></iframe>
 
-### Tailwind
+### Tailwind CSS
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/tailwind/demo.html" style="height:1000px;"></iframe>

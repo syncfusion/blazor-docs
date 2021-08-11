@@ -1,6 +1,6 @@
 # Syncfusion Blazor Documentation
 
-This is the GitHub repository for the technical product documentation for [Syncfusion Blazor Components](https://blazor.syncfusion.com/).This documentation is published to https://blazor.syncfusion.com/documentation/
+This is the GitHub repository for the technical product documentation for [Syncfusion Blazor Components](https://blazor.syncfusion.com/).This documentation is published to https://blazor.syncfusion.com/documentation/introduction
 
 ## Contributions Welcome!
 

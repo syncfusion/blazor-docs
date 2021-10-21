@@ -12,7 +12,9 @@ documentation: ug
 The Tree Grid component has options to dynamically insert, delete and update records. Editing feature is enabled by using the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) property and it requires a primary key column for CRUD operations. 
 
 To know more about editing feature in Blazor tree grid component, you can check on this video.
-`youtube:5_g3yr8ASys`
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=5_g3yr8ASys"%}
 
 To define the primary key, set the [TreeGridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) to **true** in particular column.
 
@@ -660,7 +662,9 @@ namespace TreeGridComponent.Data {
 ## Dialog template
 
 To know about customizing the Dialog Template in Blazor tree grid component, you can check this video.
-`youtube:TxHrtyVwY4A`
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=TxHrtyVwY4A"%}
 
 The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, render your own editors by defining the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Dialog** and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Template.html) using the **Template** of the **TreeGridEditSettings**.
 
@@ -1087,84 +1091,6 @@ public class TreeData
 ![Displaying Delete Confirmation Dialog in Blazor TreeGrid](images/blazor-treegrid-delete-confirmation.png)
 
 > The **ShowDeleteConfirmDialog** supports all type of edit modes.
-
-## Column validation
-
-Column validation allows to validate the edited or added row data and it displays errors for invalid fields before saving data. Tree Grid uses **Form Validator** component for column validation. The validation rules can be set by defining the [TreeGridColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ValidationRules.html).
-
-{% tabs %}
-
-{% highlight razor %}
-
-@using TreeGridComponent.Data;
-@using Syncfusion.Blazor.TreeGrid;
-
-<SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" ShowDeleteConfirmDialog="true" />
-    <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Number = true, Min = 0 })" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-    </TreeGridColumns>
-</SfTreeGrid>
-
-@code{
-
-    public List<TreeData.BusinessObject> TreeGridData { get; set; }
-
-    protected override void OnInitialized()
-    {       
-        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
-    }
-}
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-namespace TreeGridComponent.Data {
-
-public class TreeData
-    {
-        public class BusinessObject
-        {
-            public int TaskId { get; set;}
-            public string TaskName { get; set;}
-            public int? Duration { get; set;}
-            public int? Progress { get; set;}
-            public int? ParentId { get; set;}
-        }
-
-        public static List<BusinessObject> GetSelfDataSource()
-        {
-            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 3 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,ParentId = null,IsParent = true,});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,ParentId = 5});
-            return BusinessObjectCollection;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Column Validation in Blazor TreeGrid](images/blazor-treegrid-column-validation.png)
-
-<!-- Custom validation
-
-You can define your own custom validation rules for the specific columns by using **Form Validator custom rules**.
-
-In the below demo, custom validation applied for **Priority** column.
--->
 
 ## Entity Framework
 

@@ -1,144 +1,202 @@
 ---
 layout: post
-title: WebAssembly App in .NET Core CLI | Blazor | Syncfusion
-description: Learn here about how to getting started with Syncfusion Blazor in WebAssembly App using .NET Core CLI.
+title: Getting Started - Syncfusion Blazor WebAssembly App in .NET CLI
+description: Checkout the documentation for getting started with Blazor WebAssembly App and Syncfusion Blazor Components in Visual Studio using .NET CLI and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-<!-- markdownlint-disable MD024 -->
+# Blazor WebAssembly App using .NET CLI
 
-# Blazor WebAssembly App using .NET Core CLI
-
-This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor WebAssembly application using the [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/).
-
-> Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
+This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using the [.NET CLI](https://dotnet.microsoft.com/download/dotnet/).
 
 ## Prerequisites
 
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
-## Create a Blazor WebAssembly project using .NET Core CLI
+{% tabs %}
+{% highlight cmd tabtitle=".NET CLI" %}
 
-Run the following command line to create a new Blazor WebAssembly application.
+dotnet --version
 
-```
-dotnet new blazorwasm -o WebApplication1
-cd WebApplication1
-```
+{% endhighlight %}
+{% endtabs %}
+
+## Create a Blazor WebAssembly project using .NET CLI
+
+Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+{% tabs %}
+{% highlight cmd tabtitle=".NET CLI" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+For a hosted Blazor WebAssembly experience, add the hosted option (-ho or --hosted) option to the command.
+
+{% tabs %}
+{% highlight cmd tabtitle=".NET CLI" %}
+
+dotnet new blazorwasm -o BlazorApp -ho
+
+{% endhighlight %}
+{% endtabs %}
+
+This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
 > If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
 
-## Installing Syncfusion Blazor packages in the application
+## Install Syncfusion Blazor packages in the App
 
-You can use any one of the below standards to install the Syncfusion Blazor library in your application.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-### Using Syncfusion Blazor components individual NuGet Packages [New standard]
+Add Syncfusion.Blazor.Calendars NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package. See [Install and manage packages using the dotnet CLI](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
+{% tabs %}
+{% highlight cmd tabtitle=".NET CLI" %}
 
-1. Now, add **Syncfusion.Blazor.Calendars** NuGet package to the new application using the following command line. For more details about available NuGet packages, refer to the [individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
+dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
+dotnet restore
 
-    ```
-    dotnet add package Syncfusion.Blazor.Calendars -v '{:nuget-version:}'
-    dotnet restore
-    ```
+{% endhighlight %}
+{% endtabs %}
 
-2. The Syncfusion Blazor Calendars package will be included in the newly created project once the installation process is completed.
+## Register Syncfusion Blazor Service
 
-3. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
 
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+@using Syncfusion.Blazor
 
-### Using Syncfusion.Blazor NuGet Package [Old standard]
+{% endhighlight %}
+{% endtabs %}
 
-W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
 
-1. Now, add **Syncfusion.Blazor** NuGet package to the new application using the following command line.
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="11" %}
 
-    ```
-    dotnet add package Syncfusion.Blazor -v '{:nuget-version:}'
-    dotnet restore
-    ```
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
 
-2. The Syncfusion Blazor package will be included in the newly created project once the installation process is completed.
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 
-3. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-    ```html
-    <head>
-        ....
-        ....
-         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+await builder.Build().RunAsync();
+....
 
-    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/19.2.46/styles/bootstrap4.css).
+{% endhighlight %}
 
-## Adding Syncfusion Blazor component and running the application
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="10" %}
 
-1. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
+using Syncfusion.Blazor;
 
-    ```cshtml
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Calendars
-    ```
-
-2. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-
-    ```c#
-    // For .NET 6 project.
-    using Microsoft.AspNetCore.Components;
-    using Microsoft.AspNetCore.Components.Web;
-    using Syncfusion.Blazor;
-
-    var builder = WebApplication.CreateBuilder(args);
-
-    builder.Services.AddRazorPages();
-    builder.Services.AddServerSideBlazor();
-    ....
-    builder.Services.AddSyncfusionBlazor();
-    var app = builder.Build();
-    ....
-    ....
-    ```
-
-    ```c#
-    // For .NET 5 or .NET Core SDK 3.1 project.
-    using Syncfusion.Blazor;
-
-    namespace WebApplication1
+namespace BlazorApp
+{
+    public class Program
     {
-        public class Program
+        public static async Task Main(string[] args)
         {
-            public static async Task Main(string[] args)
-            {
-                ....
-                ....
-                builder.Services.AddSyncfusionBlazor();
-                await builder.Build().RunAsync();
-            }
+            ....
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+            await builder.Build().RunAsync();
         }
     }
-    ```
+}
 
-    > You can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `Program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+{% endhighlight %}
+{% endtabs %}
 
-3. Now, add the Syncfusion Blazor component in any .razor file in the `~/Pages` folder. For example, the calendar component is added in the **~/Pages/Index.razor** page.
+## Add Style Sheet
 
-    ```cshtml
-    <SfCalendar TValue="DateTime"></SfCalendar>
-    ```
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-4. Run `dotnet run` command to run the application. The Syncfusion Blazor Calendar component will be rendered in the web browser.
+To add theme to the app, Add `Syncfusion.Blazor.Themes` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install the NuGet package.
 
-    ![output](images/browser-output.png)
+{% tabs %}
+{% highlight cmd tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+{% endtabs %}
+
+Then the theme style from can be referred inside the `<head>` of the **wwwroot/index.html** file in client web app.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" %}
+<head>
+    ...
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced externally inside the `<head>` of **wwwroot/index.html** file in client web app.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" %}
+<head>
+    ...
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Add Syncfusion Blazor component
+
+* Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Calendars
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion Calendar component in .razor file. Here, the Calendar component is added in the `~/Pages/Index.razor` page under the `~/Pages` folder.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfCalendar TValue="DateTime" />
+
+{% endhighlight %}
+{% endtabs %}
+
+* In the command prompt (Windows) or terminal (Linux and macOS) to run the following command to build and start the app. The app listening on `http://localhost:<port number>` and view it in the browser.
+
+{% tabs %}
+{% highlight cmd tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor Calendar Component](images/browser-output.png)
+
+> You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
+
+## See Also
+
+* [Getting Started with Blazor Server App using .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Export in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Excel Export in Syncfusion Blazor Pivot Table component and much more.
+description: Checkout and learn here all about Excel export in Syncfusion Blazor Pivot Table component and much more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -53,7 +53,7 @@ The Excel export allows Pivot Table data to be exported as Excel document. To en
 }
 ```
 
-![output](images/excel-export.png)
+![Excel Exporting in Blazor PivotTable](images/blazor-pivottable-excel-export.png)
 
 ## Changing the pivot table style while exporting
 
@@ -112,7 +112,7 @@ The Excel export provides an option to change colors for headers, caption and re
 
 ```
 
-![output](images/excel-formatting.png)
+![Changing Blazor PivotTable Style while Exporting](images/blazor-pivottable-style-format-in-excel.png)
 
 ## Changing the file name while exporting
 
@@ -163,7 +163,7 @@ The Excel export provides an option to change file name of the document before e
 
 ```
 
-![output](images/excel-name.png)
+![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-excel-file-name.png)
 
 ## CSV Export
 
@@ -212,6 +212,6 @@ The Excel export allows pivot table data to be exported in **CSV** file format a
 
 ```
 
-![output](images/csv-export.png)
+![CSV Exporting in Blazor PivotTable](images/blazor-pivottable-csv-export.png)
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

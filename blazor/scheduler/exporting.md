@@ -13,7 +13,7 @@ The Scheduler supports exporting all its appointments both to an Excel or ICS ex
 
 ## Excel Exporting
 
-The Scheduler allows you to export all its events into an Excel format file by using the `ExportToExcelAsync` method. By default, it exports all the default fields of Scheduler mapped through `<ScheduleEventSettings>` property.
+The Scheduler allows to export all its events into an Excel format file by using the `ExportToExcelAsync` method. By default, it exports all the default fields of Scheduler mapped through `<ScheduleEventSettings>` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -57,8 +57,6 @@ The Scheduler allows you to export all its events into an Excel format file by u
     }
 }
 ```
-
-Exported Excel file be like below
 
 ![Excel Exporting in Blazor Scheduler](images/blazor-scheduler-excel-export.png)
 
@@ -104,8 +102,6 @@ By default, Scheduler exports all the default event fields that are mapped to it
     }
 }
 ```
-
-Exported Excel file with custom fields be like below
 
 ![Excel Exporting with custom Fields in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-fields.png)
 
@@ -220,6 +216,62 @@ By default, the whole event collection bound to the Scheduler gets exported as a
     }
 }
 ```
+
+### Customizing the column header texts with custom fields exporting
+
+You can change the field names of appointment in the column header when exporting using the `FieldsInfo` option through the `ExportFieldInfo` class and pass it as an argument to the `ExportToExcelAsync` method as shown in the following code example.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Excel Export" OnClick="OnExportToExcel"></SfButton>
+<SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Week"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 1, 10);
+    SfSchedule<AppointmentData> ScheduleRef;
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", Location = "Dallas",  StartTime = new DateTime(2020, 1, 8, 9, 30, 0), EndTime = new DateTime(2020, 1, 8, 11, 0, 0)  },
+        new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", Location = "Texas", StartTime = new DateTime(2020, 1, 9, 12, 0, 0), EndTime = new DateTime(2020, 1, 9, 14, 0, 0)  },
+        new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", Location = "Australia", StartTime = new DateTime(2020, 1, 10, 10, 30, 0), EndTime = new DateTime(2020, 1, 10, 11, 0, 0)  },
+        new AppointmentData { Id = 4, Subject = "Meteor Showers in 2020", Location = "Canada", StartTime = new DateTime(2020, 1, 11, 13, 0, 0), EndTime = new DateTime(2020, 1, 11, 14, 30, 0)  },
+        new AppointmentData { Id = 5, Subject = "Milky Way as Melting pot", Location = "Mexico", StartTime = new DateTime(2020, 1, 12, 12, 0, 0), EndTime = new DateTime(2020, 1, 12, 14, 0, 0)  }
+    };
+    public async Task OnExportToExcel()
+    {
+        List<ExportFieldInfo> exportFields = new List<ExportFieldInfo>();
+        exportFields.Add(new ExportFieldInfo { Name = "Id", Text = "Id" });
+        exportFields.Add(new ExportFieldInfo { Name = "Subject", Text = "Summary" });
+        exportFields.Add(new ExportFieldInfo { Name = "StartTime", Text = "From" });
+        exportFields.Add(new ExportFieldInfo { Name = "EndTime", Text = "To" });
+        exportFields.Add(new ExportFieldInfo { Name = "Location", Text = "Place" });
+        ExportOptions options = new ExportOptions() { ExportType = ExcelFormat.Xlsx, FieldsInfo = exportFields };
+        await ScheduleRef.ExportToExcelAsync(options);
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
+![Excel Exporting with custom header texts in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-header.png)
 
 ### Export with custom file name
 
@@ -364,9 +416,6 @@ You can export the Scheduler data with specific date format, by defining the `Da
     }
 }
 ```
-
-Exported Excel file with 24 hour date format be like below
-
 ![Excel Exporting with Date Format in Blazor Scheduler](images/blazor-scheduler-excel-date-format.png)
 
 ## Exporting calendar events as ICS file
@@ -542,7 +591,7 @@ The events from external calendars (ICS files) can be imported into Scheduler by
 
 ## How to print the Scheduler element
 
-The Scheduler allows you to print the Scheduler element by using the `PrintAsync` method. The Print method works in two ways. You can find it below.
+The Scheduler allows to print the Scheduler element by using the `PrintAsync` method. The Print method works in two ways.
 
 * Using Print method without options.
 * Using a Print method with options.

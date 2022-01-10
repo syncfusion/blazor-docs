@@ -16,7 +16,7 @@ This articles provides a step-by-step instructions for building Blazor ASP.NET C
 Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet --version
 
@@ -28,7 +28,7 @@ dotnet --version
 Run the `dotnet new blazorwasm` command with option `-ho` or `--hosted` to create a new Blazor ASP.NET Core Hosted WebAssembly application in the command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet new blazorwasm -o BlazorApp --hosted
 cd BlazorApp
@@ -47,7 +47,7 @@ Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/
 Add `Syncfusion.Blazor.Calendars` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package. See [Install and manage packages using the dotnet CLI](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 cd client
 dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
@@ -71,7 +71,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 Now, Open the **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="10" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -82,14 +82,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
 
 var app = builder.Build();
 ....
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="11" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 11" %}
 
 using Syncfusion.Blazor;
 
@@ -101,7 +101,7 @@ namespace BlazorApp.Client
         {
             ....
             ....
-            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
             await builder.Build().RunAsync();
         }
     }
@@ -112,12 +112,12 @@ namespace BlazorApp.Client
 
 ## Add Style Sheet
 
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
 To add theme to the app, Add `Syncfusion.Blazor.Themes` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install the NuGet package.
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 dotnet restore
@@ -140,15 +140,17 @@ Then the theme style from can be referred inside the `<head>` of the **wwwroot/i
 
 ## Add Script Reference
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced externally inside the `<head>`  of **wwwroot/index.html** file in client web app.
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>`  of **wwwroot/index.html** file in client web app.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -180,7 +182,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * In the command prompt (Windows) or terminal (Linux and macOS) to run the following command to build and start the app. The app listening on `http://localhost:<port number>` and view it in the browser.
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet run
 
